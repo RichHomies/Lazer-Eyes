@@ -2,21 +2,21 @@ import React from 'react';
 
 var Episode1 = React.createClass({
   componentDidMount: function() {
+    var that = this
     $(function() {
       
       var scrollMagicController = new ScrollMagic.Controller();
       
-      var tween1 = TweenMax.to('#animation-1', 0.3, {
-        backgroundColor: 'rgb(255, 39, 46)',
-        scale: 10,
-        rotation: 360
-      });
       var scene1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1',
         offset: 50
       })
-      .setClassToggle('body', 'scene-1-active')
-      .setTween(tween1)
+      .on('start', function() {
+        //change window hash
+        window.location.hash = "episode1"
+        //set state
+        that.props.changeEpisode(window.location.hash)
+      })
       .addTo(scrollMagicController);
       
         // Create Animation for 0.5s
@@ -49,12 +49,14 @@ var Episode1 = React.createClass({
       .setTween(tween3)
       .addTo(scrollMagicController);
       // Add debug indicators fixed on right side
-      
+      scene1.addIndicators();
+      scene2.addIndicators();
+      scene3.addIndicators();
     });
   },
   render: function() {
     return (
-      <main><div className="container">
+      <div className="container">
         <div className="row">         
           <div className="col-md-6 col-md-offset-3">
             <div className="wrap" id="scene-1">  
@@ -85,7 +87,7 @@ var Episode1 = React.createClass({
             </div>
           </div>
         </div>
-      </div></main>
+      </div>
 
     );
   }

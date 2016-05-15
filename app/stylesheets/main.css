@@ -4,12 +4,31 @@ body { background: #e3e3e3; -webkit-font-smoothing: antialiased; }
 
 /* Ignore => Useless Header Styles */
 header {
-  text-align: center;
-  background: rgb(255, 145, 0);
-  padding: 50px 0 125px;
+  width: auto; /* Scale the div to the parent width */
+  height: 600px; /* The div needs some height to be visible */
+  background-image: url("/img/LazerEyesLogo-header.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top; /* Position the image to the top center of the div */
   color: #fff;
-  position: relative;
 }
+
+@media (max-width: 1000px) {
+
+    header {
+        background-size: 1000px 400px; /* Force the image to its minimum width */
+    }
+
+}
+
+@media (max-width: 1025px) {
+
+    header {
+        background-size: 1000px 600px; /* Force the image to its minimum width */
+    }
+
+}
+
 header * { text-shadow: 0px 1px 1px rgba(150, 150, 150, 0.35); }
 header h1 { margin-top: 0; font-size: 50px;  }
 header h1 i.fa-heart { color: rgb(221, 75, 80); }
