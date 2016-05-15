@@ -2,15 +2,11 @@ import React from 'react';
 
 var Episode1 = React.createClass({
   componentDidMount: function() {
+    var that = this
     $(function() {
       
       var scrollMagicController = new ScrollMagic.Controller();
       
-      var tween1 = TweenMax.to('#animation-1', 0.3, {
-        backgroundColor: 'rgb(255, 39, 46)',
-        scale: 10,
-        rotation: 360
-      });
       var scene1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1',
         offset: 50
@@ -19,11 +15,7 @@ var Episode1 = React.createClass({
         //change window hash
         window.location.hash = "episode1"
         //set state
-        console.log('props', this.props)
-      })
-      .on('leave', function() {
-        //reset hash, when leaving the section
-        window.location.hash = ""
+        that.props.changeEpisode(window.location.hash)
       })
       .addTo(scrollMagicController);
       
