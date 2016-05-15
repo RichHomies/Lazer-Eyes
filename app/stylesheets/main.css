@@ -5,7 +5,7 @@ body { background: #e3e3e3; -webkit-font-smoothing: antialiased; }
 /* Ignore => Useless Header Styles */
 header {
   width: auto; /* Scale the div to the parent width */
-  height: 900px; /* The div needs some height to be visible */
+  height: 600px; /* The div needs some height to be visible */
   background-image: url("/img/LazerEyesLogo-header.gif");
   background-repeat: no-repeat;
   background-size: contain;
@@ -21,7 +21,7 @@ header {
 
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1025px) {
 
     header {
         background-size: 1000px 600px; /* Force the image to its minimum width */
