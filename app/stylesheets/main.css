@@ -1,16 +1,33 @@
+@font-face {
+  font-family: 'GT Haptik';
+  src: url('/fonts/GTHaptikMedium.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
 /* Ignore => Base Styles */
 body { background: #e3e3e3; -webkit-font-smoothing: antialiased; }
 .ScrollSceneIndicators { z-index: 9999999 !important; }
-
+body {
+    font-family: 'GT Haptik';
+    display: block;
+    margin: 0px;
+}
 /* Ignore => Useless Header Styles */
 header {
-  background-image: url("/img/LazerEyesLogo-header.gif");
+  margin:0px;
+  padding: 0px;
+}
+
+img#headerimg {
   height: 100vh; /* The div needs some height to be visible */
   width: 100vw;
 }
 
+#headerImageContainer{
+  background-color: black;
+}
+
 #episode1 {
-  background-image: url("/img/lazer eyes text.jpg");
   height: 100vh;
   width: 100vw;
 }
@@ -22,15 +39,26 @@ header {
 
 div.pink{
   width:100vw;
-  height: 50vh;
+  height: 10vh;
   background-color: #F73EA7;
+  display: flex;
+  display: -webkit-flex;
+  font-size: -webkit-xxx-large;
 }
 
+.episodeImages {
+  width: 100vw;
+}
 
+#headerImageContainer {
+  margin:0px;
+  padding: 0px;
+}
 
-
-
-
-
+.songtitle{
+  margin-left:4vw;
+  color: Black;
+  font-size: x-large;
+}
 
 

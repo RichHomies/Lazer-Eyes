@@ -24,9 +24,17 @@ var AudioPlayer = React.createClass({
     audioPlayer.play();
   },
   render: function() {
+    var titleElem = null;
+    if(this.state.currentSong){
+      var title = 'Currently Playing - Episode 1: Dream A Dream of Lazers';
+      var titleElem = (<span className='songtitle' >{title}</span>);
+    }
+
     return (
-      <audio className="audioPlayer" id="audioPlayer" src={this.state.currentSong} autoPlay controls>
-      </audio>
+      <div id="audioPlayer">
+      <audio className="audioPlayer" src={this.state.currentSong} autoPlay controls></audio>
+      {titleElem}
+      </div>
     );
   }
 })

@@ -6,6 +6,10 @@
   background: #F73EA7; /* fallback for old browsers */
   color: #FAEBD7;
   width: 100%;
-  padding: 12px;
-  height: 10vh;
+  padding: 1vh;
+  height: 5vh;
+  display: -webkit-flex;
+  font-size: -webkit-xxx-large;
+  align-items: center;
+  -webkit-align-items: center;
 }
