@@ -4,105 +4,33 @@ body { background: #e3e3e3; -webkit-font-smoothing: antialiased; }
 
 /* Ignore => Useless Header Styles */
 header {
-  width: auto; /* Scale the div to the parent width */
-  height: 600px; /* The div needs some height to be visible */
   background-image: url("/img/LazerEyesLogo-header.gif");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top; /* Position the image to the top center of the div */
-  color: #fff;
+  height: 100vh; /* The div needs some height to be visible */
+  width: 100vw;
 }
 
-@media (max-width: 1000px) {
-
-    header {
-        background-size: 1000px 400px; /* Force the image to its minimum width */
-    }
-
+#episode1 {
+  background-image: url("/img/lazer eyes text.jpg");
+  height: 100vh;
+  width: 100vw;
 }
 
-@media (max-width: 1025px) {
-
-    header {
-        background-size: 1000px 600px; /* Force the image to its minimum width */
-    }
+#episodesContainer {
+  margin-bottom: 10vh;
 
 }
 
-header * { text-shadow: 0px 1px 1px rgba(150, 150, 150, 0.35); }
-header h1 { margin-top: 0; font-size: 50px;  }
-header h1 i.fa-heart { color: rgb(221, 75, 80); }
-header h1 i.fa-magic { color: rgb(39, 97, 223); } 
-header hr { max-width: 80px; border-top: solid 2px #fff; }
-header h2 { margin-bottom: 30px; }
-header p { margin-bottom: 0px; }
-header i.fa-angle-double-down {
-  font-size: 50px;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  color: #111;
-}
-header i.fa-angle-double-down:after {
-  content: 'Start Scrolling Down';
-  position: absolute;
-  bottom: 100%;
-  left: -35px;
-  font-size: 15px;
-  width: 104px;
-}
-
-/* Create huge scrolling area (imitates height of a page) */
-main { padding: 200px 0 1500px 0; overflow: hidden; }
-
-/* Styles for wrap for demo */
-.wrap {
-  text-align: center;
-  background: #fff;
-  padding: 50px 0;
-  -moz-box-shadow: 0 0 6px rgba(153, 153, 153, 0.25);
-  -webkit-box-shadow: 0 0 6px rgba(153, 153, 153, 0.25);
-  box-shadow: 0 0 6px rgba(153, 153, 153, 0.25);
-  position: relative;
-  margin-bottom: 50px;
-  overflow: hidden;
-}
-
-/* Default Animation Styles */
-.animation {
-  background: #000;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  margin: 50px auto;
-  position: relative;
-}
-.animation i {
-  color: #fff;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  font-size: 30px;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+div.pink{
+  width:100vw;
+  height: 50vh;
+  background-color: #F73EA7;
 }
 
 
 
-/* SCENE COLORS */
-body {
-  -webkit-transition: all 300ms ease;
-  -moz-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-body.scene-1-active { background: rgb(211, 39, 45) !important; }
-body.scene-2-active { background: rgb(0, 205, 150) !important; }
-body.scene-3-active { background: rgb(2, 0, 60) !important; }
+
+
+
+
+
+

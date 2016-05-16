@@ -1,4 +1,5 @@
 import React from 'react';
+import episodeOne from './episode1img';
 
 var Episode1 = React.createClass({
   componentDidMount: function() {
@@ -50,45 +51,15 @@ var Episode1 = React.createClass({
       .addTo(scrollMagicController);
       // Add debug indicators fixed on right side
       scene1.addIndicators();
-      scene2.addIndicators();
-      scene3.addIndicators();
     });
   },
   render: function() {
     return (
-      <div className="container">
-        <div className="row">         
-          <div className="col-md-6 col-md-offset-3">
-            <div className="wrap" id="scene-1">  
-              <h2>Magic Happens Here</h2>
-              <div className="animation" id="animation-1"><i className="fa fa-heart"></i></div>
+      <div id='episode1'>
+            <div id="scene-1">
+              <img src={episodeOne}/>
             </div>
-          </div>
-          
-        </div>
-        
-        
-          <div className="row">
-          
-          <div className="col-md-6 col-md-offset-3">
-            <div className="wrap" id="scene-2">  
-              <h2>Magic Happens Here</h2>
-              <div className="animation" id="animation-2"><i className="fa fa-heart"></i></div>
-            </div>
-          </div>
-          
-        </div>
-        
-          <div className="row">
-          <div className="col-md-6 col-md-offset-3">
-            <div className="wrap" id="scene-3">  
-              <h2>Magic Happens Here</h2>
-              <div className="animation" id="animation-3"><i className="fa fa-heart"></i></div>
-            </div>
-          </div>
-        </div>
       </div>
-
     );
   }
 })
