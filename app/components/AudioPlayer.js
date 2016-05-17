@@ -8,7 +8,7 @@ var AudioPlayer = React.createClass({
     }
   },
   componentWillMount: function() {
-    var firstSong = "/audio/1. Dream A Dream of Lazers.wav"
+    var firstSong = "/audio/1. Dream A Dream of Lazers.m4a"
 
   },
   componentWillReceiveProps: function(nextProps) {
