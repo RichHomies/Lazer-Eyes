@@ -39,7 +39,7 @@ var Episode1 = React.createClass({
       <div id='episode1'>
         <img src="/img/Track-1.jpg" id="scene-1" className="episodeImages"></img>
         <div className="episodeText">
-          <p>Sing muse, of the cunning hero, the wanderer, blown off course time and again, before he plundered
+Sing muse, of the cunning hero, the wanderer, blown off course time and again, before he plundered
 
 Cityopolis' heights... Was it the best of times, was it the worst of times? Was it the age of wisdom, the
 
@@ -49,11 +49,11 @@ it was the season of darkness, for in the beginning, our hearts were formless an
 
 was upon the face of the deep. And then he said, "Let there be light..." and there was light. Lazer light.
 
-Shining so bright. Lighting up the night, lending us the courage to fight for what is right.</p>
+Shining so bright. Lighting up the night, lending us the courage to fight for what is right.
         </div>
         <img src='/img/EP-1-image-1.jpg' className='episodeImages'/>
         <div className="episodeText">
-          <p>
+
             Who is he? Whose story is this? This is the story of you. This is the story of me. This is the story of your
 
             sister, your brother, your mother and your father, of your friend, and your enemy. It’s like that scene at
@@ -69,12 +69,12 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
             tense, because our hero lives on, always, in our hearts, in our souls, in our words and our actions. Call
 
             him Lazer Eyes.
-          </p>
+        
         </div>
         <img src="/img/Track-2.jpg" id="scene-2" className="episodeImages">
         </img>
         <div className="episodeText">
-          <p>
+        
             Our story begins back before our hero was a hero, back when his eyes only saw and his courage lay
 
             dormant. In a place where joy, where aspiration, where kindness is no more than a half-remembered
@@ -86,11 +86,11 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
             mining town. When is it? It could be today, or tomorrow, even yesterday - nothing ever changes here,
 
             except for the shifts of miners.
-          </p>
+        
         </div>
         <img src='/img/EP-1-image-2.jpg' className='episodeImages'/>
         <div className="episodeText">
-          <p>
+        
             It is here that we meet the sorrowful wretch in which lies our hero's heart, shuffling into the elevator,
 
             descending down the mine shaft, indistinguishable from the sullen souls he stands shoulder to shoulder
@@ -102,11 +102,11 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
             and he had to put his dreams on hold to pay the bills, because in this world, Obamacare isn't a thing and
 
             luck does not exist, and Jake Gyllenhaal will never play him in the movie of his life.
-          </p>
+        
         </div>
         <img src='/img/EP-1-image-3.jpg' className='episodeImages'/>
         <div className="episodeText">
-          <p>
+        
             At first, it seems to be just another day of desperation in the mines, "where the rain never falls, the sun
 
             never shines," another day spent bringing Johnny Cash's 1968 performance of "Dark as the Dungeon" at
@@ -114,11 +114,11 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
             Folsom Prison to life, until suddenly, while chipping away at the tunnel walls, our protagonist breaks
 
             through to a cavernous cavern...
-          </p>
+        
         </div>
         <img src='/img/EP-1-image-4.jpg' className='episodeImages'/>
         <div className="episodeText">
-          <p>
+        
             The rocks are of a different hue, and seem to be vibrating ever so
 
             slightly. Supposing the mysterious material may be valuable, our anonymous excavator lifts up his pic-
@@ -131,12 +131,12 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
             after all, carcinogen-inhalation-related-hallucinations are a daily occurrence in the mine, but the truth is
 
             far from ordinary, for neither he nor the world will ever be the same...
-          </p>
+        
         </div>
         <img src='/img/EP-1-image-5.jpg' className='episodeImages'/>
         <img src='/img/EP-1-image-6.jpg' className='episodeImages'/>
         <div className="episodeText">
-          <p>
+        
            Later that night, the weary miners have returned to the surface just in time to completely miss the sun.
 
            Gathered round the fire, they eat their meager meal of flavorless gruel in silence. Before long the silence
@@ -166,11 +166,11 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
            roar, and as it echoes through the Appalachian hills, he looks to the heavens and Lazer beams shoot
 
            from his eyes.
-          </p>
+        
         </div>
         <img src='/img/EP-1-image-7-50%25.gif' className='episodeImages'/>
         <div className="episodeText">
-          <p>
+        
            Elated and exhausted, he lowers his gaze to see expressions of fear and horror on the faces of his
 
            stunned companions:
@@ -186,11 +186,11 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
            Cast away, shunned, he wanders for days, weeks. Quiet whispers of a man named "Lazer Eyes" spread
 
            across the countryside. He no longer has a home, but now he has a name.
-          </p>
+        
         </div>
         <img src='/img/EP-1-image-8.jpg' className='episodeImages'/>
         <div className="episodeText">
-          <p>
+        
            Thus we find Lazer Eyes, and Lazer Eyes finds himself a stranger to his people, an isolated god amongst
 
            men who finds consolation only in the destructive power he wields. Wandering from place to place, he
@@ -202,10 +202,8 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
            one who will understand him? Does he even deserve to be understood? How will this menace become
 
            our messiah?
-          </p>
+        
         </div>
-
-
       </div>
     );
   }
