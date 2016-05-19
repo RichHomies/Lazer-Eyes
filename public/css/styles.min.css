@@ -1,0 +1,92 @@
+#audioPlayer {
+  position: fixed;
+  bottom: 0;
+/*  z-index: 10;
+*/  /*background: #039be5;*/
+  background: #F73EA7; /* fallback for old browsers */
+  color: #FAEBD7;
+  width: 100%;
+  padding: 1vh;
+  height: 5vh;
+  display: -webkit-flex;
+  font-size: -webkit-xxx-large;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-items: center;
+}
+
+.audioContainer {
+  padding-top: 5vh;
+}
+@font-face {
+  font-family: 'GT Haptik';
+  src: url('/fonts/GTHaptikMedium.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+/* Ignore => Base Styles */
+body { background: black; -webkit-font-smoothing: antialiased; }
+.ScrollSceneIndicators { z-index: 9999999 !important; }
+body {
+    font-family: 'GT Haptik';
+    display: block;
+    margin: 0px;
+}
+/* Ignore => Useless Header Styles */
+header {
+  margin:0px;
+  padding: 0px;
+}
+
+img#headerimg {
+  height: 100vh; /* The div needs some height to be visible */
+  width: 100vw;
+}
+
+#headerImageContainer{
+  background-color: black;
+}
+
+#episode1 {
+  height: 100vh;
+  width: 100vw;
+}
+
+#episodesContainer {
+  margin-bottom: 10vh;
+
+}
+
+div.pink{
+  width:100vw;
+  height: 10vh;
+  background-color: #F73EA7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+  font-size: -webkit-xxx-large;
+}
+
+.episodeImages {
+  width: 100vw;
+}
+
+#headerImageContainer {
+  margin:0px;
+  padding: 0px;
+}
+
+.songtitle{
+  margin-left:4vw;
+  color: Black;
+  font-size: x-large;
+}
+
+.episodeText {
+  color: white;
+  padding: 5vw;
+  font-size: 2vw;
+}
+
