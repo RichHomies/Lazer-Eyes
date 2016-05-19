@@ -5,7 +5,7 @@
   font-weight:  700;
 }
 /* Ignore => Base Styles */
-body { background: #e3e3e3; -webkit-font-smoothing: antialiased; }
+body { background: black; -webkit-font-smoothing: antialiased; }
 .ScrollSceneIndicators { z-index: 9999999 !important; }
 body {
     font-family: 'GT Haptik';
@@ -61,4 +61,9 @@ div.pink{
   font-size: x-large;
 }
 
+.episodeText {
+  color: white;
+  padding: 5vw;
+  font-size: 5vw;
+}
 
