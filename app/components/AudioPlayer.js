@@ -15,8 +15,7 @@ var AudioPlayer = React.createClass({
   componentWillReceiveProps: function(nextProps) {
     var songUrl = songs[nextProps["currentEpisode"]]["songPath"]
     var songTitle = songs[nextProps["currentEpisode"]]["songTitle"]
-    console.log('songurl', songUrl)
-    if (songUrl) {
+    if (songUrl && songTitle) {
       this.setState({currentSongUrl: songUrl, currentSongTitle: songTitle})
     }
   },
