@@ -1,8 +1,8 @@
 #audioPlayer {
   position: fixed;
   bottom: 0;
-  z-index: 10;
-  /*background: #039be5;*/
+/*  z-index: 10;
+*/  /*background: #039be5;*/
   background: #F73EA7; /* fallback for old browsers */
   color: #FAEBD7;
   width: 100%;
@@ -12,4 +12,8 @@
   font-size: -webkit-xxx-large;
   align-items: center;
   -webkit-align-items: center;
+}
+
+.audioContainer {
+  padding-top: 5vh;
 }

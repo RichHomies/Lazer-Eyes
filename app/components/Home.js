@@ -28,9 +28,11 @@ var Home = React.createClass({
           currentEpisode={this.state.currentEpisode }
           changeEpisode={this.changeEpisode}
         />
-        <AudioPlayer 
-          currentEpisode={this.state.currentEpisode}
-        />
+        <div className="audioContainer">
+          <AudioPlayer 
+            currentEpisode={this.state.currentEpisode}
+          />
+        </div>
       </div>
     );
   }
