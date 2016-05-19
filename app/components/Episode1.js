@@ -14,18 +14,30 @@ var Episode1 = React.createClass({
       })
       .on('start', function() {
         //change window hash
-        window.location.hash = "episode1"
+        window.location.hash = "episode1/song1"
         //set state
         that.props.changeEpisode(window.location.hash)
       })
       .addTo(scrollMagicController);
+
+      var scene2 = new ScrollMagic.Scene({
+        triggerElement: '#scene-2',
+        offset: 50
+      })
+      .on('start', function() {
+        //change window hash
+        window.location.hash = "episode1/song2"
+        //set state
+        that.props.changeEpisode(window.location.hash)
+      })
+      .addTo(scrollMagicController);
+
     });
   },
   render: function() {
     return (
       <div id='episode1'>
         <img src="/img/Track-1.jpg" id="scene-1" className="episodeImages"></img>
-        <img src='/img/EP-1-image-1.jpg' className={'episodeImages'}/>
         <div className="episodeText">
           <p>Sing muse, of the cunning hero, the wanderer, blown off course time and again, before he plundered
 
@@ -39,6 +51,161 @@ was upon the face of the deep. And then he said, "Let there be light..." and the
 
 Shining so bright. Lighting up the night, lending us the courage to fight for what is right.</p>
         </div>
+        <img src='/img/EP-1-image-1.jpg' className='episodeImages'/>
+        <div className="episodeText">
+          <p>
+            Who is he? Whose story is this? This is the story of you. This is the story of me. This is the story of your
+
+            sister, your brother, your mother and your father, of your friend, and your enemy. It’s like that scene at
+
+            the end of V for Vendetta, when all those people are wearing the Guy Fawkes masks, and they all take
+
+            them off, and turns out it’s the people form the retirement home, and the bar, and that dead little girl,
+
+            and the fat comedian guy, and Natalie Portman is saying "...he was my father. And my mother... my
+
+            brother... my friend. He was you... and me. He was all of us," It's just like that, except not in the past
+
+            tense, because our hero lives on, always, in our hearts, in our souls, in our words and our actions. Call
+
+            him Lazer Eyes.
+          </p>
+        </div>
+        <img src="/img/Track-2.jpg" id="scene-2" className="episodeImages">
+        </img>
+        <div className="episodeText">
+          <p>
+            Our story begins back before our hero was a hero, back when his eyes only saw and his courage lay
+
+            dormant. In a place where joy, where aspiration, where kindness is no more than a half-remembered
+
+            reverie, elusive and fleeting, evaporating like the mist that settles on the hills in the hours before dawn,
+
+            as the miners wearily wander towards the tunnels to replace the night shift. Where is it? An Appalachian
+
+            mining town. When is it? It could be today, or tomorrow, even yesterday - nothing ever changes here,
+
+            except for the shifts of miners.
+          </p>
+        </div>
+        <img src='/img/EP-1-image-2.jpg' className='episodeImages'/>
+        <div className="episodeText">
+          <p>
+            It is here that we meet the sorrowful wretch in which lies our hero's heart, shuffling into the elevator,
+
+            descending down the mine shaft, indistinguishable from the sullen souls he stands shoulder to shoulder
+
+            with. The man to his right never made it home last night; woke up behind the bar and came straight
+
+            back to the mine. The man to his left had dreams of building rockets, but his daddy got the black lung
+
+            and he had to put his dreams on hold to pay the bills, because in this world, Obamacare isn't a thing and
+
+            luck does not exist, and Jake Gyllenhaal will never play him in the movie of his life.
+          </p>
+        </div>
+        <img src='/img/EP-1-image-3.jpg' className='episodeImages'/>
+        <div className="episodeText">
+          <p>
+            At first, it seems to be just another day of desperation in the mines, "where the rain never falls, the sun
+
+            never shines," another day spent bringing Johnny Cash's 1968 performance of "Dark as the Dungeon" at
+
+            Folsom Prison to life, until suddenly, while chipping away at the tunnel walls, our protagonist breaks
+
+            through to a cavernous cavern...
+          </p>
+        </div>
+        <img src='/img/EP-1-image-4.jpg' className='episodeImages'/>
+        <div className="episodeText">
+          <p>
+            The rocks are of a different hue, and seem to be vibrating ever so
+
+            slightly. Supposing the mysterious material may be valuable, our anonymous excavator lifts up his pic-
+            axe and brings it down forcefully against a nearby stalagmite. The force of the impact reverberates
+
+            through his whole body - it is as if he hears all the sounds that ever were, and sees all the light that ever
+
+            was all at once. At the time, he thinks nothing of it, and finishes his shift without any further incident,
+
+            after all, carcinogen-inhalation-related-hallucinations are a daily occurrence in the mine, but the truth is
+
+            far from ordinary, for neither he nor the world will ever be the same...
+          </p>
+        </div>
+        <img src='/img/EP-1-image-5.jpg' className='episodeImages'/>
+        <img src='/img/EP-1-image-6.jpg' className='episodeImages'/>
+        <div className="episodeText">
+          <p>
+           Later that night, the weary miners have returned to the surface just in time to completely miss the sun.
+
+           Gathered round the fire, they eat their meager meal of flavorless gruel in silence. Before long the silence
+
+           is replaced with empty bowls and eager eyes, fixed on a single remaining portion of gruel....
+
+           "Hey guys, I was wondering if I could maybe have the last serving of gruel... I had a really hard day in the
+
+           mine today, hit some funky rock and I think it messed me up a bit," says our protagonist.
+
+           "Pfff," rebukes one of his compatriots, "no, the gruel should be mine, I am clearly the most deserving of
+
+           the gruel."
+
+           "No," says another, "give ME the gruel!"
+
+           "Come on guys, just show a little kindness,"
+
+           "NEVER, GRUEL IS ALL I LIVE FOR!"
+
+           Our hero's disappointment quickly gives way to rage. It is as if this final slight adds insult to the injury
+
+           that has been his life. Just then he feels a feeling, one he has never felt before, a feeling in his heart
+
+           going straight to his eyes. Rising to his feet with an instinctive sense of purpose, he lets out a mighty
+
+           roar, and as it echoes through the Appalachian hills, he looks to the heavens and Lazer beams shoot
+
+           from his eyes.
+          </p>
+        </div>
+        <img src='/img/EP-1-image-7-50%25.gif' className='episodeImages'/>
+        <div className="episodeText">
+          <p>
+           Elated and exhausted, he lowers his gaze to see expressions of fear and horror on the faces of his
+
+           stunned companions:
+
+           "You're DIFFERENT!" They say,
+
+           "We fear you, you and the awesome power you wield"
+
+           "Leave! Leave, and never come back!"
+
+           "Get out of here, Lazer Eyes!"
+
+           Cast away, shunned, he wanders for days, weeks. Quiet whispers of a man named "Lazer Eyes" spread
+
+           across the countryside. He no longer has a home, but now he has a name.
+          </p>
+        </div>
+        <img src='/img/EP-1-image-8.jpg' className='episodeImages'/>
+        <div className="episodeText">
+          <p>
+           Thus we find Lazer Eyes, and Lazer Eyes finds himself a stranger to his people, an isolated god amongst
+
+           men who finds consolation only in the destructive power he wields. Wandering from place to place, he
+
+           lives day to day. In the woods, he picks fights with owls, because, as everyone knows, Lazer Eyes hates
+
+           owls. On the streets, when he stops and stares, things explode. What will become of him? Is there no
+
+           one who will understand him? Does he even deserve to be understood? How will this menace become
+
+           our messiah?
+          </p>
+        </div>
+
+
       </div>
     );
   }

@@ -1,5 +1,8 @@
 .DS_Store
 bower_components
 node_modules
+<<<<<<< HEAD
 public/css/
 public/js/
+=======
+>>>>>>> 580e83592cf9f389f0582d6fe2818d27c0da425a
