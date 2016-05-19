@@ -4,7 +4,8 @@ import songs from './songs'
 var AudioPlayer = React.createClass({
   getInitialState: function() {
     return {
-      currentSong: ""
+      currentSongUrl: "",
+      currentSongTitle: ""
     }
   },
   componentWillMount: function() {
@@ -12,11 +13,11 @@ var AudioPlayer = React.createClass({
 
   },
   componentWillReceiveProps: function(nextProps) {
-    console.log('in audio player', nextProps)
-    var songUrl = songs[nextProps["currentEpisode"]]
+    var songUrl = songs[nextProps["currentEpisode"]]["songPath"]
+    var songTitle = songs[nextProps["currentEpisode"]]["songTitle"]
     console.log('songurl', songUrl)
     if (songUrl) {
-      this.setState({currentSong: songUrl})
+      this.setState({currentSongUrl: songUrl, currentSongTitle: songTitle})
     }
   },
   playNewSong: function() {
@@ -25,14 +26,14 @@ var AudioPlayer = React.createClass({
   },
   render: function() {
     var titleElem = null;
-    if(this.state.currentSong){
-      var title = 'Currently Playing - Episode 1: Dream A Dream of Lazers';
+    if(this.state.currentSongUrl){
+      var title = this.state.currentSongTitle;
       var titleElem = (<span className='songtitle' >{title}</span>);
     }
 
     return (
       <div id="audioPlayer">
-      <audio className="audioPlayer" src={this.state.currentSong} autoPlay controls></audio>
+      <audio className="audioPlayer" src={this.state.currentSongUrl} autoPlay controls></audio>
       {titleElem}
       </div>
     );
