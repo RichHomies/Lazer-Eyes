@@ -27,14 +27,20 @@ img#headerimg {
   background-color: black;
 }
 
+/*remove this*/
 #episode1 {
-  height: 100vh;
   width: 100vw;
+  overflow: auto;
+}
+
+/*use this for all episodes*/
+.episodes {
+  width: 100vw;
+  overflow: auto;
 }
 
 #episodesContainer {
-  margin-bottom: 10vh;
-
+  margin-bottom: 5vw;
 }
 
 div.pink{
@@ -64,6 +70,21 @@ div.pink{
 .episodeText {
   color: white;
   padding: 5vw;
-  font-size: 5vw;
+  font-size: 4vw;
+}
+
+
+@media screen and (min-width: 34.38em){
+  .episodeText {
+    font-size: 3vw;
+  }
+
+}
+
+@media screen and (min-width: 50em){
+  .episodeText {
+    font-size: 2vw;
+  }
+
 }
 
