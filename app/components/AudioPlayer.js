@@ -33,7 +33,7 @@ var AudioPlayer = React.createClass({
 
     return (
       <div id="audioPlayer">
-      <audio className="audioPlayer" src={this.state.currentSongUrl} autoPlay controls></audio>
+      <audio className="audioPlayer" src={this.state.currentSongUrl} controls></audio>
       {titleElem}
       </div>
     );
