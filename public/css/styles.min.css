@@ -6,9 +6,11 @@
   width: 100%;
   height: 5vh;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -96,12 +98,15 @@ img#headerimg {
 #headerImageContainer{
   background-color: black;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
@@ -166,3 +171,11 @@ div.pink{
 
 }
 
+
+.bm-burger-button {
+  position: fixed;
+  width: 75px;
+  height: 75px;
+  left: 36px;
+  top: 36px;
+}
