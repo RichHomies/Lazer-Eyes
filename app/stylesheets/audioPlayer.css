@@ -1,19 +1,43 @@
 #audioPlayer {
   position: fixed;
   bottom: 0;
-/*  z-index: 10;
-*/  /*background: #039be5;*/
-  background: #F73EA7; /* fallback for old browsers */
+ /* fallback for old browsers */
   color: #FAEBD7;
   width: 100%;
-  padding: 1vh;
   height: 5vh;
-  display: -webkit-flex;
-  font-size: -webkit-xxx-large;
+  display: flex;
   align-items: center;
-  -webkit-align-items: center;
+}
+
+#hide{
+  visibility: hidden;
 }
 
 .audioContainer {
   padding-top: 5vh;
+}
+
+.songTitleContainer {
+  background: lightgray;
+  width: 90vw;
+  padding-left: 1vw;
+}
+
+.songtitle{
+  color: Black;
+  font-size: x-large;
+}
+
+.songTrackNumberContainer{
+  background: gray;
+  width: 10vw;
+}
+
+.songTrackNumber{
+  margin: 0 4vw;
+  color: Black;
+  font-size: x-large;
+}
+
+#player {
 }

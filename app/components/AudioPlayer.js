@@ -5,18 +5,19 @@ var AudioPlayer = React.createClass({
   getInitialState: function() {
     return {
       currentSongUrl: "",
-      currentSongTitle: ""
+      currentSongTitle: "",
+      trackNumber: ""
     }
   },
   componentWillMount: function() {
-    var firstSong = "/audio/1. Dream A Dream of Lazers.m4a"
-
   },
   componentWillReceiveProps: function(nextProps) {
     var songUrl = songs[nextProps["currentEpisode"]] ? songs[nextProps["currentEpisode"]]["songPath"] : '';
     var songTitle = songs[nextProps["currentEpisode"]]? songs[nextProps["currentEpisode"]]["songTitle"] : '';
-    if (songUrl && songTitle) {
-      this.setState({currentSongUrl: songUrl, currentSongTitle: songTitle})
+    var trackNumber = songs[nextProps["currentEpisode"]]? songs[nextProps["currentEpisode"]]["trackNumber"] : '';
+
+    if (songUrl && songTitle && trackNumber) {
+      this.setState({currentSongUrl: songUrl, currentSongTitle: songTitle, trackNumber: trackNumber})
     }
   },
   playNewSong: function() {
@@ -25,15 +26,20 @@ var AudioPlayer = React.createClass({
   },
   render: function() {
     var titleElem = null;
+    var idString = 'hide';
     if(this.state.currentSongUrl){
       var title = this.state.currentSongTitle;
+      var trackNumber = this.state.trackNumber;
+      var trackNumberElem = (<span className='songTrackNumber' >{trackNumber}</span>);
       var titleElem = (<span className='songtitle' >{title}</span>);
+      idString = 'audioPlayer';
     }
 
     return (
-      <div id="audioPlayer">
-      <audio className="audioPlayer" src={this.state.currentSongUrl} controls></audio>
-      <div>{titleElem}</div>
+      <div id={idString}>
+        <span className='songTrackNumberContainer'>{trackNumberElem}</span>
+        <span className='songTitleContainer'>{titleElem}</span>
+        <audio id='player' src={this.state.currentSongUrl} controls></audio>
       </div>
     );
   }

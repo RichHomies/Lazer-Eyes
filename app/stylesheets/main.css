@@ -19,12 +19,16 @@ header {
 }
 
 img#headerimg {
-  height: 100vh; /* The div needs some height to be visible */
-  width: 100vw;
+/*  height: 100vh;  
+  width: 100vw;*/
 }
 
 #headerImageContainer{
   background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 /*remove this*/
@@ -61,11 +65,7 @@ div.pink{
   padding: 0px;
 }
 
-.songtitle{
-  margin-left:4vw;
-  color: Black;
-  font-size: x-large;
-}
+
 
 .episodeText {
   color: white;

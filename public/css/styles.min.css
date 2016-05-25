@@ -1,23 +1,49 @@
 #audioPlayer {
   position: fixed;
   bottom: 0;
-/*  z-index: 10;
-*/  /*background: #039be5;*/
-  background: #F73EA7; /* fallback for old browsers */
+ /* fallback for old browsers */
   color: #FAEBD7;
   width: 100%;
-  padding: 1vh;
   height: 5vh;
-  display: -webkit-flex;
-  font-size: -webkit-xxx-large;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-items: center;
+}
+
+#hide{
+  visibility: hidden;
 }
 
 .audioContainer {
   padding-top: 5vh;
+}
+
+.songTitleContainer {
+  background: lightgray;
+  width: 90vw;
+  padding-left: 1vw;
+}
+
+.songtitle{
+  color: Black;
+  font-size: x-large;
+}
+
+.songTrackNumberContainer{
+  background: gray;
+  width: 10vw;
+}
+
+.songTrackNumber{
+  margin: 0 4vw;
+  color: Black;
+  font-size: x-large;
+}
+
+#player {
 }
 @font-face {
   font-family: 'GT Haptik';
@@ -40,22 +66,38 @@ header {
 }
 
 img#headerimg {
-  height: 100vh; /* The div needs some height to be visible */
-  width: 100vw;
+/*  height: 100vh;  
+  width: 100vw;*/
 }
 
 #headerImageContainer{
   background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
 }
 
+/*remove this*/
 #episode1 {
-  height: 100vh;
   width: 100vw;
+  overflow: auto;
+}
+
+/*use this for all episodes*/
+.episodes {
+  width: 100vw;
+  overflow: auto;
 }
 
 #episodesContainer {
-  margin-bottom: 10vh;
-
+  margin-bottom: 5vw;
 }
 
 div.pink{
@@ -78,15 +120,26 @@ div.pink{
   padding: 0px;
 }
 
-.songtitle{
-  margin-left:4vw;
-  color: Black;
-  font-size: x-large;
-}
+
 
 .episodeText {
   color: white;
-  padding: 5vw;
-  font-size: 2vw;
+  padding: 0 5vw;
+  font-size: 4vw;
+}
+
+
+@media screen and (min-width: 34.38em){
+  .episodeText {
+    font-size: 3vw;
+  }
+
+}
+
+@media screen and (min-width: 50em){
+  .episodeText {
+    font-size: 2vw;
+  }
+
 }
 
