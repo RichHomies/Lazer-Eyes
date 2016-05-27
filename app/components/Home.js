@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header'
 import Episodes from './Episodes'
 import AudioPlayer from './AudioPlayer'
+import SideMenu from './SideMenu'
 
 var Home = React.createClass({
   getInitialState: function() {
@@ -23,6 +24,7 @@ var Home = React.createClass({
   render: function() {
     return (
       <div>
+        <SideMenu />
         <Header />
         <Episodes 
           currentEpisode={this.state.currentEpisode }
