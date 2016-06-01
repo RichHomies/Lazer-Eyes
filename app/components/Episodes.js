@@ -8,8 +8,7 @@ var Episodes = React.createClass({
       <main id='episodesContainer'>
         <Episode1 
           currentEpisode={this.props.currentEpisode }
-          changeEpisode={this.props.changeEpisode}
-        />
+          changeEpisode={this.props.changeEpisode}/>
       </main>
     );
   }

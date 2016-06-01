@@ -2,7 +2,11 @@ import React from 'react';
 import Header from './Header'
 import Episodes from './Episodes'
 import AudioPlayer from './AudioPlayer'
-import SideMenu from './SideMenu'
+import SideMenu from './SideMenu';
+import EpisodeList from './EpisodeList';
+
+
+var episodes = [{name: 'Genesis'}, {name: 'Episode2'}, {name: 'Episode3'}];
 
 var Home = React.createClass({
   getInitialState: function() {
@@ -22,18 +26,17 @@ var Home = React.createClass({
     }
   },
   render: function() {
+        // <Episodes 
+        //   currentEpisode={this.state.currentEpisode }
+        //   changeEpisode={this.changeEpisode}/>
     return (
       <div>
-        <SideMenu />
+        <SideMenu episodes={episodes} />
         <Header />
-        <Episodes 
-          currentEpisode={this.state.currentEpisode }
-          changeEpisode={this.changeEpisode}
-        />
+        <EpisodeList list={episodes} />
         <div className="audioContainer">
           <AudioPlayer 
-            currentEpisode={this.state.currentEpisode}
-          />
+            currentEpisode={this.state.currentEpisode}/>
         </div>
       </div>
     );

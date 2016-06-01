@@ -4,6 +4,14 @@
   font-style:   normal;
   font-weight:  700;
 }
+
+@font-face {
+  font-family: 'GT Haptik';
+  src: url('/fonts/GTHaptikMedium.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
 /* Ignore => Base Styles */
 body { background: black; -webkit-font-smoothing: antialiased; }
 .ScrollSceneIndicators { z-index: 9999999 !important; }
@@ -19,8 +27,8 @@ header {
 }
 
 img#headerimg {
-/*  height: 100vh;  
-  width: 100vw;*/
+    height: 60vw;
+    width: 60vw;
 }
 
 #headerImageContainer{
@@ -65,14 +73,46 @@ div.pink{
   padding: 0px;
 }
 
-
-
 .episodeText {
   color: white;
   padding: 0 5vw;
   font-size: 4vw;
 }
+.episodeListContainer{
+  height: 40vh;
+  width: 100vw;
+  float: left;
+  overflow-x: scroll;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+}
 
+
+.episodeListItem {
+  flex-shrink: 0;
+  color: black;
+  font-size: 7vh;
+  margin: 0 1vw;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  white-space:normal;
+}
+
+.backgroundPink {
+  background-color: #F20AC9;
+}
+
+.backgroundPurple {
+  background-color: #2E3192;
+}
+
+.episodesHeader{
+  margin: 1vh 0;
+}
 
 @media screen and (min-width: 34.38em){
   .episodeText {
