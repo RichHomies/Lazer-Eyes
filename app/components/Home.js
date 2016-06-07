@@ -26,20 +26,28 @@ var Home = React.createClass({
     }
   },
   render: function() {
-        // <Episodes 
-        //   currentEpisode={this.state.currentEpisode }
-        //   changeEpisode={this.changeEpisode}/>
+    let childrenComponents = this.prepareChildrenComponents();
     return (
       <div>
         <SideMenu episodes={episodes} />
         <Header />
         <EpisodeList list={episodes} />
         <div className="audioContainer">
-          <AudioPlayer 
-            currentEpisode={this.state.currentEpisode}/>
+          <AudioPlayer currentEpisode={this.state.currentEpisode}/>
         </div>
+        {childrenComponents}
       </div>
     );
+  },
+  prepareChildrenComponents: function(){
+    var changeEpisode = this.changeEpisode;
+    var that = this; 
+    return React.Children.map(this.props.children, function(child){
+        return React.cloneElement(child, {
+          changeEpisode : changeEpisode,
+          currentEpisode: that.state.currentEpisode
+        });
+    });
   }
 })
 

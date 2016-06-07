@@ -14,9 +14,7 @@ var Episode1 = React.createClass({
       })
       .on('start', function() {
         //change window hash
-        window.location.hash = "episode1/song1"
-        //set state
-        that.props.changeEpisode(window.location.hash)
+        that.props.changeEpisode('episode1/song1')
       })
       .addTo(scrollMagicController);
 
@@ -26,9 +24,7 @@ var Episode1 = React.createClass({
       })
       .on('start', function() {
         //change window hash
-        window.location.hash = "episode1/song2"
-        //set state
-        that.props.changeEpisode(window.location.hash)
+        that.props.changeEpisode('episode1/song2')
       })
       .addTo(scrollMagicController);
 
@@ -37,8 +33,7 @@ var Episode1 = React.createClass({
   render: function() {
     return (
       <div id='episode1'>
-        <img src="/img/Track-1.jpg" id="scene-1" className="episodeImages"></img>
-        <div className="episodeText">
+        <div className="episodeText" id="scene-1">
 Sing muse, of the cunning hero, the wanderer, blown off course time and again, before he plundered
 
 Cityopolis' heights... Was it the best of times, was it the worst of times? Was it the age of wisdom, the
@@ -71,9 +66,7 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
             him Lazer Eyes.
         
         </div>
-        <img src="/img/Track-2.jpg" id="scene-2" className="episodeImages">
-        </img>
-        <div className="episodeText">
+        <div className="episodeText" id="scene-2">
         
             Our story begins back before our hero was a hero, back when his eyes only saw and his courage lay
 

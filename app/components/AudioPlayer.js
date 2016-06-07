@@ -73,7 +73,7 @@ var AudioPlayer = React.createClass({
             <span className='playerElems'onClick={toggleSoundHandler} ><img className='playerIcons' src={soundOnOff}/></span>
           </span>
         </span>
-        <audio id='player' src={this.state.currentSongUrl} controls></audio>
+        <audio id='player' src={this.state.currentSongUrl} autoPlay controls></audio>
       </div>
     );
   }

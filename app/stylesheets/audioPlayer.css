@@ -4,7 +4,7 @@
  /* fallback for old browsers */
   color: #FAEBD7;
   width: 100%;
-  height: 5vh;
+  height: 8vh;
   display: flex;
   align-items: center;
 }
@@ -43,7 +43,7 @@
 .songTrackNumber{
   margin: 0 6vw 0 2vw;
   color: #ffffff;
-  font-size: 3vh;
+  font-size: 5vh;
 }
 
 #player {
@@ -71,10 +71,16 @@
 }
 
 .playerIcons {
-  height: 2vh;
+  height: 5vh;
 }
 
 .circle{
   border: 1vh solid #333333;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 515px){
+  #audioPlayer {
+    height: 17vh;
+  }
 }
