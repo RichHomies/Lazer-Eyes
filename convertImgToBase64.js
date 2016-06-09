@@ -12,7 +12,7 @@ fs.readdir('./public/img/', function(err,  files){
     var base64str = base64_encode(file)
     base64Images[file] = base64str
   })
-  fs.writeFileSync('base64Images.js','var base64Images = ' + JSON.stringify(base64Images))
+  fs.writeFileSync('base64Images.js','var base64Images = ' + JSON.stringify(base64Images) +'; export default base64Images;')
 })
 
 

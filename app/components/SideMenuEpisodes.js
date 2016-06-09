@@ -3,6 +3,9 @@ import { Link } from 'react-router';
 import Radium from 'radium';
 import meta from './sideMenuJson';
 
+import 
+
+
 
 var RadiumLink = Radium(Link);
 var Menu = require('react-burger-menu').push;
@@ -19,8 +22,7 @@ var SideMenuEpisodes = React.createClass({
     var classStr = this.props.episodeMeta.className;
     var isMenuOpen = this.props.isMenuOpen;
     var renderedEpisodeComponent = this.renderedEpisode(episodeMeta);
-
-    return (null);
+    return ({renderedEpisodeComponent});
   },
   renderedEpisode : function(meta){
     var count = 0;
