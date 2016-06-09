@@ -6,7 +6,7 @@ import SideMenu from './SideMenu';
 import EpisodeList from './EpisodeList';
 
 
-var episodes = [{name: 'Genesis'}, {name: 'Episode2'}, {name: 'Episode3'}];
+var episodes = [{name: 'Genesis'}];
 
 var Home = React.createClass({
   getInitialState: function() {

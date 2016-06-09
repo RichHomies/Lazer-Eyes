@@ -9,8 +9,7 @@
 /* General sidebar styles */
 .bm-menu {
   background: black;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  padding: 3vh 12.5%;
   display: flex;
   border-right: 1vw solid #F20AC9;
   align-items: center;
@@ -19,17 +18,25 @@
 /* Wrapper for item list */
 .bm-item-list {
   color: white;
-  padding: 1%;
   display: block;
   text-decoration: none;
-  font-size: 2vw;
+  font-size: 4vw;
 }
 
 .sideMenuItems {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .lazerEyesMenuLogo {
-  margin: auto;
+  width: 100%;
+}
+
+.episodesHeader, .sideMenuItems {
+  font-size: 6vw;
+}
+
+#outer-container {
+  
 }

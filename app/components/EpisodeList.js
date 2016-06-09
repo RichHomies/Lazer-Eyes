@@ -8,7 +8,7 @@ var EpisodeList = React.createClass({
     var episodes = this.props.list;
     var episodeListComponents = episodes.map(function(episode, index){
       var classStr = index % 2 === 0 ? 'backgroundPink' : 'backgroundPurple';
-      return <RadiumLink to={'/episodes/'+episode.name.toLowerCase()}><span key={index} className={'episodeListItem ' + classStr}>{index + 1 + '. ' + episode.name}</span></RadiumLink>
+      return <RadiumLink key={index} to={'/episodes/'+episode.name.toLowerCase()}><span className={'episodeListItem ' + classStr}>{index + 1 + '. ' + episode.name}</span></RadiumLink>
     });
     return (
       <div className='episodeListContainer'>
