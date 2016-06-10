@@ -6,17 +6,102 @@
 }
 
 @font-face {
-  font-family: 'GT Haptik';
+  font-family: 'GT Haptik Oblique';
+  src: url('/fonts/GTHaptikBlack-Oblique.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Black';
+  src: url('/fonts/GTHaptikBlack.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Bold Oblique';
+  src: url('/fonts/GTHaptikBold-Oblique.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Bold';
+  src: url('/fonts/GTHaptikBold.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Lazer Oblique';
+  src: url('/fonts/GTHaptikLazer-Oblique.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Light Oblique';
+  src: url('/fonts/GTHaptikLight-Oblique.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Light';
+  src: url('/fonts/GTHaptikLight.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Medium Oblique';
+  src: url('/fonts/GTHaptikMedium-Oblique.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Medium';
   src: url('/fonts/GTHaptikMedium.otf');    
   font-style:   normal;
   font-weight:  700;
 }
 
+@font-face {
+  font-family: 'GT Haptik Regular Oblique';
+  src: url('/fonts/GTHaptikRegular-Oblique.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Regular';
+  src: url('/fonts/GTHaptikRegular.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Thin Oblique';
+  src: url('/fonts/GTHaptikThin-Oblique.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Thin';
+  src: url('/fonts/GTHaptikThin.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+
 /* Ignore => Base Styles */
 body { background: black; -webkit-font-smoothing: antialiased; }
 .ScrollSceneIndicators { z-index: 9999999 !important; }
 body {
-    font-family: 'GT Haptik';
+    font-family: 'GT Haptik Regular';
     display: block;
     margin: 0px;
 }
@@ -46,6 +131,7 @@ img#headerimg {
 #episode1 {
   width: 100vw;
   overflow: auto;
+  margin: 10vh 0;
 }
 
 /*use this for all episodes*/
@@ -114,14 +200,10 @@ div.pink{
 }
 
 .episodesHeader{
-  margin: 1vh 0;
+  margin-top: 1vh;
 }
 
-.episodesHeader > a {
-  text-decoration: none;
-  color: white;
-  font-size: 6vw;
-}
+
 .episodeListContainer > a {
   text-decoration: none;
 }
@@ -143,7 +225,6 @@ div.pink{
   .episodeText {
     font-size: 3vw;
   }
-
 }
 
 @media screen and (min-width: 50em){

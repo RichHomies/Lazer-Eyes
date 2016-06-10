@@ -18,7 +18,7 @@ var Episodes = React.createClass({
     
     switch(route){
       case 'genesis': 
-        component = <Episode1 currentEpisode={that.props.currentEpisode } changeEpisode={that.props.changeEpisode}/>;
+        component = <Episode1 currentEpisode={that.props.currentEpisode } changeSong={that.props.changeSong}/>;
         break;
       default:
         component = <img src={'/img/nick-young-confused-face.png'}/>

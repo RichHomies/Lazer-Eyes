@@ -6,11 +6,9 @@
   width: 100%;
   height: 8vh;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -32,11 +30,9 @@
 
 .flexCenterAlign {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -74,12 +70,10 @@
   cursor:pointer;
   margin-right: 10vw;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
 }
@@ -112,17 +106,102 @@
 }
 
 @font-face {
-  font-family: 'GT Haptik';
+  font-family: 'GT Haptik Oblique';
+  src: url('/fonts/GTHaptikBlack-Oblique.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Black';
+  src: url('/fonts/GTHaptikBlack.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Bold Oblique';
+  src: url('/fonts/GTHaptikBold-Oblique.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Bold';
+  src: url('/fonts/GTHaptikBold.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Lazer Oblique';
+  src: url('/fonts/GTHaptikLazer-Oblique.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Light Oblique';
+  src: url('/fonts/GTHaptikLight-Oblique.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Light';
+  src: url('/fonts/GTHaptikLight.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Medium Oblique';
+  src: url('/fonts/GTHaptikMedium-Oblique.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Medium';
   src: url('/fonts/GTHaptikMedium.otf');    
   font-style:   normal;
   font-weight:  700;
 }
 
+@font-face {
+  font-family: 'GT Haptik Regular Oblique';
+  src: url('/fonts/GTHaptikRegular-Oblique.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Regular';
+  src: url('/fonts/GTHaptikRegular.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Thin Oblique';
+  src: url('/fonts/GTHaptikThin-Oblique.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'GT Haptik Thin';
+  src: url('/fonts/GTHaptikThin.otf');    
+  font-style:   normal;
+  font-weight:  700;
+}
+
+
 /* Ignore => Base Styles */
 body { background: black; -webkit-font-smoothing: antialiased; }
 .ScrollSceneIndicators { z-index: 9999999 !important; }
 body {
-    font-family: 'GT Haptik';
+    font-family: 'GT Haptik Regular';
     display: block;
     margin: 0px;
 }
@@ -143,15 +222,12 @@ img#headerimg {
 #headerImageContainer{
   background-color: black;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
@@ -161,6 +237,7 @@ img#headerimg {
 #episode1 {
   width: 100vw;
   overflow: auto;
+  margin: 10vh 0;
 }
 
 /*use this for all episodes*/
@@ -205,35 +282,29 @@ div.pink{
   overflow-x: scroll;
   white-space: nowrap;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 
 
 .episodeListItem {
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   color: black;
   font-size: 7vh;
   margin: 0 0 0 1vw;
   height: 40vh;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: 60vw;
@@ -249,14 +320,10 @@ div.pink{
 }
 
 .episodesHeader{
-  margin: 1vh 0;
+  margin-top: 1vh;
 }
 
-.episodesHeader > a {
-  text-decoration: none;
-  color: white;
-  font-size: 6vw;
-}
+
 .episodeListContainer > a {
   text-decoration: none;
 }
@@ -278,7 +345,6 @@ div.pink{
   .episodeText {
     font-size: 3vw;
   }
-
 }
 
 @media screen and (min-width: 50em){
@@ -289,6 +355,12 @@ div.pink{
 }
 
 
+
+.episodesHeader > a {
+  text-decoration: none;
+  color: white;
+  font-size: 6vw;
+}
 
 .bm-burger-button {
   position: fixed;
@@ -303,16 +375,13 @@ div.pink{
   background: black;
   padding: 3vh 12.5%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   border-right: 1vw solid #F20AC9;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -322,16 +391,15 @@ div.pink{
   display: block;
   text-decoration: none;
   font-size: 4vw;
+  margin-bottom: 1vh;
 }
 
 .sideMenuItems {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-align: center;
@@ -345,8 +413,38 @@ div.pink{
 
 .episodesHeader, .sideMenuItems {
   font-size: 6vw;
+  font-family: 'GT Haptik Bold';
 }
 
-#outer-container {
-  
+.songLink {
+  font-size: 2.5vw;
+  font-family: 'GT Haptik Regular';
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px){
+  .episodesHeader > a {
+      font-size: 5vh;
+  }
+
+  .episodesHeader, .sideMenuItems {
+      font-size: 5vh;
+  }
+
+  .lazerEyesMenuLogo {
+    width: 345px;
+    height: 345px;
+  }
+
+  .bm-item-list {
+    font-size: 4vh;
+  }
+
+  .songLink {
+    font-size: 2.5vh;
+    font-family: 'GT Haptik Regular';
+  }
+}
+
+@media screen and (min-width: 650px){
 }

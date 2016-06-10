@@ -1,3 +1,9 @@
+.episodesHeader > a {
+  text-decoration: none;
+  color: white;
+  font-size: 6vw;
+}
+
 .bm-burger-button {
   position: fixed;
   width: 75px;
@@ -21,6 +27,7 @@
   display: block;
   text-decoration: none;
   font-size: 4vw;
+  margin-bottom: 1vh;
 }
 
 .sideMenuItems {
@@ -35,8 +42,38 @@
 
 .episodesHeader, .sideMenuItems {
   font-size: 6vw;
+  font-family: 'GT Haptik Bold';
 }
 
-#outer-container {
-  
+.songLink {
+  font-size: 2.5vw;
+  font-family: 'GT Haptik Regular';
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px){
+  .episodesHeader > a {
+      font-size: 5vh;
+  }
+
+  .episodesHeader, .sideMenuItems {
+      font-size: 5vh;
+  }
+
+  .lazerEyesMenuLogo {
+    width: 345px;
+    height: 345px;
+  }
+
+  .bm-item-list {
+    font-size: 4vh;
+  }
+
+  .songLink {
+    font-size: 2.5vh;
+    font-family: 'GT Haptik Regular';
+  }
+}
+
+@media screen and (min-width: 650px){
 }

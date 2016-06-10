@@ -12,40 +12,39 @@ var Home = React.createClass({
   getInitialState: function() {
     //state is null originally, until page loads
     return {
-      currentEpisode: null
+      currentSong: null
     }
   },
-  changeEpisode: function(newEpisode) {
-    this.setState({currentEpisode: newEpisode})  
-    console.log(this.state.currentEpisode) 
+  changeSong: function(newSong) {
+    this.setState({currentSong: newSong})  
   },
   componentDidMount: function() {
     //since the page is loaded, we set the state based on the url params
     if (window.location.search.length !== 0) {
-      setState({currentEpisode: window.location.search})
+      setState({currentSong: window.location.search})
     }
   },
   render: function() {
-    let childrenComponents = this.prepareChildrenComponents();
+    var childrenComponents = this.prepareChildrenComponents();
     return (
       <div>
-        <SideMenu episodes={episodes} />
+        <SideMenu episodes={episodes} changeSong={this.changeSong}/>
         <Header />
         <EpisodeList list={episodes} />
         <div className="audioContainer">
-          <AudioPlayer currentEpisode={this.state.currentEpisode}/>
+          <AudioPlayer currentSong={this.state.currentSong}/>
         </div>
         {childrenComponents}
       </div>
     );
   },
   prepareChildrenComponents: function(){
-    var changeEpisode = this.changeEpisode;
+    var changeSong = this.changeSong;
     var that = this; 
     return React.Children.map(this.props.children, function(child){
         return React.cloneElement(child, {
-          changeEpisode : changeEpisode,
-          currentEpisode: that.state.currentEpisode
+          changeSong : changeSong,
+          currentSong: that.state.currentSong
         });
     });
   }
