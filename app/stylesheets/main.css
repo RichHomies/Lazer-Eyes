@@ -96,7 +96,6 @@
   font-weight:  700;
 }
 
-
 /* Ignore => Base Styles */
 body { background: black; -webkit-font-smoothing: antialiased; }
 .ScrollSceneIndicators { z-index: 9999999 !important; }
@@ -111,17 +110,17 @@ header {
   padding: 0px;
 }
 
-
 img#headerimg {
   height: 70vh;
   width: 70vh;
 }
 
-
-
 #headerImageContainer{
   background-color: black;
   display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -174,9 +173,10 @@ div.pink{
   overflow-x: scroll;
   white-space: nowrap;
   display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
 }
-
 
 .episodeListItem {
   flex-shrink: 0;
@@ -185,6 +185,9 @@ div.pink{
   margin: 0 0 0 1vw;
   height: 40vh;
   display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
   align-items: center;
   justify-content: center;
   width: 60vw;

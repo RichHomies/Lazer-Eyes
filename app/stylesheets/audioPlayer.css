@@ -6,6 +6,8 @@
   width: 100%;
   height: 8vh;
   display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
   align-items: center;
 }
 
@@ -26,6 +28,8 @@
 
 .flexCenterAlign {
   display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
   align-items: center;
 }
 
@@ -62,6 +66,8 @@
   cursor:pointer;
   margin-right: 10vw;
   display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
 }
 

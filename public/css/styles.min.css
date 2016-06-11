@@ -5,12 +5,10 @@
   color: #FAEBD7;
   width: 100%;
   height: 8vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 #hide{
@@ -29,12 +27,10 @@
 }
 
 .flexCenterAlign {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 .songtitle{
@@ -69,13 +65,10 @@
 .playerElemsContainer{
   cursor:pointer;
   margin-right: 10vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
 }
 
 .playerElems{
@@ -196,7 +189,6 @@
   font-weight:  700;
 }
 
-
 /* Ignore => Base Styles */
 body { background: black; -webkit-font-smoothing: antialiased; }
 .ScrollSceneIndicators { z-index: 9999999 !important; }
@@ -211,25 +203,19 @@ header {
   padding: 0px;
 }
 
-
 img#headerimg {
   height: 70vh;
   width: 70vh;
 }
 
-
-
 #headerImageContainer{
   background-color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
 }
 
@@ -254,8 +240,6 @@ div.pink{
   width:100vw;
   height: 10vh;
   background-color: #F73EA7;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   display: -webkit-flex;
   font-size: -webkit-xxx-large;
@@ -281,32 +265,24 @@ div.pink{
   float: left;
   overflow-x: scroll;
   white-space: nowrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
 }
 
-
 .episodeListItem {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   color: black;
   font-size: 7vh;
   margin: 0 0 0 1vw;
   height: 40vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 60vw;
   white-space:normal;
 }
@@ -356,6 +332,16 @@ div.pink{
 
 
 
+/*  display: flex;
+display: -webkit-flex;
+  display: -webkit-flx;
+  flex-flow: row wrap; 
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around; 
+  -webkit-justify-content: space-around;
+  align-items: center; 
+  -webkit-align-items: center;*/
+
 .episodesHeader > a {
   text-decoration: none;
   color: white;
@@ -374,16 +360,11 @@ div.pink{
 .bm-menu {
   background: black;
   padding: 3vh 12.5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-right: 1vw solid #F20AC9;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
 }
 /* Wrapper for item list */
 .bm-item-list {
@@ -395,16 +376,12 @@ div.pink{
 }
 
 .sideMenuItems {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
 }
 
 .lazerEyesMenuLogo {

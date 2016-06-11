@@ -14,7 +14,7 @@ var Episode1 = React.createClass({
       })
       .on('start', function() {
         //change window hash
-        that.props.changeSong('episode1/song1')
+        // that.props.changeSong('episode1/song1')
       })
       .addTo(scrollMagicController);
 
@@ -24,7 +24,7 @@ var Episode1 = React.createClass({
       })
       .on('start', function() {
         //change window hash
-        that.props.changeSong('episode1/song2')
+        // that.props.changeSong('episode1/song2')
       })
       .addTo(scrollMagicController);
 

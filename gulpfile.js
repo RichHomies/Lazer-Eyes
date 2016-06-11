@@ -99,7 +99,6 @@ gulp.task('styles', function() {
     .pipe(plumber())
     .pipe(gulpif(production, cssmin()))
     .pipe(concat('styles.min.css'))
-    .pipe(autoprefixer())
     .pipe(gulp.dest('public/css'));
 });
 
