@@ -16,7 +16,8 @@ var menu = {
         episodesMeta: {
             episodeName: {
                 title: 'Genesis',
-                number: 1
+                number: 1,
+                path : '/episodes/Genesis'
             }, 
             songs: [{
                 songTitle: 'Dream A Dream of Lazers',
@@ -26,7 +27,11 @@ var menu = {
                 songTitle: 'Down in Appalachia',
                 songPath: '/audio/2.%20Down%20In%20Appalachia.m4a',
                 number: 2
-            }]
+            }, {
+                songTitle: 'Lazer Eyes (Main Theme)',
+                songPath: '/audio/3. Lazer Eyes (Main theme).m4a',
+                number: 3
+             }]
           }
         }
     ]

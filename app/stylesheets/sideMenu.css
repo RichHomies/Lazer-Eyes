@@ -63,6 +63,7 @@ display: -webkit-flex;
   font-size: 2.5vw;
   font-family: 'GT Haptik Regular';
   cursor: pointer;
+  margin: 1\.5vh;
 }
 
 @media screen and (min-width: 800px){

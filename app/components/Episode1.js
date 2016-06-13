@@ -1,11 +1,15 @@
 import React from 'react';
 import episodeOne from './assets/episode1img';
+import Scroll from 'react-scroll'; 
+
+var scroll = Scroll.animateScroll;
+var Element = Scroll.Element;
+var scroller = Scroll.scroller;
 
 var Episode1 = React.createClass({
   componentDidMount: function() {
     var that = this
     $(function() {
-      
       var scrollMagicController = new ScrollMagic.Controller();
       
       var scene1 = new ScrollMagic.Scene({
@@ -28,11 +32,29 @@ var Episode1 = React.createClass({
       })
       .addTo(scrollMagicController);
 
+      scroller.scrollTo('episode1', {
+        duration: 1500,
+        delay: 100,
+        smooth: true,
+      })
+
     });
   },
+  playSong: function(song){
+    var that = this;
+    return function(){
+      that.props.changeSong(song);
+    }
+  },
   render: function() {
+    var songOneHandler = this.playSong('episode1/song1');
+    var songTwoHandler = this.playSong('episode1/song2');
+    var songThreeHandler = this.playSong('episode1/song3');
+        
+
     return (
-      <div id='episode1'>
+      <div name='episode1' id='episode1'>
+        <img src="/img/Track-1.jpg" id="scene-1" className="episodeImages" onClick={songOneHandler}/>
         <div className="episodeText" id="scene-1">
 Sing muse, of the cunning hero, the wanderer, blown off course time and again, before he plundered
 
@@ -66,6 +88,7 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
             him Lazer Eyes.
         
         </div>
+        <img src="/img/Track-2.jpg" className="episodeImages" onClick={songTwoHandler}/>
         <div className="episodeText" id="scene-2">
         
             Our story begins back before our hero was a hero, back when his eyes only saw and his courage lay
@@ -161,6 +184,7 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
            from his eyes.
         
         </div>
+        <img src="/img/Track-3.jpg" className="episodeImages" onClick={songThreeHandler}/>
         <img src='/img/EP-1-image-7-50%25.gif' className='episodeImages'/>
         <div className="episodeText">
         
@@ -197,6 +221,7 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
            our messiah?
         
         </div>
+
       </div>
     );
   }

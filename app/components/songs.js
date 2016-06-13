@@ -8,7 +8,13 @@ var songs = {
     "songPath": "/audio/2.%20Down%20In%20Appalachia.m4a",
     "songTitle": "Down in Appalachia",
     'trackNumber' : 2
+  },
+    'episode1/song3': {
+    "songPath": '/audio/3. Lazer Eyes (Main theme).m4a',
+    "songTitle": "Lazer Eyes (Main Theme)",
+    'trackNumber' : 3
   }
 }
 
 export default songs;
+

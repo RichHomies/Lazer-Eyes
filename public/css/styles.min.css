@@ -258,9 +258,10 @@ div.pink{
   color: white;
   padding: 0 5vw;
   font-size: 4vw;
+  margin: 5vh 0;
 }
 .episodeListContainer{
-  height: 40vh;
+/*  height: 40vh;
   width: 100vw;
   float: left;
   overflow-x: scroll;
@@ -268,14 +269,13 @@ div.pink{
   display: flex;
   display: -webkit-flex;
   -webkit-flex-direction: row;
-  flex-direction: row;
+  flex-direction: row;*/
 }
 
 .episodeListItem {
   flex-shrink: 0;
   color: black;
   font-size: 7vh;
-  margin: 0 0 0 1vw;
   height: 40vh;
   display: flex;
   display: -webkit-flex;
@@ -283,8 +283,8 @@ div.pink{
   -webkit-justify-content: center;
   align-items: center;
   justify-content: center;
-  width: 60vw;
-  white-space:normal;
+  width: 100vw;
+  white-space: normal;
 }
 
 .backgroundPink {
@@ -397,6 +397,7 @@ display: -webkit-flex;
   font-size: 2.5vw;
   font-family: 'GT Haptik Regular';
   cursor: pointer;
+  margin: 1\.5vh;
 }
 
 @media screen and (min-width: 800px){

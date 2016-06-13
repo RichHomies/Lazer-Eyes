@@ -4,9 +4,9 @@ import Episodes from './Episodes'
 import AudioPlayer from './AudioPlayer'
 import SideMenu from './SideMenu';
 import EpisodeList from './EpisodeList';
+import episodes from './episodesMeta';
 
 
-var episodes = [{name: 'Genesis'}];
 
 var Home = React.createClass({
   getInitialState: function() {

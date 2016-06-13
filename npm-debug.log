@@ -7,7 +7,7 @@
 6 info watch Lazer-Eyes@1.0.0
 7 verbose unsafe-perm in lifecycle true
 8 info Lazer-Eyes@1.0.0 Failed to exec watch script
-9 verbose stack Error: Lazer-Eyes@1.0.0 watch: `nodemon --exec babel-node -- server.js`
+9 verbose stack Error: Lazer-Eyes@1.0.0 watch: `gulp build && nodemon --exec babel-node -- server.js`
 9 verbose stack Exit status 1
 9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
 9 verbose stack     at EventEmitter.emit (events.js:110:17)
@@ -22,13 +22,13 @@
 14 error node v0.12.2
 15 error npm  v2.7.4
 16 error code ELIFECYCLE
-17 error Lazer-Eyes@1.0.0 watch: `nodemon --exec babel-node -- server.js`
+17 error Lazer-Eyes@1.0.0 watch: `gulp build && nodemon --exec babel-node -- server.js`
 17 error Exit status 1
-18 error Failed at the Lazer-Eyes@1.0.0 watch script 'nodemon --exec babel-node -- server.js'.
+18 error Failed at the Lazer-Eyes@1.0.0 watch script 'gulp build && nodemon --exec babel-node -- server.js'.
 18 error This is most likely a problem with the Lazer-Eyes package,
 18 error not with npm itself.
 18 error Tell the author that this fails on your system:
-18 error     nodemon --exec babel-node -- server.js
+18 error     gulp build && nodemon --exec babel-node -- server.js
 18 error You can get their info via:
 18 error     npm owner ls Lazer-Eyes
 18 error There is likely additional logging output above.
