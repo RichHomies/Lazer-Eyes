@@ -10,27 +10,6 @@ var Episode1 = React.createClass({
   componentDidMount: function() {
     var that = this
     $(function() {
-      var scrollMagicController = new ScrollMagic.Controller();
-      
-      var scene1 = new ScrollMagic.Scene({
-        triggerElement: '#scene-1',
-        offset: 50
-      })
-      .on('start', function() {
-        //change window hash
-        // that.props.changeSong('episode1/song1')
-      })
-      .addTo(scrollMagicController);
-
-      var scene2 = new ScrollMagic.Scene({
-        triggerElement: '#scene-2',
-        offset: 50
-      })
-      .on('start', function() {
-        //change window hash
-        // that.props.changeSong('episode1/song2')
-      })
-      .addTo(scrollMagicController);
 
       scroller.scrollTo('episode1', {
         duration: 1500,
@@ -51,7 +30,6 @@ var Episode1 = React.createClass({
     var songTwoHandler = this.playSong('episode1/song2');
     var songThreeHandler = this.playSong('episode1/song3');
         
-
     return (
       <div name='episode1' id='episode1'>
         <img src="/img/Track-1.jpg" id="scene-1" className="episodeImages" onClick={songOneHandler}/>
