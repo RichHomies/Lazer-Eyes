@@ -29,7 +29,7 @@ var menu = {
                 number: 2
             }, {
                 songTitle: 'Lazer Eyes (Main Theme)',
-                songPath: '/audio/3.%20Lazer%20Eyes%20(Main%20theme).m4a',
+                songPath: '/audio/3. Lazer Eyes Main Theme.m4a',
                 number: 3
              }]
           }
