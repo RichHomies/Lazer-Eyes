@@ -1,5 +1,4 @@
 import React from 'react';
-import lazereyesGif from './assets/lazereyes';
 
 var Header = React.createClass({
     render: function() {

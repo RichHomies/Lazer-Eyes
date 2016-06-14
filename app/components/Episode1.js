@@ -1,5 +1,4 @@
 import React from 'react';
-import episodeOne from './assets/episode1img';
 import Scroll from 'react-scroll'; 
 
 var scroll = Scroll.animateScroll;

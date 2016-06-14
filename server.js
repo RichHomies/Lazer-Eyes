@@ -19,7 +19,9 @@ var initServer = function() {
 };
 var reqObj;
 
-app.use(compression());
+app.use(compression({
+  level: 9
+}));
 app.use(morgan('tiny'));
 app.use(parser.json());
 app.use(parser.urlencoded({extended: false}));
