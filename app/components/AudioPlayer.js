@@ -88,12 +88,19 @@ var AudioPlayer = React.createClass({
           <span className='titleElem'>{titleElem}</span>
           <span className='playerElemsContainer'>
             {playPauseComponent}
-            <span className='playerElems'onClick={toggleSoundHandler} ><img className='playerIcons' src={soundOnOff}/></span>
+            <span className='playerElems' onClick={toggleSoundHandler} ><img className='playerIcons' src={soundOnOff}/></span>
           </span>
         </span>
-        <audio id='player' src={this.state.currentSongUrl} autoPlay controls></audio>
+        <audio id='player' src={this.state.currentSongUrl}></audio>
       </div>
     );
+  },
+  componentDidUpdate : function(prevProps, prevState){
+    console.log('prev', prevProps);
+    console.log('prevState', prevState);
+    if(prevState.currentSongUrl !== this.state.currentSongUrl){
+      this.audioPlayerHandler('play');
+    }
   }
 })
 
