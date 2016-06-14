@@ -32,7 +32,7 @@ var Episode1 = React.createClass({
         
     return (
       <div name='episode1' id='episode1'>
-        <img src="/img/Track-1.jpg" id="scene-1" className="episodeImages" onClick={songOneHandler}/>
+        <img src="/img/Track-1.gif" id="scene-1" className="episodeImages trackImages" onClick={songOneHandler}/>
         <div className="episodeText" id="scene-1">
 Sing muse, of the cunning hero, the wanderer, blown off course time and again, before he plundered
 
@@ -66,7 +66,7 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
             him Lazer Eyes.
         
         </div>
-        <img src="/img/Track-2.jpg" className="episodeImages" onClick={songTwoHandler}/>
+        <img src="/img/Track-2.gif" className="episodeImages trackImages" onClick={songTwoHandler}/>
         <div className="episodeText" id="scene-2">
         
             Our story begins back before our hero was a hero, back when his eyes only saw and his courage lay
@@ -162,7 +162,7 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
            from his eyes.
         
         </div>
-        <img src="/img/Track-3.jpg" className="episodeImages" onClick={songThreeHandler}/>
+        <img src="/img/Track-3.gif" className="episodeImages trackImages" onClick={songThreeHandler}/>
         <img src='/img/EP-1-image-7-50%25.gif' className='episodeImages'/>
         <div className="episodeText">
         

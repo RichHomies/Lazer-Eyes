@@ -211,6 +211,10 @@ div.pink{
   text-decoration: none;
 }
 
+.trackImages{
+  cursor: pointer;
+}
+
 @media screen and (max-width: 515px){
   img#headerimg {
     height: 50vh;

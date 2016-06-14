@@ -67,8 +67,8 @@ var AudioPlayer = React.createClass({
     var pauseHandler = this.audioPlayerHandler.bind(null, 'pause');
     var stopHandler = this.audioPlayerHandler.bind(null, 'stop');
     var toggleSoundHandler = this.audioPlayerHandler.bind(null, 'sound');
-    var pauseComponent = <span className='playerElems' onClick={pauseHandler}><img className='playerIcons' src='/icons/pause.png'/></span>;
-    var playComponent = <span className='playerElems' onClick={playHandler}><img className='playerIcons' src='/icons/play.png'/></span>;
+    var pauseComponent = <span className='playerElems' onClick={pauseHandler}><img className='playerIcons' src={"/icons/pause.png"}/></span>;
+    var playComponent = <span className='playerElems' onClick={playHandler}><img className='playerIcons' src={"/icons/play.png"}/></span>;
 
     if(this.state.currentSongUrl){
       var isPlaying = this.state.isPlaying;

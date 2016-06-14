@@ -14,13 +14,18 @@ var SideMenu = React.createClass({
       isOpen : false
     }
   },
-
+  isServer: function() {
+   return ! (typeof window != 'undefined' && window.document);
+  },
   render: function() {
     var episodes = this.props.episodes;
     var isMenuOpen = this.props.isMenuOpen;
     var that = this;
     var renderedEpisodes = this.renderedEpisodes();
-
+    // if(this.isServer()){
+    //   var obj = reqObj;
+    //   console.log('is server obj', obj);
+    // }
     return (
       <div  >
         <Menu isOpen={this.state.isOpen} customBurgerIcon={ <img src="/img/rsz_lazereyeslogo-menu-button.gif" /> } width={'50vw'} pageWrapId={ "app" }  >

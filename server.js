@@ -17,6 +17,7 @@ var initServer = function() {
   var server = app.listen(port);
   console.log("Express server listening on %d in %s mode", port, app.settings.env);
 };
+var reqObj;
 
 app.use(compression());
 app.use(morgan('tiny'));
@@ -32,6 +33,8 @@ app.use(function(req, res, next) {
     } else if (redirectLocation) {
       res.status(302).redirect(redirectLocation.pathname + redirectLocation.search);
     } else if (renderProps) {
+      reqObj = req.headers['user-agent'];
+      console.log('props',renderProps);
       var html = ReactDOM.renderToString(<RoutingContext {...renderProps} />);
       var page = swig.renderFile('viewsFromThe6/index.html', { html: html });
       res.status(200).send(page);

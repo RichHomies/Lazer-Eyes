@@ -10,7 +10,7 @@ var songs = {
     'trackNumber' : 2
   },
     'episode1/song3': {
-    "songPath": '/audio/3. Lazer Eyes (Main theme).m4a',
+    "songPath": '/audio/3.%20Lazer%20Eyes%20(Main%20theme).m4a',
     "songTitle": "Lazer Eyes (Main Theme)",
     'trackNumber' : 3
   }
