@@ -21,14 +21,16 @@
     }
 
     if(!isServer()){
-      for(var i = 0; i < heroArray.length; i++){
-          if('.DS_Store'!== heroArray[i]){
-            var url = heroArray[i],
-                img = new Image();
-                img.src = '/img/' + url;
-          }
-      };
-      console.log('prefetched');
+      window.onload = function(){
+        for(var i = 0; i < heroArray.length; i++){
+            if('.DS_Store'!== heroArray[i]){
+              var url = heroArray[i],
+                  img = new Image();
+                  img.src = '/img/' + url;
+            }
+        };
+        console.log('prefetched');
+      }
     }
    </script>
    <script src="/js/vendor.js"></script>
