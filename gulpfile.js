@@ -12,6 +12,7 @@ var babelify = require('babelify');
 var browserify = require('browserify');
 var watchify = require('watchify');
 var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
 
 var production = process.env.NODE_ENV === 'production';
 
@@ -32,7 +33,6 @@ gulp.task('vendor', function() {
   return gulp.src([
     'bower_components/jquery/dist/jquery.js',
     'bower_components/bootstrap/dist/js/bootstrap.js',
-    'bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
     'bower_components/sidr/dist/jquery.sidr.min.js'
   ]).pipe(concat('vendor.js'))
     .pipe(gulpif(production, uglify({ mangle: false })))
@@ -104,6 +104,12 @@ gulp.task('styles', function() {
 
 gulp.task('watch', function() {
   gulp.watch('app/stylesheets/*.css', ['styles']);
+});
+
+gulp.task('compress', function() {
+    gulp.src('public/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('public/images'))
 });
 
 gulp.task('default', ['styles', 'vendor', 'browserify-watch', 'watch']);
