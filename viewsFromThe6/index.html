@@ -14,24 +14,24 @@
   <div id="app">{{ html|safe }}</div>
    <script type="text/javascript">
     window.__filesLazyLoad = {{files|safe}};
-    var heroArray = window.__filesLazyLoad;
+    // var heroArray = window.__filesLazyLoad;
+    // var heroArray = ['']
+    // function isServer() {
+    //     return ! (typeof window != 'undefined' && window.document);
+    // }
 
-    function isServer() {
-        return ! (typeof window != 'undefined' && window.document);
-    }
-
-    if(!isServer()){
-      document.addEventListener("DOMContentLoaded", function(event) {
-        for(var i = 0; i < heroArray.length; i++){
-            if('.DS_Store'!== heroArray[i]){
-              var url = heroArray[i],
-                  img = new Image();
-                  img.src = '/img/' + url;
-            }
-        }
-        console.log('prefetched');
-      });
-    }
+    // if(!isServer()){
+    //   document.addEventListener("DOMContentLoaded", function(event) {
+    //     for(var i = 0; i < heroArray.length; i++){
+    //         if('.DS_Store'!== heroArray[i]){
+    //           var url = heroArray[i],
+    //               img = new Image();
+    //               img.src = '/img/' + url;
+    //         }
+    //     }
+    //     console.log('prefetched');
+    //   });
+    // }
     
    </script>
    <script src="/js/vendor.js"></script>
