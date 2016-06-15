@@ -162,7 +162,7 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
         
         </div>
         <img src="/img/Track-3.gif" className="episodeImages trackImages" onClick={songThreeHandler}/>
-        <img src='/img/EP-1-image-7-50%25.gif' className='episodeImages'/>
+        <img src='/img/EP-1-image-7-1.gif' className='episodeImages'/>
         <div className="episodeText">
         
            Elated and exhausted, he lowers his gaze to see expressions of fear and horror on the faces of his

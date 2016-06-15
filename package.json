@@ -30,6 +30,7 @@
     "cookie-parser": "^1.4.0",
     "cors": "^2.7.1",
     "express": "^4.13.3",
+    "gulp-imagemin": "^3.0.1",
     "history": "^1.12.5",
     "morgan": "^1.6.1",
     "radium": "^0.17.1",
