@@ -14,9 +14,9 @@ var AudioPlayer = React.createClass({
     var songUrl = songs[nextProps["currentSong"]] ? songs[nextProps["currentSong"]]["songPath"] : '';
     var songTitle = songs[nextProps["currentSong"]]? songs[nextProps["currentSong"]]["songTitle"] : '';
     var trackNumber = songs[nextProps["currentSong"]]? songs[nextProps["currentSong"]]["trackNumber"] : '';
-
+    var that = this;
     if (songUrl && songTitle && trackNumber) {
-      this.setState({currentSongUrl: songUrl, currentSongTitle: songTitle, trackNumber: trackNumber, isPlaying: true})
+      that.setState({currentSongUrl: songUrl, currentSongTitle: songTitle, trackNumber: trackNumber, isPlaying: true})
     }
   },
   audioPlayerHandler: function(action){
@@ -38,10 +38,8 @@ var AudioPlayer = React.createClass({
       case 'sound':
         audioPlayer.muted = !!!audioPlayer.muted;
       default:
-        this.setState({muted: audioPlayer.muted});
+        that.setState({muted: audioPlayer.muted});
         break;
-
-
     }
   },
   setSound : function(){
@@ -63,10 +61,10 @@ var AudioPlayer = React.createClass({
   render: function() {
     var titleElem = null;
     var idString = 'hide';
-    var playHandler = this.audioPlayerHandler.bind(null, 'play');
-    var pauseHandler = this.audioPlayerHandler.bind(null, 'pause');
-    var stopHandler = this.audioPlayerHandler.bind(null, 'stop');
-    var toggleSoundHandler = this.audioPlayerHandler.bind(null, 'sound');
+    var playHandler = this.audioPlayerHandler.bind(this, 'play');
+    var pauseHandler = this.audioPlayerHandler.bind(this, 'pause');
+    var stopHandler = this.audioPlayerHandler.bind(this, 'stop');
+    var toggleSoundHandler = this.audioPlayerHandler.bind(this, 'sound');
     var pauseComponent = <span className='playerElems' onClick={pauseHandler}><img className='playerIcons' src={"/icons/pause.png"}/></span>;
     var playComponent = <span className='playerElems' onClick={playHandler}><img className='playerIcons' src={"/icons/play.png"}/></span>;
 
@@ -80,18 +78,19 @@ var AudioPlayer = React.createClass({
       var soundOnOff = this.state.muted ? '/icons/sound-off.png' : '/icons/sound-on.png';
       idString = 'audioPlayer';
     }
-    
+
     return (
       <div id={idString}>
         <span className='songTrackNumberContainer flexCenterAlign'>{trackNumberElem}</span>
         <span className='songTitleContainer flexCenterAlign'>
           <span className='titleElem'>{titleElem}</span>
+          <span className='seekElem' style={this.state.seekElemStyle}></span>
           <span className='playerElemsContainer'>
             {playPauseComponent}
             <span className='playerElems' onClick={toggleSoundHandler} ><img className='playerIcons' src={soundOnOff}/></span>
           </span>
         </span>
-        <audio id='player' src={this.state.currentSongUrl} onEnded={this.trackStopHandler}></audio>
+        <audio id='player' src={this.state.currentSongUrl} onEnded={this.trackStopHandler} onTimeUpdate={this.seekElemHandler} ></audio>
       </div>
     );
   },
@@ -102,6 +101,28 @@ var AudioPlayer = React.createClass({
   },
   trackStopHandler : function(){
     this.setState({isPlaying: false});
+  },
+  seekElemHandler : function(e){
+    var max = 60;
+    var audioPlayer = document.getElementById('player');
+    var songlengthInSeconds = audioPlayer.seekable.end(0);
+    var secondsPlayed = audioPlayer.currentTime;
+    var percentageOfSongElapsed = secondsPlayed / songlengthInSeconds;
+    var mappedWidth = max * percentageOfSongElapsed;
+    var width = mappedWidth + 'vw';
+    console.log('width', width);
+    this.setState({
+      seekElemStyle : {
+        width : mappedWidth
+      }
+    })
+
+// mediaElement.seekable.start(0);  // Returns the starting time (in seconds)
+// mediaElement.seekable.end(0);    // Returns the ending time (in seconds)
+// mediaElement.currentTime = 122; // Seek to 122 seconds
+// mediaElement.played.end(0);      // Returns the number of seconds the browser has played
+  // console.log('seconds', );
+  
   }
 })
 
