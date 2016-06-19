@@ -13,13 +13,8 @@
 
 #hide{
   visibility: hidden;
+  height: 0px;
 }
-
-.audioContainer {
-  padding-top: 5vh;
-}
-
-
 
 .flexCenterAlign {
   display: flex;

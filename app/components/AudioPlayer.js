@@ -49,7 +49,7 @@ var AudioPlayer = React.createClass({
   isServer: function() {
    return ! (typeof window != 'undefined' && window.document);
   },
-  isPlaying : function(audelem) { 
+  isPlaying : function() { 
     var audioPlayer;
     if(this.isServer()){
       return false;
@@ -83,7 +83,7 @@ var AudioPlayer = React.createClass({
       <div id={idString}>
         <span className='songTrackNumberContainer flexCenterAlign'>{trackNumberElem}</span>
         <span className='songTitleContainer flexCenterAlign'>
-          <span className='titleElem'>{titleElem}</span>
+          <span id='titleElem' className='titleElem' onClick={this.seekClickHandler}>{titleElem}</span>
           <span className='seekElem' style={this.state.seekElemStyle}></span>
           <span className='playerElemsContainer'>
             {playPauseComponent}
@@ -110,10 +110,9 @@ var AudioPlayer = React.createClass({
     var percentageOfSongElapsed = secondsPlayed / songlengthInSeconds;
     var mappedWidth = max * percentageOfSongElapsed;
     var width = mappedWidth + 'vw';
-    console.log('width', width);
     this.setState({
       seekElemStyle : {
-        width : mappedWidth
+        width : width
       }
     })
 
@@ -123,6 +122,22 @@ var AudioPlayer = React.createClass({
 // mediaElement.played.end(0);      // Returns the number of seconds the browser has played
   // console.log('seconds', );
   
+  },
+  getXPosition : function(el) {
+    return el.clientX - el.target.offsetLeft;
+  },
+  seekClickHandler : function(e){
+    var audioPlayer = document.getElementById('player');
+    var titleElem = document.getElementById('titleElem');
+    var titleElemWidth = titleElem.offsetWidth;
+    var xPosition = this.getXPosition(e);
+    var xPositionPercentage = xPosition/titleElemWidth;
+    //need to check with out of bounds error
+    var songlengthInSeconds = audioPlayer.seekable.end(0);
+    console.log('xposition', xPosition);
+    console.log('width', titleElemWidth);
+    audioPlayer.currentTime = xPositionPercentage * songlengthInSeconds;
+    
   }
 })
 
