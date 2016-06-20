@@ -83,7 +83,7 @@ var AudioPlayer = React.createClass({
       <div id={idString}>
         <span className='songTrackNumberContainer flexCenterAlign'>{trackNumberElem}</span>
         <span className='songTitleContainer flexCenterAlign'>
-          <span id='titleElem' className='titleElem' onClick={this.seekClickHandler}>{titleElem}</span>
+          <span id='titleElem' className='titleElem'>{titleElem}</span>
           <span className='seekElem' style={this.state.seekElemStyle}></span>
           <span className='playerElemsContainer'>
             {playPauseComponent}
