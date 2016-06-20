@@ -51,7 +51,6 @@
 .songTitleContainer {
   background: #202266;
   width: 90vw;
-  padding-left: 1vw;
   height: 100%;
   z-index: 0;
 }
@@ -61,10 +60,11 @@
   width: 75vw;
   font-size: 2vh;
   z-index: 2;
+  margin-left: 1vw;
 }
 
 .seekElem{
-  background-color: gray;
+  background-color: #2e3192;
   width: 100%;
   height: 100%;
   z-index: 1;
