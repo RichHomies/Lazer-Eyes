@@ -22,10 +22,6 @@ var SideMenu = React.createClass({
     var isMenuOpen = this.props.isMenuOpen;
     var that = this;
     var renderedEpisodes = this.renderedEpisodes();
-    // if(this.isServer()){
-    //   var obj = reqObj;
-    //   console.log('is server obj', obj);
-    // }
     return (
       <div  >
         <Menu isOpen={this.state.isOpen} customBurgerIcon={ <img src="/img/LazerEyesLogo-trans.gif" /> } width={'50vw'} pageWrapId={ "app" }  >

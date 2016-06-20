@@ -4,14 +4,16 @@ var base64Images = {};
 
 var files = fs.readdirSync('./public/img/');
 
-files.forEach(function(file, index) {
-    if (file !== 'DS_Store') {
-        var base64str = base64_encode(file);
-        base64Images[file] = 'base64:' + base64str;
-    }
-});
+// files.forEach(function(file, index) {
+//     if (file !== 'DS_Store') {
+//         var base64str = base64_encode(file);
+//         base64Images[file] = 'base64:' + base64str;
+//     }
+// });
 
-export default base64Images;
+export default files;
+
+// export default base64Images;
 // fs.writeFileSync('base64Images.js','var base64Images = ' + JSON.stringify(base64Images) +'; export default base64Images;');
 
 function base64_encode(file) {

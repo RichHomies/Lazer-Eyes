@@ -1,7 +1,6 @@
 #audioPlayer {
   position: fixed;
   bottom: 0;
- /* fallback for old browsers */
   color: #FAEBD7;
   width: 100vw;
   height: 8vh;

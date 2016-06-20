@@ -115,13 +115,6 @@ var AudioPlayer = React.createClass({
         width : width
       }
     })
-
-// mediaElement.seekable.start(0);  // Returns the starting time (in seconds)
-// mediaElement.seekable.end(0);    // Returns the ending time (in seconds)
-// mediaElement.currentTime = 122; // Seek to 122 seconds
-// mediaElement.played.end(0);      // Returns the number of seconds the browser has played
-  // console.log('seconds', );
-  
   },
   getXPosition : function(el) {
     return el.clientX - el.target.offsetLeft;
@@ -137,7 +130,6 @@ var AudioPlayer = React.createClass({
     console.log('xposition', xPosition);
     console.log('width', titleElemWidth);
     audioPlayer.currentTime = xPositionPercentage * songlengthInSeconds;
-    
   }
 })
 

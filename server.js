@@ -36,11 +36,8 @@ app.use(function(req, res, next) {
     } else if (redirectLocation) {
       res.status(302).redirect(redirectLocation.pathname + redirectLocation.search);
     } else if (renderProps) {
-      reqObj = req.headers['user-agent'];
-      console.log('props',renderProps);
-      var files = fs.readdirSync('./public/img/');
       var html = ReactDOM.renderToString(<RoutingContext {...renderProps} />);
-      var page = swig.renderFile('viewsFromThe6/index.html', { html: html, files: JSON.stringify(files)});
+      var page = swig.renderFile('viewsFromThe6/index.html', { html: html });
       res.status(200).send(page);
     } else {
       next();
