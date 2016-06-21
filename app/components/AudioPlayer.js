@@ -75,7 +75,7 @@ var AudioPlayer = React.createClass({
       var trackNumber = this.state.trackNumber;
       var trackNumberElem = (<span className='songTrackNumber' >{trackNumber}</span>);
       var titleElem = (<span className='songtitle' >{title}</span>);
-      var soundOnOff = this.state.muted ? '/icons/sound-off.png' : '/icons/sound-on.png';
+      var soundOnOff = this.state.muted ? '/icons/sound-off.png' : '/icons/sound.png';
       idString = 'audioPlayer';
     }
 

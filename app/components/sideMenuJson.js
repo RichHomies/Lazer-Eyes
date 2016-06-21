@@ -16,7 +16,7 @@ var menu = {
         episodesMeta: {
             episodeName: {
                 title: 'Genesis',
-                number: 1,
+                number: 'I',
                 path : '/episodes/Genesis'
             }, 
             songs: [{
