@@ -58,9 +58,9 @@ var AudioPlayer = _react2['default'].createClass({
     var songUrl = _songs2['default'][nextProps["currentSong"]] ? _songs2['default'][nextProps["currentSong"]]["songPath"] : '';
     var songTitle = _songs2['default'][nextProps["currentSong"]] ? _songs2['default'][nextProps["currentSong"]]["songTitle"] : '';
     var trackNumber = _songs2['default'][nextProps["currentSong"]] ? _songs2['default'][nextProps["currentSong"]]["trackNumber"] : '';
-
+    var that = this;
     if (songUrl && songTitle && trackNumber) {
-      this.setState({ currentSongUrl: songUrl, currentSongTitle: songTitle, trackNumber: trackNumber, isPlaying: true });
+      that.setState({ currentSongUrl: songUrl, currentSongTitle: songTitle, trackNumber: trackNumber, isPlaying: true });
     }
   },
   audioPlayerHandler: function audioPlayerHandler(action) {
@@ -82,9 +82,8 @@ var AudioPlayer = _react2['default'].createClass({
       case 'sound':
         audioPlayer.muted = !!!audioPlayer.muted;
       default:
-        this.setState({ muted: audioPlayer.muted });
+        that.setState({ muted: audioPlayer.muted });
         break;
-
     }
   },
   setSound: function setSound() {
@@ -94,7 +93,7 @@ var AudioPlayer = _react2['default'].createClass({
   isServer: function isServer() {
     return !(typeof window != 'undefined' && window.document);
   },
-  isPlaying: function isPlaying(audelem) {
+  isPlaying: function isPlaying() {
     var audioPlayer;
     if (this.isServer()) {
       return false;
@@ -106,10 +105,10 @@ var AudioPlayer = _react2['default'].createClass({
   render: function render() {
     var titleElem = null;
     var idString = 'hide';
-    var playHandler = this.audioPlayerHandler.bind(null, 'play');
-    var pauseHandler = this.audioPlayerHandler.bind(null, 'pause');
-    var stopHandler = this.audioPlayerHandler.bind(null, 'stop');
-    var toggleSoundHandler = this.audioPlayerHandler.bind(null, 'sound');
+    var playHandler = this.audioPlayerHandler.bind(this, 'play');
+    var pauseHandler = this.audioPlayerHandler.bind(this, 'pause');
+    var stopHandler = this.audioPlayerHandler.bind(this, 'stop');
+    var toggleSoundHandler = this.audioPlayerHandler.bind(this, 'sound');
     var pauseComponent = _react2['default'].createElement(
       'span',
       { className: 'playerElems', onClick: pauseHandler },
@@ -136,7 +135,7 @@ var AudioPlayer = _react2['default'].createClass({
         { className: 'songtitle' },
         title
       );
-      var soundOnOff = this.state.muted ? '/icons/sound-off.png' : '/icons/sound-on.png';
+      var soundOnOff = this.state.muted ? '/icons/sound-off.png' : '/icons/sound.png';
       idString = 'audioPlayer';
     }
 
@@ -153,9 +152,10 @@ var AudioPlayer = _react2['default'].createClass({
         { className: 'songTitleContainer flexCenterAlign' },
         _react2['default'].createElement(
           'span',
-          { className: 'titleElem' },
+          { id: 'titleElem', className: 'titleElem' },
           titleElem
         ),
+        _react2['default'].createElement('span', { className: 'seekElem', style: this.state.seekElemStyle }),
         _react2['default'].createElement(
           'span',
           { className: 'playerElemsContainer' },
@@ -167,15 +167,45 @@ var AudioPlayer = _react2['default'].createClass({
           )
         )
       ),
-      _react2['default'].createElement('audio', { id: 'player', src: this.state.currentSongUrl })
+      _react2['default'].createElement('audio', { id: 'player', src: this.state.currentSongUrl, onEnded: this.trackStopHandler, onTimeUpdate: this.seekElemHandler })
     );
   },
   componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
-    console.log('prev', prevProps);
-    console.log('prevState', prevState);
     if (prevState.currentSongUrl !== this.state.currentSongUrl) {
       this.audioPlayerHandler('play');
     }
+  },
+  trackStopHandler: function trackStopHandler() {
+    this.setState({ isPlaying: false });
+  },
+  seekElemHandler: function seekElemHandler(e) {
+    var max = 90;
+    var audioPlayer = document.getElementById('player');
+    var songlengthInSeconds = audioPlayer.seekable.end(0);
+    var secondsPlayed = audioPlayer.currentTime;
+    var percentageOfSongElapsed = secondsPlayed / songlengthInSeconds;
+    var mappedWidth = max * percentageOfSongElapsed;
+    var width = mappedWidth + 'vw';
+    this.setState({
+      seekElemStyle: {
+        width: width
+      }
+    });
+  },
+  getXPosition: function getXPosition(el) {
+    return el.clientX - el.target.offsetLeft;
+  },
+  seekClickHandler: function seekClickHandler(e) {
+    var audioPlayer = document.getElementById('player');
+    var titleElem = document.getElementById('titleElem');
+    var titleElemWidth = titleElem.offsetWidth;
+    var xPosition = this.getXPosition(e);
+    var xPositionPercentage = xPosition / titleElemWidth;
+    //need to check with out of bounds error
+    var songlengthInSeconds = audioPlayer.seekable.end(0);
+    console.log('xposition', xPosition);
+    console.log('width', titleElemWidth);
+    audioPlayer.currentTime = xPositionPercentage * songlengthInSeconds;
   }
 });
 
@@ -315,6 +345,8 @@ var _radium2 = _interopRequireDefault(_radium);
 
 var RadiumLink = (0, _radium2['default'])(_reactRouter.Link);
 
+var romanNums = ['I', 'II', 'III', 'IV', 'V', 'VI'];
+
 var EpisodeList = _react2['default'].createClass({
   displayName: 'EpisodeList',
 
@@ -329,7 +361,7 @@ var EpisodeList = _react2['default'].createClass({
         _react2['default'].createElement(
           'span',
           { className: 'episodeListItem ' + classStr },
-          index + 1 + '. ' + episode.title
+          romanNums[index] + '. ' + episode.title
         )
       );
     });
@@ -413,7 +445,7 @@ var Header = _react2['default'].createClass({
         return _react2['default'].createElement(
             'div',
             { id: 'headerImageContainer' },
-            _react2['default'].createElement('img', { id: 'headerimg', src: '/img/LazerEyesLogoV3-square.gif' })
+            _react2['default'].createElement('img', { id: 'headerimg', src: '/img/LazerEyesLogo-header.gif' })
         );
     }
 });
@@ -553,16 +585,12 @@ var SideMenu = _react2['default'].createClass({
     var isMenuOpen = this.props.isMenuOpen;
     var that = this;
     var renderedEpisodes = this.renderedEpisodes();
-    // if(this.isServer()){
-    //   var obj = reqObj;
-    //   console.log('is server obj', obj);
-    // }
     return _react2['default'].createElement(
       'div',
       null,
       _react2['default'].createElement(
         Menu,
-        { isOpen: this.state.isOpen, customBurgerIcon: _react2['default'].createElement('img', { src: '/img/rsz_lazereyeslogo-menu-button.gif' }), width: '50vw', pageWrapId: "app" },
+        { isOpen: this.state.isOpen, customBurgerIcon: _react2['default'].createElement('img', { src: '/img/LazerEyesLogo-trans.gif' }), width: '50vw', pageWrapId: "app" },
         _react2['default'].createElement(
           'div',
           { className: 'sideMenuItems' },
@@ -706,7 +734,7 @@ var menu = {
         episodesMeta: {
             episodeName: {
                 title: 'Genesis',
-                number: 1,
+                number: 'I',
                 path: '/episodes/Genesis'
             },
             songs: [{
