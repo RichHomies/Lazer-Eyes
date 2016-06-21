@@ -103,7 +103,7 @@ var AudioPlayer = React.createClass({
     this.setState({isPlaying: false});
   },
   seekElemHandler : function(e){
-    var max = 75;
+    var max = 90;
     var audioPlayer = document.getElementById('player');
     var songlengthInSeconds = audioPlayer.seekable.end(0);
     var secondsPlayed = audioPlayer.currentTime;
