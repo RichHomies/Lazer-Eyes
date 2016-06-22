@@ -1,5 +1,6 @@
 import React from 'react';
-import songs from './songs'
+import meta from './sideMenuJson';
+var songs = meta.episodes[0]['episodesMeta']['songs']
 
 var AudioPlayer = React.createClass({
   getInitialState: function() {
@@ -11,9 +12,28 @@ var AudioPlayer = React.createClass({
     }
   },
   componentWillReceiveProps: function(nextProps) {
-    var songUrl = songs[nextProps["currentSong"]] ? songs[nextProps["currentSong"]]["songPath"] : '';
-    var songTitle = songs[nextProps["currentSong"]]? songs[nextProps["currentSong"]]["songTitle"] : '';
-    var trackNumber = songs[nextProps["currentSong"]]? songs[nextProps["currentSong"]]["trackNumber"] : '';
+    var songUrl,
+        songTitle,
+        trackNumber;
+
+    var counter = 0
+    var max = songs.length - 1
+    var flag = false
+    songs.forEach(function(song, i) {
+      if (nextProps["currentSong"] === song.urlPath) {
+        console.log('yay', song)
+        songUrl = song['songPath']
+        songTitle = song['songTitle']
+        trackNumber = song['number']
+        flag = true
+      }
+      if (flag === false && counter === max) {
+        songUrl = ''
+        songTitle = ''
+        trackNumber = ''
+      }
+
+    })
     var that = this;
     if (songUrl && songTitle && trackNumber) {
       that.setState({currentSongUrl: songUrl, currentSongTitle: songTitle, trackNumber: trackNumber, isPlaying: true})

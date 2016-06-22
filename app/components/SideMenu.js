@@ -2,9 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import Radium from 'radium';
 import meta from './sideMenuJson';
-import songs from './songs';
 
-
+var songs = meta.episodes[0]['episodesMeta']['songs']
 var RadiumLink = Radium(Link);
 var Menu = require('react-burger-menu').push;
 
@@ -55,7 +54,6 @@ var SideMenu = React.createClass({
     });
   },
   renderedEpisode: function(episode){
-    console.log('rendered episode ', episode);
     var episodeFragment = [];
     var count = 0;
     var that = this;
@@ -74,7 +72,7 @@ var SideMenu = React.createClass({
     var playSongHander;
     for(var songModel in songs){
       if(songs[songModel].songTitle === song.songTitle){
-        playSongHander = this.playSong(songModel);
+        playSongHander = this.playSong(songs[songModel]['urlPath']);
         return <div onClick={playSongHander} className='songLink'>{song.number + '. ' + song.songTitle}</div>;
       }
     }

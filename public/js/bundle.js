@@ -39,9 +39,11 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _songs = require('./songs');
+var _sideMenuJson = require('./sideMenuJson');
 
-var _songs2 = _interopRequireDefault(_songs);
+var _sideMenuJson2 = _interopRequireDefault(_sideMenuJson);
+
+var songs = _sideMenuJson2['default'].episodes[0]['episodesMeta']['songs'];
 
 var AudioPlayer = _react2['default'].createClass({
   displayName: 'AudioPlayer',
@@ -55,9 +57,25 @@ var AudioPlayer = _react2['default'].createClass({
     };
   },
   componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-    var songUrl = _songs2['default'][nextProps["currentSong"]] ? _songs2['default'][nextProps["currentSong"]]["songPath"] : '';
-    var songTitle = _songs2['default'][nextProps["currentSong"]] ? _songs2['default'][nextProps["currentSong"]]["songTitle"] : '';
-    var trackNumber = _songs2['default'][nextProps["currentSong"]] ? _songs2['default'][nextProps["currentSong"]]["trackNumber"] : '';
+    var songUrl, songTitle, trackNumber;
+
+    var counter = 0;
+    var max = songs.length - 1;
+    var flag = false;
+    songs.forEach(function (song, i) {
+      if (nextProps["currentSong"] === song.urlPath) {
+        console.log('yay', song);
+        songUrl = song['songPath'];
+        songTitle = song['songTitle'];
+        trackNumber = song['number'];
+        flag = true;
+      }
+      if (flag === false && counter === max) {
+        songUrl = '';
+        songTitle = '';
+        trackNumber = '';
+      }
+    });
     var that = this;
     if (songUrl && songTitle && trackNumber) {
       that.setState({ currentSongUrl: songUrl, currentSongTitle: songTitle, trackNumber: trackNumber, isPlaying: true });
@@ -212,7 +230,7 @@ var AudioPlayer = _react2['default'].createClass({
 exports['default'] = AudioPlayer;
 module.exports = exports['default'];
 
-},{"./songs":11,"react":"react"}],3:[function(require,module,exports){
+},{"./sideMenuJson":11,"react":"react"}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -426,6 +444,39 @@ exports['default'] = Episodes;
 module.exports = exports['default'];
 
 },{"./Episode1":3,"react":"react"}],6:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var Footer = _react2["default"].createClass({
+  displayName: "Footer",
+
+  componentDidMount: function componentDidMount() {},
+  render: function render() {
+    return _react2["default"].createElement(
+      "div",
+      { id: "footer" },
+      "Direct all lazer related inquiries to contact@lazersforeyes.com",
+      _react2["default"].createElement("br", null),
+      _react2["default"].createElement("br", null),
+      "ALL CHARACTERS AND EVENTS IN THIS EPIC -- EVEN THOSE BASED ON REAL PEOPLE -- ARE ENTIRELY FICTIONAL. LAZER EYES CONTAINS COARSE LANGUAGE AND DUE TO ITS ABSURD CONTENT SHOULD NOT BE VIEWED OR LISTENED TO. BY ANYONE."
+    );
+  }
+
+});
+
+exports["default"] = Footer;
+module.exports = exports["default"];
+
+},{"react":"react"}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -453,7 +504,7 @@ var Header = _react2['default'].createClass({
 exports['default'] = Header;
 module.exports = exports['default'];
 
-},{"react":"react"}],7:[function(require,module,exports){
+},{"react":"react"}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -490,6 +541,10 @@ var _episodesMeta = require('./episodesMeta');
 
 var _episodesMeta2 = _interopRequireDefault(_episodesMeta);
 
+var _Footer = require('./Footer');
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
 var Home = _react2['default'].createClass({
   displayName: 'Home',
 
@@ -521,7 +576,8 @@ var Home = _react2['default'].createClass({
         { className: 'audioContainer' },
         _react2['default'].createElement(_AudioPlayer2['default'], { currentSong: this.state.currentSong })
       ),
-      childrenComponents
+      childrenComponents,
+      _react2['default'].createElement(_Footer2['default'], null)
     );
   },
   prepareChildrenComponents: function prepareChildrenComponents() {
@@ -539,7 +595,7 @@ var Home = _react2['default'].createClass({
 exports['default'] = Home;
 module.exports = exports['default'];
 
-},{"./AudioPlayer":2,"./EpisodeList":4,"./Episodes":5,"./Header":6,"./SideMenu":8,"./episodesMeta":9,"react":"react"}],8:[function(require,module,exports){
+},{"./AudioPlayer":2,"./EpisodeList":4,"./Episodes":5,"./Footer":6,"./Header":7,"./SideMenu":9,"./episodesMeta":10,"react":"react"}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -562,10 +618,7 @@ var _sideMenuJson = require('./sideMenuJson');
 
 var _sideMenuJson2 = _interopRequireDefault(_sideMenuJson);
 
-var _songs = require('./songs');
-
-var _songs2 = _interopRequireDefault(_songs);
-
+var songs = _sideMenuJson2['default'].episodes[0]['episodesMeta']['songs'];
 var RadiumLink = (0, _radium2['default'])(_reactRouter.Link);
 var Menu = require('react-burger-menu').push;
 
@@ -644,7 +697,6 @@ var SideMenu = _react2['default'].createClass({
     });
   },
   renderedEpisode: function renderedEpisode(episode) {
-    console.log('rendered episode ', episode);
     var episodeFragment = [];
     var count = 0;
     var that = this;
@@ -665,9 +717,9 @@ var SideMenu = _react2['default'].createClass({
   },
   renderSong: function renderSong(song) {
     var playSongHander;
-    for (var songModel in _songs2['default']) {
-      if (_songs2['default'][songModel].songTitle === song.songTitle) {
-        playSongHander = this.playSong(songModel);
+    for (var songModel in songs) {
+      if (songs[songModel].songTitle === song.songTitle) {
+        playSongHander = this.playSong(songs[songModel]['urlPath']);
         return _react2['default'].createElement(
           'div',
           { onClick: playSongHander, className: 'songLink' },
@@ -690,7 +742,7 @@ var SideMenu = _react2['default'].createClass({
 exports['default'] = SideMenu;
 module.exports = exports['default'];
 
-},{"./sideMenuJson":10,"./songs":11,"radium":95,"react":"react","react-burger-menu":112,"react-router":"react-router"}],9:[function(require,module,exports){
+},{"./sideMenuJson":11,"radium":95,"react":"react","react-burger-menu":112,"react-router":"react-router"}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -710,7 +762,7 @@ var metaData = _sideMenuJson2['default'].episodes.map(function (episode) {
 exports['default'] = metaData;
 module.exports = exports['default'];
 
-},{"./sideMenuJson":10}],10:[function(require,module,exports){
+},{"./sideMenuJson":11}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -740,48 +792,24 @@ var menu = {
             songs: [{
                 songTitle: 'Dream A Dream of Lazers',
                 songPath: '/audio/1. Dream A Dream of Lazers.m4a',
-                number: 1
+                number: 1,
+                urlPath: 'episode1/song1'
             }, {
                 songTitle: 'Down in Appalachia',
                 songPath: '/audio/2.%20Down%20In%20Appalachia.m4a',
-                number: 2
+                number: 2,
+                urlPath: 'episode1/song2'
             }, {
                 songTitle: 'Lazer Eyes (Main Theme)',
                 songPath: '/audio/3. Lazer Eyes Main Theme.m4a',
-                number: 3
+                number: 3,
+                urlPath: 'episode1/song3'
             }]
         }
     }]
 };
 
 exports['default'] = menu;
-module.exports = exports['default'];
-
-},{}],11:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-var songs = {
-  'episode1/song1': {
-    'songPath': "/audio/1. Dream A Dream of Lazers.m4a",
-    'songTitle': "Dream A Dream of Lazers",
-    'trackNumber': 1
-  },
-  'episode1/song2': {
-    "songPath": "/audio/2.%20Down%20In%20Appalachia.m4a",
-    "songTitle": "Down in Appalachia",
-    'trackNumber': 2
-  },
-  'episode1/song3': {
-    "songPath": "/audio/3. Lazer Eyes Main Theme.m4a",
-    "songTitle": "Lazer Eyes (Main Theme)",
-    'trackNumber': 3
-  }
-};
-
-exports['default'] = songs;
 module.exports = exports['default'];
 
 },{}],12:[function(require,module,exports){
@@ -861,7 +889,7 @@ exports['default'] = _react2['default'].createElement(
 );
 module.exports = exports['default'];
 
-},{"./components/App":1,"./components/Episodes":5,"./components/Home":7,"react":"react","react-router":"react-router"}],14:[function(require,module,exports){
+},{"./components/App":1,"./components/Episodes":5,"./components/Home":8,"react":"react","react-router":"react-router"}],14:[function(require,module,exports){
 /*!
  * Bowser - a browser detector
  * https://github.com/ded/bowser
