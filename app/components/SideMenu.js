@@ -25,7 +25,7 @@ var SideMenu = React.createClass({
       <div  >
         <Menu isOpen={this.state.isOpen} customBurgerIcon={ <img src="/img/LazerEyesLogo-trans.gif" /> } width={'50vw'} pageWrapId={ "app" }  >
           <div className='sideMenuItems'>
-            <RadiumLink id="home" className="bm-item-list" to={'/'}><img className='lazerEyesMenuLogo' src="/img/LazerEyesLogoV3-in-menu.gif" /></RadiumLink>
+            <RadiumLink id="home" className="bm-item-list" to={'/'}><img className='lazerEyesMenuLogo' src="/img/LazerEyesLogo-header.gif" /></RadiumLink>
           </div>
           <div className='menuListContainer'>
             <div className='episodesHeader sideMenuItems'>

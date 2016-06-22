@@ -650,7 +650,7 @@ var SideMenu = _react2['default'].createClass({
           _react2['default'].createElement(
             RadiumLink,
             { id: 'home', className: 'bm-item-list', to: '/' },
-            _react2['default'].createElement('img', { className: 'lazerEyesMenuLogo', src: '/img/LazerEyesLogoV3-in-menu.gif' })
+            _react2['default'].createElement('img', { className: 'lazerEyesMenuLogo', src: '/img/LazerEyesLogo-header.gif' })
           )
         ),
         _react2['default'].createElement(
