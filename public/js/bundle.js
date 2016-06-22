@@ -223,12 +223,12 @@ var AudioPlayer = _react2['default'].createClass({
       _react2['default'].createElement(
         'span',
         { className: 'songTitleContainer flexCenterAlign' },
+        _react2['default'].createElement('span', { className: 'seekElem', style: this.state.seekElemStyle }),
         _react2['default'].createElement(
           'span',
           { id: 'titleElem', className: 'titleElem' },
           titleElem
         ),
-        _react2['default'].createElement('span', { className: 'seekElem', style: this.state.seekElemStyle }),
         _react2['default'].createElement(
           'span',
           { className: 'playerElemsContainer' },

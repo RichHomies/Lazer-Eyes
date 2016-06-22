@@ -152,8 +152,8 @@ var AudioPlayer = React.createClass({
           {skipComponent}
         </span>
         <span className='songTitleContainer flexCenterAlign'>
-          <span id='titleElem' className='titleElem'>{titleElem}</span>
           <span className='seekElem' style={this.state.seekElemStyle}></span>
+          <span id='titleElem' className='titleElem'>{titleElem}</span>
           <span className='playerElemsContainer'>
             {playPauseComponent}
             <span className='playerElems' onClick={toggleSoundHandler} ><img className='playerIcons' src={soundOnOff}/></span>
