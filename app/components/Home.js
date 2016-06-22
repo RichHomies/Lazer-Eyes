@@ -5,6 +5,7 @@ import AudioPlayer from './AudioPlayer'
 import SideMenu from './SideMenu';
 import EpisodeList from './EpisodeList';
 import episodes from './episodesMeta';
+import Footer from './Footer';
 
 
 
@@ -35,6 +36,7 @@ var Home = React.createClass({
           <AudioPlayer currentSong={this.state.currentSong}/>
         </div>
         {childrenComponents}
+        <Footer />
       </div>
     );
   },
