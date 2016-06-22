@@ -14,8 +14,10 @@ var EpisodeList = React.createClass({
       return <RadiumLink key={index} to={episode.path.toLowerCase()}><span className={'episodeListItem ' + classStr}>{romanNums[index] + '. ' + episode.title}</span></RadiumLink>
     });
     return (
-      <div className='episodeListContainer'>
-          {episodeListComponents}
+      <div>
+        <div className='episodeListContainer'>
+            {episodeListComponents}
+        </div>
       </div>
     );
   }
