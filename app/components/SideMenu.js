@@ -32,7 +32,7 @@ var SideMenu = React.createClass({
               <RadiumLink onClick={this.isMenuOpen} to={'https://lazer-gift-shop.myshopify.com/'}>GIFT SHOP</RadiumLink>
             </div>
             <div className='episodesHeader sideMenuItems'>
-              <RadiumLink onClick={this.isMenuOpen} to={'/GiftShop'}>CREDIT</RadiumLink>
+              <RadiumLink onClick={this.isMenuOpen} to={'#footer'}>CREDITS</RadiumLink>
             </div>
             <div className='episodesHeader sideMenuItems'>EPISODES</div>
             <div className='sideMenuItems'>

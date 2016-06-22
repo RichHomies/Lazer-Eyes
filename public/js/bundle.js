@@ -99,6 +99,46 @@ var AudioPlayer = _react2['default'].createClass({
         break;
       case 'sound':
         audioPlayer.muted = !!!audioPlayer.muted;
+      case 'rewind':
+        //should start the song over if at least a couple of seconds in
+        if (audioPlayer.currentTime >= 5.0) {
+          audioPlayer.pause();
+          audioPlayer.currentTime = 0;
+          audioPlayer.play();
+        } else {
+          var currentTrackNum = parseInt(this.state.trackNumber);
+          var previousTrackNum = currentTrackNum - 1;
+          if (currentTrackNum === 1) {
+            audioPlayer.currentTime = 0;
+          } else {
+            var that = this;
+            console.log(songs);
+            songs.forEach(function (song, i) {
+              if (song.number === previousTrackNum) {
+                that.setState({ currentSongUrl: song.songPath, currentSongTitle: song.songTitle, trackNumber: previousTrackNum.toString() });
+              }
+            });
+          }
+        }
+        break;
+      //if not, change state to previous songs
+      //if first song, just rewind it
+      case 'skip':
+        //should go to next song
+        var currentTrackNum = parseInt(this.state.trackNumber);
+        if (currentTrackNum === songs.length) {
+          audioPlayer.stop();
+        } else {
+          var nextTrackNum = currentTrackNum + 1;
+          var that = this;
+          songs.forEach(function (song, i) {
+            if (song.number === nextTrackNum) {
+              that.setState({ currentSongUrl: song.songPath, currentSongTitle: song.songTitle, trackNumber: nextTrackNum.toString() });
+            }
+          });
+        }
+
+      //if last song, stop playing
       default:
         that.setState({ muted: audioPlayer.muted });
         break;
@@ -127,6 +167,9 @@ var AudioPlayer = _react2['default'].createClass({
     var pauseHandler = this.audioPlayerHandler.bind(this, 'pause');
     var stopHandler = this.audioPlayerHandler.bind(this, 'stop');
     var toggleSoundHandler = this.audioPlayerHandler.bind(this, 'sound');
+    var rewindHandler = this.audioPlayerHandler.bind(this, 'rewind');
+    var skipHandler = this.audioPlayerHandler.bind(this, 'skip');
+
     var pauseComponent = _react2['default'].createElement(
       'span',
       { className: 'playerElems', onClick: pauseHandler },
@@ -137,8 +180,18 @@ var AudioPlayer = _react2['default'].createClass({
       { className: 'playerElems', onClick: playHandler },
       _react2['default'].createElement('img', { className: 'playerIcons', src: "/icons/play.png" })
     );
+    var rewindComponent = _react2['default'].createElement(
+      'span',
+      { className: 'playerElems', onClick: rewindHandler },
+      _react2['default'].createElement('img', { className: 'playerIcons rewindIcon', src: "/icons/previous.png" })
+    );
+    var skipComponent = _react2['default'].createElement(
+      'span',
+      { className: 'playerElems', onClick: skipHandler },
+      _react2['default'].createElement('img', { className: 'playerIcons skipIcon', src: "/icons/next.png" })
+    );
 
-    if (this.state.currentSongUrl) {
+    if (this.state.trackNumber) {
       var isPlaying = this.state.isPlaying;
       var playPauseComponent = isPlaying ? pauseComponent : playComponent;
       var title = this.state.currentSongTitle;
@@ -163,7 +216,9 @@ var AudioPlayer = _react2['default'].createClass({
       _react2['default'].createElement(
         'span',
         { className: 'songTrackNumberContainer flexCenterAlign' },
-        trackNumberElem
+        rewindComponent,
+        trackNumberElem,
+        skipComponent
       ),
       _react2['default'].createElement(
         'span',
@@ -385,8 +440,12 @@ var EpisodeList = _react2['default'].createClass({
     });
     return _react2['default'].createElement(
       'div',
-      { className: 'episodeListContainer' },
-      episodeListComponents
+      null,
+      _react2['default'].createElement(
+        'div',
+        { className: 'episodeListContainer' },
+        episodeListComponents
+      )
     );
   }
 });
@@ -466,6 +525,11 @@ var Footer = _react2["default"].createClass({
       { id: "footer" },
       "Direct all lazer related inquiries to contact@lazersforeyes.com",
       _react2["default"].createElement("br", null),
+      _react2["default"].createElement("br", null),
+      _react2["default"].createElement("i", { className: "fa fa-facebook socialMediaIcons", "aria-hidden": "true" }),
+      _react2["default"].createElement("i", { className: "fa fa-twitter socialMediaIcons", "aria-hidden": "true" }),
+      _react2["default"].createElement("i", { className: "fa fa-soundcloud socialMediaIcons", "aria-hidden": "true" }),
+      _react2["default"].createElement("i", { className: "fa fa-instagram socialMediaIcons", "aria-hidden": "true" }),
       _react2["default"].createElement("br", null),
       "ALL CHARACTERS AND EVENTS IN THIS EPIC -- EVEN THOSE BASED ON REAL PEOPLE -- ARE ENTIRELY FICTIONAL. LAZER EYES CONTAINS COARSE LANGUAGE AND DUE TO ITS ABSURD CONTENT SHOULD NOT BE VIEWED OR LISTENED TO. BY ANYONE."
     );
@@ -670,8 +734,8 @@ var SideMenu = _react2['default'].createClass({
             { className: 'episodesHeader sideMenuItems' },
             _react2['default'].createElement(
               RadiumLink,
-              { onClick: this.isMenuOpen, to: '/GiftShop' },
-              'CREDIT'
+              { onClick: this.isMenuOpen, to: '#footer' },
+              'CREDITS'
             )
           ),
           _react2['default'].createElement(
