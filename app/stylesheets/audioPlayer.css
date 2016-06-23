@@ -129,5 +129,13 @@
   .songtitle {
     font-size: medium;
   }
+  .playerElems{
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  .songTrackNumber {
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
 
 }
