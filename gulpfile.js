@@ -12,16 +12,16 @@ var babelify = require('babelify');
 var browserify = require('browserify');
 var watchify = require('watchify');
 var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
+
 
 var production = process.env.NODE_ENV === 'production';
 
 var dependencies = [
-  'alt',
-  'react',
-  'react-dom',
-  'react-router',
-  'underscore'
+    'alt',
+    'react',
+    'react-dom',
+    'react-router',
+    'underscore'
 ];
 
 /*
@@ -30,13 +30,15 @@ var dependencies = [
  |--------------------------------------------------------------------------
  */
 gulp.task('vendor', function() {
-  return gulp.src([
-    'bower_components/jquery/dist/jquery.js',
-    'bower_components/bootstrap/dist/js/bootstrap.js',
-    'bower_components/sidr/dist/jquery.sidr.min.js'
-  ]).pipe(concat('vendor.js'))
-    .pipe(gulpif(production, uglify({ mangle: false })))
-    .pipe(gulp.dest('public/js'));
+    return gulp.src([
+            'bower_components/jquery/dist/jquery.js',
+            'bower_components/bootstrap/dist/js/bootstrap.js',
+            'bower_components/sidr/dist/jquery.sidr.min.js'
+        ]).pipe(concat('vendor.js'))
+        .pipe(gulpif(production, uglify({
+            mangle: false
+        })))
+        .pipe(gulp.dest('public/js'));
 });
 
 /*
@@ -45,12 +47,14 @@ gulp.task('vendor', function() {
  |--------------------------------------------------------------------------
  */
 gulp.task('browserify-vendor', function() {
-  return browserify()
-    .require(dependencies)
-    .bundle()
-    .pipe(source('vendor.bundle.js'))
-    .pipe(gulpif(production, streamify(uglify({ mangle: false }))))
-    .pipe(gulp.dest('public/js'));
+    return browserify()
+        .require(dependencies)
+        .bundle()
+        .pipe(source('vendor.bundle.js'))
+        .pipe(gulpif(production, streamify(uglify({
+            mangle: false
+        }))))
+        .pipe(gulp.dest('public/js'));
 });
 
 /*
@@ -59,13 +63,15 @@ gulp.task('browserify-vendor', function() {
  |--------------------------------------------------------------------------
  */
 gulp.task('browserify', ['browserify-vendor'], function() {
-  return browserify('app/main.js')
-    .external(dependencies)
-    .transform(babelify)
-    .bundle()
-    .pipe(source('bundle.js'))
-    .pipe(gulpif(production, streamify(uglify({ mangle: false }))))
-    .pipe(gulp.dest('public/js'));
+    return browserify('app/main.js')
+        .external(dependencies)
+        .transform(babelify)
+        .bundle()
+        .pipe(source('bundle.js'))
+        .pipe(gulpif(production, streamify(uglify({
+            mangle: false
+        }))))
+        .pipe(gulp.dest('public/js'));
 });
 
 /*
@@ -74,43 +80,38 @@ gulp.task('browserify', ['browserify-vendor'], function() {
  |--------------------------------------------------------------------------
  */
 gulp.task('browserify-watch', ['browserify-vendor'], function() {
-  var bundler = watchify(browserify('app/main.js', watchify.args));
-  bundler.external(dependencies);
-  bundler.transform(babelify);
-  bundler.on('update', rebundle);
-  return rebundle();
+    var bundler = watchify(browserify('app/main.js', watchify.args));
+    bundler.external(dependencies);
+    bundler.transform(babelify);
+    bundler.on('update', rebundle);
+    return rebundle();
 
-  function rebundle() {
-    var start = Date.now();
-    return bundler.bundle()
-      .on('error', function(err) {
-        gutil.log(gutil.colors.red(err.toString()));
-      })
-      .on('end', function() {
-        gutil.log(gutil.colors.green('Finished rebundling in', (Date.now() - start) + 'ms.'));
-      })
-      .pipe(source('bundle.js'))
-      .pipe(gulp.dest('public/js/'));
-  }
+    function rebundle() {
+        var start = Date.now();
+        return bundler.bundle()
+            .on('error', function(err) {
+                gutil.log(gutil.colors.red(err.toString()));
+            })
+            .on('end', function() {
+                gutil.log(gutil.colors.green('Finished rebundling in', (Date.now() - start) + 'ms.'));
+            })
+            .pipe(source('bundle.js'))
+            .pipe(gulp.dest('public/js/'));
+    }
 });
 
 gulp.task('styles', function() {
-  return gulp.src('app/stylesheets/*.css')
-    .pipe(plumber())
-    .pipe(gulpif(production, cssmin()))
-    .pipe(concat('styles.min.css'))
-    .pipe(gulp.dest('public/css'));
+    return gulp.src('app/stylesheets/*.css')
+        .pipe(plumber())
+        .pipe(gulpif(production, cssmin()))
+        .pipe(concat('styles.min.css'))
+        .pipe(gulp.dest('public/css'));
 });
 
 gulp.task('watch', function() {
-  gulp.watch('app/stylesheets/*.css', ['styles']);
+    gulp.watch('app/stylesheets/*.css', ['styles']);
 });
 
-gulp.task('compress', function() {
-    gulp.src('public/img/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('public/images'))
-});
 
 gulp.task('default', ['styles', 'vendor', 'browserify-watch', 'watch']);
 gulp.task('build', ['styles', 'vendor', 'browserify']);
