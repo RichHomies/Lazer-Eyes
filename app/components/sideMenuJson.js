@@ -30,7 +30,7 @@ var menu = {
                 number: 2,
                 urlPath: 'episode1/song2'
             }, {
-                songTitle: 'Lazer Eyes (Main Theme)',
+                songTitle: 'Lazer Eyes',
                 songPath: '/audio/3. Lazer Eyes Main Theme.m4a',
                 number: 3,
                 urlPath: 'episode1/song3'
