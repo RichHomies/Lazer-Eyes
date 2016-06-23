@@ -57,6 +57,7 @@ var AudioPlayer = React.createClass({
         break;
       case 'sound':
         audioPlayer.muted = !!!audioPlayer.muted;
+        break;
       case 'rewind':
         //should start the song over if at least a couple of seconds in
         if (audioPlayer.currentTime >= 5.0) {
