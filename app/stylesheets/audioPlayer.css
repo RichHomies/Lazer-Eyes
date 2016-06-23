@@ -107,8 +107,8 @@
 
 .playerElems{
   color: #ffffff;
-  margin-left: 1vw;
-  margin-right: 1vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 
 .playerIcons {
@@ -130,12 +130,15 @@
     font-size: medium;
   }
   .playerElems{
-    margin-left: 2vw;
-    margin-right: 2vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
   }
   .songTrackNumber {
     margin-left: 2vw;
     margin-right: 2vw;
+  }
+  .playerIcons {
+    height: 4vh;
   }
 
 }
