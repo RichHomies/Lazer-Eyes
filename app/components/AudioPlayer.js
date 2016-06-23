@@ -57,7 +57,47 @@ var AudioPlayer = React.createClass({
         break;
       case 'sound':
         audioPlayer.muted = !!!audioPlayer.muted;
-      default:
+      case 'rewind':
+        //should start the song over if at least a couple of seconds in
+        if (audioPlayer.currentTime >= 5.0) {
+          audioPlayer.pause()
+          audioPlayer.currentTime = 0;
+          audioPlayer.play()
+        } else {
+          var currentTrackNum = parseInt(this.state.trackNumber);
+          var previousTrackNum = currentTrackNum - 1;
+          if (currentTrackNum === 1) {
+            audioPlayer.currentTime = 0;
+          } else {
+            var that = this
+            console.log(songs)
+            songs.forEach(function(song, i) {
+              if (song.number === previousTrackNum) {
+                that.setState({currentSongUrl: song.songPath, currentSongTitle: song.songTitle, trackNumber: previousTrackNum.toString()});
+              }
+            })
+          }
+        }
+        break;
+        //if not, change state to previous songs
+        //if first song, just rewind it
+      case 'skip':
+        //should go to next song
+        var currentTrackNum = parseInt(this.state.trackNumber);
+        if (currentTrackNum === songs.length) {
+          audioPlayer.stop();
+        } else {
+          var nextTrackNum = currentTrackNum + 1
+          var that = this
+          songs.forEach(function(song, i) {
+            if (song.number === nextTrackNum) {
+              that.setState({currentSongUrl: song.songPath, currentSongTitle: song.songTitle, trackNumber: nextTrackNum.toString()});
+            }
+          })
+        }
+
+        //if last song, stop playing
+        default:
         that.setState({muted: audioPlayer.muted});
         break;
     }
@@ -85,10 +125,15 @@ var AudioPlayer = React.createClass({
     var pauseHandler = this.audioPlayerHandler.bind(this, 'pause');
     var stopHandler = this.audioPlayerHandler.bind(this, 'stop');
     var toggleSoundHandler = this.audioPlayerHandler.bind(this, 'sound');
+    var rewindHandler = this.audioPlayerHandler.bind(this, 'rewind');
+    var skipHandler = this.audioPlayerHandler.bind(this, 'skip');
+
     var pauseComponent = <span className='playerElems' onClick={pauseHandler}><img className='playerIcons' src={"/icons/pause.png"}/></span>;
     var playComponent = <span className='playerElems' onClick={playHandler}><img className='playerIcons' src={"/icons/play.png"}/></span>;
+    var rewindComponent = <span className='playerElems' onClick={rewindHandler}><img className='playerIcons rewindIcon' src={"/icons/previous.png"}/></span>;
+    var skipComponent = <span className='playerElems' onClick={skipHandler}><img className='playerIcons skipIcon' src={"/icons/next.png"}/></span>;
 
-    if(this.state.currentSongUrl){
+    if(this.state.trackNumber){
       var isPlaying = this.state.isPlaying;
       var playPauseComponent = isPlaying ? pauseComponent : playComponent;
       var title = this.state.currentSongTitle;
@@ -101,10 +146,14 @@ var AudioPlayer = React.createClass({
 
     return (
       <div id={idString}>
-        <span className='songTrackNumberContainer flexCenterAlign'>{trackNumberElem}</span>
+        <span className='songTrackNumberContainer flexCenterAlign'>
+          {rewindComponent}
+          {trackNumberElem}
+          {skipComponent}
+        </span>
         <span className='songTitleContainer flexCenterAlign'>
-          <span id='titleElem' className='titleElem'>{titleElem}</span>
           <span className='seekElem' style={this.state.seekElemStyle}></span>
+          <span id='titleElem' className='titleElem'>{titleElem}</span>
           <span className='playerElemsContainer'>
             {playPauseComponent}
             <span className='playerElems' onClick={toggleSoundHandler} ><img className='playerIcons' src={soundOnOff}/></span>
