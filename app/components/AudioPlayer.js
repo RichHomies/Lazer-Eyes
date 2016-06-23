@@ -131,8 +131,8 @@ var AudioPlayer = React.createClass({
 
     var pauseComponent = <span className='playerElems' onClick={pauseHandler}><img className='playerIcons' src={"/icons/pause.png"}/></span>;
     var playComponent = <span className='playerElems' onClick={playHandler}><img className='playerIcons' src={"/icons/play.png"}/></span>;
-    var rewindComponent = <span className='playerElems' onClick={rewindHandler}><img className='playerIcons rewindIcon' src={"/icons/previous.png"}/></span>;
-    var skipComponent = <span className='playerElems' onClick={skipHandler}><img className='playerIcons skipIcon' src={"/icons/next.png"}/></span>;
+    var rewindComponent = <span className='playerElems' onClick={rewindHandler}><img className='playerIcons' src={"/icons/previous.png"}/></span>;
+    var skipComponent = <span className='playerElems' onClick={skipHandler}><img className='playerIcons' src={"/icons/next.png"}/></span>;
 
     if(this.state.trackNumber){
       var isPlaying = this.state.isPlaying;
@@ -147,13 +147,13 @@ var AudioPlayer = React.createClass({
 
     return (
       <div id={idString}>
-        <span className='songTrackNumberContainer flexCenterAlign'>
-          {rewindComponent}
-          {trackNumberElem}
-          {skipComponent}
-        </span>
-        <span className='songTitleContainer flexCenterAlign'>
+        <span className='audioContainer flexCenterAlign'>
           <span className='seekElem' style={this.state.seekElemStyle}></span>
+          <span className='songTrackNumberContainer'>
+            {rewindComponent}
+            {trackNumberElem}
+            {skipComponent}
+          </span>
           <span id='titleElem' className='titleElem'>{titleElem}</span>
           <span className='playerElemsContainer'>
             {playPauseComponent}

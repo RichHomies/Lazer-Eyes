@@ -29,10 +29,13 @@
 }
 
 .songTrackNumberContainer{
-  background: #2E3192;
-  width: 30vw;
-  height: 100%;
   z-index: 2;
+  margin-left: 5vw;
+  cursor:pointer;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
 }
 
 
@@ -44,10 +47,10 @@
 }
 
 .songTrackNumber{
-  margin: 0 -2vw 1vw 2vw;
   color: #ffffff;
   font-size: 5vh;
-
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 #player {
@@ -56,9 +59,9 @@
   width: 1px;
 }
 
-.songTitleContainer {
+.audioContainer {
   background: #202266;
-  width: 90vw;
+  width: 100%;
   height: 100%;
   z-index: 0;
 }
@@ -94,7 +97,7 @@
 
 .playerElemsContainer{
   cursor:pointer;
-  margin-right: 23vw;
+  margin-right: 5vw;
   display: flex;
   display: -webkit-flex;
   -webkit-flex-direction: row;
@@ -104,19 +107,12 @@
 
 .playerElems{
   color: #ffffff;
-  margin-left: 4vw;
-}
-
-.rewindIcon {
-  margin-left: 3vw;
-}
-
-.skipIcon{
-  margin-right: 3vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 .playerIcons {
-  height: 4vh;
+  height: 5vh;
 }
 
 .circle{
@@ -131,14 +127,9 @@
     height: 10vh;
   }
   .songtitle {
-    font-size: large;
+    font-size: medium;
   }
-  .rewindIcon {
-    margin-left: 0vw;
-  }
-  .seekElem {
-    left: 29vw;
-  }
+
 }
 
 /*!

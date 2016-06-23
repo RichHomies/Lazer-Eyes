@@ -184,12 +184,12 @@ var AudioPlayer = _react2['default'].createClass({
     var rewindComponent = _react2['default'].createElement(
       'span',
       { className: 'playerElems', onClick: rewindHandler },
-      _react2['default'].createElement('img', { className: 'playerIcons rewindIcon', src: "/icons/previous.png" })
+      _react2['default'].createElement('img', { className: 'playerIcons', src: "/icons/previous.png" })
     );
     var skipComponent = _react2['default'].createElement(
       'span',
       { className: 'playerElems', onClick: skipHandler },
-      _react2['default'].createElement('img', { className: 'playerIcons skipIcon', src: "/icons/next.png" })
+      _react2['default'].createElement('img', { className: 'playerIcons', src: "/icons/next.png" })
     );
 
     if (this.state.trackNumber) {
@@ -216,15 +216,15 @@ var AudioPlayer = _react2['default'].createClass({
       { id: idString },
       _react2['default'].createElement(
         'span',
-        { className: 'songTrackNumberContainer flexCenterAlign' },
-        rewindComponent,
-        trackNumberElem,
-        skipComponent
-      ),
-      _react2['default'].createElement(
-        'span',
-        { className: 'songTitleContainer flexCenterAlign' },
+        { className: 'audioContainer flexCenterAlign' },
         _react2['default'].createElement('span', { className: 'seekElem', style: this.state.seekElemStyle }),
+        _react2['default'].createElement(
+          'span',
+          { className: 'songTrackNumberContainer' },
+          rewindComponent,
+          trackNumberElem,
+          skipComponent
+        ),
         _react2['default'].createElement(
           'span',
           { id: 'titleElem', className: 'titleElem' },
