@@ -139,6 +139,7 @@
   .songTrackNumber {
     margin-left: 2vw;
     margin-right: 2vw;
+    font-size: 4vh;
   }
   .playerIcons {
     height: 4vh;

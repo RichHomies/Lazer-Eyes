@@ -139,6 +139,7 @@
   .songTrackNumber {
     margin-left: 2vw;
     margin-right: 2vw;
+    font-size: 4vh;
   }
   .playerIcons {
     height: 4vh;
@@ -2352,6 +2353,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  margin-top: 40vh;
   padding-bottom: 10vh;
 }
 
@@ -2378,7 +2380,11 @@
 #socialMediaIconsContainer a:hover {color: purple;}
 
 
-
+@media screen and (max-width: 515px){
+  #footer {
+    margin-top: 10vh;
+  }
+}
 
 @font-face {
   font-family: 'GT Haptik';
@@ -2522,6 +2528,8 @@ img#headerimg {
 
 #episodesContainer {
   margin-bottom: 5vw;
+  margin-top: 18vw;
+
 }
 
 div.pink{
@@ -2581,6 +2589,7 @@ div.pink{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  position: absolute;
 }
 
 .backgroundPurple {
