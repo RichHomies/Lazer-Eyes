@@ -140,6 +140,8 @@ img#headerimg {
 
 #episodesContainer {
   margin-bottom: 5vw;
+  margin-top: 18vw;
+
 }
 
 div.pink{
@@ -199,6 +201,7 @@ div.pink{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  position: absolute;
 }
 
 .backgroundPurple {
