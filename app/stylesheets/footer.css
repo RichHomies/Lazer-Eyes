@@ -5,7 +5,7 @@
   font-family: 'GT Haptik Medium';
   padding-right: 15vw;
   padding-left: 15vw;
-  padding-top: 5vw;
+  padding-top: 10vw;
   right: 0;
   bottom: 0;
   left: 0;
@@ -14,10 +14,10 @@
 }
 
 .socialMediaIcons {
-  padding: 1rem;
   display: inline-block;
   vertical-align: middle;
   margin: 0 1em;
+  font-size: -webkit-xxx-large;
 }
 
 .centerIcons {
@@ -39,5 +39,8 @@
 @media screen and (max-width: 515px){
   #footer {
     margin-top: 10vh;
+  }
+  .socialMediaIcons {
+    font-size: large;
   }
 }

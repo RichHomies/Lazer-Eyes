@@ -239,7 +239,7 @@ var AudioPlayer = _react2['default'].createClass({
           _react2['default'].createElement(
             'span',
             { className: 'playerElems', onClick: toggleSoundHandler },
-            _react2['default'].createElement('img', { className: 'playerIcons', src: soundOnOff })
+            _react2['default'].createElement('img', { className: 'hiddenIfMobile playerIcons', src: soundOnOff })
           )
         )
       ),
@@ -548,7 +548,11 @@ var Footer = _react2["default"].createClass({
     return _react2["default"].createElement(
       "div",
       { id: "footer" },
-      "Lazer Eyes, an electronic dance opera in 5 parts is presented by Van Broh and the Lazer Men.",
+      _react2["default"].createElement(
+        "em",
+        null,
+        "Lazer Eyes, an electronic dance opera in 5 parts is presented by Van Broh, with web production by the Lazer Team."
+      ),
       _react2["default"].createElement("br", null),
       _react2["default"].createElement("br", null),
       _react2["default"].createElement(
@@ -716,12 +720,6 @@ var RadiumLink = (0, _radium2['default'])(_reactRouter.Link);
 var Menu = require('react-burger-menu').push;
 
 //add later
-// <div className='episodesHeader sideMenuItems'>
-//   <RadiumLink onClick={this.isMenuOpen} to={'https://lazer-gift-shop.myshopify.com/'}>GIFT SHOP</RadiumLink>
-// </div>
-// <div className='episodesHeader sideMenuItems'>
-//   <RadiumLink onClick={this.isMenuOpen} to={'#footer'}>CREDITS</RadiumLink>
-// </div>
 
 var SideMenu = _react2['default'].createClass({
   displayName: 'SideMenu',
@@ -752,6 +750,24 @@ var SideMenu = _react2['default'].createClass({
             RadiumLink,
             { id: 'home', className: 'bm-item-list', to: '/' },
             _react2['default'].createElement('img', { className: 'lazerEyesMenuLogo', src: '/img/LazerEyesLogo-header.gif' })
+          ),
+          _react2['default'].createElement(
+            'div',
+            { className: 'episodesHeader sideMenuItems' },
+            _react2['default'].createElement(
+              RadiumLink,
+              { onClick: this.isMenuOpen, to: 'https://lazer-gift-shop.myshopify.com/' },
+              'GIFT SHOP'
+            )
+          ),
+          _react2['default'].createElement(
+            'div',
+            { className: 'episodesHeader sideMenuItems' },
+            _react2['default'].createElement(
+              RadiumLink,
+              { onClick: this.isMenuOpen, to: '#footer' },
+              'ABOUT'
+            )
           )
         ),
         _react2['default'].createElement(

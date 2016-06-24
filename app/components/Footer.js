@@ -6,7 +6,7 @@ var Footer = React.createClass({
   render: function() {
     return (
       <div id="footer">
-        Lazer Eyes, an electronic dance opera in 5 parts is presented by Van Broh and the Lazer Men.
+        <em>Lazer Eyes, an electronic dance opera in 5 parts is presented by Van Broh, with web production by the Lazer Team.</em>
 
         <br></br>
         <br></br>

@@ -147,5 +147,9 @@
   .nextAndPreviousIcons {
     height: 3vh;
   }
+  .hiddenIfMobile {
+    display: none;
+  }
+
 
 }
