@@ -9,12 +9,7 @@ var Menu = require('react-burger-menu').push;
 
 
 //add later
-// <div className='episodesHeader sideMenuItems'>
-//   <RadiumLink onClick={this.isMenuOpen} to={'https://lazer-gift-shop.myshopify.com/'}>GIFT SHOP</RadiumLink>
-// </div>
-// <div className='episodesHeader sideMenuItems'>
-//   <RadiumLink onClick={this.isMenuOpen} to={'#footer'}>CREDITS</RadiumLink>
-// </div>
+
 
 
 var SideMenu = React.createClass({
@@ -36,6 +31,12 @@ var SideMenu = React.createClass({
         <Menu isOpen={this.state.isOpen} customBurgerIcon={ <img src="/img/LazerEyesLogo-trans.gif" /> } width={'50vw'} pageWrapId={ "app" }  >
           <div className='sideMenuItems'>
             <RadiumLink id="home" className="bm-item-list" to={'/'}><img className='lazerEyesMenuLogo' src="/img/LazerEyesLogo-header.gif" /></RadiumLink>
+            <div className='episodesHeader sideMenuItems'>
+              <RadiumLink onClick={this.isMenuOpen} to={'https://lazer-gift-shop.myshopify.com/'}>GIFT SHOP</RadiumLink>
+            </div>
+            <div className='episodesHeader sideMenuItems'>
+              <RadiumLink onClick={this.isMenuOpen} to={'#footer'}>ABOUT</RadiumLink>
+            </div>
           </div>
           <div className='menuListContainer'>
             <div className='episodesHeader sideMenuItems'>EPISODES</div>
