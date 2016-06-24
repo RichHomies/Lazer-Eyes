@@ -54,7 +54,7 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
 
             the end of V for Vendetta, when all those people are wearing the Guy Fawkes masks, and they all take
 
-            them off, and turns out it’s the people form the retirement home, and the bar, and that dead little girl,
+            them off, and turns out it’s the people from the retirement home, and the bar, and that dead little girl,
 
             and the fat comedian guy, and Natalie Portman is saying "...he was my father. And my mother... my
 
@@ -114,8 +114,9 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
         
             The rocks are of a different hue, and seem to be vibrating ever so
 
-            slightly. Supposing the mysterious material may be valuable, our anonymous excavator lifts up his pic-
-            axe and brings it down forcefully against a nearby stalagmite. The force of the impact reverberates
+            slightly. Supposing the mysterious material may be valuable, our anonymous excavator lifts up his pickaxe
+
+            and brings it down forcefully against a nearby stalagmite. The force of the impact reverberates
 
             through his whole body - it is as if he hears all the sounds that ever were, and sees all the light that ever
 
@@ -136,19 +137,27 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
 
            is replaced with empty bowls and eager eyes, fixed on a single remaining portion of gruel....
 
+           {'\n\n'}
+
            "Hey guys, I was wondering if I could maybe have the last serving of gruel... I had a really hard day in the
 
            mine today, hit some funky rock and I think it messed me up a bit," says our protagonist.
+           {'\n'}
 
            "Pfff," rebukes one of his compatriots, "no, the gruel should be mine, I am clearly the most deserving of
 
            the gruel."
+           {'\n'}
 
            "No," says another, "give ME the gruel!"
+           {'\n'}
 
            "Come on guys, just show a little kindness,"
+           {'\n'}
 
            "NEVER, GRUEL IS ALL I LIVE FOR!"
+
+           {'\n\n'}
 
            Our hero's disappointment quickly gives way to rage. It is as if this final slight adds insult to the injury
 
@@ -161,7 +170,7 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
            from his eyes.
         
         </div>
-        <img src="/img/Track-3.gif" className="episodeImages trackImages" onClick={songThreeHandler}/>
+        <img src="/img/track-3.gif" className="episodeImages trackImages" onClick={songThreeHandler}/>
         <img src='/img/EP-1-image-7-1.gif' className='episodeImages'/>
         <div className="episodeText">
         
@@ -169,18 +178,25 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
 
            stunned companions:
 
+           {"\n\n"}
+
            "You're DIFFERENT!" They say,
+           {'\n'}
 
            "We fear you, you and the awesome power you wield"
+           {'\n'}
 
            "Leave! Leave, and never come back!"
+           {'\n'}
 
            "Get out of here, Lazer Eyes!"
+           {'\n\n'}
 
            Cast away, shunned, he wanders for days, weeks. Quiet whispers of a man named "Lazer Eyes" spread
 
            across the countryside. He no longer has a home, but now he has a name.
         
+           {'\n\n'}
         </div>
         <img src='/img/EP-1-image-8.jpg' className='episodeImages'/>
         <div className="episodeText">
