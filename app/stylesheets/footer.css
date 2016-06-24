@@ -9,9 +9,30 @@
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 3rem;
+  padding-bottom: 10vh;
 }
 
 .socialMediaIcons {
   padding: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 1em;
 }
+
+.centerIcons {
+  display: inline-flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#socialMediaIconsContainer {
+  text-align: center;
+}
+
+#socialMediaIconsContainer a, #socialMediaIconsContainer a:link, #socialMediaIconsContainer a:visited, 
+#socialMediaIconsContainer a:hover {color: white; text-decoration: none !important; border:0;}
+
+#socialMediaIconsContainer a:hover {color: purple;}
+
+
+

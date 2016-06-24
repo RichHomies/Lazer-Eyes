@@ -6,14 +6,16 @@ var Footer = React.createClass({
   render: function() {
     return (
       <div id="footer">
-        Direct all lazer related inquiries to
-        contact@lazersforeyes.com
+        Lazer Eyes, an electronic dance opera in 5 parts is presented by Van Broh and the Lazer Men.
+
         <br></br>
         <br></br>
-        <i className="fa fa-facebook socialMediaIcons" aria-hidden="true"></i>
-        <i className="fa fa-twitter socialMediaIcons" aria-hidden="true"></i>
-        <i className="fa fa-soundcloud socialMediaIcons" aria-hidden="true"></i>
-        <i className="fa fa-instagram socialMediaIcons" aria-hidden="true"></i>
+        <div id="socialMediaIconsContainer">
+          <a className="centerIcons fa fa-facebook socialMediaIcons" href="https://www.facebook.com/lazersforeyes" target="_blank"></a>
+          <a className="centerIcons fa fa-twitter socialMediaIcons" href="https://twitter.com/lazersforeyes" target="_blank"></a>
+          <a className="centerIcons fa fa-soundcloud socialMediaIcons" href="https://soundcloud.com/lazersforeyes" target="_blank"></a>
+          <a className="centerIcons fa fa-instagram socialMediaIcons" href="https://www.instagram.com/lazersforeyes/" target="_blank"></a>
+        </div>
         <br></br>
 
 

@@ -114,7 +114,10 @@
 .playerIcons {
   height: 5vh;
 }
-
+.nextAndPreviousIcons {
+  height: 4vh;
+  margin-top: 1vh;
+}
 .circle{
   border: 1vh solid #333333;
   border-radius: 50%;
@@ -139,6 +142,9 @@
   }
   .playerIcons {
     height: 4vh;
+  }
+  .nextAndPreviousIcons {
+    height: 3vh;
   }
 
 }
@@ -2346,12 +2352,34 @@
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 3rem;
+  padding-bottom: 10vh;
 }
 
 .socialMediaIcons {
   padding: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 1em;
 }
+
+.centerIcons {
+  display: inline-flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#socialMediaIconsContainer {
+  text-align: center;
+}
+
+#socialMediaIconsContainer a, #socialMediaIconsContainer a:link, #socialMediaIconsContainer a:visited, 
+#socialMediaIconsContainer a:hover {color: white; text-decoration: none !important; border:0;}
+
+#socialMediaIconsContainer a:hover {color: purple;}
+
+
+
+
 @font-face {
   font-family: 'GT Haptik';
   src: url('/fonts/GTHaptikMedium.otf');    
@@ -2519,6 +2547,7 @@ div.pink{
   padding: 0 15vw;
   font-size: 4vw;
   margin: 5vh 0;
+  white-space: pre-wrap;
 }
 .episodeListContainer{
 /*  height: 40vh;
@@ -2534,7 +2563,7 @@ div.pink{
 
 .episodeListItem {
   flex-shrink: 0;
-  color: black;
+  color: white;
   font-size: 7vh;
   height: 40vh;
   display: flex;
@@ -2547,8 +2576,11 @@ div.pink{
   white-space: normal;
 }
 
-.backgroundPink {
-  background-color: #F20AC9;
+.genesis {
+  background-image: url('/img/Genesis.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .backgroundPurple {

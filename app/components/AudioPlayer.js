@@ -57,6 +57,7 @@ var AudioPlayer = React.createClass({
         break;
       case 'sound':
         audioPlayer.muted = !!!audioPlayer.muted;
+        that.setState({muted: !that.state.muted});
         break;
       case 'rewind':
         //should start the song over if at least a couple of seconds in
@@ -131,8 +132,8 @@ var AudioPlayer = React.createClass({
 
     var pauseComponent = <span className='playerElems' onClick={pauseHandler}><img className='playerIcons' src={"/icons/pause.png"}/></span>;
     var playComponent = <span className='playerElems' onClick={playHandler}><img className='playerIcons' src={"/icons/play.png"}/></span>;
-    var rewindComponent = <span className='playerElems' onClick={rewindHandler}><img className='playerIcons' src={"/icons/previous.png"}/></span>;
-    var skipComponent = <span className='playerElems' onClick={skipHandler}><img className='playerIcons' src={"/icons/next.png"}/></span>;
+    var rewindComponent = <span className='playerElems' onClick={rewindHandler}><img className='nextAndPreviousIcons' src={"/icons/previous.png"}/></span>;
+    var skipComponent = <span className='playerElems' onClick={skipHandler}><img className='nextAndPreviousIcons' src={"/icons/next.png"}/></span>;
 
     if(this.state.trackNumber){
       var isPlaying = this.state.isPlaying;
@@ -141,6 +142,7 @@ var AudioPlayer = React.createClass({
       var trackNumber = this.state.trackNumber;
       var trackNumberElem = (<span className='songTrackNumber' >{trackNumber}</span>);
       var titleElem = (<span className='songtitle' >{title}</span>);
+      console.log('muted status', this.state.muted)
       var soundOnOff = this.state.muted ? '/icons/sound-off.png' : '/icons/sound.png';
       idString = 'audioPlayer';
     }

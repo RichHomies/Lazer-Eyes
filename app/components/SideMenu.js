@@ -7,6 +7,16 @@ var songs = meta.episodes[0]['episodesMeta']['songs']
 var RadiumLink = Radium(Link);
 var Menu = require('react-burger-menu').push;
 
+
+//add later
+// <div className='episodesHeader sideMenuItems'>
+//   <RadiumLink onClick={this.isMenuOpen} to={'https://lazer-gift-shop.myshopify.com/'}>GIFT SHOP</RadiumLink>
+// </div>
+// <div className='episodesHeader sideMenuItems'>
+//   <RadiumLink onClick={this.isMenuOpen} to={'#footer'}>CREDITS</RadiumLink>
+// </div>
+
+
 var SideMenu = React.createClass({
   getInitialState : function(){
     return {
@@ -28,12 +38,6 @@ var SideMenu = React.createClass({
             <RadiumLink id="home" className="bm-item-list" to={'/'}><img className='lazerEyesMenuLogo' src="/img/LazerEyesLogo-header.gif" /></RadiumLink>
           </div>
           <div className='menuListContainer'>
-            <div className='episodesHeader sideMenuItems'>
-              <RadiumLink onClick={this.isMenuOpen} to={'https://lazer-gift-shop.myshopify.com/'}>GIFT SHOP</RadiumLink>
-            </div>
-            <div className='episodesHeader sideMenuItems'>
-              <RadiumLink onClick={this.isMenuOpen} to={'#footer'}>CREDITS</RadiumLink>
-            </div>
             <div className='episodesHeader sideMenuItems'>EPISODES</div>
             <div className='sideMenuItems'>
               {renderedEpisodes}
