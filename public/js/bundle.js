@@ -783,6 +783,19 @@ var SideMenu = _react2['default'].createClass({
             { className: 'sideMenuItems' },
             renderedEpisodes
           )
+        ),
+        _react2['default'].createElement(
+          'div',
+          { className: 'sideMenuItems' },
+          _react2['default'].createElement(
+            'div',
+            { className: 'episodesHeader sideMenuItems' },
+            _react2['default'].createElement(
+              RadiumLink,
+              { onClick: this.isMenuOpen, to: '#socialMediaIconsContainer' },
+              'SOCIAL'
+            )
+          )
         )
       )
     );
