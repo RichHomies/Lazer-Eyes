@@ -155,6 +155,11 @@ div.pink{
 
 .episodeImages {
   width: 100vw;
+
+}
+
+.extraTopPadding {
+  padding-top: 10vh;
 }
 
 #headerImageContainer {
