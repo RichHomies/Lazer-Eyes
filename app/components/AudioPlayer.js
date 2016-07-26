@@ -57,6 +57,8 @@ var AudioPlayer = React.createClass({
         break;
       case 'sound':
         audioPlayer.muted = !!!audioPlayer.muted;
+        that.setState({muted: !that.state.muted});
+        break;
       case 'rewind':
         //should start the song over if at least a couple of seconds in
         if (audioPlayer.currentTime >= 5.0) {
@@ -129,8 +131,8 @@ var AudioPlayer = React.createClass({
 
     var pauseComponent = <span className='playerElems' onClick={pauseHandler}><img className='playerIcons' src={"/icons/pause.png"}/></span>;
     var playComponent = <span className='playerElems' onClick={playHandler}><img className='playerIcons' src={"/icons/play.png"}/></span>;
-    var rewindComponent = <span className='playerElems' onClick={rewindHandler}><img className='playerIcons rewindIcon' src={"/icons/previous.png"}/></span>;
-    var skipComponent = <span className='playerElems' onClick={skipHandler}><img className='playerIcons skipIcon' src={"/icons/next.png"}/></span>;
+    var rewindComponent = <span className='playerElems' onClick={rewindHandler}><img className='nextAndPreviousIcons' src={"/icons/previous.png"}/></span>;
+    var skipComponent = <span className='playerElems' onClick={skipHandler}><img className='nextAndPreviousIcons' src={"/icons/next.png"}/></span>;
 
     if(this.state.trackNumber){
       var isPlaying = this.state.isPlaying;
@@ -139,22 +141,28 @@ var AudioPlayer = React.createClass({
       var trackNumber = this.state.trackNumber;
       var trackNumberElem = (<span className='songTrackNumber' >{trackNumber}</span>);
       var titleElem = (<span className='songtitle' >{title}</span>);
+      console.log('muted status', this.state.muted)
       var soundOnOff = this.state.muted ? '/icons/sound-off.png' : '/icons/sound.png';
     }
 
     return (
       <div id={'audioPlayer'}>
-        <span className='songTrackNumberContainer flexCenterAlign'>
+        <span className='audioContainer songTrackNumberContainer flexCenterAlign'>
           {rewindComponent}
           {trackNumberElem}
           {skipComponent}
         </span>
         <span className='songTitleContainer flexCenterAlign'>
           <span className='seekElem' style={this.state.seekElemStyle}></span>
+          <span className='songTrackNumberContainer'>
+            {rewindComponent}
+            {trackNumberElem}
+            {skipComponent}
+          </span>
           <span id='titleElem' className='titleElem'>{titleElem}</span>
           <span className='playerElemsContainer'>
             {playPauseComponent}
-            <span className='playerElems' onClick={toggleSoundHandler} ><img className='playerIcons' src={soundOnOff}/></span>
+            <span className='playerElems' onClick={toggleSoundHandler} ><img className='hiddenIfMobile playerIcons' src={soundOnOff}/></span>
           </span>
         </span>
         <audio id='player' src={this.state.currentSongUrl} onEnded={this.trackStopHandler} onTimeUpdate={this.seekElemHandler} ></audio>

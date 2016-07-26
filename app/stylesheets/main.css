@@ -140,6 +140,8 @@ img#headerimg {
 
 #episodesContainer {
   margin-bottom: 5vw;
+  margin-top: 18vw;
+
 }
 
 div.pink{
@@ -165,6 +167,7 @@ div.pink{
   padding: 0 15vw;
   font-size: 4vw;
   margin: 5vh 0;
+  white-space: pre-wrap;
 }
 .episodeListContainer{
 /*  height: 40vh;
@@ -180,7 +183,7 @@ div.pink{
 
 .episodeListItem {
   flex-shrink: 0;
-  color: black;
+  color: white;
   font-size: 7vh;
   height: 40vh;
   display: flex;
@@ -193,8 +196,12 @@ div.pink{
   white-space: normal;
 }
 
-.backgroundPink {
-  background-color: #F20AC9;
+.genesis {
+  background-image: url('/img/Genesis.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: absolute;
 }
 
 .backgroundPurple {

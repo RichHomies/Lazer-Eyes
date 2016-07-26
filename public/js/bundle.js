@@ -99,6 +99,8 @@ var AudioPlayer = _react2['default'].createClass({
         break;
       case 'sound':
         audioPlayer.muted = !!!audioPlayer.muted;
+        that.setState({ muted: !that.state.muted });
+        break;
       case 'rewind':
         //should start the song over if at least a couple of seconds in
         if (audioPlayer.currentTime >= 5.0) {
@@ -183,12 +185,12 @@ var AudioPlayer = _react2['default'].createClass({
     var rewindComponent = _react2['default'].createElement(
       'span',
       { className: 'playerElems', onClick: rewindHandler },
-      _react2['default'].createElement('img', { className: 'playerIcons rewindIcon', src: "/icons/previous.png" })
+      _react2['default'].createElement('img', { className: 'nextAndPreviousIcons', src: "/icons/previous.png" })
     );
     var skipComponent = _react2['default'].createElement(
       'span',
       { className: 'playerElems', onClick: skipHandler },
-      _react2['default'].createElement('img', { className: 'playerIcons skipIcon', src: "/icons/next.png" })
+      _react2['default'].createElement('img', { className: 'nextAndPreviousIcons', src: "/icons/next.png" })
     );
 
     if (this.state.trackNumber) {
@@ -206,6 +208,7 @@ var AudioPlayer = _react2['default'].createClass({
         { className: 'songtitle' },
         title
       );
+      console.log('muted status', this.state.muted);
       var soundOnOff = this.state.muted ? '/icons/sound-off.png' : '/icons/sound.png';
       idString = 'audioPlayer';
     }
@@ -215,15 +218,15 @@ var AudioPlayer = _react2['default'].createClass({
       { id: idString },
       _react2['default'].createElement(
         'span',
-        { className: 'songTrackNumberContainer flexCenterAlign' },
-        rewindComponent,
-        trackNumberElem,
-        skipComponent
-      ),
-      _react2['default'].createElement(
-        'span',
-        { className: 'songTitleContainer flexCenterAlign' },
+        { className: 'audioContainer flexCenterAlign' },
         _react2['default'].createElement('span', { className: 'seekElem', style: this.state.seekElemStyle }),
+        _react2['default'].createElement(
+          'span',
+          { className: 'songTrackNumberContainer' },
+          rewindComponent,
+          trackNumberElem,
+          skipComponent
+        ),
         _react2['default'].createElement(
           'span',
           { id: 'titleElem', className: 'titleElem' },
@@ -236,7 +239,7 @@ var AudioPlayer = _react2['default'].createClass({
           _react2['default'].createElement(
             'span',
             { className: 'playerElems', onClick: toggleSoundHandler },
-            _react2['default'].createElement('img', { className: 'playerIcons', src: soundOnOff })
+            _react2['default'].createElement('img', { className: 'hiddenIfMobile playerIcons', src: soundOnOff })
           )
         )
       ),
@@ -344,7 +347,7 @@ var Episode1 = _react2['default'].createClass({
       _react2['default'].createElement(
         'div',
         { className: 'episodeText' },
-        'Who is he? Whose story is this? This is the story of you. This is the story of me. This is the story of your sister, your brother, your mother and your father, of your friend, and your enemy. It’s like that scene at the end of V for Vendetta, when all those people are wearing the Guy Fawkes masks, and they all take them off, and turns out it’s the people form the retirement home, and the bar, and that dead little girl, and the fat comedian guy, and Natalie Portman is saying "...he was my father. And my mother... my brother... my friend. He was you... and me. He was all of us," It\'s just like that, except not in the past tense, because our hero lives on, always, in our hearts, in our souls, in our words and our actions. Call him Lazer Eyes.'
+        'Who is he? Whose story is this? This is the story of you. This is the story of me. This is the story of your sister, your brother, your mother and your father, of your friend, and your enemy. It’s like that scene at the end of V for Vendetta, when all those people are wearing the Guy Fawkes masks, and they all take them off, and turns out it’s the people from the retirement home, and the bar, and that dead little girl, and the fat comedian guy, and Natalie Portman is saying "...he was my father. And my mother... my brother... my friend. He was you... and me. He was all of us," It\'s just like that, except not in the past tense, because our hero lives on, always, in our hearts, in our souls, in our words and our actions. Call him Lazer Eyes.'
       ),
       _react2['default'].createElement('img', { src: '/img/Track-2.gif', className: 'episodeImages trackImages', onClick: songTwoHandler }),
       _react2['default'].createElement(
@@ -368,21 +371,44 @@ var Episode1 = _react2['default'].createClass({
       _react2['default'].createElement(
         'div',
         { className: 'episodeText' },
-        'The rocks are of a different hue, and seem to be vibrating ever so slightly. Supposing the mysterious material may be valuable, our anonymous excavator lifts up his pic- axe and brings it down forcefully against a nearby stalagmite. The force of the impact reverberates through his whole body - it is as if he hears all the sounds that ever were, and sees all the light that ever was all at once. At the time, he thinks nothing of it, and finishes his shift without any further incident, after all, carcinogen-inhalation-related-hallucinations are a daily occurrence in the mine, but the truth is far from ordinary, for neither he nor the world will ever be the same...'
+        'The rocks are of a different hue, and seem to be vibrating ever so slightly. Supposing the mysterious material may be valuable, our anonymous excavator lifts up his pickaxe and brings it down forcefully against a nearby stalagmite. The force of the impact reverberates through his whole body - it is as if he hears all the sounds that ever were, and sees all the light that ever was all at once. At the time, he thinks nothing of it, and finishes his shift without any further incident, after all, carcinogen-inhalation-related-hallucinations are a daily occurrence in the mine, but the truth is far from ordinary, for neither he nor the world will ever be the same...'
       ),
       _react2['default'].createElement('img', { src: '/img/EP-1-image-5.jpg', className: 'episodeImages' }),
       _react2['default'].createElement('img', { src: '/img/EP-1-image-6.jpg', className: 'episodeImages' }),
       _react2['default'].createElement(
         'div',
         { className: 'episodeText' },
-        'Later that night, the weary miners have returned to the surface just in time to completely miss the sun. Gathered round the fire, they eat their meager meal of flavorless gruel in silence. Before long the silence is replaced with empty bowls and eager eyes, fixed on a single remaining portion of gruel.... "Hey guys, I was wondering if I could maybe have the last serving of gruel... I had a really hard day in the mine today, hit some funky rock and I think it messed me up a bit," says our protagonist. "Pfff," rebukes one of his compatriots, "no, the gruel should be mine, I am clearly the most deserving of the gruel." "No," says another, "give ME the gruel!" "Come on guys, just show a little kindness," "NEVER, GRUEL IS ALL I LIVE FOR!" Our hero\'s disappointment quickly gives way to rage. It is as if this final slight adds insult to the injury that has been his life. Just then he feels a feeling, one he has never felt before, a feeling in his heart going straight to his eyes. Rising to his feet with an instinctive sense of purpose, he lets out a mighty roar, and as it echoes through the Appalachian hills, he looks to the heavens and Lazer beams shoot from his eyes.'
+        'Later that night, the weary miners have returned to the surface just in time to completely miss the sun. Gathered round the fire, they eat their meager meal of flavorless gruel in silence. Before long the silence is replaced with empty bowls and eager eyes, fixed on a single remaining portion of gruel....',
+        '\n\n',
+        '"Hey guys, I was wondering if I could maybe have the last serving of gruel... I had a really hard day in the mine today, hit some funky rock and I think it messed me up a bit," says our protagonist.',
+        '\n',
+        '"Pfff," rebukes one of his compatriots, "no, the gruel should be mine, I am clearly the most deserving of the gruel."',
+        '\n',
+        '"No," says another, "give ME the gruel!"',
+        '\n',
+        '"Come on guys, just show a little kindness,"',
+        '\n',
+        '"NEVER, GRUEL IS ALL I LIVE FOR!"',
+        '\n\n',
+        'Our hero\'s disappointment quickly gives way to rage. It is as if this final slight adds insult to the injury that has been his life. Just then he feels a feeling, one he has never felt before, a feeling in his heart going straight to his eyes. Rising to his feet with an instinctive sense of purpose, he lets out a mighty roar, and as it echoes through the Appalachian hills, he looks to the heavens and Lazer beams shoot from his eyes.'
       ),
-      _react2['default'].createElement('img', { src: '/img/Track-3.gif', className: 'episodeImages trackImages', onClick: songThreeHandler }),
+      _react2['default'].createElement('img', { src: '/img/track-3.gif', className: 'episodeImages trackImages', onClick: songThreeHandler }),
       _react2['default'].createElement('img', { src: '/img/EP-1-image-7-1.gif', className: 'episodeImages' }),
       _react2['default'].createElement(
         'div',
         { className: 'episodeText' },
-        'Elated and exhausted, he lowers his gaze to see expressions of fear and horror on the faces of his stunned companions: "You\'re DIFFERENT!" They say, "We fear you, you and the awesome power you wield" "Leave! Leave, and never come back!" "Get out of here, Lazer Eyes!" Cast away, shunned, he wanders for days, weeks. Quiet whispers of a man named "Lazer Eyes" spread across the countryside. He no longer has a home, but now he has a name.'
+        'Elated and exhausted, he lowers his gaze to see expressions of fear and horror on the faces of his stunned companions:',
+        "\n\n",
+        '"You\'re DIFFERENT!" They say,',
+        '\n',
+        '"We fear you, you and the awesome power you wield"',
+        '\n',
+        '"Leave! Leave, and never come back!"',
+        '\n',
+        '"Get out of here, Lazer Eyes!"',
+        '\n\n',
+        'Cast away, shunned, he wanders for days, weeks. Quiet whispers of a man named "Lazer Eyes" spread across the countryside. He no longer has a home, but now he has a name.',
+        '\n\n'
       ),
       _react2['default'].createElement('img', { src: '/img/EP-1-image-8.jpg', className: 'episodeImages' }),
       _react2['default'].createElement(
@@ -426,8 +452,7 @@ var EpisodeList = _react2['default'].createClass({
   render: function render() {
     var episodes = this.props.list;
     var episodeListComponents = episodes.map(function (episode, index) {
-      console.log('epi', episode);
-      var classStr = index % 2 === 0 ? 'backgroundPink' : 'backgroundPurple';
+      var classStr = index % 2 === 0 ? 'genesis' : 'backgroundPurple';
       return _react2['default'].createElement(
         RadiumLink,
         { key: index, to: episode.path.toLowerCase() },
@@ -523,13 +548,21 @@ var Footer = _react2["default"].createClass({
     return _react2["default"].createElement(
       "div",
       { id: "footer" },
-      "Direct all lazer related inquiries to contact@lazersforeyes.com",
+      _react2["default"].createElement(
+        "em",
+        null,
+        "Lazer Eyes, an electronic dance opera in 5 parts is presented by Van Broh, with web production by the Lazer Team."
+      ),
       _react2["default"].createElement("br", null),
       _react2["default"].createElement("br", null),
-      _react2["default"].createElement("i", { className: "fa fa-facebook socialMediaIcons", "aria-hidden": "true" }),
-      _react2["default"].createElement("i", { className: "fa fa-twitter socialMediaIcons", "aria-hidden": "true" }),
-      _react2["default"].createElement("i", { className: "fa fa-soundcloud socialMediaIcons", "aria-hidden": "true" }),
-      _react2["default"].createElement("i", { className: "fa fa-instagram socialMediaIcons", "aria-hidden": "true" }),
+      _react2["default"].createElement(
+        "div",
+        { id: "socialMediaIconsContainer" },
+        _react2["default"].createElement("a", { className: "centerIcons fa fa-facebook socialMediaIcons", href: "https://www.facebook.com/lazersforeyes", target: "_blank" }),
+        _react2["default"].createElement("a", { className: "centerIcons fa fa-twitter socialMediaIcons", href: "https://twitter.com/lazersforeyes", target: "_blank" }),
+        _react2["default"].createElement("a", { className: "centerIcons fa fa-soundcloud socialMediaIcons", href: "https://soundcloud.com/lazersforeyes", target: "_blank" }),
+        _react2["default"].createElement("a", { className: "centerIcons fa fa-instagram socialMediaIcons", href: "https://www.instagram.com/lazersforeyes/", target: "_blank" })
+      ),
       _react2["default"].createElement("br", null),
       "ALL CHARACTERS AND EVENTS IN THIS EPIC -- EVEN THOSE BASED ON REAL PEOPLE -- ARE ENTIRELY FICTIONAL. LAZER EYES CONTAINS COARSE LANGUAGE AND DUE TO ITS ABSURD CONTENT SHOULD NOT BE VIEWED OR LISTENED TO. BY ANYONE."
     );
@@ -686,6 +719,8 @@ var songs = _sideMenuJson2['default'].episodes[0]['episodesMeta']['songs'];
 var RadiumLink = (0, _radium2['default'])(_reactRouter.Link);
 var Menu = require('react-burger-menu').push;
 
+//add later
+
 var SideMenu = _react2['default'].createClass({
   displayName: 'SideMenu',
 
@@ -715,11 +750,7 @@ var SideMenu = _react2['default'].createClass({
             RadiumLink,
             { id: 'home', className: 'bm-item-list', to: '/' },
             _react2['default'].createElement('img', { className: 'lazerEyesMenuLogo', src: '/img/LazerEyesLogo-header.gif' })
-          )
-        ),
-        _react2['default'].createElement(
-          'div',
-          { className: 'menuListContainer' },
+          ),
           _react2['default'].createElement(
             'div',
             { className: 'episodesHeader sideMenuItems' },
@@ -735,9 +766,13 @@ var SideMenu = _react2['default'].createClass({
             _react2['default'].createElement(
               RadiumLink,
               { onClick: this.isMenuOpen, to: '#footer' },
-              'CREDITS'
+              'ABOUT'
             )
-          ),
+          )
+        ),
+        _react2['default'].createElement(
+          'div',
+          { className: 'menuListContainer' },
           _react2['default'].createElement(
             'div',
             { className: 'episodesHeader sideMenuItems' },
@@ -864,7 +899,7 @@ var menu = {
                 number: 2,
                 urlPath: 'episode1/song2'
             }, {
-                songTitle: 'Lazer Eyes (Main Theme)',
+                songTitle: 'Lazer Eyes',
                 songPath: '/audio/3. Lazer Eyes Main Theme.m4a',
                 number: 3,
                 urlPath: 'episode1/song3'
