@@ -120,7 +120,6 @@ var AudioPlayer = React.createClass({
   },
   render: function() {
     var titleElem = null;
-    var idString = 'hide';
     var playHandler = this.audioPlayerHandler.bind(this, 'play');
     var pauseHandler = this.audioPlayerHandler.bind(this, 'pause');
     var stopHandler = this.audioPlayerHandler.bind(this, 'stop');
@@ -141,11 +140,10 @@ var AudioPlayer = React.createClass({
       var trackNumberElem = (<span className='songTrackNumber' >{trackNumber}</span>);
       var titleElem = (<span className='songtitle' >{title}</span>);
       var soundOnOff = this.state.muted ? '/icons/sound-off.png' : '/icons/sound.png';
-      idString = 'audioPlayer';
     }
 
     return (
-      <div id={idString}>
+      <div id={'audioPlayer'}>
         <span className='songTrackNumberContainer flexCenterAlign'>
           {rewindComponent}
           {trackNumberElem}
