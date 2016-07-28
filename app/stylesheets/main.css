@@ -209,6 +209,10 @@ div.pink{
   position: absolute;
 }
 
+.episodeButton:hover {
+  opacity: .75;
+}
+
 .backgroundPurple {
   background-color: #2E3192;
 }
