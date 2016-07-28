@@ -44,6 +44,13 @@ var SideMenu = React.createClass({
               {renderedEpisodes}
             </div>
           </div>
+          <div className='sideMenuItems'>
+            <div className='episodesHeader sideMenuItems'>
+              <RadiumLink onClick={this.isMenuOpen} to={'#socialMediaIconsContainer'}>SOCIAL</RadiumLink>
+            </div>
+          </div>
+
+
         </Menu>
       </div>
     );
