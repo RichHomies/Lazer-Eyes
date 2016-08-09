@@ -31,7 +31,7 @@ var Episode1 = React.createClass({
         
     return (
       <div name='episode1' id='episode1'>
-        <img src="/img/Track-1.gif" id="scene-1" className="episodeImages trackImages" onClick={songOneHandler}/>
+        <img src="/img/Track-1.gif" id="scene-1" className="episodeImages trackImages extraTopPadding" onClick={songOneHandler}/>
         <div className="episodeText" id="scene-1">
 Sing muse, of the cunning hero, the wanderer, blown off course time and again, before he plundered
 

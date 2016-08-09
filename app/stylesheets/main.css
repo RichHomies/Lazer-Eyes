@@ -155,6 +155,11 @@ div.pink{
 
 .episodeImages {
   width: 100vw;
+
+}
+
+.extraTopPadding {
+  padding-top: 10vh;
 }
 
 #headerImageContainer {
@@ -202,6 +207,10 @@ div.pink{
   background-attachment: fixed;
   background-position: center;
   position: absolute;
+}
+
+.episodeButton:hover {
+  opacity: .75;
 }
 
 .backgroundPurple {

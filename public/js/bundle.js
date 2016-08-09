@@ -337,7 +337,7 @@ var Episode1 = _react2['default'].createClass({
     return _react2['default'].createElement(
       'div',
       { name: 'episode1', id: 'episode1' },
-      _react2['default'].createElement('img', { src: '/img/Track-1.gif', id: 'scene-1', className: 'episodeImages trackImages', onClick: songOneHandler }),
+      _react2['default'].createElement('img', { src: '/img/Track-1.gif', id: 'scene-1', className: 'episodeImages trackImages extraTopPadding', onClick: songOneHandler }),
       _react2['default'].createElement(
         'div',
         { className: 'episodeText', id: 'scene-1' },
@@ -782,6 +782,19 @@ var SideMenu = _react2['default'].createClass({
             'div',
             { className: 'sideMenuItems' },
             renderedEpisodes
+          )
+        ),
+        _react2['default'].createElement(
+          'div',
+          { className: 'sideMenuItems' },
+          _react2['default'].createElement(
+            'div',
+            { className: 'episodesHeader sideMenuItems' },
+            _react2['default'].createElement(
+              RadiumLink,
+              { onClick: this.isMenuOpen, to: '#socialMediaIconsContainer' },
+              'SOCIAL'
+            )
           )
         )
       )
