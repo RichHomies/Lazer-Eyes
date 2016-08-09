@@ -147,12 +147,7 @@ var AudioPlayer = React.createClass({
 
     return (
       <div id={'audioPlayer'}>
-        <span className='audioContainer songTrackNumberContainer flexCenterAlign'>
-          {rewindComponent}
-          {trackNumberElem}
-          {skipComponent}
-        </span>
-        <span className='songTitleContainer flexCenterAlign'>
+        <span className='audioContainer flexCenterAlign'>
           <span className='seekElem' style={this.state.seekElemStyle}></span>
           <span className='songTrackNumberContainer'>
             {rewindComponent}

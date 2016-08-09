@@ -6,8 +6,10 @@ import SideMenu from './SideMenu';
 import EpisodeList from './EpisodeList';
 import episodes from './episodesMeta';
 import Footer from './Footer';
+import createBrowserHistory from 'history/lib/createBrowserHistory';
+let history = createBrowserHistory();
 
-
+var mostRecentEpisode = 'episodes/Genesis';
 
 var Home = React.createClass({
             getInitialState: function() {
@@ -28,6 +30,9 @@ var Home = React.createClass({
                         currentSong: window.location.search
                     })
                 }
+                setTimeout(function() {
+                    history.push(mostRecentEpisode);
+                }, 3000);
             },
             render: function() {
                 var childrenComponents = this.prepareChildrenComponents();
