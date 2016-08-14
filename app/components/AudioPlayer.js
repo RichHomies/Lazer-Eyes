@@ -1,6 +1,6 @@
 import React from 'react';
 import meta from './sideMenuJson';
-var songs = meta.episodes[0]['episodesMeta']['songs']
+var songs = meta.episodes[0]['episodesMeta']['songs'].concat(meta.episodes[1]['episodesMeta']['songs'])
 
 var AudioPlayer = React.createClass({
   getInitialState: function() {
