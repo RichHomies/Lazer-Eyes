@@ -7,7 +7,6 @@ import EpisodeList from './EpisodeList';
 import episodes from './episodesMeta';
 import Footer from './Footer';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
-let history = createBrowserHistory();
 
 var mostRecentEpisode = 'episodes/Genesis';
 
@@ -23,6 +22,9 @@ var Home = React.createClass({
                     currentSong: newSong
                 })
             },
+            isServer: function() {
+             return ! (typeof window != 'undefined' && window.document);
+            },
             componentDidMount: function() {
                 //since the page is loaded, we set the state based on the url params
                 if (window.location.search.length !== 0) {
@@ -30,9 +32,13 @@ var Home = React.createClass({
                         currentSong: window.location.search
                     })
                 }
-                setTimeout(function() {
-                    history.push(mostRecentEpisode);
-                }, 3000);
+                if (this.isServer()) {
+                    setTimeout(function() {
+                        let history = createBrowserHistory();
+                        history.push(mostRecentEpisode);
+                    }, 3000);
+                }
+                
             },
             render: function() {
                 var childrenComponents = this.prepareChildrenComponents();
