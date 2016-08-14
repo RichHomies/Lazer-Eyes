@@ -43,7 +43,7 @@ var _sideMenuJson = require('./sideMenuJson');
 
 var _sideMenuJson2 = _interopRequireDefault(_sideMenuJson);
 
-var songs = _sideMenuJson2['default'].episodes[0]['episodesMeta']['songs'];
+var songs = _sideMenuJson2['default'].episodes[0]['episodesMeta']['songs'].concat(_sideMenuJson2['default'].episodes[1]['episodesMeta']['songs']);
 
 var AudioPlayer = _react2['default'].createClass({
   displayName: 'AudioPlayer',
@@ -325,6 +325,7 @@ var Episode1 = _react2['default'].createClass({
   },
   playSong: function playSong(song) {
     var that = this;
+    console.log('song', song);
     return function () {
       that.props.changeSong(song);
     };
@@ -459,6 +460,7 @@ var Episode2 = _react2['default'].createClass({
     });
   },
   playSong: function playSong(song) {
+    console.log('song', song);
     var that = this;
     return function () {
       that.props.changeSong(song);
