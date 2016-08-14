@@ -288,7 +288,7 @@ var AudioPlayer = _react2['default'].createClass({
 exports['default'] = AudioPlayer;
 module.exports = exports['default'];
 
-},{"./sideMenuJson":11,"react":"react"}],3:[function(require,module,exports){
+},{"./sideMenuJson":12,"react":"react"}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -336,7 +336,7 @@ var Episode1 = _react2['default'].createClass({
 
     return _react2['default'].createElement(
       'div',
-      { name: 'episode1', id: 'episode1' },
+      { name: 'episode2', id: 'episode2' },
       _react2['default'].createElement('img', { src: '/img/Track-1.gif', id: 'scene-1', className: 'episodeImages trackImages extraTopPadding', onClick: songOneHandler }),
       _react2['default'].createElement(
         'div',
@@ -423,7 +423,108 @@ var Episode1 = _react2['default'].createClass({
 exports['default'] = Episode1;
 module.exports = exports['default'];
 
-},{"react":"react","react-scroll":130}],4:[function(require,module,exports){
+},{"react":"react","react-scroll":131}],4:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactScroll = require('react-scroll');
+
+var _reactScroll2 = _interopRequireDefault(_reactScroll);
+
+var scroll = _reactScroll2['default'].animateScroll;
+var Element = _reactScroll2['default'].Element;
+var scroller = _reactScroll2['default'].scroller;
+
+var Episode2 = _react2['default'].createClass({
+  displayName: 'Episode2',
+
+  componentDidMount: function componentDidMount() {
+    var that = this;
+    $(function () {
+
+      scroller.scrollTo('episode2', {
+        duration: 1500,
+        delay: 100,
+        smooth: true
+      });
+    });
+  },
+  playSong: function playSong(song) {
+    var that = this;
+    return function () {
+      that.props.changeSong(song);
+    };
+  },
+  render: function render() {
+    var songOneHandler = this.playSong('episode2/song1');
+    var songTwoHandler = this.playSong('episode2/song2');
+    var songThreeHandler = this.playSong('episode2/song3');
+
+    return _react2['default'].createElement(
+      'div',
+      { name: 'episode2', id: 'episode2' },
+      _react2['default'].createElement('img', { src: '/img/track-4.gif', id: 'scene-1', className: 'episodeImages trackImages extraTopPadding', onClick: songOneHandler }),
+      _react2['default'].createElement(
+        'div',
+        { className: 'episodeText', id: 'scene-1' },
+        'Days turn into weeks, weeks turned into months. Thickly wooded Appalachian hills turn into suburban streets and stripmalls, as Lazer Eyes wanders aimlessly. Yet these fairly predictable transformations are accompanied by another, more perplexing evolution. As the destructive wake he leaves in his path grows ever longer, one might expect the infamy of this yet-to-be-born-again-but-as-of-now-"anti"-hero to grow, from whispers, to shouts, from shouts to mobs and torches and pitchforks, but instead, things begin to change with fewer and fewer people openly displaying their hatred for him (spitting etc.), replaced by a vacant stare and an obsession with all types of devices with any kind of display. As the streets grow quiet Lazer Eyes ventures further into Cityopolis to see what is going on...'
+      ),
+      _react2['default'].createElement('img', { src: '/img/EP2-the-tower.jpg', className: 'episodeImages' }),
+      _react2['default'].createElement(
+        'div',
+        { className: 'episodeText' },
+        'He passes hordes of people crowded around television sets in the windows of shops pushing and shoving each other to get a better view, each murmuring something to the effect of, “like me,” or “don’t I look hot in this.” Lazer Eyes pushes to the front of the crowd and a short oddly dressed man on the screen sitting behind a desk addressing the audience. “I am the Reflektor,” the man on the screen states, “and I’m here to take control.”'
+      ),
+      _react2['default'].createElement('img', { src: '/img/EP2-the-reflektor.jpg', className: 'episodeImages' }),
+      _react2['default'].createElement(
+        'div',
+        { className: 'episodeText' },
+        'Having had enough of being drooled on and being generally unable to make out any more of the video before being overwhelmed by requests from people standing around him to like their profile pictures, Lazer Eyes quits the scene to get to the bottom of these strange events.'
+      ),
+      _react2['default'].createElement('img', { src: '/img/track-5.gif', className: 'episodeImages trackImages', onClick: songTwoHandler }),
+      _react2['default'].createElement(
+        'div',
+        { className: 'episodeText', id: 'scene-2' },
+        'With only one broadcast facility in Cityopolis, Lazer eyes knows exactly where to go: The Tower. As he draws within sight of the main entrance, about a hundred people with varying forms of automatic and semiautomatic weapons dressed in badly fitted storm trooper costumes are marching back and forth in front of the door. Rather than expose his presence, he sneaks into a subway tunnel and enters the building through the station in the sub-sub-sub-basement.',
+        '\n\n',
+        'Lazer Eyes rushes to the elevator bank and spies a map with a legend of all the departments and their locations in the Tower. The Cityopolis TV station is on the second highest floor, below the Tower Radio facility, but the express elevator is busted. He gets on the next Up-going car and off at the highest floor it will take him to. As the doors open on to the grand ballroom, Lazer Eyes sees what looks like a giant bird cage in the middle of the dance floor with the word “chicks” painted elegantly on a sign on the top. There is a quiet sobbing coming from that direction and he rushes to the cage to see if he can help...'
+      ),
+      _react2['default'].createElement('img', { src: '/img/EP2-chicks-cage.jpg', className: 'episodeImages' }),
+      _react2['default'].createElement(
+        'div',
+        { className: 'episodeText' },
+        'Suddenly the feeling of a ravenous pack of man eating butterflies trying to escape from his chest overwhelms his senses and Lazer Eyes feels weak at the knees. Before him sitting quietly in the cage minding her own business is a girl, or rather a woman whom as soon as they make eye contact, Lazer Eyes knows is the one.'
+      ),
+      _react2['default'].createElement('img', { src: '/img/EP2-eyes.jpg', className: 'episodeImages' }),
+      _react2['default'].createElement(
+        'div',
+        { className: 'episodeText' },
+        'He wants her. He wants all of her, forever. Lazer Eyes and the Lazer Babe, every day. She immediately feels this connection as she stares deep into his eyes, but Lazer Eyes looks away. Almost losing control of himself, he can’t make sense of these emotions. Feelings that almost caused him to blast this woman whom he so suddenly loves. Yet as he looks back into her eyes he is disarmed, filled with a sense of inner peace and tranquility.'
+      ),
+      _react2['default'].createElement('img', { src: '/img/EP2-lazer-heart.gif', className: 'episodeImages' }),
+      _react2['default'].createElement('img', { src: '/img/track-6.gif', className: 'episodeImages trackImages', onClick: songThreeHandler }),
+      _react2['default'].createElement(
+        'div',
+        { className: 'episodeText' },
+        'Thus Lazer eyes meets the Lazer Babe, whom after she explains the Reflektor’s evil plans and they bond over their suffering he frees from her cell and they begin to make their escape. Unluckily, the elevator they get on going down, stops at the main floor and before Lazer Eyes can react, one of the disheveled minions hits the alarm and locks the whole building down...'
+      )
+    );
+  }
+});
+
+exports['default'] = Episode2;
+module.exports = exports['default'];
+
+},{"react":"react","react-scroll":131}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -478,7 +579,7 @@ var EpisodeList = _react2['default'].createClass({
 exports['default'] = EpisodeList;
 module.exports = exports['default'];
 
-},{"radium":95,"react":"react","react-router":"react-router"}],5:[function(require,module,exports){
+},{"radium":96,"react":"react","react-router":"react-router"}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -494,6 +595,10 @@ var _react2 = _interopRequireDefault(_react);
 var _Episode1 = require('./Episode1');
 
 var _Episode12 = _interopRequireDefault(_Episode1);
+
+var _Episode2 = require('./Episode2');
+
+var _Episode22 = _interopRequireDefault(_Episode2);
 
 var Episodes = _react2['default'].createClass({
   displayName: 'Episodes',
@@ -515,6 +620,9 @@ var Episodes = _react2['default'].createClass({
       case 'genesis':
         component = _react2['default'].createElement(_Episode12['default'], { currentEpisode: that.props.currentEpisode, changeSong: that.props.changeSong });
         break;
+      case 'crazy-stupid-lazers':
+        component = _react2['default'].createElement(_Episode22['default'], { currentEpisode: that.props.currentEpisode, changeSong: that.props.changeSong });
+        break;
       default:
         component = _react2['default'].createElement('img', { src: '/img/nick-young-confused-face.png' });
         break;
@@ -527,7 +635,7 @@ var Episodes = _react2['default'].createClass({
 exports['default'] = Episodes;
 module.exports = exports['default'];
 
-},{"./Episode1":3,"react":"react"}],6:[function(require,module,exports){
+},{"./Episode1":3,"./Episode2":4,"react":"react"}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -573,7 +681,7 @@ var Footer = _react2["default"].createClass({
 exports["default"] = Footer;
 module.exports = exports["default"];
 
-},{"react":"react"}],7:[function(require,module,exports){
+},{"react":"react"}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -601,7 +709,7 @@ var Header = _react2['default'].createClass({
 exports['default'] = Header;
 module.exports = exports['default'];
 
-},{"react":"react"}],8:[function(require,module,exports){
+},{"react":"react"}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -692,7 +800,7 @@ var Home = _react2['default'].createClass({
 exports['default'] = Home;
 module.exports = exports['default'];
 
-},{"./AudioPlayer":2,"./EpisodeList":4,"./Episodes":5,"./Footer":6,"./Header":7,"./SideMenu":9,"./episodesMeta":10,"react":"react"}],9:[function(require,module,exports){
+},{"./AudioPlayer":2,"./EpisodeList":5,"./Episodes":6,"./Footer":7,"./Header":8,"./SideMenu":10,"./episodesMeta":11,"react":"react"}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -854,7 +962,7 @@ var SideMenu = _react2['default'].createClass({
 exports['default'] = SideMenu;
 module.exports = exports['default'];
 
-},{"./sideMenuJson":11,"radium":95,"react":"react","react-burger-menu":112,"react-router":"react-router"}],10:[function(require,module,exports){
+},{"./sideMenuJson":12,"radium":96,"react":"react","react-burger-menu":113,"react-router":"react-router"}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -874,7 +982,7 @@ var metaData = _sideMenuJson2['default'].episodes.map(function (episode) {
 exports['default'] = metaData;
 module.exports = exports['default'];
 
-},{"./sideMenuJson":11}],11:[function(require,module,exports){
+},{"./sideMenuJson":12}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -953,7 +1061,7 @@ var menu = {
 exports['default'] = menu;
 module.exports = exports['default'];
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 'use strict';
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -992,7 +1100,7 @@ var location = '' + pathname + search + hash;
   ), document.getElementById('app'));
 });
 
-},{"./routes":13,"history/lib/createBrowserHistory":25,"react":"react","react-dom":"react-dom","react-router":"react-router"}],13:[function(require,module,exports){
+},{"./routes":14,"history/lib/createBrowserHistory":26,"react":"react","react-dom":"react-dom","react-router":"react-router"}],14:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -1030,7 +1138,7 @@ exports['default'] = _react2['default'].createElement(
 );
 module.exports = exports['default'];
 
-},{"./components/App":1,"./components/Episodes":5,"./components/Home":8,"react":"react","react-router":"react-router"}],14:[function(require,module,exports){
+},{"./components/App":1,"./components/Episodes":6,"./components/Home":9,"react":"react","react-router":"react-router"}],15:[function(require,module,exports){
 /*!
  * Bowser - a browser detector
  * https://github.com/ded/bowser
@@ -1450,7 +1558,7 @@ module.exports = exports['default'];
   return bowser
 });
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 var pSlice = Array.prototype.slice;
 var objectKeys = require('./lib/keys.js');
 var isArguments = require('./lib/is_arguments.js');
@@ -1546,7 +1654,7 @@ function objEquiv(a, b, opts) {
   return typeof a === typeof b;
 }
 
-},{"./lib/is_arguments.js":16,"./lib/keys.js":17}],16:[function(require,module,exports){
+},{"./lib/is_arguments.js":17,"./lib/keys.js":18}],17:[function(require,module,exports){
 var supportsArgumentsClass = (function(){
   return Object.prototype.toString.call(arguments)
 })() == '[object Arguments]';
@@ -1568,7 +1676,7 @@ function unsupported(object){
     false;
 };
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 exports = module.exports = typeof Object.keys === 'function'
   ? Object.keys : shim;
 
@@ -1579,7 +1687,7 @@ function shim (obj) {
   return keys;
 }
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 // Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -1984,7 +2092,7 @@ function shim (obj) {
     (typeof module != "undefined" && module.exports) ? (module.exports = eve) : (typeof define === "function" && define.amd ? (define("eve", [], function() { return eve; })) : (glob.eve = eve));
 })(this);
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 /*!
   Copyright (c) 2015 Jed Watson.
   Based on code that is Copyright 2013-2015, Facebook, Inc.
@@ -2026,7 +2134,7 @@ function shim (obj) {
 
 }());
 
-},{}],20:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 /**
  * Indicates that navigation was caused by a call to history.push.
  */
@@ -2058,7 +2166,7 @@ exports['default'] = {
   REPLACE: REPLACE,
   POP: POP
 };
-},{}],21:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -2085,7 +2193,7 @@ function loopAsync(turns, work, callback) {
 
   next();
 }
-},{}],22:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 (function (process){
 /*eslint-disable no-empty */
 'use strict';
@@ -2156,7 +2264,7 @@ function readState(key) {
   return null;
 }
 }).call(this,require('_process'))
-},{"_process":65,"warning":141}],23:[function(require,module,exports){
+},{"_process":66,"warning":142}],24:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -2237,13 +2345,13 @@ function supportsGoWithoutReloadUsingHash() {
   var ua = navigator.userAgent;
   return ua.indexOf('Firefox') === -1;
 }
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
 var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 exports.canUseDOM = canUseDOM;
-},{}],25:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -2424,7 +2532,7 @@ function createBrowserHistory() {
 exports['default'] = createBrowserHistory;
 module.exports = exports['default'];
 }).call(this,require('_process'))
-},{"./Actions":20,"./DOMStateStorage":22,"./DOMUtils":23,"./ExecutionEnvironment":24,"./createDOMHistory":26,"./parsePath":31,"_process":65,"invariant":64}],26:[function(require,module,exports){
+},{"./Actions":21,"./DOMStateStorage":23,"./DOMUtils":24,"./ExecutionEnvironment":25,"./createDOMHistory":27,"./parsePath":32,"_process":66,"invariant":65}],27:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -2467,7 +2575,7 @@ function createDOMHistory(options) {
 exports['default'] = createDOMHistory;
 module.exports = exports['default'];
 }).call(this,require('_process'))
-},{"./DOMUtils":23,"./ExecutionEnvironment":24,"./createHistory":27,"_process":65,"invariant":64}],27:[function(require,module,exports){
+},{"./DOMUtils":24,"./ExecutionEnvironment":25,"./createHistory":28,"_process":66,"invariant":65}],28:[function(require,module,exports){
 //import warning from 'warning'
 'use strict';
 
@@ -2759,7 +2867,7 @@ function createHistory() {
 
 exports['default'] = createHistory;
 module.exports = exports['default'];
-},{"./Actions":20,"./AsyncUtils":21,"./createLocation":28,"./deprecate":29,"./parsePath":31,"./runTransitionHook":32,"deep-equal":15}],28:[function(require,module,exports){
+},{"./Actions":21,"./AsyncUtils":22,"./createLocation":29,"./deprecate":30,"./parsePath":32,"./runTransitionHook":33,"deep-equal":16}],29:[function(require,module,exports){
 //import warning from 'warning'
 'use strict';
 
@@ -2814,7 +2922,7 @@ function createLocation() {
 
 exports['default'] = createLocation;
 module.exports = exports['default'];
-},{"./Actions":20,"./parsePath":31}],29:[function(require,module,exports){
+},{"./Actions":21,"./parsePath":32}],30:[function(require,module,exports){
 //import warning from 'warning'
 
 "use strict";
@@ -2830,7 +2938,7 @@ function deprecate(fn) {
 
 exports["default"] = deprecate;
 module.exports = exports["default"];
-},{}],30:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -2844,7 +2952,7 @@ function extractPath(string) {
 
 exports["default"] = extractPath;
 module.exports = exports["default"];
-},{}],31:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -2891,7 +2999,7 @@ function parsePath(path) {
 exports['default'] = parsePath;
 module.exports = exports['default'];
 }).call(this,require('_process'))
-},{"./extractPath":30,"_process":65,"warning":141}],32:[function(require,module,exports){
+},{"./extractPath":31,"_process":66,"warning":142}],33:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -2918,7 +3026,7 @@ function runTransitionHook(hook, location, callback) {
 exports['default'] = runTransitionHook;
 module.exports = exports['default'];
 }).call(this,require('_process'))
-},{"_process":65,"warning":141}],33:[function(require,module,exports){
+},{"_process":66,"warning":142}],34:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -2947,7 +3055,7 @@ function calc(property, value) {
 }
 
 module.exports = exports['default'];
-},{"../utils/isPrefixedValue":46,"../utils/joinPrefixedRules":47}],34:[function(require,module,exports){
+},{"../utils/isPrefixedValue":47,"../utils/joinPrefixedRules":48}],35:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -2975,7 +3083,7 @@ function cursor(property, value) {
 }
 
 module.exports = exports['default'];
-},{"../utils/joinPrefixedRules":47}],35:[function(require,module,exports){
+},{"../utils/joinPrefixedRules":48}],36:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3000,7 +3108,7 @@ function flex(property, value) {
 }
 
 module.exports = exports['default'];
-},{"../utils/camelToDashCase":44}],36:[function(require,module,exports){
+},{"../utils/camelToDashCase":45}],37:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3034,7 +3142,7 @@ function flexboxIE(property, value) {
 }
 
 module.exports = exports['default'];
-},{}],37:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3078,7 +3186,7 @@ function flexboxOld(property, value) {
 }
 
 module.exports = exports['default'];
-},{"../utils/camelToDashCase":44}],38:[function(require,module,exports){
+},{"../utils/camelToDashCase":45}],39:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3107,7 +3215,7 @@ function gradient(property, value) {
 }
 
 module.exports = exports['default'];
-},{"../utils/isPrefixedValue":46,"../utils/joinPrefixedRules":47}],39:[function(require,module,exports){
+},{"../utils/isPrefixedValue":47,"../utils/joinPrefixedRules":48}],40:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3145,7 +3253,7 @@ function sizing(property, value) {
 }
 
 module.exports = exports['default'];
-},{"../utils/joinPrefixedRules":47}],40:[function(require,module,exports){
+},{"../utils/joinPrefixedRules":48}],41:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3228,7 +3336,7 @@ function prefixValue(value) {
   return multipleValues.join(',');
 }
 module.exports = exports['default'];
-},{"../prefixProps":42,"../utils/camelToDashCase":44,"../utils/capitalizeString":45,"../utils/isPrefixedValue":46}],41:[function(require,module,exports){
+},{"../prefixProps":43,"../utils/camelToDashCase":45,"../utils/capitalizeString":46,"../utils/isPrefixedValue":47}],42:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3318,7 +3426,7 @@ function prefixAll(styles) {
 }
 
 module.exports = exports['default'];
-},{"./plugins/calc":33,"./plugins/cursor":34,"./plugins/flex":35,"./plugins/flexboxIE":36,"./plugins/flexboxOld":37,"./plugins/gradient":38,"./plugins/sizing":39,"./plugins/transition":40,"./prefixProps":42,"./utils/assign":43,"./utils/capitalizeString":45}],42:[function(require,module,exports){
+},{"./plugins/calc":34,"./plugins/cursor":35,"./plugins/flex":36,"./plugins/flexboxIE":37,"./plugins/flexboxOld":38,"./plugins/gradient":39,"./plugins/sizing":40,"./plugins/transition":41,"./prefixProps":43,"./utils/assign":44,"./utils/capitalizeString":46}],43:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3326,7 +3434,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = { "Webkit": { "transform": true, "transformOrigin": true, "transformOriginX": true, "transformOriginY": true, "backfaceVisibility": true, "perspective": true, "perspectiveOrigin": true, "transformStyle": true, "transformOriginZ": true, "animation": true, "animationDelay": true, "animationDirection": true, "animationFillMode": true, "animationDuration": true, "animationIterationCount": true, "animationName": true, "animationPlayState": true, "animationTimingFunction": true, "appearance": true, "userSelect": true, "fontKerning": true, "textEmphasisPosition": true, "textEmphasis": true, "textEmphasisStyle": true, "textEmphasisColor": true, "boxDecorationBreak": true, "clipPath": true, "maskImage": true, "maskMode": true, "maskRepeat": true, "maskPosition": true, "maskClip": true, "maskOrigin": true, "maskSize": true, "maskComposite": true, "mask": true, "maskBorderSource": true, "maskBorderMode": true, "maskBorderSlice": true, "maskBorderWidth": true, "maskBorderOutset": true, "maskBorderRepeat": true, "maskBorder": true, "maskType": true, "textDecorationStyle": true, "textDecorationSkip": true, "textDecorationLine": true, "textDecorationColor": true, "filter": true, "fontFeatureSettings": true, "breakAfter": true, "breakBefore": true, "breakInside": true, "columnCount": true, "columnFill": true, "columnGap": true, "columnRule": true, "columnRuleColor": true, "columnRuleStyle": true, "columnRuleWidth": true, "columns": true, "columnSpan": true, "columnWidth": true, "flex": true, "flexBasis": true, "flexDirection": true, "flexGrow": true, "flexFlow": true, "flexShrink": true, "flexWrap": true, "alignContent": true, "alignItems": true, "alignSelf": true, "justifyContent": true, "order": true, "transition": true, "transitionDelay": true, "transitionDuration": true, "transitionProperty": true, "transitionTimingFunction": true, "backdropFilter": true, "scrollSnapType": true, "scrollSnapPointsX": true, "scrollSnapPointsY": true, "scrollSnapDestination": true, "scrollSnapCoordinate": true, "shapeImageThreshold": true, "shapeImageMargin": true, "shapeImageOutside": true, "hyphens": true, "flowInto": true, "flowFrom": true, "regionFragment": true, "textSizeAdjust": true, "borderImage": true, "borderImageOutset": true, "borderImageRepeat": true, "borderImageSlice": true, "borderImageSource": true, "borderImageWidth": true, "tabSize": true, "objectFit": true, "objectPosition": true }, "Moz": { "appearance": true, "userSelect": true, "boxSizing": true, "textAlignLast": true, "textDecorationStyle": true, "textDecorationSkip": true, "textDecorationLine": true, "textDecorationColor": true, "tabSize": true, "hyphens": true, "fontFeatureSettings": true, "breakAfter": true, "breakBefore": true, "breakInside": true, "columnCount": true, "columnFill": true, "columnGap": true, "columnRule": true, "columnRuleColor": true, "columnRuleStyle": true, "columnRuleWidth": true, "columns": true, "columnSpan": true, "columnWidth": true }, "ms": { "flex": true, "flexBasis": false, "flexDirection": true, "flexGrow": false, "flexFlow": true, "flexShrink": false, "flexWrap": true, "alignContent": false, "alignItems": false, "alignSelf": false, "justifyContent": false, "order": false, "transform": true, "transformOrigin": true, "transformOriginX": true, "transformOriginY": true, "userSelect": true, "wrapFlow": true, "wrapThrough": true, "wrapMargin": true, "scrollSnapType": true, "scrollSnapPointsX": true, "scrollSnapPointsY": true, "scrollSnapDestination": true, "scrollSnapCoordinate": true, "touchAction": true, "hyphens": true, "flowInto": true, "flowFrom": true, "breakBefore": true, "breakAfter": true, "breakInside": true, "regionFragment": true, "gridTemplateColumns": true, "gridTemplateRows": true, "gridTemplateAreas": true, "gridTemplate": true, "gridAutoColumns": true, "gridAutoRows": true, "gridAutoFlow": true, "grid": true, "gridRowStart": true, "gridColumnStart": true, "gridRowEnd": true, "gridRow": true, "gridColumn": true, "gridColumnEnd": true, "gridColumnGap": true, "gridRowGap": true, "gridArea": true, "gridGap": true, "textSizeAdjust": true } };
 module.exports = exports["default"];
-},{}],43:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 // leight polyfill for Object.assign
 "use strict";
 
@@ -3343,7 +3451,7 @@ exports["default"] = function (base) {
 };
 
 module.exports = exports["default"];
-},{}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 /**
  * Converts a camel-case string to a dash-case string
  * @param {string} str - str that gets converted to dash-case
@@ -3361,7 +3469,7 @@ exports['default'] = function (str) {
 };
 
 module.exports = exports['default'];
-},{}],45:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 // helper to capitalize strings
 "use strict";
 
@@ -3374,7 +3482,7 @@ exports["default"] = function (str) {
 };
 
 module.exports = exports["default"];
-},{}],46:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3388,7 +3496,7 @@ exports['default'] = function (value) {
 };
 
 module.exports = exports['default'];
-},{}],47:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3417,7 +3525,7 @@ exports['default'] = function (property, value) {
 };
 
 module.exports = exports['default'];
-},{"./camelToDashCase":44}],48:[function(require,module,exports){
+},{"./camelToDashCase":45}],49:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3616,7 +3724,7 @@ var Prefixer = (function () {
 
 exports['default'] = Prefixer;
 module.exports = exports['default'];
-},{"./plugins/calc":49,"./plugins/cursor":50,"./plugins/flex":51,"./plugins/flexboxIE":52,"./plugins/flexboxOld":53,"./plugins/gradient":54,"./plugins/sizing":55,"./plugins/transition":56,"./prefixProps":57,"./utils/assign":58,"./utils/capitalizeString":60,"./utils/getBrowserInformation":61,"./utils/getPrefixedKeyframes":62,"inline-style-prefix-all":41}],49:[function(require,module,exports){
+},{"./plugins/calc":50,"./plugins/cursor":51,"./plugins/flex":52,"./plugins/flexboxIE":53,"./plugins/flexboxOld":54,"./plugins/gradient":55,"./plugins/sizing":56,"./plugins/transition":57,"./prefixProps":58,"./utils/assign":59,"./utils/capitalizeString":61,"./utils/getBrowserInformation":62,"./utils/getPrefixedKeyframes":63,"inline-style-prefix-all":42}],50:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3647,7 +3755,7 @@ function calc(_ref2) {
 }
 
 module.exports = exports['default'];
-},{"../utils/camelToDashCase":59}],50:[function(require,module,exports){
+},{"../utils/camelToDashCase":60}],51:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3685,7 +3793,7 @@ function cursor(_ref) {
 }
 
 module.exports = exports['default'];
-},{"../utils/camelToDashCase":59}],51:[function(require,module,exports){
+},{"../utils/camelToDashCase":60}],52:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3721,7 +3829,7 @@ function flex(_ref) {
 }
 
 module.exports = exports['default'];
-},{"../utils/camelToDashCase":59}],52:[function(require,module,exports){
+},{"../utils/camelToDashCase":60}],53:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3787,7 +3895,7 @@ function flexboxIE(_ref2) {
 }
 
 module.exports = exports['default'];
-},{"../utils/camelToDashCase":59}],53:[function(require,module,exports){
+},{"../utils/camelToDashCase":60}],54:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3859,7 +3967,7 @@ function flexboxOld(_ref2) {
 }
 
 module.exports = exports['default'];
-},{"../utils/camelToDashCase":59}],54:[function(require,module,exports){
+},{"../utils/camelToDashCase":60}],55:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3892,7 +4000,7 @@ function gradient(_ref2) {
 }
 
 module.exports = exports['default'];
-},{"../utils/camelToDashCase":59}],55:[function(require,module,exports){
+},{"../utils/camelToDashCase":60}],56:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3939,7 +4047,7 @@ function sizing(_ref2) {
 }
 
 module.exports = exports['default'];
-},{"../utils/camelToDashCase":59}],56:[function(require,module,exports){
+},{"../utils/camelToDashCase":60}],57:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -4001,7 +4109,7 @@ function transition(_ref2) {
 }
 
 module.exports = exports['default'];
-},{"../utils/camelToDashCase":59,"../utils/capitalizeString":60,"../utils/unprefixProperty":63}],57:[function(require,module,exports){
+},{"../utils/camelToDashCase":60,"../utils/capitalizeString":61,"../utils/unprefixProperty":64}],58:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4009,7 +4117,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = { "chrome": { "transform": 35, "transformOrigin": 35, "transformOriginX": 35, "transformOriginY": 35, "backfaceVisibility": 35, "perspective": 35, "perspectiveOrigin": 35, "transformStyle": 35, "transformOriginZ": 35, "animation": 42, "animationDelay": 42, "animationDirection": 42, "animationFillMode": 42, "animationDuration": 42, "animationIterationCount": 42, "animationName": 42, "animationPlayState": 42, "animationTimingFunction": 42, "appearance": 52, "userSelect": 52, "fontKerning": 32, "textEmphasisPosition": 52, "textEmphasis": 52, "textEmphasisStyle": 52, "textEmphasisColor": 52, "boxDecorationBreak": 52, "clipPath": 52, "maskImage": 52, "maskMode": 52, "maskRepeat": 52, "maskPosition": 52, "maskClip": 52, "maskOrigin": 52, "maskSize": 52, "maskComposite": 52, "mask": 52, "maskBorderSource": 52, "maskBorderMode": 52, "maskBorderSlice": 52, "maskBorderWidth": 52, "maskBorderOutset": 52, "maskBorderRepeat": 52, "maskBorder": 52, "maskType": 52, "textDecorationStyle": 52, "textDecorationSkip": 52, "textDecorationLine": 52, "textDecorationColor": 52, "filter": 52, "fontFeatureSettings": 47, "breakAfter": 52, "breakBefore": 52, "breakInside": 52, "columnCount": 52, "columnFill": 52, "columnGap": 52, "columnRule": 52, "columnRuleColor": 52, "columnRuleStyle": 52, "columnRuleWidth": 52, "columns": 52, "columnSpan": 52, "columnWidth": 52 }, "safari": { "flex": 8, "flexBasis": 8, "flexDirection": 8, "flexGrow": 8, "flexFlow": 8, "flexShrink": 8, "flexWrap": 8, "alignContent": 8, "alignItems": 8, "alignSelf": 8, "justifyContent": 8, "order": 8, "transition": 6, "transitionDelay": 6, "transitionDuration": 6, "transitionProperty": 6, "transitionTimingFunction": 6, "transform": 8, "transformOrigin": 8, "transformOriginX": 8, "transformOriginY": 8, "backfaceVisibility": 8, "perspective": 8, "perspectiveOrigin": 8, "transformStyle": 8, "transformOriginZ": 8, "animation": 8, "animationDelay": 8, "animationDirection": 8, "animationFillMode": 8, "animationDuration": 8, "animationIterationCount": 8, "animationName": 8, "animationPlayState": 8, "animationTimingFunction": 8, "appearance": 9.1, "userSelect": 9.1, "backdropFilter": 9.1, "fontKerning": 9.1, "scrollSnapType": 9.1, "scrollSnapPointsX": 9.1, "scrollSnapPointsY": 9.1, "scrollSnapDestination": 9.1, "scrollSnapCoordinate": 9.1, "textEmphasisPosition": 7, "textEmphasis": 7, "textEmphasisStyle": 7, "textEmphasisColor": 7, "boxDecorationBreak": 9.1, "clipPath": 9.1, "maskImage": 9.1, "maskMode": 9.1, "maskRepeat": 9.1, "maskPosition": 9.1, "maskClip": 9.1, "maskOrigin": 9.1, "maskSize": 9.1, "maskComposite": 9.1, "mask": 9.1, "maskBorderSource": 9.1, "maskBorderMode": 9.1, "maskBorderSlice": 9.1, "maskBorderWidth": 9.1, "maskBorderOutset": 9.1, "maskBorderRepeat": 9.1, "maskBorder": 9.1, "maskType": 9.1, "textDecorationStyle": 9.1, "textDecorationSkip": 9.1, "textDecorationLine": 9.1, "textDecorationColor": 9.1, "shapeImageThreshold": 9.1, "shapeImageMargin": 9.1, "shapeImageOutside": 9.1, "filter": 9, "hyphens": 9.1, "flowInto": 9.1, "flowFrom": 9.1, "breakBefore": 8, "breakAfter": 8, "breakInside": 8, "regionFragment": 9.1, "columnCount": 8, "columnFill": 8, "columnGap": 8, "columnRule": 8, "columnRuleColor": 8, "columnRuleStyle": 8, "columnRuleWidth": 8, "columns": 8, "columnSpan": 8, "columnWidth": 8 }, "firefox": { "appearance": 47, "userSelect": 47, "boxSizing": 28, "textAlignLast": 47, "textDecorationStyle": 35, "textDecorationSkip": 35, "textDecorationLine": 35, "textDecorationColor": 35, "tabSize": 47, "hyphens": 42, "fontFeatureSettings": 33, "breakAfter": 47, "breakBefore": 47, "breakInside": 47, "columnCount": 47, "columnFill": 47, "columnGap": 47, "columnRule": 47, "columnRuleColor": 47, "columnRuleStyle": 47, "columnRuleWidth": 47, "columns": 47, "columnSpan": 47, "columnWidth": 47 }, "opera": { "flex": 16, "flexBasis": 16, "flexDirection": 16, "flexGrow": 16, "flexFlow": 16, "flexShrink": 16, "flexWrap": 16, "alignContent": 16, "alignItems": 16, "alignSelf": 16, "justifyContent": 16, "order": 16, "transform": 22, "transformOrigin": 22, "transformOriginX": 22, "transformOriginY": 22, "backfaceVisibility": 22, "perspective": 22, "perspectiveOrigin": 22, "transformStyle": 22, "transformOriginZ": 22, "animation": 29, "animationDelay": 29, "animationDirection": 29, "animationFillMode": 29, "animationDuration": 29, "animationIterationCount": 29, "animationName": 29, "animationPlayState": 29, "animationTimingFunction": 29, "appearance": 37, "userSelect": 37, "fontKerning": 19, "textEmphasisPosition": 37, "textEmphasis": 37, "textEmphasisStyle": 37, "textEmphasisColor": 37, "boxDecorationBreak": 37, "clipPath": 37, "maskImage": 37, "maskMode": 37, "maskRepeat": 37, "maskPosition": 37, "maskClip": 37, "maskOrigin": 37, "maskSize": 37, "maskComposite": 37, "mask": 37, "maskBorderSource": 37, "maskBorderMode": 37, "maskBorderSlice": 37, "maskBorderWidth": 37, "maskBorderOutset": 37, "maskBorderRepeat": 37, "maskBorder": 37, "maskType": 37, "filter": 37, "fontFeatureSettings": 37, "breakAfter": 37, "breakBefore": 37, "breakInside": 37, "columnCount": 37, "columnFill": 37, "columnGap": 37, "columnRule": 37, "columnRuleColor": 37, "columnRuleStyle": 37, "columnRuleWidth": 37, "columns": 37, "columnSpan": 37, "columnWidth": 37 }, "ie": { "gridTemplateRows": 11, "breakInside": 11, "transformOriginY": 9, "gridRowStart": 11, "gridColumn": 11, "regionFragment": 11, "breakBefore": 11, "userSelect": 11, "gridColumnEnd": 11, "gridRowEnd": 11, "gridTemplateColumns": 11, "gridColumnStart": 11, "gridArea": 11, "flexDirection": 10, "gridRowGap": 11, "gridTemplateAreas": 11, "gridAutoRows": 11, "gridRow": 11, "scrollSnapDestination": 11, "scrollSnapPointsY": 11, "touchAction": 10, "gridGap": 11, "gridColumnGap": 11, "wrapFlow": 11, "scrollSnapPointsX": 11, "flowFrom": 11, "transform": 9, "breakAfter": 11, "wrapMargin": 11, "scrollSnapCoordinate": 11, "flexWrap": 10, "scrollSnapType": 11, "flex": 10, "wrapThrough": 11, "gridAutoColumns": 11, "flexFlow": 10, "gridTemplate": 11, "hyphens": 11, "grid": 11, "transformOriginX": 9, "flowInto": 11, "transformOrigin": 9, "gridAutoFlow": 11, "textSizeAdjust": 11 }, "edge": { "userSelect": 14, "wrapFlow": 14, "wrapThrough": 14, "wrapMargin": 14, "scrollSnapType": 14, "scrollSnapPointsX": 14, "scrollSnapPointsY": 14, "scrollSnapDestination": 14, "scrollSnapCoordinate": 14, "hyphens": 14, "flowInto": 14, "flowFrom": 14, "breakBefore": 14, "breakAfter": 14, "breakInside": 14, "regionFragment": 14, "gridTemplateColumns": 14, "gridTemplateRows": 14, "gridTemplateAreas": 14, "gridTemplate": 14, "gridAutoColumns": 14, "gridAutoRows": 14, "gridAutoFlow": 14, "grid": 14, "gridRowStart": 14, "gridColumnStart": 14, "gridRowEnd": 14, "gridRow": 14, "gridColumn": 14, "gridColumnEnd": 14, "gridColumnGap": 14, "gridRowGap": 14, "gridArea": 14, "gridGap": 14 }, "ios_saf": { "flex": 8.1, "flexBasis": 8.1, "flexDirection": 8.1, "flexGrow": 8.1, "flexFlow": 8.1, "flexShrink": 8.1, "flexWrap": 8.1, "alignContent": 8.1, "alignItems": 8.1, "alignSelf": 8.1, "justifyContent": 8.1, "order": 8.1, "transition": 6, "transitionDelay": 6, "transitionDuration": 6, "transitionProperty": 6, "transitionTimingFunction": 6, "transform": 8.1, "transformOrigin": 8.1, "transformOriginX": 8.1, "transformOriginY": 8.1, "backfaceVisibility": 8.1, "perspective": 8.1, "perspectiveOrigin": 8.1, "transformStyle": 8.1, "transformOriginZ": 8.1, "animation": 8.1, "animationDelay": 8.1, "animationDirection": 8.1, "animationFillMode": 8.1, "animationDuration": 8.1, "animationIterationCount": 8.1, "animationName": 8.1, "animationPlayState": 8.1, "animationTimingFunction": 8.1, "appearance": 9.3, "userSelect": 9.3, "backdropFilter": 9.3, "fontKerning": 9.3, "scrollSnapType": 9.3, "scrollSnapPointsX": 9.3, "scrollSnapPointsY": 9.3, "scrollSnapDestination": 9.3, "scrollSnapCoordinate": 9.3, "boxDecorationBreak": 9.3, "clipPath": 9.3, "maskImage": 9.3, "maskMode": 9.3, "maskRepeat": 9.3, "maskPosition": 9.3, "maskClip": 9.3, "maskOrigin": 9.3, "maskSize": 9.3, "maskComposite": 9.3, "mask": 9.3, "maskBorderSource": 9.3, "maskBorderMode": 9.3, "maskBorderSlice": 9.3, "maskBorderWidth": 9.3, "maskBorderOutset": 9.3, "maskBorderRepeat": 9.3, "maskBorder": 9.3, "maskType": 9.3, "textSizeAdjust": 9.3, "textDecorationStyle": 9.3, "textDecorationSkip": 9.3, "textDecorationLine": 9.3, "textDecorationColor": 9.3, "shapeImageThreshold": 9.3, "shapeImageMargin": 9.3, "shapeImageOutside": 9.3, "filter": 9, "hyphens": 9.3, "flowInto": 9.3, "flowFrom": 9.3, "breakBefore": 8.1, "breakAfter": 8.1, "breakInside": 8.1, "regionFragment": 9.3, "columnCount": 8.1, "columnFill": 8.1, "columnGap": 8.1, "columnRule": 8.1, "columnRuleColor": 8.1, "columnRuleStyle": 8.1, "columnRuleWidth": 8.1, "columns": 8.1, "columnSpan": 8.1, "columnWidth": 8.1 }, "android": { "borderImage": 4.2, "borderImageOutset": 4.2, "borderImageRepeat": 4.2, "borderImageSlice": 4.2, "borderImageSource": 4.2, "borderImageWidth": 4.2, "flex": 4.2, "flexBasis": 4.2, "flexDirection": 4.2, "flexGrow": 4.2, "flexFlow": 4.2, "flexShrink": 4.2, "flexWrap": 4.2, "alignContent": 4.2, "alignItems": 4.2, "alignSelf": 4.2, "justifyContent": 4.2, "order": 4.2, "transition": 4.2, "transitionDelay": 4.2, "transitionDuration": 4.2, "transitionProperty": 4.2, "transitionTimingFunction": 4.2, "transform": 4.4, "transformOrigin": 4.4, "transformOriginX": 4.4, "transformOriginY": 4.4, "backfaceVisibility": 4.4, "perspective": 4.4, "perspectiveOrigin": 4.4, "transformStyle": 4.4, "transformOriginZ": 4.4, "animation": 4.4, "animationDelay": 4.4, "animationDirection": 4.4, "animationFillMode": 4.4, "animationDuration": 4.4, "animationIterationCount": 4.4, "animationName": 4.4, "animationPlayState": 4.4, "animationTimingFunction": 4.4, "appearance": 47, "userSelect": 47, "fontKerning": 4.4, "textEmphasisPosition": 47, "textEmphasis": 47, "textEmphasisStyle": 47, "textEmphasisColor": 47, "boxDecorationBreak": 47, "clipPath": 47, "maskImage": 47, "maskMode": 47, "maskRepeat": 47, "maskPosition": 47, "maskClip": 47, "maskOrigin": 47, "maskSize": 47, "maskComposite": 47, "mask": 47, "maskBorderSource": 47, "maskBorderMode": 47, "maskBorderSlice": 47, "maskBorderWidth": 47, "maskBorderOutset": 47, "maskBorderRepeat": 47, "maskBorder": 47, "maskType": 47, "filter": 47, "fontFeatureSettings": 47, "breakAfter": 47, "breakBefore": 47, "breakInside": 47, "columnCount": 47, "columnFill": 47, "columnGap": 47, "columnRule": 47, "columnRuleColor": 47, "columnRuleStyle": 47, "columnRuleWidth": 47, "columns": 47, "columnSpan": 47, "columnWidth": 47 }, "and_chr": { "appearance": 47, "userSelect": 47, "textEmphasisPosition": 47, "textEmphasis": 47, "textEmphasisStyle": 47, "textEmphasisColor": 47, "boxDecorationBreak": 47, "clipPath": 47, "maskImage": 47, "maskMode": 47, "maskRepeat": 47, "maskPosition": 47, "maskClip": 47, "maskOrigin": 47, "maskSize": 47, "maskComposite": 47, "mask": 47, "maskBorderSource": 47, "maskBorderMode": 47, "maskBorderSlice": 47, "maskBorderWidth": 47, "maskBorderOutset": 47, "maskBorderRepeat": 47, "maskBorder": 47, "maskType": 47, "textDecorationStyle": 47, "textDecorationSkip": 47, "textDecorationLine": 47, "textDecorationColor": 47, "filter": 47, "fontFeatureSettings": 47, "breakAfter": 47, "breakBefore": 47, "breakInside": 47, "columnCount": 47, "columnFill": 47, "columnGap": 47, "columnRule": 47, "columnRuleColor": 47, "columnRuleStyle": 47, "columnRuleWidth": 47, "columns": 47, "columnSpan": 47, "columnWidth": 47 }, "and_uc": { "flex": 9.9, "flexBasis": 9.9, "flexDirection": 9.9, "flexGrow": 9.9, "flexFlow": 9.9, "flexShrink": 9.9, "flexWrap": 9.9, "alignContent": 9.9, "alignItems": 9.9, "alignSelf": 9.9, "justifyContent": 9.9, "order": 9.9, "transition": 9.9, "transitionDelay": 9.9, "transitionDuration": 9.9, "transitionProperty": 9.9, "transitionTimingFunction": 9.9, "transform": 9.9, "transformOrigin": 9.9, "transformOriginX": 9.9, "transformOriginY": 9.9, "backfaceVisibility": 9.9, "perspective": 9.9, "perspectiveOrigin": 9.9, "transformStyle": 9.9, "transformOriginZ": 9.9, "animation": 9.9, "animationDelay": 9.9, "animationDirection": 9.9, "animationFillMode": 9.9, "animationDuration": 9.9, "animationIterationCount": 9.9, "animationName": 9.9, "animationPlayState": 9.9, "animationTimingFunction": 9.9, "appearance": 9.9, "userSelect": 9.9, "fontKerning": 9.9, "textEmphasisPosition": 9.9, "textEmphasis": 9.9, "textEmphasisStyle": 9.9, "textEmphasisColor": 9.9, "maskImage": 9.9, "maskMode": 9.9, "maskRepeat": 9.9, "maskPosition": 9.9, "maskClip": 9.9, "maskOrigin": 9.9, "maskSize": 9.9, "maskComposite": 9.9, "mask": 9.9, "maskBorderSource": 9.9, "maskBorderMode": 9.9, "maskBorderSlice": 9.9, "maskBorderWidth": 9.9, "maskBorderOutset": 9.9, "maskBorderRepeat": 9.9, "maskBorder": 9.9, "maskType": 9.9, "textSizeAdjust": 9.9, "filter": 9.9, "hyphens": 9.9, "flowInto": 9.9, "flowFrom": 9.9, "breakBefore": 9.9, "breakAfter": 9.9, "breakInside": 9.9, "regionFragment": 9.9, "fontFeatureSettings": 9.9, "columnCount": 9.9, "columnFill": 9.9, "columnGap": 9.9, "columnRule": 9.9, "columnRuleColor": 9.9, "columnRuleStyle": 9.9, "columnRuleWidth": 9.9, "columns": 9.9, "columnSpan": 9.9, "columnWidth": 9.9 }, "op_mini": { "borderImage": 5, "borderImageOutset": 5, "borderImageRepeat": 5, "borderImageSlice": 5, "borderImageSource": 5, "borderImageWidth": 5, "tabSize": 5, "objectFit": 5, "objectPosition": 5 } };
 module.exports = exports["default"];
-},{}],58:[function(require,module,exports){
+},{}],59:[function(require,module,exports){
 // leight polyfill for Object.assign
 "use strict";
 
@@ -4027,11 +4135,11 @@ exports["default"] = function (base) {
 };
 
 module.exports = exports["default"];
-},{}],59:[function(require,module,exports){
-arguments[4][44][0].apply(exports,arguments)
-},{"dup":44}],60:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
 arguments[4][45][0].apply(exports,arguments)
 },{"dup":45}],61:[function(require,module,exports){
+arguments[4][46][0].apply(exports,arguments)
+},{"dup":46}],62:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -4125,7 +4233,7 @@ exports['default'] = function (userAgent) {
 };
 
 module.exports = exports['default'];
-},{"bowser":14}],62:[function(require,module,exports){
+},{"bowser":15}],63:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -4146,7 +4254,7 @@ exports['default'] = function (_ref) {
 };
 
 module.exports = exports['default'];
-},{}],63:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -4159,7 +4267,7 @@ exports['default'] = function (property) {
 };
 
 module.exports = exports['default'];
-},{}],64:[function(require,module,exports){
+},{}],65:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -4214,7 +4322,7 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 }).call(this,require('_process'))
-},{"_process":65}],65:[function(require,module,exports){
+},{"_process":66}],66:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -4310,7 +4418,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],66:[function(require,module,exports){
+},{}],67:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4329,7 +4437,7 @@ exports.default = function (config) {
 };
 
 module.exports = exports['default'];
-},{"inline-style-prefixer":68}],67:[function(require,module,exports){
+},{"inline-style-prefixer":69}],68:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -4376,7 +4484,7 @@ exports['default'] = [_pluginsCalc2['default'], _pluginsCursor2['default'], _plu
 // this must be run AFTER the flexbox specs
 _pluginsFlex2['default']];
 module.exports = exports['default'];
-},{"./plugins/calc":70,"./plugins/cursor":71,"./plugins/flex":72,"./plugins/flexboxIE":73,"./plugins/flexboxOld":74,"./plugins/gradient":75,"./plugins/sizing":76,"./plugins/transition":77}],68:[function(require,module,exports){
+},{"./plugins/calc":71,"./plugins/cursor":72,"./plugins/flex":73,"./plugins/flexboxIE":74,"./plugins/flexboxOld":75,"./plugins/gradient":76,"./plugins/sizing":77,"./plugins/transition":78}],69:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -4609,9 +4717,9 @@ var Prefixer = (function () {
 
 exports['default'] = Prefixer;
 module.exports = exports['default'];
-},{"./Plugins":67,"./caniuseData":69,"./utils/assign":78,"./utils/capitalizeString":80,"./utils/getBrowserInformation":81,"./utils/getPrefixedKeyframes":82,"./utils/warn":83}],69:[function(require,module,exports){
+},{"./Plugins":68,"./caniuseData":70,"./utils/assign":79,"./utils/capitalizeString":81,"./utils/getBrowserInformation":82,"./utils/getPrefixedKeyframes":83,"./utils/warn":84}],70:[function(require,module,exports){
 var caniuseData = {"chrome":{"transform":35,"transformOrigin":35,"transformOriginX":35,"transformOriginY":35,"backfaceVisibility":35,"perspective":35,"perspectiveOrigin":35,"transformStyle":35,"transformOriginZ":35,"animation":42,"animationDelay":42,"animationDirection":42,"animationFillMode":42,"animationDuration":42,"animationIterationCount":42,"animationName":42,"animationPlayState":42,"animationTimingFunction":42,"appearance":50,"userSelect":50,"fontKerning":32,"textEmphasisPosition":50,"textEmphasis":50,"textEmphasisStyle":50,"textEmphasisColor":50,"boxDecorationBreak":50,"clipPath":50,"maskImage":50,"maskMode":50,"maskRepeat":50,"maskPosition":50,"maskClip":50,"maskOrigin":50,"maskSize":50,"maskComposite":50,"mask":50,"maskBorderSource":50,"maskBorderMode":50,"maskBorderSlice":50,"maskBorderWidth":50,"maskBorderOutset":50,"maskBorderRepeat":50,"maskBorder":50,"maskType":50,"textDecorationStyle":50,"textDecorationSkip":50,"textDecorationLine":50,"textDecorationColor":50,"filter":50,"fontFeatureSettings":47,"breakAfter":50,"breakBefore":50,"breakInside":50,"columnCount":50,"columnFill":50,"columnGap":50,"columnRule":50,"columnRuleColor":50,"columnRuleStyle":50,"columnRuleWidth":50,"columns":50,"columnSpan":50,"columnWidth":50},"safari":{"flex":8,"flexBasis":8,"flexDirection":8,"flexGrow":8,"flexFlow":8,"flexShrink":8,"flexWrap":8,"alignContent":8,"alignItems":8,"alignSelf":8,"justifyContent":8,"order":8,"transition":6,"transitionDelay":6,"transitionDuration":6,"transitionProperty":6,"transitionTimingFunction":6,"transform":8,"transformOrigin":8,"transformOriginX":8,"transformOriginY":8,"backfaceVisibility":8,"perspective":8,"perspectiveOrigin":8,"transformStyle":8,"transformOriginZ":8,"animation":8,"animationDelay":8,"animationDirection":8,"animationFillMode":8,"animationDuration":8,"animationIterationCount":8,"animationName":8,"animationPlayState":8,"animationTimingFunction":8,"appearance":9.1,"userSelect":9.1,"backdropFilter":9.1,"fontKerning":9.1,"scrollSnapType":9.1,"scrollSnapPointsX":9.1,"scrollSnapPointsY":9.1,"scrollSnapDestination":9.1,"scrollSnapCoordinate":9.1,"textEmphasisPosition":7,"textEmphasis":7,"textEmphasisStyle":7,"textEmphasisColor":7,"boxDecorationBreak":9.1,"clipPath":9.1,"maskImage":9.1,"maskMode":9.1,"maskRepeat":9.1,"maskPosition":9.1,"maskClip":9.1,"maskOrigin":9.1,"maskSize":9.1,"maskComposite":9.1,"mask":9.1,"maskBorderSource":9.1,"maskBorderMode":9.1,"maskBorderSlice":9.1,"maskBorderWidth":9.1,"maskBorderOutset":9.1,"maskBorderRepeat":9.1,"maskBorder":9.1,"maskType":9.1,"textDecorationStyle":9.1,"textDecorationSkip":9.1,"textDecorationLine":9.1,"textDecorationColor":9.1,"shapeImageThreshold":9.1,"shapeImageMargin":9.1,"shapeImageOutside":9.1,"filter":9,"hyphens":9.1,"flowInto":9.1,"flowFrom":9.1,"breakBefore":8,"breakAfter":8,"breakInside":8,"regionFragment":9.1,"columnCount":8,"columnFill":8,"columnGap":8,"columnRule":8,"columnRuleColor":8,"columnRuleStyle":8,"columnRuleWidth":8,"columns":8,"columnSpan":8,"columnWidth":8},"firefox":{"appearance":46,"userSelect":46,"boxSizing":28,"textAlignLast":46,"textDecorationStyle":35,"textDecorationSkip":35,"textDecorationLine":35,"textDecorationColor":35,"tabSize":46,"hyphens":42,"fontFeatureSettings":33,"breakAfter":46,"breakBefore":46,"breakInside":46,"columnCount":46,"columnFill":46,"columnGap":46,"columnRule":46,"columnRuleColor":46,"columnRuleStyle":46,"columnRuleWidth":46,"columns":46,"columnSpan":46,"columnWidth":46},"opera":{"flex":16,"flexBasis":16,"flexDirection":16,"flexGrow":16,"flexFlow":16,"flexShrink":16,"flexWrap":16,"alignContent":16,"alignItems":16,"alignSelf":16,"justifyContent":16,"order":16,"transform":22,"transformOrigin":22,"transformOriginX":22,"transformOriginY":22,"backfaceVisibility":22,"perspective":22,"perspectiveOrigin":22,"transformStyle":22,"transformOriginZ":22,"animation":29,"animationDelay":29,"animationDirection":29,"animationFillMode":29,"animationDuration":29,"animationIterationCount":29,"animationName":29,"animationPlayState":29,"animationTimingFunction":29,"appearance":36,"userSelect":36,"fontKerning":19,"textEmphasisPosition":36,"textEmphasis":36,"textEmphasisStyle":36,"textEmphasisColor":36,"boxDecorationBreak":36,"clipPath":36,"maskImage":36,"maskMode":36,"maskRepeat":36,"maskPosition":36,"maskClip":36,"maskOrigin":36,"maskSize":36,"maskComposite":36,"mask":36,"maskBorderSource":36,"maskBorderMode":36,"maskBorderSlice":36,"maskBorderWidth":36,"maskBorderOutset":36,"maskBorderRepeat":36,"maskBorder":36,"maskType":36,"filter":36,"fontFeatureSettings":36,"breakAfter":36,"breakBefore":36,"breakInside":36,"columnCount":36,"columnFill":36,"columnGap":36,"columnRule":36,"columnRuleColor":36,"columnRuleStyle":36,"columnRuleWidth":36,"columns":36,"columnSpan":36,"columnWidth":36},"ie":{"gridArea":11,"gridGap":11,"gridColumnStart":11,"userSelect":11,"grid":11,"breakInside":11,"hyphens":11,"gridTemplateAreas":11,"breakAfter":11,"scrollSnapCoordinate":11,"gridRowStart":11,"gridAutoFlow":11,"scrollSnapDestination":11,"gridTemplate":11,"gridTemplateColumns":11,"transformOrigin":9,"gridAutoRows":11,"gridColumnEnd":11,"transformOriginY":9,"scrollSnapPointsY":11,"breakBefore":11,"gridRowGap":11,"scrollSnapPointsX":11,"regionFragment":11,"flexWrap":10,"wrapFlow":11,"gridRowEnd":11,"flex":10,"flexDirection":10,"flowInto":11,"touchAction":10,"gridColumn":11,"transform":9,"gridTemplateRows":11,"flexFlow":10,"transformOriginX":9,"flowFrom":11,"scrollSnapType":11,"wrapMargin":11,"gridColumnGap":11,"gridRow":11,"wrapThrough":11,"gridAutoColumns":11,"textSizeAdjust":11},"edge":{"userSelect":14,"wrapFlow":14,"wrapThrough":14,"wrapMargin":14,"scrollSnapType":14,"scrollSnapPointsX":14,"scrollSnapPointsY":14,"scrollSnapDestination":14,"scrollSnapCoordinate":14,"hyphens":14,"flowInto":14,"flowFrom":14,"breakBefore":14,"breakAfter":14,"breakInside":14,"regionFragment":14,"gridTemplateColumns":14,"gridTemplateRows":14,"gridTemplateAreas":14,"gridTemplate":14,"gridAutoColumns":14,"gridAutoRows":14,"gridAutoFlow":14,"grid":14,"gridRowStart":14,"gridColumnStart":14,"gridRowEnd":14,"gridRow":14,"gridColumn":14,"gridColumnEnd":14,"gridColumnGap":14,"gridRowGap":14,"gridArea":14,"gridGap":14},"ios_saf":{"flex":8.1,"flexBasis":8.1,"flexDirection":8.1,"flexGrow":8.1,"flexFlow":8.1,"flexShrink":8.1,"flexWrap":8.1,"alignContent":8.1,"alignItems":8.1,"alignSelf":8.1,"justifyContent":8.1,"order":8.1,"transition":6,"transitionDelay":6,"transitionDuration":6,"transitionProperty":6,"transitionTimingFunction":6,"transform":8.1,"transformOrigin":8.1,"transformOriginX":8.1,"transformOriginY":8.1,"backfaceVisibility":8.1,"perspective":8.1,"perspectiveOrigin":8.1,"transformStyle":8.1,"transformOriginZ":8.1,"animation":8.1,"animationDelay":8.1,"animationDirection":8.1,"animationFillMode":8.1,"animationDuration":8.1,"animationIterationCount":8.1,"animationName":8.1,"animationPlayState":8.1,"animationTimingFunction":8.1,"appearance":9.3,"userSelect":9.3,"backdropFilter":9.3,"fontKerning":9.3,"scrollSnapType":9.3,"scrollSnapPointsX":9.3,"scrollSnapPointsY":9.3,"scrollSnapDestination":9.3,"scrollSnapCoordinate":9.3,"boxDecorationBreak":9.3,"clipPath":9.3,"maskImage":9.3,"maskMode":9.3,"maskRepeat":9.3,"maskPosition":9.3,"maskClip":9.3,"maskOrigin":9.3,"maskSize":9.3,"maskComposite":9.3,"mask":9.3,"maskBorderSource":9.3,"maskBorderMode":9.3,"maskBorderSlice":9.3,"maskBorderWidth":9.3,"maskBorderOutset":9.3,"maskBorderRepeat":9.3,"maskBorder":9.3,"maskType":9.3,"textSizeAdjust":9.3,"textDecorationStyle":9.3,"textDecorationSkip":9.3,"textDecorationLine":9.3,"textDecorationColor":9.3,"shapeImageThreshold":9.3,"shapeImageMargin":9.3,"shapeImageOutside":9.3,"filter":9,"hyphens":9.3,"flowInto":9.3,"flowFrom":9.3,"breakBefore":8.1,"breakAfter":8.1,"breakInside":8.1,"regionFragment":9.3,"columnCount":8.1,"columnFill":8.1,"columnGap":8.1,"columnRule":8.1,"columnRuleColor":8.1,"columnRuleStyle":8.1,"columnRuleWidth":8.1,"columns":8.1,"columnSpan":8.1,"columnWidth":8.1},"android":{"borderImage":4.2,"borderImageOutset":4.2,"borderImageRepeat":4.2,"borderImageSlice":4.2,"borderImageSource":4.2,"borderImageWidth":4.2,"flex":4.2,"flexBasis":4.2,"flexDirection":4.2,"flexGrow":4.2,"flexFlow":4.2,"flexShrink":4.2,"flexWrap":4.2,"alignContent":4.2,"alignItems":4.2,"alignSelf":4.2,"justifyContent":4.2,"order":4.2,"transition":4.2,"transitionDelay":4.2,"transitionDuration":4.2,"transitionProperty":4.2,"transitionTimingFunction":4.2,"transform":4.4,"transformOrigin":4.4,"transformOriginX":4.4,"transformOriginY":4.4,"backfaceVisibility":4.4,"perspective":4.4,"perspectiveOrigin":4.4,"transformStyle":4.4,"transformOriginZ":4.4,"animation":4.4,"animationDelay":4.4,"animationDirection":4.4,"animationFillMode":4.4,"animationDuration":4.4,"animationIterationCount":4.4,"animationName":4.4,"animationPlayState":4.4,"animationTimingFunction":4.4,"appearance":46,"userSelect":46,"fontKerning":4.4,"textEmphasisPosition":46,"textEmphasis":46,"textEmphasisStyle":46,"textEmphasisColor":46,"boxDecorationBreak":46,"clipPath":46,"maskImage":46,"maskMode":46,"maskRepeat":46,"maskPosition":46,"maskClip":46,"maskOrigin":46,"maskSize":46,"maskComposite":46,"mask":46,"maskBorderSource":46,"maskBorderMode":46,"maskBorderSlice":46,"maskBorderWidth":46,"maskBorderOutset":46,"maskBorderRepeat":46,"maskBorder":46,"maskType":46,"filter":46,"fontFeatureSettings":46,"breakAfter":46,"breakBefore":46,"breakInside":46,"columnCount":46,"columnFill":46,"columnGap":46,"columnRule":46,"columnRuleColor":46,"columnRuleStyle":46,"columnRuleWidth":46,"columns":46,"columnSpan":46,"columnWidth":46},"and_chr":{"appearance":47,"userSelect":47,"textEmphasisPosition":47,"textEmphasis":47,"textEmphasisStyle":47,"textEmphasisColor":47,"boxDecorationBreak":47,"clipPath":47,"maskImage":47,"maskMode":47,"maskRepeat":47,"maskPosition":47,"maskClip":47,"maskOrigin":47,"maskSize":47,"maskComposite":47,"mask":47,"maskBorderSource":47,"maskBorderMode":47,"maskBorderSlice":47,"maskBorderWidth":47,"maskBorderOutset":47,"maskBorderRepeat":47,"maskBorder":47,"maskType":47,"textDecorationStyle":47,"textDecorationSkip":47,"textDecorationLine":47,"textDecorationColor":47,"filter":47,"fontFeatureSettings":47,"breakAfter":47,"breakBefore":47,"breakInside":47,"columnCount":47,"columnFill":47,"columnGap":47,"columnRule":47,"columnRuleColor":47,"columnRuleStyle":47,"columnRuleWidth":47,"columns":47,"columnSpan":47,"columnWidth":47},"and_uc":{"flex":9.9,"flexBasis":9.9,"flexDirection":9.9,"flexGrow":9.9,"flexFlow":9.9,"flexShrink":9.9,"flexWrap":9.9,"alignContent":9.9,"alignItems":9.9,"alignSelf":9.9,"justifyContent":9.9,"order":9.9,"transition":9.9,"transitionDelay":9.9,"transitionDuration":9.9,"transitionProperty":9.9,"transitionTimingFunction":9.9,"transform":9.9,"transformOrigin":9.9,"transformOriginX":9.9,"transformOriginY":9.9,"backfaceVisibility":9.9,"perspective":9.9,"perspectiveOrigin":9.9,"transformStyle":9.9,"transformOriginZ":9.9,"animation":9.9,"animationDelay":9.9,"animationDirection":9.9,"animationFillMode":9.9,"animationDuration":9.9,"animationIterationCount":9.9,"animationName":9.9,"animationPlayState":9.9,"animationTimingFunction":9.9,"appearance":9.9,"userSelect":9.9,"fontKerning":9.9,"textEmphasisPosition":9.9,"textEmphasis":9.9,"textEmphasisStyle":9.9,"textEmphasisColor":9.9,"maskImage":9.9,"maskMode":9.9,"maskRepeat":9.9,"maskPosition":9.9,"maskClip":9.9,"maskOrigin":9.9,"maskSize":9.9,"maskComposite":9.9,"mask":9.9,"maskBorderSource":9.9,"maskBorderMode":9.9,"maskBorderSlice":9.9,"maskBorderWidth":9.9,"maskBorderOutset":9.9,"maskBorderRepeat":9.9,"maskBorder":9.9,"maskType":9.9,"textSizeAdjust":9.9,"filter":9.9,"hyphens":9.9,"flowInto":9.9,"flowFrom":9.9,"breakBefore":9.9,"breakAfter":9.9,"breakInside":9.9,"regionFragment":9.9,"fontFeatureSettings":9.9,"columnCount":9.9,"columnFill":9.9,"columnGap":9.9,"columnRule":9.9,"columnRuleColor":9.9,"columnRuleStyle":9.9,"columnRuleWidth":9.9,"columns":9.9,"columnSpan":9.9,"columnWidth":9.9},"op_mini":{"borderImage":5,"borderImageOutset":5,"borderImageRepeat":5,"borderImageSlice":5,"borderImageSource":5,"borderImageWidth":5,"tabSize":5,"objectFit":5,"objectPosition":5}}; module.exports = caniuseData
-},{}],70:[function(require,module,exports){
+},{}],71:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -4644,7 +4752,7 @@ function calc(pluginInterface) {
 }
 
 module.exports = exports['default'];
-},{}],71:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -4683,7 +4791,7 @@ function cursor(pluginInterface) {
 }
 
 module.exports = exports['default'];
-},{}],72:[function(require,module,exports){
+},{}],73:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -4715,7 +4823,7 @@ function flex(pluginInterface) {
 }
 
 module.exports = exports['default'];
-},{}],73:[function(require,module,exports){
+},{}],74:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -4777,7 +4885,7 @@ function flexboxIE(pluginInterface) {
 }
 
 module.exports = exports['default'];
-},{}],74:[function(require,module,exports){
+},{}],75:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -4847,7 +4955,7 @@ function flexboxOld(pluginInterface) {
 }
 
 module.exports = exports['default'];
-},{}],75:[function(require,module,exports){
+},{}],76:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -4882,7 +4990,7 @@ function gradient(pluginInterface) {
 }
 
 module.exports = exports['default'];
-},{}],76:[function(require,module,exports){
+},{}],77:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -4934,7 +5042,7 @@ function sizing(pluginInterface) {
 }
 
 module.exports = exports['default'];
-},{}],77:[function(require,module,exports){
+},{}],78:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -5009,13 +5117,13 @@ function calc(pluginInterface) {
 }
 
 module.exports = exports['default'];
-},{"../utils/camelToDashCase":79,"../utils/capitalizeString":80}],78:[function(require,module,exports){
-arguments[4][58][0].apply(exports,arguments)
-},{"dup":58}],79:[function(require,module,exports){
-arguments[4][44][0].apply(exports,arguments)
-},{"dup":44}],80:[function(require,module,exports){
+},{"../utils/camelToDashCase":80,"../utils/capitalizeString":81}],79:[function(require,module,exports){
+arguments[4][59][0].apply(exports,arguments)
+},{"dup":59}],80:[function(require,module,exports){
 arguments[4][45][0].apply(exports,arguments)
 },{"dup":45}],81:[function(require,module,exports){
+arguments[4][46][0].apply(exports,arguments)
+},{"dup":46}],82:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -5171,9 +5279,9 @@ exports['default'] = function (userAgent) {
 };
 
 module.exports = exports['default'];
-},{"bowser":14}],82:[function(require,module,exports){
-arguments[4][62][0].apply(exports,arguments)
-},{"dup":62}],83:[function(require,module,exports){
+},{"bowser":15}],83:[function(require,module,exports){
+arguments[4][63][0].apply(exports,arguments)
+},{"dup":63}],84:[function(require,module,exports){
 (function (process){
 // only throw warnings if devmode is enabled
 'use strict';
@@ -5190,7 +5298,7 @@ exports['default'] = function () {
 
 module.exports = exports['default'];
 }).call(this,require('_process'))
-},{"_process":65}],84:[function(require,module,exports){
+},{"_process":66}],85:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5214,7 +5322,7 @@ function appendImportantToEachValue(style) {
   });
 }
 module.exports = exports['default'];
-},{"./append-px-if-needed":85,"./map-object":97}],85:[function(require,module,exports){
+},{"./append-px-if-needed":86,"./map-object":98}],86:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5264,7 +5372,7 @@ function appendPxIfNeeded(propertyName, value) {
   return needsPxSuffix ? value + 'px' : value;
 }
 module.exports = exports['default'];
-},{}],86:[function(require,module,exports){
+},{}],87:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5300,7 +5408,7 @@ var camelCasePropsToDashCase = function camelCasePropsToDashCase(prefixedStyle) 
 
 exports.default = camelCasePropsToDashCase;
 module.exports = exports['default'];
-},{}],87:[function(require,module,exports){
+},{}],88:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5381,7 +5489,7 @@ StyleRoot = (0, _enhancer2.default)(StyleRoot);
 
 exports.default = StyleRoot;
 module.exports = exports['default'];
-},{"../enhancer":91,"../style-keeper":110,"./style-sheet":88,"react":"react"}],88:[function(require,module,exports){
+},{"../enhancer":92,"../style-keeper":111,"./style-sheet":89,"react":"react"}],89:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5456,7 +5564,7 @@ var StyleSheet = (_temp = _class = function (_Component) {
 }, _temp);
 exports.default = StyleSheet;
 module.exports = exports['default'];
-},{"../style-keeper":110,"react":"react"}],89:[function(require,module,exports){
+},{"../style-keeper":111,"react":"react"}],90:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5549,7 +5657,7 @@ var Style = _react2.default.createClass({
 
 exports.default = Style;
 module.exports = exports['default'];
-},{"../css-rule-set-to-string":90,"react":"react"}],90:[function(require,module,exports){
+},{"../css-rule-set-to-string":91,"react":"react"}],91:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5594,7 +5702,7 @@ function cssRuleSetToString(selector, rules, userAgent) {
   return selector + '{' + serializedRules + '}';
 }
 module.exports = exports['default'];
-},{"./append-px-if-needed":85,"./camel-case-props-to-dash-case":86,"./map-object":97,"./prefixer":108}],91:[function(require,module,exports){
+},{"./append-px-if-needed":86,"./camel-case-props-to-dash-case":87,"./map-object":98,"./prefixer":109}],92:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -5776,7 +5884,7 @@ function enhanceWithRadium(configOrComposedComponent) {
 }
 module.exports = exports['default'];
 }).call(this,require('_process'))
-},{"./resolve-styles.js":109,"./style-keeper.js":110,"_process":65,"react":"react"}],92:[function(require,module,exports){
+},{"./resolve-styles.js":110,"./style-keeper.js":111,"_process":66,"react":"react"}],93:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5790,7 +5898,7 @@ var getStateKey = function getStateKey(elementKey) {
 
 exports.default = getStateKey;
 module.exports = exports['default'];
-},{}],93:[function(require,module,exports){
+},{}],94:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5811,7 +5919,7 @@ var getState = function getState(state, elementKey, value) {
 
 exports.default = getState;
 module.exports = exports['default'];
-},{"./get-state-key":92}],94:[function(require,module,exports){
+},{"./get-state-key":93}],95:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5839,7 +5947,7 @@ function hash(text) {
   return (hashValue >>> 0).toString(16);
 }
 module.exports = exports['default'];
-},{}],95:[function(require,module,exports){
+},{}],96:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -5896,7 +6004,7 @@ if (process.env.NODE_ENV !== 'production') {
 exports.default = Radium;
 module.exports = exports['default'];
 }).call(this,require('_process'))
-},{"./components/style":89,"./components/style-root":87,"./enhancer":91,"./get-state":93,"./keyframes":96,"./plugins":100,"./resolve-styles":109,"_process":65}],96:[function(require,module,exports){
+},{"./components/style":90,"./components/style-root":88,"./enhancer":92,"./get-state":94,"./keyframes":97,"./plugins":101,"./resolve-styles":110,"_process":66}],97:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5931,7 +6039,7 @@ function keyframes(keyframeRules, name) {
   };
 }
 module.exports = exports['default'];
-},{"./css-rule-set-to-string":90,"./hash":94,"./prefixer":108}],97:[function(require,module,exports){
+},{"./css-rule-set-to-string":91,"./hash":95,"./prefixer":109}],98:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5945,7 +6053,7 @@ function mapObject(object, mapper) {
   }, {});
 }
 module.exports = exports['default'];
-},{}],98:[function(require,module,exports){
+},{}],99:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6005,7 +6113,7 @@ function mergeStyles(styles) {
 
   return result;
 }
-},{}],99:[function(require,module,exports){
+},{}],100:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -6069,7 +6177,7 @@ if (process.env.NODE_ENV !== 'production') {
 exports.default = _checkProps;
 module.exports = exports['default'];
 }).call(this,require('_process'))
-},{"_process":65}],100:[function(require,module,exports){
+},{"_process":66}],101:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6118,7 +6226,7 @@ exports.default = {
   visited: _visitedPlugin2.default
 };
 module.exports = exports['default'];
-},{"./check-props-plugin":99,"./keyframes-plugin":101,"./merge-style-array-plugin":102,"./prefix-plugin":104,"./resolve-interaction-styles-plugin":105,"./resolve-media-queries-plugin":106,"./visited-plugin":107}],101:[function(require,module,exports){
+},{"./check-props-plugin":100,"./keyframes-plugin":102,"./merge-style-array-plugin":103,"./prefix-plugin":105,"./resolve-interaction-styles-plugin":106,"./resolve-media-queries-plugin":107,"./visited-plugin":108}],102:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6151,7 +6259,7 @@ function keyframesPlugin(_ref // eslint-disable-line no-shadow
   return { style: newStyle };
 }
 module.exports = exports['default'];
-},{}],102:[function(require,module,exports){
+},{}],103:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6171,7 +6279,7 @@ var mergeStyleArrayPlugin = function mergeStyleArrayPlugin(_ref) {
 
 exports.default = mergeStyleArrayPlugin;
 module.exports = exports['default'];
-},{}],103:[function(require,module,exports){
+},{}],104:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6216,7 +6324,7 @@ exports.default = {
   __triggerForTests: _handleMouseUp
 };
 module.exports = exports['default'];
-},{}],104:[function(require,module,exports){
+},{}],105:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6235,7 +6343,7 @@ function prefixPlugin(_ref // eslint-disable-line no-shadow
   return { style: newStyle };
 }
 module.exports = exports['default'];
-},{"../prefixer":108}],105:[function(require,module,exports){
+},{"../prefixer":109}],106:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6364,7 +6472,7 @@ var resolveInteractionStyles = function resolveInteractionStyles(config) {
 
 exports.default = resolveInteractionStyles;
 module.exports = exports['default'];
-},{"./mouse-up-listener":103}],106:[function(require,module,exports){
+},{"./mouse-up-listener":104}],107:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6541,7 +6649,7 @@ function resolveMediaQueries(_ref3) {
   };
 }
 module.exports = exports['default'];
-},{}],107:[function(require,module,exports){
+},{}],108:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6582,7 +6690,7 @@ function visited(_ref) {
   };
 }
 module.exports = exports['default'];
-},{}],108:[function(require,module,exports){
+},{}],109:[function(require,module,exports){
 (function (process,global){
 'use strict';
 
@@ -6663,7 +6771,7 @@ function getPrefixedStyle(style, userAgent) {
   return prefixedStyle;
 }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":65,"inline-style-prefixer":48}],109:[function(require,module,exports){
+},{"_process":66,"inline-style-prefixer":49}],110:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -7023,7 +7131,7 @@ if (process.env.NODE_ENV !== 'production') {
 exports.default = resolveStyles;
 module.exports = exports['default'];
 }).call(this,require('_process'))
-},{"./append-important-to-each-value":84,"./css-rule-set-to-string":90,"./get-state":93,"./get-state-key":92,"./hash":94,"./merge-styles":98,"./plugins/":100,"_process":65,"exenv":19,"react":"react"}],110:[function(require,module,exports){
+},{"./append-important-to-each-value":85,"./css-rule-set-to-string":91,"./get-state":94,"./get-state-key":93,"./hash":95,"./merge-styles":99,"./plugins/":101,"_process":66,"exenv":20,"react":"react"}],111:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7091,7 +7199,7 @@ var StyleKeeper = function () {
 
 exports.default = StyleKeeper;
 module.exports = exports['default'];
-},{}],111:[function(require,module,exports){
+},{}],112:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 function _interopRequireDefault(obj) {
@@ -7190,7 +7298,7 @@ var BurgerIcon = (0, _ConfiguredRadium2['default'])(_react2['default'].createCla
     }));
 exports['default'] = BurgerIcon;
 module.exports = exports['default'];
-},{"./ConfiguredRadium":113,"react":"react"}],112:[function(require,module,exports){
+},{"./ConfiguredRadium":114,"react":"react"}],113:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 exports['default'] = {
@@ -7205,7 +7313,7 @@ exports['default'] = {
     fallDown: require('./menus/fallDown')
 };
 module.exports = exports['default'];
-},{"./menus/bubble":117,"./menus/elastic":118,"./menus/fallDown":119,"./menus/push":120,"./menus/pushRotate":121,"./menus/scaleDown":122,"./menus/scaleRotate":123,"./menus/slide":124,"./menus/stack":125}],113:[function(require,module,exports){
+},{"./menus/bubble":118,"./menus/elastic":119,"./menus/fallDown":120,"./menus/push":121,"./menus/pushRotate":122,"./menus/scaleDown":123,"./menus/scaleRotate":124,"./menus/slide":125,"./menus/stack":126}],114:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 function _interopRequireDefault(obj) {
@@ -7228,7 +7336,7 @@ exports['default'] = function (component) {
     })(component);
 };
 module.exports = exports['default'];
-},{"radium":95,"radium-plugin-prefix-all":66}],114:[function(require,module,exports){
+},{"radium":96,"radium-plugin-prefix-all":67}],115:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 function _interopRequireDefault(obj) {
@@ -7324,7 +7432,7 @@ var CrossIcon = (0, _ConfiguredRadium2['default'])(_react2['default'].createClas
     }));
 exports['default'] = CrossIcon;
 module.exports = exports['default'];
-},{"./ConfiguredRadium":113,"react":"react"}],115:[function(require,module,exports){
+},{"./ConfiguredRadium":114,"react":"react"}],116:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 var styles = {
@@ -7369,7 +7477,7 @@ var styles = {
     };
 exports['default'] = styles;
 module.exports = exports['default'];
-},{}],116:[function(require,module,exports){
+},{}],117:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 function _interopRequireDefault(obj) {
@@ -7582,7 +7690,7 @@ exports['default'] = function (styles) {
     }));
 };
 module.exports = exports['default'];
-},{"./BurgerIcon":111,"./ConfiguredRadium":113,"./CrossIcon":114,"./baseStyles":115,"react":"react","react-dom":"react-dom","snapsvg":140}],117:[function(require,module,exports){
+},{"./BurgerIcon":112,"./ConfiguredRadium":114,"./CrossIcon":115,"./baseStyles":116,"react":"react","react-dom":"react-dom","snapsvg":141}],118:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 function _interopRequireDefault(obj) {
@@ -7654,7 +7762,7 @@ var styles = {
     };
 exports['default'] = (0, _menuFactory2['default'])(styles);
 module.exports = exports['default'];
-},{"../menuFactory":116}],118:[function(require,module,exports){
+},{"../menuFactory":117}],119:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 function _interopRequireDefault(obj) {
@@ -7715,7 +7823,7 @@ var styles = {
     };
 exports['default'] = (0, _menuFactory2['default'])(styles);
 module.exports = exports['default'];
-},{"../menuFactory":116}],119:[function(require,module,exports){
+},{"../menuFactory":117}],120:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 function _interopRequireDefault(obj) {
@@ -7746,7 +7854,7 @@ var styles = {
     };
 exports['default'] = (0, _menuFactory2['default'])(styles);
 module.exports = exports['default'];
-},{"../menuFactory":116}],120:[function(require,module,exports){
+},{"../menuFactory":117}],121:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 function _interopRequireDefault(obj) {
@@ -7767,7 +7875,7 @@ var styles = {
     };
 exports['default'] = (0, _menuFactory2['default'])(styles);
 module.exports = exports['default'];
-},{"../menuFactory":116}],121:[function(require,module,exports){
+},{"../menuFactory":117}],122:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 function _interopRequireDefault(obj) {
@@ -7793,7 +7901,7 @@ var styles = {
     };
 exports['default'] = (0, _menuFactory2['default'])(styles);
 module.exports = exports['default'];
-},{"../menuFactory":116}],122:[function(require,module,exports){
+},{"../menuFactory":117}],123:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 function _interopRequireDefault(obj) {
@@ -7816,7 +7924,7 @@ var styles = {
     };
 exports['default'] = (0, _menuFactory2['default'])(styles);
 module.exports = exports['default'];
-},{"../menuFactory":116}],123:[function(require,module,exports){
+},{"../menuFactory":117}],124:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 function _interopRequireDefault(obj) {
@@ -7842,7 +7950,7 @@ var styles = {
     };
 exports['default'] = (0, _menuFactory2['default'])(styles);
 module.exports = exports['default'];
-},{"../menuFactory":116}],124:[function(require,module,exports){
+},{"../menuFactory":117}],125:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 function _interopRequireDefault(obj) {
@@ -7853,7 +7961,7 @@ var _menuFactory2 = _interopRequireDefault(_menuFactory);
 var styles = {};
 exports['default'] = (0, _menuFactory2['default'])(styles);
 module.exports = exports['default'];
-},{"../menuFactory":116}],125:[function(require,module,exports){
+},{"../menuFactory":117}],126:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 function _interopRequireDefault(obj) {
@@ -7878,7 +7986,7 @@ var styles = {
     };
 exports['default'] = (0, _menuFactory2['default'])(styles);
 module.exports = exports['default'];
-},{"../menuFactory":116}],126:[function(require,module,exports){
+},{"../menuFactory":117}],127:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -7892,7 +8000,7 @@ var Button = React.createClass({
 
 module.exports = Helpers.Scroll(Button);
 
-},{"../mixins/Helpers":131,"react":"react"}],127:[function(require,module,exports){
+},{"../mixins/Helpers":132,"react":"react"}],128:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -7907,7 +8015,7 @@ var DirectLink = React.createClass({
 
 module.exports = Helpers.Scroll(DirectLink, directScroller);
 
-},{"../mixins/Helpers":131,"../mixins/direct-scroller":134,"react":"react"}],128:[function(require,module,exports){
+},{"../mixins/Helpers":132,"../mixins/direct-scroller":135,"react":"react"}],129:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -7920,7 +8028,7 @@ var Element = React.createClass({
 });
 
 module.exports = Helpers.Element(Element);
-},{"../mixins/Helpers":131,"react":"react"}],129:[function(require,module,exports){
+},{"../mixins/Helpers":132,"react":"react"}],130:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -7934,7 +8042,7 @@ var Link = React.createClass({
 
 module.exports = Helpers.Scroll(Link);
 
-},{"../mixins/Helpers":131,"react":"react"}],130:[function(require,module,exports){
+},{"../mixins/Helpers":132,"react":"react"}],131:[function(require,module,exports){
 exports.Link = require('./components/Link.js');
 exports.DirectLink = require('./components/DirectLink.js');
 exports.Button = require('./components/Button.js');
@@ -7946,7 +8054,7 @@ exports.Events = require('./mixins/scroll-events.js');
 exports.scrollSpy = require('./mixins/scroll-spy.js');
 exports.animateScroll = require('./mixins/animate-scroll.js');
 
-},{"./components/Button.js":126,"./components/DirectLink.js":127,"./components/Element.js":128,"./components/Link.js":129,"./mixins/Helpers.js":131,"./mixins/animate-scroll.js":132,"./mixins/direct-scroller.js":134,"./mixins/scroll-events.js":135,"./mixins/scroll-spy.js":136,"./mixins/scroller.js":137}],131:[function(require,module,exports){
+},{"./components/Button.js":127,"./components/DirectLink.js":128,"./components/Element.js":129,"./components/Link.js":130,"./mixins/Helpers.js":132,"./mixins/animate-scroll.js":133,"./mixins/direct-scroller.js":135,"./mixins/scroll-events.js":136,"./mixins/scroll-spy.js":137,"./mixins/scroller.js":138}],132:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -8131,7 +8239,7 @@ var Helpers = {
 
 module.exports = Helpers;
 
-},{"./animate-scroll":132,"./scroll-spy":136,"./scroller":137,"react":"react","react-dom":"react-dom"}],132:[function(require,module,exports){
+},{"./animate-scroll":133,"./scroll-spy":137,"./scroller":138,"react":"react","react-dom":"react-dom"}],133:[function(require,module,exports){
 var assign = require('object-assign');
 
 var smooth = require('./smooth');
@@ -8292,7 +8400,7 @@ module.exports = {
   scrollMore: scrollMore,
 };
 
-},{"./cancel-events":133,"./scroll-events":135,"./smooth":138,"object-assign":139}],133:[function(require,module,exports){
+},{"./cancel-events":134,"./scroll-events":136,"./smooth":139,"object-assign":140}],134:[function(require,module,exports){
 var events = ['mousedown', 'mousewheel', 'touchmove', 'keydown']
 
 module.exports = {
@@ -8307,7 +8415,7 @@ module.exports = {
 	}
 };
 
-},{}],134:[function(require,module,exports){
+},{}],135:[function(require,module,exports){
 var Helpers  = require('../mixins/Helpers');
 var scroller = require('../mixins/scroller');
 
@@ -8320,7 +8428,7 @@ scroller.get = function(name) {
 
 module.exports = scroller;
 
-},{"../mixins/Helpers":131,"../mixins/scroller":137}],135:[function(require,module,exports){
+},{"../mixins/Helpers":132,"../mixins/scroller":138}],136:[function(require,module,exports){
 
 var Events = {
 	registered : {},
@@ -8335,7 +8443,7 @@ var Events = {
 };
 
 module.exports = Events;
-},{}],136:[function(require,module,exports){
+},{}],137:[function(require,module,exports){
 var scrollSpy = {
   
   spyCallbacks: [],
@@ -8383,7 +8491,7 @@ var scrollSpy = {
 }
 
 module.exports = scrollSpy;
-},{}],137:[function(require,module,exports){
+},{}],138:[function(require,module,exports){
 var animateScroll = require('./animate-scroll');
 var events = require('./scroll-events');
 
@@ -8459,7 +8567,7 @@ module.exports = {
 };
 
 
-},{"./animate-scroll":132,"./scroll-events":135}],138:[function(require,module,exports){
+},{"./animate-scroll":133,"./scroll-events":136}],139:[function(require,module,exports){
 module.exports = {
  /*
   * https://github.com/oblador/angular-scroll (duScrollDefaultEasing)
@@ -8473,7 +8581,7 @@ module.exports = {
     return 1-Math.pow((1-x)*2, 2)/2;
   }
 }
-},{}],139:[function(require,module,exports){
+},{}],140:[function(require,module,exports){
 'use strict';
 /* eslint-disable no-unused-vars */
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -8558,7 +8666,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-},{}],140:[function(require,module,exports){
+},{}],141:[function(require,module,exports){
 // Snap.svg 0.4.0
 // 
 // Copyright (c) 2013 – 2015 Adobe Systems Incorporated. All rights reserved.
@@ -16730,7 +16838,7 @@ Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
 
 return Snap;
 }));
-},{"eve":18}],141:[function(require,module,exports){
+},{"eve":19}],142:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -16794,4 +16902,4 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = warning;
 
 }).call(this,require('_process'))
-},{"_process":65}]},{},[12]);
+},{"_process":66}]},{},[13]);

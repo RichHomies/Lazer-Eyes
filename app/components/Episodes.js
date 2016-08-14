@@ -1,6 +1,6 @@
 import React from 'react';
 import Episode1 from './Episode1';
-
+import Episode2 from './Episode2';
 
 var Episodes = React.createClass({
   render: function() {
@@ -19,6 +19,9 @@ var Episodes = React.createClass({
     switch(route){
       case 'genesis': 
         component = <Episode1 currentEpisode={that.props.currentEpisode } changeSong={that.props.changeSong}/>;
+        break;
+      case 'crazy-stupid-lazers':
+        component = <Episode2 currentEpisode={that.props.currentEpisode } changeSong={that.props.changeSong}/>;
         break;
       default:
         component = <img src={'/img/nick-young-confused-face.png'}/>

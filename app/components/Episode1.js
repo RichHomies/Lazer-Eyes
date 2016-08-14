@@ -25,9 +25,9 @@ var Episode1 = React.createClass({
     }
   },
   render: function() {
-    var songOneHandler = this.playSong('episode2/song1');
-    var songTwoHandler = this.playSong('episode2/song2');
-    var songThreeHandler = this.playSong('episode2/song3');
+    var songOneHandler = this.playSong('episode1/song1');
+    var songTwoHandler = this.playSong('episode1/song2');
+    var songThreeHandler = this.playSong('episode1/song3');
         
     return (
       <div name='episode2' id='episode2'>
