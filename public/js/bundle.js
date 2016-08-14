@@ -458,7 +458,7 @@ var EpisodeList = _react2['default'].createClass({
         { key: index, to: episode.path.toLowerCase() },
         _react2['default'].createElement(
           'span',
-          { className: 'episodeListItem ' + classStr },
+          { className: 'episodeButton episodeListItem ' + classStr },
           romanNums[index] + '. ' + episode.title
         )
       );
@@ -715,7 +715,7 @@ var _sideMenuJson = require('./sideMenuJson');
 
 var _sideMenuJson2 = _interopRequireDefault(_sideMenuJson);
 
-var songs = _sideMenuJson2['default'].episodes[0]['episodesMeta']['songs'];
+var songs = _sideMenuJson2['default'].episodes[0]['episodesMeta']['songs'].concat(_sideMenuJson2['default'].episodes[1]['episodesMeta']['songs']);
 var RadiumLink = (0, _radium2['default'])(_reactRouter.Link);
 var Menu = require('react-burger-menu').push;
 
@@ -880,6 +880,60 @@ module.exports = exports['default'];
 Object.defineProperty(exports, '__esModule', {
     value: true
 });
+var episode1Object = {
+    className: 'episodesHeader',
+    episodesMeta: {
+        episodeName: {
+            title: 'Genesis',
+            number: 'I',
+            path: '/episodes/Genesis'
+        },
+        songs: [{
+            songTitle: 'Dream A Dream of Lazers',
+            songPath: '/audio/1. Dream A Dream of Lazers.m4a',
+            number: 1,
+            urlPath: 'episode1/song1'
+        }, {
+            songTitle: 'Down in Appalachia',
+            songPath: '/audio/2.%20Down%20In%20Appalachia.m4a',
+            number: 2,
+            urlPath: 'episode1/song2'
+        }, {
+            songTitle: 'Lazer Eyes',
+            songPath: '/audio/3. Lazer Eyes Main Theme.m4a',
+            number: 3,
+            urlPath: 'episode1/song3'
+        }]
+    }
+};
+
+var episode2Object = {
+    className: 'episodesHeader',
+    episodesMeta: {
+        episodeName: {
+            title: 'Crazy Stupid Lazers',
+            number: 'II',
+            path: '/episodes/Crazy-Stupid-Lazers'
+        },
+        songs: [{
+            songTitle: 'Oh My Lazer Eyes',
+            songPath: '/audio/1.%20oh%20my%20lazer%20eyes%201.3.wav',
+            number: 4,
+            urlPath: 'episode2/song1'
+        }, {
+            songTitle: 'In Your Eyes',
+            songPath: '/audio/2.%20In%20Your%20Eyes%201.1.wav',
+            number: 5,
+            urlPath: 'episode2/song2'
+        }, {
+            songTitle: "Eye's can't see",
+            songPath: '/audio/3.%20Eyes%20Can%27t%20See%201.1.wav',
+            number: 6,
+            urlPath: 'episode2/song3'
+        }]
+    }
+};
+
 var menu = {
     links: [{
         type: 'link',
@@ -893,32 +947,7 @@ var menu = {
         className: 'episodesHeader'
 
     }],
-    episodes: [{
-        className: 'episodesHeader',
-        episodesMeta: {
-            episodeName: {
-                title: 'Genesis',
-                number: 'I',
-                path: '/episodes/Genesis'
-            },
-            songs: [{
-                songTitle: 'Dream A Dream of Lazers',
-                songPath: '/audio/1. Dream A Dream of Lazers.m4a',
-                number: 1,
-                urlPath: 'episode1/song1'
-            }, {
-                songTitle: 'Down in Appalachia',
-                songPath: '/audio/2.%20Down%20In%20Appalachia.m4a',
-                number: 2,
-                urlPath: 'episode1/song2'
-            }, {
-                songTitle: 'Lazer Eyes',
-                songPath: '/audio/3. Lazer Eyes Main Theme.m4a',
-                number: 3,
-                urlPath: 'episode1/song3'
-            }]
-        }
-    }]
+    episodes: [episode1Object, episode2Object]
 };
 
 exports['default'] = menu;
