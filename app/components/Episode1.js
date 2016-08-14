@@ -25,12 +25,12 @@ var Episode1 = React.createClass({
     }
   },
   render: function() {
-    var songOneHandler = this.playSong('episode1/song1');
-    var songTwoHandler = this.playSong('episode1/song2');
-    var songThreeHandler = this.playSong('episode1/song3');
+    var songOneHandler = this.playSong('episode2/song1');
+    var songTwoHandler = this.playSong('episode2/song2');
+    var songThreeHandler = this.playSong('episode2/song3');
         
     return (
-      <div name='episode1' id='episode1'>
+      <div name='episode2' id='episode2'>
         <img src="/img/Track-1.gif" id="scene-1" className="episodeImages trackImages extraTopPadding" onClick={songOneHandler}/>
         <div className="episodeText" id="scene-1">
 Sing muse, of the cunning hero, the wanderer, blown off course time and again, before he plundered
