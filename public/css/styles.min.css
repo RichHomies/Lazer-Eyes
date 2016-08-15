@@ -11,8 +11,7 @@
 }
 
 #hide{
-  visibility: hidden;
-  height: 0px;
+
 }
 
 .flexCenterAlign {
@@ -2630,7 +2629,6 @@ div.pink{
     width: 50vh;
   }
   .episodeListContainer{
-    height: 30vh;
   }
   .episodeListItem {
     font-size: 5vh;
