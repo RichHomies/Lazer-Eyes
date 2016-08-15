@@ -164,7 +164,6 @@ var AudioPlayer = _react2['default'].createClass({
   },
   render: function render() {
     var titleElem = null;
-    var idString = 'hide';
     var playHandler = this.audioPlayerHandler.bind(this, 'play');
     var pauseHandler = this.audioPlayerHandler.bind(this, 'pause');
     var stopHandler = this.audioPlayerHandler.bind(this, 'stop');
@@ -210,12 +209,11 @@ var AudioPlayer = _react2['default'].createClass({
       );
       console.log('muted status', this.state.muted);
       var soundOnOff = this.state.muted ? '/icons/sound-off.png' : '/icons/sound.png';
-      idString = 'audioPlayer';
     }
 
     return _react2['default'].createElement(
       'div',
-      { id: idString },
+      { id: 'audioPlayer' },
       _react2['default'].createElement(
         'span',
         { className: 'audioContainer flexCenterAlign' },
@@ -321,6 +319,7 @@ var Episode1 = _react2['default'].createClass({
         delay: 100,
         smooth: true
       });
+      that.playSong('episode1/song1')();
     });
   },
   playSong: function playSong(song) {
@@ -715,7 +714,7 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
-  value: true
+    value: true
 });
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -752,57 +751,77 @@ var _Footer = require('./Footer');
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var Home = _react2['default'].createClass({
-  displayName: 'Home',
+var _historyLibCreateBrowserHistory = require('history/lib/createBrowserHistory');
 
-  getInitialState: function getInitialState() {
-    //state is null originally, until page loads
-    return {
-      currentSong: null
-    };
-  },
-  changeSong: function changeSong(newSong) {
-    this.setState({ currentSong: newSong });
-  },
-  componentDidMount: function componentDidMount() {
-    //since the page is loaded, we set the state based on the url params
-    if (window.location.search.length !== 0) {
-      setState({ currentSong: window.location.search });
+var _historyLibCreateBrowserHistory2 = _interopRequireDefault(_historyLibCreateBrowserHistory);
+
+var mostRecentEpisode = 'episodes/Genesis';
+
+var Home = _react2['default'].createClass({
+    displayName: 'Home',
+
+    getInitialState: function getInitialState() {
+        //state is null originally, until page loads
+        return {
+            currentSong: null
+        };
+    },
+    changeSong: function changeSong(newSong) {
+        this.setState({
+            currentSong: newSong
+        });
+    },
+    isServer: function isServer() {
+        return !(typeof window != 'undefined' && window.document);
+    },
+    componentDidMount: function componentDidMount() {
+        //since the page is loaded, we set the state based on the url params
+        if (window.location.search.length !== 0) {
+            setState({
+                currentSong: window.location.search
+            });
+        }
+        if (this.isServer()) {
+            setTimeout(function () {
+                var history = (0, _historyLibCreateBrowserHistory2['default'])();
+                history.push(mostRecentEpisode);
+            }, 3000);
+        }
+    },
+    render: function render() {
+        var childrenComponents = this.prepareChildrenComponents();
+        return _react2['default'].createElement(
+            'div',
+            null,
+            _react2['default'].createElement(_SideMenu2['default'], { episodes: _episodesMeta2['default'],
+                changeSong: this.changeSong
+            }),
+            _react2['default'].createElement(_Header2['default'], null),
+            _react2['default'].createElement(_EpisodeList2['default'], { list: _episodesMeta2['default']
+            }),
+            _react2['default'].createElement(_AudioPlayer2['default'], { currentSong: this.state.currentSong }),
+            ' ',
+            childrenComponents,
+            ' ',
+            _react2['default'].createElement(_Footer2['default'], null)
+        );
+    },
+    prepareChildrenComponents: function prepareChildrenComponents() {
+        var changeSong = this.changeSong;
+        var that = this;
+        return _react2['default'].Children.map(this.props.children, function (child) {
+            return _react2['default'].cloneElement(child, {
+                changeSong: changeSong,
+                currentSong: that.state.currentSong
+            });
+        });
     }
-  },
-  render: function render() {
-    var childrenComponents = this.prepareChildrenComponents();
-    return _react2['default'].createElement(
-      'div',
-      null,
-      _react2['default'].createElement(_SideMenu2['default'], { episodes: _episodesMeta2['default'], changeSong: this.changeSong }),
-      _react2['default'].createElement(_Header2['default'], null),
-      _react2['default'].createElement(_EpisodeList2['default'], { list: _episodesMeta2['default'] }),
-      _react2['default'].createElement(
-        'div',
-        { className: 'audioContainer' },
-        _react2['default'].createElement(_AudioPlayer2['default'], { currentSong: this.state.currentSong })
-      ),
-      childrenComponents,
-      _react2['default'].createElement(_Footer2['default'], null)
-    );
-  },
-  prepareChildrenComponents: function prepareChildrenComponents() {
-    var changeSong = this.changeSong;
-    var that = this;
-    return _react2['default'].Children.map(this.props.children, function (child) {
-      return _react2['default'].cloneElement(child, {
-        changeSong: changeSong,
-        currentSong: that.state.currentSong
-      });
-    });
-  }
 });
 
 exports['default'] = Home;
 module.exports = exports['default'];
 
-},{"./AudioPlayer":2,"./EpisodeList":5,"./Episodes":6,"./Footer":7,"./Header":8,"./SideMenu":10,"./episodesMeta":11,"react":"react"}],10:[function(require,module,exports){
+},{"./AudioPlayer":2,"./EpisodeList":5,"./Episodes":6,"./Footer":7,"./Header":8,"./SideMenu":10,"./episodesMeta":11,"history/lib/createBrowserHistory":26,"react":"react"}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
