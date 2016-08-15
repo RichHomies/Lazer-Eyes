@@ -554,7 +554,7 @@ var EpisodeList = _react2['default'].createClass({
   render: function render() {
     var episodes = this.props.list;
     var episodeListComponents = episodes.map(function (episode, index) {
-      var classStr = index % 2 === 0 ? 'genesis' : 'backgroundPurple';
+      var classStr = index % 2 === 0 ? 'genesis' : 'crazystupidlazers';
       return _react2['default'].createElement(
         RadiumLink,
         { key: index, to: episode.path.toLowerCase() },
@@ -702,7 +702,7 @@ var Header = _react2['default'].createClass({
         return _react2['default'].createElement(
             'div',
             { id: 'headerImageContainer' },
-            _react2['default'].createElement('img', { id: 'headerimg', src: '/img/LazerEyesLogo-header.gif' })
+            _react2['default'].createElement('img', { id: 'headerimg', src: '/img/LazerEyesLogo-header-arrows.gif' })
         );
     }
 });
