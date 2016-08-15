@@ -9,7 +9,7 @@ var EpisodeList = React.createClass({
   render: function() {
     var episodes = this.props.list;
     var episodeListComponents = episodes.map(function(episode, index){
-      var classStr = index % 2 === 0 ? 'genesis' : 'backgroundPurple';
+      var classStr = index % 2 === 0 ? 'genesis' : 'crazystupidlazers';
       return <RadiumLink key={index} to={episode.path.toLowerCase()}><span className={'episodeButton episodeListItem ' + classStr}>{romanNums[index] + '. ' + episode.title}</span></RadiumLink>
     });
     return (

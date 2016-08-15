@@ -2601,6 +2601,12 @@ div.pink{
   background-attachment: fixed;
   background-position: center;
 }
+.crazystupidlazers {
+  background-image: url('/img/EP2-header.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
 
 .episodeButton:hover {
   opacity: .75;
