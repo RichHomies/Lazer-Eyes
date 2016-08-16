@@ -44,7 +44,7 @@ var episode2Object =  {
                 number: 5,
                 urlPath: 'episode2/song2'
             }, {
-                songTitle: "Eye's can't see",
+                songTitle: "Eyes can't see",
                 songPath: '/audio/3.%20Eyes%20Can%27t%20See%201.1.wav',
                 number: 6,
                 urlPath: 'episode2/song3'
