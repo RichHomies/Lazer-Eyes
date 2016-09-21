@@ -1,6 +1,6 @@
 import React from 'react';
 import meta from './sideMenuJson';
-var songs = meta.episodes[0]['episodesMeta']['songs'].concat(meta.episodes[1]['episodesMeta']['songs'])
+var songs = meta.songs
 
 var AudioPlayer = React.createClass({
   getInitialState: function() {
@@ -175,7 +175,11 @@ var AudioPlayer = React.createClass({
   seekElemHandler : function(e){
     var max = 90;
     var audioPlayer = document.getElementById('player');
-    var songlengthInSeconds = audioPlayer.seekable.end(0);
+    try {
+      var songlengthInSeconds = audioPlayer.seekable.end(0);
+    } catch(e) {
+      console.log('fuk', e)
+    }
     var secondsPlayed = audioPlayer.currentTime;
     var percentageOfSongElapsed = secondsPlayed / songlengthInSeconds;
     var mappedWidth = max * percentageOfSongElapsed;
@@ -196,7 +200,11 @@ var AudioPlayer = React.createClass({
     var xPosition = this.getXPosition(e);
     var xPositionPercentage = xPosition/titleElemWidth;
     //need to check with out of bounds error
-    var songlengthInSeconds = audioPlayer.seekable.end(0);
+    try {
+      var songlengthInSeconds = audioPlayer.seekable.end(0);
+    } catch(e) {
+      console.log('fuk', e)
+    }
     console.log('xposition', xPosition);
     console.log('width', titleElemWidth);
     audioPlayer.currentTime = xPositionPercentage * songlengthInSeconds;

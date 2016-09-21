@@ -2607,6 +2607,12 @@ div.pink{
   background-attachment: fixed;
   background-position: center;
 }
+.empirestrikes {
+  background-image: url(/img/The-Empire-Strikes-Repeatedly-EP-3-cover.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
 
 .episodeButton:hover {
   opacity: .75;
