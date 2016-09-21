@@ -44,10 +44,37 @@ var episode2Object =  {
                 number: 5,
                 urlPath: 'episode2/song2'
             }, {
-                songTitle: "Eyes can't see",
+                songTitle: "Eyes Can't See",
                 songPath: '/audio/3.%20Eyes%20Can%27t%20See%201.1.wav',
                 number: 6,
                 urlPath: 'episode2/song3'
+             }]
+          }
+        };
+
+var episode3Object =  {
+        className: 'episodesHeader',
+        episodesMeta: {
+            episodeName: {
+                title: 'The Empire Strikes Repeatedly',
+                number: 'III',
+                path : '/episodes/The-Empire-Strikes-Repeatedly'
+            }, 
+            songs: [{
+                songTitle: 'Just Give Me Your Body',
+                songPath: '/audio/Just%20Give%20Me%20Your%20Body.wav',
+                number: 7,
+                urlPath: 'episode3/song1'
+            }, {
+                songTitle: 'Rainy Day (About You)',
+                songPath: '/audio/Rainy%20Day%20%28About%20You%29.wav',
+                number: 8,
+                urlPath: 'episode3/song2'
+            }, {
+                songTitle: "The Prophecy",
+                songPath: '/audio/The%20Prophecy.wav',
+                number: 9,
+                urlPath: 'episode3/song3'
              }]
           }
         };
@@ -66,8 +93,13 @@ var menu = {
         className: 'episodesHeader'
 
     }],
-    episodes: [episode1Object, episode2Object]
+    episodes: [episode1Object, episode2Object, episode3Object]
 };
 
+menu.songs = menu.episodes.map(function(episode){
+        return episode.episodesMeta.songs;
+    }).reduce(function(accum, episode){
+        return accum.concat(episode);
+    }, []);
 
 export default menu;
