@@ -1236,17 +1236,17 @@ var episode3Object = {
         },
         songs: [{
             songTitle: 'Just Give Me Your Body',
-            songPath: '/audio/Just%20Give%20Me%20Your%20Body.wav',
+            songPath: '/audio/Just%20Give%20Me%20Your%20Body%201.m4a',
             number: 7,
             urlPath: 'episode3/song1'
         }, {
             songTitle: 'Rainy Day (About You)',
-            songPath: '/audio/Rainy%20Day%20%28About%20You%29.wav',
+            songPath: '/audio/Rainy%20Day%20%28About%20You%29%201.m4a',
             number: 8,
             urlPath: 'episode3/song2'
         }, {
             songTitle: "The Prophecy",
-            songPath: '/audio/The%20Prophecy.wav',
+            songPath: '/audio/The%20Prophecy%201.m4a',
             number: 9,
             urlPath: 'episode3/song3'
         }]
