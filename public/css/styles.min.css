@@ -71,6 +71,7 @@
   font-size: 2vh;
   z-index: 2;
   margin-left: 1vw;
+  text-align: center;
 }
 
 .seekElem{
@@ -2730,6 +2731,10 @@ display: -webkit-flex;
   margin: 1\.5vh;
 }
 
+.songLink:hover, .bm-item-list:hover, {
+  color: #F20AC9
+}
+
 @media screen and (min-width: 800px){
   .episodesHeader > a {
       font-size: 5vh;
@@ -2740,12 +2745,17 @@ display: -webkit-flex;
   }
 
   .lazerEyesMenuLogo {
-    width: 345px;
-    height: 345px;
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .bm-item-list {
     font-size: 4vh;
+    text-align: center;
+    overflow: scroll;
   }
 
   .songLink {

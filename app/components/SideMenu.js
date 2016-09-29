@@ -39,7 +39,6 @@ var SideMenu = React.createClass({
             </div>
           </div>
           <div className='menuListContainer'>
-            <div className='episodesHeader sideMenuItems'>EPISODES</div>
             <div className='sideMenuItems'>
               {renderedEpisodes}
             </div>

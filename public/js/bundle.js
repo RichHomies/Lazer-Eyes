@@ -251,6 +251,7 @@ var AudioPlayer = _react2['default'].createClass({
   },
   trackStopHandler: function trackStopHandler() {
     this.setState({ isPlaying: false });
+    this.audioPlayerHandler('skip');
   },
   seekElemHandler: function seekElemHandler(e) {
     var max = 90;
@@ -1065,11 +1066,6 @@ var SideMenu = _react2['default'].createClass({
         _react2['default'].createElement(
           'div',
           { className: 'menuListContainer' },
-          _react2['default'].createElement(
-            'div',
-            { className: 'episodesHeader sideMenuItems' },
-            'EPISODES'
-          ),
           _react2['default'].createElement(
             'div',
             { className: 'sideMenuItems' },

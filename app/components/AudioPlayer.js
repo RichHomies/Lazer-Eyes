@@ -171,6 +171,7 @@ var AudioPlayer = React.createClass({
   },
   trackStopHandler : function(){
     this.setState({isPlaying: false});
+    this.audioPlayerHandler('skip');
   },
   seekElemHandler : function(e){
     var max = 90;
