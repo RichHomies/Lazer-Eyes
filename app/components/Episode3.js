@@ -10,7 +10,7 @@ var Episode3 = React.createClass({
     var that = this
     $(function() {
 
-      scroller.scrollTo('episode3', {
+      scroller.scrollTo('start', {
         duration: 1500,
         delay: 100,
         smooth: true,
@@ -33,7 +33,7 @@ var Episode3 = React.createClass({
     return (
       <div name='episode3' id='episode3'>
         <img src="/img/track-7.gif" id="scene-1" className="episodeImages trackImages extraTopPadding" onClick={songOneHandler}/>
-        <div className="episodeText" id="scene-1">
+        <div className="episodeText" id="start">
         "It's a trap!" shouts the Admiral Ackbar in Lazer Eyes subconscious. But its too
          late, he and Lazer Babe are surrounded by minions, and not the annoying yellow 
          tic-tac puffy-centaur nonsense-speaking kind – no, by disheveled mind-controlled 

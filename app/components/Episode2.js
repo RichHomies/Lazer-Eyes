@@ -10,7 +10,7 @@ var Episode2 = React.createClass({
     var that = this
     $(function() {
 
-      scroller.scrollTo('episode2', {
+      scroller.scrollTo('start', {
         duration: 1500,
         delay: 100,
         smooth: true,
@@ -33,7 +33,7 @@ var Episode2 = React.createClass({
     return (
       <div name='episode2' id='episode2'>
         <img src="/img/track-4.gif" id="scene-1" className="episodeImages trackImages extraTopPadding" onClick={songOneHandler}/>
-        <div className="episodeText" id="scene-1">
+        <div className="episodeText" id="start" >
 Days turn into weeks, weeks turned into months. Thickly wooded Appalachian hills turn into suburban streets 
 and stripmalls, as Lazer Eyes wanders aimlessly. Yet these fairly predictable transformations are accompanied 
 by another, more perplexing evolution. As the destructive wake he leaves in his path grows ever longer, one 

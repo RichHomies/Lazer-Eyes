@@ -241,6 +241,26 @@ div.pink{
   cursor: pointer;
 }
 
+#footer {
+  background-color: black;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 13vh;
+  padding-top: 5vh;
+  border-top-width: 12px;
+  border-style: solid;
+  border-top-color: #F20AC9;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+
+#socialMediaIconsContainer a:hover {
+    color: #F20AC9;
+}
+
 @media screen and (max-width: 515px){
   img#headerimg {
     height: 50vh;

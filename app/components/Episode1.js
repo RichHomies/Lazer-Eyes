@@ -10,7 +10,7 @@ var Episode1 = React.createClass({
     var that = this
     $(function() {
 
-      scroller.scrollTo('episode1', {
+      scroller.scrollTo('start', {
         duration: 1500,
         delay: 100,
         smooth: true,
@@ -33,7 +33,7 @@ var Episode1 = React.createClass({
     return (
       <div name='episode1' id='episode1'>
         <img src="/img/Track-1.gif" id="scene-1" className="episodeImages trackImages extraTopPadding" onClick={songOneHandler}/>
-        <div className="episodeText" id="scene-1">
+        <div className="episodeText" id="start">
 Sing muse, of the cunning hero, the wanderer, blown off course time and again, before he plundered
 
 Cityopolis' heights... Was it the best of times, was it the worst of times? Was it the age of wisdom, the

@@ -323,7 +323,7 @@ var Episode1 = _react2['default'].createClass({
     var that = this;
     $(function () {
 
-      scroller.scrollTo('episode1', {
+      scroller.scrollTo('start', {
         duration: 1500,
         delay: 100,
         smooth: true
@@ -349,7 +349,7 @@ var Episode1 = _react2['default'].createClass({
       _react2['default'].createElement('img', { src: '/img/Track-1.gif', id: 'scene-1', className: 'episodeImages trackImages extraTopPadding', onClick: songOneHandler }),
       _react2['default'].createElement(
         'div',
-        { className: 'episodeText', id: 'scene-1' },
+        { className: 'episodeText', id: 'start' },
         'Sing muse, of the cunning hero, the wanderer, blown off course time and again, before he plundered Cityopolis\' heights... Was it the best of times, was it the worst of times? Was it the age of wisdom, the age of foolishness? It was the epoch of belief, it was the epoch of incredulity, it was the season of light, it was the season of darkness, for in the beginning, our hearts were formless and empty, and darkness was upon the face of the deep. And then he said, "Let there be light..." and there was light. Lazer light. Shining so bright. Lighting up the night, lending us the courage to fight for what is right.'
       ),
       _react2['default'].createElement('img', { src: '/img/EP-1-image-1.jpg', className: 'episodeImages' }),
@@ -460,7 +460,7 @@ var Episode2 = _react2['default'].createClass({
     var that = this;
     $(function () {
 
-      scroller.scrollTo('episode2', {
+      scroller.scrollTo('start', {
         duration: 1500,
         delay: 100,
         smooth: true
@@ -485,7 +485,7 @@ var Episode2 = _react2['default'].createClass({
       _react2['default'].createElement('img', { src: '/img/track-4.gif', id: 'scene-1', className: 'episodeImages trackImages extraTopPadding', onClick: songOneHandler }),
       _react2['default'].createElement(
         'div',
-        { className: 'episodeText', id: 'scene-1' },
+        { className: 'episodeText', id: 'start' },
         'Days turn into weeks, weeks turned into months. Thickly wooded Appalachian hills turn into suburban streets and stripmalls, as Lazer Eyes wanders aimlessly. Yet these fairly predictable transformations are accompanied by another, more perplexing evolution. As the destructive wake he leaves in his path grows ever longer, one might expect the infamy of this yet-to-be-born-again-but-as-of-now-"anti"-hero to grow, from whispers, to shouts, from shouts to mobs and torches and pitchforks, but instead, things begin to change with fewer and fewer people openly displaying their hatred for him (spitting etc.), replaced by a vacant stare and an obsession with all types of devices with any kind of display. As the streets grow quiet Lazer Eyes ventures further into Cityopolis to see what is going on...'
       ),
       _react2['default'].createElement('img', { src: '/img/EP2-the-tower.jpg', className: 'episodeImages' }),
@@ -562,7 +562,7 @@ var Episode3 = _react2['default'].createClass({
     var that = this;
     $(function () {
 
-      scroller.scrollTo('episode3', {
+      scroller.scrollTo('start', {
         duration: 1500,
         delay: 100,
         smooth: true
@@ -587,7 +587,7 @@ var Episode3 = _react2['default'].createClass({
       _react2['default'].createElement('img', { src: '/img/track-7.gif', id: 'scene-1', className: 'episodeImages trackImages extraTopPadding', onClick: songOneHandler }),
       _react2['default'].createElement(
         'div',
-        { className: 'episodeText', id: 'scene-1' },
+        { className: 'episodeText', id: 'start' },
         '"It\'s a trap!" shouts the Admiral Ackbar in Lazer Eyes subconscious. But its too late, he and Lazer Babe are surrounded by minions, and not the annoying yellow tic-tac puffy-centaur nonsense-speaking kind – no, by disheveled mind-controlled minions of the dastardly Reflektor, would-be proud sons and daughters of humanity reduced to mindless seekers, which is clearly the more disturbing type of minion. Well. That\'s debatable actually.',
         '\n\n',
         'Thus, Lazer Eyes and Lazer Babe, proud warriors for Justice, now prisoners, are ushered by a crowd of mindless minions down a long dark hallway. At the end of the hallway is an elevator, a private elevator clearly installed to satisfy the demands of a very self-absorbed person\'s nauseatingly insecure subconscious, and after an excruciatingly long ride accompanied by one and a half tracks from a tenor-saxophone Phil Collins cover CD, the elevator doors open, revealing a mirrored throne room at the top floor of the highest tower of the Tower.',
@@ -1049,7 +1049,7 @@ var SideMenu = _react2['default'].createClass({
             { className: 'episodesHeader sideMenuItems' },
             _react2['default'].createElement(
               RadiumLink,
-              { onClick: this.isMenuOpen, to: 'https://lazer-gift-shop.myshopify.com/' },
+              { onClick: this.isMenuOpen, to: 'https://shop.lazersforeyes.com/' },
               'GIFT SHOP'
             )
           ),
