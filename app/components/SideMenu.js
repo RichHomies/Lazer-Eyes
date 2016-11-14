@@ -43,13 +43,6 @@ var SideMenu = React.createClass({
               {renderedEpisodes}
             </div>
           </div>
-          <div className='sideMenuItems'>
-            <div className='episodesHeader sideMenuItems'>
-              <RadiumLink onClick={this.isMenuOpen} to={'#socialMediaIconsContainer'}>SOCIAL</RadiumLink>
-            </div>
-          </div>
-
-
         </Menu>
       </div>
     );
@@ -70,7 +63,7 @@ var SideMenu = React.createClass({
     var that = this;
     var epiNameObj = episode.episodeName;
     var epiSongsObj = episode.songs;
-    var episodeName = <RadiumLink onClick={this.isMenuOpen} key={count++} className={'bm-item-list'} to={'/episodes/'+epiNameObj.title.toLowerCase()}>{epiNameObj.number + ': ' + epiNameObj.title}</RadiumLink>;
+    var episodeName = <RadiumLink onClick={this.isMenuOpen} key={count++} className={'bm-item-listA'} to={'/episodes/'+epiNameObj.title.toLowerCase()}>{epiNameObj.title}</RadiumLink>;
     
     episodeFragment.push(episodeName);
     epiSongsObj.forEach(function(song){
@@ -81,10 +74,20 @@ var SideMenu = React.createClass({
   },
   renderSong: function(song){
     var playSongHander;
+    var currentlyPlayingSong = this.props.currentSong;
+    var classStr;
+    
     for(var songModel in songs){
       if(songs[songModel].songTitle === song.songTitle){
         playSongHander = this.playSong(songs[songModel]['urlPath']);
-        return <div onClick={playSongHander} className='songLink'>{song.number + '. ' + song.songTitle}</div>;
+        
+        if(songs[songModel]['urlPath'] === this.props.currentSong || songs[songModel]['songPath'] === this.props.currentSong){
+          debugger;
+          classStr = 'songLink currentlyPlayingSong'; 
+        } else {
+          classStr = 'songLink'
+        }
+        return <div onClick={playSongHander} className={classStr}>{song.number + '. ' + song.songTitle}</div>;
       }
     }
   },

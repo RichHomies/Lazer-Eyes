@@ -15,7 +15,7 @@ var Episode3 = React.createClass({
         delay: 100,
         smooth: true,
       })
-
+      that.playSong('episode3/song1')();
     });
   },
   playSong: function(song){

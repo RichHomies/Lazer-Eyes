@@ -42,23 +42,14 @@ var Home = React.createClass({
             },
             render: function() {
                 var childrenComponents = this.prepareChildrenComponents();
-                return ( < div >
-                        < SideMenu episodes = {
-                            episodes
-                        }
-                        changeSong = {
-                            this.changeSong
-                        }
-                        />
-        <Header / >
-                        < EpisodeList list = {
-                            episodes
-                        }
-                        />
-        <AudioPlayer currentSong={this.state.currentSong}/ > {
-                            childrenComponents
-                        } < Footer / >
-                        < /div>
+                var updateCurrentSong = this.updateCurrentSong(this);
+                return ( <div>
+                            <SideMenu episodes={episodes} changeSong={this.changeSong} currentSong={this.state.currentSong}/>
+                            <Header />
+                            <EpisodeList list={episodes}/>
+                            <AudioPlayer currentSong={this.state.currentSong} updateCurrentSong={updateCurrentSong}/ > {childrenComponents} 
+                            <Footer />
+                        </div>
     );
   },
   prepareChildrenComponents: function(){
@@ -70,6 +61,11 @@ var Home = React.createClass({
           currentSong: that.state.currentSong
         });
     });
+  },
+  updateCurrentSong: function(that){
+    return function(obj){
+        that.setState({currentSong: obj.currentSongUrl});
+    }
   }
 })
 

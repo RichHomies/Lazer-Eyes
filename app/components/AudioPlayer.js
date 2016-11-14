@@ -76,6 +76,7 @@ var AudioPlayer = React.createClass({
             songs.forEach(function(song, i) {
               if (song.number === previousTrackNum) {
                 that.setState({currentSongUrl: song.songPath, currentSongTitle: song.songTitle, trackNumber: previousTrackNum.toString()});
+                that.props.updateCurrentSong({currentSongUrl: song.songPath});
               }
             })
           }
@@ -94,6 +95,7 @@ var AudioPlayer = React.createClass({
           songs.forEach(function(song, i) {
             if (song.number === nextTrackNum) {
               that.setState({currentSongUrl: song.songPath, currentSongTitle: song.songTitle, trackNumber: nextTrackNum.toString()});
+              that.props.updateCurrentSong({currentSongUrl: song.songPath});
             }
           })
         }

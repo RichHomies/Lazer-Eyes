@@ -24,7 +24,7 @@ var SideMenuEpisodes = React.createClass({
     var count = 0;
     var that = this;
     meta = meta.episodeName;
-    return (<RadiumLink onClick={that.isMenuOpen} key={count++} className={'bm-item-list'} to={'/episodes/'+meta.title.toLowerCase()}>{meta.number + ': ' + meta.title}</RadiumLink>);
+    return (<RadiumLink onClick={that.isMenuOpen} key={count++} className={'bm-item-list'} to={'/episodes/'+meta.title.toLowerCase()}>{meta.title}</RadiumLink>);
     
     // return meta.map(function(metaEpisode, key){
     //   if(key === 0){

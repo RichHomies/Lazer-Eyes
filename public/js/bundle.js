@@ -118,6 +118,7 @@ var AudioPlayer = _react2['default'].createClass({
             songs.forEach(function (song, i) {
               if (song.number === previousTrackNum) {
                 that.setState({ currentSongUrl: song.songPath, currentSongTitle: song.songTitle, trackNumber: previousTrackNum.toString() });
+                that.props.updateCurrentSong({ currentSongUrl: song.songPath });
               }
             });
           }
@@ -136,6 +137,7 @@ var AudioPlayer = _react2['default'].createClass({
           songs.forEach(function (song, i) {
             if (song.number === nextTrackNum) {
               that.setState({ currentSongUrl: song.songPath, currentSongTitle: song.songTitle, trackNumber: nextTrackNum.toString() });
+              that.props.updateCurrentSong({ currentSongUrl: song.songPath });
             }
           });
         }
@@ -465,6 +467,7 @@ var Episode2 = _react2['default'].createClass({
         delay: 100,
         smooth: true
       });
+      that.playSong('episode2/song1')();
     });
   },
   playSong: function playSong(song) {
@@ -567,6 +570,7 @@ var Episode3 = _react2['default'].createClass({
         delay: 100,
         smooth: true
       });
+      that.playSong('episode3/song1')();
     });
   },
   playSong: function playSong(song) {
@@ -954,19 +958,16 @@ var Home = _react2['default'].createClass({
     },
     render: function render() {
         var childrenComponents = this.prepareChildrenComponents();
+        var updateCurrentSong = this.updateCurrentSong(this);
         return _react2['default'].createElement(
             'div',
             null,
-            _react2['default'].createElement(_SideMenu2['default'], { episodes: _episodesMeta2['default'],
-                changeSong: this.changeSong
-            }),
+            _react2['default'].createElement(_SideMenu2['default'], { episodes: _episodesMeta2['default'], changeSong: this.changeSong, currentSong: this.state.currentSong }),
             _react2['default'].createElement(_Header2['default'], null),
-            _react2['default'].createElement(_EpisodeList2['default'], { list: _episodesMeta2['default']
-            }),
-            _react2['default'].createElement(_AudioPlayer2['default'], { currentSong: this.state.currentSong }),
+            _react2['default'].createElement(_EpisodeList2['default'], { list: _episodesMeta2['default'] }),
+            _react2['default'].createElement(_AudioPlayer2['default'], { currentSong: this.state.currentSong, updateCurrentSong: updateCurrentSong }),
             ' ',
             childrenComponents,
-            ' ',
             _react2['default'].createElement(_Footer2['default'], null)
         );
     },
@@ -979,6 +980,11 @@ var Home = _react2['default'].createClass({
                 currentSong: that.state.currentSong
             });
         });
+    },
+    updateCurrentSong: function updateCurrentSong(that) {
+        return function (obj) {
+            that.setState({ currentSong: obj.currentSongUrl });
+        };
     }
 });
 
@@ -1071,19 +1077,6 @@ var SideMenu = _react2['default'].createClass({
             { className: 'sideMenuItems' },
             renderedEpisodes
           )
-        ),
-        _react2['default'].createElement(
-          'div',
-          { className: 'sideMenuItems' },
-          _react2['default'].createElement(
-            'div',
-            { className: 'episodesHeader sideMenuItems' },
-            _react2['default'].createElement(
-              RadiumLink,
-              { onClick: this.isMenuOpen, to: '#socialMediaIconsContainer' },
-              'SOCIAL'
-            )
-          )
         )
       )
     );
@@ -1104,8 +1097,8 @@ var SideMenu = _react2['default'].createClass({
     var epiSongsObj = episode.songs;
     var episodeName = _react2['default'].createElement(
       RadiumLink,
-      { onClick: this.isMenuOpen, key: count++, className: 'bm-item-list', to: '/episodes/' + epiNameObj.title.toLowerCase() },
-      epiNameObj.number + ': ' + epiNameObj.title
+      { onClick: this.isMenuOpen, key: count++, className: 'bm-item-listA', to: '/episodes/' + epiNameObj.title.toLowerCase() },
+      epiNameObj.title
     );
 
     episodeFragment.push(episodeName);
@@ -1117,12 +1110,22 @@ var SideMenu = _react2['default'].createClass({
   },
   renderSong: function renderSong(song) {
     var playSongHander;
+    var currentlyPlayingSong = this.props.currentSong;
+    var classStr;
+
     for (var songModel in songs) {
       if (songs[songModel].songTitle === song.songTitle) {
         playSongHander = this.playSong(songs[songModel]['urlPath']);
+
+        if (songs[songModel]['urlPath'] === this.props.currentSong || songs[songModel]['songPath'] === this.props.currentSong) {
+          debugger;
+          classStr = 'songLink currentlyPlayingSong';
+        } else {
+          classStr = 'songLink';
+        }
         return _react2['default'].createElement(
           'div',
-          { onClick: playSongHander, className: 'songLink' },
+          { onClick: playSongHander, className: classStr },
           song.number + '. ' + song.songTitle
         );
       }

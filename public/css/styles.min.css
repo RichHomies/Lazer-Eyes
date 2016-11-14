@@ -2726,6 +2726,14 @@ display: -webkit-flex;
   margin-bottom: 1vh;
 }
 
+.bm-item-listA {
+  color: white;
+  display: block;
+  text-decoration: none;
+  font-size: 4vw;
+  margin-bottom: 1vh;
+}
+
 .sideMenuItems {
   display: flex;
   display: -webkit-flex;
@@ -2751,9 +2759,10 @@ display: -webkit-flex;
   margin: 1\.5vh;
 }
 
-.songLink:hover, .bm-item-list:hover, {
+.songLink:hover, .currentlyPlayingSong {
   color: #F20AC9
 }
+
 
 @media screen and (min-width: 800px){
   .episodesHeader > a {
@@ -2776,6 +2785,11 @@ display: -webkit-flex;
     font-size: 4vh;
     text-align: center;
     overflow: scroll;
+  }
+
+  .bm-item-listA {
+    font-size: 4vh;
+    text-align: center;
   }
 
   .songLink {
