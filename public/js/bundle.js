@@ -434,7 +434,7 @@ var Episode1 = _react2['default'].createClass({
 exports['default'] = Episode1;
 module.exports = exports['default'];
 
-},{"react":"react","react-scroll":195}],4:[function(require,module,exports){
+},{"react":"react","react-scroll":177}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -537,7 +537,7 @@ var Episode2 = _react2['default'].createClass({
 exports['default'] = Episode2;
 module.exports = exports['default'];
 
-},{"react":"react","react-scroll":195}],5:[function(require,module,exports){
+},{"react":"react","react-scroll":177}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -672,7 +672,7 @@ var Episode3 = _react2['default'].createClass({
 exports['default'] = Episode3;
 module.exports = exports['default'];
 
-},{"react":"react","react-scroll":195}],6:[function(require,module,exports){
+},{"react":"react","react-scroll":177}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -741,7 +741,7 @@ var EpisodeList = _react2['default'].createClass({
 exports['default'] = EpisodeList;
 module.exports = exports['default'];
 
-},{"radium":46,"react":"react","react-router":"react-router"}],7:[function(require,module,exports){
+},{"radium":81,"react":"react","react-router":"react-router"}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -991,7 +991,7 @@ var Home = _react2['default'].createClass({
 exports['default'] = Home;
 module.exports = exports['default'];
 
-},{"./AudioPlayer":2,"./EpisodeList":6,"./Episodes":7,"./Footer":8,"./Header":9,"./SideMenu":11,"./episodesMeta":12,"history/lib/createBrowserHistory":22,"react":"react"}],11:[function(require,module,exports){
+},{"./AudioPlayer":2,"./EpisodeList":6,"./Episodes":7,"./Footer":8,"./Header":9,"./SideMenu":11,"./episodesMeta":12,"history/lib/createBrowserHistory":27,"react":"react"}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -1145,7 +1145,7 @@ var SideMenu = _react2['default'].createClass({
 exports['default'] = SideMenu;
 module.exports = exports['default'];
 
-},{"./sideMenuJson":13,"radium":46,"react":"react","react-burger-menu":96,"react-router":"react-router"}],12:[function(require,module,exports){
+},{"./sideMenuJson":13,"radium":81,"react":"react","react-burger-menu":100,"react-router":"react-router"}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -1252,6 +1252,70 @@ var episode3Object = {
     }
 };
 
+var episode4Object = {
+    className: 'episodesHeader',
+    episodesMeta: {
+        episodeName: {
+            title: 'The Empire Strikes Repeatedly',
+            number: 'IV',
+            path: '/episodes/The-Empire-Strikes-Repeatedly'
+        },
+        songs: [{
+            songTitle: "It's Coming To Life",
+            songPath: '/audio/It%27s%20Coming%20To%20Life.m4a',
+            number: 10,
+            urlPath: 'episode4/song1'
+        }, {
+            songTitle: 'Feel The Burn',
+            songPath: '/audio/Feel%20The%20Burn%202.0.m4a',
+            number: 11,
+            urlPath: 'episode4/song2'
+        }, {
+            songTitle: "Lazers for Eyes (Eyes for Lazers)",
+            songPath: '/audio/lazers%20for%20eyes%20%28eyes%20for%20lazers%29%202.0.m4a',
+            number: 12,
+            urlPath: 'episode4/song3'
+        }, {
+            songTitle: "Save the Night",
+            songPath: '/audio/save%20the%20night%202.0%20.m4a',
+            number: 13,
+            urlPath: 'episode4/song4'
+        }]
+    }
+};
+
+var episode5Object = {
+    className: 'episodesHeader',
+    episodesMeta: {
+        episodeName: {
+            title: 'The Empire Strikes Repeatedly',
+            number: 'V',
+            path: '/episodes/The-Empire-Strikes-Repeatedly'
+        },
+        songs: [{
+            songTitle: "Oh My Lazer Eyes Pt. 2",
+            songPath: '/audio/It%27s%20Coming%20To%20Life.m4a',
+            number: 14,
+            urlPath: 'episode5/song1'
+        }, {
+            songTitle: 'The Lazer Beam of Destiny',
+            songPath: '/audio/15.%20The%20Lazer%20Beam%20of%20Destiny%201.m4a',
+            number: 15,
+            urlPath: 'episode5/song2'
+        }, {
+            songTitle: "#Newsflash",
+            songPath: '/audio/16.%20%23Newsflash%201.m4a',
+            number: 16,
+            urlPath: 'episode5/song3'
+        }, {
+            songTitle: "Man of the Skies",
+            songPath: '/audio/17.%20Man%20of%20the%20Skies%201.m4a',
+            number: 17,
+            urlPath: 'episode5/song4'
+        }]
+    }
+};
+
 var menu = {
     links: [{
         type: 'link',
@@ -1265,7 +1329,7 @@ var menu = {
         className: 'episodesHeader'
 
     }],
-    episodes: [episode1Object, episode2Object, episode3Object]
+    episodes: [episode1Object, episode2Object, episode3Object, episode4Object]
 };
 
 menu.songs = menu.episodes.map(function (episode) {
@@ -1316,7 +1380,7 @@ var location = '' + pathname + search + hash;
   ), document.getElementById('app'));
 });
 
-},{"./routes":15,"history/lib/createBrowserHistory":22,"react":"react","react-dom":"react-dom","react-router":"react-router"}],15:[function(require,module,exports){
+},{"./routes":15,"history/lib/createBrowserHistory":27,"react":"react","react-dom":"react-dom","react-router":"react-router"}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -1355,3965 +1419,17 @@ exports['default'] = _react2['default'].createElement(
 module.exports = exports['default'];
 
 },{"./components/App":1,"./components/Episodes":7,"./components/Home":10,"react":"react","react-router":"react-router"}],16:[function(require,module,exports){
-// shim for using process in browser
-
-var process = module.exports = {};
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = setTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    clearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        setTimeout(drainQueue, 0);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-},{}],17:[function(require,module,exports){
-/**
- * Indicates that navigation was caused by a call to history.push.
- */
-'use strict';
-
-exports.__esModule = true;
-var PUSH = 'PUSH';
-
-exports.PUSH = PUSH;
-/**
- * Indicates that navigation was caused by a call to history.replace.
- */
-var REPLACE = 'REPLACE';
-
-exports.REPLACE = REPLACE;
-/**
- * Indicates that navigation was caused by some other action such
- * as using a browser's back/forward buttons and/or manually manipulating
- * the URL in a browser's location bar. This is the default.
- *
- * See https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate
- * for more information.
- */
-var POP = 'POP';
-
-exports.POP = POP;
-exports['default'] = {
-  PUSH: PUSH,
-  REPLACE: REPLACE,
-  POP: POP
-};
-},{}],18:[function(require,module,exports){
-"use strict";
-
-exports.__esModule = true;
-exports.loopAsync = loopAsync;
-
-function loopAsync(turns, work, callback) {
-  var currentTurn = 0;
-  var isDone = false;
-
-  function done() {
-    isDone = true;
-    callback.apply(this, arguments);
-  }
-
-  function next() {
-    if (isDone) return;
-
-    if (currentTurn < turns) {
-      work.call(this, currentTurn++, next, done);
-    } else {
-      done.apply(this, arguments);
-    }
-  }
-
-  next();
-}
-},{}],19:[function(require,module,exports){
-(function (process){
-/*eslint-disable no-empty */
-'use strict';
-
-exports.__esModule = true;
-exports.saveState = saveState;
-exports.readState = readState;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _warning = require('warning');
-
-var _warning2 = _interopRequireDefault(_warning);
-
-var KeyPrefix = '@@History/';
-var QuotaExceededError = 'QuotaExceededError';
-var SecurityError = 'SecurityError';
-
-function createKey(key) {
-  return KeyPrefix + key;
-}
-
-function saveState(key, state) {
-  try {
-    window.sessionStorage.setItem(createKey(key), JSON.stringify(state));
-  } catch (error) {
-    if (error.name === SecurityError) {
-      // Blocking cookies in Chrome/Firefox/Safari throws SecurityError on any
-      // attempt to access window.sessionStorage.
-      process.env.NODE_ENV !== 'production' ? _warning2['default'](false, '[history] Unable to save state; sessionStorage is not available due to security settings') : undefined;
-
-      return;
-    }
-
-    if (error.name === QuotaExceededError && window.sessionStorage.length === 0) {
-      // Safari "private mode" throws QuotaExceededError.
-      process.env.NODE_ENV !== 'production' ? _warning2['default'](false, '[history] Unable to save state; sessionStorage is not available in Safari private mode') : undefined;
-
-      return;
-    }
-
-    throw error;
-  }
-}
-
-function readState(key) {
-  var json = undefined;
-  try {
-    json = window.sessionStorage.getItem(createKey(key));
-  } catch (error) {
-    if (error.name === SecurityError) {
-      // Blocking cookies in Chrome/Firefox/Safari throws SecurityError on any
-      // attempt to access window.sessionStorage.
-      process.env.NODE_ENV !== 'production' ? _warning2['default'](false, '[history] Unable to read state; sessionStorage is not available due to security settings') : undefined;
-
-      return null;
-    }
-  }
-
-  if (json) {
-    try {
-      return JSON.parse(json);
-    } catch (error) {
-      // Ignore invalid JSON.
-    }
-  }
-
-  return null;
-}
-}).call(this,require('_process'))
-},{"_process":16,"warning":34}],20:[function(require,module,exports){
-'use strict';
-
-exports.__esModule = true;
-exports.addEventListener = addEventListener;
-exports.removeEventListener = removeEventListener;
-exports.getHashPath = getHashPath;
-exports.replaceHashPath = replaceHashPath;
-exports.getWindowPath = getWindowPath;
-exports.go = go;
-exports.getUserConfirmation = getUserConfirmation;
-exports.supportsHistory = supportsHistory;
-exports.supportsGoWithoutReloadUsingHash = supportsGoWithoutReloadUsingHash;
-
-function addEventListener(node, event, listener) {
-  if (node.addEventListener) {
-    node.addEventListener(event, listener, false);
-  } else {
-    node.attachEvent('on' + event, listener);
-  }
-}
-
-function removeEventListener(node, event, listener) {
-  if (node.removeEventListener) {
-    node.removeEventListener(event, listener, false);
-  } else {
-    node.detachEvent('on' + event, listener);
-  }
-}
-
-function getHashPath() {
-  // We can't use window.location.hash here because it's not
-  // consistent across browsers - Firefox will pre-decode it!
-  return window.location.href.split('#')[1] || '';
-}
-
-function replaceHashPath(path) {
-  window.location.replace(window.location.pathname + window.location.search + '#' + path);
-}
-
-function getWindowPath() {
-  return window.location.pathname + window.location.search + window.location.hash;
-}
-
-function go(n) {
-  if (n) window.history.go(n);
-}
-
-function getUserConfirmation(message, callback) {
-  callback(window.confirm(message));
-}
-
-/**
- * Returns true if the HTML5 history API is supported. Taken from Modernizr.
- *
- * https://github.com/Modernizr/Modernizr/blob/master/LICENSE
- * https://github.com/Modernizr/Modernizr/blob/master/feature-detects/history.js
- * changed to avoid false negatives for Windows Phones: https://github.com/rackt/react-router/issues/586
- */
-
-function supportsHistory() {
-  var ua = navigator.userAgent;
-  if ((ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) && ua.indexOf('Mobile Safari') !== -1 && ua.indexOf('Chrome') === -1 && ua.indexOf('Windows Phone') === -1) {
-    return false;
-  }
-  // FIXME: Work around our browser history not working correctly on Chrome
-  // iOS: https://github.com/rackt/react-router/issues/2565
-  if (ua.indexOf('CriOS') !== -1) {
-    return false;
-  }
-  return window.history && 'pushState' in window.history;
-}
-
-/**
- * Returns false if using go(n) with hash history causes a full page reload.
- */
-
-function supportsGoWithoutReloadUsingHash() {
-  var ua = navigator.userAgent;
-  return ua.indexOf('Firefox') === -1;
-}
-},{}],21:[function(require,module,exports){
-'use strict';
-
-exports.__esModule = true;
-var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
-exports.canUseDOM = canUseDOM;
-},{}],22:[function(require,module,exports){
-(function (process){
-'use strict';
-
-exports.__esModule = true;
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _invariant = require('invariant');
-
-var _invariant2 = _interopRequireDefault(_invariant);
-
-var _Actions = require('./Actions');
-
-var _ExecutionEnvironment = require('./ExecutionEnvironment');
-
-var _DOMUtils = require('./DOMUtils');
-
-var _DOMStateStorage = require('./DOMStateStorage');
-
-var _createDOMHistory = require('./createDOMHistory');
-
-var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
-
-var _parsePath = require('./parsePath');
-
-var _parsePath2 = _interopRequireDefault(_parsePath);
-
-/**
- * Creates and returns a history object that uses HTML5's history API
- * (pushState, replaceState, and the popstate event) to manage history.
- * This is the recommended method of managing history in browsers because
- * it provides the cleanest URLs.
- *
- * Note: In browsers that do not support the HTML5 history API full
- * page reloads will be used to preserve URLs.
- */
-function createBrowserHistory() {
-  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-  !_ExecutionEnvironment.canUseDOM ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'Browser history needs a DOM') : _invariant2['default'](false) : undefined;
-
-  var forceRefresh = options.forceRefresh;
-
-  var isSupported = _DOMUtils.supportsHistory();
-  var useRefresh = !isSupported || forceRefresh;
-
-  function getCurrentLocation(historyState) {
-    historyState = historyState || window.history.state || {};
-
-    var path = _DOMUtils.getWindowPath();
-    var _historyState = historyState;
-    var key = _historyState.key;
-
-    var state = undefined;
-    if (key) {
-      state = _DOMStateStorage.readState(key);
-    } else {
-      state = null;
-      key = history.createKey();
-
-      if (isSupported) window.history.replaceState(_extends({}, historyState, { key: key }), null, path);
-    }
-
-    var location = _parsePath2['default'](path);
-
-    return history.createLocation(_extends({}, location, { state: state }), undefined, key);
-  }
-
-  function startPopStateListener(_ref) {
-    var transitionTo = _ref.transitionTo;
-
-    function popStateListener(event) {
-      if (event.state === undefined) return; // Ignore extraneous popstate events in WebKit.
-
-      transitionTo(getCurrentLocation(event.state));
-    }
-
-    _DOMUtils.addEventListener(window, 'popstate', popStateListener);
-
-    return function () {
-      _DOMUtils.removeEventListener(window, 'popstate', popStateListener);
-    };
-  }
-
-  function finishTransition(location) {
-    var basename = location.basename;
-    var pathname = location.pathname;
-    var search = location.search;
-    var hash = location.hash;
-    var state = location.state;
-    var action = location.action;
-    var key = location.key;
-
-    if (action === _Actions.POP) return; // Nothing to do.
-
-    _DOMStateStorage.saveState(key, state);
-
-    var path = (basename || '') + pathname + search + hash;
-    var historyState = {
-      key: key
-    };
-
-    if (action === _Actions.PUSH) {
-      if (useRefresh) {
-        window.location.href = path;
-        return false; // Prevent location update.
-      } else {
-          window.history.pushState(historyState, null, path);
-        }
-    } else {
-      // REPLACE
-      if (useRefresh) {
-        window.location.replace(path);
-        return false; // Prevent location update.
-      } else {
-          window.history.replaceState(historyState, null, path);
-        }
-    }
-  }
-
-  var history = _createDOMHistory2['default'](_extends({}, options, {
-    getCurrentLocation: getCurrentLocation,
-    finishTransition: finishTransition,
-    saveState: _DOMStateStorage.saveState
-  }));
-
-  var listenerCount = 0,
-      stopPopStateListener = undefined;
-
-  function listenBefore(listener) {
-    if (++listenerCount === 1) stopPopStateListener = startPopStateListener(history);
-
-    var unlisten = history.listenBefore(listener);
-
-    return function () {
-      unlisten();
-
-      if (--listenerCount === 0) stopPopStateListener();
-    };
-  }
-
-  function listen(listener) {
-    if (++listenerCount === 1) stopPopStateListener = startPopStateListener(history);
-
-    var unlisten = history.listen(listener);
-
-    return function () {
-      unlisten();
-
-      if (--listenerCount === 0) stopPopStateListener();
-    };
-  }
-
-  // deprecated
-  function registerTransitionHook(hook) {
-    if (++listenerCount === 1) stopPopStateListener = startPopStateListener(history);
-
-    history.registerTransitionHook(hook);
-  }
-
-  // deprecated
-  function unregisterTransitionHook(hook) {
-    history.unregisterTransitionHook(hook);
-
-    if (--listenerCount === 0) stopPopStateListener();
-  }
-
-  return _extends({}, history, {
-    listenBefore: listenBefore,
-    listen: listen,
-    registerTransitionHook: registerTransitionHook,
-    unregisterTransitionHook: unregisterTransitionHook
-  });
-}
-
-exports['default'] = createBrowserHistory;
-module.exports = exports['default'];
-}).call(this,require('_process'))
-},{"./Actions":17,"./DOMStateStorage":19,"./DOMUtils":20,"./ExecutionEnvironment":21,"./createDOMHistory":23,"./parsePath":28,"_process":16,"invariant":33}],23:[function(require,module,exports){
-(function (process){
-'use strict';
-
-exports.__esModule = true;
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _invariant = require('invariant');
-
-var _invariant2 = _interopRequireDefault(_invariant);
-
-var _ExecutionEnvironment = require('./ExecutionEnvironment');
-
-var _DOMUtils = require('./DOMUtils');
-
-var _createHistory = require('./createHistory');
-
-var _createHistory2 = _interopRequireDefault(_createHistory);
-
-function createDOMHistory(options) {
-  var history = _createHistory2['default'](_extends({
-    getUserConfirmation: _DOMUtils.getUserConfirmation
-  }, options, {
-    go: _DOMUtils.go
-  }));
-
-  function listen(listener) {
-    !_ExecutionEnvironment.canUseDOM ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'DOM history needs a DOM') : _invariant2['default'](false) : undefined;
-
-    return history.listen(listener);
-  }
-
-  return _extends({}, history, {
-    listen: listen
-  });
-}
-
-exports['default'] = createDOMHistory;
-module.exports = exports['default'];
-}).call(this,require('_process'))
-},{"./DOMUtils":20,"./ExecutionEnvironment":21,"./createHistory":24,"_process":16,"invariant":33}],24:[function(require,module,exports){
-//import warning from 'warning'
-'use strict';
-
-exports.__esModule = true;
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _deepEqual = require('deep-equal');
-
-var _deepEqual2 = _interopRequireDefault(_deepEqual);
-
-var _AsyncUtils = require('./AsyncUtils');
-
-var _Actions = require('./Actions');
-
-var _createLocation2 = require('./createLocation');
-
-var _createLocation3 = _interopRequireDefault(_createLocation2);
-
-var _runTransitionHook = require('./runTransitionHook');
-
-var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
-
-var _parsePath = require('./parsePath');
-
-var _parsePath2 = _interopRequireDefault(_parsePath);
-
-var _deprecate = require('./deprecate');
-
-var _deprecate2 = _interopRequireDefault(_deprecate);
-
-function createRandomKey(length) {
-  return Math.random().toString(36).substr(2, length);
-}
-
-function locationsAreEqual(a, b) {
-  return a.pathname === b.pathname && a.search === b.search &&
-  //a.action === b.action && // Different action !== location change.
-  a.key === b.key && _deepEqual2['default'](a.state, b.state);
-}
-
-var DefaultKeyLength = 6;
-
-function createHistory() {
-  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-  var getCurrentLocation = options.getCurrentLocation;
-  var finishTransition = options.finishTransition;
-  var saveState = options.saveState;
-  var go = options.go;
-  var keyLength = options.keyLength;
-  var getUserConfirmation = options.getUserConfirmation;
-
-  if (typeof keyLength !== 'number') keyLength = DefaultKeyLength;
-
-  var transitionHooks = [];
-
-  function listenBefore(hook) {
-    transitionHooks.push(hook);
-
-    return function () {
-      transitionHooks = transitionHooks.filter(function (item) {
-        return item !== hook;
-      });
-    };
-  }
-
-  var allKeys = [];
-  var changeListeners = [];
-  var location = undefined;
-
-  function getCurrent() {
-    if (pendingLocation && pendingLocation.action === _Actions.POP) {
-      return allKeys.indexOf(pendingLocation.key);
-    } else if (location) {
-      return allKeys.indexOf(location.key);
-    } else {
-      return -1;
-    }
-  }
-
-  function updateLocation(newLocation) {
-    var current = getCurrent();
-
-    location = newLocation;
-
-    if (location.action === _Actions.PUSH) {
-      allKeys = [].concat(allKeys.slice(0, current + 1), [location.key]);
-    } else if (location.action === _Actions.REPLACE) {
-      allKeys[current] = location.key;
-    }
-
-    changeListeners.forEach(function (listener) {
-      listener(location);
-    });
-  }
-
-  function listen(listener) {
-    changeListeners.push(listener);
-
-    if (location) {
-      listener(location);
-    } else {
-      var _location = getCurrentLocation();
-      allKeys = [_location.key];
-      updateLocation(_location);
-    }
-
-    return function () {
-      changeListeners = changeListeners.filter(function (item) {
-        return item !== listener;
-      });
-    };
-  }
-
-  function confirmTransitionTo(location, callback) {
-    _AsyncUtils.loopAsync(transitionHooks.length, function (index, next, done) {
-      _runTransitionHook2['default'](transitionHooks[index], location, function (result) {
-        if (result != null) {
-          done(result);
-        } else {
-          next();
-        }
-      });
-    }, function (message) {
-      if (getUserConfirmation && typeof message === 'string') {
-        getUserConfirmation(message, function (ok) {
-          callback(ok !== false);
-        });
-      } else {
-        callback(message !== false);
-      }
-    });
-  }
-
-  var pendingLocation = undefined;
-
-  function transitionTo(nextLocation) {
-    if (location && locationsAreEqual(location, nextLocation)) return; // Nothing to do.
-
-    pendingLocation = nextLocation;
-
-    confirmTransitionTo(nextLocation, function (ok) {
-      if (pendingLocation !== nextLocation) return; // Transition was interrupted.
-
-      if (ok) {
-        // treat PUSH to current path like REPLACE to be consistent with browsers
-        if (nextLocation.action === _Actions.PUSH) {
-          var prevPath = createPath(location);
-          var nextPath = createPath(nextLocation);
-
-          if (nextPath === prevPath) nextLocation.action = _Actions.REPLACE;
-        }
-
-        if (finishTransition(nextLocation) !== false) updateLocation(nextLocation);
-      } else if (location && nextLocation.action === _Actions.POP) {
-        var prevIndex = allKeys.indexOf(location.key);
-        var nextIndex = allKeys.indexOf(nextLocation.key);
-
-        if (prevIndex !== -1 && nextIndex !== -1) go(prevIndex - nextIndex); // Restore the URL.
-      }
-    });
-  }
-
-  function push(location) {
-    transitionTo(createLocation(location, _Actions.PUSH, createKey()));
-  }
-
-  function replace(location) {
-    transitionTo(createLocation(location, _Actions.REPLACE, createKey()));
-  }
-
-  function goBack() {
-    go(-1);
-  }
-
-  function goForward() {
-    go(1);
-  }
-
-  function createKey() {
-    return createRandomKey(keyLength);
-  }
-
-  function createPath(location) {
-    if (location == null || typeof location === 'string') return location;
-
-    var pathname = location.pathname;
-    var search = location.search;
-    var hash = location.hash;
-
-    var result = pathname;
-
-    if (search) result += search;
-
-    if (hash) result += hash;
-
-    return result;
-  }
-
-  function createHref(location) {
-    return createPath(location);
-  }
-
-  function createLocation(location, action) {
-    var key = arguments.length <= 2 || arguments[2] === undefined ? createKey() : arguments[2];
-
-    if (typeof action === 'object') {
-      //warning(
-      //  false,
-      //  'The state (2nd) argument to history.createLocation is deprecated; use a ' +
-      //  'location descriptor instead'
-      //)
-
-      if (typeof location === 'string') location = _parsePath2['default'](location);
-
-      location = _extends({}, location, { state: action });
-
-      action = key;
-      key = arguments[3] || createKey();
-    }
-
-    return _createLocation3['default'](location, action, key);
-  }
-
-  // deprecated
-  function setState(state) {
-    if (location) {
-      updateLocationState(location, state);
-      updateLocation(location);
-    } else {
-      updateLocationState(getCurrentLocation(), state);
-    }
-  }
-
-  function updateLocationState(location, state) {
-    location.state = _extends({}, location.state, state);
-    saveState(location.key, location.state);
-  }
-
-  // deprecated
-  function registerTransitionHook(hook) {
-    if (transitionHooks.indexOf(hook) === -1) transitionHooks.push(hook);
-  }
-
-  // deprecated
-  function unregisterTransitionHook(hook) {
-    transitionHooks = transitionHooks.filter(function (item) {
-      return item !== hook;
-    });
-  }
-
-  // deprecated
-  function pushState(state, path) {
-    if (typeof path === 'string') path = _parsePath2['default'](path);
-
-    push(_extends({ state: state }, path));
-  }
-
-  // deprecated
-  function replaceState(state, path) {
-    if (typeof path === 'string') path = _parsePath2['default'](path);
-
-    replace(_extends({ state: state }, path));
-  }
-
-  return {
-    listenBefore: listenBefore,
-    listen: listen,
-    transitionTo: transitionTo,
-    push: push,
-    replace: replace,
-    go: go,
-    goBack: goBack,
-    goForward: goForward,
-    createKey: createKey,
-    createPath: createPath,
-    createHref: createHref,
-    createLocation: createLocation,
-
-    setState: _deprecate2['default'](setState, 'setState is deprecated; use location.key to save state instead'),
-    registerTransitionHook: _deprecate2['default'](registerTransitionHook, 'registerTransitionHook is deprecated; use listenBefore instead'),
-    unregisterTransitionHook: _deprecate2['default'](unregisterTransitionHook, 'unregisterTransitionHook is deprecated; use the callback returned from listenBefore instead'),
-    pushState: _deprecate2['default'](pushState, 'pushState is deprecated; use push instead'),
-    replaceState: _deprecate2['default'](replaceState, 'replaceState is deprecated; use replace instead')
-  };
-}
-
-exports['default'] = createHistory;
-module.exports = exports['default'];
-},{"./Actions":17,"./AsyncUtils":18,"./createLocation":25,"./deprecate":26,"./parsePath":28,"./runTransitionHook":29,"deep-equal":30}],25:[function(require,module,exports){
-//import warning from 'warning'
-'use strict';
-
-exports.__esModule = true;
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _Actions = require('./Actions');
-
-var _parsePath = require('./parsePath');
-
-var _parsePath2 = _interopRequireDefault(_parsePath);
-
-function createLocation() {
-  var location = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
-  var action = arguments.length <= 1 || arguments[1] === undefined ? _Actions.POP : arguments[1];
-  var key = arguments.length <= 2 || arguments[2] === undefined ? null : arguments[2];
-
-  var _fourthArg = arguments.length <= 3 || arguments[3] === undefined ? null : arguments[3];
-
-  if (typeof location === 'string') location = _parsePath2['default'](location);
-
-  if (typeof action === 'object') {
-    //warning(
-    //  false,
-    //  'The state (2nd) argument to createLocation is deprecated; use a ' +
-    //  'location descriptor instead'
-    //)
-
-    location = _extends({}, location, { state: action });
-
-    action = key || _Actions.POP;
-    key = _fourthArg;
-  }
-
-  var pathname = location.pathname || '/';
-  var search = location.search || '';
-  var hash = location.hash || '';
-  var state = location.state || null;
-
-  return {
-    pathname: pathname,
-    search: search,
-    hash: hash,
-    state: state,
-    action: action,
-    key: key
-  };
-}
-
-exports['default'] = createLocation;
-module.exports = exports['default'];
-},{"./Actions":17,"./parsePath":28}],26:[function(require,module,exports){
-//import warning from 'warning'
-
-"use strict";
-
-exports.__esModule = true;
-function deprecate(fn) {
-  return fn;
-  //return function () {
-  //  warning(false, '[history] ' + message)
-  //  return fn.apply(this, arguments)
-  //}
-}
-
-exports["default"] = deprecate;
-module.exports = exports["default"];
-},{}],27:[function(require,module,exports){
-"use strict";
-
-exports.__esModule = true;
-function extractPath(string) {
-  var match = string.match(/^https?:\/\/[^\/]*/);
-
-  if (match == null) return string;
-
-  return string.substring(match[0].length);
-}
-
-exports["default"] = extractPath;
-module.exports = exports["default"];
-},{}],28:[function(require,module,exports){
-(function (process){
-'use strict';
-
-exports.__esModule = true;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _warning = require('warning');
-
-var _warning2 = _interopRequireDefault(_warning);
-
-var _extractPath = require('./extractPath');
-
-var _extractPath2 = _interopRequireDefault(_extractPath);
-
-function parsePath(path) {
-  var pathname = _extractPath2['default'](path);
-  var search = '';
-  var hash = '';
-
-  process.env.NODE_ENV !== 'production' ? _warning2['default'](path === pathname, 'A path must be pathname + search + hash only, not a fully qualified URL like "%s"', path) : undefined;
-
-  var hashIndex = pathname.indexOf('#');
-  if (hashIndex !== -1) {
-    hash = pathname.substring(hashIndex);
-    pathname = pathname.substring(0, hashIndex);
-  }
-
-  var searchIndex = pathname.indexOf('?');
-  if (searchIndex !== -1) {
-    search = pathname.substring(searchIndex);
-    pathname = pathname.substring(0, searchIndex);
-  }
-
-  if (pathname === '') pathname = '/';
-
-  return {
-    pathname: pathname,
-    search: search,
-    hash: hash
-  };
-}
-
-exports['default'] = parsePath;
-module.exports = exports['default'];
-}).call(this,require('_process'))
-},{"./extractPath":27,"_process":16,"warning":34}],29:[function(require,module,exports){
-(function (process){
-'use strict';
-
-exports.__esModule = true;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _warning = require('warning');
-
-var _warning2 = _interopRequireDefault(_warning);
-
-function runTransitionHook(hook, location, callback) {
-  var result = hook(location, callback);
-
-  if (hook.length < 2) {
-    // Assume the hook runs synchronously and automatically
-    // call the callback with the return value.
-    callback(result);
-  } else {
-    process.env.NODE_ENV !== 'production' ? _warning2['default'](result === undefined, 'You should not "return" in a transition hook with a callback argument; call the callback instead') : undefined;
-  }
-}
-
-exports['default'] = runTransitionHook;
-module.exports = exports['default'];
-}).call(this,require('_process'))
-},{"_process":16,"warning":34}],30:[function(require,module,exports){
-var pSlice = Array.prototype.slice;
-var objectKeys = require('./lib/keys.js');
-var isArguments = require('./lib/is_arguments.js');
-
-var deepEqual = module.exports = function (actual, expected, opts) {
-  if (!opts) opts = {};
-  // 7.1. All identical values are equivalent, as determined by ===.
-  if (actual === expected) {
-    return true;
-
-  } else if (actual instanceof Date && expected instanceof Date) {
-    return actual.getTime() === expected.getTime();
-
-  // 7.3. Other pairs that do not both pass typeof value == 'object',
-  // equivalence is determined by ==.
-  } else if (!actual || !expected || typeof actual != 'object' && typeof expected != 'object') {
-    return opts.strict ? actual === expected : actual == expected;
-
-  // 7.4. For all other Object pairs, including Array objects, equivalence is
-  // determined by having the same number of owned properties (as verified
-  // with Object.prototype.hasOwnProperty.call), the same set of keys
-  // (although not necessarily the same order), equivalent values for every
-  // corresponding key, and an identical 'prototype' property. Note: this
-  // accounts for both named and indexed properties on Arrays.
-  } else {
-    return objEquiv(actual, expected, opts);
-  }
-}
-
-function isUndefinedOrNull(value) {
-  return value === null || value === undefined;
-}
-
-function isBuffer (x) {
-  if (!x || typeof x !== 'object' || typeof x.length !== 'number') return false;
-  if (typeof x.copy !== 'function' || typeof x.slice !== 'function') {
-    return false;
-  }
-  if (x.length > 0 && typeof x[0] !== 'number') return false;
-  return true;
-}
-
-function objEquiv(a, b, opts) {
-  var i, key;
-  if (isUndefinedOrNull(a) || isUndefinedOrNull(b))
-    return false;
-  // an identical 'prototype' property.
-  if (a.prototype !== b.prototype) return false;
-  //~~~I've managed to break Object.keys through screwy arguments passing.
-  //   Converting to array solves the problem.
-  if (isArguments(a)) {
-    if (!isArguments(b)) {
-      return false;
-    }
-    a = pSlice.call(a);
-    b = pSlice.call(b);
-    return deepEqual(a, b, opts);
-  }
-  if (isBuffer(a)) {
-    if (!isBuffer(b)) {
-      return false;
-    }
-    if (a.length !== b.length) return false;
-    for (i = 0; i < a.length; i++) {
-      if (a[i] !== b[i]) return false;
-    }
-    return true;
-  }
-  try {
-    var ka = objectKeys(a),
-        kb = objectKeys(b);
-  } catch (e) {//happens when one is a string literal and the other isn't
-    return false;
-  }
-  // having the same number of owned properties (keys incorporates
-  // hasOwnProperty)
-  if (ka.length != kb.length)
-    return false;
-  //the same set of keys (although not necessarily the same order),
-  ka.sort();
-  kb.sort();
-  //~~~cheap key test
-  for (i = ka.length - 1; i >= 0; i--) {
-    if (ka[i] != kb[i])
-      return false;
-  }
-  //equivalent values for every corresponding key, and
-  //~~~possibly expensive deep test
-  for (i = ka.length - 1; i >= 0; i--) {
-    key = ka[i];
-    if (!deepEqual(a[key], b[key], opts)) return false;
-  }
-  return typeof a === typeof b;
-}
-
-},{"./lib/is_arguments.js":31,"./lib/keys.js":32}],31:[function(require,module,exports){
-var supportsArgumentsClass = (function(){
-  return Object.prototype.toString.call(arguments)
-})() == '[object Arguments]';
-
-exports = module.exports = supportsArgumentsClass ? supported : unsupported;
-
-exports.supported = supported;
-function supported(object) {
-  return Object.prototype.toString.call(object) == '[object Arguments]';
-};
-
-exports.unsupported = unsupported;
-function unsupported(object){
-  return object &&
-    typeof object == 'object' &&
-    typeof object.length == 'number' &&
-    Object.prototype.hasOwnProperty.call(object, 'callee') &&
-    !Object.prototype.propertyIsEnumerable.call(object, 'callee') ||
-    false;
-};
-
-},{}],32:[function(require,module,exports){
-exports = module.exports = typeof Object.keys === 'function'
-  ? Object.keys : shim;
-
-exports.shim = shim;
-function shim (obj) {
-  var keys = [];
-  for (var key in obj) keys.push(key);
-  return keys;
-}
-
-},{}],33:[function(require,module,exports){
-(function (process){
-/**
- * Copyright 2013-2015, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- */
-
-'use strict';
-
-/**
- * Use invariant() to assert state which your program assumes to be true.
- *
- * Provide sprintf-style format (only %s is supported) and arguments
- * to provide information about what broke and what you were
- * expecting.
- *
- * The invariant message will be stripped in production, but the invariant
- * will remain to ensure logic does not differ in production.
- */
-
-var invariant = function(condition, format, a, b, c, d, e, f) {
-  if (process.env.NODE_ENV !== 'production') {
-    if (format === undefined) {
-      throw new Error('invariant requires an error message argument');
-    }
-  }
-
-  if (!condition) {
-    var error;
-    if (format === undefined) {
-      error = new Error(
-        'Minified exception occurred; use the non-minified dev environment ' +
-        'for the full error message and additional helpful warnings.'
-      );
-    } else {
-      var args = [a, b, c, d, e, f];
-      var argIndex = 0;
-      error = new Error(
-        format.replace(/%s/g, function() { return args[argIndex++]; })
-      );
-      error.name = 'Invariant Violation';
-    }
-
-    error.framesToPop = 1; // we don't care about invariant's own frame
-    throw error;
-  }
-};
-
-module.exports = invariant;
-
-}).call(this,require('_process'))
-},{"_process":16}],34:[function(require,module,exports){
-(function (process){
-/**
- * Copyright 2014-2015, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- */
-
-'use strict';
-
-/**
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */
-
-var warning = function() {};
-
-if (process.env.NODE_ENV !== 'production') {
-  warning = function(condition, format, args) {
-    var len = arguments.length;
-    args = new Array(len > 2 ? len - 2 : 0);
-    for (var key = 2; key < len; key++) {
-      args[key - 2] = arguments[key];
-    }
-    if (format === undefined) {
-      throw new Error(
-        '`warning(condition, format, ...args)` requires a warning ' +
-        'message argument'
-      );
-    }
-
-    if (format.length < 10 || (/^[s\W]*$/).test(format)) {
-      throw new Error(
-        'The warning format should be able to uniquely identify this ' +
-        'warning. Please, use a more descriptive format than: ' + format
-      );
-    }
-
-    if (!condition) {
-      var argIndex = 0;
-      var message = 'Warning: ' +
-        format.replace(/%s/g, function() {
-          return args[argIndex++];
-        });
-      if (typeof console !== 'undefined') {
-        console.error(message);
-      }
-      try {
-        // This error was thrown as a convenience so that you can use this stack
-        // to find the callsite that caused this warning to fire.
-        throw new Error(message);
-      } catch(x) {}
-    }
-  };
-}
-
-module.exports = warning;
-
-}).call(this,require('_process'))
-},{"_process":16}],35:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = appendImportantToEachValue;
-
-var _appendPxIfNeeded = require('./append-px-if-needed');
-
-var _appendPxIfNeeded2 = _interopRequireDefault(_appendPxIfNeeded);
-
-var _mapObject = require('./map-object');
-
-var _mapObject2 = _interopRequireDefault(_mapObject);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function appendImportantToEachValue(style) {
-  return (0, _mapObject2.default)(style, function (result, key) {
-    return (0, _appendPxIfNeeded2.default)(key, style[key]) + ' !important';
-  });
-}
-module.exports = exports['default'];
-},{"./append-px-if-needed":36,"./map-object":48}],36:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = appendPxIfNeeded;
-
-
-// Copied from https://github.com/facebook/react/blob/
-// 102cd291899f9942a76c40a0e78920a6fe544dc1/
-// src/renderers/dom/shared/CSSProperty.js
-var isUnitlessNumber = {
-  animationIterationCount: true,
-  boxFlex: true,
-  boxFlexGroup: true,
-  boxOrdinalGroup: true,
-  columnCount: true,
-  flex: true,
-  flexGrow: true,
-  flexPositive: true,
-  flexShrink: true,
-  flexNegative: true,
-  flexOrder: true,
-  gridRow: true,
-  gridColumn: true,
-  fontWeight: true,
-  lineClamp: true,
-  lineHeight: true,
-  opacity: true,
-  order: true,
-  orphans: true,
-  tabSize: true,
-  widows: true,
-  zIndex: true,
-  zoom: true,
-
-  // SVG-related properties
-  fillOpacity: true,
-  stopOpacity: true,
-  strokeDashoffset: true,
-  strokeOpacity: true,
-  strokeWidth: true
-};
-
-function appendPxIfNeeded(propertyName, value) {
-  var needsPxSuffix = !isUnitlessNumber[propertyName] && typeof value === 'number' && value !== 0;
-  return needsPxSuffix ? value + 'px' : value;
-}
-module.exports = exports['default'];
-},{}],37:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-
-var _camelCaseRegex = /([a-z])?([A-Z])/g;
-
-var _camelCaseReplacer = function _camelCaseReplacer(match, p1, p2) {
-  return (p1 || '') + '-' + p2.toLowerCase();
-};
-
-var _camelCaseToDashCase = function _camelCaseToDashCase(s) {
-  return s.replace(_camelCaseRegex, _camelCaseReplacer);
-};
-
-var camelCasePropsToDashCase = function camelCasePropsToDashCase(prefixedStyle) {
-  // Since prefix is expected to work on inline style objects, we must
-  // translate the keys to dash case for rendering to CSS.
-  return Object.keys(prefixedStyle).reduce(function (result, key) {
-    var dashCaseKey = _camelCaseToDashCase(key);
-
-    // Fix IE vendor prefix
-    if (/^ms-/.test(dashCaseKey)) {
-      dashCaseKey = '-' + dashCaseKey;
-    }
-
-    result[dashCaseKey] = prefixedStyle[key];
-    return result;
-  }, {});
-};
-
-exports.default = camelCasePropsToDashCase;
-module.exports = exports['default'];
-},{}],38:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _enhancer = require('../enhancer');
-
-var _enhancer2 = _interopRequireDefault(_enhancer);
-
-var _styleKeeper = require('../style-keeper');
-
-var _styleKeeper2 = _interopRequireDefault(_styleKeeper);
-
-var _styleSheet = require('./style-sheet');
-
-var _styleSheet2 = _interopRequireDefault(_styleSheet);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function _getStyleKeeper(instance) {
-  if (!instance._radiumStyleKeeper) {
-    var userAgent = instance.props.radiumConfig && instance.props.radiumConfig.userAgent || instance.context._radiumConfig && instance.context._radiumConfig.userAgent;
-    instance._radiumStyleKeeper = new _styleKeeper2.default(userAgent);
-  }
-
-  return instance._radiumStyleKeeper;
-}
-
-var StyleRoot = function (_Component) {
-  _inherits(StyleRoot, _Component);
-
-  function StyleRoot() {
-    _classCallCheck(this, StyleRoot);
-
-    var _this = _possibleConstructorReturn(this, _Component.apply(this, arguments));
-
-    _getStyleKeeper(_this);
-    return _this;
-  }
-
-  StyleRoot.prototype.getChildContext = function getChildContext() {
-    return { _radiumStyleKeeper: _getStyleKeeper(this) };
-  };
-
-  StyleRoot.prototype.render = function render() {
-    return _react2.default.createElement(
-      'div',
-      this.props,
-      this.props.children,
-      _react2.default.createElement(_styleSheet2.default, null)
-    );
-  };
-
-  return StyleRoot;
-}(_react.Component);
-
-StyleRoot.contextTypes = {
-  _radiumConfig: _react.PropTypes.object,
-  _radiumStyleKeeper: _react.PropTypes.instanceOf(_styleKeeper2.default)
-};
-
-StyleRoot.childContextTypes = {
-  _radiumStyleKeeper: _react.PropTypes.instanceOf(_styleKeeper2.default)
-};
-
-StyleRoot = (0, _enhancer2.default)(StyleRoot);
-
-exports.default = StyleRoot;
-module.exports = exports['default'];
-},{"../enhancer":42,"../style-keeper":61,"./style-sheet":39,"react":"react"}],39:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = undefined;
-
-var _class, _temp;
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _styleKeeper = require('../style-keeper');
-
-var _styleKeeper2 = _interopRequireDefault(_styleKeeper);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var StyleSheet = (_temp = _class = function (_Component) {
-  _inherits(StyleSheet, _Component);
-
-  function StyleSheet() {
-    _classCallCheck(this, StyleSheet);
-
-    var _this = _possibleConstructorReturn(this, _Component.apply(this, arguments));
-
-    _this.state = _this._getCSSState();
-
-    _this._onChange = _this._onChange.bind(_this);
-    return _this;
-  }
-
-  StyleSheet.prototype.componentDidMount = function componentDidMount() {
-    this._isMounted = true;
-    this._subscription = this.context._radiumStyleKeeper.subscribe(this._onChange);
-    this._onChange();
-  };
-
-  StyleSheet.prototype.componentWillUnmount = function componentWillUnmount() {
-    this._isMounted = false;
-    if (this._subscription) {
-      this._subscription.remove();
-    }
-  };
-
-  StyleSheet.prototype._getCSSState = function _getCSSState() {
-    return { css: this.context._radiumStyleKeeper.getCSS() };
-  };
-
-  StyleSheet.prototype._onChange = function _onChange() {
-    var _this2 = this;
-
-    setTimeout(function () {
-      _this2._isMounted && _this2.setState(_this2._getCSSState());
-    }, 0);
-  };
-
-  StyleSheet.prototype.render = function render() {
-    return _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: this.state.css } });
-  };
-
-  return StyleSheet;
-}(_react.Component), _class.contextTypes = {
-  _radiumStyleKeeper: _react2.default.PropTypes.instanceOf(_styleKeeper2.default)
-}, _temp);
-exports.default = StyleSheet;
-module.exports = exports['default'];
-},{"../style-keeper":61,"react":"react"}],40:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-var _cssRuleSetToString = require('../css-rule-set-to-string');
-
-var _cssRuleSetToString2 = _interopRequireDefault(_cssRuleSetToString);
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Style = _react2.default.createClass({
-  displayName: 'Style',
-
-  propTypes: {
-    radiumConfig: _react.PropTypes.object,
-    rules: _react.PropTypes.object,
-    scopeSelector: _react.PropTypes.string
-  },
-
-  contextTypes: {
-    _radiumConfig: _react.PropTypes.object
-  },
-
-  getDefaultProps: function getDefaultProps() {
-    return {
-      scopeSelector: ''
-    };
-  },
-  _buildStyles: function _buildStyles(styles) {
-    var _this = this;
-
-    var userAgent = this.props.radiumConfig && this.props.radiumConfig.userAgent || this.context && this.context._radiumConfig && this.context._radiumConfig.userAgent;
-
-    var scopeSelector = this.props.scopeSelector;
-
-    var rootRules = Object.keys(styles).reduce(function (accumulator, selector) {
-      if (_typeof(styles[selector]) !== 'object') {
-        accumulator[selector] = styles[selector];
-      }
-
-      return accumulator;
-    }, {});
-    var rootStyles = Object.keys(rootRules).length ? (0, _cssRuleSetToString2.default)(scopeSelector || '', rootRules, userAgent) : '';
-
-    return rootStyles + Object.keys(styles).reduce(function (accumulator, selector) {
-      var rules = styles[selector];
-
-      if (selector === 'mediaQueries') {
-        accumulator += _this._buildMediaQueryString(rules);
-      } else if (_typeof(styles[selector]) === 'object') {
-        var completeSelector = scopeSelector ? selector.split(',').map(function (part) {
-          return scopeSelector + ' ' + part.trim();
-        }).join(',') : selector;
-
-        accumulator += (0, _cssRuleSetToString2.default)(completeSelector, rules, userAgent);
-      }
-
-      return accumulator;
-    }, '');
-  },
-  _buildMediaQueryString: function _buildMediaQueryString(stylesByMediaQuery) {
-    var _this2 = this;
-
-    var mediaQueryString = '';
-
-    Object.keys(stylesByMediaQuery).forEach(function (query) {
-      mediaQueryString += '@media ' + query + '{' + _this2._buildStyles(stylesByMediaQuery[query]) + '}';
-    });
-
-    return mediaQueryString;
-  },
-  render: function render() {
-    if (!this.props.rules) {
-      return null;
-    }
-
-    var styles = this._buildStyles(this.props.rules);
-
-    return _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: styles } });
-  }
-});
-
-exports.default = Style;
-module.exports = exports['default'];
-},{"../css-rule-set-to-string":41,"react":"react"}],41:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = cssRuleSetToString;
-
-var _appendPxIfNeeded = require('./append-px-if-needed');
-
-var _appendPxIfNeeded2 = _interopRequireDefault(_appendPxIfNeeded);
-
-var _camelCasePropsToDashCase = require('./camel-case-props-to-dash-case');
-
-var _camelCasePropsToDashCase2 = _interopRequireDefault(_camelCasePropsToDashCase);
-
-var _mapObject = require('./map-object');
-
-var _mapObject2 = _interopRequireDefault(_mapObject);
-
-var _prefixer = require('./prefixer');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function createMarkupForStyles(style) {
-  return Object.keys(style).map(function (property) {
-    return property + ': ' + style[property] + ';';
-  }).join('\n');
-}
-
-function cssRuleSetToString(selector, rules, userAgent) {
-  if (!rules) {
-    return '';
-  }
-
-  var rulesWithPx = (0, _mapObject2.default)(rules, function (value, key) {
-    return (0, _appendPxIfNeeded2.default)(key, value);
-  });
-  var prefixedRules = (0, _prefixer.getPrefixedStyle)(rulesWithPx, userAgent);
-  var cssPrefixedRules = (0, _camelCasePropsToDashCase2.default)(prefixedRules);
-  var serializedRules = createMarkupForStyles(cssPrefixedRules);
-
-  return selector + '{' + serializedRules + '}';
-}
-module.exports = exports['default'];
-},{"./append-px-if-needed":36,"./camel-case-props-to-dash-case":37,"./map-object":48,"./prefixer":59}],42:[function(require,module,exports){
-(function (process){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-exports.default = enhanceWithRadium;
-
-var _react = require('react');
-
-var _styleKeeper = require('./style-keeper.js');
-
-var _styleKeeper2 = _interopRequireDefault(_styleKeeper);
-
-var _resolveStyles = require('./resolve-styles.js');
-
-var _resolveStyles2 = _interopRequireDefault(_resolveStyles);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var KEYS_TO_IGNORE_WHEN_COPYING_PROPERTIES = ['arguments', 'callee', 'caller', 'length', 'name', 'prototype', 'type'];
-
-function copyProperties(source, target) {
-  Object.getOwnPropertyNames(source).forEach(function (key) {
-    if (KEYS_TO_IGNORE_WHEN_COPYING_PROPERTIES.indexOf(key) < 0 && !target.hasOwnProperty(key)) {
-      var descriptor = Object.getOwnPropertyDescriptor(source, key);
-      Object.defineProperty(target, key, descriptor);
-    }
-  });
-}
-
-function enhanceWithRadium(configOrComposedComponent) {
-  var _class, _temp;
-
-  var config = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-  if (typeof configOrComposedComponent !== 'function') {
-    var _ret = function () {
-      var newConfig = _extends({}, config, configOrComposedComponent);
-      return {
-        v: function v(configOrComponent) {
-          return enhanceWithRadium(configOrComponent, newConfig);
-        }
-      };
-    }();
-
-    if ((typeof _ret === 'undefined' ? 'undefined' : _typeof(_ret)) === "object") return _ret.v;
-  }
-
-  var component = configOrComposedComponent;
-  var ComposedComponent = component;
-
-  // Handle stateless components
-  if (!ComposedComponent.render && !ComposedComponent.prototype.render) {
-    ComposedComponent = function (_Component) {
-      _inherits(ComposedComponent, _Component);
-
-      function ComposedComponent() {
-        _classCallCheck(this, ComposedComponent);
-
-        return _possibleConstructorReturn(this, _Component.apply(this, arguments));
-      }
-
-      ComposedComponent.prototype.render = function render() {
-        return component(this.props, this.context);
-      };
-
-      return ComposedComponent;
-    }(_react.Component);
-    ComposedComponent.displayName = component.displayName || component.name;
-  }
-
-  var RadiumEnhancer = (_temp = _class = function (_ComposedComponent) {
-    _inherits(RadiumEnhancer, _ComposedComponent);
-
-    function RadiumEnhancer() {
-      _classCallCheck(this, RadiumEnhancer);
-
-      var _this2 = _possibleConstructorReturn(this, _ComposedComponent.apply(this, arguments));
-
-      _this2.state = _this2.state || {};
-      _this2.state._radiumStyleState = {};
-      _this2._radiumIsMounted = true;
-      return _this2;
-    }
-
-    RadiumEnhancer.prototype.componentWillUnmount = function componentWillUnmount() {
-      if (_ComposedComponent.prototype.componentWillUnmount) {
-        _ComposedComponent.prototype.componentWillUnmount.call(this);
-      }
-
-      this._radiumIsMounted = false;
-
-      if (this._radiumMouseUpListener) {
-        this._radiumMouseUpListener.remove();
-      }
-
-      if (this._radiumMediaQueryListenersByQuery) {
-        Object.keys(this._radiumMediaQueryListenersByQuery).forEach(function (query) {
-          this._radiumMediaQueryListenersByQuery[query].remove();
-        }, this);
-      }
-    };
-
-    RadiumEnhancer.prototype.getChildContext = function getChildContext() {
-      var superChildContext = _ComposedComponent.prototype.getChildContext ? _ComposedComponent.prototype.getChildContext.call(this) : {};
-
-      if (!this.props.radiumConfig) {
-        return superChildContext;
-      }
-
-      var newContext = _extends({}, superChildContext);
-
-      if (this.props.radiumConfig) {
-        newContext._radiumConfig = this.props.radiumConfig;
-      }
-
-      return newContext;
-    };
-
-    RadiumEnhancer.prototype.render = function render() {
-      var renderedElement = _ComposedComponent.prototype.render.call(this);
-      var currentConfig = this.props.radiumConfig || this.context._radiumConfig || config;
-
-      if (config && currentConfig !== config) {
-        currentConfig = _extends({}, config, currentConfig);
-      }
-
-      return (0, _resolveStyles2.default)(this, renderedElement, currentConfig);
-    };
-
-    return RadiumEnhancer;
-  }(ComposedComponent), _class._isRadiumEnhanced = true, _temp);
-
-  // Class inheritance uses Object.create and because of __proto__ issues
-  // with IE <10 any static properties of the superclass aren't inherited and
-  // so need to be manually populated.
-  // See http://babeljs.io/docs/advanced/caveats/#classes-10-and-below-
-
-  copyProperties(component, RadiumEnhancer);
-
-  if (process.env.NODE_ENV !== 'production') {
-    // This also fixes React Hot Loader by exposing the original components top
-    // level prototype methods on the Radium enhanced prototype as discussed in
-    // https://github.com/FormidableLabs/radium/issues/219.
-    copyProperties(ComposedComponent.prototype, RadiumEnhancer.prototype);
-  }
-
-  if (RadiumEnhancer.propTypes && RadiumEnhancer.propTypes.style) {
-    RadiumEnhancer.propTypes = _extends({}, RadiumEnhancer.propTypes, {
-      style: _react.PropTypes.oneOfType([_react.PropTypes.array, _react.PropTypes.object])
-    });
-  }
-
-  RadiumEnhancer.displayName = component.displayName || component.name || 'Component';
-
-  RadiumEnhancer.contextTypes = _extends({}, RadiumEnhancer.contextTypes, {
-    _radiumConfig: _react.PropTypes.object,
-    _radiumStyleKeeper: _react.PropTypes.instanceOf(_styleKeeper2.default)
-  });
-
-  RadiumEnhancer.childContextTypes = _extends({}, RadiumEnhancer.childContextTypes, {
-    _radiumConfig: _react.PropTypes.object,
-    _radiumStyleKeeper: _react.PropTypes.instanceOf(_styleKeeper2.default)
-  });
-
-  return RadiumEnhancer;
-}
-module.exports = exports['default'];
-}).call(this,require('_process'))
-},{"./resolve-styles.js":60,"./style-keeper.js":61,"_process":16,"react":"react"}],43:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-
-var getStateKey = function getStateKey(elementKey) {
-  return elementKey === null || elementKey === undefined ? 'main' : elementKey.toString();
-};
-
-exports.default = getStateKey;
-module.exports = exports['default'];
-},{}],44:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _getStateKey = require('./get-state-key');
-
-var _getStateKey2 = _interopRequireDefault(_getStateKey);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var getState = function getState(state, elementKey, value) {
-  var key = (0, _getStateKey2.default)(elementKey);
-
-  return !!state && !!state._radiumStyleState && !!state._radiumStyleState[key] && state._radiumStyleState[key][value];
-};
-
-exports.default = getState;
-module.exports = exports['default'];
-},{"./get-state-key":43}],45:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = hash;
-
-
-// a simple djb2 hash based on hash-string:
-// https://github.com/MatthewBarker/hash-string/blob/master/source/hash-string.js
-// returns a hex-encoded hash
-function hash(text) {
-  if (!text) {
-    return '';
-  }
-
-  var hashValue = 5381;
-  var index = text.length - 1;
-
-  while (index) {
-    hashValue = hashValue * 33 ^ text.charCodeAt(index);
-    index -= 1;
-  }
-
-  return (hashValue >>> 0).toString(16);
-}
-module.exports = exports['default'];
-},{}],46:[function(require,module,exports){
-(function (process){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _enhancer = require('./enhancer');
-
-var _enhancer2 = _interopRequireDefault(_enhancer);
-
-var _plugins = require('./plugins');
-
-var _plugins2 = _interopRequireDefault(_plugins);
-
-var _style = require('./components/style');
-
-var _style2 = _interopRequireDefault(_style);
-
-var _styleRoot = require('./components/style-root');
-
-var _styleRoot2 = _interopRequireDefault(_styleRoot);
-
-var _getState = require('./get-state');
-
-var _getState2 = _interopRequireDefault(_getState);
-
-var _keyframes = require('./keyframes');
-
-var _keyframes2 = _interopRequireDefault(_keyframes);
-
-var _resolveStyles = require('./resolve-styles');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Radium(ComposedComponent) {
-  return (0, _enhancer2.default)(ComposedComponent);
-}
-
-Radium.Plugins = _plugins2.default;
-Radium.Style = _style2.default;
-Radium.StyleRoot = _styleRoot2.default;
-Radium.getState = _getState2.default;
-Radium.keyframes = _keyframes2.default;
-
-if (process.env.NODE_ENV !== 'production') {
-  Radium.TestMode = {
-    clearState: _resolveStyles.__clearStateForTests,
-    disable: _resolveStyles.__setTestMode.bind(null, false),
-    enable: _resolveStyles.__setTestMode.bind(null, true)
-  };
-}
-
-exports.default = Radium;
-module.exports = exports['default'];
-}).call(this,require('_process'))
-},{"./components/style":40,"./components/style-root":38,"./enhancer":42,"./get-state":44,"./keyframes":47,"./plugins":51,"./resolve-styles":60,"_process":16}],47:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = keyframes;
-
-var _cssRuleSetToString = require('./css-rule-set-to-string');
-
-var _cssRuleSetToString2 = _interopRequireDefault(_cssRuleSetToString);
-
-var _hash = require('./hash');
-
-var _hash2 = _interopRequireDefault(_hash);
-
-var _prefixer = require('./prefixer');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function keyframes(keyframeRules, name) {
-  return {
-    __radiumKeyframes: true,
-    __process: function __process(userAgent) {
-      var keyframesPrefixed = (0, _prefixer.getPrefixedKeyframes)(userAgent);
-      var rules = Object.keys(keyframeRules).map(function (percentage) {
-        return (0, _cssRuleSetToString2.default)(percentage, keyframeRules[percentage], userAgent);
-      }).join('\n');
-      var animationName = (name ? name + '-' : '') + 'radium-animation-' + (0, _hash2.default)(rules);
-      var css = '@' + keyframesPrefixed + ' ' + animationName + ' {\n' + rules + '\n}\n';
-      return { css: css, animationName: animationName };
-    }
-  };
-}
-module.exports = exports['default'];
-},{"./css-rule-set-to-string":41,"./hash":45,"./prefixer":59}],48:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = mapObject;
-function mapObject(object, mapper) {
-  return Object.keys(object).reduce(function (result, key) {
-    result[key] = mapper(object[key], key);
-    return result;
-  }, {});
-}
-module.exports = exports['default'];
-},{}],49:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-exports.isNestedStyle = isNestedStyle;
-exports.mergeStyles = mergeStyles;
-function isNestedStyle(value) {
-  // Don't merge objects overriding toString, since they should be converted
-  // to string values.
-  return value && value.constructor === Object && value.toString === Object.prototype.toString;
-}
-
-// Merge style objects. Deep merge plain object values.
-function mergeStyles(styles) {
-  var result = {};
-
-  styles.forEach(function (style) {
-    if (!style || (typeof style === 'undefined' ? 'undefined' : _typeof(style)) !== 'object') {
-      return;
-    }
-
-    if (Array.isArray(style)) {
-      style = mergeStyles(style);
-    }
-
-    Object.keys(style).forEach(function (key) {
-      // Simple case, nothing nested
-      if (!isNestedStyle(style[key]) || !isNestedStyle(result[key])) {
-        result[key] = style[key];
-        return;
-      }
-
-      // If nested media, don't merge the nested styles, append a space to the
-      // end (benign when converted to CSS). This way we don't end up merging
-      // media queries that appear later in the chain with those that appear
-      // earlier.
-      if (key.indexOf('@media') === 0) {
-        var newKey = key;
-        while (true) {
-          // eslint-disable-line no-constant-condition
-          newKey += ' ';
-          if (!result[newKey]) {
-            result[newKey] = style[key];
-            return;
-          }
-        }
-      }
-
-      // Merge all other nested styles recursively
-      result[key] = mergeStyles([result[key], style[key]]);
-    });
-  });
-
-  return result;
-}
-},{}],50:[function(require,module,exports){
-(function (process){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-var _checkProps = function checkProps() {};
-
-if (process.env.NODE_ENV !== 'production') {
-  (function () {
-    // Warn if you use longhand and shorthand properties in the same style
-    // object.
-    // https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties
-
-    var shorthandPropertyExpansions = {
-      'background': ['backgroundAttachment', 'backgroundBlendMode', 'backgroundClip', 'backgroundColor', 'backgroundImage', 'backgroundOrigin', 'backgroundPosition', 'backgroundPositionX', 'backgroundPositionY', 'backgroundRepeat', 'backgroundRepeatX', 'backgroundRepeatY', 'backgroundSize'],
-      'border': ['borderBottom', 'borderBottomColor', 'borderBottomStyle', 'borderBottomWidth', 'borderColor', 'borderLeft', 'borderLeftColor', 'borderLeftStyle', 'borderLeftWidth', 'borderRight', 'borderRightColor', 'borderRightStyle', 'borderRightWidth', 'borderStyle', 'borderTop', 'borderTopColor', 'borderTopStyle', 'borderTopWidth', 'borderWidth'],
-      'borderImage': ['borderImageOutset', 'borderImageRepeat', 'borderImageSlice', 'borderImageSource', 'borderImageWidth'],
-      'borderRadius': ['borderBottomLeftRadius', 'borderBottomRightRadius', 'borderTopLeftRadius', 'borderTopRightRadius'],
-      'font': ['fontFamily', 'fontKerning', 'fontSize', 'fontStretch', 'fontStyle', 'fontVariant', 'fontVariantLigatures', 'fontWeight', 'lineHeight'],
-      'listStyle': ['listStyleImage', 'listStylePosition', 'listStyleType'],
-      'margin': ['marginBottom', 'marginLeft', 'marginRight', 'marginTop'],
-      'padding': ['paddingBottom', 'paddingLeft', 'paddingRight', 'paddingTop'],
-      'transition': ['transitionDelay', 'transitionDuration', 'transitionProperty', 'transitionTimingFunction']
-    };
-
-    _checkProps = function checkProps(config) {
-      var componentName = config.componentName;
-      var style = config.style;
-
-      if ((typeof style === 'undefined' ? 'undefined' : _typeof(style)) !== 'object' || !style) {
-        return;
-      }
-
-      var styleKeys = Object.keys(style);
-      styleKeys.forEach(function (styleKey) {
-        if (Array.isArray(shorthandPropertyExpansions[styleKey]) && shorthandPropertyExpansions[styleKey].some(function (sp) {
-          return styleKeys.indexOf(sp) !== -1;
-        })) {
-          if (process.env.NODE_ENV !== 'production') {
-            /* eslint-disable no-console */
-            console.warn('Radium: property "' + styleKey + '" in style object', style, ': do not mix longhand and ' + 'shorthand properties in the same style object. Check the render ' + 'method of ' + componentName + '.', 'See https://github.com/FormidableLabs/radium/issues/95 for more ' + 'information.');
-            /* eslint-enable no-console */
-          }
-        }
-      });
-
-      styleKeys.forEach(function (k) {
-        return _checkProps(_extends({}, config, { style: style[k] }));
-      });
-      return;
-    };
-  })();
-}
-
-exports.default = _checkProps;
-module.exports = exports['default'];
-}).call(this,require('_process'))
-},{"_process":16}],51:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _checkPropsPlugin = require('./check-props-plugin');
-
-var _checkPropsPlugin2 = _interopRequireDefault(_checkPropsPlugin);
-
-var _keyframesPlugin = require('./keyframes-plugin');
-
-var _keyframesPlugin2 = _interopRequireDefault(_keyframesPlugin);
-
-var _mergeStyleArrayPlugin = require('./merge-style-array-plugin');
-
-var _mergeStyleArrayPlugin2 = _interopRequireDefault(_mergeStyleArrayPlugin);
-
-var _prefixPlugin = require('./prefix-plugin');
-
-var _prefixPlugin2 = _interopRequireDefault(_prefixPlugin);
-
-var _resolveInteractionStylesPlugin = require('./resolve-interaction-styles-plugin');
-
-var _resolveInteractionStylesPlugin2 = _interopRequireDefault(_resolveInteractionStylesPlugin);
-
-var _resolveMediaQueriesPlugin = require('./resolve-media-queries-plugin');
-
-var _resolveMediaQueriesPlugin2 = _interopRequireDefault(_resolveMediaQueriesPlugin);
-
-var _visitedPlugin = require('./visited-plugin');
-
-var _visitedPlugin2 = _interopRequireDefault(_visitedPlugin);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* eslint-disable block-scoped-const */
-
-exports.default = {
-  checkProps: _checkPropsPlugin2.default,
-  keyframes: _keyframesPlugin2.default,
-  mergeStyleArray: _mergeStyleArrayPlugin2.default,
-  prefix: _prefixPlugin2.default,
-  resolveInteractionStyles: _resolveInteractionStylesPlugin2.default,
-  resolveMediaQueries: _resolveMediaQueriesPlugin2.default,
-  visited: _visitedPlugin2.default
-};
-module.exports = exports['default'];
-},{"./check-props-plugin":50,"./keyframes-plugin":52,"./merge-style-array-plugin":53,"./prefix-plugin":55,"./resolve-interaction-styles-plugin":56,"./resolve-media-queries-plugin":57,"./visited-plugin":58}],52:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = keyframesPlugin;
-function keyframesPlugin(_ref // eslint-disable-line no-shadow
-) {
-  var addCSS = _ref.addCSS;
-  var config = _ref.config;
-  var style = _ref.style;
-
-  var newStyle = Object.keys(style).reduce(function (newStyleInProgress, key) {
-    var value = style[key];
-    if (key === 'animationName' && value && value.__radiumKeyframes) {
-      var keyframesValue = value;
-
-      var _keyframesValue$__pro = keyframesValue.__process(config.userAgent);
-
-      var animationName = _keyframesValue$__pro.animationName;
-      var css = _keyframesValue$__pro.css;
-
-      addCSS(css);
-      value = animationName;
-    }
-
-    newStyleInProgress[key] = value;
-    return newStyleInProgress;
-  }, {});
-  return { style: newStyle };
-}
-module.exports = exports['default'];
-},{}],53:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-
-// Convenient syntax for multiple styles: `style={[style1, style2, etc]}`
-// Ignores non-objects, so you can do `this.state.isCool && styles.cool`.
-var mergeStyleArrayPlugin = function mergeStyleArrayPlugin(_ref) {
-  var style = _ref.style;
-  var mergeStyles = _ref.mergeStyles;
-  // eslint-disable-line no-shadow
-  var newStyle = Array.isArray(style) ? mergeStyles(style) : style;
-  return { style: newStyle };
-};
-
-exports.default = mergeStyleArrayPlugin;
-module.exports = exports['default'];
-},{}],54:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-
-var _callbacks = [];
-var _mouseUpListenerIsActive = false;
-
-function _handleMouseUp() {
-  _callbacks.forEach(function (callback) {
-    callback();
-  });
-}
-
-var subscribe = function subscribe(callback) {
-  if (_callbacks.indexOf(callback) === -1) {
-    _callbacks.push(callback);
-  }
-
-  if (!_mouseUpListenerIsActive) {
-    window.addEventListener('mouseup', _handleMouseUp);
-    _mouseUpListenerIsActive = true;
-  }
-
-  return {
-    remove: function remove() {
-      var index = _callbacks.indexOf(callback);
-      _callbacks.splice(index, 1);
-
-      if (_callbacks.length === 0 && _mouseUpListenerIsActive) {
-        window.removeEventListener('mouseup', _handleMouseUp);
-        _mouseUpListenerIsActive = false;
-      }
-    }
-  };
-};
-
-exports.default = {
-  subscribe: subscribe,
-  __triggerForTests: _handleMouseUp
-};
-module.exports = exports['default'];
-},{}],55:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = prefixPlugin;
-
-var _prefixer = require('../prefixer');
-
-function prefixPlugin(_ref // eslint-disable-line no-shadow
-) {
-  var config = _ref.config;
-  var style = _ref.style;
-
-  var newStyle = (0, _prefixer.getPrefixedStyle)(style, config.userAgent);
-  return { style: newStyle };
-}
-module.exports = exports['default'];
-},{"../prefixer":59}],56:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _mouseUpListener = require('./mouse-up-listener');
-
-var _mouseUpListener2 = _interopRequireDefault(_mouseUpListener);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var _isInteractiveStyleField = function _isInteractiveStyleField(styleFieldName) {
-  return styleFieldName === ':hover' || styleFieldName === ':active' || styleFieldName === ':focus';
-};
-
-var resolveInteractionStyles = function resolveInteractionStyles(config) {
-  var ExecutionEnvironment = config.ExecutionEnvironment;
-  var getComponentField = config.getComponentField;
-  var getState = config.getState;
-  var mergeStyles = config.mergeStyles;
-  var props = config.props;
-  var setState = config.setState;
-  var style = config.style;
-
-
-  var newComponentFields = {};
-  var newProps = {};
-
-  // Only add handlers if necessary
-  if (style[':hover']) {
-    (function () {
-      // Always call the existing handler if one is already defined.
-      // This code, and the very similar ones below, could be abstracted a bit
-      // more, but it hurts readability IMO.
-      var existingOnMouseEnter = props.onMouseEnter;
-      newProps.onMouseEnter = function (e) {
-        existingOnMouseEnter && existingOnMouseEnter(e);
-        setState(':hover', true);
-      };
-
-      var existingOnMouseLeave = props.onMouseLeave;
-      newProps.onMouseLeave = function (e) {
-        existingOnMouseLeave && existingOnMouseLeave(e);
-        setState(':hover', false);
-      };
-    })();
-  }
-
-  if (style[':active']) {
-    (function () {
-      var existingOnMouseDown = props.onMouseDown;
-      newProps.onMouseDown = function (e) {
-        existingOnMouseDown && existingOnMouseDown(e);
-        newComponentFields._lastMouseDown = Date.now();
-        setState(':active', 'viamousedown');
-      };
-
-      var existingOnKeyDown = props.onKeyDown;
-      newProps.onKeyDown = function (e) {
-        existingOnKeyDown && existingOnKeyDown(e);
-        if (e.key === ' ' || e.key === 'Enter') {
-          setState(':active', 'viakeydown');
-        }
-      };
-
-      var existingOnKeyUp = props.onKeyUp;
-      newProps.onKeyUp = function (e) {
-        existingOnKeyUp && existingOnKeyUp(e);
-        if (e.key === ' ' || e.key === 'Enter') {
-          setState(':active', false);
-        }
-      };
-    })();
-  }
-
-  if (style[':focus']) {
-    (function () {
-      var existingOnFocus = props.onFocus;
-      newProps.onFocus = function (e) {
-        existingOnFocus && existingOnFocus(e);
-        setState(':focus', true);
-      };
-
-      var existingOnBlur = props.onBlur;
-      newProps.onBlur = function (e) {
-        existingOnBlur && existingOnBlur(e);
-        setState(':focus', false);
-      };
-    })();
-  }
-
-  if (style[':active'] && !getComponentField('_radiumMouseUpListener') && ExecutionEnvironment.canUseEventListeners) {
-    newComponentFields._radiumMouseUpListener = _mouseUpListener2.default.subscribe(function () {
-      Object.keys(getComponentField('state')._radiumStyleState).forEach(function (key) {
-        if (getState(':active', key) === 'viamousedown') {
-          setState(':active', false, key);
-        }
-      });
-    });
-  }
-
-  // Merge the styles in the order they were defined
-  var interactionStyles = Object.keys(style).filter(function (name) {
-    return _isInteractiveStyleField(name) && getState(name);
-  }).map(function (name) {
-    return style[name];
-  });
-
-  var newStyle = mergeStyles([style].concat(interactionStyles));
-
-  // Remove interactive styles
-  newStyle = Object.keys(newStyle).reduce(function (styleWithoutInteractions, name) {
-    if (!_isInteractiveStyleField(name)) {
-      styleWithoutInteractions[name] = newStyle[name];
-    }
-    return styleWithoutInteractions;
-  }, {});
-
-  return {
-    componentFields: newComponentFields,
-    props: newProps,
-    style: newStyle
-  };
-};
-
-exports.default = resolveInteractionStyles;
-module.exports = exports['default'];
-},{"./mouse-up-listener":54}],57:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-exports.default = resolveMediaQueries;
-
-
-var _windowMatchMedia = void 0;
-function _getWindowMatchMedia(ExecutionEnvironment) {
-  if (_windowMatchMedia === undefined) {
-    _windowMatchMedia = !!ExecutionEnvironment.canUseDOM && !!window && !!window.matchMedia && function (mediaQueryString) {
-      return window.matchMedia(mediaQueryString);
-    } || null;
-  }
-  return _windowMatchMedia;
-}
-
-function _filterObject(obj, predicate) {
-  return Object.keys(obj).filter(function (key) {
-    return predicate(obj[key], key);
-  }).reduce(function (result, key) {
-    result[key] = obj[key];
-    return result;
-  }, {});
-}
-
-function _removeMediaQueries(style) {
-  return Object.keys(style).reduce(function (styleWithoutMedia, key) {
-    if (key.indexOf('@media') !== 0) {
-      styleWithoutMedia[key] = style[key];
-    }
-    return styleWithoutMedia;
-  }, {});
-}
-
-function _topLevelRulesToCSS(_ref) {
-  var addCSS = _ref.addCSS;
-  var appendImportantToEachValue = _ref.appendImportantToEachValue;
-  var cssRuleSetToString = _ref.cssRuleSetToString;
-  var hash = _ref.hash;
-  var isNestedStyle = _ref.isNestedStyle;
-  var style = _ref.style;
-  var userAgent = _ref.userAgent;
-
-  var className = '';
-  Object.keys(style).filter(function (name) {
-    return name.indexOf('@media') === 0;
-  }).map(function (query) {
-    var topLevelRules = appendImportantToEachValue(_filterObject(style[query], function (value) {
-      return !isNestedStyle(value);
-    }));
-
-    if (!Object.keys(topLevelRules).length) {
-      return;
-    }
-
-    var ruleCSS = cssRuleSetToString('', topLevelRules, userAgent);
-
-    // CSS classes cannot start with a number
-    var mediaQueryClassName = 'rmq-' + hash(query + ruleCSS);
-    var css = query + '{ .' + mediaQueryClassName + ruleCSS + '}';
-
-    addCSS(css);
-
-    className += (className ? ' ' : '') + mediaQueryClassName;
-  });
-  return className;
-}
-
-function _subscribeToMediaQuery(_ref2) {
-  var listener = _ref2.listener;
-  var listenersByQuery = _ref2.listenersByQuery;
-  var matchMedia = _ref2.matchMedia;
-  var mediaQueryListsByQuery = _ref2.mediaQueryListsByQuery;
-  var query = _ref2.query;
-
-  query = query.replace('@media ', '');
-
-  var mql = mediaQueryListsByQuery[query];
-  if (!mql && matchMedia) {
-    mediaQueryListsByQuery[query] = mql = matchMedia(query);
-  }
-
-  if (!listenersByQuery || !listenersByQuery[query]) {
-    mql.addListener(listener);
-
-    listenersByQuery[query] = {
-      remove: function remove() {
-        mql.removeListener(listener);
-      }
-    };
-  }
-  return mql;
-}
-
-function resolveMediaQueries(_ref3) {
-  var ExecutionEnvironment = _ref3.ExecutionEnvironment;
-  var addCSS = _ref3.addCSS;
-  var appendImportantToEachValue = _ref3.appendImportantToEachValue;
-  var config = _ref3.config;
-  var cssRuleSetToString = _ref3.cssRuleSetToString;
-  var getComponentField = _ref3.getComponentField;
-  var getGlobalState = _ref3.getGlobalState;
-  var hash = _ref3.hash;
-  var isNestedStyle = _ref3.isNestedStyle;
-  var mergeStyles = _ref3.mergeStyles;
-  var props = _ref3.props;
-  var setState = _ref3.setState;
-  var style = _ref3.style;
-  // eslint-disable-line no-shadow
-  var newStyle = _removeMediaQueries(style);
-  var mediaQueryClassNames = _topLevelRulesToCSS({
-    addCSS: addCSS,
-    appendImportantToEachValue: appendImportantToEachValue,
-    cssRuleSetToString: cssRuleSetToString,
-    hash: hash,
-    isNestedStyle: isNestedStyle,
-    style: style,
-    userAgent: config.userAgent
-  });
-
-  var newProps = mediaQueryClassNames ? {
-    className: mediaQueryClassNames + (props.className ? ' ' + props.className : '')
-  } : null;
-
-  var matchMedia = config.matchMedia || _getWindowMatchMedia(ExecutionEnvironment);
-
-  if (!matchMedia) {
-    return {
-      props: newProps,
-      style: newStyle
-    };
-  }
-
-  var listenersByQuery = _extends({}, getComponentField('_radiumMediaQueryListenersByQuery'));
-  var mediaQueryListsByQuery = getGlobalState('mediaQueryListsByQuery') || {};
-
-  Object.keys(style).filter(function (name) {
-    return name.indexOf('@media') === 0;
-  }).map(function (query) {
-    var nestedRules = _filterObject(style[query], isNestedStyle);
-
-    if (!Object.keys(nestedRules).length) {
-      return;
-    }
-
-    var mql = _subscribeToMediaQuery({
-      listener: function listener() {
-        return setState(query, mql.matches, '_all');
-      },
-      listenersByQuery: listenersByQuery,
-      matchMedia: matchMedia,
-      mediaQueryListsByQuery: mediaQueryListsByQuery,
-      query: query
-    });
-
-    // Apply media query states
-    if (mql.matches) {
-      newStyle = mergeStyles([newStyle, nestedRules]);
-    }
-  });
-
-  return {
-    componentFields: {
-      _radiumMediaQueryListenersByQuery: listenersByQuery
-    },
-    globalState: { mediaQueryListsByQuery: mediaQueryListsByQuery },
-    props: newProps,
-    style: newStyle
-  };
-}
-module.exports = exports['default'];
-},{}],58:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = visited;
-function visited(_ref) {
-  var addCSS = _ref.addCSS;
-  var appendImportantToEachValue = _ref.appendImportantToEachValue;
-  var config = _ref.config;
-  var cssRuleSetToString = _ref.cssRuleSetToString;
-  var hash = _ref.hash;
-  var props = _ref.props;
-  var style = _ref.style;
-  // eslint-disable-line no-shadow
-  var className = props.className;
-
-  var newStyle = Object.keys(style).reduce(function (newStyleInProgress, key) {
-    var value = style[key];
-    if (key === ':visited') {
-      value = appendImportantToEachValue(value);
-      var ruleCSS = cssRuleSetToString('', value, config.userAgent);
-      var visitedClassName = 'rad-' + hash(ruleCSS);
-      var css = '.' + visitedClassName + ':visited' + ruleCSS;
-
-      addCSS(css);
-      className = (className ? className + ' ' : '') + visitedClassName;
-    } else {
-      newStyleInProgress[key] = value;
-    }
-
-    return newStyleInProgress;
-  }, {});
-
-  return {
-    props: className === props.className ? null : { className: className },
-    style: newStyle
-  };
-}
-module.exports = exports['default'];
-},{}],59:[function(require,module,exports){
-(function (process,global){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; }; /**
-                                                                                                                                                                                                                                                   * Based on https://github.com/jsstyles/css-vendor, but without having to
-                                                                                                                                                                                                                                                   * convert between different cases all the time.
-                                                                                                                                                                                                                                                   *
-                                                                                                                                                                                                                                                   * 
-                                                                                                                                                                                                                                                   */
-
-exports.getPrefixedKeyframes = getPrefixedKeyframes;
-exports.getPrefixedStyle = getPrefixedStyle;
-
-var _inlineStylePrefixer = require('inline-style-prefixer');
-
-var _inlineStylePrefixer2 = _interopRequireDefault(_inlineStylePrefixer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function transformValues(style) {
-  return Object.keys(style).reduce(function (newStyle, key) {
-    var value = style[key];
-    if (Array.isArray(value)) {
-      value = value.join(';' + key + ':');
-    } else if (value && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object' && typeof value.toString === 'function') {
-      value = value.toString();
-    }
-
-    newStyle[key] = value;
-    return newStyle;
-  }, {});
-}
-
-var _hasWarnedAboutUserAgent = false;
-var _lastUserAgent = void 0;
-var _cachedPrefixer = void 0;
-
-function getPrefixer(userAgent) {
-  var actualUserAgent = userAgent || global && global.navigator && global.navigator.userAgent;
-
-  if (process.env.NODE_ENV !== 'production') {
-    if (!actualUserAgent && !_hasWarnedAboutUserAgent) {
-      /* eslint-disable no-console */
-      console.warn('Radium: userAgent should be supplied for server-side rendering. See ' + 'https://github.com/FormidableLabs/radium/tree/master/docs/api#radium ' + 'for more information.');
-      /* eslint-enable no-console */
-      _hasWarnedAboutUserAgent = true;
-    }
-  }
-
-  if (!_cachedPrefixer || actualUserAgent !== _lastUserAgent) {
-    if (actualUserAgent === 'all') {
-      _cachedPrefixer = {
-        prefix: _inlineStylePrefixer2.default.prefixAll,
-        prefixedKeyframes: 'keyframes'
-      };
-    } else {
-      _cachedPrefixer = new _inlineStylePrefixer2.default({ userAgent: actualUserAgent });
-    }
-    _lastUserAgent = actualUserAgent;
-  }
-  return _cachedPrefixer;
-}
-
-function getPrefixedKeyframes(userAgent) {
-  return getPrefixer(userAgent).prefixedKeyframes;
-}
-
-// Returns a new style object with vendor prefixes added to property names
-// and values.
-function getPrefixedStyle(style, userAgent) {
-  var styleWithFallbacks = transformValues(style);
-  var prefixer = getPrefixer(userAgent);
-  var prefixedStyle = prefixer.prefix(styleWithFallbacks);
-  return prefixedStyle;
-}
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":16,"inline-style-prefixer":63}],60:[function(require,module,exports){
-(function (process){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-var _appendImportantToEachValue = require('./append-important-to-each-value');
-
-var _appendImportantToEachValue2 = _interopRequireDefault(_appendImportantToEachValue);
-
-var _cssRuleSetToString = require('./css-rule-set-to-string');
-
-var _cssRuleSetToString2 = _interopRequireDefault(_cssRuleSetToString);
-
-var _getState = require('./get-state');
-
-var _getState2 = _interopRequireDefault(_getState);
-
-var _getStateKey = require('./get-state-key');
-
-var _getStateKey2 = _interopRequireDefault(_getStateKey);
-
-var _hash = require('./hash');
-
-var _hash2 = _interopRequireDefault(_hash);
-
-var _mergeStyles = require('./merge-styles');
-
-var _plugins = require('./plugins/');
-
-var _plugins2 = _interopRequireDefault(_plugins);
-
-var _exenv = require('exenv');
-
-var _exenv2 = _interopRequireDefault(_exenv);
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var DEFAULT_CONFIG = {
-  plugins: [_plugins2.default.mergeStyleArray, _plugins2.default.checkProps, _plugins2.default.resolveMediaQueries, _plugins2.default.resolveInteractionStyles, _plugins2.default.keyframes, _plugins2.default.visited, _plugins2.default.prefix, _plugins2.default.checkProps]
-};
-
-// Gross
-var globalState = {};
-
-// Declare early for recursive helpers.
-var resolveStyles = null;
-
-var _shouldResolveStyles = function _shouldResolveStyles(component) {
-  return component.type && !component.type._isRadiumEnhanced;
-};
-
-var _resolveChildren = function _resolveChildren(_ref) {
-  var children = _ref.children;
-  var component = _ref.component;
-  var config = _ref.config;
-  var existingKeyMap = _ref.existingKeyMap;
-
-  if (!children) {
-    return children;
-  }
-
-  var childrenType = typeof children === 'undefined' ? 'undefined' : _typeof(children);
-
-  if (childrenType === 'string' || childrenType === 'number') {
-    // Don't do anything with a single primitive child
-    return children;
-  }
-
-  if (childrenType === 'function') {
-    // Wrap the function, resolving styles on the result
-    return function () {
-      var result = children.apply(this, arguments);
-      if (_react2.default.isValidElement(result)) {
-        return resolveStyles(component, result, config, existingKeyMap, true);
-      }
-      return result;
-    };
-  }
-
-  if (_react2.default.Children.count(children) === 1 && children.type) {
-    // If a React Element is an only child, don't wrap it in an array for
-    // React.Children.map() for React.Children.only() compatibility.
-    var onlyChild = _react2.default.Children.only(children);
-    return resolveStyles(component, onlyChild, config, existingKeyMap, true);
-  }
-
-  return _react2.default.Children.map(children, function (child) {
-    if (_react2.default.isValidElement(child)) {
-      return resolveStyles(component, child, config, existingKeyMap, true);
-    }
-
-    return child;
-  });
-};
-
-// Recurse over props, just like children
-var _resolveProps = function _resolveProps(_ref2) {
-  var component = _ref2.component;
-  var config = _ref2.config;
-  var existingKeyMap = _ref2.existingKeyMap;
-  var props = _ref2.props;
-
-  var newProps = props;
-
-  Object.keys(props).forEach(function (prop) {
-    // We already recurse over children above
-    if (prop === 'children') {
-      return;
-    }
-
-    var propValue = props[prop];
-    if (_react2.default.isValidElement(propValue)) {
-      newProps = _extends({}, newProps);
-      newProps[prop] = resolveStyles(component, propValue, config, existingKeyMap, true);
-    }
-  });
-
-  return newProps;
-};
-
-var _buildGetKey = function _buildGetKey(_ref3) {
-  var componentName = _ref3.componentName;
-  var existingKeyMap = _ref3.existingKeyMap;
-  var renderedElement = _ref3.renderedElement;
-
-  // We need a unique key to correlate state changes due to user interaction
-  // with the rendered element, so we know to apply the proper interactive
-  // styles.
-  var originalKey = typeof renderedElement.ref === 'string' ? renderedElement.ref : renderedElement.key;
-  var key = (0, _getStateKey2.default)(originalKey);
-
-  var alreadyGotKey = false;
-  var getKey = function getKey() {
-    if (alreadyGotKey) {
-      return key;
-    }
-
-    alreadyGotKey = true;
-
-    if (existingKeyMap[key]) {
-      var elementName = void 0;
-      if (typeof renderedElement.type === 'string') {
-        elementName = renderedElement.type;
-      } else if (renderedElement.type.constructor) {
-        elementName = renderedElement.type.constructor.displayName || renderedElement.type.constructor.name;
-      }
-
-      throw new Error('Radium requires each element with interactive styles to have a unique ' + 'key, set using either the ref or key prop. ' + (originalKey ? 'Key "' + originalKey + '" is a duplicate.' : 'Multiple elements have no key specified.') + ' ' + 'Component: "' + componentName + '". ' + (elementName ? 'Element: "' + elementName + '".' : ''));
-    }
-
-    existingKeyMap[key] = true;
-
-    return key;
-  };
-
-  return getKey;
-};
-
-var _setStyleState = function _setStyleState(component, key, stateKey, value) {
-  if (!component._radiumIsMounted) {
-    return;
-  }
-
-  var existing = component._lastRadiumState || component.state && component.state._radiumStyleState || {};
-
-  var state = { _radiumStyleState: _extends({}, existing) };
-  state._radiumStyleState[key] = _extends({}, state._radiumStyleState[key]);
-  state._radiumStyleState[key][stateKey] = value;
-
-  component._lastRadiumState = state._radiumStyleState;
-  component.setState(state);
-};
-
-var _runPlugins = function _runPlugins(_ref4) {
-  var component = _ref4.component;
-  var config = _ref4.config;
-  var existingKeyMap = _ref4.existingKeyMap;
-  var props = _ref4.props;
-  var renderedElement = _ref4.renderedElement;
-
-  // Don't run plugins if renderedElement is not a simple ReactDOMElement or has
-  // no style.
-  if (!_react2.default.isValidElement(renderedElement) || typeof renderedElement.type !== 'string' || !props.style) {
-    return props;
-  }
-
-  var newProps = props;
-
-  var plugins = config.plugins || DEFAULT_CONFIG.plugins;
-
-  var componentName = component.constructor.displayName || component.constructor.name;
-  var getKey = _buildGetKey({ renderedElement: renderedElement, existingKeyMap: existingKeyMap, componentName: componentName });
-  var getComponentField = function getComponentField(key) {
-    return component[key];
-  };
-  var getGlobalState = function getGlobalState(key) {
-    return globalState[key];
-  };
-  var componentGetState = function componentGetState(stateKey, elementKey) {
-    return (0, _getState2.default)(component.state, elementKey || getKey(), stateKey);
-  };
-  var setState = function setState(stateKey, value, elementKey) {
-    return _setStyleState(component, elementKey || getKey(), stateKey, value);
-  };
-
-  var addCSS = function addCSS(css) {
-    var styleKeeper = component._radiumStyleKeeper || component.context._radiumStyleKeeper;
-    if (!styleKeeper) {
-      if (__isTestModeEnabled) {
-        return {
-          remove: function remove() {}
-        };
-      }
-
-      throw new Error('To use plugins requiring `addCSS` (e.g. keyframes, media queries), ' + 'please wrap your application in the StyleRoot component. Component ' + 'name: `' + componentName + '`.');
-    }
-
-    return styleKeeper.addCSS(css);
-  };
-
-  var newStyle = props.style;
-
-  plugins.forEach(function (plugin) {
-    var result = plugin({
-      ExecutionEnvironment: _exenv2.default,
-      addCSS: addCSS,
-      appendImportantToEachValue: _appendImportantToEachValue2.default,
-      componentName: componentName,
-      config: config,
-      cssRuleSetToString: _cssRuleSetToString2.default,
-      getComponentField: getComponentField,
-      getGlobalState: getGlobalState,
-      getState: componentGetState,
-      hash: _hash2.default,
-      mergeStyles: _mergeStyles.mergeStyles,
-      props: newProps,
-      setState: setState,
-      isNestedStyle: _mergeStyles.isNestedStyle,
-      style: newStyle
-    }) || {};
-
-    newStyle = result.style || newStyle;
-
-    newProps = result.props && Object.keys(result.props).length ? _extends({}, newProps, result.props) : newProps;
-
-    var newComponentFields = result.componentFields || {};
-    Object.keys(newComponentFields).forEach(function (fieldName) {
-      component[fieldName] = newComponentFields[fieldName];
-    });
-
-    var newGlobalState = result.globalState || {};
-    Object.keys(newGlobalState).forEach(function (key) {
-      globalState[key] = newGlobalState[key];
-    });
-  });
-
-  if (newStyle !== props.style) {
-    newProps = _extends({}, newProps, { style: newStyle });
-  }
-
-  return newProps;
-};
-
-// Wrapper around React.cloneElement. To avoid processing the same element
-// twice, whenever we clone an element add a special prop to make sure we don't
-// process this element again.
-var _cloneElement = function _cloneElement(renderedElement, newProps, newChildren) {
-  // Only add flag if this is a normal DOM element
-  if (typeof renderedElement.type === 'string') {
-    newProps = _extends({}, newProps, { _radiumDidResolveStyles: true });
-  }
-
-  return _react2.default.cloneElement(renderedElement, newProps, newChildren);
-};
-
-//
-// The nucleus of Radium. resolveStyles is called on the rendered elements
-// before they are returned in render. It iterates over the elements and
-// children, rewriting props to add event handlers required to capture user
-// interactions (e.g. mouse over). It also replaces the style prop because it
-// adds in the various interaction styles (e.g. :hover).
-//
-resolveStyles = function resolveStyles(component, // ReactComponent, flow+eslint complaining
-renderedElement) {
-  var // ReactElement
-  config = arguments.length <= 2 || arguments[2] === undefined ? DEFAULT_CONFIG : arguments[2];
-  var existingKeyMap = arguments[3];
-  var shouldCheckBeforeResolve = arguments.length <= 4 || arguments[4] === undefined ? false : arguments[4];
-  // ReactElement
-  existingKeyMap = existingKeyMap || {};
-  if (!renderedElement ||
-  // Bail if we've already processed this element. This ensures that only the
-  // owner of an element processes that element, since the owner's render
-  // function will be called first (which will always be the case, since you
-  // can't know what else to render until you render the parent component).
-  renderedElement.props && renderedElement.props._radiumDidResolveStyles ||
-
-  // Bail if this element is a radium enhanced element, because if it is,
-  // then it will take care of resolving its own styles.
-  shouldCheckBeforeResolve && !_shouldResolveStyles(renderedElement)) {
-    return renderedElement;
-  }
-
-  var newChildren = _resolveChildren({
-    children: renderedElement.props.children,
-    component: component,
-    config: config,
-    existingKeyMap: existingKeyMap
-  });
-
-  var newProps = _resolveProps({
-    component: component,
-    config: config,
-    existingKeyMap: existingKeyMap,
-    props: renderedElement.props
-  });
-
-  newProps = _runPlugins({
-    component: component,
-    config: config,
-    existingKeyMap: existingKeyMap,
-    props: newProps,
-    renderedElement: renderedElement
-  });
-
-  // If nothing changed, don't bother cloning the element. Might be a bit
-  // wasteful, as we add the sentinal to stop double-processing when we clone.
-  // Assume benign double-processing is better than unneeded cloning.
-  if (newChildren === renderedElement.props.children && newProps === renderedElement.props) {
-    return renderedElement;
-  }
-
-  return _cloneElement(renderedElement, newProps !== renderedElement.props ? newProps : {}, newChildren);
-};
-
-// Only for use by tests
-var __isTestModeEnabled = false;
-if (process.env.NODE_ENV !== 'production') {
-  resolveStyles.__clearStateForTests = function () {
-    globalState = {};
-  };
-  resolveStyles.__setTestMode = function (isEnabled) {
-    __isTestModeEnabled = isEnabled;
-  };
-}
-
-exports.default = resolveStyles;
-module.exports = exports['default'];
-}).call(this,require('_process'))
-},{"./append-important-to-each-value":35,"./css-rule-set-to-string":41,"./get-state":44,"./get-state-key":43,"./hash":45,"./merge-styles":49,"./plugins/":51,"_process":16,"exenv":62,"react":"react"}],61:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var StyleKeeper = function () {
-  function StyleKeeper(userAgent) {
-    _classCallCheck(this, StyleKeeper);
-
-    this._userAgent = userAgent;
-    this._listeners = [];
-    this._cssSet = {};
-  }
-
-  StyleKeeper.prototype.subscribe = function subscribe(listener) {
-    var _this = this;
-
-    if (this._listeners.indexOf(listener) === -1) {
-      this._listeners.push(listener);
-    }
-
-    return {
-      // Must be fat arrow to capture `this`
-      remove: function remove() {
-        var listenerIndex = _this._listeners.indexOf(listener);
-        if (listenerIndex > -1) {
-          _this._listeners.splice(listenerIndex, 1);
-        }
-      }
-    };
-  };
-
-  StyleKeeper.prototype.addCSS = function addCSS(css) {
-    var _this2 = this;
-
-    if (!this._cssSet[css]) {
-      this._cssSet[css] = true;
-      this._emitChange();
-    }
-
-    return {
-      // Must be fat arrow to capture `this`
-      remove: function remove() {
-        delete _this2._cssSet[css];
-        _this2._emitChange();
-      }
-    };
-  };
-
-  StyleKeeper.prototype.getCSS = function getCSS() {
-    return Object.keys(this._cssSet).join('\n');
-  };
-
-  StyleKeeper.prototype._emitChange = function _emitChange() {
-    this._listeners.forEach(function (listener) {
-      return listener();
-    });
-  };
-
-  return StyleKeeper;
-}();
-
-exports.default = StyleKeeper;
-module.exports = exports['default'];
-},{}],62:[function(require,module,exports){
-/*!
-  Copyright (c) 2015 Jed Watson.
-  Based on code that is Copyright 2013-2015, Facebook, Inc.
-  All rights reserved.
-*/
-/* global define */
-
-(function () {
-	'use strict';
-
-	var canUseDOM = !!(
-		typeof window !== 'undefined' &&
-		window.document &&
-		window.document.createElement
-	);
-
-	var ExecutionEnvironment = {
-
-		canUseDOM: canUseDOM,
-
-		canUseWorkers: typeof Worker !== 'undefined',
-
-		canUseEventListeners:
-			canUseDOM && !!(window.addEventListener || window.attachEvent),
-
-		canUseViewport: canUseDOM && !!window.screen
-
-	};
-
-	if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
-		define(function () {
-			return ExecutionEnvironment;
-		});
-	} else if (typeof module !== 'undefined' && module.exports) {
-		module.exports = ExecutionEnvironment;
-	} else {
-		window.ExecutionEnvironment = ExecutionEnvironment;
-	}
-
-}());
-
-},{}],63:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-var _inlineStylePrefixAll = require('inline-style-prefix-all');
-
-var _inlineStylePrefixAll2 = _interopRequireDefault(_inlineStylePrefixAll);
-
-var _utilsGetBrowserInformation = require('./utils/getBrowserInformation');
-
-var _utilsGetBrowserInformation2 = _interopRequireDefault(_utilsGetBrowserInformation);
-
-var _utilsGetPrefixedKeyframes = require('./utils/getPrefixedKeyframes');
-
-var _utilsGetPrefixedKeyframes2 = _interopRequireDefault(_utilsGetPrefixedKeyframes);
-
-var _utilsCapitalizeString = require('./utils/capitalizeString');
-
-var _utilsCapitalizeString2 = _interopRequireDefault(_utilsCapitalizeString);
-
-var _utilsAssign = require('./utils/assign');
-
-var _utilsAssign2 = _interopRequireDefault(_utilsAssign);
-
-var _prefixProps = require('./prefixProps');
-
-var _prefixProps2 = _interopRequireDefault(_prefixProps);
-
-var _pluginsCalc = require('./plugins/calc');
-
-var _pluginsCalc2 = _interopRequireDefault(_pluginsCalc);
-
-var _pluginsCursor = require('./plugins/cursor');
-
-var _pluginsCursor2 = _interopRequireDefault(_pluginsCursor);
-
-var _pluginsFlex = require('./plugins/flex');
-
-var _pluginsFlex2 = _interopRequireDefault(_pluginsFlex);
-
-var _pluginsSizing = require('./plugins/sizing');
-
-var _pluginsSizing2 = _interopRequireDefault(_pluginsSizing);
-
-var _pluginsGradient = require('./plugins/gradient');
-
-var _pluginsGradient2 = _interopRequireDefault(_pluginsGradient);
-
-var _pluginsTransition = require('./plugins/transition');
-
-var _pluginsTransition2 = _interopRequireDefault(_pluginsTransition);
-
-// special flexbox specifications
-
-var _pluginsFlexboxIE = require('./plugins/flexboxIE');
-
-var _pluginsFlexboxIE2 = _interopRequireDefault(_pluginsFlexboxIE);
-
-var _pluginsFlexboxOld = require('./plugins/flexboxOld');
-
-var _pluginsFlexboxOld2 = _interopRequireDefault(_pluginsFlexboxOld);
-
-var plugins = [_pluginsCalc2['default'], _pluginsCursor2['default'], _pluginsSizing2['default'], _pluginsGradient2['default'], _pluginsTransition2['default'], _pluginsFlexboxIE2['default'], _pluginsFlexboxOld2['default'],
-// this must be run AFTER the flexbox specs
-_pluginsFlex2['default']];
-
-var Prefixer = (function () {
-  /**
-   * Instantiante a new prefixer
-   * @param {string} userAgent - userAgent to gather prefix information according to caniuse.com
-   * @param {string} keepUnprefixed - keeps unprefixed properties and values
-   */
-
-  function Prefixer() {
-    var _this = this;
-
-    var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-    _classCallCheck(this, Prefixer);
-
-    var defaultUserAgent = typeof navigator !== 'undefined' ? navigator.userAgent : undefined;
-
-    this._userAgent = options.userAgent || defaultUserAgent;
-    this._keepUnprefixed = options.keepUnprefixed || false;
-
-    this._browserInfo = (0, _utilsGetBrowserInformation2['default'])(this._userAgent);
-
-    // Checks if the userAgent was resolved correctly
-    if (this._browserInfo && this._browserInfo.prefix) {
-      // set additional prefix information
-      this.cssPrefix = this._browserInfo.prefix.css;
-      this.jsPrefix = this._browserInfo.prefix.inline;
-      this.prefixedKeyframes = (0, _utilsGetPrefixedKeyframes2['default'])(this._browserInfo);
-    } else {
-      this._usePrefixAllFallback = true;
-      return false;
-    }
-
-    var data = this._browserInfo.browser && _prefixProps2['default'][this._browserInfo.browser];
-    if (data) {
-      this._requiresPrefix = Object.keys(data).filter(function (key) {
-        return data[key] >= _this._browserInfo.version;
-      }).reduce(function (result, name) {
-        result[name] = true;
-        return result;
-      }, {});
-      this._hasPropsRequiringPrefix = Object.keys(this._requiresPrefix).length > 0;
-    } else {
-      this._usePrefixAllFallback = true;
-    }
-  }
-
-  /**
-   * Returns a prefixed version of the style object
-   * @param {Object} styles - Style object that gets prefixed properties added
-   * @returns {Object} - Style object with prefixed properties and values
-   */
-
-  _createClass(Prefixer, [{
-    key: 'prefix',
-    value: function prefix(styles) {
-      var _this2 = this;
-
-      // use prefixAll as fallback if userAgent can not be resolved
-      if (this._usePrefixAllFallback) {
-        return (0, _inlineStylePrefixAll2['default'])(styles);
-      }
-
-      // only add prefixes if needed
-      if (!this._hasPropsRequiringPrefix) {
-        return styles;
-      }
-
-      styles = (0, _utilsAssign2['default'])({}, styles);
-
-      Object.keys(styles).forEach(function (property) {
-        var value = styles[property];
-        if (value instanceof Object) {
-          // recurse through nested style objects
-          styles[property] = _this2.prefix(value);
-        } else {
-          // add prefixes if needed
-          if (_this2._requiresPrefix[property]) {
-            styles[_this2.jsPrefix + (0, _utilsCapitalizeString2['default'])(property)] = value;
-            if (!_this2._keepUnprefixed) {
-              delete styles[property];
-            }
-          }
-
-          // resolve plugins
-          plugins.forEach(function (plugin) {
-            // generates a new plugin interface with current data
-            var resolvedStyles = plugin({
-              property: property,
-              value: value,
-              styles: styles,
-              browserInfo: _this2._browserInfo,
-              prefix: {
-                js: _this2.jsPrefix,
-                css: _this2.cssPrefix,
-                keyframes: _this2.prefixedKeyframes
-              },
-              keepUnprefixed: _this2._keepUnprefixed,
-              requiresPrefix: _this2._requiresPrefix
-            });
-            (0, _utilsAssign2['default'])(styles, resolvedStyles);
-          });
-        }
-      });
-
-      return styles;
-    }
-
-    /**
-     * Returns a prefixed version of the style object using all vendor prefixes
-     * @param {Object} styles - Style object that gets prefixed properties added
-     * @returns {Object} - Style object with prefixed properties and values
-     */
-  }], [{
-    key: 'prefixAll',
-    value: function prefixAll(styles) {
-      return (0, _inlineStylePrefixAll2['default'])(styles);
-    }
-  }]);
-
-  return Prefixer;
-})();
-
-exports['default'] = Prefixer;
-module.exports = exports['default'];
-},{"./plugins/calc":64,"./plugins/cursor":65,"./plugins/flex":66,"./plugins/flexboxIE":67,"./plugins/flexboxOld":68,"./plugins/gradient":69,"./plugins/sizing":70,"./plugins/transition":71,"./prefixProps":72,"./utils/assign":73,"./utils/capitalizeString":75,"./utils/getBrowserInformation":76,"./utils/getPrefixedKeyframes":77,"inline-style-prefix-all":88}],64:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = calc;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var _utilsCamelToDashCase = require('../utils/camelToDashCase');
-
-var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
-
-function calc(_ref2) {
-  var property = _ref2.property;
-  var value = _ref2.value;
-  var _ref2$browserInfo = _ref2.browserInfo;
-  var browser = _ref2$browserInfo.browser;
-  var version = _ref2$browserInfo.version;
-  var css = _ref2.prefix.css;
-  var keepUnprefixed = _ref2.keepUnprefixed;
-
-  if (typeof value === 'string' && value.indexOf('calc(') > -1 && (browser === 'firefox' && version < 15 || browser === 'chrome' && version < 25 || browser === 'safari' && version < 6.1 || browser === 'ios_saf' && version < 7)) {
-    return _defineProperty({}, property, value.replace(/calc\(/g, css + 'calc(') + (keepUnprefixed ? ';' + (0, _utilsCamelToDashCase2['default'])(property) + ':' + value : ''));
-  }
-}
-
-module.exports = exports['default'];
-},{"../utils/camelToDashCase":74}],65:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = cursor;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _utilsCamelToDashCase = require('../utils/camelToDashCase');
-
-var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
-
-var values = {
-  'zoom-in': true,
-  'zoom-out': true,
-  'grab': true,
-  'grabbing': true
-};
-
-function cursor(_ref) {
-  var property = _ref.property;
-  var value = _ref.value;
-  var _ref$browserInfo = _ref.browserInfo;
-  var browser = _ref$browserInfo.browser;
-  var version = _ref$browserInfo.version;
-  var css = _ref.prefix.css;
-  var keepUnprefixed = _ref.keepUnprefixed;
-
-  if (property === 'cursor' && values[value] && (browser === 'firefox' && version < 24 || browser === 'chrome' && version < 37 || browser === 'safari' && version < 9 || browser === 'opera' && version < 24)) {
-    return {
-      cursor: css + value + (keepUnprefixed ? ';' + (0, _utilsCamelToDashCase2['default'])(property) + ':' + value : '')
-    };
-  }
-}
-
-module.exports = exports['default'];
-},{"../utils/camelToDashCase":74}],66:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = flex;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _utilsCamelToDashCase = require('../utils/camelToDashCase');
-
-var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
-
-var values = {
-  'flex': true,
-  'inline-flex': true
-};
-
-function flex(_ref) {
-  var property = _ref.property;
-  var value = _ref.value;
-  var _ref$browserInfo = _ref.browserInfo;
-  var browser = _ref$browserInfo.browser;
-  var version = _ref$browserInfo.version;
-  var css = _ref.prefix.css;
-  var keepUnprefixed = _ref.keepUnprefixed;
-
-  if (property === 'display' && values[value] && (browser === 'chrome' && version < 29 && version > 20 || (browser === 'safari' || browser === 'ios_saf') && version < 9 && version > 6 || browser === 'opera' && (version == 15 || version == 16))) {
-    return {
-      display: css + value + (keepUnprefixed ? ';' + (0, _utilsCamelToDashCase2['default'])(property) + ':' + value : '')
-    };
-  }
-}
-
-module.exports = exports['default'];
-},{"../utils/camelToDashCase":74}],67:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = flexboxIE;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var _utilsCamelToDashCase = require('../utils/camelToDashCase');
-
-var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
-
-var alternativeValues = {
-  'space-around': 'distribute',
-  'space-between': 'justify',
-  'flex-start': 'start',
-  'flex-end': 'end',
-  flex: 'flexbox',
-  'inline-flex': 'inline-flexbox'
-};
-var alternativeProps = {
-  alignContent: 'msFlexLinePack',
-  alignSelf: 'msFlexItemAlign',
-  alignItems: 'msFlexAlign',
-  justifyContent: 'msFlexPack',
-  order: 'msFlexOrder',
-  flexGrow: 'msFlexPositive',
-  flexShrink: 'msFlexNegative',
-  flexBasis: 'msPreferredSize'
-};
-
-var properties = Object.keys(alternativeProps).reduce(function (result, prop) {
-  result[prop] = true;
-  return result;
-}, {});
-
-function flexboxIE(_ref2) {
-  var property = _ref2.property;
-  var value = _ref2.value;
-  var styles = _ref2.styles;
-  var _ref2$browserInfo = _ref2.browserInfo;
-  var browser = _ref2$browserInfo.browser;
-  var version = _ref2$browserInfo.version;
-  var css = _ref2.prefix.css;
-  var keepUnprefixed = _ref2.keepUnprefixed;
-
-  if ((properties[property] || property === 'display' && typeof value === 'string' && value.indexOf('flex') > -1) && (browser === 'ie_mob' || browser === 'ie') && version == 10) {
-    if (!keepUnprefixed) {
-      delete styles[property];
-    }
-    if (property === 'display' && alternativeValues[value]) {
-      return {
-        display: css + alternativeValues[value] + (keepUnprefixed ? ';' + (0, _utilsCamelToDashCase2['default'])(property) + ':' + value : '')
-      };
-    }
-    if (alternativeProps[property]) {
-      return _defineProperty({}, alternativeProps[property], alternativeValues[value] || value);
-    }
-  }
-}
-
-module.exports = exports['default'];
-},{"../utils/camelToDashCase":74}],68:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = flexboxOld;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var _utilsCamelToDashCase = require('../utils/camelToDashCase');
-
-var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
-
-var alternativeValues = {
-  'space-around': 'justify',
-  'space-between': 'justify',
-  'flex-start': 'start',
-  'flex-end': 'end',
-  'wrap-reverse': 'multiple',
-  wrap: 'multiple',
-  flex: 'box',
-  'inline-flex': 'inline-box'
-};
-
-var alternativeProps = {
-  alignItems: 'WebkitBoxAlign',
-  justifyContent: 'WebkitBoxPack',
-  flexWrap: 'WebkitBoxLines'
-};
-
-var otherProps = ['alignContent', 'alignSelf', 'order', 'flexGrow', 'flexShrink', 'flexBasis', 'flexDirection'];
-
-var properties = Object.keys(alternativeProps).concat(otherProps).reduce(function (result, prop) {
-  result[prop] = true;
-  return result;
-}, {});
-
-function flexboxOld(_ref2) {
-  var property = _ref2.property;
-  var value = _ref2.value;
-  var styles = _ref2.styles;
-  var _ref2$browserInfo = _ref2.browserInfo;
-  var browser = _ref2$browserInfo.browser;
-  var version = _ref2$browserInfo.version;
-  var css = _ref2.prefix.css;
-  var keepUnprefixed = _ref2.keepUnprefixed;
-
-  if ((properties[property] || property === 'display' && typeof value === 'string' && value.indexOf('flex') > -1) && (browser === 'firefox' && version < 22 || browser === 'chrome' && version < 21 || (browser === 'safari' || browser === 'ios_saf') && version <= 6.1 || browser === 'android' && version < 4.4 || browser === 'and_uc')) {
-    if (!keepUnprefixed) {
-      delete styles[property];
-    }
-    if (property === 'flexDirection') {
-      return {
-        WebkitBoxOrient: value.indexOf('column') > -1 ? 'vertical' : 'horizontal',
-        WebkitBoxDirection: value.indexOf('reverse') > -1 ? 'reverse' : 'normal'
-      };
-    }
-    if (property === 'display' && alternativeValues[value]) {
-      return {
-        display: css + alternativeValues[value] + (keepUnprefixed ? ';' + (0, _utilsCamelToDashCase2['default'])(property) + ':' + value : '')
-      };
-    }
-    if (alternativeProps[property]) {
-      return _defineProperty({}, alternativeProps[property], alternativeValues[value] || value);
-    }
-  }
-}
-
-module.exports = exports['default'];
-},{"../utils/camelToDashCase":74}],69:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = gradient;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var _utilsCamelToDashCase = require('../utils/camelToDashCase');
-
-var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
-
-var values = /linear-gradient|radial-gradient|repeating-linear-gradient|repeating-radial-gradient/;
-
-function gradient(_ref2) {
-  var property = _ref2.property;
-  var value = _ref2.value;
-  var _ref2$browserInfo = _ref2.browserInfo;
-  var browser = _ref2$browserInfo.browser;
-  var version = _ref2$browserInfo.version;
-  var css = _ref2.prefix.css;
-  var keepUnprefixed = _ref2.keepUnprefixed;
-
-  if (typeof value === 'string' && value.match(values) !== null && (browser === 'firefox' && version < 16 || browser === 'chrome' && version < 26 || (browser === 'safari' || browser === 'ios_saf') && version < 7 || (browser === 'opera' || browser === 'op_mini') && version < 12.1 || browser === 'android' && version < 4.4 || browser === 'and_uc')) {
-    return _defineProperty({}, property, css + value + (keepUnprefixed ? ';' + (0, _utilsCamelToDashCase2['default'])(property) + ':' + value : ''));
-  }
-}
-
-module.exports = exports['default'];
-},{"../utils/camelToDashCase":74}],70:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = sizing;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var _utilsCamelToDashCase = require('../utils/camelToDashCase');
-
-var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
-
-var properties = {
-  maxHeight: true,
-  maxWidth: true,
-  width: true,
-  height: true,
-  columnWidth: true,
-  minWidth: true,
-  minHeight: true
-};
-var values = {
-  'min-content': true,
-  'max-content': true,
-  'fill-available': true,
-  'fit-content': true,
-  'contain-floats': true
-};
-
-function sizing(_ref2) {
-  var property = _ref2.property;
-  var value = _ref2.value;
-  var css = _ref2.prefix.css;
-  var keepUnprefixed = _ref2.keepUnprefixed;
-
-  // This might change in the future
-  // Keep an eye on it
-  if (properties[property] && values[value]) {
-    return _defineProperty({}, property, css + value + (keepUnprefixed ? ';' + (0, _utilsCamelToDashCase2['default'])(property) + ':' + value : ''));
-  }
-}
-
-module.exports = exports['default'];
-},{"../utils/camelToDashCase":74}],71:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = transition;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var _utilsCamelToDashCase = require('../utils/camelToDashCase');
-
-var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
-
-var _utilsCapitalizeString = require('../utils/capitalizeString');
-
-var _utilsCapitalizeString2 = _interopRequireDefault(_utilsCapitalizeString);
-
-var _utilsUnprefixProperty = require('../utils/unprefixProperty');
-
-var _utilsUnprefixProperty2 = _interopRequireDefault(_utilsUnprefixProperty);
-
-var properties = { transition: true, transitionProperty: true };
-
-function transition(_ref2) {
-  var property = _ref2.property;
-  var value = _ref2.value;
-  var css = _ref2.prefix.css;
-  var requiresPrefix = _ref2.requiresPrefix;
-  var keepUnprefixed = _ref2.keepUnprefixed;
-
-  // also check for already prefixed transitions
-  var unprefixedProperty = (0, _utilsUnprefixProperty2['default'])(property);
-  if (typeof value === 'string' && properties[unprefixedProperty]) {
-    var _ret = (function () {
-      var requiresPrefixDashCased = Object.keys(requiresPrefix).map(function (prop) {
-        return (0, _utilsCamelToDashCase2['default'])(prop);
-      });
-
-      // only split multi values, not cubic beziers
-      var multipleValues = value.split(/,(?![^()]*(?:\([^()]*\))?\))/g);
-
-      requiresPrefixDashCased.forEach(function (property) {
-        multipleValues.forEach(function (val, index) {
-          if (val.indexOf(property) > -1) {
-            multipleValues[index] = val.replace(property, css + property) + (keepUnprefixed ? ',' + val : '');
-          }
-        });
-      });
-
-      return {
-        v: _defineProperty({}, property, multipleValues.join(','))
-      };
-    })();
-
-    if (typeof _ret === 'object') return _ret.v;
-  }
-}
-
-module.exports = exports['default'];
-},{"../utils/camelToDashCase":74,"../utils/capitalizeString":75,"../utils/unprefixProperty":78}],72:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = { "chrome": { "transform": 35, "transformOrigin": 35, "transformOriginX": 35, "transformOriginY": 35, "backfaceVisibility": 35, "perspective": 35, "perspectiveOrigin": 35, "transformStyle": 35, "transformOriginZ": 35, "animation": 42, "animationDelay": 42, "animationDirection": 42, "animationFillMode": 42, "animationDuration": 42, "animationIterationCount": 42, "animationName": 42, "animationPlayState": 42, "animationTimingFunction": 42, "appearance": 52, "userSelect": 52, "fontKerning": 32, "textEmphasisPosition": 52, "textEmphasis": 52, "textEmphasisStyle": 52, "textEmphasisColor": 52, "boxDecorationBreak": 52, "clipPath": 52, "maskImage": 52, "maskMode": 52, "maskRepeat": 52, "maskPosition": 52, "maskClip": 52, "maskOrigin": 52, "maskSize": 52, "maskComposite": 52, "mask": 52, "maskBorderSource": 52, "maskBorderMode": 52, "maskBorderSlice": 52, "maskBorderWidth": 52, "maskBorderOutset": 52, "maskBorderRepeat": 52, "maskBorder": 52, "maskType": 52, "textDecorationStyle": 52, "textDecorationSkip": 52, "textDecorationLine": 52, "textDecorationColor": 52, "filter": 52, "fontFeatureSettings": 47, "breakAfter": 52, "breakBefore": 52, "breakInside": 52, "columnCount": 52, "columnFill": 52, "columnGap": 52, "columnRule": 52, "columnRuleColor": 52, "columnRuleStyle": 52, "columnRuleWidth": 52, "columns": 52, "columnSpan": 52, "columnWidth": 52 }, "safari": { "flex": 8, "flexBasis": 8, "flexDirection": 8, "flexGrow": 8, "flexFlow": 8, "flexShrink": 8, "flexWrap": 8, "alignContent": 8, "alignItems": 8, "alignSelf": 8, "justifyContent": 8, "order": 8, "transition": 6, "transitionDelay": 6, "transitionDuration": 6, "transitionProperty": 6, "transitionTimingFunction": 6, "transform": 8, "transformOrigin": 8, "transformOriginX": 8, "transformOriginY": 8, "backfaceVisibility": 8, "perspective": 8, "perspectiveOrigin": 8, "transformStyle": 8, "transformOriginZ": 8, "animation": 8, "animationDelay": 8, "animationDirection": 8, "animationFillMode": 8, "animationDuration": 8, "animationIterationCount": 8, "animationName": 8, "animationPlayState": 8, "animationTimingFunction": 8, "appearance": 9.1, "userSelect": 9.1, "backdropFilter": 9.1, "fontKerning": 9.1, "scrollSnapType": 9.1, "scrollSnapPointsX": 9.1, "scrollSnapPointsY": 9.1, "scrollSnapDestination": 9.1, "scrollSnapCoordinate": 9.1, "textEmphasisPosition": 7, "textEmphasis": 7, "textEmphasisStyle": 7, "textEmphasisColor": 7, "boxDecorationBreak": 9.1, "clipPath": 9.1, "maskImage": 9.1, "maskMode": 9.1, "maskRepeat": 9.1, "maskPosition": 9.1, "maskClip": 9.1, "maskOrigin": 9.1, "maskSize": 9.1, "maskComposite": 9.1, "mask": 9.1, "maskBorderSource": 9.1, "maskBorderMode": 9.1, "maskBorderSlice": 9.1, "maskBorderWidth": 9.1, "maskBorderOutset": 9.1, "maskBorderRepeat": 9.1, "maskBorder": 9.1, "maskType": 9.1, "textDecorationStyle": 9.1, "textDecorationSkip": 9.1, "textDecorationLine": 9.1, "textDecorationColor": 9.1, "shapeImageThreshold": 9.1, "shapeImageMargin": 9.1, "shapeImageOutside": 9.1, "filter": 9, "hyphens": 9.1, "flowInto": 9.1, "flowFrom": 9.1, "breakBefore": 8, "breakAfter": 8, "breakInside": 8, "regionFragment": 9.1, "columnCount": 8, "columnFill": 8, "columnGap": 8, "columnRule": 8, "columnRuleColor": 8, "columnRuleStyle": 8, "columnRuleWidth": 8, "columns": 8, "columnSpan": 8, "columnWidth": 8 }, "firefox": { "appearance": 47, "userSelect": 47, "boxSizing": 28, "textAlignLast": 47, "textDecorationStyle": 35, "textDecorationSkip": 35, "textDecorationLine": 35, "textDecorationColor": 35, "tabSize": 47, "hyphens": 42, "fontFeatureSettings": 33, "breakAfter": 47, "breakBefore": 47, "breakInside": 47, "columnCount": 47, "columnFill": 47, "columnGap": 47, "columnRule": 47, "columnRuleColor": 47, "columnRuleStyle": 47, "columnRuleWidth": 47, "columns": 47, "columnSpan": 47, "columnWidth": 47 }, "opera": { "flex": 16, "flexBasis": 16, "flexDirection": 16, "flexGrow": 16, "flexFlow": 16, "flexShrink": 16, "flexWrap": 16, "alignContent": 16, "alignItems": 16, "alignSelf": 16, "justifyContent": 16, "order": 16, "transform": 22, "transformOrigin": 22, "transformOriginX": 22, "transformOriginY": 22, "backfaceVisibility": 22, "perspective": 22, "perspectiveOrigin": 22, "transformStyle": 22, "transformOriginZ": 22, "animation": 29, "animationDelay": 29, "animationDirection": 29, "animationFillMode": 29, "animationDuration": 29, "animationIterationCount": 29, "animationName": 29, "animationPlayState": 29, "animationTimingFunction": 29, "appearance": 37, "userSelect": 37, "fontKerning": 19, "textEmphasisPosition": 37, "textEmphasis": 37, "textEmphasisStyle": 37, "textEmphasisColor": 37, "boxDecorationBreak": 37, "clipPath": 37, "maskImage": 37, "maskMode": 37, "maskRepeat": 37, "maskPosition": 37, "maskClip": 37, "maskOrigin": 37, "maskSize": 37, "maskComposite": 37, "mask": 37, "maskBorderSource": 37, "maskBorderMode": 37, "maskBorderSlice": 37, "maskBorderWidth": 37, "maskBorderOutset": 37, "maskBorderRepeat": 37, "maskBorder": 37, "maskType": 37, "filter": 37, "fontFeatureSettings": 37, "breakAfter": 37, "breakBefore": 37, "breakInside": 37, "columnCount": 37, "columnFill": 37, "columnGap": 37, "columnRule": 37, "columnRuleColor": 37, "columnRuleStyle": 37, "columnRuleWidth": 37, "columns": 37, "columnSpan": 37, "columnWidth": 37 }, "ie": { "gridTemplateRows": 11, "breakInside": 11, "transformOriginY": 9, "gridRowStart": 11, "gridColumn": 11, "regionFragment": 11, "breakBefore": 11, "userSelect": 11, "gridColumnEnd": 11, "gridRowEnd": 11, "gridTemplateColumns": 11, "gridColumnStart": 11, "gridArea": 11, "flexDirection": 10, "gridRowGap": 11, "gridTemplateAreas": 11, "gridAutoRows": 11, "gridRow": 11, "scrollSnapDestination": 11, "scrollSnapPointsY": 11, "touchAction": 10, "gridGap": 11, "gridColumnGap": 11, "wrapFlow": 11, "scrollSnapPointsX": 11, "flowFrom": 11, "transform": 9, "breakAfter": 11, "wrapMargin": 11, "scrollSnapCoordinate": 11, "flexWrap": 10, "scrollSnapType": 11, "flex": 10, "wrapThrough": 11, "gridAutoColumns": 11, "flexFlow": 10, "gridTemplate": 11, "hyphens": 11, "grid": 11, "transformOriginX": 9, "flowInto": 11, "transformOrigin": 9, "gridAutoFlow": 11, "textSizeAdjust": 11 }, "edge": { "userSelect": 14, "wrapFlow": 14, "wrapThrough": 14, "wrapMargin": 14, "scrollSnapType": 14, "scrollSnapPointsX": 14, "scrollSnapPointsY": 14, "scrollSnapDestination": 14, "scrollSnapCoordinate": 14, "hyphens": 14, "flowInto": 14, "flowFrom": 14, "breakBefore": 14, "breakAfter": 14, "breakInside": 14, "regionFragment": 14, "gridTemplateColumns": 14, "gridTemplateRows": 14, "gridTemplateAreas": 14, "gridTemplate": 14, "gridAutoColumns": 14, "gridAutoRows": 14, "gridAutoFlow": 14, "grid": 14, "gridRowStart": 14, "gridColumnStart": 14, "gridRowEnd": 14, "gridRow": 14, "gridColumn": 14, "gridColumnEnd": 14, "gridColumnGap": 14, "gridRowGap": 14, "gridArea": 14, "gridGap": 14 }, "ios_saf": { "flex": 8.1, "flexBasis": 8.1, "flexDirection": 8.1, "flexGrow": 8.1, "flexFlow": 8.1, "flexShrink": 8.1, "flexWrap": 8.1, "alignContent": 8.1, "alignItems": 8.1, "alignSelf": 8.1, "justifyContent": 8.1, "order": 8.1, "transition": 6, "transitionDelay": 6, "transitionDuration": 6, "transitionProperty": 6, "transitionTimingFunction": 6, "transform": 8.1, "transformOrigin": 8.1, "transformOriginX": 8.1, "transformOriginY": 8.1, "backfaceVisibility": 8.1, "perspective": 8.1, "perspectiveOrigin": 8.1, "transformStyle": 8.1, "transformOriginZ": 8.1, "animation": 8.1, "animationDelay": 8.1, "animationDirection": 8.1, "animationFillMode": 8.1, "animationDuration": 8.1, "animationIterationCount": 8.1, "animationName": 8.1, "animationPlayState": 8.1, "animationTimingFunction": 8.1, "appearance": 9.3, "userSelect": 9.3, "backdropFilter": 9.3, "fontKerning": 9.3, "scrollSnapType": 9.3, "scrollSnapPointsX": 9.3, "scrollSnapPointsY": 9.3, "scrollSnapDestination": 9.3, "scrollSnapCoordinate": 9.3, "boxDecorationBreak": 9.3, "clipPath": 9.3, "maskImage": 9.3, "maskMode": 9.3, "maskRepeat": 9.3, "maskPosition": 9.3, "maskClip": 9.3, "maskOrigin": 9.3, "maskSize": 9.3, "maskComposite": 9.3, "mask": 9.3, "maskBorderSource": 9.3, "maskBorderMode": 9.3, "maskBorderSlice": 9.3, "maskBorderWidth": 9.3, "maskBorderOutset": 9.3, "maskBorderRepeat": 9.3, "maskBorder": 9.3, "maskType": 9.3, "textSizeAdjust": 9.3, "textDecorationStyle": 9.3, "textDecorationSkip": 9.3, "textDecorationLine": 9.3, "textDecorationColor": 9.3, "shapeImageThreshold": 9.3, "shapeImageMargin": 9.3, "shapeImageOutside": 9.3, "filter": 9, "hyphens": 9.3, "flowInto": 9.3, "flowFrom": 9.3, "breakBefore": 8.1, "breakAfter": 8.1, "breakInside": 8.1, "regionFragment": 9.3, "columnCount": 8.1, "columnFill": 8.1, "columnGap": 8.1, "columnRule": 8.1, "columnRuleColor": 8.1, "columnRuleStyle": 8.1, "columnRuleWidth": 8.1, "columns": 8.1, "columnSpan": 8.1, "columnWidth": 8.1 }, "android": { "borderImage": 4.2, "borderImageOutset": 4.2, "borderImageRepeat": 4.2, "borderImageSlice": 4.2, "borderImageSource": 4.2, "borderImageWidth": 4.2, "flex": 4.2, "flexBasis": 4.2, "flexDirection": 4.2, "flexGrow": 4.2, "flexFlow": 4.2, "flexShrink": 4.2, "flexWrap": 4.2, "alignContent": 4.2, "alignItems": 4.2, "alignSelf": 4.2, "justifyContent": 4.2, "order": 4.2, "transition": 4.2, "transitionDelay": 4.2, "transitionDuration": 4.2, "transitionProperty": 4.2, "transitionTimingFunction": 4.2, "transform": 4.4, "transformOrigin": 4.4, "transformOriginX": 4.4, "transformOriginY": 4.4, "backfaceVisibility": 4.4, "perspective": 4.4, "perspectiveOrigin": 4.4, "transformStyle": 4.4, "transformOriginZ": 4.4, "animation": 4.4, "animationDelay": 4.4, "animationDirection": 4.4, "animationFillMode": 4.4, "animationDuration": 4.4, "animationIterationCount": 4.4, "animationName": 4.4, "animationPlayState": 4.4, "animationTimingFunction": 4.4, "appearance": 47, "userSelect": 47, "fontKerning": 4.4, "textEmphasisPosition": 47, "textEmphasis": 47, "textEmphasisStyle": 47, "textEmphasisColor": 47, "boxDecorationBreak": 47, "clipPath": 47, "maskImage": 47, "maskMode": 47, "maskRepeat": 47, "maskPosition": 47, "maskClip": 47, "maskOrigin": 47, "maskSize": 47, "maskComposite": 47, "mask": 47, "maskBorderSource": 47, "maskBorderMode": 47, "maskBorderSlice": 47, "maskBorderWidth": 47, "maskBorderOutset": 47, "maskBorderRepeat": 47, "maskBorder": 47, "maskType": 47, "filter": 47, "fontFeatureSettings": 47, "breakAfter": 47, "breakBefore": 47, "breakInside": 47, "columnCount": 47, "columnFill": 47, "columnGap": 47, "columnRule": 47, "columnRuleColor": 47, "columnRuleStyle": 47, "columnRuleWidth": 47, "columns": 47, "columnSpan": 47, "columnWidth": 47 }, "and_chr": { "appearance": 47, "userSelect": 47, "textEmphasisPosition": 47, "textEmphasis": 47, "textEmphasisStyle": 47, "textEmphasisColor": 47, "boxDecorationBreak": 47, "clipPath": 47, "maskImage": 47, "maskMode": 47, "maskRepeat": 47, "maskPosition": 47, "maskClip": 47, "maskOrigin": 47, "maskSize": 47, "maskComposite": 47, "mask": 47, "maskBorderSource": 47, "maskBorderMode": 47, "maskBorderSlice": 47, "maskBorderWidth": 47, "maskBorderOutset": 47, "maskBorderRepeat": 47, "maskBorder": 47, "maskType": 47, "textDecorationStyle": 47, "textDecorationSkip": 47, "textDecorationLine": 47, "textDecorationColor": 47, "filter": 47, "fontFeatureSettings": 47, "breakAfter": 47, "breakBefore": 47, "breakInside": 47, "columnCount": 47, "columnFill": 47, "columnGap": 47, "columnRule": 47, "columnRuleColor": 47, "columnRuleStyle": 47, "columnRuleWidth": 47, "columns": 47, "columnSpan": 47, "columnWidth": 47 }, "and_uc": { "flex": 9.9, "flexBasis": 9.9, "flexDirection": 9.9, "flexGrow": 9.9, "flexFlow": 9.9, "flexShrink": 9.9, "flexWrap": 9.9, "alignContent": 9.9, "alignItems": 9.9, "alignSelf": 9.9, "justifyContent": 9.9, "order": 9.9, "transition": 9.9, "transitionDelay": 9.9, "transitionDuration": 9.9, "transitionProperty": 9.9, "transitionTimingFunction": 9.9, "transform": 9.9, "transformOrigin": 9.9, "transformOriginX": 9.9, "transformOriginY": 9.9, "backfaceVisibility": 9.9, "perspective": 9.9, "perspectiveOrigin": 9.9, "transformStyle": 9.9, "transformOriginZ": 9.9, "animation": 9.9, "animationDelay": 9.9, "animationDirection": 9.9, "animationFillMode": 9.9, "animationDuration": 9.9, "animationIterationCount": 9.9, "animationName": 9.9, "animationPlayState": 9.9, "animationTimingFunction": 9.9, "appearance": 9.9, "userSelect": 9.9, "fontKerning": 9.9, "textEmphasisPosition": 9.9, "textEmphasis": 9.9, "textEmphasisStyle": 9.9, "textEmphasisColor": 9.9, "maskImage": 9.9, "maskMode": 9.9, "maskRepeat": 9.9, "maskPosition": 9.9, "maskClip": 9.9, "maskOrigin": 9.9, "maskSize": 9.9, "maskComposite": 9.9, "mask": 9.9, "maskBorderSource": 9.9, "maskBorderMode": 9.9, "maskBorderSlice": 9.9, "maskBorderWidth": 9.9, "maskBorderOutset": 9.9, "maskBorderRepeat": 9.9, "maskBorder": 9.9, "maskType": 9.9, "textSizeAdjust": 9.9, "filter": 9.9, "hyphens": 9.9, "flowInto": 9.9, "flowFrom": 9.9, "breakBefore": 9.9, "breakAfter": 9.9, "breakInside": 9.9, "regionFragment": 9.9, "fontFeatureSettings": 9.9, "columnCount": 9.9, "columnFill": 9.9, "columnGap": 9.9, "columnRule": 9.9, "columnRuleColor": 9.9, "columnRuleStyle": 9.9, "columnRuleWidth": 9.9, "columns": 9.9, "columnSpan": 9.9, "columnWidth": 9.9 }, "op_mini": { "borderImage": 5, "borderImageOutset": 5, "borderImageRepeat": 5, "borderImageSlice": 5, "borderImageSource": 5, "borderImageWidth": 5, "tabSize": 5, "objectFit": 5, "objectPosition": 5 } };
-module.exports = exports["default"];
-},{}],73:[function(require,module,exports){
-// leight polyfill for Object.assign
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports["default"] = function (base) {
-  var extend = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-  Object.keys(extend).forEach(function (key) {
-    return base[key] = extend[key];
-  });
-  return base;
-};
-
-module.exports = exports["default"];
-},{}],74:[function(require,module,exports){
-/**
- * Converts a camel-case string to a dash-case string
- * @param {string} str - str that gets converted to dash-case
- */
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-exports['default'] = function (str) {
-  return str.replace(/([a-z]|^)([A-Z])/g, function (match, p1, p2) {
-    return p1 + '-' + p2.toLowerCase();
-  }).replace('ms-', '-ms-');
-};
-
-module.exports = exports['default'];
-},{}],75:[function(require,module,exports){
-// helper to capitalize strings
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports["default"] = function (str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-};
-
-module.exports = exports["default"];
-},{}],76:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _bowser = require('bowser');
-
-var _bowser2 = _interopRequireDefault(_bowser);
-
-var vendorPrefixes = {
-  Webkit: ['chrome', 'safari', 'ios', 'android', 'phantom', 'opera', 'webos', 'blackberry', 'bada', 'tizen'],
-  Moz: ['firefox', 'seamonkey', 'sailfish'],
-  ms: ['msie', 'msedge']
-};
-
-var browsers = {
-  chrome: [['chrome']],
-  safari: [['safari']],
-  firefox: [['firefox']],
-  ie: [['msie']],
-  edge: [['msedge']],
-  opera: [['opera']],
-  ios_saf: [['ios', 'mobile'], ['ios', 'tablet']],
-  ie_mob: [['windowsphone', 'mobile', 'msie'], ['windowsphone', 'tablet', 'msie'], ['windowsphone', 'mobile', 'msedge'], ['windowsphone', 'tablet', 'msedge']],
-  op_mini: [['opera', 'mobile'], ['opera', 'tablet']],
-  and_uc: [['android', 'mobile'], ['android', 'tablet']],
-  android: [['android', 'mobile'], ['android', 'tablet']]
-};
-
-/**
- * Uses bowser to get default browser information such as version and name
- * Evaluates bowser info and adds vendorPrefix information
- * @param {string} userAgent - userAgent that gets evaluated
- */
-
-exports['default'] = function (userAgent) {
-  if (!userAgent) {
-    return false;
-  }
-
-  var info = _bowser2['default']._detect(userAgent);
-
-  Object.keys(vendorPrefixes).forEach(function (prefix) {
-    vendorPrefixes[prefix].forEach(function (browser) {
-      if (info[browser]) {
-        info.prefix = {
-          inline: prefix,
-          css: '-' + prefix.toLowerCase() + '-'
-        };
-      }
-    });
-  });
-
-  var name = '';
-  Object.keys(browsers).forEach(function (browser) {
-    browsers[browser].forEach(function (condition) {
-      var match = 0;
-      condition.forEach(function (single) {
-        if (info[single]) {
-          match += 1;
-        }
-      });
-      if (condition.length === match) {
-        name = browser;
-      }
-    });
-  });
-
-  info.browser = name;
-  // For cordova IOS 8 the version is missing, set truncated osversion to prevent NaN
-  info.version = info.version ? parseFloat(info.version) : parseInt(parseFloat(info.osversion), 10);
-
-  // seperate native android chrome
-  // https://github.com/rofrischmann/inline-style-prefixer/issues/45
-  if (info.browser === 'android' && info.chrome && info.version > 37) {
-    info.browser = 'and_chr';
-  }
-  info.version = parseFloat(info.version);
-  info.osversion = parseFloat(info.osversion);
-  // For android < 4.4 we want to check the osversion
-  // not the chrome version, see issue #26
-  // https://github.com/rofrischmann/inline-style-prefixer/issues/26
-  if (info.browser === 'android' && info.osversion < 5) {
-    info.version = info.osversion;
-  }
-
-  return info;
-};
-
-module.exports = exports['default'];
-},{"bowser":79}],77:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-exports['default'] = function (_ref) {
-  var browser = _ref.browser;
-  var version = _ref.version;
-  var prefix = _ref.prefix;
-
-  var prefixedKeyframes = 'keyframes';
-
-  if (browser === 'chrome' && version < 43 || (browser === 'safari' || browser === 'ios_saf') && version < 9 || browser === 'opera' && version < 30 || browser === 'android' && version <= 4.4 || browser === 'and_uc') {
-    prefixedKeyframes = prefix.css + prefixedKeyframes;
-  }
-  return prefixedKeyframes;
-};
-
-module.exports = exports['default'];
-},{}],78:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-exports['default'] = function (property) {
-  var unprefixed = property.replace(/^(ms|Webkit|Moz|O)/, '');
-  return unprefixed.charAt(0).toLowerCase() + unprefixed.slice(1);
-};
-
-module.exports = exports['default'];
-},{}],79:[function(require,module,exports){
 /*!
  * Bowser - a browser detector
  * https://github.com/ded/bowser
  * MIT License | (c) Dustin Diaz 2015
  */
 
-!function (name, definition) {
+!function (root, name, definition) {
   if (typeof module != 'undefined' && module.exports) module.exports = definition()
-  else if (typeof define == 'function' && define.amd) define(definition)
-  else this[name] = definition()
-}('bowser', function () {
+  else if (typeof define == 'function' && define.amd) define(name, definition)
+  else root[name] = definition()
+}(this, 'bowser', function () {
   /**
     * See useragents.js for examples of navigator.userAgent
     */
@@ -5343,6 +1459,7 @@ module.exports = exports['default'];
       , tizen = /tizen/i.test(ua)
       , webos = /(web|hpw)os/i.test(ua)
       , windowsphone = /windows phone/i.test(ua)
+      , samsungBrowser = /SamsungBrowser/i.test(ua)
       , windows = !windowsphone && /windows/i.test(ua)
       , mac = !iosdevice && !silk && /macintosh/i.test(ua)
       , linux = !android && !sailfish && !tizen && !webos && /linux/i.test(ua)
@@ -5353,11 +1470,26 @@ module.exports = exports['default'];
       , xbox = /xbox/i.test(ua)
       , result
 
-    if (/opera|opr|opios/i.test(ua)) {
+    if (/opera/i.test(ua)) {
+      //  an old Opera
       result = {
         name: 'Opera'
       , opera: t
       , version: versionIdentifier || getFirstMatch(/(?:opera|opr|opios)[\s\/](\d+(\.\d+)?)/i)
+      }
+    } else if (/opr|opios/i.test(ua)) {
+      // a new Opera
+      result = {
+        name: 'Opera'
+        , opera: t
+        , version: getFirstMatch(/(?:opr|opios)[\s\/](\d+(\.\d+)?)/i) || versionIdentifier
+      }
+    }
+    else if (/SamsungBrowser/i.test(ua)) {
+      result = {
+        name: 'Samsung Internet for Android'
+        , samsungBrowser: t
+        , version: versionIdentifier || getFirstMatch(/(?:SamsungBrowser)[\s\/](\d+(\.\d+)?)/i)
       }
     }
     else if (/coast/i.test(ua)) {
@@ -5610,9 +1742,9 @@ module.exports = exports['default'];
     }
 
     // set OS flags for platforms that have multiple browsers
-    if (!result.msedge && (android || result.silk)) {
+    if (!result.windowsphone && !result.msedge && (android || result.silk)) {
       result.android = t
-    } else if (iosdevice) {
+    } else if (!result.windowsphone && !result.msedge && iosdevice) {
       result[iosdevice] = t
       result.ios = t
     } else if (mac) {
@@ -5677,11 +1809,13 @@ module.exports = exports['default'];
         (result.yandexbrowser && result.version >= 15) ||
 		    (result.vivaldi && result.version >= 1.0) ||
         (result.chrome && result.version >= 20) ||
+        (result.samsungBrowser && result.version >= 4) ||
         (result.firefox && result.version >= 20.0) ||
         (result.safari && result.version >= 6) ||
         (result.opera && result.version >= 10.0) ||
         (result.ios && result.osversion && result.osversion.split(".")[0] >= 6) ||
         (result.blackberry && result.version >= 10.1)
+        || (result.chromium && result.version >= 20)
         ) {
       result.a = t;
     }
@@ -5691,6 +1825,7 @@ module.exports = exports['default'];
         (result.safari && result.version < 6) ||
         (result.opera && result.version < 10.0) ||
         (result.ios && result.osversion && result.osversion.split(".")[0] < 6)
+        || (result.chromium && result.version < 20)
         ) {
       result.c = t
     } else result.x = t
@@ -5698,7 +1833,7 @@ module.exports = exports['default'];
     return result
   }
 
-  var bowser = detect(typeof navigator !== 'undefined' ? navigator.userAgent : '')
+  var bowser = detect(typeof navigator !== 'undefined' ? navigator.userAgent || '' : '')
 
   bowser.test = function (browserList) {
     for (var i = 0; i < browserList.length; ++i) {
@@ -5712,6 +1847,149 @@ module.exports = exports['default'];
     return false;
   }
 
+  /**
+   * Get version precisions count
+   *
+   * @example
+   *   getVersionPrecision("1.10.3") // 3
+   *
+   * @param  {string} version
+   * @return {number}
+   */
+  function getVersionPrecision(version) {
+    return version.split(".").length;
+  }
+
+  /**
+   * Array::map polyfill
+   *
+   * @param  {Array} arr
+   * @param  {Function} iterator
+   * @return {Array}
+   */
+  function map(arr, iterator) {
+    var result = [], i;
+    if (Array.prototype.map) {
+      return Array.prototype.map.call(arr, iterator);
+    }
+    for (i = 0; i < arr.length; i++) {
+      result.push(iterator(arr[i]));
+    }
+    return result;
+  }
+
+  /**
+   * Calculate browser version weight
+   *
+   * @example
+   *   compareVersions(['1.10.2.1',  '1.8.2.1.90'])    // 1
+   *   compareVersions(['1.010.2.1', '1.09.2.1.90']);  // 1
+   *   compareVersions(['1.10.2.1',  '1.10.2.1']);     // 0
+   *   compareVersions(['1.10.2.1',  '1.0800.2']);     // -1
+   *
+   * @param  {Array<String>} versions versions to compare
+   * @return {Number} comparison result
+   */
+  function compareVersions(versions) {
+    // 1) get common precision for both versions, for example for "10.0" and "9" it should be 2
+    var precision = Math.max(getVersionPrecision(versions[0]), getVersionPrecision(versions[1]));
+    var chunks = map(versions, function (version) {
+      var delta = precision - getVersionPrecision(version);
+
+      // 2) "9" -> "9.0" (for precision = 2)
+      version = version + new Array(delta + 1).join(".0");
+
+      // 3) "9.0" -> ["000000000"", "000000009"]
+      return map(version.split("."), function (chunk) {
+        return new Array(20 - chunk.length).join("0") + chunk;
+      }).reverse();
+    });
+
+    // iterate in reverse order by reversed chunks array
+    while (--precision >= 0) {
+      // 4) compare: "000000009" > "000000010" = false (but "9" > "10" = true)
+      if (chunks[0][precision] > chunks[1][precision]) {
+        return 1;
+      }
+      else if (chunks[0][precision] === chunks[1][precision]) {
+        if (precision === 0) {
+          // all version chunks are same
+          return 0;
+        }
+      }
+      else {
+        return -1;
+      }
+    }
+  }
+
+  /**
+   * Check if browser is unsupported
+   *
+   * @example
+   *   bowser.isUnsupportedBrowser({
+   *     msie: "10",
+   *     firefox: "23",
+   *     chrome: "29",
+   *     safari: "5.1",
+   *     opera: "16",
+   *     phantom: "534"
+   *   });
+   *
+   * @param  {Object}  minVersions map of minimal version to browser
+   * @param  {Boolean} [strictMode = false] flag to return false if browser wasn't found in map
+   * @param  {String}  [ua] user agent string
+   * @return {Boolean}
+   */
+  function isUnsupportedBrowser(minVersions, strictMode, ua) {
+    var _bowser = bowser;
+
+    // make strictMode param optional with ua param usage
+    if (typeof strictMode === 'string') {
+      ua = strictMode;
+      strictMode = void(0);
+    }
+
+    if (strictMode === void(0)) {
+      strictMode = false;
+    }
+    if (ua) {
+      _bowser = detect(ua);
+    }
+
+    var version = "" + _bowser.version;
+    for (var browser in minVersions) {
+      if (minVersions.hasOwnProperty(browser)) {
+        if (_bowser[browser]) {
+          if (typeof minVersions[browser] !== 'string') {
+            throw new Error('Browser version in the minVersion map should be a string: ' + browser + ': ' + String(minVersions));
+          }
+
+          // browser version and min supported version.
+          return compareVersions([version, minVersions[browser]]) < 0;
+        }
+      }
+    }
+
+    return strictMode; // not found
+  }
+
+  /**
+   * Check if browser is supported
+   *
+   * @param  {Object} minVersions map of minimal version to browser
+   * @param  {Boolean} [strictMode = false] flag to return false if browser wasn't found in map
+   * @param  {String}  [ua] user agent string
+   * @return {Boolean}
+   */
+  function check(minVersions, strictMode, ua) {
+    return !isUnsupportedBrowser(minVersions, strictMode, ua);
+  }
+
+  bowser.isUnsupportedBrowser = isUnsupportedBrowser;
+  bowser.compareVersions = compareVersions;
+  bowser.check = check;
+
   /*
    * Set our detect method to the main bowser object so we can
    * reuse it to test other user agents.
@@ -5722,2286 +2000,136 @@ module.exports = exports['default'];
   return bowser
 });
 
-},{}],80:[function(require,module,exports){
-'use strict';
+},{}],17:[function(require,module,exports){
+var pSlice = Array.prototype.slice;
+var objectKeys = require('./lib/keys.js');
+var isArguments = require('./lib/is_arguments.js');
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = calc;
+var deepEqual = module.exports = function (actual, expected, opts) {
+  if (!opts) opts = {};
+  // 7.1. All identical values are equivalent, as determined by ===.
+  if (actual === expected) {
+    return true;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+  } else if (actual instanceof Date && expected instanceof Date) {
+    return actual.getTime() === expected.getTime();
 
-var _utilsJoinPrefixedRules = require('../utils/joinPrefixedRules');
+  // 7.3. Other pairs that do not both pass typeof value == 'object',
+  // equivalence is determined by ==.
+  } else if (!actual || !expected || typeof actual != 'object' && typeof expected != 'object') {
+    return opts.strict ? actual === expected : actual == expected;
 
-var _utilsJoinPrefixedRules2 = _interopRequireDefault(_utilsJoinPrefixedRules);
-
-var _utilsIsPrefixedValue = require('../utils/isPrefixedValue');
-
-var _utilsIsPrefixedValue2 = _interopRequireDefault(_utilsIsPrefixedValue);
-
-function calc(property, value) {
-  if (typeof value === 'string' && value.indexOf('calc(') > -1) {
-    if ((0, _utilsIsPrefixedValue2['default'])(value)) return;
-
-    return (0, _utilsJoinPrefixedRules2['default'])(property, value, function (prefix, value) {
-      return value.replace(/calc\(/g, prefix + 'calc(');
-    });
+  // 7.4. For all other Object pairs, including Array objects, equivalence is
+  // determined by having the same number of owned properties (as verified
+  // with Object.prototype.hasOwnProperty.call), the same set of keys
+  // (although not necessarily the same order), equivalent values for every
+  // corresponding key, and an identical 'prototype' property. Note: this
+  // accounts for both named and indexed properties on Arrays.
+  } else {
+    return objEquiv(actual, expected, opts);
   }
 }
 
-module.exports = exports['default'];
-},{"../utils/isPrefixedValue":93,"../utils/joinPrefixedRules":94}],81:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = cursor;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _utilsJoinPrefixedRules = require('../utils/joinPrefixedRules');
-
-var _utilsJoinPrefixedRules2 = _interopRequireDefault(_utilsJoinPrefixedRules);
-
-var values = {
-  'zoom-in': true,
-  'zoom-out': true,
-  'grab': true,
-  'grabbing': true
-};
-
-function cursor(property, value) {
-  if (property === 'cursor' && values[value]) {
-    return (0, _utilsJoinPrefixedRules2['default'])(property, value);
-  }
+function isUndefinedOrNull(value) {
+  return value === null || value === undefined;
 }
 
-module.exports = exports['default'];
-},{"../utils/joinPrefixedRules":94}],82:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = flex;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _utilsCamelToDashCase = require('../utils/camelToDashCase');
-
-var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
-
-var values = { flex: true, 'inline-flex': true };
-
-function flex(property, value) {
-  if (property === 'display' && values[value]) {
-    return {
-      display: ['-webkit-box', '-moz-box', '-ms-' + value + 'box', '-webkit-' + value, value]
-    };
-  }
-}
-
-module.exports = exports['default'];
-},{"../utils/camelToDashCase":91}],83:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = flexboxIE;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var alternativeValues = {
-  'space-around': 'distribute',
-  'space-between': 'justify',
-  'flex-start': 'start',
-  'flex-end': 'end'
-};
-var alternativeProps = {
-  alignContent: 'msFlexLinePack',
-  alignSelf: 'msFlexItemAlign',
-  alignItems: 'msFlexAlign',
-  justifyContent: 'msFlexPack',
-  order: 'msFlexOrder',
-  flexGrow: 'msFlexPositive',
-  flexShrink: 'msFlexNegative',
-  flexBasis: 'msPreferredSize'
-};
-
-function flexboxIE(property, value) {
-  if (alternativeProps[property]) {
-    return _defineProperty({}, alternativeProps[property], alternativeValues[value] || value);
-  }
-}
-
-module.exports = exports['default'];
-},{}],84:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = flexboxOld;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var _utilsCamelToDashCase = require('../utils/camelToDashCase');
-
-var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
-
-var alternativeValues = {
-  'space-around': 'justify',
-  'space-between': 'justify',
-  'flex-start': 'start',
-  'flex-end': 'end',
-  'wrap-reverse': 'multiple',
-  wrap: 'multiple'
-};
-
-var alternativeProps = {
-  alignItems: 'WebkitBoxAlign',
-  justifyContent: 'WebkitBoxPack',
-  flexWrap: 'WebkitBoxLines'
-};
-
-function flexboxOld(property, value) {
-  if (property === 'flexDirection') {
-    return {
-      WebkitBoxOrient: value.indexOf('column') > -1 ? 'vertical' : 'horizontal',
-      WebkitBoxDirection: value.indexOf('reverse') > -1 ? 'reverse' : 'normal'
-    };
-  }
-  if (alternativeProps[property]) {
-    return _defineProperty({}, alternativeProps[property], alternativeValues[value] || value);
-  }
-}
-
-module.exports = exports['default'];
-},{"../utils/camelToDashCase":91}],85:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = gradient;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _utilsJoinPrefixedRules = require('../utils/joinPrefixedRules');
-
-var _utilsJoinPrefixedRules2 = _interopRequireDefault(_utilsJoinPrefixedRules);
-
-var _utilsIsPrefixedValue = require('../utils/isPrefixedValue');
-
-var _utilsIsPrefixedValue2 = _interopRequireDefault(_utilsIsPrefixedValue);
-
-var values = /linear-gradient|radial-gradient|repeating-linear-gradient|repeating-radial-gradient/;
-
-function gradient(property, value) {
-  if (typeof value === 'string' && value.match(values) !== null) {
-    if ((0, _utilsIsPrefixedValue2['default'])(value)) return;
-
-    return (0, _utilsJoinPrefixedRules2['default'])(property, value);
-  }
-}
-
-module.exports = exports['default'];
-},{"../utils/isPrefixedValue":93,"../utils/joinPrefixedRules":94}],86:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = sizing;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _utilsJoinPrefixedRules = require('../utils/joinPrefixedRules');
-
-var _utilsJoinPrefixedRules2 = _interopRequireDefault(_utilsJoinPrefixedRules);
-
-var properties = {
-  maxHeight: true,
-  maxWidth: true,
-  width: true,
-  height: true,
-  columnWidth: true,
-  minWidth: true,
-  minHeight: true
-};
-var values = {
-  'min-content': true,
-  'max-content': true,
-  'fill-available': true,
-  'fit-content': true,
-  'contain-floats': true
-};
-
-function sizing(property, value) {
-  if (properties[property] && values[value]) {
-    return (0, _utilsJoinPrefixedRules2['default'])(property, value);
-  }
-}
-
-module.exports = exports['default'];
-},{"../utils/joinPrefixedRules":94}],87:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = transition;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var _utilsCamelToDashCase = require('../utils/camelToDashCase');
-
-var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
-
-var _utilsCapitalizeString = require('../utils/capitalizeString');
-
-var _utilsCapitalizeString2 = _interopRequireDefault(_utilsCapitalizeString);
-
-var _utilsIsPrefixedValue = require('../utils/isPrefixedValue');
-
-var _utilsIsPrefixedValue2 = _interopRequireDefault(_utilsIsPrefixedValue);
-
-var _prefixProps = require('../prefixProps');
-
-var _prefixProps2 = _interopRequireDefault(_prefixProps);
-
-var properties = {
-  transition: true,
-  transitionProperty: true,
-  WebkitTransition: true,
-  WebkitTransitionProperty: true
-};
-
-function transition(property, value) {
-  // also check for already prefixed transitions
-  if (typeof value === 'string' && properties[property]) {
-    var _ref2;
-
-    var outputValue = prefixValue(value);
-    var webkitOutput = outputValue.split(',').filter(function (value) {
-      return value.match(/-moz-|-ms-/) === null;
-    }).join(',');
-
-    // if the property is already prefixed
-    if (property.indexOf('Webkit') > -1) {
-      return _defineProperty({}, property, webkitOutput);
-    }
-
-    return _ref2 = {}, _defineProperty(_ref2, 'Webkit' + (0, _utilsCapitalizeString2['default'])(property), webkitOutput), _defineProperty(_ref2, property, outputValue), _ref2;
-  }
-}
-
-function prefixValue(value) {
-  if ((0, _utilsIsPrefixedValue2['default'])(value)) {
-    return value;
-  }
-
-  // only split multi values, not cubic beziers
-  var multipleValues = value.split(/,(?![^()]*(?:\([^()]*\))?\))/g);
-
-  // iterate each single value and check for transitioned properties
-  // that need to be prefixed as well
-  multipleValues.forEach(function (val, index) {
-    multipleValues[index] = Object.keys(_prefixProps2['default']).reduce(function (out, prefix) {
-      var dashCasePrefix = '-' + prefix.toLowerCase() + '-';
-
-      Object.keys(_prefixProps2['default'][prefix]).forEach(function (prop) {
-        var dashCaseProperty = (0, _utilsCamelToDashCase2['default'])(prop);
-
-        if (val.indexOf(dashCaseProperty) > -1) {
-          // join all prefixes and create a new value
-          out = val.replace(dashCaseProperty, dashCasePrefix + dashCaseProperty) + ',' + out;
-        }
-      });
-      return out;
-    }, val);
-  });
-
-  return multipleValues.join(',');
-}
-module.exports = exports['default'];
-},{"../prefixProps":89,"../utils/camelToDashCase":91,"../utils/capitalizeString":92,"../utils/isPrefixedValue":93}],88:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = prefixAll;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _prefixProps = require('./prefixProps');
-
-var _prefixProps2 = _interopRequireDefault(_prefixProps);
-
-var _utilsCapitalizeString = require('./utils/capitalizeString');
-
-var _utilsCapitalizeString2 = _interopRequireDefault(_utilsCapitalizeString);
-
-var _utilsAssign = require('./utils/assign');
-
-var _utilsAssign2 = _interopRequireDefault(_utilsAssign);
-
-var _pluginsCalc = require('./plugins/calc');
-
-var _pluginsCalc2 = _interopRequireDefault(_pluginsCalc);
-
-var _pluginsCursor = require('./plugins/cursor');
-
-var _pluginsCursor2 = _interopRequireDefault(_pluginsCursor);
-
-var _pluginsFlex = require('./plugins/flex');
-
-var _pluginsFlex2 = _interopRequireDefault(_pluginsFlex);
-
-var _pluginsSizing = require('./plugins/sizing');
-
-var _pluginsSizing2 = _interopRequireDefault(_pluginsSizing);
-
-var _pluginsGradient = require('./plugins/gradient');
-
-var _pluginsGradient2 = _interopRequireDefault(_pluginsGradient);
-
-var _pluginsTransition = require('./plugins/transition');
-
-var _pluginsTransition2 = _interopRequireDefault(_pluginsTransition);
-
-// special flexbox specifications
-
-var _pluginsFlexboxIE = require('./plugins/flexboxIE');
-
-var _pluginsFlexboxIE2 = _interopRequireDefault(_pluginsFlexboxIE);
-
-var _pluginsFlexboxOld = require('./plugins/flexboxOld');
-
-var _pluginsFlexboxOld2 = _interopRequireDefault(_pluginsFlexboxOld);
-
-var plugins = [_pluginsCalc2['default'], _pluginsCursor2['default'], _pluginsSizing2['default'], _pluginsGradient2['default'], _pluginsTransition2['default'], _pluginsFlexboxIE2['default'], _pluginsFlexboxOld2['default'], _pluginsFlex2['default']];
-
-/**
- * Returns a prefixed version of the style object using all vendor prefixes
- * @param {Object} styles - Style object that gets prefixed properties added
- * @returns {Object} - Style object with prefixed properties and values
- */
-
-function prefixAll(styles) {
-  return Object.keys(styles).reduce(function (prefixedStyles, property) {
-    var value = styles[property];
-    if (value instanceof Object && !Array.isArray(value)) {
-      // recurse through nested style objects
-      prefixedStyles[property] = prefixAll(value);
-    } else {
-      Object.keys(_prefixProps2['default']).forEach(function (prefix) {
-        var properties = _prefixProps2['default'][prefix];
-        // add prefixes if needed
-        if (properties[property]) {
-          prefixedStyles[prefix + (0, _utilsCapitalizeString2['default'])(property)] = value;
-        }
-      });
-
-      // resolve every special plugins
-      plugins.forEach(function (plugin) {
-        return (0, _utilsAssign2['default'])(prefixedStyles, plugin(property, value));
-      });
-    }
-
-    return prefixedStyles;
-  }, styles);
-}
-
-module.exports = exports['default'];
-},{"./plugins/calc":80,"./plugins/cursor":81,"./plugins/flex":82,"./plugins/flexboxIE":83,"./plugins/flexboxOld":84,"./plugins/gradient":85,"./plugins/sizing":86,"./plugins/transition":87,"./prefixProps":89,"./utils/assign":90,"./utils/capitalizeString":92}],89:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = { "Webkit": { "transform": true, "transformOrigin": true, "transformOriginX": true, "transformOriginY": true, "backfaceVisibility": true, "perspective": true, "perspectiveOrigin": true, "transformStyle": true, "transformOriginZ": true, "animation": true, "animationDelay": true, "animationDirection": true, "animationFillMode": true, "animationDuration": true, "animationIterationCount": true, "animationName": true, "animationPlayState": true, "animationTimingFunction": true, "appearance": true, "userSelect": true, "fontKerning": true, "textEmphasisPosition": true, "textEmphasis": true, "textEmphasisStyle": true, "textEmphasisColor": true, "boxDecorationBreak": true, "clipPath": true, "maskImage": true, "maskMode": true, "maskRepeat": true, "maskPosition": true, "maskClip": true, "maskOrigin": true, "maskSize": true, "maskComposite": true, "mask": true, "maskBorderSource": true, "maskBorderMode": true, "maskBorderSlice": true, "maskBorderWidth": true, "maskBorderOutset": true, "maskBorderRepeat": true, "maskBorder": true, "maskType": true, "textDecorationStyle": true, "textDecorationSkip": true, "textDecorationLine": true, "textDecorationColor": true, "filter": true, "fontFeatureSettings": true, "breakAfter": true, "breakBefore": true, "breakInside": true, "columnCount": true, "columnFill": true, "columnGap": true, "columnRule": true, "columnRuleColor": true, "columnRuleStyle": true, "columnRuleWidth": true, "columns": true, "columnSpan": true, "columnWidth": true, "flex": true, "flexBasis": true, "flexDirection": true, "flexGrow": true, "flexFlow": true, "flexShrink": true, "flexWrap": true, "alignContent": true, "alignItems": true, "alignSelf": true, "justifyContent": true, "order": true, "transition": true, "transitionDelay": true, "transitionDuration": true, "transitionProperty": true, "transitionTimingFunction": true, "backdropFilter": true, "scrollSnapType": true, "scrollSnapPointsX": true, "scrollSnapPointsY": true, "scrollSnapDestination": true, "scrollSnapCoordinate": true, "shapeImageThreshold": true, "shapeImageMargin": true, "shapeImageOutside": true, "hyphens": true, "flowInto": true, "flowFrom": true, "regionFragment": true, "textSizeAdjust": true, "borderImage": true, "borderImageOutset": true, "borderImageRepeat": true, "borderImageSlice": true, "borderImageSource": true, "borderImageWidth": true, "tabSize": true, "objectFit": true, "objectPosition": true }, "Moz": { "appearance": true, "userSelect": true, "boxSizing": true, "textAlignLast": true, "textDecorationStyle": true, "textDecorationSkip": true, "textDecorationLine": true, "textDecorationColor": true, "tabSize": true, "hyphens": true, "fontFeatureSettings": true, "breakAfter": true, "breakBefore": true, "breakInside": true, "columnCount": true, "columnFill": true, "columnGap": true, "columnRule": true, "columnRuleColor": true, "columnRuleStyle": true, "columnRuleWidth": true, "columns": true, "columnSpan": true, "columnWidth": true }, "ms": { "flex": true, "flexBasis": false, "flexDirection": true, "flexGrow": false, "flexFlow": true, "flexShrink": false, "flexWrap": true, "alignContent": false, "alignItems": false, "alignSelf": false, "justifyContent": false, "order": false, "transform": true, "transformOrigin": true, "transformOriginX": true, "transformOriginY": true, "userSelect": true, "wrapFlow": true, "wrapThrough": true, "wrapMargin": true, "scrollSnapType": true, "scrollSnapPointsX": true, "scrollSnapPointsY": true, "scrollSnapDestination": true, "scrollSnapCoordinate": true, "touchAction": true, "hyphens": true, "flowInto": true, "flowFrom": true, "breakBefore": true, "breakAfter": true, "breakInside": true, "regionFragment": true, "gridTemplateColumns": true, "gridTemplateRows": true, "gridTemplateAreas": true, "gridTemplate": true, "gridAutoColumns": true, "gridAutoRows": true, "gridAutoFlow": true, "grid": true, "gridRowStart": true, "gridColumnStart": true, "gridRowEnd": true, "gridRow": true, "gridColumn": true, "gridColumnEnd": true, "gridColumnGap": true, "gridRowGap": true, "gridArea": true, "gridGap": true, "textSizeAdjust": true } };
-module.exports = exports["default"];
-},{}],90:[function(require,module,exports){
-// leight polyfill for Object.assign
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports["default"] = function (base) {
-  var extend = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-  return Object.keys(extend).reduce(function (out, key) {
-    base[key] = extend[key];
-    return out;
-  }, {});
-};
-
-module.exports = exports["default"];
-},{}],91:[function(require,module,exports){
-arguments[4][74][0].apply(exports,arguments)
-},{"dup":74}],92:[function(require,module,exports){
-arguments[4][75][0].apply(exports,arguments)
-},{"dup":75}],93:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-exports['default'] = function (value) {
-  if (Array.isArray(value)) value = value.join(',');
-
-  return value.match(/-webkit-|-moz-|-ms-/) !== null;
-};
-
-module.exports = exports['default'];
-},{}],94:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var _camelToDashCase = require('./camelToDashCase');
-
-var _camelToDashCase2 = _interopRequireDefault(_camelToDashCase);
-
-// returns a style object with a single concated prefixed value string
-
-exports['default'] = function (property, value) {
-  var replacer = arguments.length <= 2 || arguments[2] === undefined ? function (prefix, value) {
-    return prefix + value;
-  } : arguments[2];
-  return (function () {
-    return _defineProperty({}, property, ['-webkit-', '-moz-', ''].map(function (prefix) {
-      return replacer(prefix, value);
-    }));
-  })();
-};
-
-module.exports = exports['default'];
-},{"./camelToDashCase":91}],95:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { 'default': obj };
-}
-var _react = require('react');
-var _react2 = _interopRequireDefault(_react);
-var _ConfiguredRadium = require('./ConfiguredRadium');
-var _ConfiguredRadium2 = _interopRequireDefault(_ConfiguredRadium);
-var BurgerIcon = (0, _ConfiguredRadium2['default'])(_react2['default'].createClass({
-        propTypes: {
-            customIcon: _react2['default'].PropTypes.element,
-            styles: _react2['default'].PropTypes.object
-        },
-        getLineStyle: function getLineStyle(index) {
-            return {
-                position: 'absolute',
-                height: '20%',
-                left: 0,
-                right: 0,
-                top: 20 * (index * 2) + '%',
-                opacity: this.state.hover ? 0.6 : 1
-            };
-        },
-        handleHover: function handleHover() {
-            this.setState({ hover: !this.state.hover });
-        },
-        getInitialState: function getInitialState() {
-            return { hover: false };
-        },
-        getDefaultProps: function getDefaultProps() {
-            return { styles: {} };
-        },
-        render: function render() {
-            var icon = undefined;
-            var buttonStyle = {
-                    position: 'absolute',
-                    left: 0,
-                    right: 0,
-                    top: 0,
-                    bottom: 0,
-                    margin: 0,
-                    padding: 0,
-                    border: 'none',
-                    fontSize: 12,
-                    color: 'transparent',
-                    background: 'transparent',
-                    outline: 'none'
-                };
-            if (this.props.customIcon) {
-                var extraProps = {
-                        className: 'bm-icon',
-                        style: [
-                            {
-                                width: '100%',
-                                height: '100%'
-                            },
-                            this.props.styles.bmIcon
-                        ]
-                    };
-                icon = _react2['default'].cloneElement(this.props.customIcon, extraProps);
-            } else {
-                icon = _react2['default'].createElement('span', null, _react2['default'].createElement('span', {
-                    className: 'bm-burger-bars',
-                    style: [
-                        this.getLineStyle(0),
-                        this.props.styles.bmBurgerBars
-                    ]
-                }), _react2['default'].createElement('span', {
-                    className: 'bm-burger-bars',
-                    style: [
-                        this.getLineStyle(1),
-                        this.props.styles.bmBurgerBars
-                    ]
-                }), _react2['default'].createElement('span', {
-                    className: 'bm-burger-bars',
-                    style: [
-                        this.getLineStyle(2),
-                        this.props.styles.bmBurgerBars
-                    ]
-                }));
-            }
-            return _react2['default'].createElement('div', {
-                className: 'bm-burger-button',
-                style: [
-                    { zIndex: 1 },
-                    this.props.styles.bmBurgerButton
-                ]
-            }, icon, _react2['default'].createElement('button', {
-                onClick: this.props.onClick,
-                onMouseEnter: this.handleHover,
-                onMouseLeave: this.handleHover,
-                style: buttonStyle
-            }, 'Open Menu'));
-        }
-    }));
-exports['default'] = BurgerIcon;
-module.exports = exports['default'];
-},{"./ConfiguredRadium":97,"react":"react"}],96:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-exports['default'] = {
-    slide: require('./menus/slide'),
-    stack: require('./menus/stack'),
-    elastic: require('./menus/elastic'),
-    bubble: require('./menus/bubble'),
-    push: require('./menus/push'),
-    pushRotate: require('./menus/pushRotate'),
-    scaleDown: require('./menus/scaleDown'),
-    scaleRotate: require('./menus/scaleRotate'),
-    fallDown: require('./menus/fallDown')
-};
-module.exports = exports['default'];
-},{"./menus/bubble":101,"./menus/elastic":102,"./menus/fallDown":103,"./menus/push":104,"./menus/pushRotate":105,"./menus/scaleDown":106,"./menus/scaleRotate":107,"./menus/slide":108,"./menus/stack":109}],97:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { 'default': obj };
-}
-var _radium = require('radium');
-var _radium2 = _interopRequireDefault(_radium);
-var _radiumPluginPrefixAll = require('radium-plugin-prefix-all');
-var _radiumPluginPrefixAll2 = _interopRequireDefault(_radiumPluginPrefixAll);
-exports['default'] = function (component) {
-    return (0, _radium2['default'])({
-        plugins: [
-            _radium2['default'].Plugins.mergeStyleArray,
-            _radium2['default'].Plugins.checkProps,
-            _radium2['default'].Plugins.resolveMediaQueries,
-            _radium2['default'].Plugins.resolveInteractionStyles,
-            _radiumPluginPrefixAll2['default'],
-            _radium2['default'].Plugins.checkProps
-        ]
-    })(component);
-};
-module.exports = exports['default'];
-},{"radium":140,"radium-plugin-prefix-all":110}],98:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { 'default': obj };
-}
-var _react = require('react');
-var _react2 = _interopRequireDefault(_react);
-var _ConfiguredRadium = require('./ConfiguredRadium');
-var _ConfiguredRadium2 = _interopRequireDefault(_ConfiguredRadium);
-var CrossIcon = (0, _ConfiguredRadium2['default'])(_react2['default'].createClass({
-        propTypes: {
-            customIcon: _react2['default'].PropTypes.element,
-            styles: _react2['default'].PropTypes.object
-        },
-        getCrossStyle: function getCrossStyle(type) {
-            return {
-                position: 'absolute',
-                width: 3,
-                height: 14,
-                transform: type === 'before' ? 'rotate(45deg)' : 'rotate(-45deg)'
-            };
-        },
-        getDefaultProps: function getDefaultProps() {
-            return { styles: {} };
-        },
-        render: function render() {
-            var icon;
-            var buttonWrapperStyle = {
-                    position: 'absolute',
-                    width: 24,
-                    height: 24,
-                    right: 8,
-                    top: 8
-                };
-            var buttonStyle = {
-                    position: 'absolute',
-                    left: 0,
-                    right: 0,
-                    top: 0,
-                    bottom: 0,
-                    margin: 0,
-                    padding: 0,
-                    border: 'none',
-                    fontSize: 8,
-                    color: 'transparent',
-                    background: 'transparent',
-                    outline: 'none'
-                };
-            if (this.props.customIcon) {
-                var extraProps = {
-                        className: 'bm-cross',
-                        style: [
-                            {
-                                width: '100%',
-                                height: '100%'
-                            },
-                            this.props.styles.bmCross
-                        ]
-                    };
-                icon = _react2['default'].cloneElement(this.props.customIcon, extraProps);
-            } else {
-                icon = _react2['default'].createElement('span', {
-                    style: [{
-                            position: 'absolute',
-                            top: '6px',
-                            right: '14px'
-                        }]
-                }, _react2['default'].createElement('span', {
-                    className: 'bm-cross',
-                    style: [
-                        this.getCrossStyle('before'),
-                        this.props.styles.bmCross
-                    ]
-                }), _react2['default'].createElement('span', {
-                    className: 'bm-cross',
-                    style: [
-                        this.getCrossStyle('after'),
-                        this.props.styles.bmCross
-                    ]
-                }));
-            }
-            return _react2['default'].createElement('div', {
-                className: 'bm-cross-button',
-                style: [
-                    buttonWrapperStyle,
-                    this.props.styles.bmCrossButton
-                ]
-            }, icon, _react2['default'].createElement('button', {
-                onClick: this.props.onClick,
-                style: buttonStyle
-            }, 'Close Menu'));
-        }
-    }));
-exports['default'] = CrossIcon;
-module.exports = exports['default'];
-},{"./ConfiguredRadium":97,"react":"react"}],99:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-var styles = {
-        overlay: function overlay(isOpen) {
-            return {
-                position: 'fixed',
-                zIndex: 1,
-                width: '100%',
-                height: '100%',
-                background: 'rgba(0, 0, 0, 0.3)',
-                opacity: isOpen ? 1 : 0,
-                transform: isOpen ? '' : 'translate3d(-100%, 0, 0)',
-                transition: isOpen ? 'opacity 0.3s' : 'opacity 0.3s, transform 0s 0.3s'
-            };
-        },
-        menuWrap: function menuWrap(isOpen, width, right) {
-            return {
-                position: 'fixed',
-                right: right ? 0 : 'inherit',
-                zIndex: 2,
-                width: width,
-                height: '100%',
-                transform: isOpen ? '' : right ? 'translate3d(100%, 0, 0)' : 'translate3d(-100%, 0, 0)',
-                transition: 'all 0.5s'
-            };
-        },
-        menu: function menu() {
-            return {
-                height: '100%',
-                boxSizing: 'border-box'
-            };
-        },
-        itemList: function itemList() {
-            return { height: '100%' };
-        },
-        item: function item() {
-            return {
-                display: 'block',
-                outline: 'none'
-            };
-        }
-    };
-exports['default'] = styles;
-module.exports = exports['default'];
-},{}],100:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { 'default': obj };
-}
-var _react = require('react');
-var _react2 = _interopRequireDefault(_react);
-var _reactDom = require('react-dom');
-var _reactDom2 = _interopRequireDefault(_reactDom);
-var _ConfiguredRadium = require('./ConfiguredRadium');
-var _ConfiguredRadium2 = _interopRequireDefault(_ConfiguredRadium);
-var _baseStyles = require('./baseStyles');
-var _baseStyles2 = _interopRequireDefault(_baseStyles);
-var _BurgerIcon = require('./BurgerIcon');
-var _BurgerIcon2 = _interopRequireDefault(_BurgerIcon);
-var _CrossIcon = require('./CrossIcon');
-var _CrossIcon2 = _interopRequireDefault(_CrossIcon);
-exports['default'] = function (styles) {
-    return (0, _ConfiguredRadium2['default'])(_react2['default'].createClass({
-        propTypes: {
-            customBurgerIcon: _react2['default'].PropTypes.element,
-            customCrossIcon: _react2['default'].PropTypes.element,
-            id: _react2['default'].PropTypes.string,
-            isOpen: _react2['default'].PropTypes.bool,
-            noOverlay: _react2['default'].PropTypes.bool,
-            onStateChange: _react2['default'].PropTypes.func,
-            outerContainerId: _react2['default'].PropTypes.string,
-            pageWrapId: _react2['default'].PropTypes.string,
-            right: _react2['default'].PropTypes.bool,
-            styles: _react2['default'].PropTypes.object,
-            width: _react2['default'].PropTypes.number
-        },
-        toggleMenu: function toggleMenu() {
-            this.applyWrapperStyles();
-            var newState = { isOpen: !this.state.isOpen };
-            this.setState(newState, this.props.onStateChange.bind(null, newState));
-        },
-        applyWrapperStyles: function applyWrapperStyles() {
-            if (styles.pageWrap && this.props.pageWrapId) {
-                this.handleExternalWrapper(this.props.pageWrapId, styles.pageWrap, true);
-            }
-            if (styles.outerContainer && this.props.outerContainerId) {
-                this.handleExternalWrapper(this.props.outerContainerId, styles.outerContainer, true);
-            }
-        },
-        clearWrapperStyles: function clearWrapperStyles() {
-            if (styles.pageWrap && this.props.pageWrapId) {
-                this.handleExternalWrapper(this.props.pageWrapId, styles.pageWrap, false);
-            }
-            if (styles.outerContainer && this.props.outerContainerId) {
-                this.handleExternalWrapper(this.props.outerContainerId, styles.outerContainer, false);
-            }
-        },
-        handleExternalWrapper: function handleExternalWrapper(id, wrapperStyles, set) {
-            var html = document.querySelector('html');
-            var body = document.querySelector('body');
-            var wrapper = document.getElementById(id);
-            if (!wrapper) {
-                console.error('Element with ID \'' + id + '\' not found');
-                return;
-            }
-            var builtStyles = wrapperStyles(this.state.isOpen, this.props.width, this.props.right);
-            for (var prop in builtStyles) {
-                if (builtStyles.hasOwnProperty(prop)) {
-                    wrapper.style[prop] = set ? builtStyles[prop] : '';
-                }
-            }
-            [
-                html,
-                body
-            ].forEach(function (element) {
-                element.style['overflow-x'] = set ? 'hidden' : '';
-            });
-        },
-        getStyles: function getStyles(el, index) {
-            var propName = 'bm' + el.replace(el.charAt(0), el.charAt(0).toUpperCase());
-            var output = _baseStyles2['default'][el] ? [_baseStyles2['default'][el](this.state.isOpen, this.props.width, this.props.right)] : [];
-            if (styles[el]) {
-                output.push(styles[el](this.state.isOpen, this.props.width, this.props.right, index + 1));
-            }
-            if (this.props.styles[propName]) {
-                output.push(this.props.styles[propName]);
-            }
-            return output;
-        },
-        listenForClose: function listenForClose(e) {
-            e = e || window.event;
-            if (this.state.isOpen && (e.key === 'Escape' || e.keyCode === 27)) {
-                this.toggleMenu();
-            }
-        },
-        getDefaultProps: function getDefaultProps() {
-            return {
-                id: '',
-                noOverlay: false,
-                onStateChange: function onStateChange() {
-                },
-                outerContainerId: '',
-                pageWrapId: '',
-                styles: {},
-                width: 300
-            };
-        },
-        getInitialState: function getInitialState() {
-            return { isOpen: false };
-        },
-        componentWillMount: function componentWillMount() {
-            if (!styles) {
-                throw new Error('No styles supplied');
-            }
-            if (styles.pageWrap && !this.props.pageWrapId) {
-                console.warn('No pageWrapId supplied');
-            }
-            if (styles.outerContainer && !this.props.outerContainerId) {
-                console.warn('No outerContainerId supplied');
-            }
-            if (this.props.isOpen) {
-                this.toggleMenu();
-            }
-        },
-        componentDidMount: function componentDidMount() {
-            window.onkeydown = this.listenForClose;
-        },
-        componentWillUnmount: function componentWillUnmount() {
-            window.onkeydown = null;
-            this.clearWrapperStyles();
-        },
-        componentDidUpdate: function componentDidUpdate() {
-            var _this = this;
-            if (styles.svg && this.isMounted()) {
-                var _ret = function () {
-                        var morphShape = _reactDom2['default'].findDOMNode(_this, 'bm-morph-shape');
-                        var Snap = undefined, s = undefined, path = undefined;
-                        try {
-                            Snap = require('snapsvg');
-                            s = Snap(morphShape);
-                            path = s.select('path');
-                        } catch (e) {
-                            console.warn('It looks like you might be using Webpack. Unfortunately, Elastic and Bubble are not currently supported with Webpack builds due to their Snap.svg dependency. See https://github.com/adobe-webplatform/Snap.svg/issues/341 for more info.');
-                            return { v: undefined };
-                        }
-                        if (_this.state.isOpen) {
-                            styles.svg.animate(path);
-                        } else {
-                            setTimeout(function () {
-                                path.attr('d', styles.svg.pathInitial);
-                            }, 300);
-                        }
-                    }();
-                if (typeof _ret === 'object')
-                    return _ret.v;
-            }
-        },
-        componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-            if (typeof nextProps.isOpen !== 'undefined' && nextProps.isOpen !== this.state.isOpen) {
-                this.toggleMenu();
-            }
-        },
-        render: function render() {
-            var _this2 = this;
-            var items = undefined, svg = undefined, overlay = undefined;
-            if (this.props.children) {
-                items = _react2['default'].Children.map(this.props.children, function (item, index) {
-                    var extraProps = {
-                            key: index,
-                            style: _this2.getStyles('item', index)
-                        };
-                    return _react2['default'].cloneElement(item, extraProps);
-                });
-            }
-            if (styles.svg) {
-                svg = _react2['default'].createElement('div', {
-                    className: 'bm-morph-shape',
-                    style: this.getStyles('morphShape')
-                }, _react2['default'].createElement('svg', {
-                    xmlns: 'http://www.w3.org/2000/svg',
-                    width: '100%',
-                    height: '100%',
-                    viewBox: '0 0 100 800',
-                    preserveAspectRatio: 'none'
-                }, _react2['default'].createElement('path', { d: styles.svg.pathInitial })));
-            }
-            if (!this.props.noOverlay) {
-                overlay = _react2['default'].createElement('div', {
-                    className: 'bm-overlay',
-                    onClick: this.toggleMenu,
-                    style: this.getStyles('overlay')
-                });
-            }
-            return _react2['default'].createElement('div', null, overlay, _react2['default'].createElement('div', {
-                id: this.props.id,
-                className: 'bm-menu-wrap',
-                style: this.getStyles('menuWrap')
-            }, svg, _react2['default'].createElement('div', {
-                className: 'bm-menu',
-                style: this.getStyles('menu')
-            }, _react2['default'].createElement('nav', {
-                className: 'bm-item-list',
-                style: this.getStyles('itemList')
-            }, items)), _react2['default'].createElement('div', { style: this.getStyles('closeButton') }, _react2['default'].createElement(_CrossIcon2['default'], {
-                onClick: this.toggleMenu,
-                styles: this.props.styles,
-                customIcon: this.props.customCrossIcon
-            }))), _react2['default'].createElement(_BurgerIcon2['default'], {
-                onClick: this.toggleMenu,
-                styles: this.props.styles,
-                customIcon: this.props.customBurgerIcon
-            }));
-        }
-    }));
-};
-module.exports = exports['default'];
-},{"./BurgerIcon":95,"./ConfiguredRadium":97,"./CrossIcon":98,"./baseStyles":99,"react":"react","react-dom":"react-dom","snapsvg":189}],101:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { 'default': obj };
-}
-var _menuFactory = require('../menuFactory');
-var _menuFactory2 = _interopRequireDefault(_menuFactory);
-var styles = {
-        svg: {
-            pathInitial: 'M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z',
-            pathOpen: 'M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z',
-            animate: function animate(path) {
-                var pos = 0;
-                var steps = this.pathOpen.split(';');
-                var stepsTotal = steps.length;
-                var mina = window.mina;
-                var nextStep = function nextStep() {
-                    if (pos > stepsTotal - 1)
-                        return;
-                    path.animate({ path: steps[pos] }, pos === 0 ? 400 : 500, pos === 0 ? mina.easein : mina.elastic, function () {
-                        nextStep();
-                    });
-                    pos++;
-                };
-                nextStep();
-            }
-        },
-        morphShape: function morphShape(isOpen, width, right) {
-            return {
-                position: 'fixed',
-                width: '100%',
-                height: '100%',
-                right: right ? 'inherit' : 0,
-                left: right ? 0 : 'inherit',
-                transform: right ? 'rotateY(180deg)' : 'rotateY(0deg)'
-            };
-        },
-        menuWrap: function menuWrap(isOpen, width, right) {
-            return {
-                transform: isOpen ? 'translate3d(0, 0, 0)' : right ? 'translate3d(100%, 0, 0)' : 'translate3d(-100%, 0, 0)',
-                transition: isOpen ? 'transform 0.4s 0s' : 'transform 0.4s'
-            };
-        },
-        menu: function menu(isOpen, width, right) {
-            width -= 140;
-            return {
-                position: 'fixed',
-                transform: isOpen ? '' : right ? 'translate3d(' + width + 'px, 0, 0)' : 'translate3d(-' + width + 'px, 0, 0)',
-                transition: isOpen ? 'opacity 0.1s 0.4s cubic-bezier(.17, .67, .1, 1.27), transform 0.1s 0.4s cubic-bezier(.17, .67, .1, 1.27)' : 'opacity 0s 0.3s cubic-bezier(.17, .67, .1, 1.27), transform 0s 0.3s cubic-bezier(.17, .67, .1, 1.27)',
-                opacity: isOpen ? 1 : 0
-            };
-        },
-        item: function item(isOpen, width, right, nthChild) {
-            width -= 140;
-            return {
-                transform: isOpen ? 'translate3d(0, 0, 0)' : right ? 'translate3d(' + width + 'px, 0, 0)' : 'translate3d(-' + width + 'px, 0, 0)',
-                transition: isOpen ? 'opacity 0.3s 0.4s, transform 0.3s 0.4s' : 'opacity 0s 0.3s cubic-bezier(.17, .67, .1, 1.27), transform 0s 0.3s cubic-bezier(.17, .67, .1, 1.27)',
-                opacity: isOpen ? 1 : 0
-            };
-        },
-        closeButton: function closeButton(isOpen, width, right) {
-            width -= 140;
-            return {
-                transform: isOpen ? 'translate3d(0, 0, 0)' : right ? 'translate3d(' + width + 'px, 0, 0)' : 'translate3d(-' + width + 'px, 0, 0)',
-                transition: isOpen ? 'opacity 0.3s 0.4s cubic-bezier(.17, .67, .1, 1.27), transform 0.3s 0.4s cubic-bezier(.17, .67, .1, 1.27)' : 'opacity 0s 0.3s cubic-bezier(.17, .67, .1, 1.27), transform 0s 0.3s cubic-bezier(.17, .67, .1, 1.27)',
-                opacity: isOpen ? 1 : 0
-            };
-        }
-    };
-exports['default'] = (0, _menuFactory2['default'])(styles);
-module.exports = exports['default'];
-},{"../menuFactory":100}],102:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { 'default': obj };
-}
-var _menuFactory = require('../menuFactory');
-var _menuFactory2 = _interopRequireDefault(_menuFactory);
-var styles = {
-        svg: {
-            pathInitial: 'M-1,0h101c0,0-97.833,153.603-97.833,396.167C2.167,627.579,100,800,100,800H-1V0z',
-            pathOpen: 'M-1,0h101c0,0,0-1,0,395c0,404,0,405,0,405H-1V0z',
-            animate: function animate(path) {
-                path.animate({ path: this.pathOpen }, 400, window.mina.easeinout);
-            }
-        },
-        morphShape: function morphShape(isOpen, width, right) {
-            return {
-                position: 'fixed',
-                width: 120,
-                height: '100%',
-                right: right ? 'inherit' : 0,
-                left: right ? 0 : 'inherit',
-                transform: right ? 'rotateY(180deg)' : ''
-            };
-        },
-        menuWrap: function menuWrap(isOpen, width, right) {
-            return {
-                transform: isOpen ? 'translate3d(0, 0, 0)' : right ? 'translate3d(100%, 0, 0)' : 'translate3d(-100%, 0, 0)',
-                transition: 'all 0.3s'
-            };
-        },
-        menu: function menu(isOpen, width, right) {
-            return {
-                position: 'fixed',
-                right: right ? 0 : 'inherit',
-                width: 'calc(100% - 120px)',
-                whiteSpace: 'nowrap',
-                boxSizing: 'border-box'
-            };
-        },
-        itemList: function itemList(isOpen, width, right) {
-            if (right) {
-                return {
-                    position: 'relative',
-                    left: '-110px'
-                };
-            }
-        },
-        pageWrap: function pageWrap(isOpen, width, right) {
-            return {
-                transform: isOpen ? '' : right ? 'translate3d(-100px, 0, 0)' : 'translate3d(100px, 0, 0)',
-                transition: isOpen ? 'all 0.3s' : 'all 0.3s 0.1s'
-            };
-        },
-        outerContainer: function outerContainer(isOpen) {
-            return { overflow: isOpen ? '' : 'hidden' };
-        }
-    };
-exports['default'] = (0, _menuFactory2['default'])(styles);
-module.exports = exports['default'];
-},{"../menuFactory":100}],103:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { 'default': obj };
-}
-var _menuFactory = require('../menuFactory');
-var _menuFactory2 = _interopRequireDefault(_menuFactory);
-var styles = {
-        menuWrap: function menuWrap(isOpen) {
-            return {
-                transform: isOpen ? '' : 'translate3d(0, -100%, 0)',
-                transition: 'all 0.5s ease-in-out'
-            };
-        },
-        pageWrap: function pageWrap(isOpen, width, right) {
-            return {
-                transform: isOpen ? '' : right ? 'translate3d(-' + width + 'px, 0, 0)' : 'translate3d(' + width + 'px, 0, 0)',
-                transition: 'all 0.5s'
-            };
-        },
-        outerContainer: function outerContainer(isOpen) {
-            return {
-                perspective: '1500px',
-                perspectiveOrigin: '0% 50%',
-                overflow: isOpen ? '' : 'hidden'
-            };
-        }
-    };
-exports['default'] = (0, _menuFactory2['default'])(styles);
-module.exports = exports['default'];
-},{"../menuFactory":100}],104:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { 'default': obj };
-}
-var _menuFactory = require('../menuFactory');
-var _menuFactory2 = _interopRequireDefault(_menuFactory);
-var styles = {
-        pageWrap: function pageWrap(isOpen, width, right) {
-            return {
-                transform: isOpen ? '' : right ? 'translate3d(-' + width + 'px, 0, 0)' : 'translate3d(' + width + 'px, 0, 0)',
-                transition: 'all 0.5s'
-            };
-        },
-        outerContainer: function outerContainer(isOpen) {
-            return { overflow: isOpen ? '' : 'hidden' };
-        }
-    };
-exports['default'] = (0, _menuFactory2['default'])(styles);
-module.exports = exports['default'];
-},{"../menuFactory":100}],105:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { 'default': obj };
-}
-var _menuFactory = require('../menuFactory');
-var _menuFactory2 = _interopRequireDefault(_menuFactory);
-var styles = {
-        pageWrap: function pageWrap(isOpen, width, right) {
-            return {
-                transform: isOpen ? '' : right ? 'translate3d(-' + width + 'px, 0, 0) rotateY(15deg)' : 'translate3d(' + width + 'px, 0, 0) rotateY(-15deg)',
-                transformOrigin: right ? '100% 50%' : '0% 50%',
-                transformStyle: 'preserve-3d',
-                transition: 'all 0.5s'
-            };
-        },
-        outerContainer: function outerContainer(isOpen) {
-            return {
-                perspective: '1500px',
-                overflow: isOpen ? '' : 'hidden'
-            };
-        }
-    };
-exports['default'] = (0, _menuFactory2['default'])(styles);
-module.exports = exports['default'];
-},{"../menuFactory":100}],106:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { 'default': obj };
-}
-var _menuFactory = require('../menuFactory');
-var _menuFactory2 = _interopRequireDefault(_menuFactory);
-var styles = {
-        pageWrap: function pageWrap(isOpen, width) {
-            return {
-                transform: isOpen ? '' : 'translate3d(0, 0, -' + width + 'px)',
-                transformOrigin: '100%',
-                transformStyle: 'preserve-3d',
-                transition: 'all 0.5s'
-            };
-        },
-        outerContainer: function outerContainer() {
-            return { perspective: '1500px' };
-        }
-    };
-exports['default'] = (0, _menuFactory2['default'])(styles);
-module.exports = exports['default'];
-},{"../menuFactory":100}],107:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { 'default': obj };
-}
-var _menuFactory = require('../menuFactory');
-var _menuFactory2 = _interopRequireDefault(_menuFactory);
-var styles = {
-        pageWrap: function pageWrap(isOpen, width, right) {
-            return {
-                transform: isOpen ? '' : right ? 'translate3d(-100px, 0, -600px) rotateY(20deg)' : 'translate3d(100px, 0, -600px) rotateY(-20deg)',
-                transformStyle: 'preserve-3d',
-                transition: 'all 0.5s',
-                overflow: isOpen ? '' : 'hidden'
-            };
-        },
-        outerContainer: function outerContainer(isOpen) {
-            return {
-                perspective: '1500px',
-                overflow: isOpen ? '' : 'hidden'
-            };
-        }
-    };
-exports['default'] = (0, _menuFactory2['default'])(styles);
-module.exports = exports['default'];
-},{"../menuFactory":100}],108:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { 'default': obj };
-}
-var _menuFactory = require('../menuFactory');
-var _menuFactory2 = _interopRequireDefault(_menuFactory);
-var styles = {};
-exports['default'] = (0, _menuFactory2['default'])(styles);
-module.exports = exports['default'];
-},{"../menuFactory":100}],109:[function(require,module,exports){
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { 'default': obj };
-}
-var _menuFactory = require('../menuFactory');
-var _menuFactory2 = _interopRequireDefault(_menuFactory);
-var styles = {
-        menuWrap: function menuWrap(isOpen, width, right) {
-            width += 20;
-            return {
-                transform: isOpen ? '' : right ? 'translate3d(' + width + 'px, 0, 0)' : 'translate3d(-' + width + 'px, 0, 0)',
-                transition: isOpen ? 'transform 0.8s cubic-bezier(0.7, 0, 0.3, 1)' : 'transform 0.4s cubic-bezier(0.7, 0, 0.3, 1)'
-            };
-        },
-        item: function item(isOpen, width, right, nthChild) {
-            return {
-                transform: isOpen ? '' : 'translate3d(0, ' + nthChild * 500 + 'px, 0)',
-                transition: isOpen ? 'transform 0.8s cubic-bezier(0.7, 0, 0.3, 1)' : 'transform 0s 0.2s cubic-bezier(0.7, 0, 0.3, 1)'
-            };
-        }
-    };
-exports['default'] = (0, _menuFactory2['default'])(styles);
-module.exports = exports['default'];
-},{"../menuFactory":100}],110:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _inlineStylePrefixer = require('inline-style-prefixer');
-
-var _inlineStylePrefixer2 = _interopRequireDefault(_inlineStylePrefixer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function (config) {
-  var prefixedStyle = _inlineStylePrefixer2.default.prefixAll(config.style);
-  return { style: prefixedStyle };
-};
-
-module.exports = exports['default'];
-},{"inline-style-prefixer":112}],111:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _pluginsCalc = require('./plugins/calc');
-
-var _pluginsCalc2 = _interopRequireDefault(_pluginsCalc);
-
-var _pluginsCursor = require('./plugins/cursor');
-
-var _pluginsCursor2 = _interopRequireDefault(_pluginsCursor);
-
-var _pluginsFlex = require('./plugins/flex');
-
-var _pluginsFlex2 = _interopRequireDefault(_pluginsFlex);
-
-var _pluginsSizing = require('./plugins/sizing');
-
-var _pluginsSizing2 = _interopRequireDefault(_pluginsSizing);
-
-var _pluginsGradient = require('./plugins/gradient');
-
-var _pluginsGradient2 = _interopRequireDefault(_pluginsGradient);
-
-var _pluginsTransition = require('./plugins/transition');
-
-var _pluginsTransition2 = _interopRequireDefault(_pluginsTransition);
-
-// special flexbox specifications
-
-var _pluginsFlexboxIE = require('./plugins/flexboxIE');
-
-var _pluginsFlexboxIE2 = _interopRequireDefault(_pluginsFlexboxIE);
-
-var _pluginsFlexboxOld = require('./plugins/flexboxOld');
-
-var _pluginsFlexboxOld2 = _interopRequireDefault(_pluginsFlexboxOld);
-
-exports['default'] = [_pluginsCalc2['default'], _pluginsCursor2['default'], _pluginsSizing2['default'], _pluginsGradient2['default'], _pluginsTransition2['default'], _pluginsFlexboxIE2['default'], _pluginsFlexboxOld2['default'],
-// this must be run AFTER the flexbox specs
-_pluginsFlex2['default']];
-module.exports = exports['default'];
-},{"./plugins/calc":114,"./plugins/cursor":115,"./plugins/flex":116,"./plugins/flexboxIE":117,"./plugins/flexboxOld":118,"./plugins/gradient":119,"./plugins/sizing":120,"./plugins/transition":121}],112:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-var _utilsGetBrowserInformation = require('./utils/getBrowserInformation');
-
-var _utilsGetBrowserInformation2 = _interopRequireDefault(_utilsGetBrowserInformation);
-
-var _utilsGetPrefixedKeyframes = require('./utils/getPrefixedKeyframes');
-
-var _utilsGetPrefixedKeyframes2 = _interopRequireDefault(_utilsGetPrefixedKeyframes);
-
-var _utilsCapitalizeString = require('./utils/capitalizeString');
-
-var _utilsCapitalizeString2 = _interopRequireDefault(_utilsCapitalizeString);
-
-var _utilsAssign = require('./utils/assign');
-
-var _utilsAssign2 = _interopRequireDefault(_utilsAssign);
-
-var _utilsWarn = require('./utils/warn');
-
-var _utilsWarn2 = _interopRequireDefault(_utilsWarn);
-
-var _caniuseData = require('./caniuseData');
-
-var _caniuseData2 = _interopRequireDefault(_caniuseData);
-
-var _Plugins = require('./Plugins');
-
-var _Plugins2 = _interopRequireDefault(_Plugins);
-
-var browserWhitelist = ['phantom'];
-
-var Prefixer = (function () {
-  /**
-   * Instantiante a new prefixer
-   * @param {string} userAgent - userAgent to gather prefix information according to caniuse.com
-   * @param {string} keepUnprefixed - keeps unprefixed properties and values
-   */
-
-  function Prefixer() {
-    var _this = this;
-
-    var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-    _classCallCheck(this, Prefixer);
-
-    var defaultUserAgent = typeof navigator !== 'undefined' ? navigator.userAgent : undefined;
-
-    this._userAgent = options.userAgent || defaultUserAgent;
-    this._keepUnprefixed = options.keepUnprefixed || false;
-
-    this._browserInfo = (0, _utilsGetBrowserInformation2['default'])(this._userAgent);
-
-    // Checks if the userAgent was resolved correctly
-    if (this._browserInfo && this._browserInfo.prefix) {
-      // set additional prefix information
-      this.cssPrefix = this._browserInfo.prefix.css;
-      this.jsPrefix = this._browserInfo.prefix.inline;
-      this.prefixedKeyframes = (0, _utilsGetPrefixedKeyframes2['default'])(this._browserInfo);
-    } else {
-      this._hasPropsRequiringPrefix = false;
-      (0, _utilsWarn2['default'])('Either the global navigator was undefined or an invalid userAgent was provided.', 'Using a valid userAgent? Please let us know and create an issue at https://github.com/rofrischmann/inline-style-prefixer/issues');
-      return false;
-    }
-
-    var data = this._browserInfo.browser && _caniuseData2['default'][this._browserInfo.browser];
-    if (data) {
-      this._requiresPrefix = Object.keys(data).filter(function (key) {
-        return data[key] >= _this._browserInfo.version;
-      }).reduce(function (result, name) {
-        return _extends({}, result, _defineProperty({}, name, true));
-      }, {});
-      this._hasPropsRequiringPrefix = Object.keys(this._requiresPrefix).length > 0;
-    } else {
-      // check for whitelisted browsers
-      browserWhitelist.forEach(function (browser) {
-        if (_this._browserInfo[browser]) {
-          _this._isWhitelisted = true;
-        }
-      });
-      this._hasPropsRequiringPrefix = false;
-
-      // Do not throw a warning if whitelisted
-      if (this._isWhitelisted) {
-        return true;
-      }
-      (0, _utilsWarn2['default'])('Your userAgent seems to be not supported by inline-style-prefixer. Feel free to open an issue.');
-      return false;
-    }
-  }
-
-  /**
-   * Returns a prefixed version of the style object
-   * @param {Object} styles - Style object that gets prefixed properties added
-   * @returns {Object} - Style object with prefixed properties and values
-   */
-
-  _createClass(Prefixer, [{
-    key: 'prefix',
-    value: function prefix(styles) {
-      var _this2 = this;
-
-      // only add prefixes if needed
-      if (!this._hasPropsRequiringPrefix) {
-        return styles;
-      }
-
-      styles = (0, _utilsAssign2['default'])({}, styles);
-
-      Object.keys(styles).forEach(function (property) {
-        var value = styles[property];
-        if (value instanceof Object) {
-          // recurse through nested style objects
-          styles[property] = _this2.prefix(value);
-        } else {
-          // add prefixes if needed
-          if (_this2._requiresPrefix[property]) {
-            styles[_this2.jsPrefix + (0, _utilsCapitalizeString2['default'])(property)] = value;
-            if (!_this2._keepUnprefixed) {
-              delete styles[property];
-            }
-          }
-
-          // resolve plugins
-          _Plugins2['default'].forEach(function (plugin) {
-            // generates a new plugin interface with current data
-            var resolvedStyles = plugin({
-              property: property,
-              value: value,
-              styles: styles,
-              browserInfo: _this2._browserInfo,
-              prefix: {
-                js: _this2.jsPrefix,
-                css: _this2.cssPrefix,
-                keyframes: _this2.prefixedKeyframes
-              },
-              keepUnprefixed: _this2._keepUnprefixed,
-              requiresPrefix: _this2._requiresPrefix,
-              forceRun: false
-            });
-            (0, _utilsAssign2['default'])(styles, resolvedStyles);
-          });
-        }
-      });
-
-      return styles;
-    }
-
-    /**
-     * Returns a prefixed version of the style object using all vendor prefixes
-     * @param {Object} styles - Style object that gets prefixed properties added
-     * @returns {Object} - Style object with prefixed properties and values
-     */
-  }], [{
-    key: 'prefixAll',
-    value: function prefixAll(styles) {
-      var prefixes = {};
-      var browserInfo = (0, _utilsGetBrowserInformation2['default'])('*');
-
-      browserInfo.browsers.forEach(function (browser) {
-        var data = _caniuseData2['default'][browser];
-        if (data) {
-          (0, _utilsAssign2['default'])(prefixes, data);
-        }
-      });
-
-      // there should always be at least one prefixed style, but just incase
-      if (!Object.keys(prefixes).length > 0) {
-        return styles;
-      }
-
-      styles = (0, _utilsAssign2['default'])({}, styles);
-
-      Object.keys(styles).forEach(function (property) {
-        var value = styles[property];
-        if (value instanceof Object) {
-          // recurse through nested style objects
-          styles[property] = Prefixer.prefixAll(value);
-        } else {
-          var browsers = Object.keys(browserInfo.prefixes);
-          browsers.forEach(function (browser) {
-            var style = browserInfo.prefixes[browser];
-            // add prefixes if needed
-            if (prefixes[property]) {
-              styles[style.inline + (0, _utilsCapitalizeString2['default'])(property)] = value;
-            }
-
-            // resolve plugins for each browser
-            _Plugins2['default'].forEach(function (plugin) {
-              var resolvedStyles = plugin({
-                property: property,
-                value: value,
-                styles: styles,
-                browserInfo: {
-                  name: browser,
-                  prefix: style,
-                  version: 0 // assume lowest
-                },
-                prefix: {},
-                keepUnprefixed: true,
-                requiresPrefix: prefixes,
-                forceRun: true
-              });
-              (0, _utilsAssign2['default'])(styles, resolvedStyles);
-            });
-          });
-        }
-      });
-
-      return styles;
-    }
-  }]);
-
-  return Prefixer;
-})();
-
-exports['default'] = Prefixer;
-module.exports = exports['default'];
-},{"./Plugins":111,"./caniuseData":113,"./utils/assign":122,"./utils/capitalizeString":124,"./utils/getBrowserInformation":125,"./utils/getPrefixedKeyframes":126,"./utils/warn":127}],113:[function(require,module,exports){
-var caniuseData = {"chrome":{"transform":35,"transformOrigin":35,"transformOriginX":35,"transformOriginY":35,"backfaceVisibility":35,"perspective":35,"perspectiveOrigin":35,"transformStyle":35,"transformOriginZ":35,"animation":42,"animationDelay":42,"animationDirection":42,"animationFillMode":42,"animationDuration":42,"animationIterationCount":42,"animationName":42,"animationPlayState":42,"animationTimingFunction":42,"appearance":50,"userSelect":50,"fontKerning":32,"textEmphasisPosition":50,"textEmphasis":50,"textEmphasisStyle":50,"textEmphasisColor":50,"boxDecorationBreak":50,"clipPath":50,"maskImage":50,"maskMode":50,"maskRepeat":50,"maskPosition":50,"maskClip":50,"maskOrigin":50,"maskSize":50,"maskComposite":50,"mask":50,"maskBorderSource":50,"maskBorderMode":50,"maskBorderSlice":50,"maskBorderWidth":50,"maskBorderOutset":50,"maskBorderRepeat":50,"maskBorder":50,"maskType":50,"textDecorationStyle":50,"textDecorationSkip":50,"textDecorationLine":50,"textDecorationColor":50,"filter":50,"fontFeatureSettings":47,"breakAfter":50,"breakBefore":50,"breakInside":50,"columnCount":50,"columnFill":50,"columnGap":50,"columnRule":50,"columnRuleColor":50,"columnRuleStyle":50,"columnRuleWidth":50,"columns":50,"columnSpan":50,"columnWidth":50},"safari":{"flex":8,"flexBasis":8,"flexDirection":8,"flexGrow":8,"flexFlow":8,"flexShrink":8,"flexWrap":8,"alignContent":8,"alignItems":8,"alignSelf":8,"justifyContent":8,"order":8,"transition":6,"transitionDelay":6,"transitionDuration":6,"transitionProperty":6,"transitionTimingFunction":6,"transform":8,"transformOrigin":8,"transformOriginX":8,"transformOriginY":8,"backfaceVisibility":8,"perspective":8,"perspectiveOrigin":8,"transformStyle":8,"transformOriginZ":8,"animation":8,"animationDelay":8,"animationDirection":8,"animationFillMode":8,"animationDuration":8,"animationIterationCount":8,"animationName":8,"animationPlayState":8,"animationTimingFunction":8,"appearance":9.1,"userSelect":9.1,"backdropFilter":9.1,"fontKerning":9.1,"scrollSnapType":9.1,"scrollSnapPointsX":9.1,"scrollSnapPointsY":9.1,"scrollSnapDestination":9.1,"scrollSnapCoordinate":9.1,"textEmphasisPosition":7,"textEmphasis":7,"textEmphasisStyle":7,"textEmphasisColor":7,"boxDecorationBreak":9.1,"clipPath":9.1,"maskImage":9.1,"maskMode":9.1,"maskRepeat":9.1,"maskPosition":9.1,"maskClip":9.1,"maskOrigin":9.1,"maskSize":9.1,"maskComposite":9.1,"mask":9.1,"maskBorderSource":9.1,"maskBorderMode":9.1,"maskBorderSlice":9.1,"maskBorderWidth":9.1,"maskBorderOutset":9.1,"maskBorderRepeat":9.1,"maskBorder":9.1,"maskType":9.1,"textDecorationStyle":9.1,"textDecorationSkip":9.1,"textDecorationLine":9.1,"textDecorationColor":9.1,"shapeImageThreshold":9.1,"shapeImageMargin":9.1,"shapeImageOutside":9.1,"filter":9,"hyphens":9.1,"flowInto":9.1,"flowFrom":9.1,"breakBefore":8,"breakAfter":8,"breakInside":8,"regionFragment":9.1,"columnCount":8,"columnFill":8,"columnGap":8,"columnRule":8,"columnRuleColor":8,"columnRuleStyle":8,"columnRuleWidth":8,"columns":8,"columnSpan":8,"columnWidth":8},"firefox":{"appearance":46,"userSelect":46,"boxSizing":28,"textAlignLast":46,"textDecorationStyle":35,"textDecorationSkip":35,"textDecorationLine":35,"textDecorationColor":35,"tabSize":46,"hyphens":42,"fontFeatureSettings":33,"breakAfter":46,"breakBefore":46,"breakInside":46,"columnCount":46,"columnFill":46,"columnGap":46,"columnRule":46,"columnRuleColor":46,"columnRuleStyle":46,"columnRuleWidth":46,"columns":46,"columnSpan":46,"columnWidth":46},"opera":{"flex":16,"flexBasis":16,"flexDirection":16,"flexGrow":16,"flexFlow":16,"flexShrink":16,"flexWrap":16,"alignContent":16,"alignItems":16,"alignSelf":16,"justifyContent":16,"order":16,"transform":22,"transformOrigin":22,"transformOriginX":22,"transformOriginY":22,"backfaceVisibility":22,"perspective":22,"perspectiveOrigin":22,"transformStyle":22,"transformOriginZ":22,"animation":29,"animationDelay":29,"animationDirection":29,"animationFillMode":29,"animationDuration":29,"animationIterationCount":29,"animationName":29,"animationPlayState":29,"animationTimingFunction":29,"appearance":36,"userSelect":36,"fontKerning":19,"textEmphasisPosition":36,"textEmphasis":36,"textEmphasisStyle":36,"textEmphasisColor":36,"boxDecorationBreak":36,"clipPath":36,"maskImage":36,"maskMode":36,"maskRepeat":36,"maskPosition":36,"maskClip":36,"maskOrigin":36,"maskSize":36,"maskComposite":36,"mask":36,"maskBorderSource":36,"maskBorderMode":36,"maskBorderSlice":36,"maskBorderWidth":36,"maskBorderOutset":36,"maskBorderRepeat":36,"maskBorder":36,"maskType":36,"filter":36,"fontFeatureSettings":36,"breakAfter":36,"breakBefore":36,"breakInside":36,"columnCount":36,"columnFill":36,"columnGap":36,"columnRule":36,"columnRuleColor":36,"columnRuleStyle":36,"columnRuleWidth":36,"columns":36,"columnSpan":36,"columnWidth":36},"ie":{"gridArea":11,"gridGap":11,"gridColumnStart":11,"userSelect":11,"grid":11,"breakInside":11,"hyphens":11,"gridTemplateAreas":11,"breakAfter":11,"scrollSnapCoordinate":11,"gridRowStart":11,"gridAutoFlow":11,"scrollSnapDestination":11,"gridTemplate":11,"gridTemplateColumns":11,"transformOrigin":9,"gridAutoRows":11,"gridColumnEnd":11,"transformOriginY":9,"scrollSnapPointsY":11,"breakBefore":11,"gridRowGap":11,"scrollSnapPointsX":11,"regionFragment":11,"flexWrap":10,"wrapFlow":11,"gridRowEnd":11,"flex":10,"flexDirection":10,"flowInto":11,"touchAction":10,"gridColumn":11,"transform":9,"gridTemplateRows":11,"flexFlow":10,"transformOriginX":9,"flowFrom":11,"scrollSnapType":11,"wrapMargin":11,"gridColumnGap":11,"gridRow":11,"wrapThrough":11,"gridAutoColumns":11,"textSizeAdjust":11},"edge":{"userSelect":14,"wrapFlow":14,"wrapThrough":14,"wrapMargin":14,"scrollSnapType":14,"scrollSnapPointsX":14,"scrollSnapPointsY":14,"scrollSnapDestination":14,"scrollSnapCoordinate":14,"hyphens":14,"flowInto":14,"flowFrom":14,"breakBefore":14,"breakAfter":14,"breakInside":14,"regionFragment":14,"gridTemplateColumns":14,"gridTemplateRows":14,"gridTemplateAreas":14,"gridTemplate":14,"gridAutoColumns":14,"gridAutoRows":14,"gridAutoFlow":14,"grid":14,"gridRowStart":14,"gridColumnStart":14,"gridRowEnd":14,"gridRow":14,"gridColumn":14,"gridColumnEnd":14,"gridColumnGap":14,"gridRowGap":14,"gridArea":14,"gridGap":14},"ios_saf":{"flex":8.1,"flexBasis":8.1,"flexDirection":8.1,"flexGrow":8.1,"flexFlow":8.1,"flexShrink":8.1,"flexWrap":8.1,"alignContent":8.1,"alignItems":8.1,"alignSelf":8.1,"justifyContent":8.1,"order":8.1,"transition":6,"transitionDelay":6,"transitionDuration":6,"transitionProperty":6,"transitionTimingFunction":6,"transform":8.1,"transformOrigin":8.1,"transformOriginX":8.1,"transformOriginY":8.1,"backfaceVisibility":8.1,"perspective":8.1,"perspectiveOrigin":8.1,"transformStyle":8.1,"transformOriginZ":8.1,"animation":8.1,"animationDelay":8.1,"animationDirection":8.1,"animationFillMode":8.1,"animationDuration":8.1,"animationIterationCount":8.1,"animationName":8.1,"animationPlayState":8.1,"animationTimingFunction":8.1,"appearance":9.3,"userSelect":9.3,"backdropFilter":9.3,"fontKerning":9.3,"scrollSnapType":9.3,"scrollSnapPointsX":9.3,"scrollSnapPointsY":9.3,"scrollSnapDestination":9.3,"scrollSnapCoordinate":9.3,"boxDecorationBreak":9.3,"clipPath":9.3,"maskImage":9.3,"maskMode":9.3,"maskRepeat":9.3,"maskPosition":9.3,"maskClip":9.3,"maskOrigin":9.3,"maskSize":9.3,"maskComposite":9.3,"mask":9.3,"maskBorderSource":9.3,"maskBorderMode":9.3,"maskBorderSlice":9.3,"maskBorderWidth":9.3,"maskBorderOutset":9.3,"maskBorderRepeat":9.3,"maskBorder":9.3,"maskType":9.3,"textSizeAdjust":9.3,"textDecorationStyle":9.3,"textDecorationSkip":9.3,"textDecorationLine":9.3,"textDecorationColor":9.3,"shapeImageThreshold":9.3,"shapeImageMargin":9.3,"shapeImageOutside":9.3,"filter":9,"hyphens":9.3,"flowInto":9.3,"flowFrom":9.3,"breakBefore":8.1,"breakAfter":8.1,"breakInside":8.1,"regionFragment":9.3,"columnCount":8.1,"columnFill":8.1,"columnGap":8.1,"columnRule":8.1,"columnRuleColor":8.1,"columnRuleStyle":8.1,"columnRuleWidth":8.1,"columns":8.1,"columnSpan":8.1,"columnWidth":8.1},"android":{"borderImage":4.2,"borderImageOutset":4.2,"borderImageRepeat":4.2,"borderImageSlice":4.2,"borderImageSource":4.2,"borderImageWidth":4.2,"flex":4.2,"flexBasis":4.2,"flexDirection":4.2,"flexGrow":4.2,"flexFlow":4.2,"flexShrink":4.2,"flexWrap":4.2,"alignContent":4.2,"alignItems":4.2,"alignSelf":4.2,"justifyContent":4.2,"order":4.2,"transition":4.2,"transitionDelay":4.2,"transitionDuration":4.2,"transitionProperty":4.2,"transitionTimingFunction":4.2,"transform":4.4,"transformOrigin":4.4,"transformOriginX":4.4,"transformOriginY":4.4,"backfaceVisibility":4.4,"perspective":4.4,"perspectiveOrigin":4.4,"transformStyle":4.4,"transformOriginZ":4.4,"animation":4.4,"animationDelay":4.4,"animationDirection":4.4,"animationFillMode":4.4,"animationDuration":4.4,"animationIterationCount":4.4,"animationName":4.4,"animationPlayState":4.4,"animationTimingFunction":4.4,"appearance":46,"userSelect":46,"fontKerning":4.4,"textEmphasisPosition":46,"textEmphasis":46,"textEmphasisStyle":46,"textEmphasisColor":46,"boxDecorationBreak":46,"clipPath":46,"maskImage":46,"maskMode":46,"maskRepeat":46,"maskPosition":46,"maskClip":46,"maskOrigin":46,"maskSize":46,"maskComposite":46,"mask":46,"maskBorderSource":46,"maskBorderMode":46,"maskBorderSlice":46,"maskBorderWidth":46,"maskBorderOutset":46,"maskBorderRepeat":46,"maskBorder":46,"maskType":46,"filter":46,"fontFeatureSettings":46,"breakAfter":46,"breakBefore":46,"breakInside":46,"columnCount":46,"columnFill":46,"columnGap":46,"columnRule":46,"columnRuleColor":46,"columnRuleStyle":46,"columnRuleWidth":46,"columns":46,"columnSpan":46,"columnWidth":46},"and_chr":{"appearance":47,"userSelect":47,"textEmphasisPosition":47,"textEmphasis":47,"textEmphasisStyle":47,"textEmphasisColor":47,"boxDecorationBreak":47,"clipPath":47,"maskImage":47,"maskMode":47,"maskRepeat":47,"maskPosition":47,"maskClip":47,"maskOrigin":47,"maskSize":47,"maskComposite":47,"mask":47,"maskBorderSource":47,"maskBorderMode":47,"maskBorderSlice":47,"maskBorderWidth":47,"maskBorderOutset":47,"maskBorderRepeat":47,"maskBorder":47,"maskType":47,"textDecorationStyle":47,"textDecorationSkip":47,"textDecorationLine":47,"textDecorationColor":47,"filter":47,"fontFeatureSettings":47,"breakAfter":47,"breakBefore":47,"breakInside":47,"columnCount":47,"columnFill":47,"columnGap":47,"columnRule":47,"columnRuleColor":47,"columnRuleStyle":47,"columnRuleWidth":47,"columns":47,"columnSpan":47,"columnWidth":47},"and_uc":{"flex":9.9,"flexBasis":9.9,"flexDirection":9.9,"flexGrow":9.9,"flexFlow":9.9,"flexShrink":9.9,"flexWrap":9.9,"alignContent":9.9,"alignItems":9.9,"alignSelf":9.9,"justifyContent":9.9,"order":9.9,"transition":9.9,"transitionDelay":9.9,"transitionDuration":9.9,"transitionProperty":9.9,"transitionTimingFunction":9.9,"transform":9.9,"transformOrigin":9.9,"transformOriginX":9.9,"transformOriginY":9.9,"backfaceVisibility":9.9,"perspective":9.9,"perspectiveOrigin":9.9,"transformStyle":9.9,"transformOriginZ":9.9,"animation":9.9,"animationDelay":9.9,"animationDirection":9.9,"animationFillMode":9.9,"animationDuration":9.9,"animationIterationCount":9.9,"animationName":9.9,"animationPlayState":9.9,"animationTimingFunction":9.9,"appearance":9.9,"userSelect":9.9,"fontKerning":9.9,"textEmphasisPosition":9.9,"textEmphasis":9.9,"textEmphasisStyle":9.9,"textEmphasisColor":9.9,"maskImage":9.9,"maskMode":9.9,"maskRepeat":9.9,"maskPosition":9.9,"maskClip":9.9,"maskOrigin":9.9,"maskSize":9.9,"maskComposite":9.9,"mask":9.9,"maskBorderSource":9.9,"maskBorderMode":9.9,"maskBorderSlice":9.9,"maskBorderWidth":9.9,"maskBorderOutset":9.9,"maskBorderRepeat":9.9,"maskBorder":9.9,"maskType":9.9,"textSizeAdjust":9.9,"filter":9.9,"hyphens":9.9,"flowInto":9.9,"flowFrom":9.9,"breakBefore":9.9,"breakAfter":9.9,"breakInside":9.9,"regionFragment":9.9,"fontFeatureSettings":9.9,"columnCount":9.9,"columnFill":9.9,"columnGap":9.9,"columnRule":9.9,"columnRuleColor":9.9,"columnRuleStyle":9.9,"columnRuleWidth":9.9,"columns":9.9,"columnSpan":9.9,"columnWidth":9.9},"op_mini":{"borderImage":5,"borderImageOutset":5,"borderImageRepeat":5,"borderImageSlice":5,"borderImageSource":5,"borderImageWidth":5,"tabSize":5,"objectFit":5,"objectPosition":5}}; module.exports = caniuseData
-},{}],114:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = calc;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function calc(pluginInterface) {
-  var property = pluginInterface.property;
-  var value = pluginInterface.value;
-  var browserInfo = pluginInterface.browserInfo;
-  var prefix = pluginInterface.prefix;
-  var keepUnprefixed = pluginInterface.keepUnprefixed;
-  var forceRun = pluginInterface.forceRun;
-  var browser = browserInfo.browser;
-  var version = browserInfo.version;
-
-  if (typeof value === 'string' && value.indexOf('calc(') > -1 && (forceRun || browser === 'firefox' && version < 15 || browser === 'chrome' && version < 25 || browser === 'safari' && version < 6.1 || browser === 'ios_saf' && version < 7)) {
-    var newValue = forceRun ?
-    // prefix all
-    ['-webkit-', '-moz-'].map(function (prefix) {
-      return value.replace(/calc\(/g, prefix + 'calc(');
-    }).join(';' + property + ':') :
-    // default
-    value.replace(/calc\(/g, prefix.css + 'calc(');
-    return _defineProperty({}, property, newValue + (keepUnprefixed ? ';' + property + ':' + value : ''));
-  }
-}
-
-module.exports = exports['default'];
-},{}],115:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = cursor;
-var values = {
-  'zoom-in': true,
-  'zoom-out': true,
-  grab: true,
-  grabbing: true
-};
-
-function cursor(pluginInterface) {
-  var property = pluginInterface.property;
-  var value = pluginInterface.value;
-  var browserInfo = pluginInterface.browserInfo;
-  var prefix = pluginInterface.prefix;
-  var keepUnprefixed = pluginInterface.keepUnprefixed;
-  var forceRun = pluginInterface.forceRun;
-  var browser = browserInfo.browser;
-  var version = browserInfo.version;
-
-  if (property === 'cursor' && values[value] && (forceRun || browser === 'firefox' && version < 24 || browser === 'chrome' && version < 37 || browser === 'safari' && version < 9 || browser === 'opera' && version < 24)) {
-    var newValue = forceRun ?
-    // prefix all
-    ['-webkit-', '-moz-'].map(function (prefix) {
-      return prefix + value;
-    }).join(';' + property + ':') :
-    // default
-    prefix.css + value;
-    return {
-      cursor: newValue + (keepUnprefixed ? ';' + property + ':' + value : '')
-    };
-  }
-}
-
-module.exports = exports['default'];
-},{}],116:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = flex;
-var values = { flex: true, 'inline-flex': true };
-
-function flex(pluginInterface) {
-  var property = pluginInterface.property;
-  var value = pluginInterface.value;
-  var browserInfo = pluginInterface.browserInfo;
-  var prefix = pluginInterface.prefix;
-  var keepUnprefixed = pluginInterface.keepUnprefixed;
-  var forceRun = pluginInterface.forceRun;
-  var browser = browserInfo.browser;
-  var version = browserInfo.version;
-
-  if (property === 'display' && values[value] && (forceRun || browser === 'chrome' && version < 29 && version > 20 || (browser === 'safari' || browser === 'ios_saf') && version < 9 && version > 6 || browser === 'opera' && (version == 15 || version == 16))) {
-    var newValue = forceRun ?
-    // prefix all
-    ['-webkit-box', '-moz-box', '-ms-' + value + 'box', '-webkit-' + value].join(';' + property + ':') :
-    // default
-    '-webkit-' + value;
-    return {
-      display: newValue + (keepUnprefixed ? ';' + property + ':' + value : '')
-    };
-  }
-}
-
-module.exports = exports['default'];
-},{}],117:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-exports['default'] = flexboxIE;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var alternativeValues = {
-  'space-around': 'distribute',
-  'space-between': 'justify',
-  'flex-start': 'start',
-  'flex-end': 'end',
-  flex: '-ms-flexbox',
-  'inline-flex': '-ms-inline-flexbox'
-};
-var alternativeProps = {
-  alignContent: 'msFlexLinePack',
-  alignSelf: 'msFlexItemAlign',
-  alignItems: 'msFlexAlign',
-  justifyContent: 'msFlexPack',
-  order: 'msFlexOrder',
-  flexGrow: 'msFlexPositive',
-  flexShrink: 'msFlexNegative',
-  flexBasis: 'msPreferredSize'
-};
-
-var properties = Object.keys(alternativeProps).concat('display').reduce(function (result, prop) {
-  return _extends({}, result, _defineProperty({}, prop, true));
-}, {});
-
-function flexboxIE(pluginInterface) {
-  var property = pluginInterface.property;
-  var value = pluginInterface.value;
-  var styles = pluginInterface.styles;
-  var browserInfo = pluginInterface.browserInfo;
-  var prefix = pluginInterface.prefix;
-  var keepUnprefixed = pluginInterface.keepUnprefixed;
-  var forceRun = pluginInterface.forceRun;
-  var browser = browserInfo.browser;
-  var version = browserInfo.version;
-
-  if (properties[property] && (forceRun || (browser === 'ie_mob' || browser === 'ie') && version == 10)) {
-    if (!keepUnprefixed) {
-      delete styles[property];
-    }
-
-    if (alternativeProps[property]) {
-      return _defineProperty({}, alternativeProps[property], alternativeValues[value] || value);
-    }
-    if (alternativeValues[value]) {
-      return _defineProperty({}, property, alternativeValues[value] + (keepUnprefixed ? ';' + property + ':' + value : ''));
-    }
-  }
-}
-
-module.exports = exports['default'];
-},{}],118:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-exports['default'] = flexboxOld;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var alternativeValues = {
-  'space-around': 'justify',
-  'space-between': 'justify',
-  'flex-start': 'start',
-  'flex-end': 'end',
-  'wrap-reverse': 'multiple',
-  wrap: 'multiple',
-  flex: 'box',
-  'inline-flex': 'inline-box'
-};
-
-var alternativeProps = {
-  alignItems: 'WebkitBoxAlign',
-  justifyContent: 'WebkitBoxPack',
-  flexWrap: 'WebkitBoxLines'
-};
-
-var properties = Object.keys(alternativeProps).concat(['alignContent', 'alignSelf', 'display', 'order', 'flexGrow', 'flexShrink', 'flexBasis', 'flexDirection']).reduce(function (result, prop) {
-  return _extends({}, result, _defineProperty({}, prop, true));
-}, {});
-
-function flexboxOld(pluginInterface) {
-  var property = pluginInterface.property;
-  var value = pluginInterface.value;
-  var styles = pluginInterface.styles;
-  var browserInfo = pluginInterface.browserInfo;
-  var prefix = pluginInterface.prefix;
-  var keepUnprefixed = pluginInterface.keepUnprefixed;
-  var forceRun = pluginInterface.forceRun;
-  var browser = browserInfo.browser;
-  var version = browserInfo.version;
-
-  if (properties[property] && (forceRun || browser === 'firefox' && version < 22 || browser === 'chrome' && version < 21 || (browser === 'safari' || browser === 'ios_saf') && version <= 6.1 || browser === 'android' && version < 4.4 || browser === 'and_uc')) {
-    if (!keepUnprefixed) {
-      delete styles[property];
-    }
-    if (property === 'flexDirection') {
-      return {
-        WebkitBoxOrient: value.indexOf('column') > -1 ? 'vertical' : 'horizontal',
-        WebkitBoxDirection: value.indexOf('reverse') > -1 ? 'reverse' : 'normal'
-      };
-    }
-    if (property === 'display' && alternativeValues[value]) {
-      return {
-        display: prefix.css + alternativeValues[value] + (keepUnprefixed ? ';' + property + ':' + value : '')
-      };
-    }
-    if (alternativeProps[property]) {
-      return _defineProperty({}, alternativeProps[property], alternativeValues[value] || value);
-    }
-    if (alternativeValues[value]) {
-      return _defineProperty({}, property, alternativeValues[value] + (keepUnprefixed ? ';' + property + ':' + value : ''));
-    }
-  }
-}
-
-module.exports = exports['default'];
-},{}],119:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = gradient;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var values = /linear-gradient|radial-gradient|repeating-linear-gradient|repeating-radial-gradient/;
-
-function gradient(pluginInterface) {
-  var property = pluginInterface.property;
-  var value = pluginInterface.value;
-  var browserInfo = pluginInterface.browserInfo;
-  var prefix = pluginInterface.prefix;
-  var keepUnprefixed = pluginInterface.keepUnprefixed;
-  var forceRun = pluginInterface.forceRun;
-  var browser = browserInfo.browser;
-  var version = browserInfo.version;
-
-  if (typeof value === 'string' && value.match(values) !== null && (forceRun || browser === 'firefox' && version < 16 || browser === 'chrome' && version < 26 || (browser === 'safari' || browser === 'ios_saf') && version < 7 || (browser === 'opera' || browser === 'op_mini') && version < 12.1 || browser === 'android' && version < 4.4 || browser === 'and_uc')) {
-    var newValue = forceRun ?
-    // prefix all
-    ['-webkit-', '-moz-'].map(function (prefix) {
-      return prefix + value;
-    }).join(';' + property + ':') :
-    // default
-    prefix.css + value;
-    return _defineProperty({}, property, newValue + (keepUnprefixed ? ';' + property + ':' + value : ''));
-  }
-}
-
-module.exports = exports['default'];
-},{}],120:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = sizing;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var properties = {
-  maxHeight: true,
-  maxWidth: true,
-  width: true,
-  height: true,
-  columnWidth: true,
-  minWidth: true,
-  minHeight: true
-};
-var values = {
-  'min-content': true,
-  'max-content': true,
-  'fill-available': true,
-  'fit-content': true,
-  'contain-floats': true
-};
-
-function sizing(pluginInterface) {
-  var property = pluginInterface.property;
-  var value = pluginInterface.value;
-  var browserInfo = pluginInterface.browserInfo;
-  var prefix = pluginInterface.prefix;
-  var keepUnprefixed = pluginInterface.keepUnprefixed;
-  var forceRun = pluginInterface.forceRun;
-  var browser = browserInfo.browser;
-  var version = browserInfo.version;
-
-  // This might change in the future
-  // Keep an eye on it
-  if (properties[property] && values[value]) {
-    var newValue = forceRun ?
-    // prefix all
-    ['-webkit-', '-moz-'].map(function (prefix) {
-      return prefix + value;
-    }).join(';' + property + ':') :
-    // default
-    prefix.css + value;
-    return _defineProperty({}, property, newValue + (keepUnprefixed ? ';' + property + ':' + value : ''));
-  }
-}
-
-module.exports = exports['default'];
-},{}],121:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-exports['default'] = calc;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var _utilsCamelToDashCase = require('../utils/camelToDashCase');
-
-var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
-
-var _utilsCapitalizeString = require('../utils/capitalizeString');
-
-var _utilsCapitalizeString2 = _interopRequireDefault(_utilsCapitalizeString);
-
-function calc(pluginInterface) {
-  var property = pluginInterface.property;
-  var value = pluginInterface.value;
-  var browserInfo = pluginInterface.browserInfo;
-  var prefix = pluginInterface.prefix;
-  var keepUnprefixed = pluginInterface.keepUnprefixed;
-  var forceRun = pluginInterface.forceRun;
-  var requiresPrefix = pluginInterface.requiresPrefix;
-  var browser = browserInfo.browser;
-  var version = browserInfo.version;
-
-  if (
-  // also check for already prefixed transitions
-  typeof value === 'string' && (property.toLowerCase().indexOf('transition') > -1 || property.toLowerCase().indexOf('transitionproperty') > -1)) {
-    var _ref;
-
-    var _ret = (function () {
-      var requiresPrefixDashCased = Object.keys(requiresPrefix).map(function (property) {
-        return (0, _utilsCamelToDashCase2['default'])(property);
-      });
-      var newValue = value;
-
-      // only split multi values, not cubic beziers
-      var multipleValues = newValue.split(/,(?![^()]*(?:\([^()]*\))?\))/g);
-
-      requiresPrefixDashCased.forEach(function (property) {
-        multipleValues.forEach(function (val, index) {
-          if (val.indexOf(property) > -1) {
-            var newVal = forceRun ?
-            // prefix all
-            ['-webkit-', '-moz-', '-ms-'].map(function (prefix) {
-              return val.replace(property, prefix + property);
-            }).join(',') :
-            // default
-            val.replace(property, prefix.css + property);
-            multipleValues[index] = newVal + (keepUnprefixed ? ',' + val : '');
-          }
-        });
-      });
-      var outputValue = multipleValues.join(',');
-      if (forceRun) {
-        return {
-          v: (_ref = {}, _defineProperty(_ref, 'Webkit' + (0, _utilsCapitalizeString2['default'])(property), outputValue), _defineProperty(_ref, 'Moz' + (0, _utilsCapitalizeString2['default'])(property), outputValue), _defineProperty(_ref, 'ms' + (0, _utilsCapitalizeString2['default'])(property), outputValue), _defineProperty(_ref, property, outputValue), _ref)
-        };
-      }
-      return {
-        v: _defineProperty({}, property, outputValue)
-      };
-    })();
-
-    if (typeof _ret === 'object') return _ret.v;
-  }
-}
-
-module.exports = exports['default'];
-},{"../utils/camelToDashCase":123,"../utils/capitalizeString":124}],122:[function(require,module,exports){
-arguments[4][73][0].apply(exports,arguments)
-},{"dup":73}],123:[function(require,module,exports){
-arguments[4][74][0].apply(exports,arguments)
-},{"dup":74}],124:[function(require,module,exports){
-arguments[4][75][0].apply(exports,arguments)
-},{"dup":75}],125:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _bowser = require('bowser');
-
-var _bowser2 = _interopRequireDefault(_bowser);
-
-var vendorPrefixes = {
-  Webkit: ['chrome', 'safari', 'ios', 'android', 'phantom', 'opera', 'webos', 'blackberry', 'bada', 'tizen'],
-  Moz: ['firefox', 'seamonkey', 'sailfish'],
-  ms: ['msie', 'msedge']
-};
-
-var browsers = {
-  chrome: [['chrome']],
-  safari: [['safari']],
-  firefox: [['firefox']],
-  ie: [['msie']],
-  edge: [['msedge']],
-  opera: [['opera']],
-  ios_saf: [['ios', 'mobile'], ['ios', 'tablet']],
-  ie_mob: [['windowsphone', 'mobile', 'msie'], ['windowsphone', 'tablet', 'msie'], ['windowsphone', 'mobile', 'msedge'], ['windowsphone', 'tablet', 'msedge']],
-  op_mini: [['opera', 'mobile'], ['opera', 'tablet']],
-  and_uc: [['android', 'mobile'], ['android', 'tablet']],
-  android: [['android', 'mobile'], ['android', 'tablet']]
-};
-
-/**
- * Returns an object containing prefix data associated with a browser
- * @param {string} browser - browser to find a prefix for
- */
-var getPrefixes = function getPrefixes(browser) {
-  var prefixKeys = undefined;
-  var prefix = undefined;
-  var vendors = undefined;
-  var conditions = undefined;
-  var prefixVendor = undefined;
-  var browserVendors = undefined;
-
-  // Find the prefix for this browser (if any)
-  prefixKeys = Object.keys(vendorPrefixes);
-  for (var i = 0; i < prefixKeys.length; i++) {
-    prefix = prefixKeys[i];
-
-    // Find a matching vendor
-    vendors = vendorPrefixes[prefix];
-    conditions = browsers[browser];
-
-    for (var j = 0; j < vendors.length; j++) {
-      prefixVendor = vendors[j];
-
-      for (var k = 0; k < conditions.length; k++) {
-        browserVendors = conditions[k];
-
-        if (browserVendors.indexOf(prefixVendor) !== -1) {
-          return {
-            inline: prefix,
-            css: '-' + prefix.toLowerCase() + '-'
-          };
-        }
-      }
-    }
-  }
-
-  // No prefix found for this browser
-  return { inline: '', css: '' };
-};
-
-/**
- * Uses bowser to get default browser information such as version and name
- * Evaluates bowser info and adds vendorPrefix information
- * @param {string} userAgent - userAgent that gets evaluated
- */
-
-exports['default'] = function (userAgent) {
-  if (!userAgent) {
+function isBuffer (x) {
+  if (!x || typeof x !== 'object' || typeof x.length !== 'number') return false;
+  if (typeof x.copy !== 'function' || typeof x.slice !== 'function') {
     return false;
   }
+  if (x.length > 0 && typeof x[0] !== 'number') return false;
+  return true;
+}
 
-  var info = {};
-
-  // Special user agent, return all supported prefixes
-  // instead of returning a string browser name and a prefix object
-  // we return an array of browser names and map of prefixes for each browser
-  if (userAgent === '*') {
-    // Return an array of supported browsers
-    info.browsers = Object.keys(browsers);
-
-    // Return prefixes associated by browser
-    info.prefixes = {};
-
-    // Iterate browser list, assign prefix to each
-    info.browsers.forEach(function (browser) {
-      info.prefixes[browser] = getPrefixes(browser);
-    });
-
-    return info;
+function objEquiv(a, b, opts) {
+  var i, key;
+  if (isUndefinedOrNull(a) || isUndefinedOrNull(b))
+    return false;
+  // an identical 'prototype' property.
+  if (a.prototype !== b.prototype) return false;
+  //~~~I've managed to break Object.keys through screwy arguments passing.
+  //   Converting to array solves the problem.
+  if (isArguments(a)) {
+    if (!isArguments(b)) {
+      return false;
+    }
+    a = pSlice.call(a);
+    b = pSlice.call(b);
+    return deepEqual(a, b, opts);
   }
-
-  // Normal user agent, detect browser
-  info = _bowser2['default']._detect(userAgent);
-
-  Object.keys(vendorPrefixes).forEach(function (prefix) {
-    vendorPrefixes[prefix].forEach(function (browser) {
-      if (info[browser]) {
-        info.prefix = {
-          inline: prefix,
-          css: '-' + prefix.toLowerCase() + '-'
-        };
-      }
-    });
-  });
-
-  var name = '';
-  Object.keys(browsers).forEach(function (browser) {
-    browsers[browser].forEach(function (condition) {
-      var match = 0;
-      condition.forEach(function (single) {
-        if (info[single]) {
-          match += 1;
-        }
-      });
-      if (condition.length === match) {
-        name = browser;
-      }
-    });
-  });
-
-  info.browser = name;
-  // For cordova IOS 8 the version is missing, set truncated osversion to prevent NaN
-  info.version = info.version ? parseFloat(info.version) : parseInt(parseFloat(info.osversion), 10);
-
-  // seperate native android chrome
-  // https://github.com/rofrischmann/inline-style-prefixer/issues/45
-  if (info.browser === 'android' && info.chrome && info.version > 37) {
-    info.browser = 'and_chr';
+  if (isBuffer(a)) {
+    if (!isBuffer(b)) {
+      return false;
+    }
+    if (a.length !== b.length) return false;
+    for (i = 0; i < a.length; i++) {
+      if (a[i] !== b[i]) return false;
+    }
+    return true;
   }
-  info.version = parseFloat(info.version);
-  info.osversion = parseFloat(info.osversion);
-  // For android < 4.4 we want to check the osversion
-  // not the chrome version, see issue #26
-  // https://github.com/rofrischmann/inline-style-prefixer/issues/26
-  if (info.browser === 'android' && info.osversion < 5) {
-    info.version = info.osversion;
+  try {
+    var ka = objectKeys(a),
+        kb = objectKeys(b);
+  } catch (e) {//happens when one is a string literal and the other isn't
+    return false;
   }
+  // having the same number of owned properties (keys incorporates
+  // hasOwnProperty)
+  if (ka.length != kb.length)
+    return false;
+  //the same set of keys (although not necessarily the same order),
+  ka.sort();
+  kb.sort();
+  //~~~cheap key test
+  for (i = ka.length - 1; i >= 0; i--) {
+    if (ka[i] != kb[i])
+      return false;
+  }
+  //equivalent values for every corresponding key, and
+  //~~~possibly expensive deep test
+  for (i = ka.length - 1; i >= 0; i--) {
+    key = ka[i];
+    if (!deepEqual(a[key], b[key], opts)) return false;
+  }
+  return typeof a === typeof b;
+}
 
-  return info;
+},{"./lib/is_arguments.js":18,"./lib/keys.js":19}],18:[function(require,module,exports){
+var supportsArgumentsClass = (function(){
+  return Object.prototype.toString.call(arguments)
+})() == '[object Arguments]';
+
+exports = module.exports = supportsArgumentsClass ? supported : unsupported;
+
+exports.supported = supported;
+function supported(object) {
+  return Object.prototype.toString.call(object) == '[object Arguments]';
 };
 
-module.exports = exports['default'];
-},{"bowser":128}],126:[function(require,module,exports){
-arguments[4][77][0].apply(exports,arguments)
-},{"dup":77}],127:[function(require,module,exports){
-(function (process){
-// only throw warnings if devmode is enabled
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-exports['default'] = function () {
-  if (process.env.NODE_ENV !== 'production') {
-    console.warn.apply(console, arguments);
-  }
+exports.unsupported = unsupported;
+function unsupported(object){
+  return object &&
+    typeof object == 'object' &&
+    typeof object.length == 'number' &&
+    Object.prototype.hasOwnProperty.call(object, 'callee') &&
+    !Object.prototype.propertyIsEnumerable.call(object, 'callee') ||
+    false;
 };
 
-module.exports = exports['default'];
-}).call(this,require('_process'))
-},{"_process":16}],128:[function(require,module,exports){
-arguments[4][79][0].apply(exports,arguments)
-},{"dup":79}],129:[function(require,module,exports){
-arguments[4][35][0].apply(exports,arguments)
-},{"./append-px-if-needed":130,"./map-object":142,"dup":35}],130:[function(require,module,exports){
-arguments[4][36][0].apply(exports,arguments)
-},{"dup":36}],131:[function(require,module,exports){
-arguments[4][37][0].apply(exports,arguments)
-},{"dup":37}],132:[function(require,module,exports){
-arguments[4][38][0].apply(exports,arguments)
-},{"../enhancer":136,"../style-keeper":155,"./style-sheet":133,"dup":38,"react":"react"}],133:[function(require,module,exports){
-arguments[4][39][0].apply(exports,arguments)
-},{"../style-keeper":155,"dup":39,"react":"react"}],134:[function(require,module,exports){
-arguments[4][40][0].apply(exports,arguments)
-},{"../css-rule-set-to-string":135,"dup":40,"react":"react"}],135:[function(require,module,exports){
-arguments[4][41][0].apply(exports,arguments)
-},{"./append-px-if-needed":130,"./camel-case-props-to-dash-case":131,"./map-object":142,"./prefixer":153,"dup":41}],136:[function(require,module,exports){
-arguments[4][42][0].apply(exports,arguments)
-},{"./resolve-styles.js":154,"./style-keeper.js":155,"_process":16,"dup":42,"react":"react"}],137:[function(require,module,exports){
-arguments[4][43][0].apply(exports,arguments)
-},{"dup":43}],138:[function(require,module,exports){
-arguments[4][44][0].apply(exports,arguments)
-},{"./get-state-key":137,"dup":44}],139:[function(require,module,exports){
-arguments[4][45][0].apply(exports,arguments)
-},{"dup":45}],140:[function(require,module,exports){
-arguments[4][46][0].apply(exports,arguments)
-},{"./components/style":134,"./components/style-root":132,"./enhancer":136,"./get-state":138,"./keyframes":141,"./plugins":145,"./resolve-styles":154,"_process":16,"dup":46}],141:[function(require,module,exports){
-arguments[4][47][0].apply(exports,arguments)
-},{"./css-rule-set-to-string":135,"./hash":139,"./prefixer":153,"dup":47}],142:[function(require,module,exports){
-arguments[4][48][0].apply(exports,arguments)
-},{"dup":48}],143:[function(require,module,exports){
-arguments[4][49][0].apply(exports,arguments)
-},{"dup":49}],144:[function(require,module,exports){
-arguments[4][50][0].apply(exports,arguments)
-},{"_process":16,"dup":50}],145:[function(require,module,exports){
-arguments[4][51][0].apply(exports,arguments)
-},{"./check-props-plugin":144,"./keyframes-plugin":146,"./merge-style-array-plugin":147,"./prefix-plugin":149,"./resolve-interaction-styles-plugin":150,"./resolve-media-queries-plugin":151,"./visited-plugin":152,"dup":51}],146:[function(require,module,exports){
-arguments[4][52][0].apply(exports,arguments)
-},{"dup":52}],147:[function(require,module,exports){
-arguments[4][53][0].apply(exports,arguments)
-},{"dup":53}],148:[function(require,module,exports){
-arguments[4][54][0].apply(exports,arguments)
-},{"dup":54}],149:[function(require,module,exports){
-arguments[4][55][0].apply(exports,arguments)
-},{"../prefixer":153,"dup":55}],150:[function(require,module,exports){
-arguments[4][56][0].apply(exports,arguments)
-},{"./mouse-up-listener":148,"dup":56}],151:[function(require,module,exports){
-arguments[4][57][0].apply(exports,arguments)
-},{"dup":57}],152:[function(require,module,exports){
-arguments[4][58][0].apply(exports,arguments)
-},{"dup":58}],153:[function(require,module,exports){
-arguments[4][59][0].apply(exports,arguments)
-},{"_process":16,"dup":59,"inline-style-prefixer":157}],154:[function(require,module,exports){
-arguments[4][60][0].apply(exports,arguments)
-},{"./append-important-to-each-value":129,"./css-rule-set-to-string":135,"./get-state":138,"./get-state-key":137,"./hash":139,"./merge-styles":143,"./plugins/":145,"_process":16,"dup":60,"exenv":156,"react":"react"}],155:[function(require,module,exports){
-arguments[4][61][0].apply(exports,arguments)
-},{"dup":61}],156:[function(require,module,exports){
-arguments[4][62][0].apply(exports,arguments)
-},{"dup":62}],157:[function(require,module,exports){
-arguments[4][63][0].apply(exports,arguments)
-},{"./plugins/calc":158,"./plugins/cursor":159,"./plugins/flex":160,"./plugins/flexboxIE":161,"./plugins/flexboxOld":162,"./plugins/gradient":163,"./plugins/sizing":164,"./plugins/transition":165,"./prefixProps":166,"./utils/assign":167,"./utils/capitalizeString":169,"./utils/getBrowserInformation":170,"./utils/getPrefixedKeyframes":171,"dup":63,"inline-style-prefix-all":182}],158:[function(require,module,exports){
-arguments[4][64][0].apply(exports,arguments)
-},{"../utils/camelToDashCase":168,"dup":64}],159:[function(require,module,exports){
-arguments[4][65][0].apply(exports,arguments)
-},{"../utils/camelToDashCase":168,"dup":65}],160:[function(require,module,exports){
-arguments[4][66][0].apply(exports,arguments)
-},{"../utils/camelToDashCase":168,"dup":66}],161:[function(require,module,exports){
-arguments[4][67][0].apply(exports,arguments)
-},{"../utils/camelToDashCase":168,"dup":67}],162:[function(require,module,exports){
-arguments[4][68][0].apply(exports,arguments)
-},{"../utils/camelToDashCase":168,"dup":68}],163:[function(require,module,exports){
-arguments[4][69][0].apply(exports,arguments)
-},{"../utils/camelToDashCase":168,"dup":69}],164:[function(require,module,exports){
-arguments[4][70][0].apply(exports,arguments)
-},{"../utils/camelToDashCase":168,"dup":70}],165:[function(require,module,exports){
-arguments[4][71][0].apply(exports,arguments)
-},{"../utils/camelToDashCase":168,"../utils/capitalizeString":169,"../utils/unprefixProperty":172,"dup":71}],166:[function(require,module,exports){
-arguments[4][72][0].apply(exports,arguments)
-},{"dup":72}],167:[function(require,module,exports){
-arguments[4][73][0].apply(exports,arguments)
-},{"dup":73}],168:[function(require,module,exports){
-arguments[4][74][0].apply(exports,arguments)
-},{"dup":74}],169:[function(require,module,exports){
-arguments[4][75][0].apply(exports,arguments)
-},{"dup":75}],170:[function(require,module,exports){
-arguments[4][76][0].apply(exports,arguments)
-},{"bowser":173,"dup":76}],171:[function(require,module,exports){
-arguments[4][77][0].apply(exports,arguments)
-},{"dup":77}],172:[function(require,module,exports){
-arguments[4][78][0].apply(exports,arguments)
-},{"dup":78}],173:[function(require,module,exports){
-arguments[4][79][0].apply(exports,arguments)
-},{"dup":79}],174:[function(require,module,exports){
-arguments[4][80][0].apply(exports,arguments)
-},{"../utils/isPrefixedValue":187,"../utils/joinPrefixedRules":188,"dup":80}],175:[function(require,module,exports){
-arguments[4][81][0].apply(exports,arguments)
-},{"../utils/joinPrefixedRules":188,"dup":81}],176:[function(require,module,exports){
-arguments[4][82][0].apply(exports,arguments)
-},{"../utils/camelToDashCase":185,"dup":82}],177:[function(require,module,exports){
-arguments[4][83][0].apply(exports,arguments)
-},{"dup":83}],178:[function(require,module,exports){
-arguments[4][84][0].apply(exports,arguments)
-},{"../utils/camelToDashCase":185,"dup":84}],179:[function(require,module,exports){
-arguments[4][85][0].apply(exports,arguments)
-},{"../utils/isPrefixedValue":187,"../utils/joinPrefixedRules":188,"dup":85}],180:[function(require,module,exports){
-arguments[4][86][0].apply(exports,arguments)
-},{"../utils/joinPrefixedRules":188,"dup":86}],181:[function(require,module,exports){
-arguments[4][87][0].apply(exports,arguments)
-},{"../prefixProps":183,"../utils/camelToDashCase":185,"../utils/capitalizeString":186,"../utils/isPrefixedValue":187,"dup":87}],182:[function(require,module,exports){
-arguments[4][88][0].apply(exports,arguments)
-},{"./plugins/calc":174,"./plugins/cursor":175,"./plugins/flex":176,"./plugins/flexboxIE":177,"./plugins/flexboxOld":178,"./plugins/gradient":179,"./plugins/sizing":180,"./plugins/transition":181,"./prefixProps":183,"./utils/assign":184,"./utils/capitalizeString":186,"dup":88}],183:[function(require,module,exports){
-arguments[4][89][0].apply(exports,arguments)
-},{"dup":89}],184:[function(require,module,exports){
-arguments[4][90][0].apply(exports,arguments)
-},{"dup":90}],185:[function(require,module,exports){
-arguments[4][74][0].apply(exports,arguments)
-},{"dup":74}],186:[function(require,module,exports){
-arguments[4][75][0].apply(exports,arguments)
-},{"dup":75}],187:[function(require,module,exports){
-arguments[4][93][0].apply(exports,arguments)
-},{"dup":93}],188:[function(require,module,exports){
-arguments[4][94][0].apply(exports,arguments)
-},{"./camelToDashCase":185,"dup":94}],189:[function(require,module,exports){
-// Snap.svg 0.4.0
-// 
-// Copyright (c) 2013 – 2015 Adobe Systems Incorporated. All rights reserved.
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-// http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// 
-// build: 2015-04-07
+},{}],19:[function(require,module,exports){
+exports = module.exports = typeof Object.keys === 'function'
+  ? Object.keys : shim;
 
+exports.shim = shim;
+function shim (obj) {
+  var keys = [];
+  for (var key in obj) keys.push(key);
+  return keys;
+}
+
+},{}],20:[function(require,module,exports){
 // Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -8406,32 +2534,9010 @@ arguments[4][94][0].apply(exports,arguments)
     (typeof module != "undefined" && module.exports) ? (module.exports = eve) : (typeof define === "function" && define.amd ? (define("eve", [], function() { return eve; })) : (glob.eve = eve));
 })(this);
 
-(function (glob, factory) {
-    // AMD support
-    if (typeof define == "function" && define.amd) {
-        // Define as an anonymous module
-        define(["eve"], function (eve) {
-            return factory(glob, eve);
-        });
-    } else if (typeof exports != 'undefined') {
-        // Next for Node.js or CommonJS
-        var eve = require('eve');
-        module.exports = factory(glob, eve);
+},{}],21:[function(require,module,exports){
+/*!
+  Copyright (c) 2015 Jed Watson.
+  Based on code that is Copyright 2013-2015, Facebook, Inc.
+  All rights reserved.
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var canUseDOM = !!(
+		typeof window !== 'undefined' &&
+		window.document &&
+		window.document.createElement
+	);
+
+	var ExecutionEnvironment = {
+
+		canUseDOM: canUseDOM,
+
+		canUseWorkers: typeof Worker !== 'undefined',
+
+		canUseEventListeners:
+			canUseDOM && !!(window.addEventListener || window.attachEvent),
+
+		canUseViewport: canUseDOM && !!window.screen
+
+	};
+
+	if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
+		define(function () {
+			return ExecutionEnvironment;
+		});
+	} else if (typeof module !== 'undefined' && module.exports) {
+		module.exports = ExecutionEnvironment;
+	} else {
+		window.ExecutionEnvironment = ExecutionEnvironment;
+	}
+
+}());
+
+},{}],22:[function(require,module,exports){
+/**
+ * Indicates that navigation was caused by a call to history.push.
+ */
+'use strict';
+
+exports.__esModule = true;
+var PUSH = 'PUSH';
+
+exports.PUSH = PUSH;
+/**
+ * Indicates that navigation was caused by a call to history.replace.
+ */
+var REPLACE = 'REPLACE';
+
+exports.REPLACE = REPLACE;
+/**
+ * Indicates that navigation was caused by some other action such
+ * as using a browser's back/forward buttons and/or manually manipulating
+ * the URL in a browser's location bar. This is the default.
+ *
+ * See https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate
+ * for more information.
+ */
+var POP = 'POP';
+
+exports.POP = POP;
+exports['default'] = {
+  PUSH: PUSH,
+  REPLACE: REPLACE,
+  POP: POP
+};
+},{}],23:[function(require,module,exports){
+"use strict";
+
+exports.__esModule = true;
+exports.loopAsync = loopAsync;
+
+function loopAsync(turns, work, callback) {
+  var currentTurn = 0;
+  var isDone = false;
+
+  function done() {
+    isDone = true;
+    callback.apply(this, arguments);
+  }
+
+  function next() {
+    if (isDone) return;
+
+    if (currentTurn < turns) {
+      work.call(this, currentTurn++, next, done);
     } else {
-        // Browser globals (glob is window)
-        // Snap adds itself to window
-        factory(glob, glob.eve);
+      done.apply(this, arguments);
     }
-}(window || this, function (window, eve) {
+  }
+
+  next();
+}
+},{}],24:[function(require,module,exports){
+(function (process){
+/*eslint-disable no-empty */
+'use strict';
+
+exports.__esModule = true;
+exports.saveState = saveState;
+exports.readState = readState;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _warning = require('warning');
+
+var _warning2 = _interopRequireDefault(_warning);
+
+var KeyPrefix = '@@History/';
+var QuotaExceededError = 'QuotaExceededError';
+var SecurityError = 'SecurityError';
+
+function createKey(key) {
+  return KeyPrefix + key;
+}
+
+function saveState(key, state) {
+  try {
+    window.sessionStorage.setItem(createKey(key), JSON.stringify(state));
+  } catch (error) {
+    if (error.name === SecurityError) {
+      // Blocking cookies in Chrome/Firefox/Safari throws SecurityError on any
+      // attempt to access window.sessionStorage.
+      process.env.NODE_ENV !== 'production' ? _warning2['default'](false, '[history] Unable to save state; sessionStorage is not available due to security settings') : undefined;
+
+      return;
+    }
+
+    if (error.name === QuotaExceededError && window.sessionStorage.length === 0) {
+      // Safari "private mode" throws QuotaExceededError.
+      process.env.NODE_ENV !== 'production' ? _warning2['default'](false, '[history] Unable to save state; sessionStorage is not available in Safari private mode') : undefined;
+
+      return;
+    }
+
+    throw error;
+  }
+}
+
+function readState(key) {
+  var json = undefined;
+  try {
+    json = window.sessionStorage.getItem(createKey(key));
+  } catch (error) {
+    if (error.name === SecurityError) {
+      // Blocking cookies in Chrome/Firefox/Safari throws SecurityError on any
+      // attempt to access window.sessionStorage.
+      process.env.NODE_ENV !== 'production' ? _warning2['default'](false, '[history] Unable to read state; sessionStorage is not available due to security settings') : undefined;
+
+      return null;
+    }
+  }
+
+  if (json) {
+    try {
+      return JSON.parse(json);
+    } catch (error) {
+      // Ignore invalid JSON.
+    }
+  }
+
+  return null;
+}
+}).call(this,require('_process'))
+},{"_process":69,"warning":187}],25:[function(require,module,exports){
+'use strict';
+
+exports.__esModule = true;
+exports.addEventListener = addEventListener;
+exports.removeEventListener = removeEventListener;
+exports.getHashPath = getHashPath;
+exports.replaceHashPath = replaceHashPath;
+exports.getWindowPath = getWindowPath;
+exports.go = go;
+exports.getUserConfirmation = getUserConfirmation;
+exports.supportsHistory = supportsHistory;
+exports.supportsGoWithoutReloadUsingHash = supportsGoWithoutReloadUsingHash;
+
+function addEventListener(node, event, listener) {
+  if (node.addEventListener) {
+    node.addEventListener(event, listener, false);
+  } else {
+    node.attachEvent('on' + event, listener);
+  }
+}
+
+function removeEventListener(node, event, listener) {
+  if (node.removeEventListener) {
+    node.removeEventListener(event, listener, false);
+  } else {
+    node.detachEvent('on' + event, listener);
+  }
+}
+
+function getHashPath() {
+  // We can't use window.location.hash here because it's not
+  // consistent across browsers - Firefox will pre-decode it!
+  return window.location.href.split('#')[1] || '';
+}
+
+function replaceHashPath(path) {
+  window.location.replace(window.location.pathname + window.location.search + '#' + path);
+}
+
+function getWindowPath() {
+  return window.location.pathname + window.location.search + window.location.hash;
+}
+
+function go(n) {
+  if (n) window.history.go(n);
+}
+
+function getUserConfirmation(message, callback) {
+  callback(window.confirm(message));
+}
+
+/**
+ * Returns true if the HTML5 history API is supported. Taken from Modernizr.
+ *
+ * https://github.com/Modernizr/Modernizr/blob/master/LICENSE
+ * https://github.com/Modernizr/Modernizr/blob/master/feature-detects/history.js
+ * changed to avoid false negatives for Windows Phones: https://github.com/rackt/react-router/issues/586
+ */
+
+function supportsHistory() {
+  var ua = navigator.userAgent;
+  if ((ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) && ua.indexOf('Mobile Safari') !== -1 && ua.indexOf('Chrome') === -1 && ua.indexOf('Windows Phone') === -1) {
+    return false;
+  }
+  // FIXME: Work around our browser history not working correctly on Chrome
+  // iOS: https://github.com/rackt/react-router/issues/2565
+  if (ua.indexOf('CriOS') !== -1) {
+    return false;
+  }
+  return window.history && 'pushState' in window.history;
+}
+
+/**
+ * Returns false if using go(n) with hash history causes a full page reload.
+ */
+
+function supportsGoWithoutReloadUsingHash() {
+  var ua = navigator.userAgent;
+  return ua.indexOf('Firefox') === -1;
+}
+},{}],26:[function(require,module,exports){
+'use strict';
+
+exports.__esModule = true;
+var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+exports.canUseDOM = canUseDOM;
+},{}],27:[function(require,module,exports){
+(function (process){
+'use strict';
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _invariant = require('invariant');
+
+var _invariant2 = _interopRequireDefault(_invariant);
+
+var _Actions = require('./Actions');
+
+var _ExecutionEnvironment = require('./ExecutionEnvironment');
+
+var _DOMUtils = require('./DOMUtils');
+
+var _DOMStateStorage = require('./DOMStateStorage');
+
+var _createDOMHistory = require('./createDOMHistory');
+
+var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
+
+var _parsePath = require('./parsePath');
+
+var _parsePath2 = _interopRequireDefault(_parsePath);
+
+/**
+ * Creates and returns a history object that uses HTML5's history API
+ * (pushState, replaceState, and the popstate event) to manage history.
+ * This is the recommended method of managing history in browsers because
+ * it provides the cleanest URLs.
+ *
+ * Note: In browsers that do not support the HTML5 history API full
+ * page reloads will be used to preserve URLs.
+ */
+function createBrowserHistory() {
+  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
+  !_ExecutionEnvironment.canUseDOM ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'Browser history needs a DOM') : _invariant2['default'](false) : undefined;
+
+  var forceRefresh = options.forceRefresh;
+
+  var isSupported = _DOMUtils.supportsHistory();
+  var useRefresh = !isSupported || forceRefresh;
+
+  function getCurrentLocation(historyState) {
+    historyState = historyState || window.history.state || {};
+
+    var path = _DOMUtils.getWindowPath();
+    var _historyState = historyState;
+    var key = _historyState.key;
+
+    var state = undefined;
+    if (key) {
+      state = _DOMStateStorage.readState(key);
+    } else {
+      state = null;
+      key = history.createKey();
+
+      if (isSupported) window.history.replaceState(_extends({}, historyState, { key: key }), null, path);
+    }
+
+    var location = _parsePath2['default'](path);
+
+    return history.createLocation(_extends({}, location, { state: state }), undefined, key);
+  }
+
+  function startPopStateListener(_ref) {
+    var transitionTo = _ref.transitionTo;
+
+    function popStateListener(event) {
+      if (event.state === undefined) return; // Ignore extraneous popstate events in WebKit.
+
+      transitionTo(getCurrentLocation(event.state));
+    }
+
+    _DOMUtils.addEventListener(window, 'popstate', popStateListener);
+
+    return function () {
+      _DOMUtils.removeEventListener(window, 'popstate', popStateListener);
+    };
+  }
+
+  function finishTransition(location) {
+    var basename = location.basename;
+    var pathname = location.pathname;
+    var search = location.search;
+    var hash = location.hash;
+    var state = location.state;
+    var action = location.action;
+    var key = location.key;
+
+    if (action === _Actions.POP) return; // Nothing to do.
+
+    _DOMStateStorage.saveState(key, state);
+
+    var path = (basename || '') + pathname + search + hash;
+    var historyState = {
+      key: key
+    };
+
+    if (action === _Actions.PUSH) {
+      if (useRefresh) {
+        window.location.href = path;
+        return false; // Prevent location update.
+      } else {
+          window.history.pushState(historyState, null, path);
+        }
+    } else {
+      // REPLACE
+      if (useRefresh) {
+        window.location.replace(path);
+        return false; // Prevent location update.
+      } else {
+          window.history.replaceState(historyState, null, path);
+        }
+    }
+  }
+
+  var history = _createDOMHistory2['default'](_extends({}, options, {
+    getCurrentLocation: getCurrentLocation,
+    finishTransition: finishTransition,
+    saveState: _DOMStateStorage.saveState
+  }));
+
+  var listenerCount = 0,
+      stopPopStateListener = undefined;
+
+  function listenBefore(listener) {
+    if (++listenerCount === 1) stopPopStateListener = startPopStateListener(history);
+
+    var unlisten = history.listenBefore(listener);
+
+    return function () {
+      unlisten();
+
+      if (--listenerCount === 0) stopPopStateListener();
+    };
+  }
+
+  function listen(listener) {
+    if (++listenerCount === 1) stopPopStateListener = startPopStateListener(history);
+
+    var unlisten = history.listen(listener);
+
+    return function () {
+      unlisten();
+
+      if (--listenerCount === 0) stopPopStateListener();
+    };
+  }
+
+  // deprecated
+  function registerTransitionHook(hook) {
+    if (++listenerCount === 1) stopPopStateListener = startPopStateListener(history);
+
+    history.registerTransitionHook(hook);
+  }
+
+  // deprecated
+  function unregisterTransitionHook(hook) {
+    history.unregisterTransitionHook(hook);
+
+    if (--listenerCount === 0) stopPopStateListener();
+  }
+
+  return _extends({}, history, {
+    listenBefore: listenBefore,
+    listen: listen,
+    registerTransitionHook: registerTransitionHook,
+    unregisterTransitionHook: unregisterTransitionHook
+  });
+}
+
+exports['default'] = createBrowserHistory;
+module.exports = exports['default'];
+}).call(this,require('_process'))
+},{"./Actions":22,"./DOMStateStorage":24,"./DOMUtils":25,"./ExecutionEnvironment":26,"./createDOMHistory":28,"./parsePath":33,"_process":69,"invariant":67}],28:[function(require,module,exports){
+(function (process){
+'use strict';
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _invariant = require('invariant');
+
+var _invariant2 = _interopRequireDefault(_invariant);
+
+var _ExecutionEnvironment = require('./ExecutionEnvironment');
+
+var _DOMUtils = require('./DOMUtils');
+
+var _createHistory = require('./createHistory');
+
+var _createHistory2 = _interopRequireDefault(_createHistory);
+
+function createDOMHistory(options) {
+  var history = _createHistory2['default'](_extends({
+    getUserConfirmation: _DOMUtils.getUserConfirmation
+  }, options, {
+    go: _DOMUtils.go
+  }));
+
+  function listen(listener) {
+    !_ExecutionEnvironment.canUseDOM ? process.env.NODE_ENV !== 'production' ? _invariant2['default'](false, 'DOM history needs a DOM') : _invariant2['default'](false) : undefined;
+
+    return history.listen(listener);
+  }
+
+  return _extends({}, history, {
+    listen: listen
+  });
+}
+
+exports['default'] = createDOMHistory;
+module.exports = exports['default'];
+}).call(this,require('_process'))
+},{"./DOMUtils":25,"./ExecutionEnvironment":26,"./createHistory":29,"_process":69,"invariant":67}],29:[function(require,module,exports){
+//import warning from 'warning'
+'use strict';
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _deepEqual = require('deep-equal');
+
+var _deepEqual2 = _interopRequireDefault(_deepEqual);
+
+var _AsyncUtils = require('./AsyncUtils');
+
+var _Actions = require('./Actions');
+
+var _createLocation2 = require('./createLocation');
+
+var _createLocation3 = _interopRequireDefault(_createLocation2);
+
+var _runTransitionHook = require('./runTransitionHook');
+
+var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
+
+var _parsePath = require('./parsePath');
+
+var _parsePath2 = _interopRequireDefault(_parsePath);
+
+var _deprecate = require('./deprecate');
+
+var _deprecate2 = _interopRequireDefault(_deprecate);
+
+function createRandomKey(length) {
+  return Math.random().toString(36).substr(2, length);
+}
+
+function locationsAreEqual(a, b) {
+  return a.pathname === b.pathname && a.search === b.search &&
+  //a.action === b.action && // Different action !== location change.
+  a.key === b.key && _deepEqual2['default'](a.state, b.state);
+}
+
+var DefaultKeyLength = 6;
+
+function createHistory() {
+  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+  var getCurrentLocation = options.getCurrentLocation;
+  var finishTransition = options.finishTransition;
+  var saveState = options.saveState;
+  var go = options.go;
+  var keyLength = options.keyLength;
+  var getUserConfirmation = options.getUserConfirmation;
+
+  if (typeof keyLength !== 'number') keyLength = DefaultKeyLength;
+
+  var transitionHooks = [];
+
+  function listenBefore(hook) {
+    transitionHooks.push(hook);
+
+    return function () {
+      transitionHooks = transitionHooks.filter(function (item) {
+        return item !== hook;
+      });
+    };
+  }
+
+  var allKeys = [];
+  var changeListeners = [];
+  var location = undefined;
+
+  function getCurrent() {
+    if (pendingLocation && pendingLocation.action === _Actions.POP) {
+      return allKeys.indexOf(pendingLocation.key);
+    } else if (location) {
+      return allKeys.indexOf(location.key);
+    } else {
+      return -1;
+    }
+  }
+
+  function updateLocation(newLocation) {
+    var current = getCurrent();
+
+    location = newLocation;
+
+    if (location.action === _Actions.PUSH) {
+      allKeys = [].concat(allKeys.slice(0, current + 1), [location.key]);
+    } else if (location.action === _Actions.REPLACE) {
+      allKeys[current] = location.key;
+    }
+
+    changeListeners.forEach(function (listener) {
+      listener(location);
+    });
+  }
+
+  function listen(listener) {
+    changeListeners.push(listener);
+
+    if (location) {
+      listener(location);
+    } else {
+      var _location = getCurrentLocation();
+      allKeys = [_location.key];
+      updateLocation(_location);
+    }
+
+    return function () {
+      changeListeners = changeListeners.filter(function (item) {
+        return item !== listener;
+      });
+    };
+  }
+
+  function confirmTransitionTo(location, callback) {
+    _AsyncUtils.loopAsync(transitionHooks.length, function (index, next, done) {
+      _runTransitionHook2['default'](transitionHooks[index], location, function (result) {
+        if (result != null) {
+          done(result);
+        } else {
+          next();
+        }
+      });
+    }, function (message) {
+      if (getUserConfirmation && typeof message === 'string') {
+        getUserConfirmation(message, function (ok) {
+          callback(ok !== false);
+        });
+      } else {
+        callback(message !== false);
+      }
+    });
+  }
+
+  var pendingLocation = undefined;
+
+  function transitionTo(nextLocation) {
+    if (location && locationsAreEqual(location, nextLocation)) return; // Nothing to do.
+
+    pendingLocation = nextLocation;
+
+    confirmTransitionTo(nextLocation, function (ok) {
+      if (pendingLocation !== nextLocation) return; // Transition was interrupted.
+
+      if (ok) {
+        // treat PUSH to current path like REPLACE to be consistent with browsers
+        if (nextLocation.action === _Actions.PUSH) {
+          var prevPath = createPath(location);
+          var nextPath = createPath(nextLocation);
+
+          if (nextPath === prevPath) nextLocation.action = _Actions.REPLACE;
+        }
+
+        if (finishTransition(nextLocation) !== false) updateLocation(nextLocation);
+      } else if (location && nextLocation.action === _Actions.POP) {
+        var prevIndex = allKeys.indexOf(location.key);
+        var nextIndex = allKeys.indexOf(nextLocation.key);
+
+        if (prevIndex !== -1 && nextIndex !== -1) go(prevIndex - nextIndex); // Restore the URL.
+      }
+    });
+  }
+
+  function push(location) {
+    transitionTo(createLocation(location, _Actions.PUSH, createKey()));
+  }
+
+  function replace(location) {
+    transitionTo(createLocation(location, _Actions.REPLACE, createKey()));
+  }
+
+  function goBack() {
+    go(-1);
+  }
+
+  function goForward() {
+    go(1);
+  }
+
+  function createKey() {
+    return createRandomKey(keyLength);
+  }
+
+  function createPath(location) {
+    if (location == null || typeof location === 'string') return location;
+
+    var pathname = location.pathname;
+    var search = location.search;
+    var hash = location.hash;
+
+    var result = pathname;
+
+    if (search) result += search;
+
+    if (hash) result += hash;
+
+    return result;
+  }
+
+  function createHref(location) {
+    return createPath(location);
+  }
+
+  function createLocation(location, action) {
+    var key = arguments.length <= 2 || arguments[2] === undefined ? createKey() : arguments[2];
+
+    if (typeof action === 'object') {
+      //warning(
+      //  false,
+      //  'The state (2nd) argument to history.createLocation is deprecated; use a ' +
+      //  'location descriptor instead'
+      //)
+
+      if (typeof location === 'string') location = _parsePath2['default'](location);
+
+      location = _extends({}, location, { state: action });
+
+      action = key;
+      key = arguments[3] || createKey();
+    }
+
+    return _createLocation3['default'](location, action, key);
+  }
+
+  // deprecated
+  function setState(state) {
+    if (location) {
+      updateLocationState(location, state);
+      updateLocation(location);
+    } else {
+      updateLocationState(getCurrentLocation(), state);
+    }
+  }
+
+  function updateLocationState(location, state) {
+    location.state = _extends({}, location.state, state);
+    saveState(location.key, location.state);
+  }
+
+  // deprecated
+  function registerTransitionHook(hook) {
+    if (transitionHooks.indexOf(hook) === -1) transitionHooks.push(hook);
+  }
+
+  // deprecated
+  function unregisterTransitionHook(hook) {
+    transitionHooks = transitionHooks.filter(function (item) {
+      return item !== hook;
+    });
+  }
+
+  // deprecated
+  function pushState(state, path) {
+    if (typeof path === 'string') path = _parsePath2['default'](path);
+
+    push(_extends({ state: state }, path));
+  }
+
+  // deprecated
+  function replaceState(state, path) {
+    if (typeof path === 'string') path = _parsePath2['default'](path);
+
+    replace(_extends({ state: state }, path));
+  }
+
+  return {
+    listenBefore: listenBefore,
+    listen: listen,
+    transitionTo: transitionTo,
+    push: push,
+    replace: replace,
+    go: go,
+    goBack: goBack,
+    goForward: goForward,
+    createKey: createKey,
+    createPath: createPath,
+    createHref: createHref,
+    createLocation: createLocation,
+
+    setState: _deprecate2['default'](setState, 'setState is deprecated; use location.key to save state instead'),
+    registerTransitionHook: _deprecate2['default'](registerTransitionHook, 'registerTransitionHook is deprecated; use listenBefore instead'),
+    unregisterTransitionHook: _deprecate2['default'](unregisterTransitionHook, 'unregisterTransitionHook is deprecated; use the callback returned from listenBefore instead'),
+    pushState: _deprecate2['default'](pushState, 'pushState is deprecated; use push instead'),
+    replaceState: _deprecate2['default'](replaceState, 'replaceState is deprecated; use replace instead')
+  };
+}
+
+exports['default'] = createHistory;
+module.exports = exports['default'];
+},{"./Actions":22,"./AsyncUtils":23,"./createLocation":30,"./deprecate":31,"./parsePath":33,"./runTransitionHook":34,"deep-equal":17}],30:[function(require,module,exports){
+//import warning from 'warning'
+'use strict';
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _Actions = require('./Actions');
+
+var _parsePath = require('./parsePath');
+
+var _parsePath2 = _interopRequireDefault(_parsePath);
+
+function createLocation() {
+  var location = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
+  var action = arguments.length <= 1 || arguments[1] === undefined ? _Actions.POP : arguments[1];
+  var key = arguments.length <= 2 || arguments[2] === undefined ? null : arguments[2];
+
+  var _fourthArg = arguments.length <= 3 || arguments[3] === undefined ? null : arguments[3];
+
+  if (typeof location === 'string') location = _parsePath2['default'](location);
+
+  if (typeof action === 'object') {
+    //warning(
+    //  false,
+    //  'The state (2nd) argument to createLocation is deprecated; use a ' +
+    //  'location descriptor instead'
+    //)
+
+    location = _extends({}, location, { state: action });
+
+    action = key || _Actions.POP;
+    key = _fourthArg;
+  }
+
+  var pathname = location.pathname || '/';
+  var search = location.search || '';
+  var hash = location.hash || '';
+  var state = location.state || null;
+
+  return {
+    pathname: pathname,
+    search: search,
+    hash: hash,
+    state: state,
+    action: action,
+    key: key
+  };
+}
+
+exports['default'] = createLocation;
+module.exports = exports['default'];
+},{"./Actions":22,"./parsePath":33}],31:[function(require,module,exports){
+//import warning from 'warning'
+
+"use strict";
+
+exports.__esModule = true;
+function deprecate(fn) {
+  return fn;
+  //return function () {
+  //  warning(false, '[history] ' + message)
+  //  return fn.apply(this, arguments)
+  //}
+}
+
+exports["default"] = deprecate;
+module.exports = exports["default"];
+},{}],32:[function(require,module,exports){
+"use strict";
+
+exports.__esModule = true;
+function extractPath(string) {
+  var match = string.match(/^https?:\/\/[^\/]*/);
+
+  if (match == null) return string;
+
+  return string.substring(match[0].length);
+}
+
+exports["default"] = extractPath;
+module.exports = exports["default"];
+},{}],33:[function(require,module,exports){
+(function (process){
+'use strict';
+
+exports.__esModule = true;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _warning = require('warning');
+
+var _warning2 = _interopRequireDefault(_warning);
+
+var _extractPath = require('./extractPath');
+
+var _extractPath2 = _interopRequireDefault(_extractPath);
+
+function parsePath(path) {
+  var pathname = _extractPath2['default'](path);
+  var search = '';
+  var hash = '';
+
+  process.env.NODE_ENV !== 'production' ? _warning2['default'](path === pathname, 'A path must be pathname + search + hash only, not a fully qualified URL like "%s"', path) : undefined;
+
+  var hashIndex = pathname.indexOf('#');
+  if (hashIndex !== -1) {
+    hash = pathname.substring(hashIndex);
+    pathname = pathname.substring(0, hashIndex);
+  }
+
+  var searchIndex = pathname.indexOf('?');
+  if (searchIndex !== -1) {
+    search = pathname.substring(searchIndex);
+    pathname = pathname.substring(0, searchIndex);
+  }
+
+  if (pathname === '') pathname = '/';
+
+  return {
+    pathname: pathname,
+    search: search,
+    hash: hash
+  };
+}
+
+exports['default'] = parsePath;
+module.exports = exports['default'];
+}).call(this,require('_process'))
+},{"./extractPath":32,"_process":69,"warning":187}],34:[function(require,module,exports){
+(function (process){
+'use strict';
+
+exports.__esModule = true;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _warning = require('warning');
+
+var _warning2 = _interopRequireDefault(_warning);
+
+function runTransitionHook(hook, location, callback) {
+  var result = hook(location, callback);
+
+  if (hook.length < 2) {
+    // Assume the hook runs synchronously and automatically
+    // call the callback with the return value.
+    callback(result);
+  } else {
+    process.env.NODE_ENV !== 'production' ? _warning2['default'](result === undefined, 'You should not "return" in a transition hook with a callback argument; call the callback instead') : undefined;
+  }
+}
+
+exports['default'] = runTransitionHook;
+module.exports = exports['default'];
+}).call(this,require('_process'))
+},{"_process":69,"warning":187}],35:[function(require,module,exports){
+'use strict';
+
+var uppercasePattern = /[A-Z]/g;
+var msPattern = /^ms-/;
+var cache = {};
+
+function hyphenateStyleName(string) {
+    return string in cache
+    ? cache[string]
+    : cache[string] = string
+      .replace(uppercasePattern, '-$&')
+      .toLowerCase()
+      .replace(msPattern, '-ms-');
+}
+
+module.exports = hyphenateStyleName;
+
+},{}],36:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = calc;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _utilsJoinPrefixedRules = require('../utils/joinPrefixedRules');
+
+var _utilsJoinPrefixedRules2 = _interopRequireDefault(_utilsJoinPrefixedRules);
+
+var _utilsIsPrefixedValue = require('../utils/isPrefixedValue');
+
+var _utilsIsPrefixedValue2 = _interopRequireDefault(_utilsIsPrefixedValue);
+
+function calc(property, value) {
+  if (typeof value === 'string' && value.indexOf('calc(') > -1) {
+    if ((0, _utilsIsPrefixedValue2['default'])(value)) return;
+
+    return (0, _utilsJoinPrefixedRules2['default'])(property, value, function (prefix, value) {
+      return value.replace(/calc\(/g, prefix + 'calc(');
+    });
+  }
+}
+
+module.exports = exports['default'];
+},{"../utils/isPrefixedValue":49,"../utils/joinPrefixedRules":50}],37:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = cursor;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _utilsJoinPrefixedRules = require('../utils/joinPrefixedRules');
+
+var _utilsJoinPrefixedRules2 = _interopRequireDefault(_utilsJoinPrefixedRules);
+
+var values = {
+  'zoom-in': true,
+  'zoom-out': true,
+  'grab': true,
+  'grabbing': true
+};
+
+function cursor(property, value) {
+  if (property === 'cursor' && values[value]) {
+    return (0, _utilsJoinPrefixedRules2['default'])(property, value);
+  }
+}
+
+module.exports = exports['default'];
+},{"../utils/joinPrefixedRules":50}],38:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = flex;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _utilsCamelToDashCase = require('../utils/camelToDashCase');
+
+var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
+
+var values = { flex: true, 'inline-flex': true };
+
+function flex(property, value) {
+  if (property === 'display' && values[value]) {
+    return {
+      display: ['-webkit-box', '-moz-box', '-ms-' + value + 'box', '-webkit-' + value, value]
+    };
+  }
+}
+
+module.exports = exports['default'];
+},{"../utils/camelToDashCase":47}],39:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = flexboxIE;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var alternativeValues = {
+  'space-around': 'distribute',
+  'space-between': 'justify',
+  'flex-start': 'start',
+  'flex-end': 'end'
+};
+var alternativeProps = {
+  alignContent: 'msFlexLinePack',
+  alignSelf: 'msFlexItemAlign',
+  alignItems: 'msFlexAlign',
+  justifyContent: 'msFlexPack',
+  order: 'msFlexOrder',
+  flexGrow: 'msFlexPositive',
+  flexShrink: 'msFlexNegative',
+  flexBasis: 'msPreferredSize'
+};
+
+function flexboxIE(property, value) {
+  if (alternativeProps[property]) {
+    return _defineProperty({}, alternativeProps[property], alternativeValues[value] || value);
+  }
+}
+
+module.exports = exports['default'];
+},{}],40:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = flexboxOld;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var _utilsCamelToDashCase = require('../utils/camelToDashCase');
+
+var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
+
+var alternativeValues = {
+  'space-around': 'justify',
+  'space-between': 'justify',
+  'flex-start': 'start',
+  'flex-end': 'end',
+  'wrap-reverse': 'multiple',
+  wrap: 'multiple'
+};
+
+var alternativeProps = {
+  alignItems: 'WebkitBoxAlign',
+  justifyContent: 'WebkitBoxPack',
+  flexWrap: 'WebkitBoxLines'
+};
+
+function flexboxOld(property, value) {
+  if (property === 'flexDirection') {
+    return {
+      WebkitBoxOrient: value.indexOf('column') > -1 ? 'vertical' : 'horizontal',
+      WebkitBoxDirection: value.indexOf('reverse') > -1 ? 'reverse' : 'normal'
+    };
+  }
+  if (alternativeProps[property]) {
+    return _defineProperty({}, alternativeProps[property], alternativeValues[value] || value);
+  }
+}
+
+module.exports = exports['default'];
+},{"../utils/camelToDashCase":47}],41:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = gradient;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _utilsJoinPrefixedRules = require('../utils/joinPrefixedRules');
+
+var _utilsJoinPrefixedRules2 = _interopRequireDefault(_utilsJoinPrefixedRules);
+
+var _utilsIsPrefixedValue = require('../utils/isPrefixedValue');
+
+var _utilsIsPrefixedValue2 = _interopRequireDefault(_utilsIsPrefixedValue);
+
+var values = /linear-gradient|radial-gradient|repeating-linear-gradient|repeating-radial-gradient/;
+
+function gradient(property, value) {
+  if (typeof value === 'string' && value.match(values) !== null) {
+    if ((0, _utilsIsPrefixedValue2['default'])(value)) return;
+
+    return (0, _utilsJoinPrefixedRules2['default'])(property, value);
+  }
+}
+
+module.exports = exports['default'];
+},{"../utils/isPrefixedValue":49,"../utils/joinPrefixedRules":50}],42:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = sizing;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _utilsJoinPrefixedRules = require('../utils/joinPrefixedRules');
+
+var _utilsJoinPrefixedRules2 = _interopRequireDefault(_utilsJoinPrefixedRules);
+
+var properties = {
+  maxHeight: true,
+  maxWidth: true,
+  width: true,
+  height: true,
+  columnWidth: true,
+  minWidth: true,
+  minHeight: true
+};
+var values = {
+  'min-content': true,
+  'max-content': true,
+  'fill-available': true,
+  'fit-content': true,
+  'contain-floats': true
+};
+
+function sizing(property, value) {
+  if (properties[property] && values[value]) {
+    return (0, _utilsJoinPrefixedRules2['default'])(property, value);
+  }
+}
+
+module.exports = exports['default'];
+},{"../utils/joinPrefixedRules":50}],43:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = transition;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var _utilsCamelToDashCase = require('../utils/camelToDashCase');
+
+var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
+
+var _utilsCapitalizeString = require('../utils/capitalizeString');
+
+var _utilsCapitalizeString2 = _interopRequireDefault(_utilsCapitalizeString);
+
+var _utilsIsPrefixedValue = require('../utils/isPrefixedValue');
+
+var _utilsIsPrefixedValue2 = _interopRequireDefault(_utilsIsPrefixedValue);
+
+var _prefixProps = require('../prefixProps');
+
+var _prefixProps2 = _interopRequireDefault(_prefixProps);
+
+var properties = {
+  transition: true,
+  transitionProperty: true,
+  WebkitTransition: true,
+  WebkitTransitionProperty: true
+};
+
+function transition(property, value) {
+  // also check for already prefixed transitions
+  if (typeof value === 'string' && properties[property]) {
+    var _ref2;
+
+    var outputValue = prefixValue(value);
+    var webkitOutput = outputValue.split(',').filter(function (value) {
+      return value.match(/-moz-|-ms-/) === null;
+    }).join(',');
+
+    // if the property is already prefixed
+    if (property.indexOf('Webkit') > -1) {
+      return _defineProperty({}, property, webkitOutput);
+    }
+
+    return _ref2 = {}, _defineProperty(_ref2, 'Webkit' + (0, _utilsCapitalizeString2['default'])(property), webkitOutput), _defineProperty(_ref2, property, outputValue), _ref2;
+  }
+}
+
+function prefixValue(value) {
+  if ((0, _utilsIsPrefixedValue2['default'])(value)) {
+    return value;
+  }
+
+  // only split multi values, not cubic beziers
+  var multipleValues = value.split(/,(?![^()]*(?:\([^()]*\))?\))/g);
+
+  // iterate each single value and check for transitioned properties
+  // that need to be prefixed as well
+  multipleValues.forEach(function (val, index) {
+    multipleValues[index] = Object.keys(_prefixProps2['default']).reduce(function (out, prefix) {
+      var dashCasePrefix = '-' + prefix.toLowerCase() + '-';
+
+      Object.keys(_prefixProps2['default'][prefix]).forEach(function (prop) {
+        var dashCaseProperty = (0, _utilsCamelToDashCase2['default'])(prop);
+
+        if (val.indexOf(dashCaseProperty) > -1) {
+          // join all prefixes and create a new value
+          out = val.replace(dashCaseProperty, dashCasePrefix + dashCaseProperty) + ',' + out;
+        }
+      });
+      return out;
+    }, val);
+  });
+
+  return multipleValues.join(',');
+}
+module.exports = exports['default'];
+},{"../prefixProps":45,"../utils/camelToDashCase":47,"../utils/capitalizeString":48,"../utils/isPrefixedValue":49}],44:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = prefixAll;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _prefixProps = require('./prefixProps');
+
+var _prefixProps2 = _interopRequireDefault(_prefixProps);
+
+var _utilsCapitalizeString = require('./utils/capitalizeString');
+
+var _utilsCapitalizeString2 = _interopRequireDefault(_utilsCapitalizeString);
+
+var _utilsAssign = require('./utils/assign');
+
+var _utilsAssign2 = _interopRequireDefault(_utilsAssign);
+
+var _pluginsCalc = require('./plugins/calc');
+
+var _pluginsCalc2 = _interopRequireDefault(_pluginsCalc);
+
+var _pluginsCursor = require('./plugins/cursor');
+
+var _pluginsCursor2 = _interopRequireDefault(_pluginsCursor);
+
+var _pluginsFlex = require('./plugins/flex');
+
+var _pluginsFlex2 = _interopRequireDefault(_pluginsFlex);
+
+var _pluginsSizing = require('./plugins/sizing');
+
+var _pluginsSizing2 = _interopRequireDefault(_pluginsSizing);
+
+var _pluginsGradient = require('./plugins/gradient');
+
+var _pluginsGradient2 = _interopRequireDefault(_pluginsGradient);
+
+var _pluginsTransition = require('./plugins/transition');
+
+var _pluginsTransition2 = _interopRequireDefault(_pluginsTransition);
+
+// special flexbox specifications
+
+var _pluginsFlexboxIE = require('./plugins/flexboxIE');
+
+var _pluginsFlexboxIE2 = _interopRequireDefault(_pluginsFlexboxIE);
+
+var _pluginsFlexboxOld = require('./plugins/flexboxOld');
+
+var _pluginsFlexboxOld2 = _interopRequireDefault(_pluginsFlexboxOld);
+
+var plugins = [_pluginsCalc2['default'], _pluginsCursor2['default'], _pluginsSizing2['default'], _pluginsGradient2['default'], _pluginsTransition2['default'], _pluginsFlexboxIE2['default'], _pluginsFlexboxOld2['default'], _pluginsFlex2['default']];
+
+/**
+ * Returns a prefixed version of the style object using all vendor prefixes
+ * @param {Object} styles - Style object that gets prefixed properties added
+ * @returns {Object} - Style object with prefixed properties and values
+ */
+
+function prefixAll(styles) {
+  return Object.keys(styles).reduce(function (prefixedStyles, property) {
+    var value = styles[property];
+    if (value instanceof Object && !Array.isArray(value)) {
+      // recurse through nested style objects
+      prefixedStyles[property] = prefixAll(value);
+    } else {
+      Object.keys(_prefixProps2['default']).forEach(function (prefix) {
+        var properties = _prefixProps2['default'][prefix];
+        // add prefixes if needed
+        if (properties[property]) {
+          prefixedStyles[prefix + (0, _utilsCapitalizeString2['default'])(property)] = value;
+        }
+      });
+
+      // resolve every special plugins
+      plugins.forEach(function (plugin) {
+        return (0, _utilsAssign2['default'])(prefixedStyles, plugin(property, value));
+      });
+    }
+
+    return prefixedStyles;
+  }, styles);
+}
+
+module.exports = exports['default'];
+},{"./plugins/calc":36,"./plugins/cursor":37,"./plugins/flex":38,"./plugins/flexboxIE":39,"./plugins/flexboxOld":40,"./plugins/gradient":41,"./plugins/sizing":42,"./plugins/transition":43,"./prefixProps":45,"./utils/assign":46,"./utils/capitalizeString":48}],45:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = { "Webkit": { "transform": true, "transformOrigin": true, "transformOriginX": true, "transformOriginY": true, "backfaceVisibility": true, "perspective": true, "perspectiveOrigin": true, "transformStyle": true, "transformOriginZ": true, "animation": true, "animationDelay": true, "animationDirection": true, "animationFillMode": true, "animationDuration": true, "animationIterationCount": true, "animationName": true, "animationPlayState": true, "animationTimingFunction": true, "appearance": true, "userSelect": true, "fontKerning": true, "textEmphasisPosition": true, "textEmphasis": true, "textEmphasisStyle": true, "textEmphasisColor": true, "boxDecorationBreak": true, "clipPath": true, "maskImage": true, "maskMode": true, "maskRepeat": true, "maskPosition": true, "maskClip": true, "maskOrigin": true, "maskSize": true, "maskComposite": true, "mask": true, "maskBorderSource": true, "maskBorderMode": true, "maskBorderSlice": true, "maskBorderWidth": true, "maskBorderOutset": true, "maskBorderRepeat": true, "maskBorder": true, "maskType": true, "textDecorationStyle": true, "textDecorationSkip": true, "textDecorationLine": true, "textDecorationColor": true, "filter": true, "fontFeatureSettings": true, "breakAfter": true, "breakBefore": true, "breakInside": true, "columnCount": true, "columnFill": true, "columnGap": true, "columnRule": true, "columnRuleColor": true, "columnRuleStyle": true, "columnRuleWidth": true, "columns": true, "columnSpan": true, "columnWidth": true, "flex": true, "flexBasis": true, "flexDirection": true, "flexGrow": true, "flexFlow": true, "flexShrink": true, "flexWrap": true, "alignContent": true, "alignItems": true, "alignSelf": true, "justifyContent": true, "order": true, "transition": true, "transitionDelay": true, "transitionDuration": true, "transitionProperty": true, "transitionTimingFunction": true, "backdropFilter": true, "scrollSnapType": true, "scrollSnapPointsX": true, "scrollSnapPointsY": true, "scrollSnapDestination": true, "scrollSnapCoordinate": true, "shapeImageThreshold": true, "shapeImageMargin": true, "shapeImageOutside": true, "hyphens": true, "flowInto": true, "flowFrom": true, "regionFragment": true, "textSizeAdjust": true, "borderImage": true, "borderImageOutset": true, "borderImageRepeat": true, "borderImageSlice": true, "borderImageSource": true, "borderImageWidth": true, "tabSize": true, "objectFit": true, "objectPosition": true }, "Moz": { "appearance": true, "userSelect": true, "boxSizing": true, "textAlignLast": true, "textDecorationStyle": true, "textDecorationSkip": true, "textDecorationLine": true, "textDecorationColor": true, "tabSize": true, "hyphens": true, "fontFeatureSettings": true, "breakAfter": true, "breakBefore": true, "breakInside": true, "columnCount": true, "columnFill": true, "columnGap": true, "columnRule": true, "columnRuleColor": true, "columnRuleStyle": true, "columnRuleWidth": true, "columns": true, "columnSpan": true, "columnWidth": true }, "ms": { "flex": true, "flexBasis": false, "flexDirection": true, "flexGrow": false, "flexFlow": true, "flexShrink": false, "flexWrap": true, "alignContent": false, "alignItems": false, "alignSelf": false, "justifyContent": false, "order": false, "transform": true, "transformOrigin": true, "transformOriginX": true, "transformOriginY": true, "userSelect": true, "wrapFlow": true, "wrapThrough": true, "wrapMargin": true, "scrollSnapType": true, "scrollSnapPointsX": true, "scrollSnapPointsY": true, "scrollSnapDestination": true, "scrollSnapCoordinate": true, "touchAction": true, "hyphens": true, "flowInto": true, "flowFrom": true, "breakBefore": true, "breakAfter": true, "breakInside": true, "regionFragment": true, "gridTemplateColumns": true, "gridTemplateRows": true, "gridTemplateAreas": true, "gridTemplate": true, "gridAutoColumns": true, "gridAutoRows": true, "gridAutoFlow": true, "grid": true, "gridRowStart": true, "gridColumnStart": true, "gridRowEnd": true, "gridRow": true, "gridColumn": true, "gridColumnEnd": true, "gridColumnGap": true, "gridRowGap": true, "gridArea": true, "gridGap": true, "textSizeAdjust": true } };
+module.exports = exports["default"];
+},{}],46:[function(require,module,exports){
+// leight polyfill for Object.assign
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports["default"] = function (base) {
+  var extend = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+  return Object.keys(extend).reduce(function (out, key) {
+    base[key] = extend[key];
+    return out;
+  }, {});
+};
+
+module.exports = exports["default"];
+},{}],47:[function(require,module,exports){
+/**
+ * Converts a camel-case string to a dash-case string
+ * @param {string} str - str that gets converted to dash-case
+ */
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+exports['default'] = function (str) {
+  return str.replace(/([a-z]|^)([A-Z])/g, function (match, p1, p2) {
+    return p1 + '-' + p2.toLowerCase();
+  }).replace('ms-', '-ms-');
+};
+
+module.exports = exports['default'];
+},{}],48:[function(require,module,exports){
+// helper to capitalize strings
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports["default"] = function (str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+module.exports = exports["default"];
+},{}],49:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+exports['default'] = function (value) {
+  if (Array.isArray(value)) value = value.join(',');
+
+  return value.match(/-webkit-|-moz-|-ms-/) !== null;
+};
+
+module.exports = exports['default'];
+},{}],50:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var _camelToDashCase = require('./camelToDashCase');
+
+var _camelToDashCase2 = _interopRequireDefault(_camelToDashCase);
+
+// returns a style object with a single concated prefixed value string
+
+exports['default'] = function (property, value) {
+  var replacer = arguments.length <= 2 || arguments[2] === undefined ? function (prefix, value) {
+    return prefix + value;
+  } : arguments[2];
+  return (function () {
+    return _defineProperty({}, property, ['-webkit-', '-moz-', ''].map(function (prefix) {
+      return replacer(prefix, value);
+    }));
+  })();
+};
+
+module.exports = exports['default'];
+},{"./camelToDashCase":47}],51:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var _inlineStylePrefixAll = require('inline-style-prefix-all');
+
+var _inlineStylePrefixAll2 = _interopRequireDefault(_inlineStylePrefixAll);
+
+var _utilsGetBrowserInformation = require('./utils/getBrowserInformation');
+
+var _utilsGetBrowserInformation2 = _interopRequireDefault(_utilsGetBrowserInformation);
+
+var _utilsGetPrefixedKeyframes = require('./utils/getPrefixedKeyframes');
+
+var _utilsGetPrefixedKeyframes2 = _interopRequireDefault(_utilsGetPrefixedKeyframes);
+
+var _utilsCapitalizeString = require('./utils/capitalizeString');
+
+var _utilsCapitalizeString2 = _interopRequireDefault(_utilsCapitalizeString);
+
+var _utilsAssign = require('./utils/assign');
+
+var _utilsAssign2 = _interopRequireDefault(_utilsAssign);
+
+var _prefixProps = require('./prefixProps');
+
+var _prefixProps2 = _interopRequireDefault(_prefixProps);
+
+var _pluginsCalc = require('./plugins/calc');
+
+var _pluginsCalc2 = _interopRequireDefault(_pluginsCalc);
+
+var _pluginsCursor = require('./plugins/cursor');
+
+var _pluginsCursor2 = _interopRequireDefault(_pluginsCursor);
+
+var _pluginsFlex = require('./plugins/flex');
+
+var _pluginsFlex2 = _interopRequireDefault(_pluginsFlex);
+
+var _pluginsSizing = require('./plugins/sizing');
+
+var _pluginsSizing2 = _interopRequireDefault(_pluginsSizing);
+
+var _pluginsGradient = require('./plugins/gradient');
+
+var _pluginsGradient2 = _interopRequireDefault(_pluginsGradient);
+
+var _pluginsTransition = require('./plugins/transition');
+
+var _pluginsTransition2 = _interopRequireDefault(_pluginsTransition);
+
+// special flexbox specifications
+
+var _pluginsFlexboxIE = require('./plugins/flexboxIE');
+
+var _pluginsFlexboxIE2 = _interopRequireDefault(_pluginsFlexboxIE);
+
+var _pluginsFlexboxOld = require('./plugins/flexboxOld');
+
+var _pluginsFlexboxOld2 = _interopRequireDefault(_pluginsFlexboxOld);
+
+var plugins = [_pluginsCalc2['default'], _pluginsCursor2['default'], _pluginsSizing2['default'], _pluginsGradient2['default'], _pluginsTransition2['default'], _pluginsFlexboxIE2['default'], _pluginsFlexboxOld2['default'],
+// this must be run AFTER the flexbox specs
+_pluginsFlex2['default']];
+
+var Prefixer = (function () {
+  /**
+   * Instantiante a new prefixer
+   * @param {string} userAgent - userAgent to gather prefix information according to caniuse.com
+   * @param {string} keepUnprefixed - keeps unprefixed properties and values
+   */
+
+  function Prefixer() {
+    var _this = this;
+
+    var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
+    _classCallCheck(this, Prefixer);
+
+    var defaultUserAgent = typeof navigator !== 'undefined' ? navigator.userAgent : undefined;
+
+    this._userAgent = options.userAgent || defaultUserAgent;
+    this._keepUnprefixed = options.keepUnprefixed || false;
+
+    this._browserInfo = (0, _utilsGetBrowserInformation2['default'])(this._userAgent);
+
+    // Checks if the userAgent was resolved correctly
+    if (this._browserInfo && this._browserInfo.prefix) {
+      // set additional prefix information
+      this.cssPrefix = this._browserInfo.prefix.css;
+      this.jsPrefix = this._browserInfo.prefix.inline;
+      this.prefixedKeyframes = (0, _utilsGetPrefixedKeyframes2['default'])(this._browserInfo);
+    } else {
+      this._usePrefixAllFallback = true;
+      return false;
+    }
+
+    var data = this._browserInfo.browser && _prefixProps2['default'][this._browserInfo.browser];
+    if (data) {
+      this._requiresPrefix = Object.keys(data).filter(function (key) {
+        return data[key] >= _this._browserInfo.version;
+      }).reduce(function (result, name) {
+        result[name] = true;
+        return result;
+      }, {});
+      this._hasPropsRequiringPrefix = Object.keys(this._requiresPrefix).length > 0;
+    } else {
+      this._usePrefixAllFallback = true;
+    }
+  }
+
+  /**
+   * Returns a prefixed version of the style object
+   * @param {Object} styles - Style object that gets prefixed properties added
+   * @returns {Object} - Style object with prefixed properties and values
+   */
+
+  _createClass(Prefixer, [{
+    key: 'prefix',
+    value: function prefix(styles) {
+      var _this2 = this;
+
+      // use prefixAll as fallback if userAgent can not be resolved
+      if (this._usePrefixAllFallback) {
+        return (0, _inlineStylePrefixAll2['default'])(styles);
+      }
+
+      // only add prefixes if needed
+      if (!this._hasPropsRequiringPrefix) {
+        return styles;
+      }
+
+      styles = (0, _utilsAssign2['default'])({}, styles);
+
+      Object.keys(styles).forEach(function (property) {
+        var value = styles[property];
+        if (value instanceof Object) {
+          // recurse through nested style objects
+          styles[property] = _this2.prefix(value);
+        } else {
+          // add prefixes if needed
+          if (_this2._requiresPrefix[property]) {
+            styles[_this2.jsPrefix + (0, _utilsCapitalizeString2['default'])(property)] = value;
+            if (!_this2._keepUnprefixed) {
+              delete styles[property];
+            }
+          }
+
+          // resolve plugins
+          plugins.forEach(function (plugin) {
+            // generates a new plugin interface with current data
+            var resolvedStyles = plugin({
+              property: property,
+              value: value,
+              styles: styles,
+              browserInfo: _this2._browserInfo,
+              prefix: {
+                js: _this2.jsPrefix,
+                css: _this2.cssPrefix,
+                keyframes: _this2.prefixedKeyframes
+              },
+              keepUnprefixed: _this2._keepUnprefixed,
+              requiresPrefix: _this2._requiresPrefix
+            });
+            (0, _utilsAssign2['default'])(styles, resolvedStyles);
+          });
+        }
+      });
+
+      return styles;
+    }
+
+    /**
+     * Returns a prefixed version of the style object using all vendor prefixes
+     * @param {Object} styles - Style object that gets prefixed properties added
+     * @returns {Object} - Style object with prefixed properties and values
+     */
+  }], [{
+    key: 'prefixAll',
+    value: function prefixAll(styles) {
+      return (0, _inlineStylePrefixAll2['default'])(styles);
+    }
+  }]);
+
+  return Prefixer;
+})();
+
+exports['default'] = Prefixer;
+module.exports = exports['default'];
+},{"./plugins/calc":52,"./plugins/cursor":53,"./plugins/flex":54,"./plugins/flexboxIE":55,"./plugins/flexboxOld":56,"./plugins/gradient":57,"./plugins/sizing":58,"./plugins/transition":59,"./prefixProps":60,"./utils/assign":61,"./utils/capitalizeString":63,"./utils/getBrowserInformation":64,"./utils/getPrefixedKeyframes":65,"inline-style-prefix-all":44}],52:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = calc;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var _utilsCamelToDashCase = require('../utils/camelToDashCase');
+
+var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
+
+function calc(_ref2) {
+  var property = _ref2.property;
+  var value = _ref2.value;
+  var _ref2$browserInfo = _ref2.browserInfo;
+  var browser = _ref2$browserInfo.browser;
+  var version = _ref2$browserInfo.version;
+  var css = _ref2.prefix.css;
+  var keepUnprefixed = _ref2.keepUnprefixed;
+
+  if (typeof value === 'string' && value.indexOf('calc(') > -1 && (browser === 'firefox' && version < 15 || browser === 'chrome' && version < 25 || browser === 'safari' && version < 6.1 || browser === 'ios_saf' && version < 7)) {
+    return _defineProperty({}, property, value.replace(/calc\(/g, css + 'calc(') + (keepUnprefixed ? ';' + (0, _utilsCamelToDashCase2['default'])(property) + ':' + value : ''));
+  }
+}
+
+module.exports = exports['default'];
+},{"../utils/camelToDashCase":62}],53:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = cursor;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _utilsCamelToDashCase = require('../utils/camelToDashCase');
+
+var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
+
+var values = {
+  'zoom-in': true,
+  'zoom-out': true,
+  'grab': true,
+  'grabbing': true
+};
+
+function cursor(_ref) {
+  var property = _ref.property;
+  var value = _ref.value;
+  var _ref$browserInfo = _ref.browserInfo;
+  var browser = _ref$browserInfo.browser;
+  var version = _ref$browserInfo.version;
+  var css = _ref.prefix.css;
+  var keepUnprefixed = _ref.keepUnprefixed;
+
+  if (property === 'cursor' && values[value] && (browser === 'firefox' && version < 24 || browser === 'chrome' && version < 37 || browser === 'safari' && version < 9 || browser === 'opera' && version < 24)) {
+    return {
+      cursor: css + value + (keepUnprefixed ? ';' + (0, _utilsCamelToDashCase2['default'])(property) + ':' + value : '')
+    };
+  }
+}
+
+module.exports = exports['default'];
+},{"../utils/camelToDashCase":62}],54:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = flex;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _utilsCamelToDashCase = require('../utils/camelToDashCase');
+
+var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
+
+var values = {
+  'flex': true,
+  'inline-flex': true
+};
+
+function flex(_ref) {
+  var property = _ref.property;
+  var value = _ref.value;
+  var _ref$browserInfo = _ref.browserInfo;
+  var browser = _ref$browserInfo.browser;
+  var version = _ref$browserInfo.version;
+  var css = _ref.prefix.css;
+  var keepUnprefixed = _ref.keepUnprefixed;
+
+  if (property === 'display' && values[value] && (browser === 'chrome' && version < 29 && version > 20 || (browser === 'safari' || browser === 'ios_saf') && version < 9 && version > 6 || browser === 'opera' && (version == 15 || version == 16))) {
+    return {
+      display: css + value + (keepUnprefixed ? ';' + (0, _utilsCamelToDashCase2['default'])(property) + ':' + value : '')
+    };
+  }
+}
+
+module.exports = exports['default'];
+},{"../utils/camelToDashCase":62}],55:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = flexboxIE;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var _utilsCamelToDashCase = require('../utils/camelToDashCase');
+
+var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
+
+var alternativeValues = {
+  'space-around': 'distribute',
+  'space-between': 'justify',
+  'flex-start': 'start',
+  'flex-end': 'end',
+  flex: 'flexbox',
+  'inline-flex': 'inline-flexbox'
+};
+var alternativeProps = {
+  alignContent: 'msFlexLinePack',
+  alignSelf: 'msFlexItemAlign',
+  alignItems: 'msFlexAlign',
+  justifyContent: 'msFlexPack',
+  order: 'msFlexOrder',
+  flexGrow: 'msFlexPositive',
+  flexShrink: 'msFlexNegative',
+  flexBasis: 'msPreferredSize'
+};
+
+var properties = Object.keys(alternativeProps).reduce(function (result, prop) {
+  result[prop] = true;
+  return result;
+}, {});
+
+function flexboxIE(_ref2) {
+  var property = _ref2.property;
+  var value = _ref2.value;
+  var styles = _ref2.styles;
+  var _ref2$browserInfo = _ref2.browserInfo;
+  var browser = _ref2$browserInfo.browser;
+  var version = _ref2$browserInfo.version;
+  var css = _ref2.prefix.css;
+  var keepUnprefixed = _ref2.keepUnprefixed;
+
+  if ((properties[property] || property === 'display' && typeof value === 'string' && value.indexOf('flex') > -1) && (browser === 'ie_mob' || browser === 'ie') && version == 10) {
+    if (!keepUnprefixed) {
+      delete styles[property];
+    }
+    if (property === 'display' && alternativeValues[value]) {
+      return {
+        display: css + alternativeValues[value] + (keepUnprefixed ? ';' + (0, _utilsCamelToDashCase2['default'])(property) + ':' + value : '')
+      };
+    }
+    if (alternativeProps[property]) {
+      return _defineProperty({}, alternativeProps[property], alternativeValues[value] || value);
+    }
+  }
+}
+
+module.exports = exports['default'];
+},{"../utils/camelToDashCase":62}],56:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = flexboxOld;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var _utilsCamelToDashCase = require('../utils/camelToDashCase');
+
+var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
+
+var alternativeValues = {
+  'space-around': 'justify',
+  'space-between': 'justify',
+  'flex-start': 'start',
+  'flex-end': 'end',
+  'wrap-reverse': 'multiple',
+  wrap: 'multiple',
+  flex: 'box',
+  'inline-flex': 'inline-box'
+};
+
+var alternativeProps = {
+  alignItems: 'WebkitBoxAlign',
+  justifyContent: 'WebkitBoxPack',
+  flexWrap: 'WebkitBoxLines'
+};
+
+var otherProps = ['alignContent', 'alignSelf', 'order', 'flexGrow', 'flexShrink', 'flexBasis', 'flexDirection'];
+
+var properties = Object.keys(alternativeProps).concat(otherProps).reduce(function (result, prop) {
+  result[prop] = true;
+  return result;
+}, {});
+
+function flexboxOld(_ref2) {
+  var property = _ref2.property;
+  var value = _ref2.value;
+  var styles = _ref2.styles;
+  var _ref2$browserInfo = _ref2.browserInfo;
+  var browser = _ref2$browserInfo.browser;
+  var version = _ref2$browserInfo.version;
+  var css = _ref2.prefix.css;
+  var keepUnprefixed = _ref2.keepUnprefixed;
+
+  if ((properties[property] || property === 'display' && typeof value === 'string' && value.indexOf('flex') > -1) && (browser === 'firefox' && version < 22 || browser === 'chrome' && version < 21 || (browser === 'safari' || browser === 'ios_saf') && version <= 6.1 || browser === 'android' && version < 4.4 || browser === 'and_uc')) {
+    if (!keepUnprefixed) {
+      delete styles[property];
+    }
+    if (property === 'flexDirection') {
+      return {
+        WebkitBoxOrient: value.indexOf('column') > -1 ? 'vertical' : 'horizontal',
+        WebkitBoxDirection: value.indexOf('reverse') > -1 ? 'reverse' : 'normal'
+      };
+    }
+    if (property === 'display' && alternativeValues[value]) {
+      return {
+        display: css + alternativeValues[value] + (keepUnprefixed ? ';' + (0, _utilsCamelToDashCase2['default'])(property) + ':' + value : '')
+      };
+    }
+    if (alternativeProps[property]) {
+      return _defineProperty({}, alternativeProps[property], alternativeValues[value] || value);
+    }
+  }
+}
+
+module.exports = exports['default'];
+},{"../utils/camelToDashCase":62}],57:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = gradient;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var _utilsCamelToDashCase = require('../utils/camelToDashCase');
+
+var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
+
+var values = /linear-gradient|radial-gradient|repeating-linear-gradient|repeating-radial-gradient/;
+
+function gradient(_ref2) {
+  var property = _ref2.property;
+  var value = _ref2.value;
+  var _ref2$browserInfo = _ref2.browserInfo;
+  var browser = _ref2$browserInfo.browser;
+  var version = _ref2$browserInfo.version;
+  var css = _ref2.prefix.css;
+  var keepUnprefixed = _ref2.keepUnprefixed;
+
+  if (typeof value === 'string' && value.match(values) !== null && (browser === 'firefox' && version < 16 || browser === 'chrome' && version < 26 || (browser === 'safari' || browser === 'ios_saf') && version < 7 || (browser === 'opera' || browser === 'op_mini') && version < 12.1 || browser === 'android' && version < 4.4 || browser === 'and_uc')) {
+    return _defineProperty({}, property, css + value + (keepUnprefixed ? ';' + (0, _utilsCamelToDashCase2['default'])(property) + ':' + value : ''));
+  }
+}
+
+module.exports = exports['default'];
+},{"../utils/camelToDashCase":62}],58:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = sizing;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var _utilsCamelToDashCase = require('../utils/camelToDashCase');
+
+var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
+
+var properties = {
+  maxHeight: true,
+  maxWidth: true,
+  width: true,
+  height: true,
+  columnWidth: true,
+  minWidth: true,
+  minHeight: true
+};
+var values = {
+  'min-content': true,
+  'max-content': true,
+  'fill-available': true,
+  'fit-content': true,
+  'contain-floats': true
+};
+
+function sizing(_ref2) {
+  var property = _ref2.property;
+  var value = _ref2.value;
+  var css = _ref2.prefix.css;
+  var keepUnprefixed = _ref2.keepUnprefixed;
+
+  // This might change in the future
+  // Keep an eye on it
+  if (properties[property] && values[value]) {
+    return _defineProperty({}, property, css + value + (keepUnprefixed ? ';' + (0, _utilsCamelToDashCase2['default'])(property) + ':' + value : ''));
+  }
+}
+
+module.exports = exports['default'];
+},{"../utils/camelToDashCase":62}],59:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = transition;
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var _utilsCamelToDashCase = require('../utils/camelToDashCase');
+
+var _utilsCamelToDashCase2 = _interopRequireDefault(_utilsCamelToDashCase);
+
+var _utilsCapitalizeString = require('../utils/capitalizeString');
+
+var _utilsCapitalizeString2 = _interopRequireDefault(_utilsCapitalizeString);
+
+var _utilsUnprefixProperty = require('../utils/unprefixProperty');
+
+var _utilsUnprefixProperty2 = _interopRequireDefault(_utilsUnprefixProperty);
+
+var properties = { transition: true, transitionProperty: true };
+
+function transition(_ref2) {
+  var property = _ref2.property;
+  var value = _ref2.value;
+  var css = _ref2.prefix.css;
+  var requiresPrefix = _ref2.requiresPrefix;
+  var keepUnprefixed = _ref2.keepUnprefixed;
+
+  // also check for already prefixed transitions
+  var unprefixedProperty = (0, _utilsUnprefixProperty2['default'])(property);
+  if (typeof value === 'string' && properties[unprefixedProperty]) {
+    var _ret = (function () {
+      var requiresPrefixDashCased = Object.keys(requiresPrefix).map(function (prop) {
+        return (0, _utilsCamelToDashCase2['default'])(prop);
+      });
+
+      // only split multi values, not cubic beziers
+      var multipleValues = value.split(/,(?![^()]*(?:\([^()]*\))?\))/g);
+
+      requiresPrefixDashCased.forEach(function (property) {
+        multipleValues.forEach(function (val, index) {
+          if (val.indexOf(property) > -1) {
+            multipleValues[index] = val.replace(property, css + property) + (keepUnprefixed ? ',' + val : '');
+          }
+        });
+      });
+
+      return {
+        v: _defineProperty({}, property, multipleValues.join(','))
+      };
+    })();
+
+    if (typeof _ret === 'object') return _ret.v;
+  }
+}
+
+module.exports = exports['default'];
+},{"../utils/camelToDashCase":62,"../utils/capitalizeString":63,"../utils/unprefixProperty":66}],60:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = { "chrome": { "transform": 35, "transformOrigin": 35, "transformOriginX": 35, "transformOriginY": 35, "backfaceVisibility": 35, "perspective": 35, "perspectiveOrigin": 35, "transformStyle": 35, "transformOriginZ": 35, "animation": 42, "animationDelay": 42, "animationDirection": 42, "animationFillMode": 42, "animationDuration": 42, "animationIterationCount": 42, "animationName": 42, "animationPlayState": 42, "animationTimingFunction": 42, "appearance": 52, "userSelect": 52, "fontKerning": 32, "textEmphasisPosition": 52, "textEmphasis": 52, "textEmphasisStyle": 52, "textEmphasisColor": 52, "boxDecorationBreak": 52, "clipPath": 52, "maskImage": 52, "maskMode": 52, "maskRepeat": 52, "maskPosition": 52, "maskClip": 52, "maskOrigin": 52, "maskSize": 52, "maskComposite": 52, "mask": 52, "maskBorderSource": 52, "maskBorderMode": 52, "maskBorderSlice": 52, "maskBorderWidth": 52, "maskBorderOutset": 52, "maskBorderRepeat": 52, "maskBorder": 52, "maskType": 52, "textDecorationStyle": 52, "textDecorationSkip": 52, "textDecorationLine": 52, "textDecorationColor": 52, "filter": 52, "fontFeatureSettings": 47, "breakAfter": 52, "breakBefore": 52, "breakInside": 52, "columnCount": 52, "columnFill": 52, "columnGap": 52, "columnRule": 52, "columnRuleColor": 52, "columnRuleStyle": 52, "columnRuleWidth": 52, "columns": 52, "columnSpan": 52, "columnWidth": 52 }, "safari": { "flex": 8, "flexBasis": 8, "flexDirection": 8, "flexGrow": 8, "flexFlow": 8, "flexShrink": 8, "flexWrap": 8, "alignContent": 8, "alignItems": 8, "alignSelf": 8, "justifyContent": 8, "order": 8, "transition": 6, "transitionDelay": 6, "transitionDuration": 6, "transitionProperty": 6, "transitionTimingFunction": 6, "transform": 8, "transformOrigin": 8, "transformOriginX": 8, "transformOriginY": 8, "backfaceVisibility": 8, "perspective": 8, "perspectiveOrigin": 8, "transformStyle": 8, "transformOriginZ": 8, "animation": 8, "animationDelay": 8, "animationDirection": 8, "animationFillMode": 8, "animationDuration": 8, "animationIterationCount": 8, "animationName": 8, "animationPlayState": 8, "animationTimingFunction": 8, "appearance": 9.1, "userSelect": 9.1, "backdropFilter": 9.1, "fontKerning": 9.1, "scrollSnapType": 9.1, "scrollSnapPointsX": 9.1, "scrollSnapPointsY": 9.1, "scrollSnapDestination": 9.1, "scrollSnapCoordinate": 9.1, "textEmphasisPosition": 7, "textEmphasis": 7, "textEmphasisStyle": 7, "textEmphasisColor": 7, "boxDecorationBreak": 9.1, "clipPath": 9.1, "maskImage": 9.1, "maskMode": 9.1, "maskRepeat": 9.1, "maskPosition": 9.1, "maskClip": 9.1, "maskOrigin": 9.1, "maskSize": 9.1, "maskComposite": 9.1, "mask": 9.1, "maskBorderSource": 9.1, "maskBorderMode": 9.1, "maskBorderSlice": 9.1, "maskBorderWidth": 9.1, "maskBorderOutset": 9.1, "maskBorderRepeat": 9.1, "maskBorder": 9.1, "maskType": 9.1, "textDecorationStyle": 9.1, "textDecorationSkip": 9.1, "textDecorationLine": 9.1, "textDecorationColor": 9.1, "shapeImageThreshold": 9.1, "shapeImageMargin": 9.1, "shapeImageOutside": 9.1, "filter": 9, "hyphens": 9.1, "flowInto": 9.1, "flowFrom": 9.1, "breakBefore": 8, "breakAfter": 8, "breakInside": 8, "regionFragment": 9.1, "columnCount": 8, "columnFill": 8, "columnGap": 8, "columnRule": 8, "columnRuleColor": 8, "columnRuleStyle": 8, "columnRuleWidth": 8, "columns": 8, "columnSpan": 8, "columnWidth": 8 }, "firefox": { "appearance": 47, "userSelect": 47, "boxSizing": 28, "textAlignLast": 47, "textDecorationStyle": 35, "textDecorationSkip": 35, "textDecorationLine": 35, "textDecorationColor": 35, "tabSize": 47, "hyphens": 42, "fontFeatureSettings": 33, "breakAfter": 47, "breakBefore": 47, "breakInside": 47, "columnCount": 47, "columnFill": 47, "columnGap": 47, "columnRule": 47, "columnRuleColor": 47, "columnRuleStyle": 47, "columnRuleWidth": 47, "columns": 47, "columnSpan": 47, "columnWidth": 47 }, "opera": { "flex": 16, "flexBasis": 16, "flexDirection": 16, "flexGrow": 16, "flexFlow": 16, "flexShrink": 16, "flexWrap": 16, "alignContent": 16, "alignItems": 16, "alignSelf": 16, "justifyContent": 16, "order": 16, "transform": 22, "transformOrigin": 22, "transformOriginX": 22, "transformOriginY": 22, "backfaceVisibility": 22, "perspective": 22, "perspectiveOrigin": 22, "transformStyle": 22, "transformOriginZ": 22, "animation": 29, "animationDelay": 29, "animationDirection": 29, "animationFillMode": 29, "animationDuration": 29, "animationIterationCount": 29, "animationName": 29, "animationPlayState": 29, "animationTimingFunction": 29, "appearance": 37, "userSelect": 37, "fontKerning": 19, "textEmphasisPosition": 37, "textEmphasis": 37, "textEmphasisStyle": 37, "textEmphasisColor": 37, "boxDecorationBreak": 37, "clipPath": 37, "maskImage": 37, "maskMode": 37, "maskRepeat": 37, "maskPosition": 37, "maskClip": 37, "maskOrigin": 37, "maskSize": 37, "maskComposite": 37, "mask": 37, "maskBorderSource": 37, "maskBorderMode": 37, "maskBorderSlice": 37, "maskBorderWidth": 37, "maskBorderOutset": 37, "maskBorderRepeat": 37, "maskBorder": 37, "maskType": 37, "filter": 37, "fontFeatureSettings": 37, "breakAfter": 37, "breakBefore": 37, "breakInside": 37, "columnCount": 37, "columnFill": 37, "columnGap": 37, "columnRule": 37, "columnRuleColor": 37, "columnRuleStyle": 37, "columnRuleWidth": 37, "columns": 37, "columnSpan": 37, "columnWidth": 37 }, "ie": { "gridTemplateRows": 11, "breakInside": 11, "transformOriginY": 9, "gridRowStart": 11, "gridColumn": 11, "regionFragment": 11, "breakBefore": 11, "userSelect": 11, "gridColumnEnd": 11, "gridRowEnd": 11, "gridTemplateColumns": 11, "gridColumnStart": 11, "gridArea": 11, "flexDirection": 10, "gridRowGap": 11, "gridTemplateAreas": 11, "gridAutoRows": 11, "gridRow": 11, "scrollSnapDestination": 11, "scrollSnapPointsY": 11, "touchAction": 10, "gridGap": 11, "gridColumnGap": 11, "wrapFlow": 11, "scrollSnapPointsX": 11, "flowFrom": 11, "transform": 9, "breakAfter": 11, "wrapMargin": 11, "scrollSnapCoordinate": 11, "flexWrap": 10, "scrollSnapType": 11, "flex": 10, "wrapThrough": 11, "gridAutoColumns": 11, "flexFlow": 10, "gridTemplate": 11, "hyphens": 11, "grid": 11, "transformOriginX": 9, "flowInto": 11, "transformOrigin": 9, "gridAutoFlow": 11, "textSizeAdjust": 11 }, "edge": { "userSelect": 14, "wrapFlow": 14, "wrapThrough": 14, "wrapMargin": 14, "scrollSnapType": 14, "scrollSnapPointsX": 14, "scrollSnapPointsY": 14, "scrollSnapDestination": 14, "scrollSnapCoordinate": 14, "hyphens": 14, "flowInto": 14, "flowFrom": 14, "breakBefore": 14, "breakAfter": 14, "breakInside": 14, "regionFragment": 14, "gridTemplateColumns": 14, "gridTemplateRows": 14, "gridTemplateAreas": 14, "gridTemplate": 14, "gridAutoColumns": 14, "gridAutoRows": 14, "gridAutoFlow": 14, "grid": 14, "gridRowStart": 14, "gridColumnStart": 14, "gridRowEnd": 14, "gridRow": 14, "gridColumn": 14, "gridColumnEnd": 14, "gridColumnGap": 14, "gridRowGap": 14, "gridArea": 14, "gridGap": 14 }, "ios_saf": { "flex": 8.1, "flexBasis": 8.1, "flexDirection": 8.1, "flexGrow": 8.1, "flexFlow": 8.1, "flexShrink": 8.1, "flexWrap": 8.1, "alignContent": 8.1, "alignItems": 8.1, "alignSelf": 8.1, "justifyContent": 8.1, "order": 8.1, "transition": 6, "transitionDelay": 6, "transitionDuration": 6, "transitionProperty": 6, "transitionTimingFunction": 6, "transform": 8.1, "transformOrigin": 8.1, "transformOriginX": 8.1, "transformOriginY": 8.1, "backfaceVisibility": 8.1, "perspective": 8.1, "perspectiveOrigin": 8.1, "transformStyle": 8.1, "transformOriginZ": 8.1, "animation": 8.1, "animationDelay": 8.1, "animationDirection": 8.1, "animationFillMode": 8.1, "animationDuration": 8.1, "animationIterationCount": 8.1, "animationName": 8.1, "animationPlayState": 8.1, "animationTimingFunction": 8.1, "appearance": 9.3, "userSelect": 9.3, "backdropFilter": 9.3, "fontKerning": 9.3, "scrollSnapType": 9.3, "scrollSnapPointsX": 9.3, "scrollSnapPointsY": 9.3, "scrollSnapDestination": 9.3, "scrollSnapCoordinate": 9.3, "boxDecorationBreak": 9.3, "clipPath": 9.3, "maskImage": 9.3, "maskMode": 9.3, "maskRepeat": 9.3, "maskPosition": 9.3, "maskClip": 9.3, "maskOrigin": 9.3, "maskSize": 9.3, "maskComposite": 9.3, "mask": 9.3, "maskBorderSource": 9.3, "maskBorderMode": 9.3, "maskBorderSlice": 9.3, "maskBorderWidth": 9.3, "maskBorderOutset": 9.3, "maskBorderRepeat": 9.3, "maskBorder": 9.3, "maskType": 9.3, "textSizeAdjust": 9.3, "textDecorationStyle": 9.3, "textDecorationSkip": 9.3, "textDecorationLine": 9.3, "textDecorationColor": 9.3, "shapeImageThreshold": 9.3, "shapeImageMargin": 9.3, "shapeImageOutside": 9.3, "filter": 9, "hyphens": 9.3, "flowInto": 9.3, "flowFrom": 9.3, "breakBefore": 8.1, "breakAfter": 8.1, "breakInside": 8.1, "regionFragment": 9.3, "columnCount": 8.1, "columnFill": 8.1, "columnGap": 8.1, "columnRule": 8.1, "columnRuleColor": 8.1, "columnRuleStyle": 8.1, "columnRuleWidth": 8.1, "columns": 8.1, "columnSpan": 8.1, "columnWidth": 8.1 }, "android": { "borderImage": 4.2, "borderImageOutset": 4.2, "borderImageRepeat": 4.2, "borderImageSlice": 4.2, "borderImageSource": 4.2, "borderImageWidth": 4.2, "flex": 4.2, "flexBasis": 4.2, "flexDirection": 4.2, "flexGrow": 4.2, "flexFlow": 4.2, "flexShrink": 4.2, "flexWrap": 4.2, "alignContent": 4.2, "alignItems": 4.2, "alignSelf": 4.2, "justifyContent": 4.2, "order": 4.2, "transition": 4.2, "transitionDelay": 4.2, "transitionDuration": 4.2, "transitionProperty": 4.2, "transitionTimingFunction": 4.2, "transform": 4.4, "transformOrigin": 4.4, "transformOriginX": 4.4, "transformOriginY": 4.4, "backfaceVisibility": 4.4, "perspective": 4.4, "perspectiveOrigin": 4.4, "transformStyle": 4.4, "transformOriginZ": 4.4, "animation": 4.4, "animationDelay": 4.4, "animationDirection": 4.4, "animationFillMode": 4.4, "animationDuration": 4.4, "animationIterationCount": 4.4, "animationName": 4.4, "animationPlayState": 4.4, "animationTimingFunction": 4.4, "appearance": 47, "userSelect": 47, "fontKerning": 4.4, "textEmphasisPosition": 47, "textEmphasis": 47, "textEmphasisStyle": 47, "textEmphasisColor": 47, "boxDecorationBreak": 47, "clipPath": 47, "maskImage": 47, "maskMode": 47, "maskRepeat": 47, "maskPosition": 47, "maskClip": 47, "maskOrigin": 47, "maskSize": 47, "maskComposite": 47, "mask": 47, "maskBorderSource": 47, "maskBorderMode": 47, "maskBorderSlice": 47, "maskBorderWidth": 47, "maskBorderOutset": 47, "maskBorderRepeat": 47, "maskBorder": 47, "maskType": 47, "filter": 47, "fontFeatureSettings": 47, "breakAfter": 47, "breakBefore": 47, "breakInside": 47, "columnCount": 47, "columnFill": 47, "columnGap": 47, "columnRule": 47, "columnRuleColor": 47, "columnRuleStyle": 47, "columnRuleWidth": 47, "columns": 47, "columnSpan": 47, "columnWidth": 47 }, "and_chr": { "appearance": 47, "userSelect": 47, "textEmphasisPosition": 47, "textEmphasis": 47, "textEmphasisStyle": 47, "textEmphasisColor": 47, "boxDecorationBreak": 47, "clipPath": 47, "maskImage": 47, "maskMode": 47, "maskRepeat": 47, "maskPosition": 47, "maskClip": 47, "maskOrigin": 47, "maskSize": 47, "maskComposite": 47, "mask": 47, "maskBorderSource": 47, "maskBorderMode": 47, "maskBorderSlice": 47, "maskBorderWidth": 47, "maskBorderOutset": 47, "maskBorderRepeat": 47, "maskBorder": 47, "maskType": 47, "textDecorationStyle": 47, "textDecorationSkip": 47, "textDecorationLine": 47, "textDecorationColor": 47, "filter": 47, "fontFeatureSettings": 47, "breakAfter": 47, "breakBefore": 47, "breakInside": 47, "columnCount": 47, "columnFill": 47, "columnGap": 47, "columnRule": 47, "columnRuleColor": 47, "columnRuleStyle": 47, "columnRuleWidth": 47, "columns": 47, "columnSpan": 47, "columnWidth": 47 }, "and_uc": { "flex": 9.9, "flexBasis": 9.9, "flexDirection": 9.9, "flexGrow": 9.9, "flexFlow": 9.9, "flexShrink": 9.9, "flexWrap": 9.9, "alignContent": 9.9, "alignItems": 9.9, "alignSelf": 9.9, "justifyContent": 9.9, "order": 9.9, "transition": 9.9, "transitionDelay": 9.9, "transitionDuration": 9.9, "transitionProperty": 9.9, "transitionTimingFunction": 9.9, "transform": 9.9, "transformOrigin": 9.9, "transformOriginX": 9.9, "transformOriginY": 9.9, "backfaceVisibility": 9.9, "perspective": 9.9, "perspectiveOrigin": 9.9, "transformStyle": 9.9, "transformOriginZ": 9.9, "animation": 9.9, "animationDelay": 9.9, "animationDirection": 9.9, "animationFillMode": 9.9, "animationDuration": 9.9, "animationIterationCount": 9.9, "animationName": 9.9, "animationPlayState": 9.9, "animationTimingFunction": 9.9, "appearance": 9.9, "userSelect": 9.9, "fontKerning": 9.9, "textEmphasisPosition": 9.9, "textEmphasis": 9.9, "textEmphasisStyle": 9.9, "textEmphasisColor": 9.9, "maskImage": 9.9, "maskMode": 9.9, "maskRepeat": 9.9, "maskPosition": 9.9, "maskClip": 9.9, "maskOrigin": 9.9, "maskSize": 9.9, "maskComposite": 9.9, "mask": 9.9, "maskBorderSource": 9.9, "maskBorderMode": 9.9, "maskBorderSlice": 9.9, "maskBorderWidth": 9.9, "maskBorderOutset": 9.9, "maskBorderRepeat": 9.9, "maskBorder": 9.9, "maskType": 9.9, "textSizeAdjust": 9.9, "filter": 9.9, "hyphens": 9.9, "flowInto": 9.9, "flowFrom": 9.9, "breakBefore": 9.9, "breakAfter": 9.9, "breakInside": 9.9, "regionFragment": 9.9, "fontFeatureSettings": 9.9, "columnCount": 9.9, "columnFill": 9.9, "columnGap": 9.9, "columnRule": 9.9, "columnRuleColor": 9.9, "columnRuleStyle": 9.9, "columnRuleWidth": 9.9, "columns": 9.9, "columnSpan": 9.9, "columnWidth": 9.9 }, "op_mini": { "borderImage": 5, "borderImageOutset": 5, "borderImageRepeat": 5, "borderImageSlice": 5, "borderImageSource": 5, "borderImageWidth": 5, "tabSize": 5, "objectFit": 5, "objectPosition": 5 } };
+module.exports = exports["default"];
+},{}],61:[function(require,module,exports){
+// leight polyfill for Object.assign
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports["default"] = function (base) {
+  var extend = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+  Object.keys(extend).forEach(function (key) {
+    return base[key] = extend[key];
+  });
+  return base;
+};
+
+module.exports = exports["default"];
+},{}],62:[function(require,module,exports){
+arguments[4][47][0].apply(exports,arguments)
+},{"dup":47}],63:[function(require,module,exports){
+arguments[4][48][0].apply(exports,arguments)
+},{"dup":48}],64:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _bowser = require('bowser');
+
+var _bowser2 = _interopRequireDefault(_bowser);
+
+var vendorPrefixes = {
+  Webkit: ['chrome', 'safari', 'ios', 'android', 'phantom', 'opera', 'webos', 'blackberry', 'bada', 'tizen'],
+  Moz: ['firefox', 'seamonkey', 'sailfish'],
+  ms: ['msie', 'msedge']
+};
+
+var browsers = {
+  chrome: [['chrome']],
+  safari: [['safari']],
+  firefox: [['firefox']],
+  ie: [['msie']],
+  edge: [['msedge']],
+  opera: [['opera']],
+  ios_saf: [['ios', 'mobile'], ['ios', 'tablet']],
+  ie_mob: [['windowsphone', 'mobile', 'msie'], ['windowsphone', 'tablet', 'msie'], ['windowsphone', 'mobile', 'msedge'], ['windowsphone', 'tablet', 'msedge']],
+  op_mini: [['opera', 'mobile'], ['opera', 'tablet']],
+  and_uc: [['android', 'mobile'], ['android', 'tablet']],
+  android: [['android', 'mobile'], ['android', 'tablet']]
+};
+
+/**
+ * Uses bowser to get default browser information such as version and name
+ * Evaluates bowser info and adds vendorPrefix information
+ * @param {string} userAgent - userAgent that gets evaluated
+ */
+
+exports['default'] = function (userAgent) {
+  if (!userAgent) {
+    return false;
+  }
+
+  var info = _bowser2['default']._detect(userAgent);
+
+  Object.keys(vendorPrefixes).forEach(function (prefix) {
+    vendorPrefixes[prefix].forEach(function (browser) {
+      if (info[browser]) {
+        info.prefix = {
+          inline: prefix,
+          css: '-' + prefix.toLowerCase() + '-'
+        };
+      }
+    });
+  });
+
+  var name = '';
+  Object.keys(browsers).forEach(function (browser) {
+    browsers[browser].forEach(function (condition) {
+      var match = 0;
+      condition.forEach(function (single) {
+        if (info[single]) {
+          match += 1;
+        }
+      });
+      if (condition.length === match) {
+        name = browser;
+      }
+    });
+  });
+
+  info.browser = name;
+  // For cordova IOS 8 the version is missing, set truncated osversion to prevent NaN
+  info.version = info.version ? parseFloat(info.version) : parseInt(parseFloat(info.osversion), 10);
+
+  // seperate native android chrome
+  // https://github.com/rofrischmann/inline-style-prefixer/issues/45
+  if (info.browser === 'android' && info.chrome && info.version > 37) {
+    info.browser = 'and_chr';
+  }
+  info.version = parseFloat(info.version);
+  info.osversion = parseFloat(info.osversion);
+  // For android < 4.4 we want to check the osversion
+  // not the chrome version, see issue #26
+  // https://github.com/rofrischmann/inline-style-prefixer/issues/26
+  if (info.browser === 'android' && info.osversion < 5) {
+    info.version = info.osversion;
+  }
+
+  return info;
+};
+
+module.exports = exports['default'];
+},{"bowser":16}],65:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+exports['default'] = function (_ref) {
+  var browser = _ref.browser;
+  var version = _ref.version;
+  var prefix = _ref.prefix;
+
+  var prefixedKeyframes = 'keyframes';
+
+  if (browser === 'chrome' && version < 43 || (browser === 'safari' || browser === 'ios_saf') && version < 9 || browser === 'opera' && version < 30 || browser === 'android' && version <= 4.4 || browser === 'and_uc') {
+    prefixedKeyframes = prefix.css + prefixedKeyframes;
+  }
+  return prefixedKeyframes;
+};
+
+module.exports = exports['default'];
+},{}],66:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+exports['default'] = function (property) {
+  var unprefixed = property.replace(/^(ms|Webkit|Moz|O)/, '');
+  return unprefixed.charAt(0).toLowerCase() + unprefixed.slice(1);
+};
+
+module.exports = exports['default'];
+},{}],67:[function(require,module,exports){
+(function (process){
+/**
+ * Copyright 2013-2015, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ */
+
+'use strict';
+
+/**
+ * Use invariant() to assert state which your program assumes to be true.
+ *
+ * Provide sprintf-style format (only %s is supported) and arguments
+ * to provide information about what broke and what you were
+ * expecting.
+ *
+ * The invariant message will be stripped in production, but the invariant
+ * will remain to ensure logic does not differ in production.
+ */
+
+var invariant = function(condition, format, a, b, c, d, e, f) {
+  if (process.env.NODE_ENV !== 'production') {
+    if (format === undefined) {
+      throw new Error('invariant requires an error message argument');
+    }
+  }
+
+  if (!condition) {
+    var error;
+    if (format === undefined) {
+      error = new Error(
+        'Minified exception occurred; use the non-minified dev environment ' +
+        'for the full error message and additional helpful warnings.'
+      );
+    } else {
+      var args = [a, b, c, d, e, f];
+      var argIndex = 0;
+      error = new Error(
+        format.replace(/%s/g, function() { return args[argIndex++]; })
+      );
+      error.name = 'Invariant Violation';
+    }
+
+    error.framesToPop = 1; // we don't care about invariant's own frame
+    throw error;
+  }
+};
+
+module.exports = invariant;
+
+}).call(this,require('_process'))
+},{"_process":69}],68:[function(require,module,exports){
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+'use strict';
+/* eslint-disable no-unused-vars */
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+function toObject(val) {
+	if (val === null || val === undefined) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
+
+	return Object(val);
+}
+
+function shouldUseNative() {
+	try {
+		if (!Object.assign) {
+			return false;
+		}
+
+		// Detect buggy property enumeration order in older V8 versions.
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
+
+		return true;
+	} catch (err) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
+}
+
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+	var from;
+	var to = toObject(target);
+	var symbols;
+
+	for (var s = 1; s < arguments.length; s++) {
+		from = Object(arguments[s]);
+
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
+
+		if (getOwnPropertySymbols) {
+			symbols = getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
+		}
+	}
+
+	return to;
+};
+
+},{}],69:[function(require,module,exports){
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+},{}],70:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = appendImportantToEachValue;
+
+var _appendPxIfNeeded = require('./append-px-if-needed');
+
+var _appendPxIfNeeded2 = _interopRequireDefault(_appendPxIfNeeded);
+
+var _mapObject = require('./map-object');
+
+var _mapObject2 = _interopRequireDefault(_mapObject);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function appendImportantToEachValue(style) {
+  return (0, _mapObject2.default)(style, function (result, key) {
+    return (0, _appendPxIfNeeded2.default)(key, style[key]) + ' !important';
+  });
+}
+module.exports = exports['default'];
+},{"./append-px-if-needed":71,"./map-object":83}],71:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = appendPxIfNeeded;
+
+
+// Copied from https://github.com/facebook/react/blob/
+// 102cd291899f9942a76c40a0e78920a6fe544dc1/
+// src/renderers/dom/shared/CSSProperty.js
+var isUnitlessNumber = {
+  animationIterationCount: true,
+  boxFlex: true,
+  boxFlexGroup: true,
+  boxOrdinalGroup: true,
+  columnCount: true,
+  flex: true,
+  flexGrow: true,
+  flexPositive: true,
+  flexShrink: true,
+  flexNegative: true,
+  flexOrder: true,
+  gridRow: true,
+  gridColumn: true,
+  fontWeight: true,
+  lineClamp: true,
+  lineHeight: true,
+  opacity: true,
+  order: true,
+  orphans: true,
+  tabSize: true,
+  widows: true,
+  zIndex: true,
+  zoom: true,
+
+  // SVG-related properties
+  fillOpacity: true,
+  stopOpacity: true,
+  strokeDashoffset: true,
+  strokeOpacity: true,
+  strokeWidth: true
+};
+
+function appendPxIfNeeded(propertyName, value) {
+  var needsPxSuffix = !isUnitlessNumber[propertyName] && typeof value === 'number' && value !== 0;
+  return needsPxSuffix ? value + 'px' : value;
+}
+module.exports = exports['default'];
+},{}],72:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+
+var _camelCaseRegex = /([a-z])?([A-Z])/g;
+
+var _camelCaseReplacer = function _camelCaseReplacer(match, p1, p2) {
+  return (p1 || '') + '-' + p2.toLowerCase();
+};
+
+var _camelCaseToDashCase = function _camelCaseToDashCase(s) {
+  return s.replace(_camelCaseRegex, _camelCaseReplacer);
+};
+
+var camelCasePropsToDashCase = function camelCasePropsToDashCase(prefixedStyle) {
+  // Since prefix is expected to work on inline style objects, we must
+  // translate the keys to dash case for rendering to CSS.
+  return Object.keys(prefixedStyle).reduce(function (result, key) {
+    var dashCaseKey = _camelCaseToDashCase(key);
+
+    // Fix IE vendor prefix
+    if (/^ms-/.test(dashCaseKey)) {
+      dashCaseKey = '-' + dashCaseKey;
+    }
+
+    result[dashCaseKey] = prefixedStyle[key];
+    return result;
+  }, {});
+};
+
+exports.default = camelCasePropsToDashCase;
+module.exports = exports['default'];
+},{}],73:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _enhancer = require('../enhancer');
+
+var _enhancer2 = _interopRequireDefault(_enhancer);
+
+var _styleKeeper = require('../style-keeper');
+
+var _styleKeeper2 = _interopRequireDefault(_styleKeeper);
+
+var _styleSheet = require('./style-sheet');
+
+var _styleSheet2 = _interopRequireDefault(_styleSheet);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _getStyleKeeper(instance) {
+  if (!instance._radiumStyleKeeper) {
+    var userAgent = instance.props.radiumConfig && instance.props.radiumConfig.userAgent || instance.context._radiumConfig && instance.context._radiumConfig.userAgent;
+    instance._radiumStyleKeeper = new _styleKeeper2.default(userAgent);
+  }
+
+  return instance._radiumStyleKeeper;
+}
+
+var StyleRoot = function (_Component) {
+  _inherits(StyleRoot, _Component);
+
+  function StyleRoot() {
+    _classCallCheck(this, StyleRoot);
+
+    var _this = _possibleConstructorReturn(this, _Component.apply(this, arguments));
+
+    _getStyleKeeper(_this);
+    return _this;
+  }
+
+  StyleRoot.prototype.getChildContext = function getChildContext() {
+    return { _radiumStyleKeeper: _getStyleKeeper(this) };
+  };
+
+  StyleRoot.prototype.render = function render() {
+    return _react2.default.createElement(
+      'div',
+      this.props,
+      this.props.children,
+      _react2.default.createElement(_styleSheet2.default, null)
+    );
+  };
+
+  return StyleRoot;
+}(_react.Component);
+
+StyleRoot.contextTypes = {
+  _radiumConfig: _react.PropTypes.object,
+  _radiumStyleKeeper: _react.PropTypes.instanceOf(_styleKeeper2.default)
+};
+
+StyleRoot.childContextTypes = {
+  _radiumStyleKeeper: _react.PropTypes.instanceOf(_styleKeeper2.default)
+};
+
+StyleRoot = (0, _enhancer2.default)(StyleRoot);
+
+exports.default = StyleRoot;
+module.exports = exports['default'];
+},{"../enhancer":77,"../style-keeper":98,"./style-sheet":74,"react":"react"}],74:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+
+var _class, _temp;
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _styleKeeper = require('../style-keeper');
+
+var _styleKeeper2 = _interopRequireDefault(_styleKeeper);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var StyleSheet = (_temp = _class = function (_Component) {
+  _inherits(StyleSheet, _Component);
+
+  function StyleSheet() {
+    _classCallCheck(this, StyleSheet);
+
+    var _this = _possibleConstructorReturn(this, _Component.apply(this, arguments));
+
+    _this.state = _this._getCSSState();
+
+    _this._onChange = _this._onChange.bind(_this);
+    return _this;
+  }
+
+  StyleSheet.prototype.componentDidMount = function componentDidMount() {
+    this._isMounted = true;
+    this._subscription = this.context._radiumStyleKeeper.subscribe(this._onChange);
+    this._onChange();
+  };
+
+  StyleSheet.prototype.componentWillUnmount = function componentWillUnmount() {
+    this._isMounted = false;
+    if (this._subscription) {
+      this._subscription.remove();
+    }
+  };
+
+  StyleSheet.prototype._getCSSState = function _getCSSState() {
+    return { css: this.context._radiumStyleKeeper.getCSS() };
+  };
+
+  StyleSheet.prototype._onChange = function _onChange() {
+    var _this2 = this;
+
+    setTimeout(function () {
+      _this2._isMounted && _this2.setState(_this2._getCSSState());
+    }, 0);
+  };
+
+  StyleSheet.prototype.render = function render() {
+    return _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: this.state.css } });
+  };
+
+  return StyleSheet;
+}(_react.Component), _class.contextTypes = {
+  _radiumStyleKeeper: _react2.default.PropTypes.instanceOf(_styleKeeper2.default)
+}, _temp);
+exports.default = StyleSheet;
+module.exports = exports['default'];
+},{"../style-keeper":98,"react":"react"}],75:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+var _cssRuleSetToString = require('../css-rule-set-to-string');
+
+var _cssRuleSetToString2 = _interopRequireDefault(_cssRuleSetToString);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Style = _react2.default.createClass({
+  displayName: 'Style',
+
+  propTypes: {
+    radiumConfig: _react.PropTypes.object,
+    rules: _react.PropTypes.object,
+    scopeSelector: _react.PropTypes.string
+  },
+
+  contextTypes: {
+    _radiumConfig: _react.PropTypes.object
+  },
+
+  getDefaultProps: function getDefaultProps() {
+    return {
+      scopeSelector: ''
+    };
+  },
+  _buildStyles: function _buildStyles(styles) {
+    var _this = this;
+
+    var userAgent = this.props.radiumConfig && this.props.radiumConfig.userAgent || this.context && this.context._radiumConfig && this.context._radiumConfig.userAgent;
+
+    var scopeSelector = this.props.scopeSelector;
+
+    var rootRules = Object.keys(styles).reduce(function (accumulator, selector) {
+      if (_typeof(styles[selector]) !== 'object') {
+        accumulator[selector] = styles[selector];
+      }
+
+      return accumulator;
+    }, {});
+    var rootStyles = Object.keys(rootRules).length ? (0, _cssRuleSetToString2.default)(scopeSelector || '', rootRules, userAgent) : '';
+
+    return rootStyles + Object.keys(styles).reduce(function (accumulator, selector) {
+      var rules = styles[selector];
+
+      if (selector === 'mediaQueries') {
+        accumulator += _this._buildMediaQueryString(rules);
+      } else if (_typeof(styles[selector]) === 'object') {
+        var completeSelector = scopeSelector ? selector.split(',').map(function (part) {
+          return scopeSelector + ' ' + part.trim();
+        }).join(',') : selector;
+
+        accumulator += (0, _cssRuleSetToString2.default)(completeSelector, rules, userAgent);
+      }
+
+      return accumulator;
+    }, '');
+  },
+  _buildMediaQueryString: function _buildMediaQueryString(stylesByMediaQuery) {
+    var _this2 = this;
+
+    var mediaQueryString = '';
+
+    Object.keys(stylesByMediaQuery).forEach(function (query) {
+      mediaQueryString += '@media ' + query + '{' + _this2._buildStyles(stylesByMediaQuery[query]) + '}';
+    });
+
+    return mediaQueryString;
+  },
+  render: function render() {
+    if (!this.props.rules) {
+      return null;
+    }
+
+    var styles = this._buildStyles(this.props.rules);
+
+    return _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: styles } });
+  }
+});
+
+exports.default = Style;
+module.exports = exports['default'];
+},{"../css-rule-set-to-string":76,"react":"react"}],76:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = cssRuleSetToString;
+
+var _appendPxIfNeeded = require('./append-px-if-needed');
+
+var _appendPxIfNeeded2 = _interopRequireDefault(_appendPxIfNeeded);
+
+var _quoteValueIfNeeded = require('./quote-value-if-needed');
+
+var _quoteValueIfNeeded2 = _interopRequireDefault(_quoteValueIfNeeded);
+
+var _camelCasePropsToDashCase = require('./camel-case-props-to-dash-case');
+
+var _camelCasePropsToDashCase2 = _interopRequireDefault(_camelCasePropsToDashCase);
+
+var _mapObject = require('./map-object');
+
+var _mapObject2 = _interopRequireDefault(_mapObject);
+
+var _prefixer = require('./prefixer');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function createMarkupForStyles(style) {
+  return Object.keys(style).map(function (property) {
+    return property + ': ' + (0, _quoteValueIfNeeded2.default)(property, style[property]) + ';';
+  }).join('\n');
+}
+
+function cssRuleSetToString(selector, rules, userAgent) {
+  if (!rules) {
+    return '';
+  }
+
+  var rulesWithPx = (0, _mapObject2.default)(rules, function (value, key) {
+    return (0, _appendPxIfNeeded2.default)(key, value);
+  });
+  var prefixedRules = (0, _prefixer.getPrefixedStyle)(rulesWithPx, userAgent);
+  var cssPrefixedRules = (0, _camelCasePropsToDashCase2.default)(prefixedRules);
+  var serializedRules = createMarkupForStyles(cssPrefixedRules);
+
+  return selector + '{' + serializedRules + '}';
+}
+module.exports = exports['default'];
+},{"./append-px-if-needed":71,"./camel-case-props-to-dash-case":72,"./map-object":83,"./prefixer":95,"./quote-value-if-needed":96}],77:[function(require,module,exports){
+(function (process){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+exports.default = enhanceWithRadium;
+
+var _react = require('react');
+
+var _styleKeeper = require('./style-keeper.js');
+
+var _styleKeeper2 = _interopRequireDefault(_styleKeeper);
+
+var _resolveStyles = require('./resolve-styles.js');
+
+var _resolveStyles2 = _interopRequireDefault(_resolveStyles);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var KEYS_TO_IGNORE_WHEN_COPYING_PROPERTIES = ['arguments', 'callee', 'caller', 'length', 'name', 'prototype', 'type'];
+
+function copyProperties(source, target) {
+  Object.getOwnPropertyNames(source).forEach(function (key) {
+    if (KEYS_TO_IGNORE_WHEN_COPYING_PROPERTIES.indexOf(key) < 0 && !target.hasOwnProperty(key)) {
+      var descriptor = Object.getOwnPropertyDescriptor(source, key);
+      Object.defineProperty(target, key, descriptor);
+    }
+  });
+}
+
+function isStateless(component) {
+  return !component.render && !(component.prototype && component.prototype.render);
+}
+
+function enhanceWithRadium(configOrComposedComponent) {
+  var _class, _temp;
+
+  var config = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+  if (typeof configOrComposedComponent !== 'function') {
+    var _ret = function () {
+      var newConfig = _extends({}, config, configOrComposedComponent);
+      return {
+        v: function v(configOrComponent) {
+          return enhanceWithRadium(configOrComponent, newConfig);
+        }
+      };
+    }();
+
+    if ((typeof _ret === 'undefined' ? 'undefined' : _typeof(_ret)) === "object") return _ret.v;
+  }
+
+  var component = configOrComposedComponent;
+  var ComposedComponent = component;
+
+  // Handle stateless components
+  if (isStateless(ComposedComponent)) {
+    ComposedComponent = function (_Component) {
+      _inherits(ComposedComponent, _Component);
+
+      function ComposedComponent() {
+        _classCallCheck(this, ComposedComponent);
+
+        return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+      }
+
+      ComposedComponent.prototype.render = function render() {
+        return component(this.props, this.context);
+      };
+
+      return ComposedComponent;
+    }(_react.Component);
+    ComposedComponent.displayName = component.displayName || component.name;
+  }
+
+  var RadiumEnhancer = (_temp = _class = function (_ComposedComponent) {
+    _inherits(RadiumEnhancer, _ComposedComponent);
+
+    function RadiumEnhancer() {
+      _classCallCheck(this, RadiumEnhancer);
+
+      var _this2 = _possibleConstructorReturn(this, _ComposedComponent.apply(this, arguments));
+
+      _this2.state = _this2.state || {};
+      _this2.state._radiumStyleState = {};
+      _this2._radiumIsMounted = true;
+      return _this2;
+    }
+
+    RadiumEnhancer.prototype.componentWillUnmount = function componentWillUnmount() {
+      if (_ComposedComponent.prototype.componentWillUnmount) {
+        _ComposedComponent.prototype.componentWillUnmount.call(this);
+      }
+
+      this._radiumIsMounted = false;
+
+      if (this._radiumMouseUpListener) {
+        this._radiumMouseUpListener.remove();
+      }
+
+      if (this._radiumMediaQueryListenersByQuery) {
+        Object.keys(this._radiumMediaQueryListenersByQuery).forEach(function (query) {
+          this._radiumMediaQueryListenersByQuery[query].remove();
+        }, this);
+      }
+    };
+
+    RadiumEnhancer.prototype.getChildContext = function getChildContext() {
+      var superChildContext = _ComposedComponent.prototype.getChildContext ? _ComposedComponent.prototype.getChildContext.call(this) : {};
+
+      if (!this.props.radiumConfig) {
+        return superChildContext;
+      }
+
+      var newContext = _extends({}, superChildContext);
+
+      if (this.props.radiumConfig) {
+        newContext._radiumConfig = this.props.radiumConfig;
+      }
+
+      return newContext;
+    };
+
+    RadiumEnhancer.prototype.render = function render() {
+      var renderedElement = _ComposedComponent.prototype.render.call(this);
+      var currentConfig = this.props.radiumConfig || this.context._radiumConfig || config;
+
+      if (config && currentConfig !== config) {
+        currentConfig = _extends({}, config, currentConfig);
+      }
+
+      return (0, _resolveStyles2.default)(this, renderedElement, currentConfig);
+    };
+
+    return RadiumEnhancer;
+  }(ComposedComponent), _class._isRadiumEnhanced = true, _temp);
+
+  // Class inheritance uses Object.create and because of __proto__ issues
+  // with IE <10 any static properties of the superclass aren't inherited and
+  // so need to be manually populated.
+  // See http://babeljs.io/docs/advanced/caveats/#classes-10-and-below-
+
+  copyProperties(component, RadiumEnhancer);
+
+  if (process.env.NODE_ENV !== 'production') {
+    // This also fixes React Hot Loader by exposing the original components top
+    // level prototype methods on the Radium enhanced prototype as discussed in
+    // https://github.com/FormidableLabs/radium/issues/219.
+    copyProperties(ComposedComponent.prototype, RadiumEnhancer.prototype);
+  }
+
+  if (RadiumEnhancer.propTypes && RadiumEnhancer.propTypes.style) {
+    RadiumEnhancer.propTypes = _extends({}, RadiumEnhancer.propTypes, {
+      style: _react.PropTypes.oneOfType([_react.PropTypes.array, _react.PropTypes.object])
+    });
+  }
+
+  RadiumEnhancer.displayName = component.displayName || component.name || 'Component';
+
+  RadiumEnhancer.contextTypes = _extends({}, RadiumEnhancer.contextTypes, {
+    _radiumConfig: _react.PropTypes.object,
+    _radiumStyleKeeper: _react.PropTypes.instanceOf(_styleKeeper2.default)
+  });
+
+  RadiumEnhancer.childContextTypes = _extends({}, RadiumEnhancer.childContextTypes, {
+    _radiumConfig: _react.PropTypes.object,
+    _radiumStyleKeeper: _react.PropTypes.instanceOf(_styleKeeper2.default)
+  });
+
+  return RadiumEnhancer;
+}
+module.exports = exports['default'];
+}).call(this,require('_process'))
+},{"./resolve-styles.js":97,"./style-keeper.js":98,"_process":69,"react":"react"}],78:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+
+var getStateKey = function getStateKey(elementKey) {
+  return elementKey === null || elementKey === undefined ? 'main' : elementKey.toString();
+};
+
+exports.default = getStateKey;
+module.exports = exports['default'];
+},{}],79:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getStateKey = require('./get-state-key');
+
+var _getStateKey2 = _interopRequireDefault(_getStateKey);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var getState = function getState(state, elementKey, value) {
+  var key = (0, _getStateKey2.default)(elementKey);
+
+  return !!state && !!state._radiumStyleState && !!state._radiumStyleState[key] && state._radiumStyleState[key][value];
+};
+
+exports.default = getState;
+module.exports = exports['default'];
+},{"./get-state-key":78}],80:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = hash;
+
+
+// a simple djb2 hash based on hash-string:
+// https://github.com/MatthewBarker/hash-string/blob/master/source/hash-string.js
+// returns a hex-encoded hash
+function hash(text) {
+  if (!text) {
+    return '';
+  }
+
+  var hashValue = 5381;
+  var index = text.length - 1;
+
+  while (index) {
+    hashValue = hashValue * 33 ^ text.charCodeAt(index);
+    index -= 1;
+  }
+
+  return (hashValue >>> 0).toString(16);
+}
+module.exports = exports['default'];
+},{}],81:[function(require,module,exports){
+(function (process){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _enhancer = require('./enhancer');
+
+var _enhancer2 = _interopRequireDefault(_enhancer);
+
+var _plugins = require('./plugins');
+
+var _plugins2 = _interopRequireDefault(_plugins);
+
+var _style = require('./components/style');
+
+var _style2 = _interopRequireDefault(_style);
+
+var _styleRoot = require('./components/style-root');
+
+var _styleRoot2 = _interopRequireDefault(_styleRoot);
+
+var _getState = require('./get-state');
+
+var _getState2 = _interopRequireDefault(_getState);
+
+var _keyframes = require('./keyframes');
+
+var _keyframes2 = _interopRequireDefault(_keyframes);
+
+var _resolveStyles = require('./resolve-styles');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Radium(ComposedComponent) {
+  return (0, _enhancer2.default)(ComposedComponent);
+}
+
+Radium.Plugins = _plugins2.default;
+Radium.Style = _style2.default;
+Radium.StyleRoot = _styleRoot2.default;
+Radium.getState = _getState2.default;
+Radium.keyframes = _keyframes2.default;
+
+if (process.env.NODE_ENV !== 'production') {
+  Radium.TestMode = {
+    clearState: _resolveStyles.__clearStateForTests,
+    disable: _resolveStyles.__setTestMode.bind(null, false),
+    enable: _resolveStyles.__setTestMode.bind(null, true)
+  };
+}
+
+exports.default = Radium;
+module.exports = exports['default'];
+}).call(this,require('_process'))
+},{"./components/style":75,"./components/style-root":73,"./enhancer":77,"./get-state":79,"./keyframes":82,"./plugins":86,"./resolve-styles":97,"_process":69}],82:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = keyframes;
+
+var _cssRuleSetToString = require('./css-rule-set-to-string');
+
+var _cssRuleSetToString2 = _interopRequireDefault(_cssRuleSetToString);
+
+var _hash = require('./hash');
+
+var _hash2 = _interopRequireDefault(_hash);
+
+var _prefixer = require('./prefixer');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function keyframes(keyframeRules, name) {
+  return {
+    __radiumKeyframes: true,
+    __process: function __process(userAgent) {
+      var keyframesPrefixed = (0, _prefixer.getPrefixedKeyframes)(userAgent);
+      var rules = Object.keys(keyframeRules).map(function (percentage) {
+        return (0, _cssRuleSetToString2.default)(percentage, keyframeRules[percentage], userAgent);
+      }).join('\n');
+      var animationName = (name ? name + '-' : '') + 'radium-animation-' + (0, _hash2.default)(rules);
+      var css = '@' + keyframesPrefixed + ' ' + animationName + ' {\n' + rules + '\n}\n';
+      return { css: css, animationName: animationName };
+    }
+  };
+}
+module.exports = exports['default'];
+},{"./css-rule-set-to-string":76,"./hash":80,"./prefixer":95}],83:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = mapObject;
+function mapObject(object, mapper) {
+  return Object.keys(object).reduce(function (result, key) {
+    result[key] = mapper(object[key], key);
+    return result;
+  }, {});
+}
+module.exports = exports["default"];
+},{}],84:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+exports.isNestedStyle = isNestedStyle;
+exports.mergeStyles = mergeStyles;
+function isNestedStyle(value) {
+  // Don't merge objects overriding toString, since they should be converted
+  // to string values.
+  return value && value.constructor === Object && value.toString === Object.prototype.toString;
+}
+
+// Merge style objects. Deep merge plain object values.
+function mergeStyles(styles) {
+  var result = {};
+
+  styles.forEach(function (style) {
+    if (!style || (typeof style === 'undefined' ? 'undefined' : _typeof(style)) !== 'object') {
+      return;
+    }
+
+    if (Array.isArray(style)) {
+      style = mergeStyles(style);
+    }
+
+    Object.keys(style).forEach(function (key) {
+      // Simple case, nothing nested
+      if (!isNestedStyle(style[key]) || !isNestedStyle(result[key])) {
+        result[key] = style[key];
+        return;
+      }
+
+      // If nested media, don't merge the nested styles, append a space to the
+      // end (benign when converted to CSS). This way we don't end up merging
+      // media queries that appear later in the chain with those that appear
+      // earlier.
+      if (key.indexOf('@media') === 0) {
+        var newKey = key;
+        while (true) {
+          // eslint-disable-line no-constant-condition
+          newKey += ' ';
+          if (!result[newKey]) {
+            result[newKey] = style[key];
+            return;
+          }
+        }
+      }
+
+      // Merge all other nested styles recursively
+      result[key] = mergeStyles([result[key], style[key]]);
+    });
+  });
+
+  return result;
+}
+},{}],85:[function(require,module,exports){
+(function (process){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+var _checkProps = function checkProps() {};
+
+if (process.env.NODE_ENV !== 'production') {
+  (function () {
+    // Warn if you use longhand and shorthand properties in the same style
+    // object.
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties
+
+    var shorthandPropertyExpansions = {
+      'background': ['backgroundAttachment', 'backgroundBlendMode', 'backgroundClip', 'backgroundColor', 'backgroundImage', 'backgroundOrigin', 'backgroundPosition', 'backgroundPositionX', 'backgroundPositionY', 'backgroundRepeat', 'backgroundRepeatX', 'backgroundRepeatY', 'backgroundSize'],
+      'border': ['borderBottom', 'borderBottomColor', 'borderBottomStyle', 'borderBottomWidth', 'borderColor', 'borderLeft', 'borderLeftColor', 'borderLeftStyle', 'borderLeftWidth', 'borderRight', 'borderRightColor', 'borderRightStyle', 'borderRightWidth', 'borderStyle', 'borderTop', 'borderTopColor', 'borderTopStyle', 'borderTopWidth', 'borderWidth'],
+      'borderImage': ['borderImageOutset', 'borderImageRepeat', 'borderImageSlice', 'borderImageSource', 'borderImageWidth'],
+      'borderRadius': ['borderBottomLeftRadius', 'borderBottomRightRadius', 'borderTopLeftRadius', 'borderTopRightRadius'],
+      'font': ['fontFamily', 'fontKerning', 'fontSize', 'fontStretch', 'fontStyle', 'fontVariant', 'fontVariantLigatures', 'fontWeight', 'lineHeight'],
+      'listStyle': ['listStyleImage', 'listStylePosition', 'listStyleType'],
+      'margin': ['marginBottom', 'marginLeft', 'marginRight', 'marginTop'],
+      'padding': ['paddingBottom', 'paddingLeft', 'paddingRight', 'paddingTop'],
+      'transition': ['transitionDelay', 'transitionDuration', 'transitionProperty', 'transitionTimingFunction']
+    };
+
+    _checkProps = function checkProps(config) {
+      var componentName = config.componentName;
+      var style = config.style;
+
+      if ((typeof style === 'undefined' ? 'undefined' : _typeof(style)) !== 'object' || !style) {
+        return;
+      }
+
+      var styleKeys = Object.keys(style);
+      styleKeys.forEach(function (styleKey) {
+        if (Array.isArray(shorthandPropertyExpansions[styleKey]) && shorthandPropertyExpansions[styleKey].some(function (sp) {
+          return styleKeys.indexOf(sp) !== -1;
+        })) {
+          if (process.env.NODE_ENV !== 'production') {
+            /* eslint-disable no-console */
+            console.warn('Radium: property "' + styleKey + '" in style object', style, ': do not mix longhand and ' + 'shorthand properties in the same style object. Check the render ' + 'method of ' + componentName + '.', 'See https://github.com/FormidableLabs/radium/issues/95 for more ' + 'information.');
+            /* eslint-enable no-console */
+          }
+        }
+      });
+
+      styleKeys.forEach(function (k) {
+        return _checkProps(_extends({}, config, { style: style[k] }));
+      });
+      return;
+    };
+  })();
+}
+
+exports.default = _checkProps;
+module.exports = exports['default'];
+}).call(this,require('_process'))
+},{"_process":69}],86:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _checkPropsPlugin = require('./check-props-plugin');
+
+var _checkPropsPlugin2 = _interopRequireDefault(_checkPropsPlugin);
+
+var _keyframesPlugin = require('./keyframes-plugin');
+
+var _keyframesPlugin2 = _interopRequireDefault(_keyframesPlugin);
+
+var _mergeStyleArrayPlugin = require('./merge-style-array-plugin');
+
+var _mergeStyleArrayPlugin2 = _interopRequireDefault(_mergeStyleArrayPlugin);
+
+var _prefixPlugin = require('./prefix-plugin');
+
+var _prefixPlugin2 = _interopRequireDefault(_prefixPlugin);
+
+var _removeNestedStylesPlugin = require('./remove-nested-styles-plugin');
+
+var _removeNestedStylesPlugin2 = _interopRequireDefault(_removeNestedStylesPlugin);
+
+var _resolveInteractionStylesPlugin = require('./resolve-interaction-styles-plugin');
+
+var _resolveInteractionStylesPlugin2 = _interopRequireDefault(_resolveInteractionStylesPlugin);
+
+var _resolveMediaQueriesPlugin = require('./resolve-media-queries-plugin');
+
+var _resolveMediaQueriesPlugin2 = _interopRequireDefault(_resolveMediaQueriesPlugin);
+
+var _visitedPlugin = require('./visited-plugin');
+
+var _visitedPlugin2 = _interopRequireDefault(_visitedPlugin);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  checkProps: _checkPropsPlugin2.default,
+  keyframes: _keyframesPlugin2.default,
+  mergeStyleArray: _mergeStyleArrayPlugin2.default,
+  prefix: _prefixPlugin2.default,
+  removeNestedStyles: _removeNestedStylesPlugin2.default,
+  resolveInteractionStyles: _resolveInteractionStylesPlugin2.default,
+  resolveMediaQueries: _resolveMediaQueriesPlugin2.default,
+  visited: _visitedPlugin2.default
+};
+/* eslint-disable block-scoped-const */
+
+module.exports = exports['default'];
+},{"./check-props-plugin":85,"./keyframes-plugin":87,"./merge-style-array-plugin":88,"./prefix-plugin":90,"./remove-nested-styles-plugin":91,"./resolve-interaction-styles-plugin":92,"./resolve-media-queries-plugin":93,"./visited-plugin":94}],87:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = keyframesPlugin;
+function keyframesPlugin(_ref // eslint-disable-line no-shadow
+) {
+  var addCSS = _ref.addCSS;
+  var config = _ref.config;
+  var style = _ref.style;
+
+  var newStyle = Object.keys(style).reduce(function (newStyleInProgress, key) {
+    var value = style[key];
+    if (key === 'animationName' && value && value.__radiumKeyframes) {
+      var keyframesValue = value;
+
+      var _keyframesValue$__pro = keyframesValue.__process(config.userAgent);
+
+      var animationName = _keyframesValue$__pro.animationName;
+      var css = _keyframesValue$__pro.css;
+
+      addCSS(css);
+      value = animationName;
+    }
+
+    newStyleInProgress[key] = value;
+    return newStyleInProgress;
+  }, {});
+  return { style: newStyle };
+}
+module.exports = exports['default'];
+},{}],88:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+
+// Convenient syntax for multiple styles: `style={[style1, style2, etc]}`
+// Ignores non-objects, so you can do `this.state.isCool && styles.cool`.
+var mergeStyleArrayPlugin = function mergeStyleArrayPlugin(_ref) {
+  var style = _ref.style;
+  var mergeStyles = _ref.mergeStyles;
+  // eslint-disable-line no-shadow
+  var newStyle = Array.isArray(style) ? mergeStyles(style) : style;
+  return { style: newStyle };
+};
+
+exports.default = mergeStyleArrayPlugin;
+module.exports = exports['default'];
+},{}],89:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+
+var _callbacks = [];
+var _mouseUpListenerIsActive = false;
+
+function _handleMouseUp() {
+  _callbacks.forEach(function (callback) {
+    callback();
+  });
+}
+
+var subscribe = function subscribe(callback) {
+  if (_callbacks.indexOf(callback) === -1) {
+    _callbacks.push(callback);
+  }
+
+  if (!_mouseUpListenerIsActive) {
+    window.addEventListener('mouseup', _handleMouseUp);
+    _mouseUpListenerIsActive = true;
+  }
+
+  return {
+    remove: function remove() {
+      var index = _callbacks.indexOf(callback);
+      _callbacks.splice(index, 1);
+
+      if (_callbacks.length === 0 && _mouseUpListenerIsActive) {
+        window.removeEventListener('mouseup', _handleMouseUp);
+        _mouseUpListenerIsActive = false;
+      }
+    }
+  };
+};
+
+exports.default = {
+  subscribe: subscribe,
+  __triggerForTests: _handleMouseUp
+};
+module.exports = exports['default'];
+},{}],90:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = prefixPlugin;
+
+var _prefixer = require('../prefixer');
+
+function prefixPlugin(_ref // eslint-disable-line no-shadow
+) {
+  var config = _ref.config;
+  var style = _ref.style;
+
+  var newStyle = (0, _prefixer.getPrefixedStyle)(style, config.userAgent);
+  return { style: newStyle };
+}
+module.exports = exports['default'];
+},{"../prefixer":95}],91:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = removeNestedStyles;
+function removeNestedStyles(_ref) {
+  var isNestedStyle = _ref.isNestedStyle;
+  var style = _ref.style;
+  // eslint-disable-line no-shadow
+  var newStyle = Object.keys(style).reduce(function (newStyleInProgress, key) {
+    var value = style[key];
+    if (!isNestedStyle(value)) {
+      newStyleInProgress[key] = value;
+    }
+    return newStyleInProgress;
+  }, {});
+
+  return {
+    style: newStyle
+  };
+}
+module.exports = exports['default'];
+},{}],92:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _mouseUpListener = require('./mouse-up-listener');
+
+var _mouseUpListener2 = _interopRequireDefault(_mouseUpListener);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _isInteractiveStyleField = function _isInteractiveStyleField(styleFieldName) {
+  return styleFieldName === ':hover' || styleFieldName === ':active' || styleFieldName === ':focus';
+};
+
+var resolveInteractionStyles = function resolveInteractionStyles(config) {
+  var ExecutionEnvironment = config.ExecutionEnvironment;
+  var getComponentField = config.getComponentField;
+  var getState = config.getState;
+  var mergeStyles = config.mergeStyles;
+  var props = config.props;
+  var setState = config.setState;
+  var style = config.style;
+
+
+  var newComponentFields = {};
+  var newProps = {};
+
+  // Only add handlers if necessary
+  if (style[':hover']) {
+    (function () {
+      // Always call the existing handler if one is already defined.
+      // This code, and the very similar ones below, could be abstracted a bit
+      // more, but it hurts readability IMO.
+      var existingOnMouseEnter = props.onMouseEnter;
+      newProps.onMouseEnter = function (e) {
+        existingOnMouseEnter && existingOnMouseEnter(e);
+        setState(':hover', true);
+      };
+
+      var existingOnMouseLeave = props.onMouseLeave;
+      newProps.onMouseLeave = function (e) {
+        existingOnMouseLeave && existingOnMouseLeave(e);
+        setState(':hover', false);
+      };
+    })();
+  }
+
+  if (style[':active']) {
+    (function () {
+      var existingOnMouseDown = props.onMouseDown;
+      newProps.onMouseDown = function (e) {
+        existingOnMouseDown && existingOnMouseDown(e);
+        newComponentFields._lastMouseDown = Date.now();
+        setState(':active', 'viamousedown');
+      };
+
+      var existingOnKeyDown = props.onKeyDown;
+      newProps.onKeyDown = function (e) {
+        existingOnKeyDown && existingOnKeyDown(e);
+        if (e.key === ' ' || e.key === 'Enter') {
+          setState(':active', 'viakeydown');
+        }
+      };
+
+      var existingOnKeyUp = props.onKeyUp;
+      newProps.onKeyUp = function (e) {
+        existingOnKeyUp && existingOnKeyUp(e);
+        if (e.key === ' ' || e.key === 'Enter') {
+          setState(':active', false);
+        }
+      };
+    })();
+  }
+
+  if (style[':focus']) {
+    (function () {
+      var existingOnFocus = props.onFocus;
+      newProps.onFocus = function (e) {
+        existingOnFocus && existingOnFocus(e);
+        setState(':focus', true);
+      };
+
+      var existingOnBlur = props.onBlur;
+      newProps.onBlur = function (e) {
+        existingOnBlur && existingOnBlur(e);
+        setState(':focus', false);
+      };
+    })();
+  }
+
+  if (style[':active'] && !getComponentField('_radiumMouseUpListener') && ExecutionEnvironment.canUseEventListeners) {
+    newComponentFields._radiumMouseUpListener = _mouseUpListener2.default.subscribe(function () {
+      Object.keys(getComponentField('state')._radiumStyleState).forEach(function (key) {
+        if (getState(':active', key) === 'viamousedown') {
+          setState(':active', false, key);
+        }
+      });
+    });
+  }
+
+  // Merge the styles in the order they were defined
+  var interactionStyles = props.disabled ? [style[':disabled']] : Object.keys(style).filter(function (name) {
+    return _isInteractiveStyleField(name) && getState(name);
+  }).map(function (name) {
+    return style[name];
+  });
+
+  var newStyle = mergeStyles([style].concat(interactionStyles));
+
+  // Remove interactive styles
+  newStyle = Object.keys(newStyle).reduce(function (styleWithoutInteractions, name) {
+    if (!_isInteractiveStyleField(name) && name !== ':disabled') {
+      styleWithoutInteractions[name] = newStyle[name];
+    }
+    return styleWithoutInteractions;
+  }, {});
+
+  return {
+    componentFields: newComponentFields,
+    props: newProps,
+    style: newStyle
+  };
+};
+
+exports.default = resolveInteractionStyles;
+module.exports = exports['default'];
+},{"./mouse-up-listener":89}],93:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+exports.default = resolveMediaQueries;
+
+
+var _windowMatchMedia = void 0;
+function _getWindowMatchMedia(ExecutionEnvironment) {
+  if (_windowMatchMedia === undefined) {
+    _windowMatchMedia = !!ExecutionEnvironment.canUseDOM && !!window && !!window.matchMedia && function (mediaQueryString) {
+      return window.matchMedia(mediaQueryString);
+    } || null;
+  }
+  return _windowMatchMedia;
+}
+
+function _filterObject(obj, predicate) {
+  return Object.keys(obj).filter(function (key) {
+    return predicate(obj[key], key);
+  }).reduce(function (result, key) {
+    result[key] = obj[key];
+    return result;
+  }, {});
+}
+
+function _removeMediaQueries(style) {
+  return Object.keys(style).reduce(function (styleWithoutMedia, key) {
+    if (key.indexOf('@media') !== 0) {
+      styleWithoutMedia[key] = style[key];
+    }
+    return styleWithoutMedia;
+  }, {});
+}
+
+function _topLevelRulesToCSS(_ref) {
+  var addCSS = _ref.addCSS;
+  var appendImportantToEachValue = _ref.appendImportantToEachValue;
+  var cssRuleSetToString = _ref.cssRuleSetToString;
+  var hash = _ref.hash;
+  var isNestedStyle = _ref.isNestedStyle;
+  var style = _ref.style;
+  var userAgent = _ref.userAgent;
+
+  var className = '';
+  Object.keys(style).filter(function (name) {
+    return name.indexOf('@media') === 0;
+  }).map(function (query) {
+    var topLevelRules = appendImportantToEachValue(_filterObject(style[query], function (value) {
+      return !isNestedStyle(value);
+    }));
+
+    if (!Object.keys(topLevelRules).length) {
+      return;
+    }
+
+    var ruleCSS = cssRuleSetToString('', topLevelRules, userAgent);
+
+    // CSS classes cannot start with a number
+    var mediaQueryClassName = 'rmq-' + hash(query + ruleCSS);
+    var css = query + '{ .' + mediaQueryClassName + ruleCSS + '}';
+
+    addCSS(css);
+
+    className += (className ? ' ' : '') + mediaQueryClassName;
+  });
+  return className;
+}
+
+function _subscribeToMediaQuery(_ref2) {
+  var listener = _ref2.listener;
+  var listenersByQuery = _ref2.listenersByQuery;
+  var matchMedia = _ref2.matchMedia;
+  var mediaQueryListsByQuery = _ref2.mediaQueryListsByQuery;
+  var query = _ref2.query;
+
+  query = query.replace('@media ', '');
+
+  var mql = mediaQueryListsByQuery[query];
+  if (!mql && matchMedia) {
+    mediaQueryListsByQuery[query] = mql = matchMedia(query);
+  }
+
+  if (!listenersByQuery || !listenersByQuery[query]) {
+    mql.addListener(listener);
+
+    listenersByQuery[query] = {
+      remove: function remove() {
+        mql.removeListener(listener);
+      }
+    };
+  }
+  return mql;
+}
+
+function resolveMediaQueries(_ref3) {
+  var ExecutionEnvironment = _ref3.ExecutionEnvironment;
+  var addCSS = _ref3.addCSS;
+  var appendImportantToEachValue = _ref3.appendImportantToEachValue;
+  var config = _ref3.config;
+  var cssRuleSetToString = _ref3.cssRuleSetToString;
+  var getComponentField = _ref3.getComponentField;
+  var getGlobalState = _ref3.getGlobalState;
+  var hash = _ref3.hash;
+  var isNestedStyle = _ref3.isNestedStyle;
+  var mergeStyles = _ref3.mergeStyles;
+  var props = _ref3.props;
+  var setState = _ref3.setState;
+  var style = _ref3.style;
+  // eslint-disable-line no-shadow
+  var newStyle = _removeMediaQueries(style);
+  var mediaQueryClassNames = _topLevelRulesToCSS({
+    addCSS: addCSS,
+    appendImportantToEachValue: appendImportantToEachValue,
+    cssRuleSetToString: cssRuleSetToString,
+    hash: hash,
+    isNestedStyle: isNestedStyle,
+    style: style,
+    userAgent: config.userAgent
+  });
+
+  var newProps = mediaQueryClassNames ? {
+    className: mediaQueryClassNames + (props.className ? ' ' + props.className : '')
+  } : null;
+
+  var matchMedia = config.matchMedia || _getWindowMatchMedia(ExecutionEnvironment);
+
+  if (!matchMedia) {
+    return {
+      props: newProps,
+      style: newStyle
+    };
+  }
+
+  var listenersByQuery = _extends({}, getComponentField('_radiumMediaQueryListenersByQuery'));
+  var mediaQueryListsByQuery = getGlobalState('mediaQueryListsByQuery') || {};
+
+  Object.keys(style).filter(function (name) {
+    return name.indexOf('@media') === 0;
+  }).map(function (query) {
+    var nestedRules = _filterObject(style[query], isNestedStyle);
+
+    if (!Object.keys(nestedRules).length) {
+      return;
+    }
+
+    var mql = _subscribeToMediaQuery({
+      listener: function listener() {
+        return setState(query, mql.matches, '_all');
+      },
+      listenersByQuery: listenersByQuery,
+      matchMedia: matchMedia,
+      mediaQueryListsByQuery: mediaQueryListsByQuery,
+      query: query
+    });
+
+    // Apply media query states
+    if (mql.matches) {
+      newStyle = mergeStyles([newStyle, nestedRules]);
+    }
+  });
+
+  return {
+    componentFields: {
+      _radiumMediaQueryListenersByQuery: listenersByQuery
+    },
+    globalState: { mediaQueryListsByQuery: mediaQueryListsByQuery },
+    props: newProps,
+    style: newStyle
+  };
+}
+module.exports = exports['default'];
+},{}],94:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = visited;
+function visited(_ref) {
+  var addCSS = _ref.addCSS;
+  var appendImportantToEachValue = _ref.appendImportantToEachValue;
+  var config = _ref.config;
+  var cssRuleSetToString = _ref.cssRuleSetToString;
+  var hash = _ref.hash;
+  var props = _ref.props;
+  var style = _ref.style;
+  // eslint-disable-line no-shadow
+  var className = props.className;
+
+  var newStyle = Object.keys(style).reduce(function (newStyleInProgress, key) {
+    var value = style[key];
+    if (key === ':visited') {
+      value = appendImportantToEachValue(value);
+      var ruleCSS = cssRuleSetToString('', value, config.userAgent);
+      var visitedClassName = 'rad-' + hash(ruleCSS);
+      var css = '.' + visitedClassName + ':visited' + ruleCSS;
+
+      addCSS(css);
+      className = (className ? className + ' ' : '') + visitedClassName;
+    } else {
+      newStyleInProgress[key] = value;
+    }
+
+    return newStyleInProgress;
+  }, {});
+
+  return {
+    props: className === props.className ? null : { className: className },
+    style: newStyle
+  };
+}
+module.exports = exports['default'];
+},{}],95:[function(require,module,exports){
+(function (process,global){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; }; /**
+                                                                                                                                                                                                                                                   * Based on https://github.com/jsstyles/css-vendor, but without having to
+                                                                                                                                                                                                                                                   * convert between different cases all the time.
+                                                                                                                                                                                                                                                   *
+                                                                                                                                                                                                                                                   * 
+                                                                                                                                                                                                                                                   */
+
+exports.getPrefixedKeyframes = getPrefixedKeyframes;
+exports.getPrefixedStyle = getPrefixedStyle;
+
+var _inlineStylePrefixer = require('inline-style-prefixer');
+
+var _inlineStylePrefixer2 = _interopRequireDefault(_inlineStylePrefixer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function transformValues(style) {
+  return Object.keys(style).reduce(function (newStyle, key) {
+    var value = style[key];
+    if (Array.isArray(value)) {
+      value = value.join(';' + key + ':');
+    } else if (value && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object' && typeof value.toString === 'function') {
+      value = value.toString();
+    }
+
+    newStyle[key] = value;
+    return newStyle;
+  }, {});
+}
+
+var _hasWarnedAboutUserAgent = false;
+var _lastUserAgent = void 0;
+var _cachedPrefixer = void 0;
+
+function getPrefixer(userAgent) {
+  var actualUserAgent = userAgent || global && global.navigator && global.navigator.userAgent;
+
+  if (process.env.NODE_ENV !== 'production') {
+    if (!actualUserAgent && !_hasWarnedAboutUserAgent) {
+      /* eslint-disable no-console */
+      console.warn('Radium: userAgent should be supplied for server-side rendering. See ' + 'https://github.com/FormidableLabs/radium/tree/master/docs/api#radium ' + 'for more information.');
+      /* eslint-enable no-console */
+      _hasWarnedAboutUserAgent = true;
+    }
+  }
+
+  if (!_cachedPrefixer || actualUserAgent !== _lastUserAgent) {
+    if (actualUserAgent === 'all') {
+      _cachedPrefixer = {
+        prefix: _inlineStylePrefixer2.default.prefixAll,
+        prefixedKeyframes: 'keyframes'
+      };
+    } else {
+      _cachedPrefixer = new _inlineStylePrefixer2.default({ userAgent: actualUserAgent });
+    }
+    _lastUserAgent = actualUserAgent;
+  }
+  return _cachedPrefixer;
+}
+
+function getPrefixedKeyframes(userAgent) {
+  return getPrefixer(userAgent).prefixedKeyframes;
+}
+
+// Returns a new style object with vendor prefixes added to property names
+// and values.
+function getPrefixedStyle(style, userAgent) {
+  var styleWithFallbacks = transformValues(style);
+  var prefixer = getPrefixer(userAgent);
+  var prefixedStyle = prefixer.prefix(styleWithFallbacks);
+  return prefixedStyle;
+}
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"_process":69,"inline-style-prefixer":51}],96:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = quoteValueIfNeeded;
+
+
+var quotedProperties = ['content'];
+
+function quoteValueIfNeeded(property, value) {
+  return quotedProperties.indexOf(property) >= 0 ? '"' + value + '"' : value;
+}
+module.exports = exports['default'];
+},{}],97:[function(require,module,exports){
+(function (process){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+var _appendImportantToEachValue = require('./append-important-to-each-value');
+
+var _appendImportantToEachValue2 = _interopRequireDefault(_appendImportantToEachValue);
+
+var _cssRuleSetToString = require('./css-rule-set-to-string');
+
+var _cssRuleSetToString2 = _interopRequireDefault(_cssRuleSetToString);
+
+var _getState = require('./get-state');
+
+var _getState2 = _interopRequireDefault(_getState);
+
+var _getStateKey = require('./get-state-key');
+
+var _getStateKey2 = _interopRequireDefault(_getStateKey);
+
+var _hash = require('./hash');
+
+var _hash2 = _interopRequireDefault(_hash);
+
+var _mergeStyles = require('./merge-styles');
+
+var _plugins = require('./plugins/');
+
+var _plugins2 = _interopRequireDefault(_plugins);
+
+var _exenv = require('exenv');
+
+var _exenv2 = _interopRequireDefault(_exenv);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DEFAULT_CONFIG = {
+  plugins: [_plugins2.default.mergeStyleArray, _plugins2.default.checkProps, _plugins2.default.resolveMediaQueries, _plugins2.default.resolveInteractionStyles, _plugins2.default.keyframes, _plugins2.default.visited, _plugins2.default.removeNestedStyles, _plugins2.default.prefix, _plugins2.default.checkProps]
+};
+
+// Gross
+var globalState = {};
+
+// Declare early for recursive helpers.
+var resolveStyles = null;
+
+var _shouldResolveStyles = function _shouldResolveStyles(component) {
+  return component.type && !component.type._isRadiumEnhanced;
+};
+
+var _resolveChildren = function _resolveChildren(_ref) {
+  var children = _ref.children;
+  var component = _ref.component;
+  var config = _ref.config;
+  var existingKeyMap = _ref.existingKeyMap;
+
+  if (!children) {
+    return children;
+  }
+
+  var childrenType = typeof children === 'undefined' ? 'undefined' : _typeof(children);
+
+  if (childrenType === 'string' || childrenType === 'number') {
+    // Don't do anything with a single primitive child
+    return children;
+  }
+
+  if (childrenType === 'function') {
+    // Wrap the function, resolving styles on the result
+    return function () {
+      var result = children.apply(this, arguments);
+      if (_react2.default.isValidElement(result)) {
+        return resolveStyles(component, result, config, existingKeyMap, true);
+      }
+      return result;
+    };
+  }
+
+  if (_react2.default.Children.count(children) === 1 && children.type) {
+    // If a React Element is an only child, don't wrap it in an array for
+    // React.Children.map() for React.Children.only() compatibility.
+    var onlyChild = _react2.default.Children.only(children);
+    return resolveStyles(component, onlyChild, config, existingKeyMap, true);
+  }
+
+  return _react2.default.Children.map(children, function (child) {
+    if (_react2.default.isValidElement(child)) {
+      return resolveStyles(component, child, config, existingKeyMap, true);
+    }
+
+    return child;
+  });
+};
+
+// Recurse over props, just like children
+var _resolveProps = function _resolveProps(_ref2) {
+  var component = _ref2.component;
+  var config = _ref2.config;
+  var existingKeyMap = _ref2.existingKeyMap;
+  var props = _ref2.props;
+
+  var newProps = props;
+
+  Object.keys(props).forEach(function (prop) {
+    // We already recurse over children above
+    if (prop === 'children') {
+      return;
+    }
+
+    var propValue = props[prop];
+    if (_react2.default.isValidElement(propValue)) {
+      newProps = _extends({}, newProps);
+      newProps[prop] = resolveStyles(component, propValue, config, existingKeyMap, true);
+    }
+  });
+
+  return newProps;
+};
+
+var _buildGetKey = function _buildGetKey(_ref3) {
+  var componentName = _ref3.componentName;
+  var existingKeyMap = _ref3.existingKeyMap;
+  var renderedElement = _ref3.renderedElement;
+
+  // We need a unique key to correlate state changes due to user interaction
+  // with the rendered element, so we know to apply the proper interactive
+  // styles.
+  var originalKey = typeof renderedElement.ref === 'string' ? renderedElement.ref : renderedElement.key;
+  var key = (0, _getStateKey2.default)(originalKey);
+
+  var alreadyGotKey = false;
+  var getKey = function getKey() {
+    if (alreadyGotKey) {
+      return key;
+    }
+
+    alreadyGotKey = true;
+
+    if (existingKeyMap[key]) {
+      var elementName = void 0;
+      if (typeof renderedElement.type === 'string') {
+        elementName = renderedElement.type;
+      } else if (renderedElement.type.constructor) {
+        elementName = renderedElement.type.constructor.displayName || renderedElement.type.constructor.name;
+      }
+
+      throw new Error('Radium requires each element with interactive styles to have a unique ' + 'key, set using either the ref or key prop. ' + (originalKey ? 'Key "' + originalKey + '" is a duplicate.' : 'Multiple elements have no key specified.') + ' ' + 'Component: "' + componentName + '". ' + (elementName ? 'Element: "' + elementName + '".' : ''));
+    }
+
+    existingKeyMap[key] = true;
+
+    return key;
+  };
+
+  return getKey;
+};
+
+var _setStyleState = function _setStyleState(component, key, stateKey, value) {
+  if (!component._radiumIsMounted) {
+    return;
+  }
+
+  var existing = component._lastRadiumState || component.state && component.state._radiumStyleState || {};
+
+  var state = { _radiumStyleState: _extends({}, existing) };
+  state._radiumStyleState[key] = _extends({}, state._radiumStyleState[key]);
+  state._radiumStyleState[key][stateKey] = value;
+
+  component._lastRadiumState = state._radiumStyleState;
+  component.setState(state);
+};
+
+var _runPlugins = function _runPlugins(_ref4) {
+  var component = _ref4.component;
+  var config = _ref4.config;
+  var existingKeyMap = _ref4.existingKeyMap;
+  var props = _ref4.props;
+  var renderedElement = _ref4.renderedElement;
+
+  // Don't run plugins if renderedElement is not a simple ReactDOMElement or has
+  // no style.
+  if (!_react2.default.isValidElement(renderedElement) || typeof renderedElement.type !== 'string' || !props.style) {
+    return props;
+  }
+
+  var newProps = props;
+
+  var plugins = config.plugins || DEFAULT_CONFIG.plugins;
+
+  var componentName = component.constructor.displayName || component.constructor.name;
+  var getKey = _buildGetKey({ renderedElement: renderedElement, existingKeyMap: existingKeyMap, componentName: componentName });
+  var getComponentField = function getComponentField(key) {
+    return component[key];
+  };
+  var getGlobalState = function getGlobalState(key) {
+    return globalState[key];
+  };
+  var componentGetState = function componentGetState(stateKey, elementKey) {
+    return (0, _getState2.default)(component.state, elementKey || getKey(), stateKey);
+  };
+  var setState = function setState(stateKey, value, elementKey) {
+    return _setStyleState(component, elementKey || getKey(), stateKey, value);
+  };
+
+  var addCSS = function addCSS(css) {
+    var styleKeeper = component._radiumStyleKeeper || component.context._radiumStyleKeeper;
+    if (!styleKeeper) {
+      if (__isTestModeEnabled) {
+        return {
+          remove: function remove() {}
+        };
+      }
+
+      throw new Error('To use plugins requiring `addCSS` (e.g. keyframes, media queries), ' + 'please wrap your application in the StyleRoot component. Component ' + 'name: `' + componentName + '`.');
+    }
+
+    return styleKeeper.addCSS(css);
+  };
+
+  var newStyle = props.style;
+
+  plugins.forEach(function (plugin) {
+    var result = plugin({
+      ExecutionEnvironment: _exenv2.default,
+      addCSS: addCSS,
+      appendImportantToEachValue: _appendImportantToEachValue2.default,
+      componentName: componentName,
+      config: config,
+      cssRuleSetToString: _cssRuleSetToString2.default,
+      getComponentField: getComponentField,
+      getGlobalState: getGlobalState,
+      getState: componentGetState,
+      hash: _hash2.default,
+      mergeStyles: _mergeStyles.mergeStyles,
+      props: newProps,
+      setState: setState,
+      isNestedStyle: _mergeStyles.isNestedStyle,
+      style: newStyle
+    }) || {};
+
+    newStyle = result.style || newStyle;
+
+    newProps = result.props && Object.keys(result.props).length ? _extends({}, newProps, result.props) : newProps;
+
+    var newComponentFields = result.componentFields || {};
+    Object.keys(newComponentFields).forEach(function (fieldName) {
+      component[fieldName] = newComponentFields[fieldName];
+    });
+
+    var newGlobalState = result.globalState || {};
+    Object.keys(newGlobalState).forEach(function (key) {
+      globalState[key] = newGlobalState[key];
+    });
+  });
+
+  if (newStyle !== props.style) {
+    newProps = _extends({}, newProps, { style: newStyle });
+  }
+
+  return newProps;
+};
+
+// Wrapper around React.cloneElement. To avoid processing the same element
+// twice, whenever we clone an element add a special prop to make sure we don't
+// process this element again.
+var _cloneElement = function _cloneElement(renderedElement, newProps, newChildren) {
+  // Only add flag if this is a normal DOM element
+  if (typeof renderedElement.type === 'string') {
+    newProps = _extends({}, newProps, { _radiumDidResolveStyles: true });
+  }
+
+  return _react2.default.cloneElement(renderedElement, newProps, newChildren);
+};
+
+//
+// The nucleus of Radium. resolveStyles is called on the rendered elements
+// before they are returned in render. It iterates over the elements and
+// children, rewriting props to add event handlers required to capture user
+// interactions (e.g. mouse over). It also replaces the style prop because it
+// adds in the various interaction styles (e.g. :hover).
+//
+resolveStyles = function resolveStyles(component, // ReactComponent, flow+eslint complaining
+renderedElement) {
+  var // ReactElement
+  config = arguments.length <= 2 || arguments[2] === undefined ? DEFAULT_CONFIG : arguments[2];
+  var existingKeyMap = arguments[3];
+  var shouldCheckBeforeResolve = arguments.length <= 4 || arguments[4] === undefined ? false : arguments[4];
+  // ReactElement
+  existingKeyMap = existingKeyMap || {};
+  if (!renderedElement ||
+  // Bail if we've already processed this element. This ensures that only the
+  // owner of an element processes that element, since the owner's render
+  // function will be called first (which will always be the case, since you
+  // can't know what else to render until you render the parent component).
+  renderedElement.props && renderedElement.props._radiumDidResolveStyles ||
+
+  // Bail if this element is a radium enhanced element, because if it is,
+  // then it will take care of resolving its own styles.
+  shouldCheckBeforeResolve && !_shouldResolveStyles(renderedElement)) {
+    return renderedElement;
+  }
+
+  var newChildren = _resolveChildren({
+    children: renderedElement.props.children,
+    component: component,
+    config: config,
+    existingKeyMap: existingKeyMap
+  });
+
+  var newProps = _resolveProps({
+    component: component,
+    config: config,
+    existingKeyMap: existingKeyMap,
+    props: renderedElement.props
+  });
+
+  newProps = _runPlugins({
+    component: component,
+    config: config,
+    existingKeyMap: existingKeyMap,
+    props: newProps,
+    renderedElement: renderedElement
+  });
+
+  // If nothing changed, don't bother cloning the element. Might be a bit
+  // wasteful, as we add the sentinal to stop double-processing when we clone.
+  // Assume benign double-processing is better than unneeded cloning.
+  if (newChildren === renderedElement.props.children && newProps === renderedElement.props) {
+    return renderedElement;
+  }
+
+  return _cloneElement(renderedElement, newProps !== renderedElement.props ? newProps : {}, newChildren);
+};
+
+// Only for use by tests
+var __isTestModeEnabled = false;
+if (process.env.NODE_ENV !== 'production') {
+  resolveStyles.__clearStateForTests = function () {
+    globalState = {};
+  };
+  resolveStyles.__setTestMode = function (isEnabled) {
+    __isTestModeEnabled = isEnabled;
+  };
+}
+
+exports.default = resolveStyles;
+module.exports = exports['default'];
+}).call(this,require('_process'))
+},{"./append-important-to-each-value":70,"./css-rule-set-to-string":76,"./get-state":79,"./get-state-key":78,"./hash":80,"./merge-styles":84,"./plugins/":86,"_process":69,"exenv":21,"react":"react"}],98:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var StyleKeeper = function () {
+  function StyleKeeper(userAgent) {
+    _classCallCheck(this, StyleKeeper);
+
+    this._userAgent = userAgent;
+    this._listeners = [];
+    this._cssSet = {};
+  }
+
+  StyleKeeper.prototype.subscribe = function subscribe(listener) {
+    var _this = this;
+
+    if (this._listeners.indexOf(listener) === -1) {
+      this._listeners.push(listener);
+    }
+
+    return {
+      // Must be fat arrow to capture `this`
+      remove: function remove() {
+        var listenerIndex = _this._listeners.indexOf(listener);
+        if (listenerIndex > -1) {
+          _this._listeners.splice(listenerIndex, 1);
+        }
+      }
+    };
+  };
+
+  StyleKeeper.prototype.addCSS = function addCSS(css) {
+    var _this2 = this;
+
+    if (!this._cssSet[css]) {
+      this._cssSet[css] = true;
+      this._emitChange();
+    }
+
+    return {
+      // Must be fat arrow to capture `this`
+      remove: function remove() {
+        delete _this2._cssSet[css];
+        _this2._emitChange();
+      }
+    };
+  };
+
+  StyleKeeper.prototype.getCSS = function getCSS() {
+    return Object.keys(this._cssSet).join('\n');
+  };
+
+  StyleKeeper.prototype._emitChange = function _emitChange() {
+    this._listeners.forEach(function (listener) {
+      return listener();
+    });
+  };
+
+  return StyleKeeper;
+}();
+
+exports.default = StyleKeeper;
+module.exports = exports['default'];
+},{}],99:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { 'default': obj };
+}
+var _react = require('react');
+var _react2 = _interopRequireDefault(_react);
+var _radium = require('radium');
+var _radium2 = _interopRequireDefault(_radium);
+var BurgerIcon = (0, _radium2['default'])(_react2['default'].createClass({
+        propTypes: {
+            customIcon: _react2['default'].PropTypes.element,
+            styles: _react2['default'].PropTypes.object
+        },
+        getLineStyle: function getLineStyle(index) {
+            return {
+                position: 'absolute',
+                height: '20%',
+                left: 0,
+                right: 0,
+                top: 20 * (index * 2) + '%',
+                opacity: this.state.hover ? 0.6 : 1
+            };
+        },
+        handleHover: function handleHover() {
+            this.setState({ hover: !this.state.hover });
+        },
+        getInitialState: function getInitialState() {
+            return { hover: false };
+        },
+        getDefaultProps: function getDefaultProps() {
+            return { styles: {} };
+        },
+        render: function render() {
+            var icon = undefined;
+            var buttonStyle = {
+                    position: 'absolute',
+                    left: 0,
+                    top: 0,
+                    width: '100%',
+                    height: '100%',
+                    margin: 0,
+                    padding: 0,
+                    border: 'none',
+                    opacity: 0,
+                    fontSize: 8
+                };
+            if (this.props.customIcon) {
+                var extraProps = {
+                        className: 'bm-icon',
+                        style: [
+                            {
+                                width: '100%',
+                                height: '100%'
+                            },
+                            this.props.styles.bmIcon
+                        ]
+                    };
+                icon = _react2['default'].cloneElement(this.props.customIcon, extraProps);
+            } else {
+                icon = _react2['default'].createElement('span', null, _react2['default'].createElement('span', {
+                    className: 'bm-burger-bars',
+                    style: [
+                        this.getLineStyle(0),
+                        this.props.styles.bmBurgerBars
+                    ]
+                }), _react2['default'].createElement('span', {
+                    className: 'bm-burger-bars',
+                    style: [
+                        this.getLineStyle(1),
+                        this.props.styles.bmBurgerBars
+                    ]
+                }), _react2['default'].createElement('span', {
+                    className: 'bm-burger-bars',
+                    style: [
+                        this.getLineStyle(2),
+                        this.props.styles.bmBurgerBars
+                    ]
+                }));
+            }
+            return _react2['default'].createElement('div', {
+                className: 'bm-burger-button',
+                style: [
+                    { zIndex: 1 },
+                    this.props.styles.bmBurgerButton
+                ]
+            }, icon, _react2['default'].createElement('button', {
+                onClick: this.props.onClick,
+                onMouseEnter: this.handleHover,
+                onMouseLeave: this.handleHover,
+                style: buttonStyle
+            }, 'Open Menu'));
+        }
+    }));
+exports['default'] = BurgerIcon;
+module.exports = exports['default'];
+},{"radium":157,"react":"react"}],100:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+exports['default'] = {
+    slide: require('./menus/slide'),
+    stack: require('./menus/stack'),
+    elastic: require('./menus/elastic'),
+    bubble: require('./menus/bubble'),
+    push: require('./menus/push'),
+    pushRotate: require('./menus/pushRotate'),
+    scaleDown: require('./menus/scaleDown'),
+    scaleRotate: require('./menus/scaleRotate'),
+    fallDown: require('./menus/fallDown')
+};
+module.exports = exports['default'];
+},{"./menus/bubble":104,"./menus/elastic":105,"./menus/fallDown":106,"./menus/push":107,"./menus/pushRotate":108,"./menus/scaleDown":109,"./menus/scaleRotate":110,"./menus/slide":111,"./menus/stack":112}],101:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { 'default': obj };
+}
+var _react = require('react');
+var _react2 = _interopRequireDefault(_react);
+var _radium = require('radium');
+var _radium2 = _interopRequireDefault(_radium);
+var CrossIcon = (0, _radium2['default'])(_react2['default'].createClass({
+        propTypes: {
+            customIcon: _react2['default'].PropTypes.element,
+            styles: _react2['default'].PropTypes.object
+        },
+        getCrossStyle: function getCrossStyle(type) {
+            return {
+                position: 'absolute',
+                width: 3,
+                height: 14,
+                transform: type === 'before' ? 'rotate(45deg)' : 'rotate(-45deg)'
+            };
+        },
+        getDefaultProps: function getDefaultProps() {
+            return { styles: {} };
+        },
+        render: function render() {
+            var icon;
+            var buttonWrapperStyle = {
+                    position: 'absolute',
+                    width: 24,
+                    height: 24,
+                    right: 8,
+                    top: 8
+                };
+            var buttonStyle = {
+                    position: 'absolute',
+                    left: 0,
+                    top: 0,
+                    width: '100%',
+                    height: '100%',
+                    margin: 0,
+                    padding: 0,
+                    border: 'none',
+                    textIndent: -9999,
+                    background: 'transparent',
+                    outline: 'none'
+                };
+            if (this.props.customIcon) {
+                var extraProps = {
+                        className: 'bm-cross',
+                        style: [
+                            {
+                                width: '100%',
+                                height: '100%'
+                            },
+                            this.props.styles.bmCross
+                        ]
+                    };
+                icon = _react2['default'].cloneElement(this.props.customIcon, extraProps);
+            } else {
+                icon = _react2['default'].createElement('span', {
+                    style: [{
+                            position: 'absolute',
+                            top: '6px',
+                            right: '14px'
+                        }]
+                }, _react2['default'].createElement('span', {
+                    className: 'bm-cross',
+                    style: [
+                        this.getCrossStyle('before'),
+                        this.props.styles.bmCross
+                    ]
+                }), _react2['default'].createElement('span', {
+                    className: 'bm-cross',
+                    style: [
+                        this.getCrossStyle('after'),
+                        this.props.styles.bmCross
+                    ]
+                }));
+            }
+            return _react2['default'].createElement('div', {
+                className: 'bm-cross-button',
+                style: [
+                    buttonWrapperStyle,
+                    this.props.styles.bmCrossButton
+                ]
+            }, icon, _react2['default'].createElement('button', {
+                onClick: this.props.onClick,
+                style: buttonStyle
+            }, 'Close Menu'));
+        }
+    }));
+exports['default'] = CrossIcon;
+module.exports = exports['default'];
+},{"radium":157,"react":"react"}],102:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var styles = {
+        overlay: function overlay(isOpen) {
+            return {
+                position: 'fixed',
+                zIndex: 1,
+                width: '100%',
+                height: '100%',
+                background: 'rgba(0, 0, 0, 0.3)',
+                opacity: isOpen ? 1 : 0,
+                transform: isOpen ? '' : 'translate3d(100%, 0, 0)',
+                MozTransform: isOpen ? '' : 'translate3d(100%, 0, 0)',
+                MsTransform: isOpen ? '' : 'translate3d(100%, 0, 0)',
+                OTransform: isOpen ? '' : 'translate3d(100%, 0, 0)',
+                WebkitTransform: isOpen ? '' : 'translate3d(100%, 0, 0)',
+                transition: isOpen ? 'opacity 0.3s' : 'opacity 0.3s, transform 0s 0.3s'
+            };
+        },
+        menuWrap: function menuWrap(isOpen, width, right) {
+            return {
+                position: 'fixed',
+                right: right ? 0 : 'inherit',
+                zIndex: 2,
+                width: width,
+                height: '100%',
+                transform: isOpen ? '' : right ? 'translate3d(100%, 0, 0)' : 'translate3d(-100%, 0, 0)',
+                MozTransform: isOpen ? '' : right ? 'translate3d(100%, 0, 0)' : 'translate3d(-100%, 0, 0)',
+                MsTransform: isOpen ? '' : right ? 'translate3d(100%, 0, 0)' : 'translate3d(-100%, 0, 0)',
+                OTransform: isOpen ? '' : right ? 'translate3d(100%, 0, 0)' : 'translate3d(-100%, 0, 0)',
+                WebkitTransform: isOpen ? '' : right ? 'translate3d(100%, 0, 0)' : 'translate3d(-100%, 0, 0)',
+                transition: 'all 0.5s'
+            };
+        },
+        menu: function menu() {
+            return {
+                height: '100%',
+                boxSizing: 'border-box',
+                overflow: 'auto'
+            };
+        },
+        itemList: function itemList() {
+            return { height: '100%' };
+        },
+        item: function item() {
+            return {
+                display: 'block',
+                outline: 'none'
+            };
+        }
+    };
+exports['default'] = styles;
+module.exports = exports['default'];
+},{}],103:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { 'default': obj };
+}
+var _react = require('react');
+var _react2 = _interopRequireDefault(_react);
+var _reactDom = require('react-dom');
+var _reactDom2 = _interopRequireDefault(_reactDom);
+var _radium = require('radium');
+var _radium2 = _interopRequireDefault(_radium);
+var _baseStyles = require('./baseStyles');
+var _baseStyles2 = _interopRequireDefault(_baseStyles);
+var _BurgerIcon = require('./BurgerIcon');
+var _BurgerIcon2 = _interopRequireDefault(_BurgerIcon);
+var _CrossIcon = require('./CrossIcon');
+var _CrossIcon2 = _interopRequireDefault(_CrossIcon);
+exports['default'] = function (styles) {
+    return (0, _radium2['default'])(_react2['default'].createClass({
+        propTypes: {
+            className: _react2['default'].PropTypes.string,
+            customBurgerIcon: _react2['default'].PropTypes.oneOfType([
+                _react2['default'].PropTypes.element,
+                _react2['default'].PropTypes.oneOf([false])
+            ]),
+            customCrossIcon: _react2['default'].PropTypes.oneOfType([
+                _react2['default'].PropTypes.element,
+                _react2['default'].PropTypes.oneOf([false])
+            ]),
+            id: _react2['default'].PropTypes.string,
+            isOpen: _react2['default'].PropTypes.bool,
+            noOverlay: _react2['default'].PropTypes.bool,
+            onStateChange: _react2['default'].PropTypes.func,
+            outerContainerId: styles && styles.outerContainer ? _react2['default'].PropTypes.string.isRequired : _react2['default'].PropTypes.string,
+            pageWrapId: styles && styles.pageWrap ? _react2['default'].PropTypes.string.isRequired : _react2['default'].PropTypes.string,
+            right: _react2['default'].PropTypes.bool,
+            styles: _react2['default'].PropTypes.object,
+            width: _react2['default'].PropTypes.number
+        },
+        toggleMenu: function toggleMenu() {
+            var _this = this;
+            var newState = { isOpen: !this.state.isOpen };
+            this.applyWrapperStyles();
+            this.setState(newState, function () {
+                _this.props.onStateChange(newState);
+                _this.timeoutId && clearTimeout(_this.timeoutId);
+                _this.timeoutId = setTimeout(function () {
+                    _this.timeoutId = null;
+                    if (!newState.isOpen) {
+                        _this.clearWrapperStyles();
+                    }
+                }, 500);
+            });
+        },
+        applyWrapperStyles: function applyWrapperStyles() {
+            if (styles.pageWrap && this.props.pageWrapId) {
+                this.handleExternalWrapper(this.props.pageWrapId, styles.pageWrap, true);
+            }
+            if (styles.outerContainer && this.props.outerContainerId) {
+                this.handleExternalWrapper(this.props.outerContainerId, styles.outerContainer, true);
+            }
+        },
+        clearWrapperStyles: function clearWrapperStyles() {
+            if (styles.pageWrap && this.props.pageWrapId) {
+                this.handleExternalWrapper(this.props.pageWrapId, styles.pageWrap, false);
+            }
+            if (styles.outerContainer && this.props.outerContainerId) {
+                this.handleExternalWrapper(this.props.outerContainerId, styles.outerContainer, false);
+            }
+        },
+        handleExternalWrapper: function handleExternalWrapper(id, wrapperStyles, set) {
+            var html = document.querySelector('html');
+            var body = document.querySelector('body');
+            var wrapper = document.getElementById(id);
+            if (!wrapper) {
+                console.error('Element with ID \'' + id + '\' not found');
+                return;
+            }
+            var builtStyles = wrapperStyles(this.state.isOpen, this.props.width, this.props.right);
+            for (var prop in builtStyles) {
+                if (builtStyles.hasOwnProperty(prop)) {
+                    wrapper.style[prop] = set ? builtStyles[prop] : '';
+                }
+            }
+            [
+                html,
+                body
+            ].forEach(function (element) {
+                element.style['overflow-x'] = set ? 'hidden' : '';
+            });
+        },
+        getStyles: function getStyles(el, index, inline) {
+            var propName = 'bm' + el.replace(el.charAt(0), el.charAt(0).toUpperCase());
+            var output = _baseStyles2['default'][el] ? [_baseStyles2['default'][el](this.state.isOpen, this.props.width, this.props.right)] : [];
+            if (styles[el]) {
+                output.push(styles[el](this.state.isOpen, this.props.width, this.props.right, index + 1));
+            }
+            if (this.props.styles[propName]) {
+                output.push(this.props.styles[propName]);
+            }
+            if (inline) {
+                output.push(inline);
+            }
+            return output;
+        },
+        listenForClose: function listenForClose(e) {
+            e = e || window.event;
+            if (this.state.isOpen && (e.key === 'Escape' || e.keyCode === 27)) {
+                this.toggleMenu();
+            }
+        },
+        getDefaultProps: function getDefaultProps() {
+            return {
+                id: '',
+                noOverlay: false,
+                onStateChange: function onStateChange() {
+                },
+                outerContainerId: '',
+                pageWrapId: '',
+                styles: {},
+                width: 300
+            };
+        },
+        getInitialState: function getInitialState() {
+            var initialIsOpenProp = this.props && typeof this.props.isOpen !== 'undefined';
+            return { isOpen: initialIsOpenProp ? this.props.isOpen : false };
+        },
+        componentWillMount: function componentWillMount() {
+            if (!styles) {
+                throw new Error('No styles supplied');
+            }
+            if (this.props.isOpen) {
+                this.toggleMenu();
+            }
+        },
+        componentDidMount: function componentDidMount() {
+            window.onkeydown = this.listenForClose;
+            if (this.props.isOpen) {
+                this.toggleMenu();
+            }
+        },
+        componentWillUnmount: function componentWillUnmount() {
+            window.onkeydown = null;
+            this.clearWrapperStyles();
+        },
+        componentDidUpdate: function componentDidUpdate() {
+            var _this2 = this;
+            if (styles.svg && this.isMounted()) {
+                (function () {
+                    var morphShape = _reactDom2['default'].findDOMNode(_this2, 'bm-morph-shape');
+                    var path = styles.svg.lib(morphShape).select('path');
+                    if (_this2.state.isOpen) {
+                        styles.svg.animate(path);
+                    } else {
+                        setTimeout(function () {
+                            path.attr('d', styles.svg.pathInitial);
+                        }, 300);
+                    }
+                }());
+            }
+        },
+        componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
+            if (typeof nextProps.isOpen !== 'undefined' && nextProps.isOpen !== this.state.isOpen) {
+                this.toggleMenu();
+            }
+        },
+        render: function render() {
+            var _this3 = this;
+            return _react2['default'].createElement('div', null, !this.props.noOverlay ? _react2['default'].createElement('div', {
+                className: 'bm-overlay',
+                onClick: this.toggleMenu,
+                style: this.getStyles('overlay')
+            }) : null, _react2['default'].createElement('div', {
+                id: this.props.id,
+                className: 'bm-menu-wrap ' + this.props.className,
+                style: this.getStyles('menuWrap')
+            }, styles.svg ? _react2['default'].createElement('div', {
+                className: 'bm-morph-shape',
+                style: this.getStyles('morphShape')
+            }, _react2['default'].createElement('svg', {
+                width: '100%',
+                height: '100%',
+                viewBox: '0 0 100 800',
+                preserveAspectRatio: 'none'
+            }, _react2['default'].createElement('path', { d: styles.svg.pathInitial }))) : null, _react2['default'].createElement('div', {
+                className: 'bm-menu',
+                style: this.getStyles('menu')
+            }, _react2['default'].createElement('nav', {
+                className: 'bm-item-list',
+                style: this.getStyles('itemList')
+            }, _react2['default'].Children.map(this.props.children, function (item, index) {
+                if (item) {
+                    var extraProps = {
+                            key: index,
+                            style: _this3.getStyles('item', index, item.props.style)
+                        };
+                    return _react2['default'].cloneElement(item, extraProps);
+                }
+            }))), this.props.customCrossIcon !== false ? _react2['default'].createElement('div', { style: this.getStyles('closeButton') }, _react2['default'].createElement(_CrossIcon2['default'], {
+                onClick: this.toggleMenu,
+                styles: this.props.styles,
+                customIcon: this.props.customCrossIcon
+            })) : null), this.props.customBurgerIcon !== false ? _react2['default'].createElement(_BurgerIcon2['default'], {
+                onClick: this.toggleMenu,
+                styles: this.props.styles,
+                customIcon: this.props.customBurgerIcon
+            }) : null);
+        }
+    }));
+};
+module.exports = exports['default'];
+},{"./BurgerIcon":99,"./CrossIcon":101,"./baseStyles":102,"radium":157,"react":"react","react-dom":"react-dom"}],104:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { 'default': obj };
+}
+var _snapsvgImporter = require('../snapsvgImporter');
+var _snapsvgImporter2 = _interopRequireDefault(_snapsvgImporter);
+var _menuFactory = require('../menuFactory');
+var _menuFactory2 = _interopRequireDefault(_menuFactory);
+var styles = {
+        svg: {
+            lib: _snapsvgImporter2['default'],
+            pathInitial: 'M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z',
+            pathOpen: 'M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z',
+            animate: function animate(path) {
+                var pos = 0;
+                var steps = this.pathOpen.split(';');
+                var stepsTotal = steps.length;
+                var mina = window.mina;
+                var nextStep = function nextStep() {
+                    if (pos > stepsTotal - 1)
+                        return;
+                    path.animate({ path: steps[pos] }, pos === 0 ? 400 : 500, pos === 0 ? mina.easein : mina.elastic, function () {
+                        nextStep();
+                    });
+                    pos++;
+                };
+                nextStep();
+            }
+        },
+        morphShape: function morphShape(isOpen, width, right) {
+            return {
+                position: 'fixed',
+                width: '100%',
+                height: '100%',
+                right: right ? 'inherit' : 0,
+                left: right ? 0 : 'inherit',
+                transform: right ? 'rotateY(180deg)' : 'rotateY(0deg)'
+            };
+        },
+        menuWrap: function menuWrap(isOpen, width, right) {
+            return {
+                transform: isOpen ? 'translate3d(0, 0, 0)' : right ? 'translate3d(100%, 0, 0)' : 'translate3d(-100%, 0, 0)',
+                transition: isOpen ? 'transform 0.4s 0s' : 'transform 0.4s'
+            };
+        },
+        menu: function menu(isOpen, width, right) {
+            width -= 140;
+            return {
+                position: 'fixed',
+                transform: isOpen ? '' : right ? 'translate3d(' + width + 'px, 0, 0)' : 'translate3d(-' + width + 'px, 0, 0)',
+                transition: isOpen ? 'opacity 0.1s 0.4s cubic-bezier(.17, .67, .1, 1.27), transform 0.1s 0.4s cubic-bezier(.17, .67, .1, 1.27)' : 'opacity 0s 0.3s cubic-bezier(.17, .67, .1, 1.27), transform 0s 0.3s cubic-bezier(.17, .67, .1, 1.27)',
+                opacity: isOpen ? 1 : 0
+            };
+        },
+        item: function item(isOpen, width, right, nthChild) {
+            width -= 140;
+            return {
+                transform: isOpen ? 'translate3d(0, 0, 0)' : right ? 'translate3d(' + width + 'px, 0, 0)' : 'translate3d(-' + width + 'px, 0, 0)',
+                transition: isOpen ? 'opacity 0.3s 0.4s, transform 0.3s 0.4s' : 'opacity 0s 0.3s cubic-bezier(.17, .67, .1, 1.27), transform 0s 0.3s cubic-bezier(.17, .67, .1, 1.27)',
+                opacity: isOpen ? 1 : 0
+            };
+        },
+        closeButton: function closeButton(isOpen, width, right) {
+            width -= 140;
+            return {
+                transform: isOpen ? 'translate3d(0, 0, 0)' : right ? 'translate3d(' + width + 'px, 0, 0)' : 'translate3d(-' + width + 'px, 0, 0)',
+                transition: isOpen ? 'opacity 0.3s 0.4s cubic-bezier(.17, .67, .1, 1.27), transform 0.3s 0.4s cubic-bezier(.17, .67, .1, 1.27)' : 'opacity 0s 0.3s cubic-bezier(.17, .67, .1, 1.27), transform 0s 0.3s cubic-bezier(.17, .67, .1, 1.27)',
+                opacity: isOpen ? 1 : 0
+            };
+        }
+    };
+exports['default'] = (0, _menuFactory2['default'])(styles);
+module.exports = exports['default'];
+},{"../menuFactory":103,"../snapsvgImporter":113}],105:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { 'default': obj };
+}
+var _snapsvgImporter = require('../snapsvgImporter');
+var _snapsvgImporter2 = _interopRequireDefault(_snapsvgImporter);
+var _menuFactory = require('../menuFactory');
+var _menuFactory2 = _interopRequireDefault(_menuFactory);
+var styles = {
+        svg: {
+            lib: _snapsvgImporter2['default'],
+            pathInitial: 'M-1,0h101c0,0-97.833,153.603-97.833,396.167C2.167,627.579,100,800,100,800H-1V0z',
+            pathOpen: 'M-1,0h101c0,0,0-1,0,395c0,404,0,405,0,405H-1V0z',
+            animate: function animate(path) {
+                path.animate({ path: this.pathOpen }, 400, window.mina.easeinout);
+            }
+        },
+        morphShape: function morphShape(isOpen, width, right) {
+            return {
+                position: 'fixed',
+                width: 120,
+                height: '100%',
+                right: right ? 'inherit' : 0,
+                left: right ? 0 : 'inherit',
+                transform: right ? 'rotateY(180deg)' : ''
+            };
+        },
+        menuWrap: function menuWrap(isOpen, width, right) {
+            return {
+                transform: isOpen ? 'translate3d(0, 0, 0)' : right ? 'translate3d(100%, 0, 0)' : 'translate3d(-100%, 0, 0)',
+                transition: 'all 0.3s'
+            };
+        },
+        menu: function menu(isOpen, width, right) {
+            return {
+                position: 'fixed',
+                right: right ? 0 : 'inherit',
+                width: 'calc(100% - 120px)',
+                whiteSpace: 'nowrap',
+                boxSizing: 'border-box',
+                overflow: 'visible'
+            };
+        },
+        itemList: function itemList(isOpen, width, right) {
+            if (right) {
+                return {
+                    position: 'relative',
+                    left: '-110px',
+                    width: '170%',
+                    overflow: 'auto'
+                };
+            }
+        },
+        pageWrap: function pageWrap(isOpen, width, right) {
+            return {
+                transform: isOpen ? '' : right ? 'translate3d(-100px, 0, 0)' : 'translate3d(100px, 0, 0)',
+                transition: isOpen ? 'all 0.3s' : 'all 0.3s 0.1s'
+            };
+        },
+        outerContainer: function outerContainer(isOpen) {
+            return { overflow: isOpen ? '' : 'hidden' };
+        }
+    };
+exports['default'] = (0, _menuFactory2['default'])(styles);
+module.exports = exports['default'];
+},{"../menuFactory":103,"../snapsvgImporter":113}],106:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { 'default': obj };
+}
+var _menuFactory = require('../menuFactory');
+var _menuFactory2 = _interopRequireDefault(_menuFactory);
+var styles = {
+        menuWrap: function menuWrap(isOpen) {
+            return {
+                transform: isOpen ? '' : 'translate3d(0, -100%, 0)',
+                transition: 'all 0.5s ease-in-out'
+            };
+        },
+        pageWrap: function pageWrap(isOpen, width, right) {
+            return {
+                transform: isOpen ? '' : right ? 'translate3d(-' + width + 'px, 0, 0)' : 'translate3d(' + width + 'px, 0, 0)',
+                transition: 'all 0.5s'
+            };
+        },
+        outerContainer: function outerContainer(isOpen) {
+            return {
+                perspective: '1500px',
+                perspectiveOrigin: '0% 50%',
+                overflow: isOpen ? '' : 'hidden'
+            };
+        }
+    };
+exports['default'] = (0, _menuFactory2['default'])(styles);
+module.exports = exports['default'];
+},{"../menuFactory":103}],107:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { 'default': obj };
+}
+var _menuFactory = require('../menuFactory');
+var _menuFactory2 = _interopRequireDefault(_menuFactory);
+var styles = {
+        pageWrap: function pageWrap(isOpen, width, right) {
+            return {
+                transform: isOpen ? '' : right ? 'translate3d(-' + width + 'px, 0, 0)' : 'translate3d(' + width + 'px, 0, 0)',
+                transition: 'all 0.5s'
+            };
+        },
+        outerContainer: function outerContainer(isOpen) {
+            return { overflow: isOpen ? '' : 'hidden' };
+        }
+    };
+exports['default'] = (0, _menuFactory2['default'])(styles);
+module.exports = exports['default'];
+},{"../menuFactory":103}],108:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { 'default': obj };
+}
+var _menuFactory = require('../menuFactory');
+var _menuFactory2 = _interopRequireDefault(_menuFactory);
+var styles = {
+        pageWrap: function pageWrap(isOpen, width, right) {
+            return {
+                transform: isOpen ? '' : right ? 'translate3d(-' + width + 'px, 0, 0) rotateY(15deg)' : 'translate3d(' + width + 'px, 0, 0) rotateY(-15deg)',
+                transformOrigin: right ? '100% 50%' : '0% 50%',
+                transformStyle: 'preserve-3d',
+                transition: 'all 0.5s'
+            };
+        },
+        outerContainer: function outerContainer(isOpen) {
+            return {
+                perspective: '1500px',
+                overflow: isOpen ? '' : 'hidden'
+            };
+        }
+    };
+exports['default'] = (0, _menuFactory2['default'])(styles);
+module.exports = exports['default'];
+},{"../menuFactory":103}],109:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { 'default': obj };
+}
+var _menuFactory = require('../menuFactory');
+var _menuFactory2 = _interopRequireDefault(_menuFactory);
+var styles = {
+        pageWrap: function pageWrap(isOpen, width) {
+            return {
+                transform: isOpen ? '' : 'translate3d(0, 0, -' + width + 'px)',
+                transformOrigin: '100%',
+                transformStyle: 'preserve-3d',
+                transition: 'all 0.5s'
+            };
+        },
+        outerContainer: function outerContainer() {
+            return { perspective: '1500px' };
+        }
+    };
+exports['default'] = (0, _menuFactory2['default'])(styles);
+module.exports = exports['default'];
+},{"../menuFactory":103}],110:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { 'default': obj };
+}
+var _menuFactory = require('../menuFactory');
+var _menuFactory2 = _interopRequireDefault(_menuFactory);
+var styles = {
+        pageWrap: function pageWrap(isOpen, width, right) {
+            return {
+                transform: isOpen ? '' : right ? 'translate3d(-100px, 0, -600px) rotateY(20deg)' : 'translate3d(100px, 0, -600px) rotateY(-20deg)',
+                transformStyle: 'preserve-3d',
+                transition: 'all 0.5s',
+                overflow: isOpen ? '' : 'hidden'
+            };
+        },
+        outerContainer: function outerContainer(isOpen) {
+            return {
+                perspective: '1500px',
+                overflow: isOpen ? '' : 'hidden'
+            };
+        }
+    };
+exports['default'] = (0, _menuFactory2['default'])(styles);
+module.exports = exports['default'];
+},{"../menuFactory":103}],111:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { 'default': obj };
+}
+var _menuFactory = require('../menuFactory');
+var _menuFactory2 = _interopRequireDefault(_menuFactory);
+var styles = {};
+exports['default'] = (0, _menuFactory2['default'])(styles);
+module.exports = exports['default'];
+},{"../menuFactory":103}],112:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { 'default': obj };
+}
+var _menuFactory = require('../menuFactory');
+var _menuFactory2 = _interopRequireDefault(_menuFactory);
+var styles = {
+        menuWrap: function menuWrap(isOpen, width, right) {
+            width += 20;
+            return {
+                transform: isOpen ? '' : right ? 'translate3d(' + width + 'px, 0, 0)' : 'translate3d(-' + width + 'px, 0, 0)',
+                transition: isOpen ? 'transform 0.8s cubic-bezier(0.7, 0, 0.3, 1)' : 'transform 0.4s cubic-bezier(0.7, 0, 0.3, 1)'
+            };
+        },
+        item: function item(isOpen, width, right, nthChild) {
+            return {
+                transform: isOpen ? '' : 'translate3d(0, ' + nthChild * 500 + 'px, 0)',
+                transition: isOpen ? 'transform 0.8s cubic-bezier(0.7, 0, 0.3, 1)' : 'transform 0s 0.2s cubic-bezier(0.7, 0, 0.3, 1)'
+            };
+        }
+    };
+exports['default'] = (0, _menuFactory2['default'])(styles);
+module.exports = exports['default'];
+},{"../menuFactory":103}],113:[function(require,module,exports){
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+exports['default'] = function () {
+    var Snap = undefined;
+    try {
+        Snap = require('snapsvg-cjs');
+    } finally {
+        return Snap;
+    }
+};
+module.exports = exports['default'];
+},{"snapsvg-cjs":186}],114:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+// special flexbox specifications
+
+
+var _prefixAll2 = require('./static/prefixAll');
+
+var _prefixAll3 = _interopRequireDefault(_prefixAll2);
+
+var _getBrowserInformation = require('./utils/getBrowserInformation');
+
+var _getBrowserInformation2 = _interopRequireDefault(_getBrowserInformation);
+
+var _getPrefixedKeyframes = require('./utils/getPrefixedKeyframes');
+
+var _getPrefixedKeyframes2 = _interopRequireDefault(_getPrefixedKeyframes);
+
+var _capitalizeString = require('./utils/capitalizeString');
+
+var _capitalizeString2 = _interopRequireDefault(_capitalizeString);
+
+var _sortPrefixedStyle = require('./utils/sortPrefixedStyle');
+
+var _sortPrefixedStyle2 = _interopRequireDefault(_sortPrefixedStyle);
+
+var _prefixProps = require('./prefixProps');
+
+var _prefixProps2 = _interopRequireDefault(_prefixProps);
+
+var _position = require('./plugins/position');
+
+var _position2 = _interopRequireDefault(_position);
+
+var _calc = require('./plugins/calc');
+
+var _calc2 = _interopRequireDefault(_calc);
+
+var _zoomCursor = require('./plugins/zoomCursor');
+
+var _zoomCursor2 = _interopRequireDefault(_zoomCursor);
+
+var _grabCursor = require('./plugins/grabCursor');
+
+var _grabCursor2 = _interopRequireDefault(_grabCursor);
+
+var _flex = require('./plugins/flex');
+
+var _flex2 = _interopRequireDefault(_flex);
+
+var _sizing = require('./plugins/sizing');
+
+var _sizing2 = _interopRequireDefault(_sizing);
+
+var _gradient = require('./plugins/gradient');
+
+var _gradient2 = _interopRequireDefault(_gradient);
+
+var _transition = require('./plugins/transition');
+
+var _transition2 = _interopRequireDefault(_transition);
+
+var _flexboxIE = require('./plugins/flexboxIE');
+
+var _flexboxIE2 = _interopRequireDefault(_flexboxIE);
+
+var _flexboxOld = require('./plugins/flexboxOld');
+
+var _flexboxOld2 = _interopRequireDefault(_flexboxOld);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var plugins = [_position2.default, _calc2.default, _zoomCursor2.default, _grabCursor2.default, _sizing2.default, _gradient2.default, _transition2.default, _flexboxIE2.default, _flexboxOld2.default,
+// this must be run AFTER the flexbox specs
+_flex2.default];
+
+var Prefixer = function () {
+  /**
+   * Instantiante a new prefixer
+   * @param {string} userAgent - userAgent to gather prefix information according to caniuse.com
+   * @param {string} keepUnprefixed - keeps unprefixed properties and values
+   */
+
+  function Prefixer() {
+    var _this = this;
+
+    var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
+    _classCallCheck(this, Prefixer);
+
+    var defaultUserAgent = typeof navigator !== 'undefined' ? navigator.userAgent : undefined;
+
+    this._userAgent = options.userAgent || defaultUserAgent;
+    this._keepUnprefixed = options.keepUnprefixed || false;
+
+    this._browserInfo = (0, _getBrowserInformation2.default)(this._userAgent);
+
+    // Checks if the userAgent was resolved correctly
+    if (this._browserInfo && this._browserInfo.prefix) {
+      // set additional prefix information
+      this.cssPrefix = this._browserInfo.prefix.css;
+      this.jsPrefix = this._browserInfo.prefix.inline;
+      this.prefixedKeyframes = (0, _getPrefixedKeyframes2.default)(this._browserInfo);
+    } else {
+      this._usePrefixAllFallback = true;
+      return false;
+    }
+
+    var data = this._browserInfo.browser && _prefixProps2.default[this._browserInfo.browser];
+    if (data) {
+      this._requiresPrefix = Object.keys(data).filter(function (key) {
+        return data[key] >= _this._browserInfo.version;
+      }).reduce(function (result, name) {
+        result[name] = true;
+        return result;
+      }, {});
+      this._hasPropsRequiringPrefix = Object.keys(this._requiresPrefix).length > 0;
+    } else {
+      this._usePrefixAllFallback = true;
+    }
+  }
+
+  /**
+   * Returns a prefixed version of the style object
+   * @param {Object} styles - Style object that gets prefixed properties added
+   * @returns {Object} - Style object with prefixed properties and values
+   */
+
+
+  _createClass(Prefixer, [{
+    key: 'prefix',
+    value: function prefix(styles) {
+      var _this2 = this;
+
+      // use prefixAll as fallback if userAgent can not be resolved
+      if (this._usePrefixAllFallback) {
+        return (0, _prefixAll3.default)(styles);
+      }
+
+      // only add prefixes if needed
+      if (!this._hasPropsRequiringPrefix) {
+        return styles;
+      }
+
+      Object.keys(styles).forEach(function (property) {
+        var value = styles[property];
+        if (value instanceof Object && !Array.isArray(value)) {
+          // recurse through nested style objects
+          styles[property] = _this2.prefix(value);
+        } else {
+          // add prefixes if needed
+          if (_this2._requiresPrefix[property]) {
+            styles[_this2.jsPrefix + (0, _capitalizeString2.default)(property)] = value;
+            if (!_this2._keepUnprefixed) {
+              delete styles[property];
+            }
+          }
+        }
+      });
+
+      Object.keys(styles).forEach(function (property) {
+        [].concat(styles[property]).forEach(function (value) {
+          // resolve plugins
+          plugins.forEach(function (plugin) {
+            // generates a new plugin interface with current data
+            assignStyles(styles, plugin({
+              property: property,
+              value: value,
+              styles: styles,
+              browserInfo: _this2._browserInfo,
+              prefix: {
+                js: _this2.jsPrefix,
+                css: _this2.cssPrefix,
+                keyframes: _this2.prefixedKeyframes
+              },
+              keepUnprefixed: _this2._keepUnprefixed,
+              requiresPrefix: _this2._requiresPrefix
+            }), value, _this2._keepUnprefixed);
+          });
+        });
+      });
+
+      return (0, _sortPrefixedStyle2.default)(styles);
+    }
+
+    /**
+     * Returns a prefixed version of the style object using all vendor prefixes
+     * @param {Object} styles - Style object that gets prefixed properties added
+     * @returns {Object} - Style object with prefixed properties and values
+     */
+
+  }], [{
+    key: 'prefixAll',
+    value: function prefixAll(styles) {
+      return (0, _prefixAll3.default)(styles);
+    }
+  }]);
+
+  return Prefixer;
+}();
+
+exports.default = Prefixer;
+
+
+function assignStyles(base) {
+  var extend = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+  var value = arguments[2];
+  var keepUnprefixed = arguments[3];
+
+  Object.keys(extend).forEach(function (property) {
+    var baseValue = base[property];
+    if (Array.isArray(baseValue)) {
+      [].concat(extend[property]).forEach(function (val) {
+        if (base[property].indexOf(val) === -1) {
+          base[property].splice(baseValue.indexOf(value), keepUnprefixed ? 0 : 1, val);
+        }
+      });
+    } else {
+      base[property] = extend[property];
+    }
+  });
+}
+module.exports = exports['default'];
+},{"./plugins/calc":115,"./plugins/flex":116,"./plugins/flexboxIE":117,"./plugins/flexboxOld":118,"./plugins/grabCursor":119,"./plugins/gradient":120,"./plugins/position":121,"./plugins/sizing":122,"./plugins/transition":123,"./plugins/zoomCursor":124,"./prefixProps":125,"./static/prefixAll":135,"./utils/capitalizeString":137,"./utils/getBrowserInformation":138,"./utils/getPrefixedKeyframes":139,"./utils/sortPrefixedStyle":144}],115:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = calc;
+
+var _getPrefixedValue = require('../utils/getPrefixedValue');
+
+var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function calc(_ref) {
+  var property = _ref.property;
+  var value = _ref.value;
+  var _ref$browserInfo = _ref.browserInfo;
+  var browser = _ref$browserInfo.browser;
+  var version = _ref$browserInfo.version;
+  var css = _ref.prefix.css;
+  var keepUnprefixed = _ref.keepUnprefixed;
+
+  if (typeof value === 'string' && value.indexOf('calc(') > -1 && (browser === 'firefox' && version < 15 || browser === 'chrome' && version < 25 || browser === 'safari' && version < 6.1 || browser === 'ios_saf' && version < 7)) {
+    return _defineProperty({}, property, (0, _getPrefixedValue2.default)(value.replace(/calc\(/g, css + 'calc('), value, keepUnprefixed));
+  }
+}
+module.exports = exports['default'];
+},{"../utils/getPrefixedValue":140}],116:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = flex;
+
+var _getPrefixedValue = require('../utils/getPrefixedValue');
+
+var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var values = { flex: true, 'inline-flex': true };
+
+function flex(_ref) {
+  var property = _ref.property;
+  var value = _ref.value;
+  var _ref$browserInfo = _ref.browserInfo;
+  var browser = _ref$browserInfo.browser;
+  var version = _ref$browserInfo.version;
+  var css = _ref.prefix.css;
+  var keepUnprefixed = _ref.keepUnprefixed;
+
+  if (property === 'display' && values[value] && (browser === 'chrome' && version < 29 && version > 20 || (browser === 'safari' || browser === 'ios_saf') && version < 9 && version > 6 || browser === 'opera' && (version == 15 || version == 16))) {
+    return {
+      display: (0, _getPrefixedValue2.default)(css + value, value, keepUnprefixed)
+    };
+  }
+}
+module.exports = exports['default'];
+},{"../utils/getPrefixedValue":140}],117:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = flexboxIE;
+
+var _getPrefixedValue = require('../utils/getPrefixedValue');
+
+var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var alternativeValues = {
+  'space-around': 'distribute',
+  'space-between': 'justify',
+  'flex-start': 'start',
+  'flex-end': 'end',
+  flex: 'flexbox',
+  'inline-flex': 'inline-flexbox'
+};
+var alternativeProps = {
+  alignContent: 'msFlexLinePack',
+  alignSelf: 'msFlexItemAlign',
+  alignItems: 'msFlexAlign',
+  justifyContent: 'msFlexPack',
+  order: 'msFlexOrder',
+  flexGrow: 'msFlexPositive',
+  flexShrink: 'msFlexNegative',
+  flexBasis: 'msPreferredSize'
+};
+
+function flexboxIE(_ref) {
+  var property = _ref.property;
+  var value = _ref.value;
+  var styles = _ref.styles;
+  var _ref$browserInfo = _ref.browserInfo;
+  var browser = _ref$browserInfo.browser;
+  var version = _ref$browserInfo.version;
+  var css = _ref.prefix.css;
+  var keepUnprefixed = _ref.keepUnprefixed;
+
+  if ((alternativeProps[property] || property === 'display' && typeof value === 'string' && value.indexOf('flex') > -1) && (browser === 'ie_mob' || browser === 'ie') && version == 10) {
+    if (!keepUnprefixed && !Array.isArray(styles[property])) {
+      delete styles[property];
+    }
+    if (property === 'display' && alternativeValues[value]) {
+      return {
+        display: (0, _getPrefixedValue2.default)(css + alternativeValues[value], value, keepUnprefixed)
+      };
+    }
+    if (alternativeProps[property]) {
+      return _defineProperty({}, alternativeProps[property], alternativeValues[value] || value);
+    }
+  }
+}
+module.exports = exports['default'];
+},{"../utils/getPrefixedValue":140}],118:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = flexboxOld;
+
+var _getPrefixedValue = require('../utils/getPrefixedValue');
+
+var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var alternativeValues = {
+  'space-around': 'justify',
+  'space-between': 'justify',
+  'flex-start': 'start',
+  'flex-end': 'end',
+  'wrap-reverse': 'multiple',
+  wrap: 'multiple',
+  flex: 'box',
+  'inline-flex': 'inline-box'
+};
+
+var alternativeProps = {
+  alignItems: 'WebkitBoxAlign',
+  justifyContent: 'WebkitBoxPack',
+  flexWrap: 'WebkitBoxLines'
+};
+
+var otherProps = ['alignContent', 'alignSelf', 'order', 'flexGrow', 'flexShrink', 'flexBasis', 'flexDirection'];
+var properties = Object.keys(alternativeProps).concat(otherProps);
+
+function flexboxOld(_ref) {
+  var property = _ref.property;
+  var value = _ref.value;
+  var styles = _ref.styles;
+  var _ref$browserInfo = _ref.browserInfo;
+  var browser = _ref$browserInfo.browser;
+  var version = _ref$browserInfo.version;
+  var css = _ref.prefix.css;
+  var keepUnprefixed = _ref.keepUnprefixed;
+
+  if ((properties.indexOf(property) > -1 || property === 'display' && typeof value === 'string' && value.indexOf('flex') > -1) && (browser === 'firefox' && version < 22 || browser === 'chrome' && version < 21 || (browser === 'safari' || browser === 'ios_saf') && version <= 6.1 || browser === 'android' && version < 4.4 || browser === 'and_uc')) {
+    if (!keepUnprefixed && !Array.isArray(styles[property])) {
+      delete styles[property];
+    }
+    if (property === 'flexDirection' && typeof value === 'string') {
+      return {
+        WebkitBoxOrient: value.indexOf('column') > -1 ? 'vertical' : 'horizontal',
+        WebkitBoxDirection: value.indexOf('reverse') > -1 ? 'reverse' : 'normal'
+      };
+    }
+    if (property === 'display' && alternativeValues[value]) {
+      return {
+        display: (0, _getPrefixedValue2.default)(css + alternativeValues[value], value, keepUnprefixed)
+      };
+    }
+    if (alternativeProps[property]) {
+      return _defineProperty({}, alternativeProps[property], alternativeValues[value] || value);
+    }
+  }
+}
+module.exports = exports['default'];
+},{"../utils/getPrefixedValue":140}],119:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = grabCursor;
+
+var _getPrefixedValue = require('../utils/getPrefixedValue');
+
+var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var values = { grab: true, grabbing: true };
+
+function grabCursor(_ref) {
+  var property = _ref.property;
+  var value = _ref.value;
+  var browser = _ref.browserInfo.browser;
+  var css = _ref.prefix.css;
+  var keepUnprefixed = _ref.keepUnprefixed;
+
+  // adds prefixes for firefox, chrome, safari, and opera regardless of version until a reliable brwoser support info can be found (see: https://github.com/rofrischmann/inline-style-prefixer/issues/79)
+  if (property === 'cursor' && values[value] && (browser === 'firefox' || browser === 'chrome' || browser === 'safari' || browser === 'opera')) {
+    return {
+      cursor: (0, _getPrefixedValue2.default)(css + value, value, keepUnprefixed)
+    };
+  }
+}
+module.exports = exports['default'];
+},{"../utils/getPrefixedValue":140}],120:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = gradient;
+
+var _getPrefixedValue = require('../utils/getPrefixedValue');
+
+var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var values = /linear-gradient|radial-gradient|repeating-linear-gradient|repeating-radial-gradient/;
+
+function gradient(_ref) {
+  var property = _ref.property;
+  var value = _ref.value;
+  var _ref$browserInfo = _ref.browserInfo;
+  var browser = _ref$browserInfo.browser;
+  var version = _ref$browserInfo.version;
+  var css = _ref.prefix.css;
+  var keepUnprefixed = _ref.keepUnprefixed;
+
+  if (typeof value === 'string' && value.match(values) !== null && (browser === 'firefox' && version < 16 || browser === 'chrome' && version < 26 || (browser === 'safari' || browser === 'ios_saf') && version < 7 || (browser === 'opera' || browser === 'op_mini') && version < 12.1 || browser === 'android' && version < 4.4 || browser === 'and_uc')) {
+    return _defineProperty({}, property, (0, _getPrefixedValue2.default)(css + value, value, keepUnprefixed));
+  }
+}
+module.exports = exports['default'];
+},{"../utils/getPrefixedValue":140}],121:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = position;
+
+var _getPrefixedValue = require('../utils/getPrefixedValue');
+
+var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function position(_ref) {
+  var property = _ref.property;
+  var value = _ref.value;
+  var browser = _ref.browserInfo.browser;
+  var css = _ref.prefix.css;
+  var keepUnprefixed = _ref.keepUnprefixed;
+
+  if (property === 'position' && value === 'sticky' && (browser === 'safari' || browser === 'ios_saf')) {
+    return _defineProperty({}, property, (0, _getPrefixedValue2.default)(css + value, value, keepUnprefixed));
+  }
+}
+module.exports = exports['default'];
+},{"../utils/getPrefixedValue":140}],122:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = sizing;
+
+var _getPrefixedValue = require('../utils/getPrefixedValue');
+
+var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var properties = {
+  maxHeight: true,
+  maxWidth: true,
+  width: true,
+  height: true,
+  columnWidth: true,
+  minWidth: true,
+  minHeight: true
+};
+var values = {
+  'min-content': true,
+  'max-content': true,
+  'fill-available': true,
+  'fit-content': true,
+  'contain-floats': true
+};
+
+function sizing(_ref) {
+  var property = _ref.property;
+  var value = _ref.value;
+  var css = _ref.prefix.css;
+  var keepUnprefixed = _ref.keepUnprefixed;
+
+  // This might change in the future
+  // Keep an eye on it
+  if (properties[property] && values[value]) {
+    return _defineProperty({}, property, (0, _getPrefixedValue2.default)(css + value, value, keepUnprefixed));
+  }
+}
+module.exports = exports['default'];
+},{"../utils/getPrefixedValue":140}],123:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+exports.default = transition;
+
+var _hyphenateStyleName = require('hyphenate-style-name');
+
+var _hyphenateStyleName2 = _interopRequireDefault(_hyphenateStyleName);
+
+var _unprefixProperty = require('../utils/unprefixProperty');
+
+var _unprefixProperty2 = _interopRequireDefault(_unprefixProperty);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var properties = { transition: true, transitionProperty: true };
+
+function transition(_ref) {
+  var property = _ref.property;
+  var value = _ref.value;
+  var css = _ref.prefix.css;
+  var requiresPrefix = _ref.requiresPrefix;
+  var keepUnprefixed = _ref.keepUnprefixed;
+
+  // also check for already prefixed transitions
+  var unprefixedProperty = (0, _unprefixProperty2.default)(property);
+
+  if (typeof value === 'string' && properties[unprefixedProperty]) {
+    var _ret = function () {
+      // TODO: memoize this array
+      var requiresPrefixDashCased = Object.keys(requiresPrefix).map(function (prop) {
+        return (0, _hyphenateStyleName2.default)(prop);
+      });
+
+      // only split multi values, not cubic beziers
+      var multipleValues = value.split(/,(?![^()]*(?:\([^()]*\))?\))/g);
+
+      requiresPrefixDashCased.forEach(function (prop) {
+        multipleValues.forEach(function (val, index) {
+          if (val.indexOf(prop) > -1 && prop !== 'order') {
+            multipleValues[index] = val.replace(prop, css + prop) + (keepUnprefixed ? ',' + val : '');
+          }
+        });
+      });
+
+      return {
+        v: _defineProperty({}, property, multipleValues.join(','))
+      };
+    }();
+
+    if ((typeof _ret === 'undefined' ? 'undefined' : _typeof(_ret)) === "object") return _ret.v;
+  }
+}
+module.exports = exports['default'];
+},{"../utils/unprefixProperty":145,"hyphenate-style-name":35}],124:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = zoomCursor;
+
+var _getPrefixedValue = require('../utils/getPrefixedValue');
+
+var _getPrefixedValue2 = _interopRequireDefault(_getPrefixedValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var values = { 'zoom-in': true, 'zoom-out': true };
+
+function zoomCursor(_ref) {
+  var property = _ref.property;
+  var value = _ref.value;
+  var _ref$browserInfo = _ref.browserInfo;
+  var browser = _ref$browserInfo.browser;
+  var version = _ref$browserInfo.version;
+  var css = _ref.prefix.css;
+  var keepUnprefixed = _ref.keepUnprefixed;
+
+  if (property === 'cursor' && values[value] && (browser === 'firefox' && version < 24 || browser === 'chrome' && version < 37 || browser === 'safari' && version < 9 || browser === 'opera' && version < 24)) {
+    return {
+      cursor: (0, _getPrefixedValue2.default)(css + value, value, keepUnprefixed)
+    };
+  }
+}
+module.exports = exports['default'];
+},{"../utils/getPrefixedValue":140}],125:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = { "chrome": { "transform": 35, "transformOrigin": 35, "transformOriginX": 35, "transformOriginY": 35, "backfaceVisibility": 35, "perspective": 35, "perspectiveOrigin": 35, "transformStyle": 35, "transformOriginZ": 35, "animation": 42, "animationDelay": 42, "animationDirection": 42, "animationFillMode": 42, "animationDuration": 42, "animationIterationCount": 42, "animationName": 42, "animationPlayState": 42, "animationTimingFunction": 42, "appearance": 55, "userSelect": 55, "fontKerning": 32, "textEmphasisPosition": 55, "textEmphasis": 55, "textEmphasisStyle": 55, "textEmphasisColor": 55, "boxDecorationBreak": 55, "clipPath": 55, "maskImage": 55, "maskMode": 55, "maskRepeat": 55, "maskPosition": 55, "maskClip": 55, "maskOrigin": 55, "maskSize": 55, "maskComposite": 55, "mask": 55, "maskBorderSource": 55, "maskBorderMode": 55, "maskBorderSlice": 55, "maskBorderWidth": 55, "maskBorderOutset": 55, "maskBorderRepeat": 55, "maskBorder": 55, "maskType": 55, "textDecorationStyle": 55, "textDecorationSkip": 55, "textDecorationLine": 55, "textDecorationColor": 55, "filter": 52, "fontFeatureSettings": 47, "breakAfter": 49, "breakBefore": 49, "breakInside": 49, "columnCount": 49, "columnFill": 49, "columnGap": 49, "columnRule": 49, "columnRuleColor": 49, "columnRuleStyle": 49, "columnRuleWidth": 49, "columns": 49, "columnSpan": 49, "columnWidth": 49 }, "safari": { "flex": 8, "flexBasis": 8, "flexDirection": 8, "flexGrow": 8, "flexFlow": 8, "flexShrink": 8, "flexWrap": 8, "alignContent": 8, "alignItems": 8, "alignSelf": 8, "justifyContent": 8, "order": 8, "transition": 6, "transitionDelay": 6, "transitionDuration": 6, "transitionProperty": 6, "transitionTimingFunction": 6, "transform": 8, "transformOrigin": 8, "transformOriginX": 8, "transformOriginY": 8, "backfaceVisibility": 8, "perspective": 8, "perspectiveOrigin": 8, "transformStyle": 8, "transformOriginZ": 8, "animation": 8, "animationDelay": 8, "animationDirection": 8, "animationFillMode": 8, "animationDuration": 8, "animationIterationCount": 8, "animationName": 8, "animationPlayState": 8, "animationTimingFunction": 8, "appearance": 10, "userSelect": 10, "backdropFilter": 10, "fontKerning": 9, "scrollSnapType": 10, "scrollSnapPointsX": 10, "scrollSnapPointsY": 10, "scrollSnapDestination": 10, "scrollSnapCoordinate": 10, "textEmphasisPosition": 7, "textEmphasis": 7, "textEmphasisStyle": 7, "textEmphasisColor": 7, "boxDecorationBreak": 10, "clipPath": 10, "maskImage": 10, "maskMode": 10, "maskRepeat": 10, "maskPosition": 10, "maskClip": 10, "maskOrigin": 10, "maskSize": 10, "maskComposite": 10, "mask": 10, "maskBorderSource": 10, "maskBorderMode": 10, "maskBorderSlice": 10, "maskBorderWidth": 10, "maskBorderOutset": 10, "maskBorderRepeat": 10, "maskBorder": 10, "maskType": 10, "textDecorationStyle": 10, "textDecorationSkip": 10, "textDecorationLine": 10, "textDecorationColor": 10, "shapeImageThreshold": 10, "shapeImageMargin": 10, "shapeImageOutside": 10, "filter": 9, "hyphens": 10, "flowInto": 10, "flowFrom": 10, "breakBefore": 8, "breakAfter": 8, "breakInside": 8, "regionFragment": 10, "columnCount": 8, "columnFill": 8, "columnGap": 8, "columnRule": 8, "columnRuleColor": 8, "columnRuleStyle": 8, "columnRuleWidth": 8, "columns": 8, "columnSpan": 8, "columnWidth": 8 }, "firefox": { "appearance": 51, "userSelect": 51, "boxSizing": 28, "textAlignLast": 48, "textDecorationStyle": 35, "textDecorationSkip": 35, "textDecorationLine": 35, "textDecorationColor": 35, "tabSize": 51, "hyphens": 42, "fontFeatureSettings": 33, "breakAfter": 51, "breakBefore": 51, "breakInside": 51, "columnCount": 51, "columnFill": 51, "columnGap": 51, "columnRule": 51, "columnRuleColor": 51, "columnRuleStyle": 51, "columnRuleWidth": 51, "columns": 51, "columnSpan": 51, "columnWidth": 51 }, "opera": { "flex": 16, "flexBasis": 16, "flexDirection": 16, "flexGrow": 16, "flexFlow": 16, "flexShrink": 16, "flexWrap": 16, "alignContent": 16, "alignItems": 16, "alignSelf": 16, "justifyContent": 16, "order": 16, "transform": 22, "transformOrigin": 22, "transformOriginX": 22, "transformOriginY": 22, "backfaceVisibility": 22, "perspective": 22, "perspectiveOrigin": 22, "transformStyle": 22, "transformOriginZ": 22, "animation": 29, "animationDelay": 29, "animationDirection": 29, "animationFillMode": 29, "animationDuration": 29, "animationIterationCount": 29, "animationName": 29, "animationPlayState": 29, "animationTimingFunction": 29, "appearance": 41, "userSelect": 41, "fontKerning": 19, "textEmphasisPosition": 41, "textEmphasis": 41, "textEmphasisStyle": 41, "textEmphasisColor": 41, "boxDecorationBreak": 41, "clipPath": 41, "maskImage": 41, "maskMode": 41, "maskRepeat": 41, "maskPosition": 41, "maskClip": 41, "maskOrigin": 41, "maskSize": 41, "maskComposite": 41, "mask": 41, "maskBorderSource": 41, "maskBorderMode": 41, "maskBorderSlice": 41, "maskBorderWidth": 41, "maskBorderOutset": 41, "maskBorderRepeat": 41, "maskBorder": 41, "maskType": 41, "textDecorationStyle": 41, "textDecorationSkip": 41, "textDecorationLine": 41, "textDecorationColor": 41, "filter": 39, "fontFeatureSettings": 34, "breakAfter": 36, "breakBefore": 36, "breakInside": 36, "columnCount": 36, "columnFill": 36, "columnGap": 36, "columnRule": 36, "columnRuleColor": 36, "columnRuleStyle": 36, "columnRuleWidth": 36, "columns": 36, "columnSpan": 36, "columnWidth": 36 }, "ie": { "flex": 10, "flexDirection": 10, "flexFlow": 10, "flexWrap": 10, "transform": 9, "transformOrigin": 9, "transformOriginX": 9, "transformOriginY": 9, "userSelect": 11, "wrapFlow": 11, "wrapThrough": 11, "wrapMargin": 11, "scrollSnapType": 11, "scrollSnapPointsX": 11, "scrollSnapPointsY": 11, "scrollSnapDestination": 11, "scrollSnapCoordinate": 11, "touchAction": 10, "hyphens": 11, "flowInto": 11, "flowFrom": 11, "breakBefore": 11, "breakAfter": 11, "breakInside": 11, "regionFragment": 11, "gridTemplateColumns": 11, "gridTemplateRows": 11, "gridTemplateAreas": 11, "gridTemplate": 11, "gridAutoColumns": 11, "gridAutoRows": 11, "gridAutoFlow": 11, "grid": 11, "gridRowStart": 11, "gridColumnStart": 11, "gridRowEnd": 11, "gridRow": 11, "gridColumn": 11, "gridColumnEnd": 11, "gridColumnGap": 11, "gridRowGap": 11, "gridArea": 11, "gridGap": 11, "textSizeAdjust": 11 }, "edge": { "userSelect": 14, "wrapFlow": 14, "wrapThrough": 14, "wrapMargin": 14, "scrollSnapType": 14, "scrollSnapPointsX": 14, "scrollSnapPointsY": 14, "scrollSnapDestination": 14, "scrollSnapCoordinate": 14, "hyphens": 14, "flowInto": 14, "flowFrom": 14, "breakBefore": 14, "breakAfter": 14, "breakInside": 14, "regionFragment": 14, "gridTemplateColumns": 14, "gridTemplateRows": 14, "gridTemplateAreas": 14, "gridTemplate": 14, "gridAutoColumns": 14, "gridAutoRows": 14, "gridAutoFlow": 14, "grid": 14, "gridRowStart": 14, "gridColumnStart": 14, "gridRowEnd": 14, "gridRow": 14, "gridColumn": 14, "gridColumnEnd": 14, "gridColumnGap": 14, "gridRowGap": 14, "gridArea": 14, "gridGap": 14 }, "ios_saf": { "flex": 8.1, "flexBasis": 8.1, "flexDirection": 8.1, "flexGrow": 8.1, "flexFlow": 8.1, "flexShrink": 8.1, "flexWrap": 8.1, "alignContent": 8.1, "alignItems": 8.1, "alignSelf": 8.1, "justifyContent": 8.1, "order": 8.1, "transition": 6, "transitionDelay": 6, "transitionDuration": 6, "transitionProperty": 6, "transitionTimingFunction": 6, "transform": 8.1, "transformOrigin": 8.1, "transformOriginX": 8.1, "transformOriginY": 8.1, "backfaceVisibility": 8.1, "perspective": 8.1, "perspectiveOrigin": 8.1, "transformStyle": 8.1, "transformOriginZ": 8.1, "animation": 8.1, "animationDelay": 8.1, "animationDirection": 8.1, "animationFillMode": 8.1, "animationDuration": 8.1, "animationIterationCount": 8.1, "animationName": 8.1, "animationPlayState": 8.1, "animationTimingFunction": 8.1, "appearance": 9.3, "userSelect": 9.3, "backdropFilter": 9.3, "fontKerning": 9.3, "scrollSnapType": 9.3, "scrollSnapPointsX": 9.3, "scrollSnapPointsY": 9.3, "scrollSnapDestination": 9.3, "scrollSnapCoordinate": 9.3, "boxDecorationBreak": 9.3, "clipPath": 9.3, "maskImage": 9.3, "maskMode": 9.3, "maskRepeat": 9.3, "maskPosition": 9.3, "maskClip": 9.3, "maskOrigin": 9.3, "maskSize": 9.3, "maskComposite": 9.3, "mask": 9.3, "maskBorderSource": 9.3, "maskBorderMode": 9.3, "maskBorderSlice": 9.3, "maskBorderWidth": 9.3, "maskBorderOutset": 9.3, "maskBorderRepeat": 9.3, "maskBorder": 9.3, "maskType": 9.3, "textSizeAdjust": 9.3, "textDecorationStyle": 9.3, "textDecorationSkip": 9.3, "textDecorationLine": 9.3, "textDecorationColor": 9.3, "shapeImageThreshold": 9.3, "shapeImageMargin": 9.3, "shapeImageOutside": 9.3, "filter": 9, "hyphens": 9.3, "flowInto": 9.3, "flowFrom": 9.3, "breakBefore": 8.1, "breakAfter": 8.1, "breakInside": 8.1, "regionFragment": 9.3, "columnCount": 8.1, "columnFill": 8.1, "columnGap": 8.1, "columnRule": 8.1, "columnRuleColor": 8.1, "columnRuleStyle": 8.1, "columnRuleWidth": 8.1, "columns": 8.1, "columnSpan": 8.1, "columnWidth": 8.1 }, "android": { "flex": 4.2, "flexBasis": 4.2, "flexDirection": 4.2, "flexGrow": 4.2, "flexFlow": 4.2, "flexShrink": 4.2, "flexWrap": 4.2, "alignContent": 4.2, "alignItems": 4.2, "alignSelf": 4.2, "justifyContent": 4.2, "order": 4.2, "transition": 4.2, "transitionDelay": 4.2, "transitionDuration": 4.2, "transitionProperty": 4.2, "transitionTimingFunction": 4.2, "transform": 4.4, "transformOrigin": 4.4, "transformOriginX": 4.4, "transformOriginY": 4.4, "backfaceVisibility": 4.4, "perspective": 4.4, "perspectiveOrigin": 4.4, "transformStyle": 4.4, "transformOriginZ": 4.4, "animation": 4.4, "animationDelay": 4.4, "animationDirection": 4.4, "animationFillMode": 4.4, "animationDuration": 4.4, "animationIterationCount": 4.4, "animationName": 4.4, "animationPlayState": 4.4, "animationTimingFunction": 4.4, "appearance": 51, "userSelect": 51, "fontKerning": 4.4, "textEmphasisPosition": 51, "textEmphasis": 51, "textEmphasisStyle": 51, "textEmphasisColor": 51, "boxDecorationBreak": 51, "clipPath": 51, "maskImage": 51, "maskMode": 51, "maskRepeat": 51, "maskPosition": 51, "maskClip": 51, "maskOrigin": 51, "maskSize": 51, "maskComposite": 51, "mask": 51, "maskBorderSource": 51, "maskBorderMode": 51, "maskBorderSlice": 51, "maskBorderWidth": 51, "maskBorderOutset": 51, "maskBorderRepeat": 51, "maskBorder": 51, "maskType": 51, "filter": 51, "fontFeatureSettings": 4.4, "breakAfter": 51, "breakBefore": 51, "breakInside": 51, "columnCount": 51, "columnFill": 51, "columnGap": 51, "columnRule": 51, "columnRuleColor": 51, "columnRuleStyle": 51, "columnRuleWidth": 51, "columns": 51, "columnSpan": 51, "columnWidth": 51 }, "and_chr": { "appearance": 51, "userSelect": 51, "textEmphasisPosition": 51, "textEmphasis": 51, "textEmphasisStyle": 51, "textEmphasisColor": 51, "boxDecorationBreak": 51, "clipPath": 51, "maskImage": 51, "maskMode": 51, "maskRepeat": 51, "maskPosition": 51, "maskClip": 51, "maskOrigin": 51, "maskSize": 51, "maskComposite": 51, "mask": 51, "maskBorderSource": 51, "maskBorderMode": 51, "maskBorderSlice": 51, "maskBorderWidth": 51, "maskBorderOutset": 51, "maskBorderRepeat": 51, "maskBorder": 51, "maskType": 51, "textDecorationStyle": 51, "textDecorationSkip": 51, "textDecorationLine": 51, "textDecorationColor": 51, "filter": 51 }, "and_uc": { "flex": 9.9, "flexBasis": 9.9, "flexDirection": 9.9, "flexGrow": 9.9, "flexFlow": 9.9, "flexShrink": 9.9, "flexWrap": 9.9, "alignContent": 9.9, "alignItems": 9.9, "alignSelf": 9.9, "justifyContent": 9.9, "order": 9.9, "transition": 9.9, "transitionDelay": 9.9, "transitionDuration": 9.9, "transitionProperty": 9.9, "transitionTimingFunction": 9.9, "transform": 9.9, "transformOrigin": 9.9, "transformOriginX": 9.9, "transformOriginY": 9.9, "backfaceVisibility": 9.9, "perspective": 9.9, "perspectiveOrigin": 9.9, "transformStyle": 9.9, "transformOriginZ": 9.9, "animation": 9.9, "animationDelay": 9.9, "animationDirection": 9.9, "animationFillMode": 9.9, "animationDuration": 9.9, "animationIterationCount": 9.9, "animationName": 9.9, "animationPlayState": 9.9, "animationTimingFunction": 9.9, "appearance": 9.9, "userSelect": 9.9, "fontKerning": 9.9, "textEmphasisPosition": 9.9, "textEmphasis": 9.9, "textEmphasisStyle": 9.9, "textEmphasisColor": 9.9, "maskImage": 9.9, "maskMode": 9.9, "maskRepeat": 9.9, "maskPosition": 9.9, "maskClip": 9.9, "maskOrigin": 9.9, "maskSize": 9.9, "maskComposite": 9.9, "mask": 9.9, "maskBorderSource": 9.9, "maskBorderMode": 9.9, "maskBorderSlice": 9.9, "maskBorderWidth": 9.9, "maskBorderOutset": 9.9, "maskBorderRepeat": 9.9, "maskBorder": 9.9, "maskType": 9.9, "textSizeAdjust": 9.9, "filter": 9.9, "hyphens": 9.9, "flowInto": 9.9, "flowFrom": 9.9, "breakBefore": 9.9, "breakAfter": 9.9, "breakInside": 9.9, "regionFragment": 9.9, "fontFeatureSettings": 9.9, "columnCount": 9.9, "columnFill": 9.9, "columnGap": 9.9, "columnRule": 9.9, "columnRuleColor": 9.9, "columnRuleStyle": 9.9, "columnRuleWidth": 9.9, "columns": 9.9, "columnSpan": 9.9, "columnWidth": 9.9 }, "op_mini": {} };
+module.exports = exports["default"];
+},{}],126:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = calc;
+
+var _joinPrefixedValue = require('../../utils/joinPrefixedValue');
+
+var _joinPrefixedValue2 = _interopRequireDefault(_joinPrefixedValue);
+
+var _isPrefixedValue = require('../../utils/isPrefixedValue');
+
+var _isPrefixedValue2 = _interopRequireDefault(_isPrefixedValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function calc(property, value) {
+  if (typeof value === 'string' && !(0, _isPrefixedValue2.default)(value) && value.indexOf('calc(') > -1) {
+    return (0, _joinPrefixedValue2.default)(property, value, function (prefix, value) {
+      return value.replace(/calc\(/g, prefix + 'calc(');
+    });
+  }
+}
+module.exports = exports['default'];
+},{"../../utils/isPrefixedValue":142,"../../utils/joinPrefixedValue":143}],127:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = cursor;
+
+var _joinPrefixedValue = require('../../utils/joinPrefixedValue');
+
+var _joinPrefixedValue2 = _interopRequireDefault(_joinPrefixedValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var values = {
+  'zoom-in': true,
+  'zoom-out': true,
+  grab: true,
+  grabbing: true
+};
+
+function cursor(property, value) {
+  if (property === 'cursor' && values[value]) {
+    return (0, _joinPrefixedValue2.default)(property, value);
+  }
+}
+module.exports = exports['default'];
+},{"../../utils/joinPrefixedValue":143}],128:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = flex;
+var values = { flex: true, 'inline-flex': true };
+
+function flex(property, value) {
+  if (property === 'display' && values[value]) {
+    return {
+      display: ['-webkit-box', '-moz-box', '-ms-' + value + 'box', '-webkit-' + value, value]
+    };
+  }
+}
+module.exports = exports['default'];
+},{}],129:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = flexboxIE;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var alternativeValues = {
+  'space-around': 'distribute',
+  'space-between': 'justify',
+  'flex-start': 'start',
+  'flex-end': 'end'
+};
+var alternativeProps = {
+  alignContent: 'msFlexLinePack',
+  alignSelf: 'msFlexItemAlign',
+  alignItems: 'msFlexAlign',
+  justifyContent: 'msFlexPack',
+  order: 'msFlexOrder',
+  flexGrow: 'msFlexPositive',
+  flexShrink: 'msFlexNegative',
+  flexBasis: 'msPreferredSize'
+};
+
+function flexboxIE(property, value) {
+  if (alternativeProps[property]) {
+    return _defineProperty({}, alternativeProps[property], alternativeValues[value] || value);
+  }
+}
+module.exports = exports['default'];
+},{}],130:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = flexboxOld;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var alternativeValues = {
+  'space-around': 'justify',
+  'space-between': 'justify',
+  'flex-start': 'start',
+  'flex-end': 'end',
+  'wrap-reverse': 'multiple',
+  wrap: 'multiple'
+};
+
+var alternativeProps = {
+  alignItems: 'WebkitBoxAlign',
+  justifyContent: 'WebkitBoxPack',
+  flexWrap: 'WebkitBoxLines'
+};
+
+function flexboxOld(property, value) {
+  if (property === 'flexDirection' && typeof value === 'string') {
+    return {
+      WebkitBoxOrient: value.indexOf('column') > -1 ? 'vertical' : 'horizontal',
+      WebkitBoxDirection: value.indexOf('reverse') > -1 ? 'reverse' : 'normal'
+    };
+  }
+  if (alternativeProps[property]) {
+    return _defineProperty({}, alternativeProps[property], alternativeValues[value] || value);
+  }
+}
+module.exports = exports['default'];
+},{}],131:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = gradient;
+
+var _joinPrefixedValue = require('../../utils/joinPrefixedValue');
+
+var _joinPrefixedValue2 = _interopRequireDefault(_joinPrefixedValue);
+
+var _isPrefixedValue = require('../../utils/isPrefixedValue');
+
+var _isPrefixedValue2 = _interopRequireDefault(_isPrefixedValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var values = /linear-gradient|radial-gradient|repeating-linear-gradient|repeating-radial-gradient/;
+
+function gradient(property, value) {
+  if (typeof value === 'string' && !(0, _isPrefixedValue2.default)(value) && value.match(values) !== null) {
+    return (0, _joinPrefixedValue2.default)(property, value);
+  }
+}
+module.exports = exports['default'];
+},{"../../utils/isPrefixedValue":142,"../../utils/joinPrefixedValue":143}],132:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = position;
+function position(property, value) {
+  if (property === 'position' && value === 'sticky') {
+    return { position: ['-webkit-sticky', 'sticky'] };
+  }
+}
+module.exports = exports['default'];
+},{}],133:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = sizing;
+
+var _joinPrefixedValue = require('../../utils/joinPrefixedValue');
+
+var _joinPrefixedValue2 = _interopRequireDefault(_joinPrefixedValue);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var properties = {
+  maxHeight: true,
+  maxWidth: true,
+  width: true,
+  height: true,
+  columnWidth: true,
+  minWidth: true,
+  minHeight: true
+};
+var values = {
+  'min-content': true,
+  'max-content': true,
+  'fill-available': true,
+  'fit-content': true,
+  'contain-floats': true
+};
+
+function sizing(property, value) {
+  if (properties[property] && values[value]) {
+    return (0, _joinPrefixedValue2.default)(property, value);
+  }
+}
+module.exports = exports['default'];
+},{"../../utils/joinPrefixedValue":143}],134:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = transition;
+
+var _hyphenateStyleName = require('hyphenate-style-name');
+
+var _hyphenateStyleName2 = _interopRequireDefault(_hyphenateStyleName);
+
+var _capitalizeString = require('../../utils/capitalizeString');
+
+var _capitalizeString2 = _interopRequireDefault(_capitalizeString);
+
+var _isPrefixedValue = require('../../utils/isPrefixedValue');
+
+var _isPrefixedValue2 = _interopRequireDefault(_isPrefixedValue);
+
+var _prefixProps = require('../prefixProps');
+
+var _prefixProps2 = _interopRequireDefault(_prefixProps);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var properties = {
+  transition: true,
+  transitionProperty: true,
+  WebkitTransition: true,
+  WebkitTransitionProperty: true
+};
+
+function transition(property, value) {
+  // also check for already prefixed transitions
+  if (typeof value === 'string' && properties[property]) {
+    var _ref2;
+
+    var outputValue = prefixValue(value);
+    var webkitOutput = outputValue.split(/,(?![^()]*(?:\([^()]*\))?\))/g).filter(function (value) {
+      return value.match(/-moz-|-ms-/) === null;
+    }).join(',');
+
+    // if the property is already prefixed
+    if (property.indexOf('Webkit') > -1) {
+      return _defineProperty({}, property, webkitOutput);
+    }
+
+    return _ref2 = {}, _defineProperty(_ref2, 'Webkit' + (0, _capitalizeString2.default)(property), webkitOutput), _defineProperty(_ref2, property, outputValue), _ref2;
+  }
+}
+
+function prefixValue(value) {
+  if ((0, _isPrefixedValue2.default)(value)) {
+    return value;
+  }
+
+  // only split multi values, not cubic beziers
+  var multipleValues = value.split(/,(?![^()]*(?:\([^()]*\))?\))/g);
+
+  // iterate each single value and check for transitioned properties
+  // that need to be prefixed as well
+  multipleValues.forEach(function (val, index) {
+    multipleValues[index] = Object.keys(_prefixProps2.default).reduce(function (out, prefix) {
+      var dashCasePrefix = '-' + prefix.toLowerCase() + '-';
+
+      Object.keys(_prefixProps2.default[prefix]).forEach(function (prop) {
+        var dashCaseProperty = (0, _hyphenateStyleName2.default)(prop);
+
+        if (val.indexOf(dashCaseProperty) > -1 && dashCaseProperty !== 'order') {
+          // join all prefixes and create a new value
+          out = val.replace(dashCaseProperty, dashCasePrefix + dashCaseProperty) + ',' + out;
+        }
+      });
+      return out;
+    }, val);
+  });
+
+  return multipleValues.join(',');
+}
+module.exports = exports['default'];
+},{"../../utils/capitalizeString":137,"../../utils/isPrefixedValue":142,"../prefixProps":136,"hyphenate-style-name":35}],135:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = prefixAll;
+
+var _prefixProps = require('./prefixProps');
+
+var _prefixProps2 = _interopRequireDefault(_prefixProps);
+
+var _capitalizeString = require('../utils/capitalizeString');
+
+var _capitalizeString2 = _interopRequireDefault(_capitalizeString);
+
+var _sortPrefixedStyle = require('../utils/sortPrefixedStyle');
+
+var _sortPrefixedStyle2 = _interopRequireDefault(_sortPrefixedStyle);
+
+var _position = require('./plugins/position');
+
+var _position2 = _interopRequireDefault(_position);
+
+var _calc = require('./plugins/calc');
+
+var _calc2 = _interopRequireDefault(_calc);
+
+var _cursor = require('./plugins/cursor');
+
+var _cursor2 = _interopRequireDefault(_cursor);
+
+var _flex = require('./plugins/flex');
+
+var _flex2 = _interopRequireDefault(_flex);
+
+var _sizing = require('./plugins/sizing');
+
+var _sizing2 = _interopRequireDefault(_sizing);
+
+var _gradient = require('./plugins/gradient');
+
+var _gradient2 = _interopRequireDefault(_gradient);
+
+var _transition = require('./plugins/transition');
+
+var _transition2 = _interopRequireDefault(_transition);
+
+var _flexboxIE = require('./plugins/flexboxIE');
+
+var _flexboxIE2 = _interopRequireDefault(_flexboxIE);
+
+var _flexboxOld = require('./plugins/flexboxOld');
+
+var _flexboxOld2 = _interopRequireDefault(_flexboxOld);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// special flexbox specifications
+
+
+var plugins = [_position2.default, _calc2.default, _cursor2.default, _sizing2.default, _gradient2.default, _transition2.default, _flexboxIE2.default, _flexboxOld2.default, _flex2.default];
+
+/**
+ * Returns a prefixed version of the style object using all vendor prefixes
+ * @param {Object} styles - Style object that gets prefixed properties added
+ * @returns {Object} - Style object with prefixed properties and values
+ */
+function prefixAll(styles) {
+  Object.keys(styles).forEach(function (property) {
+    var value = styles[property];
+    if (value instanceof Object && !Array.isArray(value)) {
+      // recurse through nested style objects
+      styles[property] = prefixAll(value);
+    } else {
+      Object.keys(_prefixProps2.default).forEach(function (prefix) {
+        var properties = _prefixProps2.default[prefix];
+        // add prefixes if needed
+        if (properties[property]) {
+          styles[prefix + (0, _capitalizeString2.default)(property)] = value;
+        }
+      });
+    }
+  });
+
+  Object.keys(styles).forEach(function (property) {
+    [].concat(styles[property]).forEach(function (value, index) {
+      // resolve every special plugins
+      plugins.forEach(function (plugin) {
+        return assignStyles(styles, plugin(property, value));
+      });
+    });
+  });
+
+  return (0, _sortPrefixedStyle2.default)(styles);
+}
+
+function assignStyles(base) {
+  var extend = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+  Object.keys(extend).forEach(function (property) {
+    var baseValue = base[property];
+    if (Array.isArray(baseValue)) {
+      [].concat(extend[property]).forEach(function (value) {
+        var valueIndex = baseValue.indexOf(value);
+        if (valueIndex > -1) {
+          base[property].splice(valueIndex, 1);
+        }
+        base[property].push(value);
+      });
+    } else {
+      base[property] = extend[property];
+    }
+  });
+}
+module.exports = exports['default'];
+},{"../utils/capitalizeString":137,"../utils/sortPrefixedStyle":144,"./plugins/calc":126,"./plugins/cursor":127,"./plugins/flex":128,"./plugins/flexboxIE":129,"./plugins/flexboxOld":130,"./plugins/gradient":131,"./plugins/position":132,"./plugins/sizing":133,"./plugins/transition":134,"./prefixProps":136}],136:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = { "Webkit": { "transform": true, "transformOrigin": true, "transformOriginX": true, "transformOriginY": true, "backfaceVisibility": true, "perspective": true, "perspectiveOrigin": true, "transformStyle": true, "transformOriginZ": true, "animation": true, "animationDelay": true, "animationDirection": true, "animationFillMode": true, "animationDuration": true, "animationIterationCount": true, "animationName": true, "animationPlayState": true, "animationTimingFunction": true, "appearance": true, "userSelect": true, "fontKerning": true, "textEmphasisPosition": true, "textEmphasis": true, "textEmphasisStyle": true, "textEmphasisColor": true, "boxDecorationBreak": true, "clipPath": true, "maskImage": true, "maskMode": true, "maskRepeat": true, "maskPosition": true, "maskClip": true, "maskOrigin": true, "maskSize": true, "maskComposite": true, "mask": true, "maskBorderSource": true, "maskBorderMode": true, "maskBorderSlice": true, "maskBorderWidth": true, "maskBorderOutset": true, "maskBorderRepeat": true, "maskBorder": true, "maskType": true, "textDecorationStyle": true, "textDecorationSkip": true, "textDecorationLine": true, "textDecorationColor": true, "filter": true, "fontFeatureSettings": true, "breakAfter": true, "breakBefore": true, "breakInside": true, "columnCount": true, "columnFill": true, "columnGap": true, "columnRule": true, "columnRuleColor": true, "columnRuleStyle": true, "columnRuleWidth": true, "columns": true, "columnSpan": true, "columnWidth": true, "flex": true, "flexBasis": true, "flexDirection": true, "flexGrow": true, "flexFlow": true, "flexShrink": true, "flexWrap": true, "alignContent": true, "alignItems": true, "alignSelf": true, "justifyContent": true, "order": true, "transition": true, "transitionDelay": true, "transitionDuration": true, "transitionProperty": true, "transitionTimingFunction": true, "backdropFilter": true, "scrollSnapType": true, "scrollSnapPointsX": true, "scrollSnapPointsY": true, "scrollSnapDestination": true, "scrollSnapCoordinate": true, "shapeImageThreshold": true, "shapeImageMargin": true, "shapeImageOutside": true, "hyphens": true, "flowInto": true, "flowFrom": true, "regionFragment": true, "textSizeAdjust": true }, "Moz": { "appearance": true, "userSelect": true, "boxSizing": true, "textAlignLast": true, "textDecorationStyle": true, "textDecorationSkip": true, "textDecorationLine": true, "textDecorationColor": true, "tabSize": true, "hyphens": true, "fontFeatureSettings": true, "breakAfter": true, "breakBefore": true, "breakInside": true, "columnCount": true, "columnFill": true, "columnGap": true, "columnRule": true, "columnRuleColor": true, "columnRuleStyle": true, "columnRuleWidth": true, "columns": true, "columnSpan": true, "columnWidth": true }, "ms": { "flex": true, "flexBasis": false, "flexDirection": true, "flexGrow": false, "flexFlow": true, "flexShrink": false, "flexWrap": true, "alignContent": false, "alignItems": false, "alignSelf": false, "justifyContent": false, "order": false, "transform": true, "transformOrigin": true, "transformOriginX": true, "transformOriginY": true, "userSelect": true, "wrapFlow": true, "wrapThrough": true, "wrapMargin": true, "scrollSnapType": true, "scrollSnapPointsX": true, "scrollSnapPointsY": true, "scrollSnapDestination": true, "scrollSnapCoordinate": true, "touchAction": true, "hyphens": true, "flowInto": true, "flowFrom": true, "breakBefore": true, "breakAfter": true, "breakInside": true, "regionFragment": true, "gridTemplateColumns": true, "gridTemplateRows": true, "gridTemplateAreas": true, "gridTemplate": true, "gridAutoColumns": true, "gridAutoRows": true, "gridAutoFlow": true, "grid": true, "gridRowStart": true, "gridColumnStart": true, "gridRowEnd": true, "gridRow": true, "gridColumn": true, "gridColumnEnd": true, "gridColumnGap": true, "gridRowGap": true, "gridArea": true, "gridGap": true, "textSizeAdjust": true } };
+module.exports = exports["default"];
+},{}],137:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// helper to capitalize strings
+
+exports.default = function (str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+module.exports = exports["default"];
+},{}],138:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _bowser = require('bowser');
+
+var _bowser2 = _interopRequireDefault(_bowser);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var vendorPrefixes = {
+  Webkit: ['chrome', 'safari', 'ios', 'android', 'phantom', 'opera', 'webos', 'blackberry', 'bada', 'tizen', 'chromium', 'vivaldi'],
+  Moz: ['firefox', 'seamonkey', 'sailfish'],
+  ms: ['msie', 'msedge']
+};
+var browsers = {
+  chrome: [['chrome'], ['chromium']],
+  safari: [['safari']],
+  firefox: [['firefox']],
+  edge: [['msedge']],
+  opera: [['opera'], ['vivaldi']],
+  ios_saf: [['ios', 'mobile'], ['ios', 'tablet']],
+  ie: [['msie']],
+  op_mini: [['opera', 'mobile'], ['opera', 'tablet']],
+  and_uc: [['android', 'mobile'], ['android', 'tablet']],
+  android: [['android', 'mobile'], ['android', 'tablet']]
+};
+
+var browserByInfo = function browserByInfo(info) {
+  if (info.firefox) {
+    return 'firefox';
+  }
+  var name = '';
+
+  Object.keys(browsers).forEach(function (browser) {
+    browsers[browser].forEach(function (condition) {
+      var match = 0;
+      condition.forEach(function (single) {
+        if (info[single]) {
+          match += 1;
+        }
+      });
+      if (condition.length === match) {
+        name = browser;
+      }
+    });
+  });
+
+  return name;
+};
+
+/**
+ * Uses bowser to get default browser information such as version and name
+ * Evaluates bowser info and adds vendorPrefix information
+ * @param {string} userAgent - userAgent that gets evaluated
+ */
+
+exports.default = function (userAgent) {
+  if (!userAgent) {
+    return false;
+  }
+  var info = _bowser2.default._detect(userAgent);
+
+  Object.keys(vendorPrefixes).forEach(function (prefix) {
+    vendorPrefixes[prefix].forEach(function (browser) {
+      if (info[browser]) {
+        info.prefix = {
+          inline: prefix,
+          css: '-' + prefix.toLowerCase() + '-'
+        };
+      }
+    });
+  });
+
+  info.browser = browserByInfo(info);
+
+  // For cordova IOS 8 the version is missing, set truncated osversion to prevent NaN
+  info.version = info.version ? parseFloat(info.version) : parseInt(parseFloat(info.osversion), 10);
+  info.osversion = parseFloat(info.osversion);
+
+  // iOS forces all browsers to use Safari under the hood
+  // as the Safari version seems to match the iOS version
+  // we just explicitely use the osversion instead
+  // https://github.com/rofrischmann/inline-style-prefixer/issues/72
+  if (info.browser === 'ios_saf' && info.version > info.osversion) {
+    info.version = info.osversion;
+    info.safari = true;
+  }
+
+  // seperate native android chrome
+  // https://github.com/rofrischmann/inline-style-prefixer/issues/45
+  if (info.browser === 'android' && info.chrome && info.version > 37) {
+    info.browser = 'and_chr';
+  }
+
+  // For android < 4.4 we want to check the osversion
+  // not the chrome version, see issue #26
+  // https://github.com/rofrischmann/inline-style-prefixer/issues/26
+  if (info.browser === 'android' && info.osversion < 5) {
+    info.version = info.osversion;
+  }
+
+  return info;
+};
+
+module.exports = exports['default'];
+},{"bowser":16}],139:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (_ref) {
+  var browser = _ref.browser;
+  var version = _ref.version;
+  var prefix = _ref.prefix;
+
+  var prefixedKeyframes = 'keyframes';
+
+  if (browser === 'chrome' && version < 43 || (browser === 'safari' || browser === 'ios_saf') && version < 9 || browser === 'opera' && version < 30 || browser === 'android' && version <= 4.4 || browser === 'and_uc') {
+    prefixedKeyframes = prefix.css + prefixedKeyframes;
+  }
+  return prefixedKeyframes;
+};
+
+module.exports = exports['default'];
+},{}],140:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (prefixedValue, value, keepUnprefixed) {
+  return keepUnprefixed ? [prefixedValue, value] : prefixedValue;
+};
+
+module.exports = exports["default"];
+},{}],141:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (property) {
+  return property.match(/^(Webkit|Moz|O|ms)/) !== null;
+};
+
+module.exports = exports["default"];
+},{}],142:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (value) {
+  if (Array.isArray(value)) value = value.join(',');
+
+  return value.match(/-webkit-|-moz-|-ms-/) !== null;
+};
+
+module.exports = exports['default'];
+},{}],143:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// returns a style object with a single concated prefixed value string
+
+exports.default = function (property, value) {
+  var replacer = arguments.length <= 2 || arguments[2] === undefined ? function (prefix, value) {
+    return prefix + value;
+  } : arguments[2];
+  return _defineProperty({}, property, ['-webkit-', '-moz-', ''].map(function (prefix) {
+    return replacer(prefix, value);
+  }));
+};
+
+module.exports = exports['default'];
+},{}],144:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = sortPrefixedStyle;
+
+var _isPrefixedProperty = require('./isPrefixedProperty');
+
+var _isPrefixedProperty2 = _interopRequireDefault(_isPrefixedProperty);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function sortPrefixedStyle(style) {
+  return Object.keys(style).sort(function (left, right) {
+    if ((0, _isPrefixedProperty2.default)(left) && !(0, _isPrefixedProperty2.default)(right)) {
+      return -1;
+    } else if (!(0, _isPrefixedProperty2.default)(left) && (0, _isPrefixedProperty2.default)(right)) {
+      return 1;
+    }
+    return 0;
+  }).reduce(function (sortedStyle, prop) {
+    sortedStyle[prop] = style[prop];
+    return sortedStyle;
+  }, {});
+}
+module.exports = exports['default'];
+},{"./isPrefixedProperty":141}],145:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (property) {
+  var unprefixed = property.replace(/^(ms|Webkit|Moz|O)/, '');
+  return unprefixed.charAt(0).toLowerCase() + unprefixed.slice(1);
+};
+
+module.exports = exports['default'];
+},{}],146:[function(require,module,exports){
+arguments[4][70][0].apply(exports,arguments)
+},{"./append-px-if-needed":147,"./map-object":159,"dup":70}],147:[function(require,module,exports){
+arguments[4][71][0].apply(exports,arguments)
+},{"dup":71}],148:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _camelCaseRegex = /([a-z])?([A-Z])/g;
+
+var _camelCaseReplacer = function _camelCaseReplacer(match, p1, p2) {
+  return (p1 || '') + '-' + p2.toLowerCase();
+};
+
+var _camelCaseToDashCase = function _camelCaseToDashCase(s) {
+  return s.replace(_camelCaseRegex, _camelCaseReplacer);
+};
+
+var camelCasePropsToDashCase = function camelCasePropsToDashCase(prefixedStyle) {
+  // Since prefix is expected to work on inline style objects, we must
+  // translate the keys to dash case for rendering to CSS.
+  return Object.keys(prefixedStyle).reduce(function (result, key) {
+    var dashCaseKey = _camelCaseToDashCase(key);
+
+    // Fix IE vendor prefix
+    if (/^ms-/.test(dashCaseKey)) {
+      dashCaseKey = '-' + dashCaseKey;
+    }
+
+    result[dashCaseKey] = prefixedStyle[key];
+    return result;
+  }, {});
+};
+
+exports.default = camelCasePropsToDashCase;
+module.exports = exports['default'];
+},{}],149:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _enhancer = require('../enhancer');
+
+var _enhancer2 = _interopRequireDefault(_enhancer);
+
+var _styleKeeper = require('../style-keeper');
+
+var _styleKeeper2 = _interopRequireDefault(_styleKeeper);
+
+var _styleSheet = require('./style-sheet');
+
+var _styleSheet2 = _interopRequireDefault(_styleSheet);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _getStyleKeeper(instance) {
+  if (!instance._radiumStyleKeeper) {
+    var userAgent = instance.props.radiumConfig && instance.props.radiumConfig.userAgent || instance.context._radiumConfig && instance.context._radiumConfig.userAgent;
+    instance._radiumStyleKeeper = new _styleKeeper2.default(userAgent);
+  }
+
+  return instance._radiumStyleKeeper;
+}
+
+var StyleRoot = function (_PureComponent) {
+  _inherits(StyleRoot, _PureComponent);
+
+  function StyleRoot() {
+    _classCallCheck(this, StyleRoot);
+
+    var _this = _possibleConstructorReturn(this, _PureComponent.apply(this, arguments));
+
+    _getStyleKeeper(_this);
+    return _this;
+  }
+
+  StyleRoot.prototype.getChildContext = function getChildContext() {
+    return { _radiumStyleKeeper: _getStyleKeeper(this) };
+  };
+
+  StyleRoot.prototype.render = function render() {
+    /* eslint-disable no-unused-vars */
+    // Pass down all props except config to the rendered div.
+    var _props = this.props,
+        radiumConfig = _props.radiumConfig,
+        otherProps = _objectWithoutProperties(_props, ['radiumConfig']);
+    /* eslint-enable no-unused-vars */
+
+    return _react2.default.createElement(
+      'div',
+      otherProps,
+      this.props.children,
+      _react2.default.createElement(_styleSheet2.default, null)
+    );
+  };
+
+  return StyleRoot;
+}(_react.PureComponent);
+
+StyleRoot.contextTypes = {
+  _radiumConfig: _react.PropTypes.object,
+  _radiumStyleKeeper: _react.PropTypes.instanceOf(_styleKeeper2.default)
+};
+
+StyleRoot.childContextTypes = {
+  _radiumStyleKeeper: _react.PropTypes.instanceOf(_styleKeeper2.default)
+};
+
+StyleRoot = (0, _enhancer2.default)(StyleRoot);
+
+exports.default = StyleRoot;
+module.exports = exports['default'];
+},{"../enhancer":153,"../style-keeper":173,"./style-sheet":150,"react":"react"}],150:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+
+var _class, _temp;
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _styleKeeper = require('../style-keeper');
+
+var _styleKeeper2 = _interopRequireDefault(_styleKeeper);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var StyleSheet = (_temp = _class = function (_PureComponent) {
+  _inherits(StyleSheet, _PureComponent);
+
+  function StyleSheet() {
+    _classCallCheck(this, StyleSheet);
+
+    var _this = _possibleConstructorReturn(this, _PureComponent.apply(this, arguments));
+
+    _this._onChange = function () {
+      setTimeout(function () {
+        _this._isMounted && _this.setState(_this._getCSSState());
+      }, 0);
+    };
+
+    _this.state = _this._getCSSState();
+    return _this;
+  }
+
+  StyleSheet.prototype.componentDidMount = function componentDidMount() {
+    this._isMounted = true;
+    this._subscription = this.context._radiumStyleKeeper.subscribe(this._onChange);
+    this._onChange();
+  };
+
+  StyleSheet.prototype.componentWillUnmount = function componentWillUnmount() {
+    this._isMounted = false;
+    if (this._subscription) {
+      this._subscription.remove();
+    }
+  };
+
+  StyleSheet.prototype._getCSSState = function _getCSSState() {
+    return { css: this.context._radiumStyleKeeper.getCSS() };
+  };
+
+  StyleSheet.prototype.render = function render() {
+    return _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: this.state.css } });
+  };
+
+  return StyleSheet;
+}(_react.PureComponent), _class.contextTypes = {
+  _radiumStyleKeeper: _react2.default.PropTypes.instanceOf(_styleKeeper2.default)
+}, _temp);
+exports.default = StyleSheet;
+module.exports = exports['default'];
+},{"../style-keeper":173,"react":"react"}],151:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _class, _temp;
+
+var _cssRuleSetToString = require('../css-rule-set-to-string');
+
+var _cssRuleSetToString2 = _interopRequireDefault(_cssRuleSetToString);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Style = (_temp = _class = function (_PureComponent) {
+  _inherits(Style, _PureComponent);
+
+  function Style() {
+    _classCallCheck(this, Style);
+
+    return _possibleConstructorReturn(this, _PureComponent.apply(this, arguments));
+  }
+
+  Style.prototype._buildStyles = function _buildStyles(styles) {
+    var _this2 = this;
+
+    var userAgent = this.props.radiumConfig && this.props.radiumConfig.userAgent || this.context && this.context._radiumConfig && this.context._radiumConfig.userAgent;
+
+    var scopeSelector = this.props.scopeSelector;
+
+    var rootRules = Object.keys(styles).reduce(function (accumulator, selector) {
+      if (_typeof(styles[selector]) !== 'object') {
+        accumulator[selector] = styles[selector];
+      }
+
+      return accumulator;
+    }, {});
+    var rootStyles = Object.keys(rootRules).length ? (0, _cssRuleSetToString2.default)(scopeSelector || '', rootRules, userAgent) : '';
+
+    return rootStyles + Object.keys(styles).reduce(function (accumulator, selector) {
+      var rules = styles[selector];
+
+      if (selector === 'mediaQueries') {
+        accumulator += _this2._buildMediaQueryString(rules);
+      } else if (_typeof(styles[selector]) === 'object') {
+        var completeSelector = scopeSelector ? selector.split(',').map(function (part) {
+          return scopeSelector + ' ' + part.trim();
+        }).join(',') : selector;
+
+        accumulator += (0, _cssRuleSetToString2.default)(completeSelector, rules, userAgent);
+      }
+
+      return accumulator;
+    }, '');
+  };
+
+  Style.prototype._buildMediaQueryString = function _buildMediaQueryString(stylesByMediaQuery) {
+    var _this3 = this;
+
+    var mediaQueryString = '';
+
+    Object.keys(stylesByMediaQuery).forEach(function (query) {
+      mediaQueryString += '@media ' + query + '{' + _this3._buildStyles(stylesByMediaQuery[query]) + '}';
+    });
+
+    return mediaQueryString;
+  };
+
+  Style.prototype.render = function render() {
+    if (!this.props.rules) {
+      return null;
+    }
+
+    var styles = this._buildStyles(this.props.rules);
+
+    return _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: styles } });
+  };
+
+  return Style;
+}(_react.PureComponent), _class.propTypes = {
+  radiumConfig: _react.PropTypes.object,
+  rules: _react.PropTypes.object,
+  scopeSelector: _react.PropTypes.string
+}, _class.contextTypes = {
+  _radiumConfig: _react.PropTypes.object
+}, _class.defaultProps = {
+  scopeSelector: ''
+}, _temp);
+exports.default = Style;
+module.exports = exports['default'];
+},{"../css-rule-set-to-string":152,"react":"react"}],152:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = cssRuleSetToString;
+
+var _appendPxIfNeeded = require('./append-px-if-needed');
+
+var _appendPxIfNeeded2 = _interopRequireDefault(_appendPxIfNeeded);
+
+var _camelCasePropsToDashCase = require('./camel-case-props-to-dash-case');
+
+var _camelCasePropsToDashCase2 = _interopRequireDefault(_camelCasePropsToDashCase);
+
+var _mapObject = require('./map-object');
+
+var _mapObject2 = _interopRequireDefault(_mapObject);
+
+var _prefixer = require('./prefixer');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function createMarkupForStyles(style) {
+  return Object.keys(style).map(function (property) {
+    return property + ': ' + style[property] + ';';
+  }).join('\n');
+}
+
+function cssRuleSetToString(selector, rules, userAgent) {
+  if (!rules) {
+    return '';
+  }
+
+  var rulesWithPx = (0, _mapObject2.default)(rules, function (value, key) {
+    return (0, _appendPxIfNeeded2.default)(key, value);
+  });
+  var prefixedRules = (0, _prefixer.getPrefixedStyle)(rulesWithPx, userAgent);
+  var cssPrefixedRules = (0, _camelCasePropsToDashCase2.default)(prefixedRules);
+  var serializedRules = createMarkupForStyles(cssPrefixedRules);
+
+  return selector + '{' + serializedRules + '}';
+}
+module.exports = exports['default'];
+},{"./append-px-if-needed":147,"./camel-case-props-to-dash-case":148,"./map-object":159,"./prefixer":171}],153:[function(require,module,exports){
+(function (process){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+exports.default = enhanceWithRadium;
+
+var _react = require('react');
+
+var _styleKeeper = require('./style-keeper.js');
+
+var _styleKeeper2 = _interopRequireDefault(_styleKeeper);
+
+var _resolveStyles = require('./resolve-styles.js');
+
+var _resolveStyles2 = _interopRequireDefault(_resolveStyles);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var KEYS_TO_IGNORE_WHEN_COPYING_PROPERTIES = ['arguments', 'callee', 'caller', 'length', 'name', 'prototype', 'type'];
+
+function copyProperties(source, target) {
+  Object.getOwnPropertyNames(source).forEach(function (key) {
+    if (KEYS_TO_IGNORE_WHEN_COPYING_PROPERTIES.indexOf(key) < 0 && !target.hasOwnProperty(key)) {
+      var descriptor = Object.getOwnPropertyDescriptor(source, key);
+      Object.defineProperty(target, key, descriptor);
+    }
+  });
+}
+
+function isStateless(component) {
+  return !component.render && !(component.prototype && component.prototype.render);
+}
+
+function enhanceWithRadium(configOrComposedComponent) {
+  var _class, _temp;
+
+  var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+  if (typeof configOrComposedComponent !== 'function') {
+    var newConfig = _extends({}, config, configOrComposedComponent);
+    return function (configOrComponent) {
+      return enhanceWithRadium(configOrComponent, newConfig);
+    };
+  }
+
+  var component = configOrComposedComponent;
+  var ComposedComponent = component;
+
+  // Handle stateless components
+  if (isStateless(ComposedComponent)) {
+    ComposedComponent = function (_Component) {
+      _inherits(ComposedComponent, _Component);
+
+      function ComposedComponent() {
+        _classCallCheck(this, ComposedComponent);
+
+        return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+      }
+
+      ComposedComponent.prototype.render = function render() {
+        return component(this.props, this.context);
+      };
+
+      return ComposedComponent;
+    }(_react.Component);
+    ComposedComponent.displayName = component.displayName || component.name;
+  }
+
+  var RadiumEnhancer = (_temp = _class = function (_ComposedComponent) {
+    _inherits(RadiumEnhancer, _ComposedComponent);
+
+    function RadiumEnhancer() {
+      _classCallCheck(this, RadiumEnhancer);
+
+      var _this2 = _possibleConstructorReturn(this, _ComposedComponent.apply(this, arguments));
+
+      _this2.state = _this2.state || {};
+      _this2.state._radiumStyleState = {};
+      _this2._radiumIsMounted = true;
+      return _this2;
+    }
+
+    RadiumEnhancer.prototype.componentWillUnmount = function componentWillUnmount() {
+      if (_ComposedComponent.prototype.componentWillUnmount) {
+        _ComposedComponent.prototype.componentWillUnmount.call(this);
+      }
+
+      this._radiumIsMounted = false;
+
+      if (this._radiumMouseUpListener) {
+        this._radiumMouseUpListener.remove();
+      }
+
+      if (this._radiumMediaQueryListenersByQuery) {
+        Object.keys(this._radiumMediaQueryListenersByQuery).forEach(function (query) {
+          this._radiumMediaQueryListenersByQuery[query].remove();
+        }, this);
+      }
+    };
+
+    RadiumEnhancer.prototype.getChildContext = function getChildContext() {
+      var superChildContext = _ComposedComponent.prototype.getChildContext ? _ComposedComponent.prototype.getChildContext.call(this) : {};
+
+      if (!this.props.radiumConfig) {
+        return superChildContext;
+      }
+
+      var newContext = _extends({}, superChildContext);
+
+      if (this.props.radiumConfig) {
+        newContext._radiumConfig = this.props.radiumConfig;
+      }
+
+      return newContext;
+    };
+
+    RadiumEnhancer.prototype.render = function render() {
+      var renderedElement = _ComposedComponent.prototype.render.call(this);
+      var currentConfig = this.props.radiumConfig || this.context._radiumConfig || config;
+
+      if (config && currentConfig !== config) {
+        currentConfig = _extends({}, config, currentConfig);
+      }
+
+      return (0, _resolveStyles2.default)(this, renderedElement, currentConfig);
+    };
+
+    return RadiumEnhancer;
+  }(ComposedComponent), _class._isRadiumEnhanced = true, _temp);
+
+  // Class inheritance uses Object.create and because of __proto__ issues
+  // with IE <10 any static properties of the superclass aren't inherited and
+  // so need to be manually populated.
+  // See http://babeljs.io/docs/advanced/caveats/#classes-10-and-below-
+
+  copyProperties(component, RadiumEnhancer);
+
+  if (process.env.NODE_ENV !== 'production') {
+    // This also fixes React Hot Loader by exposing the original components top
+    // level prototype methods on the Radium enhanced prototype as discussed in
+    // https://github.com/FormidableLabs/radium/issues/219.
+    copyProperties(ComposedComponent.prototype, RadiumEnhancer.prototype);
+  }
+
+  if (RadiumEnhancer.propTypes && RadiumEnhancer.propTypes.style) {
+    RadiumEnhancer.propTypes = _extends({}, RadiumEnhancer.propTypes, {
+      style: _react.PropTypes.oneOfType([_react.PropTypes.array, _react.PropTypes.object])
+    });
+  }
+
+  RadiumEnhancer.displayName = component.displayName || component.name || 'Component';
+
+  RadiumEnhancer.contextTypes = _extends({}, RadiumEnhancer.contextTypes, {
+    _radiumConfig: _react.PropTypes.object,
+    _radiumStyleKeeper: _react.PropTypes.instanceOf(_styleKeeper2.default)
+  });
+
+  RadiumEnhancer.childContextTypes = _extends({}, RadiumEnhancer.childContextTypes, {
+    _radiumConfig: _react.PropTypes.object,
+    _radiumStyleKeeper: _react.PropTypes.instanceOf(_styleKeeper2.default)
+  });
+
+  return RadiumEnhancer;
+}
+module.exports = exports['default'];
+}).call(this,require('_process'))
+},{"./resolve-styles.js":172,"./style-keeper.js":173,"_process":69,"react":"react"}],154:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var getStateKey = function getStateKey(elementKey) {
+  return elementKey === null || elementKey === undefined ? 'main' : elementKey.toString();
+};
+
+exports.default = getStateKey;
+module.exports = exports['default'];
+},{}],155:[function(require,module,exports){
+arguments[4][79][0].apply(exports,arguments)
+},{"./get-state-key":154,"dup":79}],156:[function(require,module,exports){
+arguments[4][80][0].apply(exports,arguments)
+},{"dup":80}],157:[function(require,module,exports){
+arguments[4][81][0].apply(exports,arguments)
+},{"./components/style":151,"./components/style-root":149,"./enhancer":153,"./get-state":155,"./keyframes":158,"./plugins":162,"./resolve-styles":172,"_process":69,"dup":81}],158:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = keyframes;
+
+var _cssRuleSetToString = require('./css-rule-set-to-string');
+
+var _cssRuleSetToString2 = _interopRequireDefault(_cssRuleSetToString);
+
+var _hash = require('./hash');
+
+var _hash2 = _interopRequireDefault(_hash);
+
+var _prefixer = require('./prefixer');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function keyframes(keyframeRules, name) {
+  return {
+    __radiumKeyframes: true,
+    __process: function __process(userAgent) {
+      var keyframesPrefixed = (0, _prefixer.getPrefixedKeyframes)(userAgent);
+      var rules = Object.keys(keyframeRules).map(function (percentage) {
+        return (0, _cssRuleSetToString2.default)(percentage, keyframeRules[percentage], userAgent);
+      }).join('\n');
+      var animationName = (name ? name + '-' : '') + 'radium-animation-' + (0, _hash2.default)(rules);
+      var css = '@' + keyframesPrefixed + ' ' + animationName + ' {\n' + rules + '\n}\n';
+      return { css: css, animationName: animationName };
+    }
+  };
+}
+
+module.exports = exports['default'];
+},{"./css-rule-set-to-string":152,"./hash":156,"./prefixer":171}],159:[function(require,module,exports){
+arguments[4][83][0].apply(exports,arguments)
+},{"dup":83}],160:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+exports.isNestedStyle = isNestedStyle;
+exports.mergeStyles = mergeStyles;
+function isNestedStyle(value) {
+  // Don't merge objects overriding toString, since they should be converted
+  // to string values.
+  return value && value.constructor === Object && value.toString === Object.prototype.toString;
+}
+
+// Merge style objects. Deep merge plain object values.
+function mergeStyles(styles) {
+  var result = {};
+
+  styles.forEach(function (style) {
+    if (!style || (typeof style === 'undefined' ? 'undefined' : _typeof(style)) !== 'object') {
+      return;
+    }
+
+    if (Array.isArray(style)) {
+      style = mergeStyles(style);
+    }
+
+    Object.keys(style).forEach(function (key) {
+      // Simple case, nothing nested
+      if (!isNestedStyle(style[key]) || !isNestedStyle(result[key])) {
+        result[key] = style[key];
+        return;
+      }
+
+      // If nested media, don't merge the nested styles, append a space to the
+      // end (benign when converted to CSS). This way we don't end up merging
+      // media queries that appear later in the chain with those that appear
+      // earlier.
+      if (key.indexOf('@media') === 0) {
+        var newKey = key;
+        // eslint-disable-next-line no-constant-condition
+        while (true) {
+          newKey += ' ';
+          if (!result[newKey]) {
+            result[newKey] = style[key];
+            return;
+          }
+        }
+      }
+
+      // Merge all other nested styles recursively
+      result[key] = mergeStyles([result[key], style[key]]);
+    });
+  });
+
+  return result;
+}
+},{}],161:[function(require,module,exports){
+(function (process){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _checkProps = function checkProps() {};
+
+if (process.env.NODE_ENV !== 'production') {
+  // Warn if you use longhand and shorthand properties in the same style
+  // object.
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties
+
+  var shorthandPropertyExpansions = {
+    background: ['backgroundAttachment', 'backgroundBlendMode', 'backgroundClip', 'backgroundColor', 'backgroundImage', 'backgroundOrigin', 'backgroundPosition', 'backgroundPositionX', 'backgroundPositionY', 'backgroundRepeat', 'backgroundRepeatX', 'backgroundRepeatY', 'backgroundSize'],
+    border: ['borderBottom', 'borderBottomColor', 'borderBottomStyle', 'borderBottomWidth', 'borderColor', 'borderLeft', 'borderLeftColor', 'borderLeftStyle', 'borderLeftWidth', 'borderRight', 'borderRightColor', 'borderRightStyle', 'borderRightWidth', 'borderStyle', 'borderTop', 'borderTopColor', 'borderTopStyle', 'borderTopWidth', 'borderWidth'],
+    borderImage: ['borderImageOutset', 'borderImageRepeat', 'borderImageSlice', 'borderImageSource', 'borderImageWidth'],
+    borderRadius: ['borderBottomLeftRadius', 'borderBottomRightRadius', 'borderTopLeftRadius', 'borderTopRightRadius'],
+    font: ['fontFamily', 'fontKerning', 'fontSize', 'fontStretch', 'fontStyle', 'fontVariant', 'fontVariantLigatures', 'fontWeight', 'lineHeight'],
+    listStyle: ['listStyleImage', 'listStylePosition', 'listStyleType'],
+    margin: ['marginBottom', 'marginLeft', 'marginRight', 'marginTop'],
+    padding: ['paddingBottom', 'paddingLeft', 'paddingRight', 'paddingTop'],
+    transition: ['transitionDelay', 'transitionDuration', 'transitionProperty', 'transitionTimingFunction']
+  };
+
+  _checkProps = function checkProps(config) {
+    var componentName = config.componentName,
+        style = config.style;
+
+    if ((typeof style === 'undefined' ? 'undefined' : _typeof(style)) !== 'object' || !style) {
+      return;
+    }
+
+    var styleKeys = Object.keys(style);
+    styleKeys.forEach(function (styleKey) {
+      if (Array.isArray(shorthandPropertyExpansions[styleKey]) && shorthandPropertyExpansions[styleKey].some(function (sp) {
+        return styleKeys.indexOf(sp) !== -1;
+      })) {
+        if (process.env.NODE_ENV !== 'production') {
+          /* eslint-disable no-console */
+          console.warn('Radium: property "' + styleKey + '" in style object', style, ': do not mix longhand and ' + 'shorthand properties in the same style object. Check the render ' + 'method of ' + componentName + '.', 'See https://github.com/FormidableLabs/radium/issues/95 for more ' + 'information.');
+          /* eslint-enable no-console */
+        }
+      }
+    });
+
+    styleKeys.forEach(function (k) {
+      return _checkProps(_extends({}, config, { style: style[k] }));
+    });
+    return;
+  };
+}
+
+exports.default = _checkProps;
+module.exports = exports['default'];
+}).call(this,require('_process'))
+},{"_process":69}],162:[function(require,module,exports){
+arguments[4][86][0].apply(exports,arguments)
+},{"./check-props-plugin":161,"./keyframes-plugin":163,"./merge-style-array-plugin":164,"./prefix-plugin":166,"./remove-nested-styles-plugin":167,"./resolve-interaction-styles-plugin":168,"./resolve-media-queries-plugin":169,"./visited-plugin":170,"dup":86}],163:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = keyframesPlugin;
+function keyframesPlugin(_ref) {
+  var addCSS = _ref.addCSS,
+      config = _ref.config,
+      style = _ref.style;
+
+  var newStyle = Object.keys(style).reduce(function (newStyleInProgress, key) {
+    var value = style[key];
+    if (key === 'animationName' && value && value.__radiumKeyframes) {
+      var keyframesValue = value;
+
+      var _keyframesValue$__pro = keyframesValue.__process(config.userAgent),
+          animationName = _keyframesValue$__pro.animationName,
+          css = _keyframesValue$__pro.css;
+
+      addCSS(css);
+      value = animationName;
+    }
+
+    newStyleInProgress[key] = value;
+    return newStyleInProgress;
+  }, {});
+  return { style: newStyle };
+}
+module.exports = exports['default'];
+},{}],164:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+
+// Convenient syntax for multiple styles: `style={[style1, style2, etc]}`
+// Ignores non-objects, so you can do `this.state.isCool && styles.cool`.
+var mergeStyleArrayPlugin = function mergeStyleArrayPlugin(_ref) {
+  var style = _ref.style,
+      mergeStyles = _ref.mergeStyles;
+
+  // eslint-disable-line no-shadow
+  var newStyle = Array.isArray(style) ? mergeStyles(style) : style;
+  return { style: newStyle };
+};
+
+exports.default = mergeStyleArrayPlugin;
+module.exports = exports['default'];
+},{}],165:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _callbacks = [];
+var _mouseUpListenerIsActive = false;
+
+function _handleMouseUp() {
+  _callbacks.forEach(function (callback) {
+    callback();
+  });
+}
+
+var subscribe = function subscribe(callback) {
+  if (_callbacks.indexOf(callback) === -1) {
+    _callbacks.push(callback);
+  }
+
+  if (!_mouseUpListenerIsActive) {
+    window.addEventListener('mouseup', _handleMouseUp);
+    _mouseUpListenerIsActive = true;
+  }
+
+  return {
+    remove: function remove() {
+      var index = _callbacks.indexOf(callback);
+      _callbacks.splice(index, 1);
+
+      if (_callbacks.length === 0 && _mouseUpListenerIsActive) {
+        window.removeEventListener('mouseup', _handleMouseUp);
+        _mouseUpListenerIsActive = false;
+      }
+    }
+  };
+};
+
+exports.default = {
+  subscribe: subscribe,
+  __triggerForTests: _handleMouseUp
+};
+module.exports = exports['default'];
+},{}],166:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = prefixPlugin;
+
+var _prefixer = require('../prefixer');
+
+function prefixPlugin(_ref) {
+  var config = _ref.config,
+      style = _ref.style;
+
+  var newStyle = (0, _prefixer.getPrefixedStyle)(style, config.userAgent);
+  return { style: newStyle };
+}
+module.exports = exports['default'];
+},{"../prefixer":171}],167:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = removeNestedStyles;
+function removeNestedStyles(_ref) {
+  var isNestedStyle = _ref.isNestedStyle,
+      style = _ref.style;
+
+  // eslint-disable-line no-shadow
+  var newStyle = Object.keys(style).reduce(function (newStyleInProgress, key) {
+    var value = style[key];
+    if (!isNestedStyle(value)) {
+      newStyleInProgress[key] = value;
+    }
+    return newStyleInProgress;
+  }, {});
+
+  return {
+    style: newStyle
+  };
+}
+
+module.exports = exports['default'];
+},{}],168:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _mouseUpListener = require('./mouse-up-listener');
+
+var _mouseUpListener2 = _interopRequireDefault(_mouseUpListener);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _isInteractiveStyleField = function _isInteractiveStyleField(styleFieldName) {
+  return styleFieldName === ':hover' || styleFieldName === ':active' || styleFieldName === ':focus';
+};
+
+var resolveInteractionStyles = function resolveInteractionStyles(config) {
+  var ExecutionEnvironment = config.ExecutionEnvironment,
+      getComponentField = config.getComponentField,
+      getState = config.getState,
+      mergeStyles = config.mergeStyles,
+      props = config.props,
+      setState = config.setState,
+      style = config.style;
+
+
+  var newComponentFields = {};
+  var newProps = {};
+
+  // Only add handlers if necessary
+  if (style[':hover']) {
+    // Always call the existing handler if one is already defined.
+    // This code, and the very similar ones below, could be abstracted a bit
+    // more, but it hurts readability IMO.
+    var existingOnMouseEnter = props.onMouseEnter;
+    newProps.onMouseEnter = function (e) {
+      existingOnMouseEnter && existingOnMouseEnter(e);
+      setState(':hover', true);
+    };
+
+    var existingOnMouseLeave = props.onMouseLeave;
+    newProps.onMouseLeave = function (e) {
+      existingOnMouseLeave && existingOnMouseLeave(e);
+      setState(':hover', false);
+    };
+  }
+
+  if (style[':active']) {
+    var existingOnMouseDown = props.onMouseDown;
+    newProps.onMouseDown = function (e) {
+      existingOnMouseDown && existingOnMouseDown(e);
+      newComponentFields._lastMouseDown = Date.now();
+      setState(':active', 'viamousedown');
+    };
+
+    var existingOnKeyDown = props.onKeyDown;
+    newProps.onKeyDown = function (e) {
+      existingOnKeyDown && existingOnKeyDown(e);
+      if (e.key === ' ' || e.key === 'Enter') {
+        setState(':active', 'viakeydown');
+      }
+    };
+
+    var existingOnKeyUp = props.onKeyUp;
+    newProps.onKeyUp = function (e) {
+      existingOnKeyUp && existingOnKeyUp(e);
+      if (e.key === ' ' || e.key === 'Enter') {
+        setState(':active', false);
+      }
+    };
+  }
+
+  if (style[':focus']) {
+    var existingOnFocus = props.onFocus;
+    newProps.onFocus = function (e) {
+      existingOnFocus && existingOnFocus(e);
+      setState(':focus', true);
+    };
+
+    var existingOnBlur = props.onBlur;
+    newProps.onBlur = function (e) {
+      existingOnBlur && existingOnBlur(e);
+      setState(':focus', false);
+    };
+  }
+
+  if (style[':active'] && !getComponentField('_radiumMouseUpListener') && ExecutionEnvironment.canUseEventListeners) {
+    newComponentFields._radiumMouseUpListener = _mouseUpListener2.default.subscribe(function () {
+      Object.keys(getComponentField('state')._radiumStyleState).forEach(function (key) {
+        if (getState(':active', key) === 'viamousedown') {
+          setState(':active', false, key);
+        }
+      });
+    });
+  }
+
+  // Merge the styles in the order they were defined
+  var interactionStyles = props.disabled ? [style[':disabled']] : Object.keys(style).filter(function (name) {
+    return _isInteractiveStyleField(name) && getState(name);
+  }).map(function (name) {
+    return style[name];
+  });
+
+  var newStyle = mergeStyles([style].concat(interactionStyles));
+
+  // Remove interactive styles
+  newStyle = Object.keys(newStyle).reduce(function (styleWithoutInteractions, name) {
+    if (!_isInteractiveStyleField(name) && name !== ':disabled') {
+      styleWithoutInteractions[name] = newStyle[name];
+    }
+    return styleWithoutInteractions;
+  }, {});
+
+  return {
+    componentFields: newComponentFields,
+    props: newProps,
+    style: newStyle
+  };
+};
+
+exports.default = resolveInteractionStyles;
+module.exports = exports['default'];
+},{"./mouse-up-listener":165}],169:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+exports.default = resolveMediaQueries;
+var _windowMatchMedia = void 0;
+function _getWindowMatchMedia(ExecutionEnvironment) {
+  if (_windowMatchMedia === undefined) {
+    _windowMatchMedia = !!ExecutionEnvironment.canUseDOM && !!window && !!window.matchMedia && function (mediaQueryString) {
+      return window.matchMedia(mediaQueryString);
+    } || null;
+  }
+  return _windowMatchMedia;
+}
+
+function _filterObject(obj, predicate) {
+  return Object.keys(obj).filter(function (key) {
+    return predicate(obj[key], key);
+  }).reduce(function (result, key) {
+    result[key] = obj[key];
+    return result;
+  }, {});
+}
+
+function _removeMediaQueries(style) {
+  return Object.keys(style).reduce(function (styleWithoutMedia, key) {
+    if (key.indexOf('@media') !== 0) {
+      styleWithoutMedia[key] = style[key];
+    }
+    return styleWithoutMedia;
+  }, {});
+}
+
+function _topLevelRulesToCSS(_ref) {
+  var addCSS = _ref.addCSS,
+      appendImportantToEachValue = _ref.appendImportantToEachValue,
+      cssRuleSetToString = _ref.cssRuleSetToString,
+      hash = _ref.hash,
+      isNestedStyle = _ref.isNestedStyle,
+      style = _ref.style,
+      userAgent = _ref.userAgent;
+
+  var className = '';
+  Object.keys(style).filter(function (name) {
+    return name.indexOf('@media') === 0;
+  }).map(function (query) {
+    var topLevelRules = appendImportantToEachValue(_filterObject(style[query], function (value) {
+      return !isNestedStyle(value);
+    }));
+
+    if (!Object.keys(topLevelRules).length) {
+      return;
+    }
+
+    var ruleCSS = cssRuleSetToString('', topLevelRules, userAgent);
+
+    // CSS classes cannot start with a number
+    var mediaQueryClassName = 'rmq-' + hash(query + ruleCSS);
+    var css = query + '{ .' + mediaQueryClassName + ruleCSS + '}';
+
+    addCSS(css);
+
+    className += (className ? ' ' : '') + mediaQueryClassName;
+  });
+  return className;
+}
+
+function _subscribeToMediaQuery(_ref2) {
+  var listener = _ref2.listener,
+      listenersByQuery = _ref2.listenersByQuery,
+      matchMedia = _ref2.matchMedia,
+      mediaQueryListsByQuery = _ref2.mediaQueryListsByQuery,
+      query = _ref2.query;
+
+  query = query.replace('@media ', '');
+
+  var mql = mediaQueryListsByQuery[query];
+  if (!mql && matchMedia) {
+    mediaQueryListsByQuery[query] = mql = matchMedia(query);
+  }
+
+  if (!listenersByQuery || !listenersByQuery[query]) {
+    mql.addListener(listener);
+
+    listenersByQuery[query] = {
+      remove: function remove() {
+        mql.removeListener(listener);
+      }
+    };
+  }
+  return mql;
+}
+
+function resolveMediaQueries(_ref3) {
+  var ExecutionEnvironment = _ref3.ExecutionEnvironment,
+      addCSS = _ref3.addCSS,
+      appendImportantToEachValue = _ref3.appendImportantToEachValue,
+      config = _ref3.config,
+      cssRuleSetToString = _ref3.cssRuleSetToString,
+      getComponentField = _ref3.getComponentField,
+      getGlobalState = _ref3.getGlobalState,
+      hash = _ref3.hash,
+      isNestedStyle = _ref3.isNestedStyle,
+      mergeStyles = _ref3.mergeStyles,
+      props = _ref3.props,
+      setState = _ref3.setState,
+      style = _ref3.style;
+
+  // eslint-disable-line no-shadow
+  var newStyle = _removeMediaQueries(style);
+  var mediaQueryClassNames = _topLevelRulesToCSS({
+    addCSS: addCSS,
+    appendImportantToEachValue: appendImportantToEachValue,
+    cssRuleSetToString: cssRuleSetToString,
+    hash: hash,
+    isNestedStyle: isNestedStyle,
+    style: style,
+    userAgent: config.userAgent
+  });
+
+  var newProps = mediaQueryClassNames ? {
+    className: mediaQueryClassNames + (props.className ? ' ' + props.className : '')
+  } : null;
+
+  var matchMedia = config.matchMedia || _getWindowMatchMedia(ExecutionEnvironment);
+
+  if (!matchMedia) {
+    return {
+      props: newProps,
+      style: newStyle
+    };
+  }
+
+  var listenersByQuery = _extends({}, getComponentField('_radiumMediaQueryListenersByQuery'));
+  var mediaQueryListsByQuery = getGlobalState('mediaQueryListsByQuery') || {};
+
+  Object.keys(style).filter(function (name) {
+    return name.indexOf('@media') === 0;
+  }).map(function (query) {
+    var nestedRules = _filterObject(style[query], isNestedStyle);
+
+    if (!Object.keys(nestedRules).length) {
+      return;
+    }
+
+    var mql = _subscribeToMediaQuery({
+      listener: function listener() {
+        return setState(query, mql.matches, '_all');
+      },
+      listenersByQuery: listenersByQuery,
+      matchMedia: matchMedia,
+      mediaQueryListsByQuery: mediaQueryListsByQuery,
+      query: query
+    });
+
+    // Apply media query states
+    if (mql.matches) {
+      newStyle = mergeStyles([newStyle, nestedRules]);
+    }
+  });
+
+  return {
+    componentFields: {
+      _radiumMediaQueryListenersByQuery: listenersByQuery
+    },
+    globalState: { mediaQueryListsByQuery: mediaQueryListsByQuery },
+    props: newProps,
+    style: newStyle
+  };
+}
+module.exports = exports['default'];
+},{}],170:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = visited;
+function visited(_ref) {
+  var addCSS = _ref.addCSS,
+      appendImportantToEachValue = _ref.appendImportantToEachValue,
+      config = _ref.config,
+      cssRuleSetToString = _ref.cssRuleSetToString,
+      hash = _ref.hash,
+      props = _ref.props,
+      style = _ref.style;
+
+  // eslint-disable-line no-shadow
+  var className = props.className;
+
+  var newStyle = Object.keys(style).reduce(function (newStyleInProgress, key) {
+    var value = style[key];
+    if (key === ':visited') {
+      value = appendImportantToEachValue(value);
+      var ruleCSS = cssRuleSetToString('', value, config.userAgent);
+      var visitedClassName = 'rad-' + hash(ruleCSS);
+      var css = '.' + visitedClassName + ':visited' + ruleCSS;
+
+      addCSS(css);
+      className = (className ? className + ' ' : '') + visitedClassName;
+    } else {
+      newStyleInProgress[key] = value;
+    }
+
+    return newStyleInProgress;
+  }, {});
+
+  return {
+    props: className === props.className ? null : { className: className },
+    style: newStyle
+  };
+}
+
+module.exports = exports['default'];
+},{}],171:[function(require,module,exports){
+(function (process,global){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; /**
+                                                                                                                                                                                                                                                                               * Based on https://github.com/jsstyles/css-vendor, but without having to
+                                                                                                                                                                                                                                                                               * convert between different cases all the time.
+                                                                                                                                                                                                                                                                               *
+                                                                                                                                                                                                                                                                               * 
+                                                                                                                                                                                                                                                                               */
+
+exports.getPrefixedKeyframes = getPrefixedKeyframes;
+exports.getPrefixedStyle = getPrefixedStyle;
+
+var _inlineStylePrefixer = require('inline-style-prefixer');
+
+var _inlineStylePrefixer2 = _interopRequireDefault(_inlineStylePrefixer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function transformValues(style) {
+  return Object.keys(style).reduce(function (newStyle, key) {
+    var value = style[key];
+    if (Array.isArray(value)) {
+      value = value.join(';' + key + ':');
+    } else if (value && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'object' && typeof value.toString === 'function') {
+      value = value.toString();
+    }
+
+    newStyle[key] = value;
+    return newStyle;
+  }, {});
+}
+
+var _hasWarnedAboutUserAgent = false;
+var _lastUserAgent = void 0;
+var _cachedPrefixer = void 0;
+
+function getPrefixer(userAgent) {
+  var actualUserAgent = userAgent || global && global.navigator && global.navigator.userAgent;
+
+  if (process.env.NODE_ENV !== 'production') {
+    if (!actualUserAgent && !_hasWarnedAboutUserAgent) {
+      /* eslint-disable no-console */
+      console.warn('Radium: userAgent should be supplied for server-side rendering. See ' + 'https://github.com/FormidableLabs/radium/tree/master/docs/api#radium ' + 'for more information.');
+      /* eslint-enable no-console */
+      _hasWarnedAboutUserAgent = true;
+    }
+  }
+
+  if (!_cachedPrefixer || actualUserAgent !== _lastUserAgent) {
+    if (actualUserAgent === 'all') {
+      _cachedPrefixer = {
+        prefix: _inlineStylePrefixer2.default.prefixAll,
+        prefixedKeyframes: 'keyframes'
+      };
+    } else {
+      _cachedPrefixer = new _inlineStylePrefixer2.default({ userAgent: actualUserAgent });
+    }
+    _lastUserAgent = actualUserAgent;
+  }
+  return _cachedPrefixer;
+}
+
+function getPrefixedKeyframes(userAgent) {
+  return getPrefixer(userAgent).prefixedKeyframes;
+}
+
+// Returns a new style object with vendor prefixes added to property names
+// and values.
+function getPrefixedStyle(style, userAgent) {
+  var styleWithFallbacks = transformValues(style);
+  var prefixer = getPrefixer(userAgent);
+  var prefixedStyle = prefixer.prefix(styleWithFallbacks);
+  return prefixedStyle;
+}
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"_process":69,"inline-style-prefixer":114}],172:[function(require,module,exports){
+(function (process){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _appendImportantToEachValue = require('./append-important-to-each-value');
+
+var _appendImportantToEachValue2 = _interopRequireDefault(_appendImportantToEachValue);
+
+var _cssRuleSetToString = require('./css-rule-set-to-string');
+
+var _cssRuleSetToString2 = _interopRequireDefault(_cssRuleSetToString);
+
+var _getState = require('./get-state');
+
+var _getState2 = _interopRequireDefault(_getState);
+
+var _getStateKey = require('./get-state-key');
+
+var _getStateKey2 = _interopRequireDefault(_getStateKey);
+
+var _hash = require('./hash');
+
+var _hash2 = _interopRequireDefault(_hash);
+
+var _mergeStyles = require('./merge-styles');
+
+var _plugins = require('./plugins/');
+
+var _plugins2 = _interopRequireDefault(_plugins);
+
+var _exenv = require('exenv');
+
+var _exenv2 = _interopRequireDefault(_exenv);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DEFAULT_CONFIG = {
+  plugins: [_plugins2.default.mergeStyleArray, _plugins2.default.checkProps, _plugins2.default.resolveMediaQueries, _plugins2.default.resolveInteractionStyles, _plugins2.default.keyframes, _plugins2.default.visited, _plugins2.default.removeNestedStyles, _plugins2.default.prefix, _plugins2.default.checkProps]
+};
+
+// Gross
+var globalState = {};
+
+// Declare early for recursive helpers.
+var resolveStyles = null;
+
+var _shouldResolveStyles = function _shouldResolveStyles(component) {
+  return component.type && !component.type._isRadiumEnhanced;
+};
+
+var _resolveChildren = function _resolveChildren(_ref) {
+  var children = _ref.children,
+      component = _ref.component,
+      config = _ref.config,
+      existingKeyMap = _ref.existingKeyMap;
+
+  if (!children) {
+    return children;
+  }
+
+  var childrenType = typeof children === 'undefined' ? 'undefined' : _typeof(children);
+
+  if (childrenType === 'string' || childrenType === 'number') {
+    // Don't do anything with a single primitive child
+    return children;
+  }
+
+  if (childrenType === 'function') {
+    // Wrap the function, resolving styles on the result
+    return function () {
+      var result = children.apply(this, arguments);
+      if (_react2.default.isValidElement(result)) {
+        return resolveStyles(component, result, config, existingKeyMap, true);
+      }
+      return result;
+    };
+  }
+
+  if (_react2.default.Children.count(children) === 1 && children.type) {
+    // If a React Element is an only child, don't wrap it in an array for
+    // React.Children.map() for React.Children.only() compatibility.
+    var onlyChild = _react2.default.Children.only(children);
+    return resolveStyles(component, onlyChild, config, existingKeyMap, true);
+  }
+
+  return _react2.default.Children.map(children, function (child) {
+    if (_react2.default.isValidElement(child)) {
+      return resolveStyles(component, child, config, existingKeyMap, true);
+    }
+
+    return child;
+  });
+};
+
+// Recurse over props, just like children
+var _resolveProps = function _resolveProps(_ref2) {
+  var component = _ref2.component,
+      config = _ref2.config,
+      existingKeyMap = _ref2.existingKeyMap,
+      props = _ref2.props;
+
+  var newProps = props;
+
+  Object.keys(props).forEach(function (prop) {
+    // We already recurse over children above
+    if (prop === 'children') {
+      return;
+    }
+
+    var propValue = props[prop];
+    if (_react2.default.isValidElement(propValue)) {
+      newProps = _extends({}, newProps);
+      newProps[prop] = resolveStyles(component, propValue, config, existingKeyMap, true);
+    }
+  });
+
+  return newProps;
+};
+
+var _buildGetKey = function _buildGetKey(_ref3) {
+  var componentName = _ref3.componentName,
+      existingKeyMap = _ref3.existingKeyMap,
+      renderedElement = _ref3.renderedElement;
+
+  // We need a unique key to correlate state changes due to user interaction
+  // with the rendered element, so we know to apply the proper interactive
+  // styles.
+  var originalKey = typeof renderedElement.ref === 'string' ? renderedElement.ref : renderedElement.key;
+  var key = (0, _getStateKey2.default)(originalKey);
+
+  var alreadyGotKey = false;
+  var getKey = function getKey() {
+    if (alreadyGotKey) {
+      return key;
+    }
+
+    alreadyGotKey = true;
+
+    if (existingKeyMap[key]) {
+      var elementName = void 0;
+      if (typeof renderedElement.type === 'string') {
+        elementName = renderedElement.type;
+      } else if (renderedElement.type.constructor) {
+        elementName = renderedElement.type.constructor.displayName || renderedElement.type.constructor.name;
+      }
+
+      throw new Error('Radium requires each element with interactive styles to have a unique ' + 'key, set using either the ref or key prop. ' + (originalKey ? 'Key "' + originalKey + '" is a duplicate.' : 'Multiple elements have no key specified.') + ' ' + 'Component: "' + componentName + '". ' + (elementName ? 'Element: "' + elementName + '".' : ''));
+    }
+
+    existingKeyMap[key] = true;
+
+    return key;
+  };
+
+  return getKey;
+};
+
+var _setStyleState = function _setStyleState(component, key, stateKey, value) {
+  if (!component._radiumIsMounted) {
+    return;
+  }
+
+  var existing = component._lastRadiumState || component.state && component.state._radiumStyleState || {};
+
+  var state = { _radiumStyleState: _extends({}, existing) };
+  state._radiumStyleState[key] = _extends({}, state._radiumStyleState[key]);
+  state._radiumStyleState[key][stateKey] = value;
+
+  component._lastRadiumState = state._radiumStyleState;
+  component.setState(state);
+};
+
+var _runPlugins = function _runPlugins(_ref4) {
+  var component = _ref4.component,
+      config = _ref4.config,
+      existingKeyMap = _ref4.existingKeyMap,
+      props = _ref4.props,
+      renderedElement = _ref4.renderedElement;
+
+  // Don't run plugins if renderedElement is not a simple ReactDOMElement or has
+  // no style.
+  if (!_react2.default.isValidElement(renderedElement) || typeof renderedElement.type !== 'string' || !props.style) {
+    return props;
+  }
+
+  var newProps = props;
+
+  var plugins = config.plugins || DEFAULT_CONFIG.plugins;
+
+  var componentName = component.constructor.displayName || component.constructor.name;
+  var getKey = _buildGetKey({
+    renderedElement: renderedElement,
+    existingKeyMap: existingKeyMap,
+    componentName: componentName
+  });
+  var getComponentField = function getComponentField(key) {
+    return component[key];
+  };
+  var getGlobalState = function getGlobalState(key) {
+    return globalState[key];
+  };
+  var componentGetState = function componentGetState(stateKey, elementKey) {
+    return (0, _getState2.default)(component.state, elementKey || getKey(), stateKey);
+  };
+  var setState = function setState(stateKey, value, elementKey) {
+    return _setStyleState(component, elementKey || getKey(), stateKey, value);
+  };
+
+  var addCSS = function addCSS(css) {
+    var styleKeeper = component._radiumStyleKeeper || component.context._radiumStyleKeeper;
+    if (!styleKeeper) {
+      if (__isTestModeEnabled) {
+        return {
+          remove: function remove() {}
+        };
+      }
+
+      throw new Error('To use plugins requiring `addCSS` (e.g. keyframes, media queries), ' + 'please wrap your application in the StyleRoot component. Component ' + 'name: `' + componentName + '`.');
+    }
+
+    return styleKeeper.addCSS(css);
+  };
+
+  var newStyle = props.style;
+
+  plugins.forEach(function (plugin) {
+    var result = plugin({
+      ExecutionEnvironment: _exenv2.default,
+      addCSS: addCSS,
+      appendImportantToEachValue: _appendImportantToEachValue2.default,
+      componentName: componentName,
+      config: config,
+      cssRuleSetToString: _cssRuleSetToString2.default,
+      getComponentField: getComponentField,
+      getGlobalState: getGlobalState,
+      getState: componentGetState,
+      hash: _hash2.default,
+      mergeStyles: _mergeStyles.mergeStyles,
+      props: newProps,
+      setState: setState,
+      isNestedStyle: _mergeStyles.isNestedStyle,
+      style: newStyle
+    }) || {};
+
+    newStyle = result.style || newStyle;
+
+    newProps = result.props && Object.keys(result.props).length ? _extends({}, newProps, result.props) : newProps;
+
+    var newComponentFields = result.componentFields || {};
+    Object.keys(newComponentFields).forEach(function (fieldName) {
+      component[fieldName] = newComponentFields[fieldName];
+    });
+
+    var newGlobalState = result.globalState || {};
+    Object.keys(newGlobalState).forEach(function (key) {
+      globalState[key] = newGlobalState[key];
+    });
+  });
+
+  if (newStyle !== props.style) {
+    newProps = _extends({}, newProps, { style: newStyle });
+  }
+
+  return newProps;
+};
+
+// Wrapper around React.cloneElement. To avoid processing the same element
+// twice, whenever we clone an element add a special prop to make sure we don't
+// process this element again.
+var _cloneElement = function _cloneElement(renderedElement, newProps, newChildren) {
+  // Only add flag if this is a normal DOM element
+  if (typeof renderedElement.type === 'string') {
+    newProps = _extends({}, newProps, { 'data-radium': true });
+  }
+
+  return _react2.default.cloneElement(renderedElement, newProps, newChildren);
+};
+
+//
+// The nucleus of Radium. resolveStyles is called on the rendered elements
+// before they are returned in render. It iterates over the elements and
+// children, rewriting props to add event handlers required to capture user
+// interactions (e.g. mouse over). It also replaces the style prop because it
+// adds in the various interaction styles (e.g. :hover).
+//
+resolveStyles = function resolveStyles(component, // ReactComponent, flow+eslint complaining
+renderedElement) {
+  var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : DEFAULT_CONFIG;
+  var existingKeyMap = arguments[3];
+  var shouldCheckBeforeResolve = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : false;
+
+  // ReactElement
+  existingKeyMap = existingKeyMap || {};
+  if (!renderedElement ||
+  // Bail if we've already processed this element. This ensures that only the
+  // owner of an element processes that element, since the owner's render
+  // function will be called first (which will always be the case, since you
+  // can't know what else to render until you render the parent component).
+  renderedElement.props && renderedElement.props['data-radium'] ||
+  // Bail if this element is a radium enhanced element, because if it is,
+  // then it will take care of resolving its own styles.
+  shouldCheckBeforeResolve && !_shouldResolveStyles(renderedElement)) {
+    return renderedElement;
+  }
+
+  var newChildren = _resolveChildren({
+    children: renderedElement.props.children,
+    component: component,
+    config: config,
+    existingKeyMap: existingKeyMap
+  });
+
+  var newProps = _resolveProps({
+    component: component,
+    config: config,
+    existingKeyMap: existingKeyMap,
+    props: renderedElement.props
+  });
+
+  newProps = _runPlugins({
+    component: component,
+    config: config,
+    existingKeyMap: existingKeyMap,
+    props: newProps,
+    renderedElement: renderedElement
+  });
+
+  // If nothing changed, don't bother cloning the element. Might be a bit
+  // wasteful, as we add the sentinal to stop double-processing when we clone.
+  // Assume benign double-processing is better than unneeded cloning.
+  if (newChildren === renderedElement.props.children && newProps === renderedElement.props) {
+    return renderedElement;
+  }
+
+  return _cloneElement(renderedElement, newProps !== renderedElement.props ? newProps : {}, newChildren);
+};
+
+// Only for use by tests
+var __isTestModeEnabled = false;
+if (process.env.NODE_ENV !== 'production') {
+  resolveStyles.__clearStateForTests = function () {
+    globalState = {};
+  };
+  resolveStyles.__setTestMode = function (isEnabled) {
+    __isTestModeEnabled = isEnabled;
+  };
+}
+
+exports.default = resolveStyles;
+module.exports = exports['default'];
+}).call(this,require('_process'))
+},{"./append-important-to-each-value":146,"./css-rule-set-to-string":152,"./get-state":155,"./get-state-key":154,"./hash":156,"./merge-styles":160,"./plugins/":162,"_process":69,"exenv":21,"react":"react"}],173:[function(require,module,exports){
+arguments[4][98][0].apply(exports,arguments)
+},{"dup":98}],174:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var Helpers = require('../mixins/Helpers');
+
+var Button = React.createClass({
+  render: function () {
+    return React.DOM.input(this.props, this.props.children);
+  }
+});
+
+module.exports = Helpers.Scroll(Button);
+
+},{"../mixins/Helpers":178,"react":"react"}],175:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var Helpers = require('../mixins/Helpers');
+
+var Element = React.createClass({
+  render: function () {
+    return React.DOM.div(this.props, this.props.children);
+  }
+});
+
+module.exports = Helpers.Element(Element);
+
+},{"../mixins/Helpers":178,"react":"react"}],176:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var Helpers = require('../mixins/Helpers');
+
+var Link = React.createClass({
+  render: function () {
+    return React.DOM.a(this.props, this.props.children);
+  }
+});
+
+module.exports = Helpers.Scroll(Link);
+
+},{"../mixins/Helpers":178,"react":"react"}],177:[function(require,module,exports){
+exports.Link = require('./components/Link.js');
+exports.Button = require('./components/Button.js');
+exports.Element = require('./components/Element.js');
+exports.Helpers = require('./mixins/Helpers.js');
+exports.scroller = require('./mixins/scroller.js');
+exports.Events = require('./mixins/scroll-events.js');
+exports.scrollSpy = require('./mixins/scroll-spy.js');
+exports.animateScroll = require('./mixins/animate-scroll.js');
+
+},{"./components/Button.js":174,"./components/Element.js":175,"./components/Link.js":176,"./mixins/Helpers.js":178,"./mixins/animate-scroll.js":179,"./mixins/scroll-events.js":182,"./mixins/scroll-spy.js":183,"./mixins/scroller.js":184}],178:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+var animateScroll = require('./animate-scroll');
+var scrollSpy = require('./scroll-spy');
+var defaultScroller = require('./scroller');
+var assign = require('object-assign');
+
+
+var protoTypes = {
+  to: React.PropTypes.string.isRequired,
+  containerId: React.PropTypes.string,
+  activeClass:React.PropTypes.string,
+  spy: React.PropTypes.bool,
+  smooth: React.PropTypes.bool,
+  offset: React.PropTypes.number,
+  delay: React.PropTypes.number,
+  isDynamic: React.PropTypes.bool,
+  onClick: React.PropTypes.func,
+  duration: React.PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.func]),
+  absolute: React.PropTypes.bool,
+  onSetActive: React.PropTypes.func,
+  onSetInactive: React.PropTypes.func,
+  ignoreCancelEvents: React.PropTypes.bool
+};
+
+var Helpers = {
+
+  Scroll: function (Component, customScroller) {
+
+    var scroller = customScroller || defaultScroller;
+
+    return React.createClass({
+
+      propTypes: protoTypes,
+
+      getDefaultProps: function() {
+        return {offset: 0};
+      },
+
+      scrollTo : function(to, props) {
+          scroller.scrollTo(to, props);
+      },
+
+      handleClick: function(event) {
+
+        /*
+         * give the posibility to override onClick
+         */
+
+        if(this.props.onClick) {
+          this.props.onClick(event);
+        }
+
+        /*
+         * dont bubble the navigation
+         */
+
+        if (event.stopPropagation) event.stopPropagation();
+        if (event.preventDefault) event.preventDefault();
+
+        /*
+         * do the magic!
+         */
+        this.scrollTo(this.props.to, this.props);
+
+      },
+
+      spyHandler: function(y) {
+        var element = scroller.get(this.props.to);
+        if (!element) return;
+        var cords = element.getBoundingClientRect();
+        var topBound = cords.top + y;
+        var bottomBound = topBound + cords.height;
+        var offsetY = y - this.props.offset;
+        var to = this.props.to;
+        var isInside = (offsetY >= topBound && offsetY <= bottomBound);
+        var isOutside = (offsetY < topBound || offsetY > bottomBound);
+        var activeLink = scroller.getActiveLink();
+
+        if (isOutside && activeLink === to) {
+          scroller.setActiveLink(void 0);
+          this.setState({ active : false });
+
+          if(this.props.onSetInactive) {
+            this.props.onSetInactive();
+          }
+
+        } else if (isInside && activeLink != to) {
+          scroller.setActiveLink(to);
+          this.setState({ active : true });
+
+          if(this.props.onSetActive) {
+            this.props.onSetActive(to);
+          }
+
+          scrollSpy.updateStates();
+        }
+      },
+
+      componentDidMount: function() {
+
+
+
+        var containerId = this.props.containerId;
+
+        var scrollSpyContainer = containerId ? document.getElementById(containerId) : document;
+
+        if(!scrollSpy.isMounted(scrollSpyContainer)) {
+          scrollSpy.mount(scrollSpyContainer);
+        }
+
+
+        if(this.props.spy) {
+          var to = this.props.to;
+          var element = null;
+          var elemTopBound = 0;
+          var elemBottomBound = 0;
+
+          this._stateHandler = function() {
+            if(scroller.getActiveLink() != to) {
+                if(this.state !== null && this.state.active && this.props.onSetInactive) {
+                  this.props.onSetInactive();
+                }
+                this.setState({ active : false });
+            }
+          }.bind(this)
+
+          scrollSpy.addStateHandler(this._stateHandler);
+
+          this._spyHandler = function(y) {
+
+            var containerTop = 0;
+            if(scrollSpyContainer.getBoundingClientRect) {
+              var containerCords = scrollSpyContainer.getBoundingClientRect();
+              containerTop = containerCords.top;
+            }
+
+            if(!element || this.props.isDynamic) {
+                element = scroller.get(to);
+                if(!element){ return;}
+
+                var cords = element.getBoundingClientRect();
+                elemTopBound = (cords.top - containerTop + y);
+                elemBottomBound = elemTopBound + cords.height;
+            }
+
+
+
+            var offsetY = y - this.props.offset;
+            var isInside = (offsetY >= Math.floor(elemTopBound) && offsetY <= Math.floor(elemBottomBound));
+            var isOutside = (offsetY < Math.floor(elemTopBound) || offsetY > Math.floor(elemBottomBound));
+            var activeLink = scroller.getActiveLink();
+
+            if (isOutside && activeLink === to) {
+              scroller.setActiveLink(void 0);
+              this.setState({ active : false });
+
+              if(this.props.onSetInactive) {
+                this.props.onSetInactive();
+              }
+
+            } else if (isInside && activeLink != to) {
+              scroller.setActiveLink(to);
+              this.setState({ active : true });
+
+              if(this.props.onSetActive) {
+                this.props.onSetActive(to);
+              }
+
+              scrollSpy.updateStates();
+
+            }
+          }.bind(this);
+
+          scrollSpy.addSpyHandler(this._spyHandler, scrollSpyContainer);
+        }
+      },
+      componentWillUnmount: function() {
+        scrollSpy.unmount(this._stateHandler, this._spyHandler);
+      },
+      render: function() {
+
+        var className = "";
+        if(this.state && this.state.active) {
+          className = ((this.props.className || "") + " " + (this.props.activeClass || "active")).trim();
+        } else {
+          className = this.props.className;
+        }
+
+        var props = assign({}, this.props);
+
+        for(var prop in protoTypes) {
+          if(props.hasOwnProperty(prop)) {
+            delete props[prop];
+          }
+        }
+
+        props.className = className;
+        props.onClick = this.handleClick;
+
+        return React.createElement(Component, props);
+      }
+    });
+  },
+
+
+  Element: function(Component) {
+    return React.createClass({
+      propTypes: {
+        name: React.PropTypes.string,
+        id:   React.PropTypes.string
+      },
+      componentDidMount: function() {
+        this.registerElems(this.props.name);
+      },
+      componentWillReceiveProps: function(nextProps) {
+        if (this.props.name !== nextProps.name) {
+          this.registerElems(nextProps.name);
+        }
+      },
+      componentWillUnmount: function() {
+        defaultScroller.unregister(this.props.name);
+      },
+      registerElems: function(name) {
+        var domNode = ReactDOM.findDOMNode(this);
+        defaultScroller.register(name, domNode);
+      },
+      render: function() {
+        return React.createElement(Component, this.props);
+      }
+    });
+  }
+};
+
+module.exports = Helpers;
+
+},{"./animate-scroll":179,"./scroll-spy":183,"./scroller":184,"object-assign":68,"react":"react","react-dom":"react-dom"}],179:[function(require,module,exports){
+var assign = require('object-assign');
+
+var smooth = require('./smooth');
+
+var easing = smooth.defaultEasing;
+
+var cancelEvents = require('./cancel-events');
+
+var events = require('./scroll-events');
+
+/*
+ * Function helper
+ */
+var functionWrapper = function(value) {
+  return typeof value === 'function' ? value : function() { return value; };
+};
+
+/*
+ * Wraps window properties to allow server side rendering
+ */
+var currentWindowProperties = function() {
+  if (typeof window !== 'undefined') {
+    return window.requestAnimationFrame || window.webkitRequestAnimationFrame;
+  }
+};
+
+/*
+ * Helper function to never extend 60fps on the webpage.
+ */
+var requestAnimationFrameHelper = (function () {
+  return  currentWindowProperties() ||
+          function (callback, element, delay) {
+              window.setTimeout(callback, delay || (1000/60), new Date().getTime());
+          };
+})();
+
+
+var __currentPositionY  = 0;
+var __startPositionY    = 0;
+var __targetPositionY   = 0;
+var __progress          = 0;
+var __duration          = 0;
+var __cancel            = false;
+
+var __target;
+var __containerElement;
+var __to;
+var __start;
+var __deltaTop;
+var __percent;
+var __delayTimeout;
+
+
+var currentPositionY = function() {
+  if (__containerElement) {
+        return __containerElement.scrollTop;
+	} else {
+    var supportPageOffset = window.pageXOffset !== undefined;
+    var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+    return supportPageOffset ? window.pageYOffset : isCSS1Compat ?
+           document.documentElement.scrollTop : document.body.scrollTop;
+   }
+};
+
+var scrollContainerHeight = function() {
+  if(__containerElement) {
+    return Math.max(
+      __containerElement.scrollHeight,
+      __containerElement.offsetHeight,
+      __containerElement.clientHeight
+    );
+  } else {
+    var body = document.body;
+    var html = document.documentElement;
+
+    return Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    );
+  }
+};
+
+var animateTopScroll = function(timestamp) {
+
+  // Cancel on specific events
+  if(__cancel) { 
+    if(events.registered['end']) {
+      events.registered['end'](__to, __target, __currentPositionY);
+    }
+    return 
+  };
+
+  __deltaTop = Math.round(__targetPositionY - __startPositionY);
+
+  if (__start === null) {
+    __start = timestamp;
+  }
+
+  __progress = timestamp - __start;
+
+  __percent = (__progress >= __duration ? 1 : easing(__progress/__duration));
+
+  __currentPositionY = __startPositionY + Math.ceil(__deltaTop * __percent);
+
+  if(__containerElement) {
+    __containerElement.scrollTop = __currentPositionY;
+  } else {
+    window.scrollTo(0, __currentPositionY);
+  }
+
+  if(__percent < 1) {
+    requestAnimationFrameHelper.call(window, animateTopScroll);
+    return;
+  }
+
+  if(events.registered['end']) {
+    events.registered['end'](__to, __target, __currentPositionY);
+  }
+
+};
+
+var setContainer = function (options) {
+  if(!options || !options.containerId) {
+    __containerElement = null;
+    return;
+  }
+
+  __containerElement = document.getElementById(options.containerId);
+};
+
+var startAnimateTopScroll = function(y, options, to, target) {
+
+  window.clearTimeout(__delayTimeout);
+
+
+  if (!options.ignoreCancelEvents) {
+    /*
+     * Sets the cancel trigger
+     */
+
+    cancelEvents.register(function() {
+      __cancel = true;
+    });
+  }
+
+  setContainer(options);
+
+
+  __start           = null;
+  __cancel          = false;
+  __startPositionY  = currentPositionY();
+  __targetPositionY = options.absolute ? y : y + __startPositionY;
+  __deltaTop        = Math.round(__targetPositionY - __startPositionY);
+
+  __duration        = functionWrapper(options.duration)(__deltaTop);
+  __duration        = isNaN(parseFloat(__duration)) ? 1000 : parseFloat(__duration);
+  __to              = to;
+  __target          = target;
+
+  if(options && options.delay > 0) {
+    __delayTimeout = window.setTimeout(function animate() {
+      requestAnimationFrameHelper.call(window, animateTopScroll);
+    }, options.delay);
+    return;
+  }
+
+  requestAnimationFrameHelper.call(window, animateTopScroll);
+
+};
+
+var scrollToTop = function (options) {
+  startAnimateTopScroll(0, assign(options || {}, { absolute : true }));
+};
+
+var scrollTo = function (toY, options) {
+  startAnimateTopScroll(toY, assign(options || {}, { absolute : true }));
+};
+
+var scrollToBottom = function(options) {
+  setContainer(options);
+  startAnimateTopScroll(scrollContainerHeight(), assign(options || {}, { absolute : true }));
+};
+
+var scrollMore = function(toY, options) {
+  setContainer(options);
+  startAnimateTopScroll(currentPositionY() + toY, assign(options || {}, { absolute : true }));
+};
+
+module.exports = {
+  animateTopScroll: startAnimateTopScroll,
+  scrollToTop: scrollToTop,
+  scrollToBottom: scrollToBottom,
+  scrollTo: scrollTo,
+  scrollMore: scrollMore,
+};
+
+},{"./cancel-events":180,"./scroll-events":182,"./smooth":185,"object-assign":68}],180:[function(require,module,exports){
+var addPassiveEventListener = require('./passive-event-listeners');
+
+var events = ['mousedown', 'mousewheel', 'touchmove', 'keydown']
+
+module.exports = {
+	register : function(cancelEvent) {
+		if (typeof document === 'undefined') {
+			return;
+		}
+
+		for(var i = 0; i < events.length; i = i + 1) {
+			addPassiveEventListener(document, events[i], cancelEvent);
+		}
+	}
+};
+
+},{"./passive-event-listeners":181}],181:[function(require,module,exports){
+/*
+ * Tell the browser that the event listener won't prevent a scroll.
+ * Allowing the browser to continue scrolling without having to
+ * to wait for the listener to return.
+ */
+var addPassiveEventListener = function(target, eventName, listener) {
+    var supportsPassiveOption = (function(){
+        var supportsPassiveOption = false;
+        try {
+            var opts = Object.defineProperty({}, 'passive', {
+                get: function() {
+                    supportsPassiveOption = true;
+                }
+            });
+            window.addEventListener('test', null, opts);
+        } catch (e) {}
+        return supportsPassiveOption;
+    })();
+
+    target.addEventListener(eventName, listener, supportsPassiveOption ? {passive: true} : false);
+};
+
+module.exports = addPassiveEventListener;
+
+},{}],182:[function(require,module,exports){
+
+var Events = {
+	registered : {},
+	scrollEvent : {
+		register: function(evtName, callback) {
+			Events.registered[evtName] = callback;
+		},
+		remove: function(evtName) {
+			Events.registered[evtName] = null;
+		}
+	}
+};
+
+module.exports = Events;
+},{}],183:[function(require,module,exports){
+var addPassiveEventListener = require('./passive-event-listeners');
+
+var eventThrottler = function(eventHandler) {
+  var eventHandlerTimeout;
+  return function(event) {
+    // ignore events as long as an eventHandler execution is in the queue
+    if ( !eventHandlerTimeout ) {
+      eventHandlerTimeout = setTimeout(function() {
+        eventHandlerTimeout = null;
+        eventHandler(event);
+        // The eventHandler will execute at a rate of 15fps
+      }, 66);
+    }
+  };
+};
+
+var scrollSpy = {
+
+  spyCallbacks: [],
+  spySetState: [],
+  scrollSpyContainers: [],
+
+  mount: function (scrollSpyContainer) {
+    var t = this;
+    if (scrollSpyContainer) {
+      var eventHandler = eventThrottler(function(event) {
+        t.scrollHandler(scrollSpyContainer);
+      });
+      this.scrollSpyContainers.push(scrollSpyContainer);
+      addPassiveEventListener(scrollSpyContainer, 'scroll', eventHandler);
+    }
+  },
+
+  isMounted: function (scrollSpyContainer) {
+    return this.scrollSpyContainers.indexOf(scrollSpyContainer) !== -1;
+  },
+
+  currentPositionY: function (scrollSpyContainer) {
+    if(scrollSpyContainer === document) {
+      var supportPageOffset = window.pageXOffset !== undefined;
+      var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+      return supportPageOffset ? window.pageYOffset : isCSS1Compat ?
+      document.documentElement.scrollTop : document.body.scrollTop;
+    } else {
+      return scrollSpyContainer.scrollTop;
+    }
+  },
+
+  scrollHandler: function (scrollSpyContainer) {
+    var callbacks = this.scrollSpyContainers[this.scrollSpyContainers.indexOf(scrollSpyContainer)].spyCallbacks;
+    if (callbacks) {
+      for(var i = 0; i < callbacks.length; i++) {
+        var position =this.currentPositionY(scrollSpyContainer);
+        callbacks[i](this.currentPositionY(scrollSpyContainer));
+      }
+    }
+  },
+
+  addStateHandler: function(handler){
+    this.spySetState.push(handler);
+  },
+
+  addSpyHandler: function(handler, scrollSpyContainer) {
+    var container = this.scrollSpyContainers[this.scrollSpyContainers.indexOf(scrollSpyContainer)];
+    if(!container.spyCallbacks) {
+      container.spyCallbacks = [];
+    }
+    container.spyCallbacks.push(handler);
+  },
+
+  updateStates: function(){
+    var length = this.spySetState.length;
+
+    for(var i = 0; i < length; i++) {
+      this.spySetState[i]();
+    }
+  },
+
+  unmount: function (stateHandler, spyHandler) {
+    for (var i = 0; i < this.scrollSpyContainers.length; i++) {
+      var callbacks = this.scrollSpyContainers[i].spyCallbacks;
+      if(callbacks && callbacks.length) {
+        callbacks.splice(callbacks.indexOf(spyHandler), 1);
+      }
+    }
+
+    if(this.spySetState && this.spySetState.length) {
+      this.spySetState.splice(this.spySetState.indexOf(stateHandler), 1);
+    }
+
+    document.removeEventListener('scroll', this.scrollHandler);
+  },
+
+  update: function() {
+    for (var i = 0; i < this.scrollSpyContainers.length; i++) {
+      this.scrollHandler(this.scrollSpyContainers[i]);
+    }
+  }
+}
+
+module.exports = scrollSpy;
+
+},{"./passive-event-listeners":181}],184:[function(require,module,exports){
+var assign = require('object-assign');
+
+var animateScroll = require('./animate-scroll');
+var events = require('./scroll-events');
+
+var __mapped = {};
+var __activeLink;
+
+module.exports = {
+
+  unmount: function() {
+    __mapped = {};
+  },
+
+  register: function(name, element){
+    __mapped[name] = element;
+  },
+
+  unregister: function(name) {
+    delete __mapped[name];
+  },
+
+  get: function(name) {
+    return __mapped[name] || document.getElementById(name);
+  },
+
+  setActiveLink: function(link) {
+    __activeLink = link;
+  },
+
+  getActiveLink: function() {
+    return __activeLink;
+  },
+
+  scrollTo: function(to, props) {
+
+     /*
+     * get the mapped DOM element
+     */
+
+      var target = this.get(to);
+
+      if(!target) {
+        console.warn("target Element not found");
+        return;
+      }
+
+      props = assign({}, props, { absolute : false });
+
+
+      if(events.registered['begin']) {
+        events.registered['begin'](to, target);
+      }
+
+      var containerId = props.containerId;
+      var containerElement = containerId ? document.getElementById(containerId) : null;
+
+      var scrollOffset;
+
+      if(containerId && containerElement) {
+        props.absolute = true;
+        if(containerElement !== target.offsetParent) {
+          if(!containerElement.contains(target)) {
+            throw new Error('Container with ID ' + containerId + ' is not a parent of target ' + to);
+          } else {
+            throw new Error('Container with ID ' + containerId + ' is not a positioned element');
+          }
+        }
+
+        scrollOffset = target.offsetTop;
+      } else {
+        var coordinates = target.getBoundingClientRect();
+        scrollOffset = coordinates.top;
+      }
+
+      scrollOffset += (props.offset || 0);
+
+
+      /*
+       * if animate is not provided just scroll into the view
+       */
+      if(!props.smooth) {
+        if(containerId && containerElement) {
+          containerElement.scrollTop = scrollOffset;
+        } else {
+          // window.scrollTo accepts only absolute values so body rectangle needs to be subtracted
+          var bodyRect = document.body.getBoundingClientRect();
+          window.scrollTo(0, scrollOffset - bodyRect.top);
+        }
+
+        if(events.registered['end']) {
+          events.registered['end'](to, target);
+        }
+
+        return;
+      }
+
+      /*
+       * Animate scrolling
+       */
+
+      animateScroll.animateTopScroll(scrollOffset, props, to, target);
+  }
+};
+
+},{"./animate-scroll":179,"./scroll-events":182,"object-assign":68}],185:[function(require,module,exports){
+module.exports = {
+ /*
+  * https://github.com/oblador/angular-scroll (duScrollDefaultEasing)
+  */
+  defaultEasing : function (x) {
+    'use strict';
+
+    if(x < 0.5) {
+      return Math.pow(x*2, 2)/2;
+    }
+    return 1-Math.pow((1-x)*2, 2)/2;
+  }
+}
+},{}],186:[function(require,module,exports){
+window.eve = require('eve')
 
 // Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 // http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -8781,13 +11887,13 @@ var mina = (function (eve) {
     return mina;
 })(typeof eve == "undefined" ? function () {} : eve);
 // Copyright (c) 2013 - 2015 Adobe Systems Incorporated. All rights reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 // http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -9501,7 +12607,7 @@ prepareRGB = function (r, g, b) {
         g /= 255;
         b /= 255;
     }
-    
+
     return [r, g, b];
 },
 packageRGB = function (r, g, b, o) {
@@ -9739,7 +12845,7 @@ Snap.parsePathString = function (pathString) {
     if (pth.arr) {
         return Snap.path.clone(pth.arr);
     }
-    
+
     var paramCounts = {a: 7, c: 6, o: 2, h: 1, l: 2, m: 2, r: 4, q: 4, s: 4, t: 2, v: 1, u: 3, z: 0},
         data = [];
     if (is(pathString, "array") && is(pathString[0], "array")) { // rough assumption
@@ -11613,13 +14719,13 @@ Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
 });
 
 // Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 // http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -11884,7 +14990,7 @@ Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
                 s.scalex = +s.scalex.toFixed(4);
                 s.scaley = +s.scaley.toFixed(4);
                 s.rotate = +s.rotate.toFixed(4);
-                return  (s.dx || s.dy ? "t" + [+s.dx.toFixed(4), +s.dy.toFixed(4)] : E) + 
+                return  (s.dx || s.dy ? "t" + [+s.dx.toFixed(4), +s.dy.toFixed(4)] : E) +
                         (s.scalex != 1 || s.scaley != 1 ? "s" + [s.scalex, s.scaley, 0, 0] : E) +
                         (s.rotate ? "r" + [+s.rotate.toFixed(4), 0, 0] : E);
             } else {
@@ -11922,13 +15028,13 @@ Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
     };
 });
 // Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 // http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -12482,13 +15588,13 @@ Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
 });
 
 // Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 // http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -12571,13 +15677,13 @@ Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
     })(-10);
 });
 // Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 // http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -13292,13 +16398,13 @@ Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
 });
 
 // Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 // http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -13713,7 +16819,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
             return box();
         }
         path = path2curve(path);
-        var x = 0, 
+        var x = 0,
             y = 0,
             X = [],
             Y = [],
@@ -14138,7 +17244,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
             y: pow(t1, 3) * p1y + pow(t1, 2) * 3 * t * c1y + t1 * 3 * t * t * c2y + pow(t, 3) * p2y
         };
     }
-    
+
     // Returns bounding box of cubic bezier curve.
     // Source: http://blog.hackers-cafe.net/2009/06/how-to-calculate-bezier-curves-bounding.html
     // Original version: NISHIO Hirokazu
@@ -14747,13 +17853,13 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
 });
 
 // Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 // http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -15063,13 +18169,13 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
 });
 
 // Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 // http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -15257,13 +18363,13 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
 });
 
 // Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 // http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -15406,7 +18512,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
      - handler (function) handler for the event
      = (object) @Element
     \*/
-    
+
     /*\
      * Element.dblclick
      [ method ]
@@ -15423,7 +18529,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
      - handler (function) handler for the event
      = (object) @Element
     \*/
-    
+
     /*\
      * Element.mousedown
      [ method ]
@@ -15440,7 +18546,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
      - handler (function) handler for the event
      = (object) @Element
     \*/
-    
+
     /*\
      * Element.mousemove
      [ method ]
@@ -15457,7 +18563,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
      - handler (function) handler for the event
      = (object) @Element
     \*/
-    
+
     /*\
      * Element.mouseout
      [ method ]
@@ -15474,7 +18580,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
      - handler (function) handler for the event
      = (object) @Element
     \*/
-    
+
     /*\
      * Element.mouseover
      [ method ]
@@ -15491,7 +18597,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
      - handler (function) handler for the event
      = (object) @Element
     \*/
-    
+
     /*\
      * Element.mouseup
      [ method ]
@@ -15508,7 +18614,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
      - handler (function) handler for the event
      = (object) @Element
     \*/
-    
+
     /*\
      * Element.touchstart
      [ method ]
@@ -15525,7 +18631,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
      - handler (function) handler for the event
      = (object) @Element
     \*/
-    
+
     /*\
      * Element.touchmove
      [ method ]
@@ -15542,7 +18648,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
      - handler (function) handler for the event
      = (object) @Element
     \*/
-    
+
     /*\
      * Element.touchend
      [ method ]
@@ -15559,7 +18665,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
      - handler (function) handler for the event
      = (object) @Element
     \*/
-    
+
     /*\
      * Element.touchcancel
      [ method ]
@@ -15653,8 +18759,8 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
      - mcontext (object) #optional context for moving handler
      - scontext (object) #optional context for drag start handler
      - econtext (object) #optional context for drag end handler
-     * Additionaly following `drag` events are triggered: `drag.start.<id>` on start, 
-     * `drag.end.<id>` on end and `drag.move.<id>` on every move. When element is dragged over another element 
+     * Additionaly following `drag` events are triggered: `drag.start.<id>` on start,
+     * `drag.end.<id>` on end and `drag.move.<id>` on every move. When element is dragged over another element
      * `drag.over.<id>` fires as well.
      *
      * Start event and start handler are called in specified context or in context of the element with following parameters:
@@ -15734,13 +18840,13 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
 });
 
 // Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 // http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -15786,7 +18892,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
         paper.defs.appendChild(filter);
         return new Element(filter);
     };
-    
+
     eve.on("snap.util.getattr.filter", function () {
         eve.stop();
         var p = $(this.node, "filter");
@@ -16153,1089 +19259,70 @@ Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
     };
 });
 
-return Snap;
-}));
-},{"eve":190}],190:[function(require,module,exports){
-// Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-// http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// ┌────────────────────────────────────────────────────────────┐ \\
-// │ Eve 0.4.2 - JavaScript Events Library                      │ \\
-// ├────────────────────────────────────────────────────────────┤ \\
-// │ Author Dmitry Baranovskiy (http://dmitry.baranovskiy.com/) │ \\
-// └────────────────────────────────────────────────────────────┘ \\
-
-(function (glob) {
-    var version = "0.4.2",
-        has = "hasOwnProperty",
-        separator = /[\.\/]/,
-        comaseparator = /\s*,\s*/,
-        wildcard = "*",
-        fun = function () {},
-        numsort = function (a, b) {
-            return a - b;
-        },
-        current_event,
-        stop,
-        events = {n: {}},
-        firstDefined = function () {
-            for (var i = 0, ii = this.length; i < ii; i++) {
-                if (typeof this[i] != "undefined") {
-                    return this[i];
-                }
-            }
-        },
-        lastDefined = function () {
-            var i = this.length;
-            while (--i) {
-                if (typeof this[i] != "undefined") {
-                    return this[i];
-                }
-            }
-        },
-    /*\
-     * eve
-     [ method ]
-
-     * Fires event with given `name`, given scope and other parameters.
-
-     > Arguments
-
-     - name (string) name of the *event*, dot (`.`) or slash (`/`) separated
-     - scope (object) context for the event handlers
-     - varargs (...) the rest of arguments will be sent to event handlers
-
-     = (object) array of returned values from the listeners. Array has two methods `.firstDefined()` and `.lastDefined()` to get first or last not `undefined` value.
-    \*/
-        eve = function (name, scope) {
-            name = String(name);
-            var e = events,
-                oldstop = stop,
-                args = Array.prototype.slice.call(arguments, 2),
-                listeners = eve.listeners(name),
-                z = 0,
-                f = false,
-                l,
-                indexed = [],
-                queue = {},
-                out = [],
-                ce = current_event,
-                errors = [];
-            out.firstDefined = firstDefined;
-            out.lastDefined = lastDefined;
-            current_event = name;
-            stop = 0;
-            for (var i = 0, ii = listeners.length; i < ii; i++) if ("zIndex" in listeners[i]) {
-                indexed.push(listeners[i].zIndex);
-                if (listeners[i].zIndex < 0) {
-                    queue[listeners[i].zIndex] = listeners[i];
-                }
-            }
-            indexed.sort(numsort);
-            while (indexed[z] < 0) {
-                l = queue[indexed[z++]];
-                out.push(l.apply(scope, args));
-                if (stop) {
-                    stop = oldstop;
-                    return out;
-                }
-            }
-            for (i = 0; i < ii; i++) {
-                l = listeners[i];
-                if ("zIndex" in l) {
-                    if (l.zIndex == indexed[z]) {
-                        out.push(l.apply(scope, args));
-                        if (stop) {
-                            break;
-                        }
-                        do {
-                            z++;
-                            l = queue[indexed[z]];
-                            l && out.push(l.apply(scope, args));
-                            if (stop) {
-                                break;
-                            }
-                        } while (l)
-                    } else {
-                        queue[l.zIndex] = l;
-                    }
-                } else {
-                    out.push(l.apply(scope, args));
-                    if (stop) {
-                        break;
-                    }
-                }
-            }
-            stop = oldstop;
-            current_event = ce;
-            return out;
-        };
-        // Undocumented. Debug only.
-        eve._events = events;
-    /*\
-     * eve.listeners
-     [ method ]
-
-     * Internal method which gives you array of all event handlers that will be triggered by the given `name`.
-
-     > Arguments
-
-     - name (string) name of the event, dot (`.`) or slash (`/`) separated
-
-     = (array) array of event handlers
-    \*/
-    eve.listeners = function (name) {
-        var names = name.split(separator),
-            e = events,
-            item,
-            items,
-            k,
-            i,
-            ii,
-            j,
-            jj,
-            nes,
-            es = [e],
-            out = [];
-        for (i = 0, ii = names.length; i < ii; i++) {
-            nes = [];
-            for (j = 0, jj = es.length; j < jj; j++) {
-                e = es[j].n;
-                items = [e[names[i]], e[wildcard]];
-                k = 2;
-                while (k--) {
-                    item = items[k];
-                    if (item) {
-                        nes.push(item);
-                        out = out.concat(item.f || []);
-                    }
-                }
-            }
-            es = nes;
-        }
-        return out;
-    };
-    
-    /*\
-     * eve.on
-     [ method ]
-     **
-     * Binds given event handler with a given name. You can use wildcards “`*`” for the names:
-     | eve.on("*.under.*", f);
-     | eve("mouse.under.floor"); // triggers f
-     * Use @eve to trigger the listener.
-     **
-     > Arguments
-     **
-     - name (string) name of the event, dot (`.`) or slash (`/`) separated, with optional wildcards
-     - f (function) event handler function
-     **
-     = (function) returned function accepts a single numeric parameter that represents z-index of the handler. It is an optional feature and only used when you need to ensure that some subset of handlers will be invoked in a given order, despite of the order of assignment. 
-     > Example:
-     | eve.on("mouse", eatIt)(2);
-     | eve.on("mouse", scream);
-     | eve.on("mouse", catchIt)(1);
-     * This will ensure that `catchIt` function will be called before `eatIt`.
-     *
-     * If you want to put your handler before non-indexed handlers, specify a negative value.
-     * Note: I assume most of the time you don’t need to worry about z-index, but it’s nice to have this feature “just in case”.
-    \*/
-    eve.on = function (name, f) {
-        name = String(name);
-        if (typeof f != "function") {
-            return function () {};
-        }
-        var names = name.split(comaseparator);
-        for (var i = 0, ii = names.length; i < ii; i++) {
-            (function (name) {
-                var names = name.split(separator),
-                    e = events,
-                    exist;
-                for (var i = 0, ii = names.length; i < ii; i++) {
-                    e = e.n;
-                    e = e.hasOwnProperty(names[i]) && e[names[i]] || (e[names[i]] = {n: {}});
-                }
-                e.f = e.f || [];
-                for (i = 0, ii = e.f.length; i < ii; i++) if (e.f[i] == f) {
-                    exist = true;
-                    break;
-                }
-                !exist && e.f.push(f);
-            }(names[i]));
-        }
-        return function (zIndex) {
-            if (+zIndex == +zIndex) {
-                f.zIndex = +zIndex;
-            }
-        };
-    };
-    /*\
-     * eve.f
-     [ method ]
-     **
-     * Returns function that will fire given event with optional arguments.
-     * Arguments that will be passed to the result function will be also
-     * concated to the list of final arguments.
-     | el.onclick = eve.f("click", 1, 2);
-     | eve.on("click", function (a, b, c) {
-     |     console.log(a, b, c); // 1, 2, [event object]
-     | });
-     > Arguments
-     - event (string) event name
-     - varargs (…) and any other arguments
-     = (function) possible event handler function
-    \*/
-    eve.f = function (event) {
-        var attrs = [].slice.call(arguments, 1);
-        return function () {
-            eve.apply(null, [event, null].concat(attrs).concat([].slice.call(arguments, 0)));
-        };
-    };
-    /*\
-     * eve.stop
-     [ method ]
-     **
-     * Is used inside an event handler to stop the event, preventing any subsequent listeners from firing.
-    \*/
-    eve.stop = function () {
-        stop = 1;
-    };
-    /*\
-     * eve.nt
-     [ method ]
-     **
-     * Could be used inside event handler to figure out actual name of the event.
-     **
-     > Arguments
-     **
-     - subname (string) #optional subname of the event
-     **
-     = (string) name of the event, if `subname` is not specified
-     * or
-     = (boolean) `true`, if current event’s name contains `subname`
-    \*/
-    eve.nt = function (subname) {
-        if (subname) {
-            return new RegExp("(?:\\.|\\/|^)" + subname + "(?:\\.|\\/|$)").test(current_event);
-        }
-        return current_event;
-    };
-    /*\
-     * eve.nts
-     [ method ]
-     **
-     * Could be used inside event handler to figure out actual name of the event.
-     **
-     **
-     = (array) names of the event
-    \*/
-    eve.nts = function () {
-        return current_event.split(separator);
-    };
-    /*\
-     * eve.off
-     [ method ]
-     **
-     * Removes given function from the list of event listeners assigned to given name.
-     * If no arguments specified all the events will be cleared.
-     **
-     > Arguments
-     **
-     - name (string) name of the event, dot (`.`) or slash (`/`) separated, with optional wildcards
-     - f (function) event handler function
-    \*/
-    /*\
-     * eve.unbind
-     [ method ]
-     **
-     * See @eve.off
-    \*/
-    eve.off = eve.unbind = function (name, f) {
-        if (!name) {
-            eve._events = events = {n: {}};
-            return;
-        }
-        var names = name.split(comaseparator);
-        if (names.length > 1) {
-            for (var i = 0, ii = names.length; i < ii; i++) {
-                eve.off(names[i], f);
-            }
-            return;
-        }
-        names = name.split(separator);
-        var e,
-            key,
-            splice,
-            i, ii, j, jj,
-            cur = [events];
-        for (i = 0, ii = names.length; i < ii; i++) {
-            for (j = 0; j < cur.length; j += splice.length - 2) {
-                splice = [j, 1];
-                e = cur[j].n;
-                if (names[i] != wildcard) {
-                    if (e[names[i]]) {
-                        splice.push(e[names[i]]);
-                    }
-                } else {
-                    for (key in e) if (e[has](key)) {
-                        splice.push(e[key]);
-                    }
-                }
-                cur.splice.apply(cur, splice);
-            }
-        }
-        for (i = 0, ii = cur.length; i < ii; i++) {
-            e = cur[i];
-            while (e.n) {
-                if (f) {
-                    if (e.f) {
-                        for (j = 0, jj = e.f.length; j < jj; j++) if (e.f[j] == f) {
-                            e.f.splice(j, 1);
-                            break;
-                        }
-                        !e.f.length && delete e.f;
-                    }
-                    for (key in e.n) if (e.n[has](key) && e.n[key].f) {
-                        var funcs = e.n[key].f;
-                        for (j = 0, jj = funcs.length; j < jj; j++) if (funcs[j] == f) {
-                            funcs.splice(j, 1);
-                            break;
-                        }
-                        !funcs.length && delete e.n[key].f;
-                    }
-                } else {
-                    delete e.f;
-                    for (key in e.n) if (e.n[has](key) && e.n[key].f) {
-                        delete e.n[key].f;
-                    }
-                }
-                e = e.n;
-            }
-        }
-    };
-    /*\
-     * eve.once
-     [ method ]
-     **
-     * Binds given event handler with a given name to only run once then unbind itself.
-     | eve.once("login", f);
-     | eve("login"); // triggers f
-     | eve("login"); // no listeners
-     * Use @eve to trigger the listener.
-     **
-     > Arguments
-     **
-     - name (string) name of the event, dot (`.`) or slash (`/`) separated, with optional wildcards
-     - f (function) event handler function
-     **
-     = (function) same return function as @eve.on
-    \*/
-    eve.once = function (name, f) {
-        var f2 = function () {
-            eve.unbind(name, f2);
-            return f.apply(this, arguments);
-        };
-        return eve.on(name, f2);
-    };
-    /*\
-     * eve.version
-     [ property (string) ]
-     **
-     * Current version of the library.
-    \*/
-    eve.version = version;
-    eve.toString = function () {
-        return "You are running Eve " + version;
-    };
-    (typeof module != "undefined" && module.exports) ? (module.exports = eve) : (typeof define === "function" && define.amd ? (define("eve", [], function() { return eve; })) : (glob.eve = eve));
-})(this);
-
-},{}],191:[function(require,module,exports){
-"use strict";
-
-var React = require('react');
-var Helpers = require('../mixins/Helpers');
-
-var Button = React.createClass({
-  render: function () {
-    return React.DOM.input(this.props, this.props.children);
-  }
-});
-
-module.exports = Helpers.Scroll(Button);
-
-},{"../mixins/Helpers":196,"react":"react"}],192:[function(require,module,exports){
-"use strict";
-
-var React = require('react');
-var Helpers = require('../mixins/Helpers');
-var directScroller = require('../mixins/direct-scroller');
-
-var DirectLink = React.createClass({
-  render: function () {
-    return React.DOM.a(this.props, this.props.children);
-  }
-});
-
-module.exports = Helpers.Scroll(DirectLink, directScroller);
-
-},{"../mixins/Helpers":196,"../mixins/direct-scroller":199,"react":"react"}],193:[function(require,module,exports){
-"use strict";
-
-var React = require('react');
-var Helpers = require('../mixins/Helpers');
-
-var Element = React.createClass({
-  render: function () {
-    return React.DOM.div(this.props, this.props.children);
-  }
-});
-
-module.exports = Helpers.Element(Element);
-},{"../mixins/Helpers":196,"react":"react"}],194:[function(require,module,exports){
-"use strict";
-
-var React = require('react');
-var Helpers = require('../mixins/Helpers');
-
-var Link = React.createClass({
-  render: function () {
-    return React.DOM.a(this.props, this.props.children);
-  }
-});
-
-module.exports = Helpers.Scroll(Link);
-
-},{"../mixins/Helpers":196,"react":"react"}],195:[function(require,module,exports){
-exports.Link = require('./components/Link.js');
-exports.DirectLink = require('./components/DirectLink.js');
-exports.Button = require('./components/Button.js');
-exports.Element = require('./components/Element.js');
-exports.Helpers = require('./mixins/Helpers.js');
-exports.scroller = require('./mixins/scroller.js');
-exports.directScroller = require('./mixins/direct-scroller.js');
-exports.Events = require('./mixins/scroll-events.js');
-exports.scrollSpy = require('./mixins/scroll-spy.js');
-exports.animateScroll = require('./mixins/animate-scroll.js');
-
-},{"./components/Button.js":191,"./components/DirectLink.js":192,"./components/Element.js":193,"./components/Link.js":194,"./mixins/Helpers.js":196,"./mixins/animate-scroll.js":197,"./mixins/direct-scroller.js":199,"./mixins/scroll-events.js":200,"./mixins/scroll-spy.js":201,"./mixins/scroller.js":202}],196:[function(require,module,exports){
-"use strict";
-
-var React = require('react');
-var ReactDOM = require('react-dom');
-
-var animateScroll = require('./animate-scroll');
-var scrollSpy = require('./scroll-spy');
-var defaultScroller = require('./scroller');
-
-var Helpers = {
-
-  Scroll: function (Component, customScroller) {
-
-    var scroller = customScroller || defaultScroller;
-
-    return React.createClass({
-
-      propTypes: {
-        to: React.PropTypes.string.isRequired,
-        offset: React.PropTypes.number,
-        delay: React.PropTypes.number,
-        onClick: React.PropTypes.func,
-        duration: React.PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.func])
-      },
-      
-      getDefaultProps: function() {
-        return {offset: 0};
-      },
-
-      scrollTo : function(to, props) {
-          scroller.scrollTo(to, props);
-      },
-
-      handleClick: function(event) {
-
-        /*
-         * give the posibility to override onClick
-         */
-
-        if(this.props.onClick) {
-          this.props.onClick(event);
-        }
-
-        /*
-         * dont bubble the navigation
-         */
-
-        if (event.stopPropagation) event.stopPropagation();
-        if (event.preventDefault) event.preventDefault();
-
-        /*
-         * do the magic!
-         */
-
-        this.scrollTo(this.props.to, this.props);
-
-      },
-
-      spyHandler: function(y) {
-        var element = scroller.get(this.props.to);
-        if (!element) return;
-        var cords = element.getBoundingClientRect();
-        var topBound = cords.top + y;
-        var bottomBound = topBound + cords.height;
-        var offsetY = y - this.props.offset;
-        var to = this.props.to;
-        var isInside = (offsetY >= topBound && offsetY <= bottomBound);
-        var isOutside = (offsetY < topBound || offsetY > bottomBound);
-        var activeLink = scroller.getActiveLink();
-
-        if (isOutside && activeLink === to) {
-          scroller.setActiveLink(void 0);
-          this.setState({ active : false });
-
-        } else if (isInside && activeLink != to) {
-          scroller.setActiveLink(to);
-          this.setState({ active : true });
-
-          if(this.props.onSetActive) {
-            this.props.onSetActive(to);
-          }
-
-          scrollSpy.updateStates();
-        }
-      },
-
-      componentDidMount: function() {
-
-        scrollSpy.mount();
-      
-
-        if(this.props.spy) {
-          var to = this.props.to;
-          var element = null;
-          var elemTopBound = 0;
-          var elemBottomBound = 0;
-
-          scrollSpy.addStateHandler((function() {
-            if(scroller.getActiveLink() != to) {
-                this.setState({ active : false });
-            }
-          }).bind(this));
-
-          scrollSpy.addSpyHandler((function(y) {
-
-            if(!element) {
-                element = scroller.get(to);
-
-                var cords = element.getBoundingClientRect();
-                elemTopBound = (cords.top + y);
-                elemBottomBound = elemTopBound + cords.height;
-            }
-
-            var offsetY = y - this.props.offset;
-            var isInside = (offsetY >= elemTopBound && offsetY <= elemBottomBound);
-            var isOutside = (offsetY < elemTopBound || offsetY > elemBottomBound);
-            var activeLink = scroller.getActiveLink();
-
-            if (isOutside && activeLink === to) {
-              scroller.setActiveLink(void 0);
-              this.setState({ active : false });
-
-            } else if (isInside && activeLink != to) {
-              scroller.setActiveLink(to);
-              this.setState({ active : true });
-
-              if(this.props.onSetActive) {
-                this.props.onSetActive(to);
-              }
-
-              scrollSpy.updateStates();
-
-            }
-          }).bind(this));
-        }
-      },
-      componentWillUnmount: function() {
-        scrollSpy.unmount();
-      },
-      render: function() {
-        var className = "";
-        if(this.state && this.state.active) {
-          className = ((this.props.className || "") + " " + (this.props.activeClass || "active")).trim();
-        } else {
-          className = this.props.className
-        }
-
-        var props = {};
-        for(var prop in this.props) {
-          props[prop] = this.props[prop];
-        }
-
-        props.className = className;
-        props.onClick = this.handleClick;
-
-        return React.createElement(Component, props);
-      }
-    });
-  },
-
-
-  Element: function(Component) {
-    return React.createClass({
-      propTypes: {
-        name: React.PropTypes.string.isRequired
-      },
-      componentDidMount: function() {
-        var domNode = ReactDOM.findDOMNode(this);
-        defaultScroller.register(this.props.name, domNode);
-      },
-      componentWillUnmount: function() {
-        defaultScroller.unregister(this.props.name);
-      },
-      render: function() {
-        return React.createElement(Component, this.props);
-      }
-    });
-  }
-};
-
-module.exports = Helpers;
-
-},{"./animate-scroll":197,"./scroll-spy":201,"./scroller":202,"react":"react","react-dom":"react-dom"}],197:[function(require,module,exports){
-var assign = require('object-assign');
-
-var smooth = require('./smooth');
-
-var easing = smooth.defaultEasing;
-
-var cancelEvents = require('./cancel-events');
-
-var events = require('./scroll-events');
-
-/*
- * Function helper
- */
-var functionWrapper = function(value) {
-  return typeof value === 'function' ? value : function() { return value; };
-};
-
-/*
- * Sets the cancel trigger
+module.exports = Snap
+
+},{"eve":20}],187:[function(require,module,exports){
+(function (process){
+/**
+ * Copyright 2014-2015, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-cancelEvents.register(function() {
-  __cancel = true;
-});
-
-/*
- * Wraps window properties to allow server side rendering
- */
-var currentWindowProperties = function() {
-  if (typeof window !== 'undefined') {
-    return window.requestAnimationFrame || window.webkitRequestAnimationFrame;
-  }
-};
-
-/*
- * Helper function to never extend 60fps on the webpage.
- */
-var requestAnimationFrameHelper = (function () {
-  return  currentWindowProperties() ||
-          function (callback, element, delay) {
-              window.setTimeout(callback, delay || (1000/60), new Date().getTime());
-          };
-})();
-
-
-var __currentPositionY  = 0;
-var __startPositionY    = 0;
-var __targetPositionY   = 0;
-var __progress          = 0;
-var __duration          = 0;
-var __cancel            = false;
-
-var __target;
-var __to;
-var __start;
-var __deltaTop;
-var __percent;
-var __delayTimeout;
-
-
-var currentPositionY = function() {
-  var supportPageOffset = window.pageXOffset !== undefined;
-  var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
-  return supportPageOffset ? window.pageYOffset : isCSS1Compat ?
-         document.documentElement.scrollTop : document.body.scrollTop;
-};
-
-var pageHeight = function() {
-  var body = document.body;
-  var html = document.documentElement;
-
-  return Math.max(
-      body.scrollHeight,
-      body.offsetHeight,
-      html.clientHeight,
-      html.scrollHeight,
-      html.offsetHeight
-  );
-};
-
-var animateTopScroll = function(timestamp) {
-  // Cancel on specific events
-  if(__cancel) { return };
-
-  __deltaTop = Math.round(__targetPositionY - __startPositionY);
-
-  if (__start === null) {
-    __start = timestamp;
-  }
-
-  __progress = timestamp - __start;
-
-  __percent = (__progress >= __duration ? 1 : easing(__progress/__duration));
-
-  __currentPositionY = __startPositionY + Math.ceil(__deltaTop * __percent);
-
-  window.scrollTo(0, __currentPositionY);
-
-  if(__percent < 1) {
-    requestAnimationFrameHelper.call(window, animateTopScroll);
-    return;
-  }
-
-  if(events.registered['end']) {
-    events.registered['end'](__to, __target, __currentPositionY);
-  }
-
-};
-
-var startAnimateTopScroll = function(y, options, to, target) {
-
-
-  window.clearTimeout(__delayTimeout);
-
-  __start           = null;
-  __cancel          = false;
-  __startPositionY  = currentPositionY();
-  __targetPositionY = options.absolute ? y : y + __startPositionY;
-  __deltaTop        = Math.round(__targetPositionY - __startPositionY);
-
-  __duration        = functionWrapper(options.duration)(__deltaTop);
-  __duration        = isNaN(parseFloat(__duration)) ? 1000 : parseFloat(__duration);
-  __to              = to;
-  __target          = target;
-
-  if(options && options.delay > 0) {
-    __delayTimeout = window.setTimeout(function animate() {
-      requestAnimationFrameHelper.call(window, animateTopScroll);
-    }, options.delay);
-    return;
-  }
-
-  requestAnimationFrameHelper.call(window, animateTopScroll);
-
-};
-
-var scrollToTop = function (options) {
-  startAnimateTopScroll(0, assign(options || {}, { absolute : true }));
-};
-
-var scrollTo = function (toY, options) {
-  startAnimateTopScroll(toY, assign(options || {}, { absolute : true }));
-};
-
-var scrollToBottom = function(options) {
-  startAnimateTopScroll(pageHeight(), assign(options || {}, { absolute : true }));
-};
-
-var scrollMore = function(toY, options) {
-  startAnimateTopScroll(currentPositionY() + toY, assign(options || {}, { absolute : true }));
-};
-
-module.exports = {
-  animateTopScroll: startAnimateTopScroll,
-  scrollToTop: scrollToTop,
-  scrollToBottom: scrollToBottom,
-  scrollTo: scrollTo,
-  scrollMore: scrollMore,
-};
-
-},{"./cancel-events":198,"./scroll-events":200,"./smooth":203,"object-assign":204}],198:[function(require,module,exports){
-var events = ['mousedown', 'mousewheel', 'touchmove', 'keydown']
-
-module.exports = {
-	register : function(cancelEvent) {
-		if (typeof document === 'undefined') {
-			return;
-		}
-
-		for(var i = 0; i < events.length; i = i + 1) {
-			document.addEventListener(events[i], cancelEvent);
-		}
-	}
-};
-
-},{}],199:[function(require,module,exports){
-var Helpers  = require('../mixins/Helpers');
-var scroller = require('../mixins/scroller');
-
-var mappedGet = scroller.get;
-
-// Get element by its ID attribute
-scroller.get = function(name) {
-  return mappedGet(name) || document.getElementById(name);
-};
-
-module.exports = scroller;
-
-},{"../mixins/Helpers":196,"../mixins/scroller":202}],200:[function(require,module,exports){
-
-var Events = {
-	registered : {},
-	scrollEvent : {
-		register: function(evtName, callback) {
-			Events.registered[evtName] = callback;
-		},
-		remove: function(evtName) {
-			Events.registered[evtName] = null;
-		}
-	}
-};
-
-module.exports = Events;
-},{}],201:[function(require,module,exports){
-var scrollSpy = {
-  
-  spyCallbacks: [],
-  spySetState: [],
-
-  mount: function () {
-    if (typeof document !== 'undefined') {
-      document.addEventListener('scroll', this.scrollHandler.bind(this));
-    }
-  },
-  currentPositionY: function () {
-    var supportPageOffset = window.pageXOffset !== undefined;
-    var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
-    return supportPageOffset ? window.pageYOffset : isCSS1Compat ?
-            document.documentElement.scrollTop : document.body.scrollTop;
-  },
-
-  scrollHandler: function () {
-    for(var i = 0; i < this.spyCallbacks.length; i++) {
-      this.spyCallbacks[i](this.currentPositionY());
-    }
-  },
-
-  addStateHandler: function(handler){
-    this.spySetState.push(handler);
-  },
-
-  addSpyHandler: function(handler){
-    this.spyCallbacks.push(handler);
-  },
-
-  updateStates: function(){
-    var length = this.spySetState.length;
-
-    for(var i = 0; i < length; i++) {
-      this.spySetState[i]();
-    }
-  },
-  unmount: function () { 
-    this.spyCallbacks = [];
-    this.spySetState = [];
-
-    document.removeEventListener('scroll', this.scrollHandler);
-  }
-}
-
-module.exports = scrollSpy;
-},{}],202:[function(require,module,exports){
-var animateScroll = require('./animate-scroll');
-var events = require('./scroll-events');
-
-var __mapped = {};
-var __activeLink;
-
-module.exports = {
-
-  unmount: function() {
-    __mapped = {};
-  },
-
-  register: function(name, element){
-    __mapped[name] = element;
-  },
-
-  unregister: function(name) {
-    delete __mapped[name];
-  },
-
-  get: function(name) {
-    return __mapped[name];
-  },
-
-  setActiveLink: function(link) {
-    __activeLink = link;
-  },
-
-  getActiveLink: function() {
-    return __activeLink;
-  },
-
-  scrollTo: function(to, props) {
-
-     /*
-     * get the mapped DOM element
-     */
-
-      var target = this.get(to);
-
-      if(!target) {
-        throw new Error("target Element not found");
-      }
-
-      props = props || {};
-
-      var coordinates = target.getBoundingClientRect();
-
-      if(events.registered['begin']) {
-        events.registered['begin'](to, target);
-      }
-      /*
-       * if animate is not provided just scroll into the view
-       */
-      if(!props.smooth) {
-        var bodyRect = document.body.getBoundingClientRect();
-        var scrollOffset = coordinates.top - bodyRect.top;
-        window.scrollTo(0, scrollOffset + (props.offset || 0));
-
-        if(events.registered['end']) {
-          events.registered['end'](to, target);
-        }
-
-        return;
-      }
-
-      /*
-       * Animate scrolling
-       */
-
-      animateScroll.animateTopScroll(coordinates.top + (props.offset || 0), props, to, target);
-  }
-};
-
-
-},{"./animate-scroll":197,"./scroll-events":200}],203:[function(require,module,exports){
-module.exports = {
- /*
-  * https://github.com/oblador/angular-scroll (duScrollDefaultEasing)
-  */
-  defaultEasing : function (x) {
-    'use strict';
-
-    if(x < 0.5) {
-      return Math.pow(x*2, 2)/2;
-    }
-    return 1-Math.pow((1-x)*2, 2)/2;
-  }
-}
-},{}],204:[function(require,module,exports){
 'use strict';
-/* eslint-disable no-unused-vars */
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
 
-function toObject(val) {
-	if (val === null || val === undefined) {
-		throw new TypeError('Object.assign cannot be called with null or undefined');
-	}
+/**
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
 
-	return Object(val);
+var warning = function() {};
+
+if (process.env.NODE_ENV !== 'production') {
+  warning = function(condition, format, args) {
+    var len = arguments.length;
+    args = new Array(len > 2 ? len - 2 : 0);
+    for (var key = 2; key < len; key++) {
+      args[key - 2] = arguments[key];
+    }
+    if (format === undefined) {
+      throw new Error(
+        '`warning(condition, format, ...args)` requires a warning ' +
+        'message argument'
+      );
+    }
+
+    if (format.length < 10 || (/^[s\W]*$/).test(format)) {
+      throw new Error(
+        'The warning format should be able to uniquely identify this ' +
+        'warning. Please, use a more descriptive format than: ' + format
+      );
+    }
+
+    if (!condition) {
+      var argIndex = 0;
+      var message = 'Warning: ' +
+        format.replace(/%s/g, function() {
+          return args[argIndex++];
+        });
+      if (typeof console !== 'undefined') {
+        console.error(message);
+      }
+      try {
+        // This error was thrown as a convenience so that you can use this stack
+        // to find the callsite that caused this warning to fire.
+        throw new Error(message);
+      } catch(x) {}
+    }
+  };
 }
 
-function shouldUseNative() {
-	try {
-		if (!Object.assign) {
-			return false;
-		}
+module.exports = warning;
 
-		// Detect buggy property enumeration order in older V8 versions.
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line
-		test1[5] = 'de';
-		if (Object.getOwnPropertyNames(test1)[0] === '5') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test2 = {};
-		for (var i = 0; i < 10; i++) {
-			test2['_' + String.fromCharCode(i)] = i;
-		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-			return test2[n];
-		});
-		if (order2.join('') !== '0123456789') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test3 = {};
-		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-			test3[letter] = letter;
-		});
-		if (Object.keys(Object.assign({}, test3)).join('') !==
-				'abcdefghijklmnopqrst') {
-			return false;
-		}
-
-		return true;
-	} catch (e) {
-		// We don't expect any of the above to throw, but better to be safe.
-		return false;
-	}
-}
-
-module.exports = shouldUseNative() ? Object.assign : function (target, source) {
-	var from;
-	var to = toObject(target);
-	var symbols;
-
-	for (var s = 1; s < arguments.length; s++) {
-		from = Object(arguments[s]);
-
-		for (var key in from) {
-			if (hasOwnProperty.call(from, key)) {
-				to[key] = from[key];
-			}
-		}
-
-		if (Object.getOwnPropertySymbols) {
-			symbols = Object.getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
-				if (propIsEnumerable.call(from, symbols[i])) {
-					to[symbols[i]] = from[symbols[i]];
-				}
-			}
-		}
-	}
-
-	return to;
-};
-
-},{}]},{},[14]);
+}).call(this,require('_process'))
+},{"_process":69}]},{},[14]);

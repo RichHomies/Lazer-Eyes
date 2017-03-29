@@ -79,6 +79,69 @@ var episode3Object =  {
           }
         };
 
+var episode4Object =  {
+        className: 'episodesHeader',
+        episodesMeta: {
+            episodeName: {
+                title: 'The Empire Strikes Repeatedly',
+                number: 'IV',
+                path : '/episodes/The-Empire-Strikes-Repeatedly'
+            }, 
+            songs: [{
+                songTitle: "It's Coming To Life",
+                songPath: '/audio/It%27s%20Coming%20To%20Life.m4a',
+                number: 10,
+                urlPath: 'episode4/song1'
+            }, {
+                songTitle: 'Feel The Burn',
+                songPath: '/audio/Feel%20The%20Burn%202.0.m4a',
+                number: 11,
+                urlPath: 'episode4/song2'
+            }, {
+                songTitle: "Lazers for Eyes (Eyes for Lazers)",
+                songPath: '/audio/lazers%20for%20eyes%20%28eyes%20for%20lazers%29%202.0.m4a',
+                number: 12,
+                urlPath: 'episode4/song3'
+             }, {
+                songTitle: "Save the Night",
+                songPath: '/audio/save%20the%20night%202.0%20.m4a',
+                number: 13,
+                urlPath: 'episode4/song4'
+             }]
+          }
+        };
+
+var episode5Object =  {
+        className: 'episodesHeader',
+        episodesMeta: {
+            episodeName: {
+                title: 'The Empire Strikes Repeatedly',
+                number: 'V',
+                path : '/episodes/The-Empire-Strikes-Repeatedly'
+            }, 
+            songs: [{
+                songTitle: "Oh My Lazer Eyes Pt. 2",
+                songPath: '/audio/It%27s%20Coming%20To%20Life.m4a',
+                number: 14,
+                urlPath: 'episode5/song1'
+            }, {
+                songTitle: 'The Lazer Beam of Destiny',
+                songPath: '/audio/15.%20The%20Lazer%20Beam%20of%20Destiny%201.m4a',
+                number: 15,
+                urlPath: 'episode5/song2'
+            }, {
+                songTitle: "#Newsflash",
+                songPath: '/audio/16.%20%23Newsflash%201.m4a',
+                number: 16,
+                urlPath: 'episode5/song3'
+             }, {
+                songTitle: "Man of the Skies",
+                songPath: '/audio/17.%20Man%20of%20the%20Skies%201.m4a',
+                number: 17,
+                urlPath: 'episode5/song4'
+             }]
+          }
+        };
 
 var menu = {
     links: [{
@@ -93,7 +156,7 @@ var menu = {
         className: 'episodesHeader'
 
     }],
-    episodes: [episode1Object, episode2Object, episode3Object]
+    episodes: [episode1Object, episode2Object, episode3Object, episode4Object]
 };
 
 menu.songs = menu.episodes.map(function(episode){
