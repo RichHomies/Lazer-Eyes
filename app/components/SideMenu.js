@@ -3,13 +3,13 @@ import { Link } from 'react-router';
 import Radium from 'radium';
 import meta from './sideMenuJson';
 
-var songs = meta.episodes[0]['episodesMeta']['songs'].concat(meta.episodes[1]['episodesMeta']['songs']).concat(meta.episodes[2]['episodesMeta']['songs']);
+var songs = meta.episodes[0]['episodesMeta']['songs']
+              .concat(meta.episodes[1]['episodesMeta']['songs'])
+              .concat(meta.episodes[2]['episodesMeta']['songs'])
+              .concat(meta.episodes[3]['episodesMeta']['songs'])
+              .concat(meta.episodes[4]['episodesMeta']['songs']);
 var RadiumLink = Radium(Link);
 var Menu = require('react-burger-menu').push;
-
-
-//add later
-
 
 
 var SideMenu = React.createClass({

@@ -83,9 +83,9 @@ var episode4Object =  {
         className: 'episodesHeader',
         episodesMeta: {
             episodeName: {
-                title: 'The Empire Strikes Repeatedly',
+                title: 'Lazerus Maximus',
                 number: 'IV',
-                path : '/episodes/The-Empire-Strikes-Repeatedly'
+                path : '/episodes/Lazer-Maximus'
             }, 
             songs: [{
                 songTitle: "It's Coming To Life",
@@ -115,9 +115,9 @@ var episode5Object =  {
         className: 'episodesHeader',
         episodesMeta: {
             episodeName: {
-                title: 'The Empire Strikes Repeatedly',
+                title: 'The Day the Earth Stood Still with Lazers',
                 number: 'V',
-                path : '/episodes/The-Empire-Strikes-Repeatedly'
+                path : '/episodes/The-Day-the-Earth-Stood-Still-with-Lazers'
             }, 
             songs: [{
                 songTitle: "Oh My Lazer Eyes Pt. 2",
@@ -156,7 +156,7 @@ var menu = {
         className: 'episodesHeader'
 
     }],
-    episodes: [episode1Object, episode2Object, episode3Object, episode4Object]
+    episodes: [episode1Object, episode2Object, episode3Object, episode4Object, episode5Object]
 };
 
 menu.songs = menu.episodes.map(function(episode){
