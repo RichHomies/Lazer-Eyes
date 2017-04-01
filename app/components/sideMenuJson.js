@@ -94,17 +94,17 @@ var episode4Object =  {
                 urlPath: 'episode4/song1'
             }, {
                 songTitle: 'Feel The Burn',
-                songPath: '/audio/Feel%20The%20Burn%202.0.m4a',
+                songPath: '/audio/Feel%20The%20Burn.m4a',
                 number: 11,
                 urlPath: 'episode4/song2'
             }, {
                 songTitle: "Lazers for Eyes (Eyes for Lazers)",
-                songPath: '/audio/lazers%20for%20eyes%20%28eyes%20for%20lazers%29%202.0.m4a',
+                songPath: '/audio/Lazers%20for%20Eyes%20%28Eyes%20for%20Lazers%29.m4a',
                 number: 12,
                 urlPath: 'episode4/song3'
              }, {
                 songTitle: "Save the Night",
-                songPath: '/audio/save%20the%20night%202.0%20.m4a',
+                songPath: '/audio/Save%20the%20Night.m4a',
                 number: 13,
                 urlPath: 'episode4/song4'
              }]

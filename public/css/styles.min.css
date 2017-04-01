@@ -2614,6 +2614,20 @@ div.pink{
   background-attachment: fixed;
   background-position: center;
 }
+.lazerusmaximus {
+    background-image: url(/img/EP4-cover.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.earthstoodstill {
+    background-image: url('/img/Genesis.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
 
 .episodeButton:hover {
   opacity: .75;

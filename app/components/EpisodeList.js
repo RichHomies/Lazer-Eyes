@@ -19,6 +19,12 @@ var EpisodeList = React.createClass({
         case 2:
           var classStr = 'empirestrikes'
           break;
+        case 3:
+          var classStr = 'lazerusmaximus'
+          break;
+        case 4:
+          var classStr = 'earthstoodstill'
+          break;
         default:
           var classStr = ''
           break;

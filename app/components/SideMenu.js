@@ -82,7 +82,6 @@ var SideMenu = React.createClass({
         playSongHander = this.playSong(songs[songModel]['urlPath']);
         
         if(songs[songModel]['urlPath'] === this.props.currentSong || songs[songModel]['songPath'] === this.props.currentSong){
-          debugger;
           classStr = 'songLink currentlyPlayingSong'; 
         } else {
           classStr = 'songLink'
