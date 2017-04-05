@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import Radium from 'radium';
 var RadiumLink = Radium(Link);
 
-var romanNums = ['I', 'II', 'III', 'IV', 'V', 'VI']
+var romanNums = ['I', 'II', 'III', 'IV', 'V', 'VI'];
 
 var EpisodeList = React.createClass({
   render: function() {
@@ -18,6 +18,12 @@ var EpisodeList = React.createClass({
           break;
         case 2:
           var classStr = 'empirestrikes'
+          break;
+        case 3:
+          var classStr = 'lazerusmaximus'
+          break;
+        case 4:
+          var classStr = 'earthstoodstill'
           break;
         default:
           var classStr = ''

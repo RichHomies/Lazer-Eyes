@@ -33,7 +33,7 @@
     "gulp-imagemin": "^3.0.1",
     "history": "^1.12.5",
     "morgan": "^1.6.1",
-    "radium": "^0.17.1",
+    "radium": "0.18.1",
     "react": "^0.14.0",
     "react-burger-menu": "^1.8.3",
     "react-dom": "^0.14.0",
