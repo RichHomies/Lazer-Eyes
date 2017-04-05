@@ -20,7 +20,6 @@ var Episode1 = React.createClass({
   },
   playSong: function(song){
     var that = this;
-    console.log('song', song)
     return function(){
       that.props.changeSong(song);
     }

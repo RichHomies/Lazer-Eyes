@@ -21,7 +21,6 @@ var AudioPlayer = React.createClass({
     var flag = false
     songs.forEach(function(song, i) {
       if (nextProps["currentSong"] === song.urlPath) {
-        console.log('yay', song)
         songUrl = song['songPath']
         songTitle = song['songTitle']
         trackNumber = song['number']
@@ -72,7 +71,6 @@ var AudioPlayer = React.createClass({
             audioPlayer.currentTime = 0;
           } else {
             var that = this
-            console.log(songs)
             songs.forEach(function(song, i) {
               if (song.number === previousTrackNum) {
                 that.setState({currentSongUrl: song.songPath, currentSongTitle: song.songTitle, trackNumber: previousTrackNum.toString()});
@@ -143,7 +141,6 @@ var AudioPlayer = React.createClass({
       var trackNumber = this.state.trackNumber;
       var trackNumberElem = (<span className='songTrackNumber' >{trackNumber}</span>);
       var titleElem = (<span className='songtitle' >{title}</span>);
-      console.log('muted status', this.state.muted)
       var soundOnOff = this.state.muted ? '/icons/sound-off.png' : '/icons/sound.png';
     }
 
@@ -181,7 +178,7 @@ var AudioPlayer = React.createClass({
     try {
       var songlengthInSeconds = audioPlayer.seekable.end(0);
     } catch(e) {
-      console.log('fuk', e)
+      console.log('ERROR:', e)
     }
     var secondsPlayed = audioPlayer.currentTime;
     var percentageOfSongElapsed = secondsPlayed / songlengthInSeconds;
@@ -206,10 +203,8 @@ var AudioPlayer = React.createClass({
     try {
       var songlengthInSeconds = audioPlayer.seekable.end(0);
     } catch(e) {
-      console.log('fuk', e)
+      console.log('ERROR', e)
     }
-    console.log('xposition', xPosition);
-    console.log('width', titleElemWidth);
     audioPlayer.currentTime = xPositionPercentage * songlengthInSeconds;
   }
 })

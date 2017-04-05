@@ -64,7 +64,6 @@ var AudioPlayer = _react2['default'].createClass({
     var flag = false;
     songs.forEach(function (song, i) {
       if (nextProps["currentSong"] === song.urlPath) {
-        console.log('yay', song);
         songUrl = song['songPath'];
         songTitle = song['songTitle'];
         trackNumber = song['number'];
@@ -114,7 +113,6 @@ var AudioPlayer = _react2['default'].createClass({
             audioPlayer.currentTime = 0;
           } else {
             var that = this;
-            console.log(songs);
             songs.forEach(function (song, i) {
               if (song.number === previousTrackNum) {
                 that.setState({ currentSongUrl: song.songPath, currentSongTitle: song.songTitle, trackNumber: previousTrackNum.toString() });
@@ -209,7 +207,6 @@ var AudioPlayer = _react2['default'].createClass({
         { className: 'songtitle' },
         title
       );
-      console.log('muted status', this.state.muted);
       var soundOnOff = this.state.muted ? '/icons/sound-off.png' : '/icons/sound.png';
     }
 
@@ -261,7 +258,7 @@ var AudioPlayer = _react2['default'].createClass({
     try {
       var songlengthInSeconds = audioPlayer.seekable.end(0);
     } catch (e) {
-      console.log('fuk', e);
+      console.log('ERROR:', e);
     }
     var secondsPlayed = audioPlayer.currentTime;
     var percentageOfSongElapsed = secondsPlayed / songlengthInSeconds;
@@ -286,10 +283,8 @@ var AudioPlayer = _react2['default'].createClass({
     try {
       var songlengthInSeconds = audioPlayer.seekable.end(0);
     } catch (e) {
-      console.log('fuk', e);
+      console.log('ERROR', e);
     }
-    console.log('xposition', xPosition);
-    console.log('width', titleElemWidth);
     audioPlayer.currentTime = xPositionPercentage * songlengthInSeconds;
   }
 });
@@ -335,7 +330,6 @@ var Episode1 = _react2['default'].createClass({
   },
   playSong: function playSong(song) {
     var that = this;
-    console.log('song', song);
     return function () {
       that.props.changeSong(song);
     };
@@ -471,7 +465,6 @@ var Episode2 = _react2['default'].createClass({
     });
   },
   playSong: function playSong(song) {
-    console.log('song', song);
     var that = this;
     return function () {
       that.props.changeSong(song);
