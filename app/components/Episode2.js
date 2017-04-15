@@ -1,5 +1,6 @@
 import React from 'react';
 import Scroll from 'react-scroll'; 
+import Radium from 'radium';
 
 var scroll = Scroll.animateScroll;
 var Element = Scroll.Element;
@@ -108,8 +109,8 @@ with all types of devices with any kind of display. As the streets grow quiet La
             alarm and locks the whole building down...
 
         </div>
-        
 
+        <RadiumLink to={'/episodes/crazy stupid lazers'}><span className={'episodeButton episodeListItem '}>Up Next</span></RadiumLink>
       </div>
     );
   }
