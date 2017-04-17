@@ -23,16 +23,16 @@ var Episodes = React.createClass({
       case 'genesis': 
         component = <Episode1 currentEpisode={that.props.currentEpisode } changeSong={that.props.changeSong}/>;
         break;
-      case 'crazy-stupid-lazers':
+      case 'crazy stupid lazers':
         component = <Episode2 currentEpisode={that.props.currentEpisode } changeSong={that.props.changeSong}/>;
         break;
-      case 'the-empire-strikes-repeatedly':
+      case 'the empire strikes repeatedly':
         component = <Episode3 currentEpisode={that.props.currentEpisode } changeSong={that.props.changeSong}/>;
         break;
-      case 'lazer-maximus':
+      case 'lazerus maximus':
         component = <Episode4 currentEpisode={that.props.currentEpisode } changeSong={that.props.changeSong}/>;
         break;
-      case 'the-day-the-earth-stood-still-with-lazers':
+      case 'the day the earth stood still with lazers':
         component = <Episode5 currentEpisode={that.props.currentEpisode } changeSong={that.props.changeSong}/>;
         break;
       default:

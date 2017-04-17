@@ -1,5 +1,6 @@
 import React from 'react';
 import Scroll from 'react-scroll'; 
+import Radium from 'radium';
 
 var scroll = Scroll.animateScroll;
 var Element = Scroll.Element;
@@ -170,7 +171,7 @@ Shining so bright. Lighting up the night, lending us the courage to fight for wh
            from his eyes.
         
         </div>
-        <img src="/img/track-3.gif" className="episodeImages trackImages" onClick={songThreeHandler}/>
+        <img src="/img/Track-3.gif" className="episodeImages trackImages" onClick={songThreeHandler}/>
         <img src='/img/EP-1-image-7-1.gif' className='episodeImages'/>
         <div className="episodeText">
         

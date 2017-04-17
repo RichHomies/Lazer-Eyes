@@ -1,5 +1,6 @@
 import React from 'react';
 import Scroll from 'react-scroll'; 
+import Radium from 'radium';
 
 var scroll = Scroll.animateScroll;
 var Element = Scroll.Element;
@@ -71,6 +72,8 @@ var Episode5 = React.createClass({
         Then with a huge crash, the Reflektor fell to the ground.
 
         </div>
+        <img src='/img/lazereyes_working_pg9.gif' className='episodeImages'/>
+        <img src='/img/lazereyes_working_pg10.gif' className='episodeImages'/>
         <img src='/img/lazereyes_working_pg11.gif' className='episodeImages'/>
 
         <div className="episodeText">

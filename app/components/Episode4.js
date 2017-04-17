@@ -1,5 +1,6 @@
 import React from 'react';
 import Scroll from 'react-scroll'; 
+import Radium from 'radium';
 
 var scroll = Scroll.animateScroll;
 var Element = Scroll.Element;
