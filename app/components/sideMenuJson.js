@@ -31,7 +31,7 @@ var episode2Object =  {
             episodeName: {
                 title: 'Crazy Stupid Lazers',
                 number: 'II',
-                path : '/episodes/Crazy-Stupid-Lazers'
+                path : '/episodes/Crazy Stupid Lazers'
             }, 
             songs: [{
                 songTitle: 'Oh My Lazer Eyes',
@@ -58,7 +58,7 @@ var episode3Object =  {
             episodeName: {
                 title: 'The Empire Strikes Repeatedly',
                 number: 'III',
-                path : '/episodes/The-Empire-Strikes-Repeatedly'
+                path : '/episodes/The Empire Strikes Repeatedly'
             }, 
             songs: [{
                 songTitle: 'Just Give Me Your Body',
@@ -85,7 +85,7 @@ var episode4Object =  {
             episodeName: {
                 title: 'Lazerus Maximus',
                 number: 'IV',
-                path : '/episodes/Lazer-Maximus'
+                path : '/episodes/Lazer Maximus'
             }, 
             songs: [{
                 songTitle: "It's Coming To Life",
@@ -117,7 +117,7 @@ var episode5Object =  {
             episodeName: {
                 title: 'The Day the Earth Stood Still with Lazers',
                 number: 'V',
-                path : '/episodes/The-Day-the-Earth-Stood-Still-with-Lazers'
+                path : '/episodes/The Day the Earth Stood Still with Lazers'
             }, 
             songs: [{
                 songTitle: "Oh My Lazer Eyes Pt. 2",
