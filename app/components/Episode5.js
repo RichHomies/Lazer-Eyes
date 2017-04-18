@@ -77,7 +77,7 @@ var Episode5 = React.createClass({
         <img src='/img/lazereyes_working_pg11.gif' className='episodeImages'/>
 
         <div className="episodeText">
-        Lazer Eyes wasted no time. He hurried quickly passed the Reflektor’s immobile body, to where his true love, Lazer Babe sat, suspended in a hanging mirrored cage. With a swift beam of lazers, he shattered the cage, and caught her in his arms. They did in fact kiss while the camera swirled around them in circles of steadily increasing rapidly, and live happily ever after. But before all that, Lazer Babe knowingly instructed Lazer Eyes as to what he must do next.
+        Lazer Eyes wasted no time. He hurried quickly passed the Reflektor’s immobile body, to where his true love, Leila sat, suspended in a hanging mirrored cage. With a swift beam of lazers, he shattered the cage, and caught her in his arms. They did in fact kiss while the camera swirled around them in circles of steadily increasing rapidly, and live happily ever after. But before all that, Leila knowingly instructed Lazer Eyes as to what he must do next.
         
         </div>
         <img src='/img/lazereyes_working_pg12.gif' className='episodeImages'/>

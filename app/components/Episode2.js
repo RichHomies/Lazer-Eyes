@@ -93,11 +93,10 @@ with all types of devices with any kind of display. As the streets grow quiet La
         <img src='/img/EP2-eyes.jpg' className='episodeImages'/>
         <div className="episodeText">
         
-            He wants her. He wants all of her, forever. Lazer Eyes and the Lazer Babe, every day. She immediately feels 
-            this connection as she stares deep into his eyes, but Lazer Eyes looks away. Almost losing control of himself, 
-            he can’t make sense of these emotions. Feelings that almost caused him to blast this woman whom he so 
-            suddenly loves. Yet as he looks back into her eyes he is disarmed, filled with a sense of inner peace and tranquility.
-
+            The magnetism is instantly palpable, the one drawn to the other and the other drawn to the one. Leila Zerly, as she is called, 
+            and Lazer Eyes, Leila, and lazer dude, destinies henceforth intertwined. Hash tag, love at first sight, with lazers.
+            Almost losing control of himself, he can’t make sense of these emotions. Feelings that almost caused him to blast this woman 
+            whom he so suddenly loves. Yet as he looks back into her eyes he is disarmed, filled with a sense of inner peace and tranquility.
         
         </div>
         <img src='/img/EP2-lazer-heart.gif' className='episodeImages'/>
@@ -105,10 +104,11 @@ with all types of devices with any kind of display. As the streets grow quiet La
 
         <div className="episodeText">
         
-            Thus Lazer eyes meets the Lazer Babe, whom after she explains the Reflektor’s evil plans and they bond over 
-            their suffering he frees from her cell and they begin to make their escape. Unluckily, the elevator they get on 
-            going down, stops at the main floor and before Lazer Eyes can react, one of the disheveled minions hits the 
-            alarm and locks the whole building down...
+            Thus Lazer eyes meets the Leila, who explains how she was captured after the Reflector saw her skills as the Queen of Content on 
+            the internet. Leila had mastered the art of holding the attention of billions with her something something videos, a skill which
+            the Reflektor desired to use in his dastardly plans for world domination . Lazer Eyes and Leila attempt to make their escape, 
+            unluckily, they are quickly spotted by one of the Reflektor's disheveled minions who sounds the alarm and locks the whole 
+            building down...
 
         </div>
 

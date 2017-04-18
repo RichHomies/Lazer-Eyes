@@ -38,13 +38,13 @@ var Episode3 = React.createClass({
         <img src="/img/track-7.gif" id="scene-1" className="episodeImages trackImages extraTopPadding" onClick={songOneHandler}/>
         <div className="episodeText" id="start">
         "It's a trap!" shouts the Admiral Ackbar in Lazer Eyes subconscious. But its too
-         late, he and Lazer Babe are surrounded by minions, and not the annoying yellow 
+         late, he and Leila are surrounded by minions, and not the annoying yellow 
          tic-tac puffy-centaur nonsense-speaking kind – no, by disheveled mind-controlled 
          minions of the dastardly Reflektor, would-be proud sons and daughters of 
          humanity reduced to mindless seekers, which is clearly the more disturbing type 
          of minion. Well. That's debatable actually. 
          {'\n\n'} 
-         Thus, Lazer Eyes and Lazer Babe, proud 
+         Thus, Lazer Eyes and Leila, proud 
          warriors for Justice, now prisoners, are ushered by a crowd of mindless minions 
          down a long dark hallway. At the end of the hallway is an elevator, a private 
          elevator clearly installed to satisfy the demands of a very self-absorbed person's
@@ -62,17 +62,17 @@ var Episode3 = React.createClass({
             {'\n\n'} 
             "I'll never join you!"    Lazer Eyes defiantly responds. 
             {'\n\n'} 
-            "I don't need you to join me, I just need you to succumb like the inconsequential insect you are. Accept your own irrelevance in my new era of hyperreal interconnectedness, or don't and die spiteful and alone with no followers. Either way, I simply can't let you leave with Lazer Babe though. You see, with her enormous social-media following at my disposal, nothing will stand in my way."
+            "I don't need you to join me, I just need you to succumb like the inconsequential insect you are. Accept your own irrelevance in my new era of hyperreal interconnectedness, or don't and die spiteful and alone with no followers. Either way, I simply can't let you leave with Leila though. You see, with her enormous social-media following at my disposal, nothing will stand in my way."
             {'\n\n'} 
  
             "Why are you doing this, dastardly Reflektor?"
             {'\n\n'} 
-            "Silly Lazer Eyes, why does anyone do anything? FOMO. With all of humanity connected through a matrix-borg-hive-mind, no one's experiences will be their own, and no one will ever have to face the horrible Fear-Of-Missing-Out. Peace, equality, homogeneity, humanity craves these but is incapable of achieving them without my help, and for this I must harness the power of Lazer Babes' twitter and Instagram presence! It is my destiny to be the catalyst of such great change, my capacity to see only myself in all others that earned me my name and will set humanity free! Ah, sweet irony! Her colorful individuality will become the narcissism-fueled vehicle of harmonious homogeneity! LOLOLOLOL!"
+            "Silly Lazer Eyes, why does anyone do anything? FOMO. With all of humanity connected through a matrix-borg-hive-mind, no one's experiences will be their own, and no one will ever have to face the horrible Fear-Of-Missing-Out. Peace, equality, homogeneity, humanity craves these but is incapable of achieving them without my help, and for this I must harness the power of Leilas' twitter and Instagram presence! It is my destiny to be the catalyst of such great change, my capacity to see only myself in all others that earned me my name and will set humanity free! Ah, sweet irony! Her colorful individuality will become the narcissism-fueled vehicle of harmonious homogeneity! LOLOLOLOL!"
             {'\n\n'} 
             As the Reflektor revels in his evil-villain-cackle, for which he passes up the traditional "muahahaha" and instead literally repeats "LOL," Lazer Eyes notices that all of his mindless minions are mimicking everything the Reflektor says in creepy unison...
             {'\n\n'} 
 
-            Lazer Eyes is shocked by the hatefulness of the Reflektor's cruelty and pessimism. If his great, enduring love for Lazer Babe has taught him anything, it is that every individuality is precious, every flaw apparent in truth an aspect of the unknowable, complex and yet specific perfection of our stochastic universe. Pain and pleasure each the inevitability of the other's passing. Strengthened by his love, armed with Lazers for eyes, he knows what he must do. 
+            Lazer Eyes is shocked by the hatefulness of the Reflektor's cruelty and pessimism. If his great, enduring love for Leila has taught him anything, it is that every individuality is precious, every flaw apparent in truth an aspect of the unknowable, complex and yet specific perfection of our stochastic universe. Pain and pleasure each the inevitability of the other's passing. Strengthened by his love, armed with Lazers for eyes, he knows what he must do. 
             {'\n\n'} 
             Summoning his greatest strength, Lazer Eyes conjurs a beam of such lazer fury and unleashes the righteous vengeance of Justice on the Reflektor. At the last minute, the Reflektor raises his hand, and using his reflective palm, redirects the beam back towards its source...
         
@@ -85,7 +85,7 @@ var Episode3 = React.createClass({
             His head aching, he grudgingly opens his eyes to behold the reality of his defeat (and incur the wrath of the light-sensitivity symptomatic of the kind of extreme 
             concussion he had just received). Looking at the path of destruction plowed through the forest by the landing of his unconscious body after it had been propelled miles from the Cityopolis Tower by the redirected force of his own god-like Lazer strength, he thinks to himself, Is it better to have loved and lost, than never to have lazer loved at lazer all? 
             {'\n\n'}
-            For what might as well be an eternity, he wanders the virgin wilderness of his mind, and also of the unoccupied literal wilderness outside the city limits. He longs for the benign ennuie that had once saturated his dormant heart. Oh! Anon! That Lazer-Babe had not awakened his passions and his better nature! For compared with that blissful emptiness of yore; that borne of this new loss tears at him from within with the furious destruction of the vacuum of space... He has failed, he is weak, and defeated, Lazer Babe remains prisoner of the dastardly Reflektor. 
+            For what might as well be an eternity, he wanders the virgin wilderness of his mind, and also of the unoccupied literal wilderness outside the city limits. He longs for the benign ennuie that had once saturated his dormant heart. Oh! Anon! That Lazer-Babe had not awakened his passions and his better nature! For compared with that blissful emptiness of yore; that borne of this new loss tears at him from within with the furious destruction of the vacuum of space... He has failed, he is weak, and defeated, Leila remains prisoner of the dastardly Reflektor. 
 
         
         </div>
@@ -101,7 +101,7 @@ var Episode3 = React.createClass({
 
         <div className="episodeText">
         
-           Stumbling through the forest, drenched by the possibly-imaginary rain that is in any case a very real symbol of his inner-torment, Lazer Eyes becomes more and more lost, literally and figuratively. Wihtout realizing it, he is drawn in the direction of a soft, low sound of harmony.
+           Stumbling through the forest, drenched by the possibly-imaginary rain that is in any case a very real symbol of his inner-torment, Lazer Eyes becomes more and more lost, literally and figuratively. Without realizing it, he is drawn in the direction of a soft, low sound of harmony.
         
         </div>
         <img src='/img/mountain.jpg' className='episodeImages'/>
@@ -115,7 +115,7 @@ Looking up from beneath his hood, a look of shock gives way to awe, and in turn 
                        ...toros totidem habeat fortitudinem"
             {'\n\n'}
 
-            "What does it mean?" Lazer Eyes asks the stunned monk."
+            "What does it mean?" Lazer Eyes asks the stunned monk.
             {'\n\n'}
             The monk puts his arm around Lazer Eyes' shoulder, and gesturing towards an invisible horizon explains that roughly translated, it means: 
             {'\n\n'}

@@ -537,14 +537,14 @@ var Episode2 = _react2['default'].createClass({
       _react2['default'].createElement(
         'div',
         { className: 'episodeText' },
-        'He wants her. He wants all of her, forever. Lazer Eyes and the Lazer Babe, every day. She immediately feels this connection as she stares deep into his eyes, but Lazer Eyes looks away. Almost losing control of himself, he can’t make sense of these emotions. Feelings that almost caused him to blast this woman whom he so suddenly loves. Yet as he looks back into her eyes he is disarmed, filled with a sense of inner peace and tranquility.'
+        'The magnetism is instantly palpable, the one drawn to the other and the other drawn to the one. Leila Zerly, as she is called, and Lazer Eyes, Leila, and lazer dude, destinies henceforth intertwined. Hash tag, love at first sight, with lazers. Almost losing control of himself, he can’t make sense of these emotions. Feelings that almost caused him to blast this woman whom he so suddenly loves. Yet as he looks back into her eyes he is disarmed, filled with a sense of inner peace and tranquility.'
       ),
       _react2['default'].createElement('img', { src: '/img/EP2-lazer-heart.gif', className: 'episodeImages' }),
       _react2['default'].createElement('img', { src: '/img/track-6.gif', className: 'episodeImages trackImages', onClick: songThreeHandler }),
       _react2['default'].createElement(
         'div',
         { className: 'episodeText' },
-        'Thus Lazer eyes meets the Lazer Babe, whom after she explains the Reflektor’s evil plans and they bond over their suffering he frees from her cell and they begin to make their escape. Unluckily, the elevator they get on going down, stops at the main floor and before Lazer Eyes can react, one of the disheveled minions hits the alarm and locks the whole building down...'
+        'Thus Lazer eyes meets the Leila, who explains how she was captured after the Reflector saw her skills as the Queen of Content on the internet. Leila had mastered the art of holding the attention of billions with her something something videos, a skill which the Reflektor desired to use in his dastardly plans for world domination . Lazer Eyes and Leila attempt to make their escape, unluckily, they are quickly spotted by one of the Reflektor\'s disheveled minions who sounds the alarm and locks the whole building down...'
       ),
       _react2['default'].createElement(
         RadiumLink,
@@ -624,9 +624,9 @@ var Episode3 = _react2['default'].createClass({
       _react2['default'].createElement(
         'div',
         { className: 'episodeText', id: 'start' },
-        '"It\'s a trap!" shouts the Admiral Ackbar in Lazer Eyes subconscious. But its too late, he and Lazer Babe are surrounded by minions, and not the annoying yellow tic-tac puffy-centaur nonsense-speaking kind – no, by disheveled mind-controlled minions of the dastardly Reflektor, would-be proud sons and daughters of humanity reduced to mindless seekers, which is clearly the more disturbing type of minion. Well. That\'s debatable actually.',
+        '"It\'s a trap!" shouts the Admiral Ackbar in Lazer Eyes subconscious. But its too late, he and Leila are surrounded by minions, and not the annoying yellow tic-tac puffy-centaur nonsense-speaking kind – no, by disheveled mind-controlled minions of the dastardly Reflektor, would-be proud sons and daughters of humanity reduced to mindless seekers, which is clearly the more disturbing type of minion. Well. That\'s debatable actually.',
         '\n\n',
-        'Thus, Lazer Eyes and Lazer Babe, proud warriors for Justice, now prisoners, are ushered by a crowd of mindless minions down a long dark hallway. At the end of the hallway is an elevator, a private elevator clearly installed to satisfy the demands of a very self-absorbed person\'s nauseatingly insecure subconscious, and after an excruciatingly long ride accompanied by one and a half tracks from a tenor-saxophone Phil Collins cover CD, the elevator doors open, revealing a mirrored throne room at the top floor of the highest tower of the Tower.',
+        'Thus, Lazer Eyes and Leila, proud warriors for Justice, now prisoners, are ushered by a crowd of mindless minions down a long dark hallway. At the end of the hallway is an elevator, a private elevator clearly installed to satisfy the demands of a very self-absorbed person\'s nauseatingly insecure subconscious, and after an excruciatingly long ride accompanied by one and a half tracks from a tenor-saxophone Phil Collins cover CD, the elevator doors open, revealing a mirrored throne room at the top floor of the highest tower of the Tower.',
         '\n\n',
         'The space is elegantly designed, with all of geometric lines drawing the attention of the entrant toward a 1960\'s moderne-chic leather arm chair, in which sits, sporting a Steve-Jobs turtle-neck and the emitting the debonair nonchalance of the dastardliest of villains, the Reflektor.'
       ),
@@ -638,15 +638,15 @@ var Episode3 = _react2['default'].createClass({
         '\n\n',
         '"I\'ll never join you!"    Lazer Eyes defiantly responds.',
         '\n\n',
-        '"I don\'t need you to join me, I just need you to succumb like the inconsequential insect you are. Accept your own irrelevance in my new era of hyperreal interconnectedness, or don\'t and die spiteful and alone with no followers. Either way, I simply can\'t let you leave with Lazer Babe though. You see, with her enormous social-media following at my disposal, nothing will stand in my way."',
+        '"I don\'t need you to join me, I just need you to succumb like the inconsequential insect you are. Accept your own irrelevance in my new era of hyperreal interconnectedness, or don\'t and die spiteful and alone with no followers. Either way, I simply can\'t let you leave with Leila though. You see, with her enormous social-media following at my disposal, nothing will stand in my way."',
         '\n\n',
         '"Why are you doing this, dastardly Reflektor?"',
         '\n\n',
-        '"Silly Lazer Eyes, why does anyone do anything? FOMO. With all of humanity connected through a matrix-borg-hive-mind, no one\'s experiences will be their own, and no one will ever have to face the horrible Fear-Of-Missing-Out. Peace, equality, homogeneity, humanity craves these but is incapable of achieving them without my help, and for this I must harness the power of Lazer Babes\' twitter and Instagram presence! It is my destiny to be the catalyst of such great change, my capacity to see only myself in all others that earned me my name and will set humanity free! Ah, sweet irony! Her colorful individuality will become the narcissism-fueled vehicle of harmonious homogeneity! LOLOLOLOL!"',
+        '"Silly Lazer Eyes, why does anyone do anything? FOMO. With all of humanity connected through a matrix-borg-hive-mind, no one\'s experiences will be their own, and no one will ever have to face the horrible Fear-Of-Missing-Out. Peace, equality, homogeneity, humanity craves these but is incapable of achieving them without my help, and for this I must harness the power of Leilas\' twitter and Instagram presence! It is my destiny to be the catalyst of such great change, my capacity to see only myself in all others that earned me my name and will set humanity free! Ah, sweet irony! Her colorful individuality will become the narcissism-fueled vehicle of harmonious homogeneity! LOLOLOLOL!"',
         '\n\n',
         'As the Reflektor revels in his evil-villain-cackle, for which he passes up the traditional "muahahaha" and instead literally repeats "LOL," Lazer Eyes notices that all of his mindless minions are mimicking everything the Reflektor says in creepy unison...',
         '\n\n',
-        'Lazer Eyes is shocked by the hatefulness of the Reflektor\'s cruelty and pessimism. If his great, enduring love for Lazer Babe has taught him anything, it is that every individuality is precious, every flaw apparent in truth an aspect of the unknowable, complex and yet specific perfection of our stochastic universe. Pain and pleasure each the inevitability of the other\'s passing. Strengthened by his love, armed with Lazers for eyes, he knows what he must do.',
+        'Lazer Eyes is shocked by the hatefulness of the Reflektor\'s cruelty and pessimism. If his great, enduring love for Leila has taught him anything, it is that every individuality is precious, every flaw apparent in truth an aspect of the unknowable, complex and yet specific perfection of our stochastic universe. Pain and pleasure each the inevitability of the other\'s passing. Strengthened by his love, armed with Lazers for eyes, he knows what he must do.',
         '\n\n',
         'Summoning his greatest strength, Lazer Eyes conjurs a beam of such lazer fury and unleashes the righteous vengeance of Justice on the Reflektor. At the last minute, the Reflektor raises his hand, and using his reflective palm, redirects the beam back towards its source...'
       ),
@@ -657,7 +657,7 @@ var Episode3 = _react2['default'].createClass({
         { className: 'episodeText' },
         'His head aching, he grudgingly opens his eyes to behold the reality of his defeat (and incur the wrath of the light-sensitivity symptomatic of the kind of extreme concussion he had just received). Looking at the path of destruction plowed through the forest by the landing of his unconscious body after it had been propelled miles from the Cityopolis Tower by the redirected force of his own god-like Lazer strength, he thinks to himself, Is it better to have loved and lost, than never to have lazer loved at lazer all?',
         '\n\n',
-        'For what might as well be an eternity, he wanders the virgin wilderness of his mind, and also of the unoccupied literal wilderness outside the city limits. He longs for the benign ennuie that had once saturated his dormant heart. Oh! Anon! That Lazer-Babe had not awakened his passions and his better nature! For compared with that blissful emptiness of yore; that borne of this new loss tears at him from within with the furious destruction of the vacuum of space... He has failed, he is weak, and defeated, Lazer Babe remains prisoner of the dastardly Reflektor.'
+        'For what might as well be an eternity, he wanders the virgin wilderness of his mind, and also of the unoccupied literal wilderness outside the city limits. He longs for the benign ennuie that had once saturated his dormant heart. Oh! Anon! That Lazer-Babe had not awakened his passions and his better nature! For compared with that blissful emptiness of yore; that borne of this new loss tears at him from within with the furious destruction of the vacuum of space... He has failed, he is weak, and defeated, Leila remains prisoner of the dastardly Reflektor.'
       ),
       _react2['default'].createElement('img', { src: '/img/rain-and-sadness.gif', className: 'episodeImages' }),
       _react2['default'].createElement(
@@ -669,7 +669,7 @@ var Episode3 = _react2['default'].createClass({
       _react2['default'].createElement(
         'div',
         { className: 'episodeText' },
-        'Stumbling through the forest, drenched by the possibly-imaginary rain that is in any case a very real symbol of his inner-torment, Lazer Eyes becomes more and more lost, literally and figuratively. Wihtout realizing it, he is drawn in the direction of a soft, low sound of harmony.'
+        'Stumbling through the forest, drenched by the possibly-imaginary rain that is in any case a very real symbol of his inner-torment, Lazer Eyes becomes more and more lost, literally and figuratively. Without realizing it, he is drawn in the direction of a soft, low sound of harmony.'
       ),
       _react2['default'].createElement('img', { src: '/img/mountain.jpg', className: 'episodeImages' }),
       _react2['default'].createElement(
@@ -681,7 +681,7 @@ var Episode3 = _react2['default'].createClass({
         '\n\n',
         '...toros totidem habeat fortitudinem"',
         '\n\n',
-        '"What does it mean?" Lazer Eyes asks the stunned monk."',
+        '"What does it mean?" Lazer Eyes asks the stunned monk.',
         '\n\n',
         'The monk puts his arm around Lazer Eyes\' shoulder, and gesturing towards an invisible horizon explains that roughly translated, it means:',
         '\n\n',
@@ -1091,7 +1091,7 @@ var Episode5 = _react2['default'].createClass({
       _react2['default'].createElement(
         'div',
         { className: 'episodeText' },
-        'Lazer Eyes wasted no time. He hurried quickly passed the Reflektor’s immobile body, to where his true love, Lazer Babe sat, suspended in a hanging mirrored cage. With a swift beam of lazers, he shattered the cage, and caught her in his arms. They did in fact kiss while the camera swirled around them in circles of steadily increasing rapidly, and live happily ever after. But before all that, Lazer Babe knowingly instructed Lazer Eyes as to what he must do next.'
+        'Lazer Eyes wasted no time. He hurried quickly passed the Reflektor’s immobile body, to where his true love, Leila sat, suspended in a hanging mirrored cage. With a swift beam of lazers, he shattered the cage, and caught her in his arms. They did in fact kiss while the camera swirled around them in circles of steadily increasing rapidly, and live happily ever after. But before all that, Leila knowingly instructed Lazer Eyes as to what he must do next.'
       ),
       _react2['default'].createElement('img', { src: '/img/lazereyes_working_pg12.gif', className: 'episodeImages' }),
       _react2['default'].createElement('img', { src: '/img/lazereyes_working_pg13.gif', className: 'episodeImages' }),
@@ -1718,7 +1718,7 @@ var episode4Object = {
         episodeName: {
             title: 'Lazerus Maximus',
             number: 'IV',
-            path: '/episodes/Lazer Maximus'
+            path: '/episodes/Lazerus Maximus'
         },
         songs: [{
             songTitle: "It's Coming To Life",

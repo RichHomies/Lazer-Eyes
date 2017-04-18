@@ -85,7 +85,7 @@ var episode4Object =  {
             episodeName: {
                 title: 'Lazerus Maximus',
                 number: 'IV',
-                path : '/episodes/Lazer Maximus'
+                path : '/episodes/Lazerus Maximus'
             }, 
             songs: [{
                 songTitle: "It's Coming To Life",
