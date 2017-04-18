@@ -1,7 +1,9 @@
 import React from 'react';
 import Scroll from 'react-scroll'; 
 import Radium from 'radium';
+import { Link } from 'react-router';
 
+var RadiumLink = Radium(Link);
 var scroll = Scroll.animateScroll;
 var Element = Scroll.Element;
 var scroller = Scroll.scroller;
@@ -137,7 +139,7 @@ Looking up from beneath his hood, a look of shock gives way to awe, and in turn 
 
         </div>
         
-
+        <RadiumLink to={'/episodes/Lazerus Maximus'}><span className={'episodeButton episodeListItem '}>Up Next</span></RadiumLink>
       </div>
     );
   }

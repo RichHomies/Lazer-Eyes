@@ -1,7 +1,9 @@
 import React from 'react';
 import Scroll from 'react-scroll'; 
 import Radium from 'radium';
+import { Link } from 'react-router';
 
+var RadiumLink = Radium(Link);
 var scroll = Scroll.animateScroll;
 var Element = Scroll.Element;
 var scroller = Scroll.scroller;
@@ -110,7 +112,7 @@ with all types of devices with any kind of display. As the streets grow quiet La
 
         </div>
 
-        <RadiumLink to={'/episodes/crazy stupid lazers'}><span className={'episodeButton episodeListItem '}>Up Next</span></RadiumLink>
+        <RadiumLink to={'/episodes/The Empire Strikes Repeatedly'}><span className={'episodeButton episodeListItem '}>Up Next</span></RadiumLink>
       </div>
     );
   }

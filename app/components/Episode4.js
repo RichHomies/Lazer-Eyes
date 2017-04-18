@@ -1,7 +1,9 @@
 import React from 'react';
 import Scroll from 'react-scroll'; 
 import Radium from 'radium';
+import { Link } from 'react-router';
 
+var RadiumLink = Radium(Link);
 var scroll = Scroll.animateScroll;
 var Element = Scroll.Element;
 var scroller = Scroll.scroller;
@@ -313,6 +315,7 @@ var Episode4 = React.createClass({
 
 
         
+        <RadiumLink to={'/episodes/The Day the Earth Stood Still with Lazers'}><span className={'episodeButton episodeListItem '}>Up Next</span></RadiumLink>
 
       </div>
     );

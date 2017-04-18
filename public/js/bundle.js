@@ -313,6 +313,9 @@ var _radium = require('radium');
 
 var _radium2 = _interopRequireDefault(_radium);
 
+var _reactRouter = require('react-router');
+
+var RadiumLink = (0, _radium2['default'])(_reactRouter.Link);
 var scroll = _reactScroll2['default'].animateScroll;
 var Element = _reactScroll2['default'].Element;
 var scroller = _reactScroll2['default'].scroller;
@@ -424,6 +427,15 @@ var Episode1 = _react2['default'].createClass({
         'div',
         { className: 'episodeText' },
         'Thus we find Lazer Eyes, and Lazer Eyes finds himself a stranger to his people, an isolated god amongst men who finds consolation only in the destructive power he wields. Wandering from place to place, he lives day to day. In the woods, he picks fights with owls, because, as everyone knows, Lazer Eyes hates owls. On the streets, when he stops and stares, things explode. What will become of him? Is there no one who will understand him? Does he even deserve to be understood? How will this menace become our messiah?'
+      ),
+      _react2['default'].createElement(
+        RadiumLink,
+        { to: '/episodes/Crazy Stupid Lazers' },
+        _react2['default'].createElement(
+          'span',
+          { className: 'episodeButton episodeListItem ' },
+          'Up Next'
+        )
       )
     );
   }
@@ -432,7 +444,7 @@ var Episode1 = _react2['default'].createClass({
 exports['default'] = Episode1;
 module.exports = exports['default'];
 
-},{"radium":81,"react":"react","react-scroll":198}],4:[function(require,module,exports){
+},{"radium":81,"react":"react","react-router":"react-router","react-scroll":198}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -453,6 +465,9 @@ var _radium = require('radium');
 
 var _radium2 = _interopRequireDefault(_radium);
 
+var _reactRouter = require('react-router');
+
+var RadiumLink = (0, _radium2['default'])(_reactRouter.Link);
 var scroll = _reactScroll2['default'].animateScroll;
 var Element = _reactScroll2['default'].Element;
 var scroller = _reactScroll2['default'].scroller;
@@ -533,7 +548,7 @@ var Episode2 = _react2['default'].createClass({
       ),
       _react2['default'].createElement(
         RadiumLink,
-        { to: '/episodes/crazy stupid lazers' },
+        { to: '/episodes/The Empire Strikes Repeatedly' },
         _react2['default'].createElement(
           'span',
           { className: 'episodeButton episodeListItem ' },
@@ -547,7 +562,7 @@ var Episode2 = _react2['default'].createClass({
 exports['default'] = Episode2;
 module.exports = exports['default'];
 
-},{"radium":81,"react":"react","react-scroll":198}],5:[function(require,module,exports){
+},{"radium":81,"react":"react","react-router":"react-router","react-scroll":198}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -568,6 +583,9 @@ var _radium = require('radium');
 
 var _radium2 = _interopRequireDefault(_radium);
 
+var _reactRouter = require('react-router');
+
+var RadiumLink = (0, _radium2['default'])(_reactRouter.Link);
 var scroll = _reactScroll2['default'].animateScroll;
 var Element = _reactScroll2['default'].Element;
 var scroller = _reactScroll2['default'].scroller;
@@ -678,6 +696,15 @@ var Episode3 = _react2['default'].createClass({
         'The monk goes on to explain that this was in fact one interpretation amongst many. In the 30 generations since his order, the Order of the Lazer Monks had journeyed from the Olde Worlde, there had been lots of time to debate the many possible meanings of the prophecy handed down to them. For instance, the literalist school of thought had arisen several generations ago, asserting that the prophecy must be translated literally: "The Sun has eyes, the heart has eagle... many bulls have strength". As important as this scholarly debate was, in truth no member of the order had ever disputed their true purpose since the great prophecy had first been handed down: it was their destiny to await the Lazer Messiah here, in Bestchester County outside Cityopolis, so that in his moment of need, they could show him the next step on his journey to defeat evil and restore balance to the force. I mean society.',
         '\n\n',
         'Word is spreading quickly amongst the brother-(and sister, these monks are actually gender-neutral monks...)-hood that the Lazer One has finally come, and the chanting grows steadily louder and more excited. Lazer Eyes is drawn into a large chamber, and as the monks encircle him, chanting ever louder, he feels his strength returning... not only that, he feels the pull of destiny...'
+      ),
+      _react2['default'].createElement(
+        RadiumLink,
+        { to: '/episodes/Lazerus Maximus' },
+        _react2['default'].createElement(
+          'span',
+          { className: 'episodeButton episodeListItem ' },
+          'Up Next'
+        )
       )
     );
   }
@@ -686,7 +713,7 @@ var Episode3 = _react2['default'].createClass({
 exports['default'] = Episode3;
 module.exports = exports['default'];
 
-},{"radium":81,"react":"react","react-scroll":198}],6:[function(require,module,exports){
+},{"radium":81,"react":"react","react-router":"react-router","react-scroll":198}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -707,6 +734,9 @@ var _radium = require('radium');
 
 var _radium2 = _interopRequireDefault(_radium);
 
+var _reactRouter = require('react-router');
+
+var RadiumLink = (0, _radium2['default'])(_reactRouter.Link);
 var scroll = _reactScroll2['default'].animateScroll;
 var Element = _reactScroll2['default'].Element;
 var scroller = _reactScroll2['default'].scroller;
@@ -942,7 +972,16 @@ var Episode4 = _react2['default'].createClass({
         { className: 'episodeText' },
         'Lazer Eyes now knows where he must go, what he must do, and as he floats off towards Cityopolis (yes, he can fly now), his mind is calm, his thoughts ordered, the noise of his fears and desires quieted and replaced by the steady righteous pulse of lazer-beats.'
       ),
-      _react2['default'].createElement('img', { src: '/img/lazer-eyes-eyes.gif', className: 'episodeImages' })
+      _react2['default'].createElement('img', { src: '/img/lazer-eyes-eyes.gif', className: 'episodeImages' }),
+      _react2['default'].createElement(
+        RadiumLink,
+        { to: '/episodes/The Day the Earth Stood Still with Lazers' },
+        _react2['default'].createElement(
+          'span',
+          { className: 'episodeButton episodeListItem ' },
+          'Up Next'
+        )
+      )
     );
   }
 });
@@ -950,7 +989,7 @@ var Episode4 = _react2['default'].createClass({
 exports['default'] = Episode4;
 module.exports = exports['default'];
 
-},{"radium":81,"react":"react","react-scroll":198}],7:[function(require,module,exports){
+},{"radium":81,"react":"react","react-router":"react-router","react-scroll":198}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
